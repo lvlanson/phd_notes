@@ -1,0 +1,102 @@
+@article{geOptimizedProductQuantization2014,
+  title = {Optimized {{Product Quantization}}},
+  author = {Ge, Tiezheng and He, Kaiming and Ke, Qifa and Sun, Jian},
+  date = {2014-04},
+  journaltitle = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume = {36},
+  number = {4},
+  pages = {744--755},
+  issn = {1939-3539},
+  doi = {10.1109/TPAMI.2013.240},
+  url = {https://ieeexplore.ieee.org/document/6678503},
+  urldate = {2023-11-13},
+  abstract = {Product quantization (PQ) is an effective vector quantization method. A product quantizer can generate an exponentially large codebook at very low memory/time cost. The essence of PQ is to decompose the high-dimensional vector space into the Cartesian product of subspaces and then quantize these subspaces separately. The optimal space decomposition is important for the PQ performance, but still remains an unaddressed issue. In this paper, we optimize PQ by minimizing quantization distortions w.r.t the space decomposition and the quantization codebooks. We present two novel solutions to this challenging optimization problem. The first solution iteratively solves two simpler sub-problems. The second solution is based on a Gaussian assumption and provides theoretical analysis of the optimality. We evaluate our optimized product quantizers in three applications: (i) compact encoding for exhaustive ranking [1], (ii) building inverted multi-indexing for non-exhaustive search [2], and (iii) compacting image representations for image retrieval [3]. In all applications our optimized product quantizers outperform existing solutions.},
+  eventtitle = {{{IEEE Transactions}} on {{Pattern Analysis}} and {{Machine Intelligence}}},
+  file = {/home/thomas/Zotero/storage/RTN9RA8H/Ge et al. - 2014 - Optimized Product Quantization.pdf;/home/thomas/Zotero/storage/3HGULA2E/6678503.html}
+}
+
+@online{guoAcceleratingLargeScaleInference2020,
+  title = {Accelerating {{Large-Scale Inference}} with {{Anisotropic Vector Quantization}}},
+  author = {Guo, Ruiqi and Sun, Philip and Lindgren, Erik and Geng, Quan and Simcha, David and Chern, Felix and Kumar, Sanjiv},
+  date = {2020-12-04},
+  eprint = {1908.10396},
+  eprinttype = {arxiv},
+  eprintclass = {cs, stat},
+  doi = {10.48550/arXiv.1908.10396},
+  url = {http://arxiv.org/abs/1908.10396},
+  urldate = {2023-11-13},
+  abstract = {Quantization based techniques are the current state-of-the-art for scaling maximum inner product search to massive databases. Traditional approaches to quantization aim to minimize the reconstruction error of the database points. Based on the observation that for a given query, the database points that have the largest inner products are more relevant, we develop a family of anisotropic quantization loss functions. Under natural statistical assumptions, we show that quantization with these loss functions leads to a new variant of vector quantization that more greatly penalizes the parallel component of a datapoint's residual relative to its orthogonal component. The proposed approach achieves state-of-the-art results on the public benchmarks available at \textbackslash url\{ann-benchmarks.com\}.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/thomas/Zotero/storage/FS5NY4JA/Guo et al. - 2020 - Accelerating Large-Scale Inference with Anisotropi.pdf;/home/thomas/Zotero/storage/E6AVEC3F/1908.html}
+}
+
+@online{guoQuantizationBasedFast2015,
+  title = {Quantization Based {{Fast Inner Product Search}}},
+  author = {Guo, Ruiqi and Kumar, Sanjiv and Choromanski, Krzysztof and Simcha, David},
+  date = {2015-09-04},
+  eprint = {1509.01469},
+  eprinttype = {arxiv},
+  eprintclass = {cs, stat},
+  doi = {10.48550/arXiv.1509.01469},
+  url = {http://arxiv.org/abs/1509.01469},
+  urldate = {2023-11-13},
+  abstract = {We propose a quantization based approach for fast approximate Maximum Inner Product Search (MIPS). Each database vector is quantized in multiple subspaces via a set of codebooks, learned directly by minimizing the inner product quantization error. Then, the inner product of a query to a database vector is approximated as the sum of inner products with the subspace quantizers. Different from recently proposed LSH approaches to MIPS, the database vectors and queries do not need to be augmented in a higher dimensional feature space. We also provide a theoretical analysis of the proposed approach, consisting of the concentration results under mild assumptions. Furthermore, if a small sample of example queries is given at the training time, we propose a modified codebook learning procedure which further improves the accuracy. Experimental results on a variety of datasets including those arising from deep neural networks show that the proposed approach significantly outperforms the existing state-of-the-art.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/thomas/Zotero/storage/A32IM8QG/Guo et al. - 2015 - Quantization based Fast Inner Product Search.pdf;/home/thomas/Zotero/storage/PUC7YB59/1509.html}
+}
+
+@article{jegouProductQuantizationNearest2011,
+  title = {Product {{Quantization}} for {{Nearest Neighbor Search}}},
+  author = {Jégou, Herve and Douze, Matthijs and Schmid, Cordelia},
+  date = {2011-01},
+  journaltitle = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume = {33},
+  number = {1},
+  pages = {117--128},
+  issn = {1939-3539},
+  doi = {10.1109/TPAMI.2010.57},
+  url = {https://ieeexplore.ieee.org/document/5432202},
+  urldate = {2023-11-13},
+  abstract = {This paper introduces a product quantization-based approach for approximate nearest neighbor search. The idea is to decompose the space into a Cartesian product of low-dimensional subspaces and to quantize each subspace separately. A vector is represented by a short code composed of its subspace quantization indices. The euclidean distance between two vectors can be efficiently estimated from their codes. An asymmetric version increases precision, as it computes the approximate distance between a vector and a code. Experimental results show that our approach searches for nearest neighbors efficiently, in particular in combination with an inverted file system. Results for SIFT and GIST image descriptors show excellent search accuracy, outperforming three state-of-the-art approaches. The scalability of our approach is validated on a data set of two billion vectors.},
+  eventtitle = {{{IEEE Transactions}} on {{Pattern Analysis}} and {{Machine Intelligence}}},
+  file = {/home/thomas/Zotero/storage/RXP5NS9X/Jégou et al. - 2011 - Product Quantization for Nearest Neighbor Search.pdf;/home/thomas/Zotero/storage/7T72YLS5/5432202.html}
+}
+
+@online{lingleTransformerVQLinearTimeTransformers2023,
+  title = {Transformer-{{VQ}}: {{Linear-Time Transformers}} via {{Vector Quantization}}},
+  shorttitle = {Transformer-{{VQ}}},
+  author = {Lingle, Lucas D.},
+  date = {2023-09-28},
+  eprint = {2309.16354},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2309.16354},
+  url = {http://arxiv.org/abs/2309.16354},
+  urldate = {2023-11-13},
+  abstract = {We introduce Transformer-VQ, a decoder-only transformer computing softmax-based dense self-attention in linear time. Transformer-VQ's efficient attention is enabled by vector-quantized keys and a novel caching mechanism. In large-scale experiments, Transformer-VQ is shown highly competitive in quality, with strong results on Enwik8 (0.99 bpb), PG-19 (26.6 ppl), and ImageNet64 (3.16 bpb). Code: https://github.com/transformer-vq/transformer\_vq},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
+  file = {/home/thomas/Zotero/storage/ILEIXFCP/Lingle - 2023 - Transformer-VQ Linear-Time Transformers via Vecto.pdf;/home/thomas/Zotero/storage/AMZDGPVR/2309.html}
+}
+
+@online{reddiStochasticNegativeMining2018,
+  title = {Stochastic {{Negative Mining}} for {{Learning}} with {{Large Output Spaces}}},
+  author = {Reddi, Sashank J. and Kale, Satyen and Yu, Felix and Holtmann-Rice, Dan and Chen, Jiecao and Kumar, Sanjiv},
+  date = {2018-10-16},
+  eprint = {1810.07076},
+  eprinttype = {arxiv},
+  eprintclass = {cs, stat},
+  doi = {10.48550/arXiv.1810.07076},
+  url = {http://arxiv.org/abs/1810.07076},
+  urldate = {2023-11-13},
+  abstract = {We consider the problem of retrieving the most relevant labels for a given input when the size of the output space is very large. Retrieval methods are modeled as set-valued classifiers which output a small set of classes for each input, and a mistake is made if the label is not in the output set. Despite its practical importance, a statistically principled, yet practical solution to this problem is largely missing. To this end, we first define a family of surrogate losses and show that they are calibrated and convex under certain conditions on the loss parameters and data distribution, thereby establishing a statistical and analytical basis for using these losses. Furthermore, we identify a particularly intuitive class of loss functions in the aforementioned family and show that they are amenable to practical implementation in the large output space setting (i.e. computation is possible without evaluating scores of all labels) by developing a technique called Stochastic Negative Mining. We also provide generalization error bounds for the losses in the family. Finally, we conduct experiments which demonstrate that Stochastic Negative Mining yields benefits over commonly used negative sampling approaches.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/thomas/Zotero/storage/IRVRFGJK/Reddi et al. - 2018 - Stochastic Negative Mining for Learning with Large.pdf;/home/thomas/Zotero/storage/W6JVNWF3/1810.html}
+}
+
+@misc{zotero-1,
+  type = {misc}
+}
