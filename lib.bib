@@ -1,4 +1,4 @@
-@article{geOptimizedProductQuantization2014,
+@article{ge2014,
   title = {Optimized {{Product Quantization}}},
   author = {Ge, Tiezheng and He, Kaiming and Ke, Qifa and Sun, Jian},
   date = {2014-04},
@@ -12,26 +12,10 @@
   urldate = {2023-11-13},
   abstract = {Product quantization (PQ) is an effective vector quantization method. A product quantizer can generate an exponentially large codebook at very low memory/time cost. The essence of PQ is to decompose the high-dimensional vector space into the Cartesian product of subspaces and then quantize these subspaces separately. The optimal space decomposition is important for the PQ performance, but still remains an unaddressed issue. In this paper, we optimize PQ by minimizing quantization distortions w.r.t the space decomposition and the quantization codebooks. We present two novel solutions to this challenging optimization problem. The first solution iteratively solves two simpler sub-problems. The second solution is based on a Gaussian assumption and provides theoretical analysis of the optimality. We evaluate our optimized product quantizers in three applications: (i) compact encoding for exhaustive ranking [1], (ii) building inverted multi-indexing for non-exhaustive search [2], and (iii) compacting image representations for image retrieval [3]. In all applications our optimized product quantizers outperform existing solutions.},
   eventtitle = {{{IEEE Transactions}} on {{Pattern Analysis}} and {{Machine Intelligence}}},
-  file = {/home/thomas/Zotero/storage/RTN9RA8H/Ge et al. - 2014 - Optimized Product Quantization.pdf;/home/thomas/Zotero/storage/3HGULA2E/6678503.html}
+  file = {/home/thomas/Documents/Obsidian Vault/Sources/ge2014.pdf;/home/thomas/Zotero/storage/3HGULA2E/6678503.html}
 }
 
-@online{guoAcceleratingLargeScaleInference2020,
-  title = {Accelerating {{Large-Scale Inference}} with {{Anisotropic Vector Quantization}}},
-  author = {Guo, Ruiqi and Sun, Philip and Lindgren, Erik and Geng, Quan and Simcha, David and Chern, Felix and Kumar, Sanjiv},
-  date = {2020-12-04},
-  eprint = {1908.10396},
-  eprinttype = {arxiv},
-  eprintclass = {cs, stat},
-  doi = {10.48550/arXiv.1908.10396},
-  url = {http://arxiv.org/abs/1908.10396},
-  urldate = {2023-11-13},
-  abstract = {Quantization based techniques are the current state-of-the-art for scaling maximum inner product search to massive databases. Traditional approaches to quantization aim to minimize the reconstruction error of the database points. Based on the observation that for a given query, the database points that have the largest inner products are more relevant, we develop a family of anisotropic quantization loss functions. Under natural statistical assumptions, we show that quantization with these loss functions leads to a new variant of vector quantization that more greatly penalizes the parallel component of a datapoint's residual relative to its orthogonal component. The proposed approach achieves state-of-the-art results on the public benchmarks available at \textbackslash url\{ann-benchmarks.com\}.},
-  pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
-  file = {/home/thomas/Zotero/storage/FS5NY4JA/Guo et al. - 2020 - Accelerating Large-Scale Inference with Anisotropi.pdf;/home/thomas/Zotero/storage/E6AVEC3F/1908.html}
-}
-
-@online{guoQuantizationBasedFast2015,
+@online{guo2015,
   title = {Quantization Based {{Fast Inner Product Search}}},
   author = {Guo, Ruiqi and Kumar, Sanjiv and Choromanski, Krzysztof and Simcha, David},
   date = {2015-09-04},
@@ -44,10 +28,26 @@
   abstract = {We propose a quantization based approach for fast approximate Maximum Inner Product Search (MIPS). Each database vector is quantized in multiple subspaces via a set of codebooks, learned directly by minimizing the inner product quantization error. Then, the inner product of a query to a database vector is approximated as the sum of inner products with the subspace quantizers. Different from recently proposed LSH approaches to MIPS, the database vectors and queries do not need to be augmented in a higher dimensional feature space. We also provide a theoretical analysis of the proposed approach, consisting of the concentration results under mild assumptions. Furthermore, if a small sample of example queries is given at the training time, we propose a modified codebook learning procedure which further improves the accuracy. Experimental results on a variety of datasets including those arising from deep neural networks show that the proposed approach significantly outperforms the existing state-of-the-art.},
   pubstate = {preprint},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning},
-  file = {/home/thomas/Zotero/storage/A32IM8QG/Guo et al. - 2015 - Quantization based Fast Inner Product Search.pdf;/home/thomas/Zotero/storage/PUC7YB59/1509.html}
+  file = {/home/thomas/Documents/Obsidian Vault/Sources/guo2015.pdf;/home/thomas/Zotero/storage/PUC7YB59/1509.html}
 }
 
-@article{jegouProductQuantizationNearest2011,
+@online{guo2020,
+  title = {Accelerating {{Large-Scale Inference}} with {{Anisotropic Vector Quantization}}},
+  author = {Guo, Ruiqi and Sun, Philip and Lindgren, Erik and Geng, Quan and Simcha, David and Chern, Felix and Kumar, Sanjiv},
+  date = {2020-12-04},
+  eprint = {1908.10396},
+  eprinttype = {arxiv},
+  eprintclass = {cs, stat},
+  doi = {10.48550/arXiv.1908.10396},
+  url = {http://arxiv.org/abs/1908.10396},
+  urldate = {2023-11-13},
+  abstract = {Quantization based techniques are the current state-of-the-art for scaling maximum inner product search to massive databases. Traditional approaches to quantization aim to minimize the reconstruction error of the database points. Based on the observation that for a given query, the database points that have the largest inner products are more relevant, we develop a family of anisotropic quantization loss functions. Under natural statistical assumptions, we show that quantization with these loss functions leads to a new variant of vector quantization that more greatly penalizes the parallel component of a datapoint's residual relative to its orthogonal component. The proposed approach achieves state-of-the-art results on the public benchmarks available at \textbackslash url\{ann-benchmarks.com\}.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/thomas/Documents/Obsidian Vault/Sources/guo2020.pdf;/home/thomas/Zotero/storage/E6AVEC3F/1908.html}
+}
+
+@article{jegou2011,
   title = {Product {{Quantization}} for {{Nearest Neighbor Search}}},
   author = {Jégou, Herve and Douze, Matthijs and Schmid, Cordelia},
   date = {2011-01},
@@ -61,10 +61,21 @@
   urldate = {2023-11-13},
   abstract = {This paper introduces a product quantization-based approach for approximate nearest neighbor search. The idea is to decompose the space into a Cartesian product of low-dimensional subspaces and to quantize each subspace separately. A vector is represented by a short code composed of its subspace quantization indices. The euclidean distance between two vectors can be efficiently estimated from their codes. An asymmetric version increases precision, as it computes the approximate distance between a vector and a code. Experimental results show that our approach searches for nearest neighbors efficiently, in particular in combination with an inverted file system. Results for SIFT and GIST image descriptors show excellent search accuracy, outperforming three state-of-the-art approaches. The scalability of our approach is validated on a data set of two billion vectors.},
   eventtitle = {{{IEEE Transactions}} on {{Pattern Analysis}} and {{Machine Intelligence}}},
-  file = {/home/thomas/Zotero/storage/RXP5NS9X/Jégou et al. - 2011 - Product Quantization for Nearest Neighbor Search.pdf;/home/thomas/Zotero/storage/7T72YLS5/5432202.html}
+  file = {/home/thomas/Documents/Obsidian Vault/Sources/jegou2011.pdf;/home/thomas/Zotero/storage/7T72YLS5/5432202.html}
 }
 
-@online{lingleTransformerVQLinearTimeTransformers2023,
+@book{lange2019,
+  title = {Hebbian Learning Approaches Based on General Inner Products and Distance Measures in Non-{{Euclidean}} Spaces},
+  author = {Lange, Mandy},
+  date = {2019},
+  publisher = {{University of Groningen}},
+  location = {{[Groningen]}},
+  abstract = {The topic of this thesis is to define a unified and generalized scheme for Hebbian approaches in non-Euclidean spaces for unsupervised and supervised learning. This can be realized in different ways. One possibility is the replacement of the inner product by a semi-inner product (SIP). A SIP relaxes the strict properties of an inner product but preserves the linear aspect in the first argument. Thus, these SIPs are natural equivalents of inner products generating Banach spaces instead of Hilbert spaces for inner products. In this work SIPs for Banach spaces are considered for unsupervised Hebbian like learning approaches. Further, the learning scheme of the supervised Learning Vector Quantization (LVQ) network, which is originally designed for applications in Euclidean data space, can be interpreted under specific circumstances as a Hebbian like learning, too. It is shown that, non-Euclidean metrics applied in LVQ can improve the performance of classification learning compared to Euclidean variants.The previously addressed Hebbian learning methods are vectorial approaches. However, if the data space is a vector space of matrices equipped with a respective matrix norm, then matrix approaches for Hebbian like learning methods become of interest. The extension of these methods in non-Euclidean spaces of matrices to process matrix data is the last main point of this thesis.},
+  isbn = {978-94-034-1470-6},
+  file = {/home/thomas/Documents/Obsidian Vault/Sources/lange2019.pdf}
+}
+
+@online{lingle2023,
   title = {Transformer-{{VQ}}: {{Linear-Time Transformers}} via {{Vector Quantization}}},
   shorttitle = {Transformer-{{VQ}}},
   author = {Lingle, Lucas D.},
@@ -78,10 +89,28 @@
   abstract = {We introduce Transformer-VQ, a decoder-only transformer computing softmax-based dense self-attention in linear time. Transformer-VQ's efficient attention is enabled by vector-quantized keys and a novel caching mechanism. In large-scale experiments, Transformer-VQ is shown highly competitive in quality, with strong results on Enwik8 (0.99 bpb), PG-19 (26.6 ppl), and ImageNet64 (3.16 bpb). Code: https://github.com/transformer-vq/transformer\_vq},
   pubstate = {preprint},
   keywords = {Computer Science - Computation and Language,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
-  file = {/home/thomas/Zotero/storage/ILEIXFCP/Lingle - 2023 - Transformer-VQ Linear-Time Transformers via Vecto.pdf;/home/thomas/Zotero/storage/AMZDGPVR/2309.html}
+  file = {/home/thomas/Documents/Obsidian Vault/Sources/lingle2023.pdf;/home/thomas/Zotero/storage/AMZDGPVR/2309.html}
 }
 
-@online{reddiStochasticNegativeMining2018,
+@article{lumer1961,
+  title = {Semi-Inner-Product Spaces},
+  author = {Lumer, G.},
+  date = {1961},
+  journaltitle = {Transactions of the American Mathematical Society},
+  shortjournal = {Trans. Amer. Math. Soc.},
+  volume = {100},
+  number = {1},
+  pages = {29--43},
+  issn = {0002-9947, 1088-6850},
+  doi = {10.1090/S0002-9947-1961-0133024-2},
+  url = {https://www.ams.org/tran/1961-100-01/S0002-9947-1961-0133024-2/},
+  urldate = {2023-11-15},
+  abstract = {Advancing research. Creating connections.},
+  langid = {english},
+  file = {/home/thomas/Documents/Obsidian Vault/Sources/lumer1961.pdf}
+}
+
+@online{reddi2018,
   title = {Stochastic {{Negative Mining}} for {{Learning}} with {{Large Output Spaces}}},
   author = {Reddi, Sashank J. and Kale, Satyen and Yu, Felix and Holtmann-Rice, Dan and Chen, Jiecao and Kumar, Sanjiv},
   date = {2018-10-16},
@@ -94,9 +123,50 @@
   abstract = {We consider the problem of retrieving the most relevant labels for a given input when the size of the output space is very large. Retrieval methods are modeled as set-valued classifiers which output a small set of classes for each input, and a mistake is made if the label is not in the output set. Despite its practical importance, a statistically principled, yet practical solution to this problem is largely missing. To this end, we first define a family of surrogate losses and show that they are calibrated and convex under certain conditions on the loss parameters and data distribution, thereby establishing a statistical and analytical basis for using these losses. Furthermore, we identify a particularly intuitive class of loss functions in the aforementioned family and show that they are amenable to practical implementation in the large output space setting (i.e. computation is possible without evaluating scores of all labels) by developing a technique called Stochastic Negative Mining. We also provide generalization error bounds for the losses in the family. Finally, we conduct experiments which demonstrate that Stochastic Negative Mining yields benefits over commonly used negative sampling approaches.},
   pubstate = {preprint},
   keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
-  file = {/home/thomas/Zotero/storage/IRVRFGJK/Reddi et al. - 2018 - Stochastic Negative Mining for Learning with Large.pdf;/home/thomas/Zotero/storage/W6JVNWF3/1810.html}
+  file = {/home/thomas/Documents/Obsidian Vault/Sources/reddi2018.pdf;/home/thomas/Zotero/storage/W6JVNWF3/1810.html}
 }
 
-@misc{zotero-1,
-  type = {misc}
+@book{vasudeva2017,
+  title = {Elements of {{Hilbert Spaces}} and {{Operator Theory}}},
+  author = {Vasudeva, Harkrishan Lal},
+  date = {2017},
+  publisher = {{Springer}},
+  location = {{Singapore}},
+  doi = {10.1007/978-981-10-3020-8},
+  url = {http://link.springer.com/10.1007/978-981-10-3020-8},
+  urldate = {2023-11-14},
+  isbn = {978-981-10-3019-2 978-981-10-3020-8},
+  langid = {english},
+  keywords = {Banach Spaces,Finite Dimensional Spaces,Functional analysis,Linear operators,Operator theory,Riesz Lemma,Special theory},
+  file = {/home/thomas/Documents/Obsidian Vault/Sources/vasudeva2017.pdf}
+}
+
+@online{vaswani2023,
+  title = {Attention {{Is All You Need}}},
+  author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, Lukasz and Polosukhin, Illia},
+  date = {2023-08-01},
+  eprint = {1706.03762},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.1706.03762},
+  url = {http://arxiv.org/abs/1706.03762},
+  urldate = {2023-11-17},
+  abstract = {The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {/home/thomas/Documents/Obsidian Vault/Sources/vaswani2023.pdf;/home/thomas/Zotero/storage/SCJWFGAA/1706.html}
+}
+
+@book{young1988,
+  title = {An {{Introduction}} to {{Hilbert Space}}},
+  author = {Young, N.},
+  date = {1988},
+  publisher = {{Cambridge University Press}},
+  location = {{Cambridge}},
+  doi = {10.1017/CBO9781139172011},
+  url = {https://www.cambridge.org/core/books/an-introduction-to-hilbert-space/41D80B163B8E186820B5A48F3665EC22},
+  urldate = {2023-11-15},
+  abstract = {This textbook is an introduction to the theory of Hilbert space and its applications. The notion of Hilbert space is central in functional analysis and is used in numerous branches of pure and applied mathematics. Dr Young has stressed applications of the theory, particularly to the solution of partial differential equations in mathematical physics and to the approximation of functions in complex analysis. Some basic familiarity with real analysis, linear algebra and metric spaces is assumed, but otherwise the book is self-contained. It is based on courses given at the University of Glasgow and contains numerous examples and exercises (many with solutions). Thus it will make an excellent first course in Hilbert space theory at either undergraduate or graduate level and will also be of interest to electrical engineers and physicists, particularly those involved in control theory and filter design.},
+  isbn = {978-0-521-33717-5},
+  file = {/home/thomas/Zotero/storage/Q72XTLTI/41D80B163B8E186820B5A48F3665EC22.html}
 }

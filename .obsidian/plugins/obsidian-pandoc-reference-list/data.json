@@ -1,0 +1,11 @@
+{
+  "pathToPandoc": "/usr/bin/pandoc",
+  "tooltipDelay": 400,
+  "zoteroGroups": [],
+  "renderCitations": true,
+  "renderCitationsReadingMode": true,
+  "renderLinkCitations": true,
+  "cslStyleURL": "https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl",
+  "pathToBibliography": "/home/thomas/Documents/Obsidian Vault/lib.bib",
+  "enableCiteKeyCompletion": false
+}

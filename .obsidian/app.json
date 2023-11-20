@@ -1,0 +1,12 @@
+{
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "relative",
+  "autoConvertHtml": false,
+  "promptDelete": false,
+  "spellcheckDictionary": [
+    " parallelit"
+  ],
+  "autoPairBrackets": false,
+  "autoPairMarkdown": false
+}

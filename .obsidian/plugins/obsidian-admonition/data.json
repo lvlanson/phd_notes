@@ -1,0 +1,134 @@
+{
+  "userAdmonitions": {
+    "def": {
+      "type": "def",
+      "color": "38, 180, 19",
+      "icon": {
+        "name": "book",
+        "type": "font-awesome"
+      },
+      "command": true,
+      "title": "Definition",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "note": {
+      "type": "note",
+      "color": "107, 132, 255",
+      "icon": {
+        "type": "obsidian",
+        "name": "lucide-lightbulb"
+      },
+      "command": true,
+      "title": "Note",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "remark": {
+      "type": "remark",
+      "color": "240, 237, 137",
+      "icon": {
+        "name": "angle-double-right",
+        "type": "font-awesome"
+      },
+      "command": true,
+      "title": "Remark",
+      "injectColor": true,
+      "noTitle": false
+    },
+    "attention": {
+      "type": "attention",
+      "color": "249, 169, 169",
+      "icon": {
+        "name": "exclamation",
+        "type": "font-awesome"
+      },
+      "command": true,
+      "title": "Attention",
+      "injectColor": true,
+      "noTitle": false
+    },
+    "lemma": {
+      "type": "lemma",
+      "color": "56, 132, 255",
+      "icon": {
+        "name": "binoculars",
+        "type": "font-awesome"
+      },
+      "command": true,
+      "injectColor": true,
+      "noTitle": false
+    },
+    "algo": {
+      "type": "algo",
+      "color": "255, 112, 243",
+      "icon": {
+        "type": "obsidian",
+        "name": "lucide-file-digit"
+      },
+      "command": true,
+      "title": "Algorithm",
+      "injectColor": true,
+      "noTitle": false
+    },
+    "pic": {
+      "type": "pic",
+      "color": "131, 94, 161",
+      "icon": {
+        "name": "eye",
+        "type": "font-awesome"
+      },
+      "command": true,
+      "title": "Illustration",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "Code": {
+      "type": "Code",
+      "color": "116, 121, 251",
+      "icon": {
+        "name": "code",
+        "type": "font-awesome"
+      },
+      "command": true,
+      "title": "Code",
+      "injectColor": true,
+      "noTitle": false
+    },
+    "Theorem": {
+      "type": "Theorem",
+      "color": "56, 255, 169",
+      "icon": {
+        "name": "book-open",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": false
+    }
+  },
+  "syntaxHighlight": false,
+  "copyButton": false,
+  "version": "10.1.1",
+  "autoCollapse": true,
+  "defaultCollapseType": "open",
+  "injectColor": true,
+  "parseTitles": true,
+  "dropShadow": true,
+  "hideEmpty": false,
+  "open": {
+    "admonitions": true,
+    "icons": true,
+    "other": true,
+    "advanced": true
+  },
+  "icons": [],
+  "useFontAwesome": true,
+  "rpgDownloadedOnce": false,
+  "msDocConverted": false,
+  "useSnippet": false,
+  "snippetPath": "custom-admonitions.fe8678"
+}
