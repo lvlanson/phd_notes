@@ -105,7 +105,43 @@
         "name": "book-open",
         "type": "font-awesome"
       },
+      "command": true,
+      "injectColor": true,
+      "noTitle": false
+    },
+    "Signature": {
+      "type": "Signature",
+      "color": "150, 150, 150",
+      "icon": {
+        "type": "obsidian",
+        "name": "lucide-book-minus"
+      },
+      "command": true,
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "Documentation": {
+      "type": "Documentation",
+      "color": "150, 150, 150",
+      "icon": {
+        "type": "obsidian",
+        "name": "lucide-bookmark"
+      },
+      "command": true,
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "info": {
+      "type": "info",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "angle-double-down",
+        "type": "font-awesome"
+      },
       "command": false,
+      "title": "...",
       "injectColor": true,
       "noTitle": false
     }

@@ -14,6 +14,3 @@ aliases:
 
 >[!ABSTRACT]-
 >
-
----
-

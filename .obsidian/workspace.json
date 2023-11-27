@@ -6,7 +6,7 @@
       {
         "id": "7675683e84a8c351",
         "type": "tabs",
-        "dimension": 51.482371794871796,
+        "dimension": 45.993589743589745,
         "children": [
           {
             "id": "a95146d8549dfb3d",
@@ -14,69 +14,42 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "e1499388b34932d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
+                "file": "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
                 "mode": "source",
                 "source": true
               }
             },
-            "group": "3d46c13dab9179e8"
+            "group": "854fc9ff9691000e"
           },
           {
-            "id": "4634ac5be52cc351",
+            "id": "7e3a4754f2055011",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "css-editor-view",
               "state": {
-                "file": "Literature/@vasudeva2017.md",
-                "mode": "source",
-                "source": false
+                "filename": "laura.css"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
-        "id": "e8ea71cbbc058164",
+        "id": "34bd2616f2207c0e",
         "type": "tabs",
-        "dimension": 48.517628205128204,
+        "dimension": 54.006410256410255,
         "children": [
           {
-            "id": "ca236c657898e50c",
+            "id": "b8a065140a81045a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
+                "file": "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
                 "mode": "preview",
                 "source": false
               }
             },
-            "group": "3d46c13dab9179e8"
-          },
-          {
-            "id": "63f57378637cad1f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
-                "mode": "source",
-                "source": false
-              }
-            }
+            "group": "854fc9ff9691000e"
           }
         ]
       }
@@ -144,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
+                "file": "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
+                "file": "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -184,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md"
+                "file": "ML Programming/PyTorch/Basics/PyTorch Datatypes.md"
               }
             }
           }
@@ -206,40 +179,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ca236c657898e50c",
+  "active": "a95146d8549dfb3d",
   "lastOpenFiles": [
-    "Sources/guo2020.pdf",
-    "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
-    "Literature/@vasudeva2017.md",
-    "PhD Studies/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
-    "PhD Studies/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
+    "ML Programming/PyTorch/Basics/PyTorch Arithmetics.md",
+    "ML Programming/PyTorch/Basics/PyTorch Basic Functions.md",
+    "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
+    "ML Programming/PyTorch/Basics/Pytorch Shaping.md",
+    "ML Programming.zip",
+    "ML Programming/PyTorch/Basics",
     "PhD Studies/Inner Product/Inner Products.md",
+    "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
+    "Sources/guo2020.pdf",
+    "PhD Studies/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
+    "PhD Studies/To-Do.md",
     "Literature/@guo2020.md",
-    "PhD Studies/Mathematic Basics/Orthogonal Projection.md",
     "PhD Studies/Transformer Vector Quantization/1 - Maximum Inner Product Search.md",
+    "Literature/@guo2015.md",
+    "Sources/guo2015.pdf",
+    "Untitled.md",
+    "Literature/@vaswani2023.md",
+    "Literature/@vasudeva2017.md",
+    "Literature/@lingle2023.md",
+    "Sources/lingle2023.pdf",
+    "PhD Studies/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
+    "PhD Studies/Mathematic Basics/Orthogonal Projection.md",
     "PhD Studies/Transformer Vector Quantization/Mahalabonis Distance.md",
     "PhD Studies/Mathematic Basics",
     "Untitled.canvas",
-    "Literature/@vaswani2023.md",
-    "Literature/@guo2015.md",
     "Sources/vaswani2023.pdf",
     "PhD Studies/Transformer Vector Quantization/partioning(2).jpg",
     "PhD Studies/Transformer Vector Quantization/qips_lemma.jpg",
     "PhD Studies/Transformer Vector Quantization/Transformer Vector Quantization.md",
-    "Sources/guo2015.pdf",
     "Sources/ge2014.pdf",
     "README.md",
     "Literature",
     "Sources/lange2019.pdf",
-    "Sources/vasudeva2017.pdf",
-    "Sources/reddi2018.pdf",
-    "Sources/lumer1961.pdf",
-    "ML Programming/PyTorch/PyTorch Datatypes.md",
-    "ML Programming/PyTorch/PyTorch Basic Functions.md",
     "ML Programming/Advanced PyTorch/LSTM.md",
     "ML Programming/Advanced PyTorch/LSTM.png",
     "ML Programming/Advanced PyTorch/LSTM_gates.png",
-    "ML Programming/PyTorch/Untitled.md",
     "PhD Studies/Transformer Vector Quantization/Anisotropic MIPS.md",
     "PhD Studies/README.md",
     "literature/@guoQuantizationBasedFast2015.md",

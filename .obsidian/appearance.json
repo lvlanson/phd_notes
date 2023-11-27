@@ -1,4 +1,8 @@
 {
   "accentColor": "",
-  "baseFontSize": 30
+  "baseFontSize": 30,
+  "cssTheme": "",
+  "enabledCssSnippets": [
+    "laura"
+  ]
 }

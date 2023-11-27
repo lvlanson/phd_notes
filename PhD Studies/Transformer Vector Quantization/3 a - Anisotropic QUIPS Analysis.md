@@ -92,3 +92,4 @@ print("Parallel Residual Error:", r_par)
 r_orth = (x - u) - r_par
 print("Orthogonal Residual Error:", r_orth)
 ```
+

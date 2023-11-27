@@ -4,6 +4,8 @@ aliases:
 ---
 
 All information regarding this topic can be found in [[../../Literature/@guo2020|Anisotropic QUIPS Paper]]
+>[!paper]-
+>![[../../Literature/@guo2020|Anisotropic QUIPS Paper]]
 ### <font color="red">Problem</font>
 > Cost function (MSE) learns to represent dataspace distribution, *i.e. minimizing the reconstruction error*, but for **[[1 - Maximum Inner Product Search|MIPS]]** it's important to learn maximizing the score for respective queries, *i.e. larger [[../Inner Product/Inner Products|inner products]]*
 
@@ -132,3 +134,4 @@ All information regarding this topic can be found in [[../../Literature/@guo2020
 >>print("Residual Parallel Projection:", r_par_projection)
 >>print("Residual Parallel Projection:", r_orth_projection)
 >>```
+
