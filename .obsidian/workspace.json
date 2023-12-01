@@ -6,48 +6,30 @@
       {
         "id": "7675683e84a8c351",
         "type": "tabs",
-        "dimension": 45.993589743589745,
+        "dimension": 50.120192307692314,
         "children": [
           {
             "id": "a95146d8549dfb3d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             },
             "group": "854fc9ff9691000e"
-          },
-          {
-            "id": "7e3a4754f2055011",
-            "type": "leaf",
-            "state": {
-              "type": "css-editor-view",
-              "state": {
-                "filename": "laura.css"
-              }
-            }
           }
         ]
       },
       {
         "id": "34bd2616f2207c0e",
         "type": "tabs",
-        "dimension": 54.006410256410255,
+        "dimension": 49.87980769230769,
         "children": [
           {
             "id": "b8a065140a81045a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             },
             "group": "854fc9ff9691000e"
           }
@@ -117,7 +99,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +115,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -156,13 +136,19 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ML Programming/PyTorch/Basics/PyTorch Datatypes.md"
-              }
+              "state": {}
+            }
+          },
+          {
+            "id": "ddfdce66340201fb",
+            "type": "leaf",
+            "state": {
+              "type": "Saved Queries View",
+              "state": {}
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -179,47 +165,49 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a95146d8549dfb3d",
+  "active": "b8a065140a81045a",
   "lastOpenFiles": [
-    "ML Programming/PyTorch/Basics/PyTorch Arithmetics.md",
+    "Untitled.md",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Terminology.md",
+    "PhD Studies/Inner Product/Inner Products.md",
+    "PhD Studies/Inner Product",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Eigenvectors and Eigenvalues.md",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
+    "Literature/@hornrogara.md",
+    "Sources/Roger A. Horn, Charles R. Johnson - Matrix Analysis-Cambridge University Press (2013).pdf",
+    "Sources/hornrogara.pdf",
+    "Literature/@zotero-46.md",
+    "PhD Studies/To-Do.md",
+    "ML Programming/PyTorch/Modeling/PyTorch Model Functions.md",
+    "ML Programming/PyTorch/Modeling/PyTorch nn.Module.md",
+    "ML Programming/PyTorch/Modeling/PyTorch Predictions.md",
     "ML Programming/PyTorch/Basics/PyTorch Basic Functions.md",
-    "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
     "ML Programming/PyTorch/Basics/Pytorch Shaping.md",
+    "ML Programming/PyTorch/Basics/PyTorch Layers.md",
+    "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
+    "ML Programming/PyTorch/Basics/PyTorch Arithmetics.md",
+    "ML Programming/PyTorch/Modeling",
+    "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
+    "PhD Studies/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
+    "PhD Studies/Mathematic Basics/Inner Product/Orthogonal Projection.md",
+    "PhD Studies/Mathematic Basics/Inner Product/Inner Products.md",
+    "Literature/@kwak2004.md",
+    "PhD Studies/Mathematic Basics/Linear Algebra",
     "ML Programming.zip",
     "ML Programming/PyTorch/Basics",
-    "PhD Studies/Inner Product/Inner Products.md",
-    "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
     "Sources/guo2020.pdf",
-    "PhD Studies/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
-    "PhD Studies/To-Do.md",
     "Literature/@guo2020.md",
     "PhD Studies/Transformer Vector Quantization/1 - Maximum Inner Product Search.md",
     "Literature/@guo2015.md",
     "Sources/guo2015.pdf",
-    "Untitled.md",
     "Literature/@vaswani2023.md",
     "Literature/@vasudeva2017.md",
-    "Literature/@lingle2023.md",
     "Sources/lingle2023.pdf",
-    "PhD Studies/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
-    "PhD Studies/Mathematic Basics/Orthogonal Projection.md",
-    "PhD Studies/Transformer Vector Quantization/Mahalabonis Distance.md",
-    "PhD Studies/Mathematic Basics",
     "Untitled.canvas",
-    "Sources/vaswani2023.pdf",
     "PhD Studies/Transformer Vector Quantization/partioning(2).jpg",
     "PhD Studies/Transformer Vector Quantization/qips_lemma.jpg",
-    "PhD Studies/Transformer Vector Quantization/Transformer Vector Quantization.md",
-    "Sources/ge2014.pdf",
-    "README.md",
-    "Literature",
-    "Sources/lange2019.pdf",
-    "ML Programming/Advanced PyTorch/LSTM.md",
     "ML Programming/Advanced PyTorch/LSTM.png",
     "ML Programming/Advanced PyTorch/LSTM_gates.png",
-    "PhD Studies/Transformer Vector Quantization/Anisotropic MIPS.md",
-    "PhD Studies/README.md",
-    "literature/@guoQuantizationBasedFast2015.md",
     "PhD Studies/Transformer Vector Quantization/partioning.jpg",
     "Transformer Vector Quantization/paritioning.jpg",
     "Transformer Vector Quantization/photo_2023-11-10_19-40-43.jpg"
