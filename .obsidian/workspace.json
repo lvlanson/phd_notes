@@ -12,8 +12,12 @@
             "id": "a95146d8549dfb3d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
+                "mode": "source",
+                "source": false
+              }
             },
             "group": "854fc9ff9691000e"
           }
@@ -28,8 +32,12 @@
             "id": "b8a065140a81045a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
+                "mode": "source",
+                "source": false
+              }
             },
             "group": "854fc9ff9691000e"
           }
@@ -99,6 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,6 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -136,7 +146,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md"
+              }
             }
           },
           {
@@ -165,33 +177,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b8a065140a81045a",
+  "active": "a95146d8549dfb3d",
   "lastOpenFiles": [
+    "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
+    "Sources/hornrogara.pdf",
+    "Sources/kwak2004.pdf",
+    "ML Programming/PyTorch/Modeling/PyTorch nn.Module.md",
+    "ML Programming/PyTorch/Modeling/PyTorch Predictions.md",
+    "ML Programming/PyTorch/Modeling/PyTorch Model Functions.md",
+    "ML Programming/PyTorch/Modeling",
+    "ML Programming/PyTorch/Basics/PyTorch Layers.md",
+    "Literature/@hornrogara.md",
+    "Literature/@kwak2004.md",
+    "PhD Studies/To-Do.md",
     "Untitled.md",
     "PhD Studies/Mathematic Basics/Linear Algebra/Terminology.md",
     "PhD Studies/Inner Product/Inner Products.md",
     "PhD Studies/Inner Product",
     "PhD Studies/Mathematic Basics/Linear Algebra/Eigenvectors and Eigenvalues.md",
     "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
-    "Literature/@hornrogara.md",
     "Sources/Roger A. Horn, Charles R. Johnson - Matrix Analysis-Cambridge University Press (2013).pdf",
-    "Sources/hornrogara.pdf",
     "Literature/@zotero-46.md",
-    "PhD Studies/To-Do.md",
-    "ML Programming/PyTorch/Modeling/PyTorch Model Functions.md",
-    "ML Programming/PyTorch/Modeling/PyTorch nn.Module.md",
-    "ML Programming/PyTorch/Modeling/PyTorch Predictions.md",
     "ML Programming/PyTorch/Basics/PyTorch Basic Functions.md",
     "ML Programming/PyTorch/Basics/Pytorch Shaping.md",
-    "ML Programming/PyTorch/Basics/PyTorch Layers.md",
     "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
     "ML Programming/PyTorch/Basics/PyTorch Arithmetics.md",
-    "ML Programming/PyTorch/Modeling",
-    "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
     "PhD Studies/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
     "PhD Studies/Mathematic Basics/Inner Product/Orthogonal Projection.md",
     "PhD Studies/Mathematic Basics/Inner Product/Inner Products.md",
-    "Literature/@kwak2004.md",
     "PhD Studies/Mathematic Basics/Linear Algebra",
     "ML Programming.zip",
     "ML Programming/PyTorch/Basics",
@@ -201,8 +214,6 @@
     "Literature/@guo2015.md",
     "Sources/guo2015.pdf",
     "Literature/@vaswani2023.md",
-    "Literature/@vasudeva2017.md",
-    "Sources/lingle2023.pdf",
     "Untitled.canvas",
     "PhD Studies/Transformer Vector Quantization/partioning(2).jpg",
     "PhD Studies/Transformer Vector Quantization/qips_lemma.jpg",

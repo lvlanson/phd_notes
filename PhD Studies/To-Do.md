@@ -20,3 +20,9 @@
 >>- [ ] Find out about the expectation dot product underbrace
 >>- [ ] Find out about uniform spherical distribution
 
+>[!task] [[../Literature/@kwak2004|Linear Algebra Book]]
+>>[!source]-
+>>![[../Literature/@kwak2004|Linear Algebra Book]]
+>>Starting P.200
+>
+>- [ ] Proof Theorem 2.2 (P.206)

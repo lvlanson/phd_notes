@@ -140,10 +140,22 @@
         "name": "angle-double-down",
         "type": "font-awesome"
       },
-      "command": false,
+      "command": true,
       "title": "...",
       "injectColor": true,
       "noTitle": false
+    },
+    "Observation": {
+      "type": "Observation",
+      "color": "233, 255, 173",
+      "icon": {
+        "name": "glasses",
+        "type": "font-awesome"
+      },
+      "command": true,
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
     }
   },
   "syntaxHighlight": false,

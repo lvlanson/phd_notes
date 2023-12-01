@@ -21,7 +21,7 @@ All information can be found in [[../../Literature/@guo2015|@guo2015]]
    
  
 >[!note]-
->The above <u>inner product</u> is the **Euclidean Inner Product**. An overview on inner products can be found here [[../Inner Product/Inner Products|Inner Products]]
+>The above <u>inner product</u> is the **Euclidean Inner Product**. An overview on inner products can be found here [[../Mathematic Basics/Inner Product/Inner Products|Inner Products]]
  
 >[!remark]
 > - **relevance** of an item $\mathbf{x}$ to a query $\mathbf{q}$ is represented by the dot-product

@@ -1,0 +1,2 @@
+- <u>Singularity</u>: A matrix $A$ is singular if the inverse $A^{-1}$ exists
+	- aliases: degenerate, irregular
