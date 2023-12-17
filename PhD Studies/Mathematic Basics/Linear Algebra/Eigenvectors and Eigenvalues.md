@@ -5,8 +5,9 @@ aliases:
 - eigenvalue
 - eigenvalues
 ---
-Literature:
+>[!source]
 ![[../../../Literature/@kwak2004|Linear Algebra Book]]
+
 >[!def] Eigenvectors and Eigenvalues
 > Let $A$ be a $n \times n$ square matrix. A nonzero vector $\mathbf{x}$ in the $n$-space $\mathbb{R}^n$ is called an <u>eigenvector</u> (or <u>characteristic vector</u>) of $A$ if there is a scalar $\lambda$ in $\mathbb{R}$ such that 
 > $$A\mathbf{x} = \lambda\mathbf{x}$$

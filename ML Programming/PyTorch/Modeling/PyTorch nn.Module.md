@@ -1,6 +1,7 @@
 ---
 aliases:
-- pytorch arithmetic
+- pytorch module
+- nn.Module
 ---
 >[!attention]
 >Run the code below first for importing necessary libraries!

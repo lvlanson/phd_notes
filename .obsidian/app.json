@@ -9,5 +9,14 @@
     "callout"
   ],
   "autoPairBrackets": false,
-  "autoPairMarkdown": false
+  "autoPairMarkdown": false,
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 60
+  },
+  "livePreview": false,
+  "defaultViewMode": "preview"
 }

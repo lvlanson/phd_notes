@@ -6,7 +6,7 @@
       {
         "id": "7675683e84a8c351",
         "type": "tabs",
-        "dimension": 50.120192307692314,
+        "dimension": 44.316163410301954,
         "children": [
           {
             "id": "a95146d8549dfb3d",
@@ -14,19 +14,27 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
+                "file": "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             },
             "group": "854fc9ff9691000e"
+          },
+          {
+            "id": "c7049cc73b32db78",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ]
       },
       {
         "id": "34bd2616f2207c0e",
         "type": "tabs",
-        "dimension": 49.87980769230769,
+        "dimension": 55.683836589698046,
         "children": [
           {
             "id": "b8a065140a81045a",
@@ -34,9 +42,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
-                "mode": "source",
-                "source": false
+                "file": "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
+                "mode": "preview",
+                "source": true
               }
             },
             "group": "854fc9ff9691000e"
@@ -107,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
+                "file": "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
+                "file": "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -147,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md"
+                "file": "ML Programming/PyTorch/Modeling/PyTorch Dataset.md"
               }
             }
           },
@@ -174,53 +182,59 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "a95146d8549dfb3d",
   "lastOpenFiles": [
-    "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
-    "Sources/hornrogara.pdf",
-    "Sources/kwak2004.pdf",
-    "ML Programming/PyTorch/Modeling/PyTorch nn.Module.md",
-    "ML Programming/PyTorch/Modeling/PyTorch Predictions.md",
-    "ML Programming/PyTorch/Modeling/PyTorch Model Functions.md",
-    "ML Programming/PyTorch/Modeling",
-    "ML Programming/PyTorch/Basics/PyTorch Layers.md",
-    "Literature/@hornrogara.md",
-    "Literature/@kwak2004.md",
-    "PhD Studies/To-Do.md",
-    "Untitled.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Terminology.md",
-    "PhD Studies/Inner Product/Inner Products.md",
-    "PhD Studies/Inner Product",
+    "ML Programming/PyTorch/Lightning/Lightning Setup.md",
+    "ML Programming/PyTorch/Lightning/Lightning Module.md",
+    "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
+    "Reviews/Stance Classification/Stance Classification Model with Knowledge-aware\nMulti-feature Attention Network.pdf",
+    "ML Programming/PyTorch/Layers/LSTM.md",
+    "ML Programming/PyTorch/Layers/LSTM_gates.png",
+    "ML Programming/PyTorch/Layers/LSTM.jpeg",
+    "PhD Studies/Machine Learning/Network Architectures/Bidirectional Multi-Label Classifier.md",
+    "ML Programming/PyTorch/Layers",
+    "ML Programming/PyTorch/Modeling/Untitled",
+    "ML Programming/PyTorch/Layers.md",
+    "ML Programming/PyTorch/Lightning",
+    "Sources/jadon2020.pdf",
+    "Sources/lin2018.pdf",
+    "PhD Studies/Machine Learning/Network Architectures/arch.png",
+    "PhD Studies/Machine Learning/Network Architectures/Screenshot from 2023-12-15 12-19-54.png",
     "PhD Studies/Mathematic Basics/Linear Algebra/Eigenvectors and Eigenvalues.md",
+    "Sources/nam2014.pdf",
     "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
-    "Sources/Roger A. Horn, Charles R. Johnson - Matrix Analysis-Cambridge University Press (2013).pdf",
-    "Literature/@zotero-46.md",
-    "ML Programming/PyTorch/Basics/PyTorch Basic Functions.md",
-    "ML Programming/PyTorch/Basics/Pytorch Shaping.md",
-    "ML Programming/PyTorch/Basics/PyTorch Datatypes.md",
-    "ML Programming/PyTorch/Basics/PyTorch Arithmetics.md",
-    "PhD Studies/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
-    "PhD Studies/Mathematic Basics/Inner Product/Orthogonal Projection.md",
     "PhD Studies/Mathematic Basics/Inner Product/Inner Products.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra",
-    "ML Programming.zip",
-    "ML Programming/PyTorch/Basics",
-    "Sources/guo2020.pdf",
-    "Literature/@guo2020.md",
+    "PhD Studies/Mathematic Basics/Inner Product/Orthogonal Projection.md",
+    "PhD Studies/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
+    "PhD Studies/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
+    "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
+    "Literature/@nam2014.pdf",
+    "Literature/978-3-662-44851-9.pdf",
     "PhD Studies/Transformer Vector Quantization/1 - Maximum Inner Product Search.md",
+    "Literature/@nam2014.md",
+    "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
+    "PhD Studies/Machine Learning/Network Architectures",
+    "PhD Studies/Mathematic Basics/Inner Product 1/Inner Products.md",
+    "Reviews/Stance Classification/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network.md",
+    "Excalidraw/Drawing 2023-12-10 17.13.01.excalidraw.md",
+    "Reviews/Stance Classification/BERT.png",
+    "Literature/@devlin2019.md",
     "Literature/@guo2015.md",
-    "Sources/guo2015.pdf",
-    "Literature/@vaswani2023.md",
+    "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md",
+    "Excalidraw/Drawing 2023-12-04 16.29.34.excalidraw.md",
+    "Excalidraw/Drawing 2023-12-04 16.29.20.excalidraw.md",
+    "Untitled.md",
     "Untitled.canvas",
+    "ML Programming/PyTorch/Modeling/Pytorch nn.Sequential.md",
     "PhD Studies/Transformer Vector Quantization/partioning(2).jpg",
     "PhD Studies/Transformer Vector Quantization/qips_lemma.jpg",
     "ML Programming/Advanced PyTorch/LSTM.png",
     "ML Programming/Advanced PyTorch/LSTM_gates.png",
-    "PhD Studies/Transformer Vector Quantization/partioning.jpg",
-    "Transformer Vector Quantization/paritioning.jpg",
-    "Transformer Vector Quantization/photo_2023-11-10_19-40-43.jpg"
+    "PhD Studies/Transformer Vector Quantization/partioning.jpg"
   ]
 }
