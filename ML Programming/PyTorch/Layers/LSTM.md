@@ -66,7 +66,7 @@ from torch.nn import LSTM
 >  | Version                         | Parameter                       |
 > | ------------------------------- | ------------------------------- |
 > | Unbatched                       | `(D*num_layers, hidden_dim)`    |
-> | Batched | `(D*num_layers,N, hidden_dim)` |
+> | Batched | `(D*num_layers, N, hidden_dim)` |
 
 
 
@@ -109,6 +109,7 @@ from torch.nn import LSTM
 >batch_size = 3
 >seq_length = 4
 >features   = 5
+>hidden_size = 2
 >
 >h_0 = torch.zeros(2, batch_size, hidden_size) # 2 is number_layers * bi_directional
 >c_0 = torch.zeros(2, batch_size, hidden_size) # 2 is number_layers * bi_directional
