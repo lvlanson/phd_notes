@@ -3,9 +3,11 @@ aliases:
 - LSTM
 - Long Short Term Memory
 ---
->[!pic]
+>[!pic]-
 >![[LSTM_gates.png|600]]
 
+>[!source]-
+>[PyTorch Doc](https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html)
 
 ```python
 from torch.nn import LSTM
@@ -40,7 +42,7 @@ from torch.nn import LSTM
 
 >[!Usage]
 >```python 
->lstm = LSTM(in, hidden, [...])
+>lstm = LSTM(in_size, hidden_size, [...])
 >lstm(input_seq,(h_0, c_0))  
 >```
 >lstm returns `out_seq, (h_n, c_n) = lstm(input_seq)`

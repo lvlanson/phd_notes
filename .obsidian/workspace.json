@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
+                "file": "ML Programming/PyTorch/Layers/LSTM.md",
                 "mode": "source",
                 "source": true
               }
@@ -42,7 +42,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
+                "file": "ML Programming/PyTorch/Layers/LSTM.md",
                 "mode": "preview",
                 "source": true
               }
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
+                "file": "ML Programming/PyTorch/Layers/LSTM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
+                "file": "ML Programming/PyTorch/Layers/LSTM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML Programming/PyTorch/Modeling/PyTorch Dataset.md"
+                "file": "ML Programming/PyTorch/Layers/LSTM.md"
               }
             }
           },
@@ -189,9 +189,9 @@
   },
   "active": "a95146d8549dfb3d",
   "lastOpenFiles": [
+    "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
     "ML Programming/PyTorch/Lightning/Lightning Setup.md",
     "ML Programming/PyTorch/Lightning/Lightning Module.md",
-    "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
     "Reviews/Stance Classification/Stance Classification Model with Knowledge-aware\nMulti-feature Attention Network.pdf",
     "ML Programming/PyTorch/Layers/LSTM.md",
     "ML Programming/PyTorch/Layers/LSTM_gates.png",
