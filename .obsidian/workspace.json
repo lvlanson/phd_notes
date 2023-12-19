@@ -6,7 +6,7 @@
       {
         "id": "7675683e84a8c351",
         "type": "tabs",
-        "dimension": 44.316163410301954,
+        "dimension": 47.270306258322236,
         "children": [
           {
             "id": "a95146d8549dfb3d",
@@ -14,12 +14,36 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Programming/PyTorch/Layers/LSTM.md",
+                "file": "PhD Studies/Mathematic Basics/Statistics/Bernoulli Distribution.md",
                 "mode": "source",
                 "source": true
               }
             },
             "group": "854fc9ff9691000e"
+          },
+          {
+            "id": "6adf33359d5b3067",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Statistics/Bernoulli Distribution.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "8566144ef1e8ae6a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Literature/@bishop2006.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           },
           {
             "id": "c7049cc73b32db78",
@@ -34,7 +58,7 @@
       {
         "id": "34bd2616f2207c0e",
         "type": "tabs",
-        "dimension": 55.683836589698046,
+        "dimension": 52.729693741677764,
         "children": [
           {
             "id": "b8a065140a81045a",
@@ -42,7 +66,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Programming/PyTorch/Layers/LSTM.md",
+                "file": "PhD Studies/Mathematic Basics/Statistics/Bernoulli Distribution.md",
                 "mode": "preview",
                 "source": true
               }
@@ -115,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML Programming/PyTorch/Layers/LSTM.md",
+                "file": "PhD Studies/Mathematic Basics/Statistics/Bernoulli Distribution.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ML Programming/PyTorch/Layers/LSTM.md",
+                "file": "PhD Studies/Mathematic Basics/Statistics/Bernoulli Distribution.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -155,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML Programming/PyTorch/Layers/LSTM.md"
+                "file": "PhD Studies/Mathematic Basics/Statistics/Bernoulli Distribution.md"
               }
             }
           },
@@ -166,9 +190,17 @@
               "type": "Saved Queries View",
               "state": {}
             }
+          },
+          {
+            "id": "553010a0485c6a1a",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -187,50 +219,95 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
+  "floating": {
+    "id": "fb2d3cd085ef25c1",
+    "type": "floating",
+    "children": [
+      {
+        "id": "9f2d3c11a6f62dba",
+        "type": "window",
+        "children": [
+          {
+            "id": "69d032623de48efb",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "55286c35213bdb61",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/bishop2006.pdf"
+                  }
+                }
+              },
+              {
+                "id": "5d33dff4418c3a14",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/grimmett1986.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 28,
+        "y": 560,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "a95146d8549dfb3d",
   "lastOpenFiles": [
+    "PhD Studies/Untitled.md",
+    "ML Programming/PyTorch/Basics/PyTorch Basic Functions.md",
+    "PhD Studies/Machine Learning/Loss Functions/Logistic Sigmoid.md",
+    "Sources/bishop2006.pdf",
+    "PhD Studies/Mathematic Basics/Statistics/Bernoulli Distribution.md",
+    "Literature/@bishop2006.md",
+    "Sources/grimmett1986.pdf",
+    "Sources/vaswani2023.pdf",
+    "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
+    "Sources/vaswani2023a.pdf",
+    "PhD Studies/To-Do.md",
+    "Sources/Christopher M. Bishop - Pattern Recognition and Machine Learning (2006, Springer) .pdf",
+    "Literature/@grimmett1986.md",
+    "Sources/Probability and Random Processes by Geoffrey Grimmett .pdf",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection.md",
+    "PhD Studies/Mathematic Basics/Statistics",
+    "PhD Studies/Mathematic Basics/Orthogonal Projection.md",
+    "Sources/jadon2020a.pdf",
+    "ML Programming/PyTorch/Layers/LSTM.md",
     "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
     "ML Programming/PyTorch/Lightning/Lightning Setup.md",
     "ML Programming/PyTorch/Lightning/Lightning Module.md",
     "Reviews/Stance Classification/Stance Classification Model with Knowledge-aware\nMulti-feature Attention Network.pdf",
-    "ML Programming/PyTorch/Layers/LSTM.md",
     "ML Programming/PyTorch/Layers/LSTM_gates.png",
     "ML Programming/PyTorch/Layers/LSTM.jpeg",
     "PhD Studies/Machine Learning/Network Architectures/Bidirectional Multi-Label Classifier.md",
     "ML Programming/PyTorch/Layers",
-    "ML Programming/PyTorch/Modeling/Untitled",
     "ML Programming/PyTorch/Layers.md",
-    "ML Programming/PyTorch/Lightning",
-    "Sources/jadon2020.pdf",
-    "Sources/lin2018.pdf",
     "PhD Studies/Machine Learning/Network Architectures/arch.png",
     "PhD Studies/Machine Learning/Network Architectures/Screenshot from 2023-12-15 12-19-54.png",
     "PhD Studies/Mathematic Basics/Linear Algebra/Eigenvectors and Eigenvalues.md",
-    "Sources/nam2014.pdf",
     "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
-    "PhD Studies/Mathematic Basics/Inner Product/Inner Products.md",
-    "PhD Studies/Mathematic Basics/Inner Product/Orthogonal Projection.md",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Inner Products.md",
     "PhD Studies/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
     "PhD Studies/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
     "PhD Studies/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
-    "Literature/@nam2014.pdf",
-    "Literature/978-3-662-44851-9.pdf",
     "PhD Studies/Transformer Vector Quantization/1 - Maximum Inner Product Search.md",
     "Literature/@nam2014.md",
-    "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
-    "PhD Studies/Machine Learning/Network Architectures",
     "PhD Studies/Mathematic Basics/Inner Product 1/Inner Products.md",
     "Reviews/Stance Classification/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network.md",
-    "Excalidraw/Drawing 2023-12-10 17.13.01.excalidraw.md",
     "Reviews/Stance Classification/BERT.png",
-    "Literature/@devlin2019.md",
-    "Literature/@guo2015.md",
-    "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md",
-    "Excalidraw/Drawing 2023-12-04 16.29.34.excalidraw.md",
-    "Excalidraw/Drawing 2023-12-04 16.29.20.excalidraw.md",
-    "Untitled.md",
     "Untitled.canvas",
-    "ML Programming/PyTorch/Modeling/Pytorch nn.Sequential.md",
     "PhD Studies/Transformer Vector Quantization/partioning(2).jpg",
     "PhD Studies/Transformer Vector Quantization/qips_lemma.jpg",
     "ML Programming/Advanced PyTorch/LSTM.png",

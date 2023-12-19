@@ -7,7 +7,7 @@ All information regarding this topic can be found in [[../../Literature/@guo2020
 >[!paper]-
 >![[../../Literature/@guo2020|Anisotropic QUIPS Paper]]
 ### <font color="red">Problem</font>
-> Cost function (MSE) learns to represent dataspace distribution, *i.e. minimizing the reconstruction error*, but for **[[1 - Maximum Inner Product Search|MIPS]]** it's important to learn maximizing the score for respective queries, *i.e. larger [[../Mathematic Basics/Inner Product/Inner Products|inner products]]*
+> Cost function (MSE) learns to represent dataspace distribution, *i.e. minimizing the reconstruction error*, but for **[[1 - Maximum Inner Product Search|MIPS]]** it's important to learn maximizing the score for respective queries, *i.e. larger [[../Mathematic Basics/Linear Algebra/Inner Product/Inner Products|inner products]]*
 
 ### <font color="red">Solution</font>
 > Create cost function which penalizes parallelity more than orthogonality 
@@ -30,7 +30,7 @@ All information regarding this topic can be found in [[../../Literature/@guo2020
 > $$r_{\perp}(\mathbf{x}, \mathbf{u}) = (\mathbf{x} - \mathbf{u}) - r_{||}(\mathbf{x}, \mathbf{u}) $$
 
 >[!note]-
-> $\mathbf{r}_{||}$ is the [[../Mathematic Basics/Inner Product/Orthogonal Projection|orthogonal projection]] of $\mathbf{x-u}$ onto $\mathbf{x}$
+> $\mathbf{r}_{||}$ is the [[../Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection|orthogonal projection]] of $\mathbf{x-u}$ onto $\mathbf{x}$
 
 >[!note]-
 ><u>Parallel Error:</u>

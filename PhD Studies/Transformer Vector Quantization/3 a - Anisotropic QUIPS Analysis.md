@@ -31,7 +31,7 @@ Based on the paper of [[../../Literature/@guo2020|Anisotropic QUIPS Paper]]
 >
 >>[!proof]
 >>First note
->>* $\mathbf{q}:= \mathbf{q}_{\perp} + \mathbf{q}_{||}$ the [[../Mathematic Basics/Inner Product/Orthogonal Projection|orthogonal decomposition]] of $\mathbf{q}$ with respect to $\mathbf{x}$
+>>* $\mathbf{q}:= \mathbf{q}_{\perp} + \mathbf{q}_{||}$ the [[../Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection|orthogonal decomposition]] of $\mathbf{q}$ with respect to $\mathbf{x}$
 >>* $\mathbf{q}_{||} = \frac{\langle\mathbf{q},\mathbf{x}\rangle\mathbf{x}}{||\mathbf{x}||^2}$ which is parallel to $\mathbf{x}$
 >>* $\mathbf{q}_{\perp}=\mathbf{q} - \mathbf{q}_{||}$ which is orthogonal to $\mathbf{x}$
 >>* $\mathbf{r}_{||}(\mathbf{x},\mathbf{u}):=\mathbf{r}_{||}$ which is parallel to $\mathbf{x}$
