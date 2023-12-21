@@ -52,6 +52,18 @@ aliases:
 | Parameter         | Identification |
 | ----------------- | -------------- |
 | $u(\mathbf{x})$   | $= \mathbf{x}$ |
-| $h(\mathbf{x})$    | $=1$           | 
+| $h(\mathbf{x})$   | $=1$           |
 | $g(\mathbf{\eta}$ | $=1$           |
+ >
+ >Note $p_i \in [0,1]$ with $\sum_{i=1}^K p_i = 1$, therefore we can fix $p_K$ as
+ >$$ p_K = 1 - \sum_{i=1}^{K-1} p_i$$
+ >with $0\leq p_i \leq 1$ and $\sum_{i=1}^{K-1}p_k \leq 1$.
+ >Further we also make use of the fact, that exponential distribution is normalized with respect to $\mathbf{x}$, i.e.
+ >$$g(\mathbf{\eta})\int h(\mathbf{x}) \exp\left[\mathbf{\eta}^T\mathbf{u}(\mathbf{x})\right] \text{ d}\mathbf{x} = 1 $$
+ >Therefore we can write
+ >$$\begin{align}\exp\left[\sum_{i=1}^K x_i \text{ ln } (p_i)\right] &= \exp\left[\sum_{i=1}^{K-1} x_i \text{ ln } (p_i) + x_K \text{ ln } (p_K)\right] \\
+ >&= \exp\left[\sum_{i=1}^{K-1} x_i \text{ ln } (p_i) + \left(1 - \sum_{i=1}^{K-1} x_i \right) \left(1 - \sum_{i=1}^{K-1}\text{ ln } (p_i)\right)\right] \tag{Normalization} \\
+ >\end{align}$$
+
+
  

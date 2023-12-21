@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Statistics/Generalization of the Bernoulli Distribution.md",
+                "file": "PhD Studies/Machine Learning/Activation Functions/Logistic Sigmoid.md",
                 "mode": "source",
                 "source": true
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Statistics/Generalization of the Bernoulli Distribution.md",
+                "file": "PhD Studies/Machine Learning/Activation Functions/Logistic Sigmoid.md",
                 "mode": "preview",
                 "source": true
               }
@@ -200,7 +200,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -240,8 +241,8 @@
           }
         ],
         "direction": "vertical",
-        "x": 2271,
-        "y": 32,
+        "x": 4536,
+        "y": 807,
         "width": 1024,
         "height": 800,
         "maximize": true,
