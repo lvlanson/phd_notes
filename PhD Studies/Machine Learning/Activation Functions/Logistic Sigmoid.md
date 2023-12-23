@@ -11,7 +11,7 @@
 | $\set{\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_N}$ | finite set of observations                                  |
 
 >[!def] Definition Bernoulli Distribution
-> See [[../../Mathematic Basics/Statistics/Bernoulli Distribution|Bernoulli Distribution]]
+> See [[../../Mathematic Basics/Statistics/Distributions/Bernoulli Distribution|Bernoulli Distribution]]
 >>The distribution can be given as
 >>$$ f_B(\mathbf{x};p) = p^\mathbf{x}(1-p)^{\mathbf{1}-\mathbf{x}}$$
 

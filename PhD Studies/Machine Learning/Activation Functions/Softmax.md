@@ -17,13 +17,13 @@ aliases:
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | $\mathbf{x} \in \set{0,1}^K$                             | multinomial random variable with $X=x_i$ is represented by  <br> $$ \mathbf{x} = (0, \ldots , \underbrace{1}_{i\text{-th position}}, \ldots, 0)$$ |
 | $f(\mathbf{x})$                                          | probability distribution for random variable $\mathbf{x}$                                                                                         |
-| $f_M(\mathbf{x;p})$                                      | Multinomial Bernoulli distribution with $f(\mathbf{x_i})=p_i$                                                                                     |
+| $f_M(\mathbf{x;p})$                                      | multinomial Bernoulli distribution with $f(\mathbf{x_i})=p_i$                                                                                     |
 | $\set{\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_N}$ | finite set of observations                                                                                                                        |
 | $\mathbf{p} \in [0,1]^K$                                 | natural parameter representing the probabilityies for $\mathbf{x}$ with $\sum_{i=1}^K p_i = 1$                                                    |
 | $K$                                                      | Amount of outcomes for the random variable $X$                                                                                                                                                  |
 
 >[!def] Definition Generalized Bernoulli Distribution
-> See [[../../Mathematic Basics/Statistics/Generalization of the Bernoulli Distribution|Generalized Bernoulli Distribution]]
+> See [[../../Mathematic Basics/Statistics/Distributions/Generalization of the Bernoulli Distribution|Generalized Bernoulli Distribution]]
 >$$\begin{align} f(\mathbf{x};\mathbf{p}) &= \prod_{i=1}^K p_i^{x_i}\end{align}$$
 
 >[!def] Definition Exponential Family of Distributions
@@ -55,15 +55,18 @@ aliases:
 | $h(\mathbf{x})$   | $=1$           |
 | $g(\mathbf{\eta}$ | $=1$           |
  >
- >Note $p_i \in [0,1]$ with $\sum_{i=1}^K p_i = 1$, therefore we can fix $p_K$ as
- >$$ p_K = 1 - \sum_{i=1}^{K-1} p_i$$
+ >Recall $p_i \in [0,1]$ with $\sum_{i=1}^K p_i = 1$ and $x_i \in {0,1}^K$ with $\sum_{i=1}^{K} x_i = 1$, therefore we can fix $p_K$ and $x_K$ as
+ >$$ \begin{align}p_K = 1 - \sum_{i=1}^{K-1} p_i \\
+ >	x_K = 1-\sum_{i=1}^{K-1} x_i\end{align}$$
  >with $0\leq p_i \leq 1$ and $\sum_{i=1}^{K-1}p_k \leq 1$.
- >Further we also make use of the fact, that exponential distribution is normalized with respect to $\mathbf{x}$, i.e.
- >$$g(\mathbf{\eta})\int h(\mathbf{x}) \exp\left[\mathbf{\eta}^T\mathbf{u}(\mathbf{x})\right] \text{ d}\mathbf{x} = 1 $$
- >Therefore we can write
+ >
+ >We now derive the formula for a specific $\eta_k$ from the representation of the family of exponential distributions we described earlier 
  >$$\begin{align}\exp\left[\sum_{i=1}^K x_i \text{ ln } (p_i)\right] &= \exp\left[\sum_{i=1}^{K-1} x_i \text{ ln } (p_i) + x_K \text{ ln } (p_K)\right] \\
- >&= \exp\left[\sum_{i=1}^{K-1} x_i \text{ ln } (p_i) + \left(1 - \sum_{i=1}^{K-1} x_i \right) \left(1 - \sum_{i=1}^{K-1}\text{ ln } (p_i)\right)\right] \tag{Normalization} \\
+ >&= \exp\left[\sum_{i=1}^{K-1} x_i \text{ ln } (p_i) + \left(1 - \sum_{i=1}^{K-1} x_i \right) \text{ ln } \left(1 - \sum_{i=1}^{K-1}p_i\right)\right] \\
+ >&= \exp\left[\sum_{i=1}^{K-1}  x_i \text{ ln } (p_i) - \cancel{\sum_{i=1}^{K-1}}x_i \text{ ln }\left(1-\sum_{j=1}^{K-1} p_j \right) + \text{ ln } \left(1 - \sum_{i=1}^{K-1}p_i\right)\right] \\
+ >&= \exp\left[\sum_{i=1}^{K-1}  x_i \left(\text{ ln } (p_i) -  \text{ ln }\left(1-\sum_{j=1}^{K-1} p_j \right)\right) + \text{ ln } \left(1 - \sum_{i=1}^{K-1}p_i\right)\right] \\
+ >&= \exp\left[\sum_{i=1}^{K-1}  x_i \underbrace{\text{ ln } \left(\frac{p_i}{\text{ ln }\left(1-\sum_{j=1}^{K-1} p_j \right)} -  \right)}_{= \eta_k} + \text{ ln } \left(1 - \sum_{i=1}^{K-1}p_i\right)\right] 
  >\end{align}$$
-
+ >Having found an expression for a specific $\eta_k$ we can now solve for the corresponding specific $p_k$
 
  

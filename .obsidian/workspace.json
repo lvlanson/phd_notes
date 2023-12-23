@@ -14,28 +14,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Machine Learning/Activation Functions/Logistic Sigmoid.md",
+                "file": "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md",
                 "mode": "source",
                 "source": true
               }
             },
             "group": "854fc9ff9691000e"
-          },
-          {
-            "id": "e029fdd2a7951bf2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Machine Learning/Activation Functions/Softmax.md",
-                "mode": "source",
-                "source": true
-              }
-            },
-            "group": "07dd5beb121a9dab"
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "34bd2616f2207c0e",
@@ -48,28 +34,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Machine Learning/Activation Functions/Logistic Sigmoid.md",
+                "file": "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md",
                 "mode": "preview",
                 "source": true
               }
             },
             "group": "854fc9ff9691000e"
-          },
-          {
-            "id": "3d207e2893a2c0d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Machine Learning/Activation Functions/Softmax.md",
-                "mode": "preview",
-                "source": true
-              }
-            },
-            "group": "07dd5beb121a9dab"
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -135,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Machine Learning/Activation Functions/Softmax.md",
+                "file": "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Machine Learning/Activation Functions/Softmax.md",
+                "file": "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -175,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Machine Learning/Activation Functions/Softmax.md"
+                "file": "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md"
               }
             }
           },
@@ -228,7 +200,7 @@
             "type": "tabs",
             "children": [
               {
-                "id": "e684459140a5f661",
+                "id": "91946db6aeff967f",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -236,13 +208,34 @@
                     "file": "Sources/bishop2006.pdf"
                   }
                 }
+              },
+              {
+                "id": "a8a442e8a4210975",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/greene2019.pdf"
+                  }
+                }
+              },
+              {
+                "id": "18847978d0173867",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/millar2011.pdf"
+                  }
+                }
               }
-            ]
+            ],
+            "currentTab": 1
           }
         ],
         "direction": "vertical",
-        "x": 4536,
-        "y": 807,
+        "x": 3465,
+        "y": 401,
         "width": 1024,
         "height": 800,
         "maximize": true,
@@ -250,47 +243,47 @@
       }
     ]
   },
-  "active": "e029fdd2a7951bf2",
+  "active": "a95146d8549dfb3d",
   "lastOpenFiles": [
-    "Sources/bishop2006.pdf",
-    "PhD Studies/Machine Learning/Activation Functions/Softmax.md",
-    "PhD Studies/Machine Learning/Activation Functions/Logistic Sigmoid.md",
-    "PhD Studies/Mathematic Basics/Statistics/Generalization of the Bernoulli Distribution.md",
-    "PhD Studies/Mathematic Basics/Statistics/Bernoulli Distribution.md",
-    "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
-    "PhD Studies/Machine Learning/Activation Functions",
+    "PhD Studies/Mathematic Basics/Statistics/Methods/Generalized Linear Model.md",
+    "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md",
     "PhD Studies/Mathematic Basics/Statistics/Vocabulary.md",
-    "PhD Studies/Mathematic Basics/Statistics/Binomial Distribution.md",
+    "Sources/greene2019.pdf",
+    "Sources/millar2011.pdf",
+    "Literature/@greene2019.md",
+    "PhD Studies/Mathematic Basics/Statistics/Distributions/Generalization of the Bernoulli Distribution.md",
+    "Sources/ge2014.pdf",
+    "Sources/reddi2018.pdf",
+    "Sources/ramos2018.pdf",
+    "Sources/William H. Greene - Econometric Analysis-Pearson (2018).pdf",
+    "PhD Studies/Machine Learning/Activation Functions/Logistic Sigmoid.md",
+    "Literature/@miura2011.md",
+    "Sources/miura2011.pdf",
+    "PhD Studies/Machine Learning/Activation Functions/Softmax.md",
+    "Sources/2011p.pdf",
+    "Sources/2011s.pdf",
+    "Sources/bishop2006.pdf",
+    "Literature/@millar2011.md",
+    "PhD Studies/Mathematic Basics/Statistics/Distributions/Binomial Distribution.md",
+    "PhD Studies/Mathematic Basics/Statistics/Distributions/Bernoulli Distribution.md",
+    "Literature/@nelder1972.md",
+    "Question.md",
+    "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
     "Literature/@bishop2006.md",
-    "Sources/grimmett1986.pdf",
     "PhD Studies/Untitled.md",
     "ML Programming/PyTorch/Basics/PyTorch Basic Functions.md",
-    "Sources/vaswani2023.pdf",
-    "Sources/vaswani2023a.pdf",
     "PhD Studies/To-Do.md",
-    "Sources/Christopher M. Bishop - Pattern Recognition and Machine Learning (2006, Springer) .pdf",
     "Literature/@grimmett1986.md",
-    "Sources/Probability and Random Processes by Geoffrey Grimmett .pdf",
     "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection.md",
-    "PhD Studies/Mathematic Basics/Statistics",
     "PhD Studies/Mathematic Basics/Orthogonal Projection.md",
-    "Sources/jadon2020a.pdf",
     "ML Programming/PyTorch/Layers/LSTM.md",
     "ML Programming/PyTorch/Modeling/PyTorch Dataset.md",
     "ML Programming/PyTorch/Lightning/Lightning Setup.md",
     "ML Programming/PyTorch/Lightning/Lightning Module.md",
-    "Reviews/Stance Classification/Stance Classification Model with Knowledge-aware\nMulti-feature Attention Network.pdf",
     "ML Programming/PyTorch/Layers/LSTM_gates.png",
     "ML Programming/PyTorch/Layers/LSTM.jpeg",
-    "PhD Studies/Machine Learning/Network Architectures/Bidirectional Multi-Label Classifier.md",
-    "ML Programming/PyTorch/Layers.md",
     "PhD Studies/Machine Learning/Network Architectures/arch.png",
     "PhD Studies/Machine Learning/Network Architectures/Screenshot from 2023-12-15 12-19-54.png",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Eigenvectors and Eigenvalues.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Inner Products.md",
-    "PhD Studies/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
-    "PhD Studies/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
     "Reviews/Stance Classification/BERT.png",
     "Untitled.canvas",
     "PhD Studies/Transformer Vector Quantization/partioning(2).jpg",
