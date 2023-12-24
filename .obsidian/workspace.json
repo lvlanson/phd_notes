@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md",
+                "file": "PhD Studies/Mathematic Basics/Statistics/Methods/Generalized Linear Model.md",
                 "mode": "source",
                 "source": true
               }
@@ -34,7 +34,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md",
+                "file": "PhD Studies/Mathematic Basics/Statistics/Methods/Generalized Linear Model.md",
                 "mode": "preview",
                 "source": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md",
+                "file": "Sources/nelder1972.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md",
+                "file": "Sources/nelder1972.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md"
+                "file": "Sources/nelder1972.pdf"
               }
             }
           },
@@ -172,8 +172,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,7 +199,7 @@
             "type": "tabs",
             "children": [
               {
-                "id": "91946db6aeff967f",
+                "id": "7b252e86bab27139",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -210,7 +209,7 @@
                 }
               },
               {
-                "id": "a8a442e8a4210975",
+                "id": "24225b60b76e04ef",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -220,7 +219,7 @@
                 }
               },
               {
-                "id": "18847978d0173867",
+                "id": "a826cf4c8c5d1bc1",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -228,9 +227,19 @@
                     "file": "Sources/millar2011.pdf"
                   }
                 }
+              },
+              {
+                "id": "e3741fbd1683e67c",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/nelder1972.pdf"
+                  }
+                }
               }
             ],
-            "currentTab": 1
+            "currentTab": 3
           }
         ],
         "direction": "vertical",
@@ -243,15 +252,18 @@
       }
     ]
   },
-  "active": "a95146d8549dfb3d",
+  "active": "e3741fbd1683e67c",
   "lastOpenFiles": [
     "PhD Studies/Mathematic Basics/Statistics/Methods/Generalized Linear Model.md",
     "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md",
-    "PhD Studies/Mathematic Basics/Statistics/Vocabulary.md",
-    "Sources/greene2019.pdf",
-    "Sources/millar2011.pdf",
-    "Literature/@greene2019.md",
+    "PhD Studies/Mathematic Basics/Statistics/Sufficient Statistic.md",
+    "Sources/nelder1972.pdf",
     "PhD Studies/Mathematic Basics/Statistics/Distributions/Generalization of the Bernoulli Distribution.md",
+    "PhD Studies/Mathematic Basics/Statistics/Vocabulary.md",
+    "Sources/millar2011.pdf",
+    "Sources/greene2019.pdf",
+    "Sources/bishop2006.pdf",
+    "Literature/@greene2019.md",
     "Sources/ge2014.pdf",
     "Sources/reddi2018.pdf",
     "Sources/ramos2018.pdf",
@@ -261,8 +273,6 @@
     "Sources/miura2011.pdf",
     "PhD Studies/Machine Learning/Activation Functions/Softmax.md",
     "Sources/2011p.pdf",
-    "Sources/2011s.pdf",
-    "Sources/bishop2006.pdf",
     "Literature/@millar2011.md",
     "PhD Studies/Mathematic Basics/Statistics/Distributions/Binomial Distribution.md",
     "PhD Studies/Mathematic Basics/Statistics/Distributions/Bernoulli Distribution.md",

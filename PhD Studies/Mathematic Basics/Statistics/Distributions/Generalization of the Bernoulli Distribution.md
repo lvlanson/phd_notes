@@ -18,7 +18,7 @@ aliases:
 >$$\begin{align} f(\mathbf{x};\mathbf{p}) &= \prod_{i=1}^K p_i^{x_i}\end{align}$$
 >with
 
-| Variable     | Meaning                |
-| ------------ | ---------------------- |
-| $\mathbf{x}$ | random variable states |
-| $\mathbf{p}$ | probabilities corresponding to random variable states $f(x_i) = p_i$ <br> with $p_i \geq 0$ and $\sum_{i=1}^K p_i = 1$                       |
+| Variable     | Meaning                                                                                                                |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| $\mathbf{x}$ | random variable states                                                                                                 | 
+| $\mathbf{p}$ | probabilities corresponding to random variable states $f(x_i) = p_i$ <br> with $p_i \geq 0$ and $\sum_{i=1}^K p_i = 1$ |
