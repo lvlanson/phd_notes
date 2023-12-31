@@ -9,17 +9,17 @@
         "dimension": 47.270306258322236,
         "children": [
           {
-            "id": "a95146d8549dfb3d",
+            "id": "60ed75dc871465f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
+                "file": "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
                 "mode": "source",
                 "source": true
               }
             },
-            "group": "854fc9ff9691000e"
+            "group": "9c276979aaded7f6"
           }
         ]
       },
@@ -29,29 +29,17 @@
         "dimension": 52.729693741677764,
         "children": [
           {
-            "id": "b8a065140a81045a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
-                "mode": "preview",
-                "source": true
-              }
-            },
-            "group": "854fc9ff9691000e"
-          },
-          {
             "id": "3cbc35ca82c5fa15",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
-                "mode": "source",
+                "file": "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
+                "mode": "preview",
                 "source": true
               }
-            }
+            },
+            "group": "9c276979aaded7f6"
           }
         ]
       }
@@ -119,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
+                "file": "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
+                "file": "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -159,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md"
+                "file": "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md"
               }
             }
           },
@@ -199,11 +187,25 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1f85b19b667b36e1",
+  "active": "60ed75dc871465f9",
   "lastOpenFiles": [
-    "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
-    "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
+    "Sources/bishop2006.pdf",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/selective_state_space_model.png",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/Screenshot from 2023-12-31 15-43-28.png",
+    "PhD Studies/Machine Learning/Network Architectures/Screenshot from 2023-12-31 15-43-28.png",
     "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
+    "Literature/@kalman1960.md",
+    "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba.md",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba",
+    "Sources/kalman1960.pdf",
+    "Sources/kalman1960.pdf.crdownload",
+    "Literature/@gu2023.md",
+    "PhD Studies/Machine Learning/Network Architectures/arch.png",
+    "PhD Studies/Machine Learning/Network Architectures/Bidirectional Multi-Label Classifier.md",
+    "Aussagenlogik.md",
+    "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
     "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection.md",
     "Literature/@ben-baruch2021.md",
     "Sources/ben-baruch2021.pdf",
@@ -223,30 +225,15 @@
     "PhD Studies/Mathematic Basics/Statistics/Distributions/Generalization of the Bernoulli Distribution.md",
     "PhD Studies/Mathematic Basics/Statistics/Vocabulary.md",
     "Sources/millar2011.pdf",
-    "Sources/greene2019.pdf",
-    "Sources/bishop2006.pdf",
     "Literature/@greene2019.md",
-    "Sources/ge2014.pdf",
-    "Sources/reddi2018.pdf",
     "PhD Studies/Machine Learning/Activation Functions/Logistic Sigmoid.md",
     "Literature/@miura2011.md",
-    "PhD Studies/Machine Learning/Activation Functions/Softmax.md",
-    "Literature/@millar2011.md",
-    "PhD Studies/Mathematic Basics/Statistics/Distributions/Binomial Distribution.md",
-    "PhD Studies/Mathematic Basics/Statistics/Distributions/Bernoulli Distribution.md",
-    "Literature/@nelder1972.md",
-    "Question.md",
-    "Literature/@bishop2006.md",
     "ML Programming/PyTorch/Layers/LSTM_gates.png",
     "ML Programming/PyTorch/Layers/LSTM.jpeg",
-    "PhD Studies/Machine Learning/Network Architectures/arch.png",
     "PhD Studies/Machine Learning/Network Architectures/Screenshot from 2023-12-15 12-19-54.png",
     "Reviews/Stance Classification/BERT.png",
     "Untitled.canvas",
     "PhD Studies/Transformer Vector Quantization/partioning(2).jpg",
-    "PhD Studies/Transformer Vector Quantization/qips_lemma.jpg",
-    "ML Programming/Advanced PyTorch/LSTM.png",
-    "ML Programming/Advanced PyTorch/LSTM_gates.png",
-    "PhD Studies/Transformer Vector Quantization/partioning.jpg"
+    "PhD Studies/Transformer Vector Quantization/qips_lemma.jpg"
   ]
 }
