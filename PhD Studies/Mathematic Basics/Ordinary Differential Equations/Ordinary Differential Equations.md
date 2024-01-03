@@ -256,4 +256,36 @@ aliases:
 >
 >>[!example]- Task: Find the unique solution of the initial value problem $y'=-3y + 1$ with $y(0) = 1$
 
->[!example] Exercises
+>[!example]- Exercises
+>>[!example] Task: Find the differential equation of the form $y' = f(y)$ satisfied by the function $y(t) = 8e^{5t} - \frac25$
+>
+>>[!example] Task: Find constants a,b, such that $y(t) = (t+3)e^{2t}$ is solution of the IVP $y'=ay+e^{2t}$, $y(0)=b$
+>
+>>[!example] Task: Find all solutions of $y$ of $y' = 3y$
+>
+>>[!example] Task: Follow the steps below to find all solutions of $y' = -4y + 2$
+>>1. Find the integrating factor $\mu$
+>>2. Write the equations as a total derivative of a function $\psi$, that is $y'=-4y+2 \Leftrightarrow \psi'=0$
+>>3. Integrate the equation for $\psi$
+>>4. Compute $y$ using part (c)
+>
+>>[!example] Task: Find all solutions of $y'=2y+5$
+>
+>>[!example] Task: Find all solutions of the IVP $y'=-4y+2$, $y(0)=5$
+>
+>>[!example] Task: Find the solution of the IVP $\frac{dy}{dt}(t)=3y(t)-2$, $y(1)=1$
+>
+>>[!example] Task
+>>Express the differential equation $y'=6y+1$ as a total derivative of a potential function $\psi(t,y)$, that is, find $\psi$ satisfying 
+>>$$ y'=6y+1 \Leftrightarrow \psi'=0$$
+>>Integrate the equation for the potential function $psi$ to find all solutions of $y$.
+>
+>>[!example] Task: Find the solution of the IVP $y'=6y+1$, $y(0) = 1$
+>
+>>[!example] Task: Follow the steps below to find all solutions of $y'=-3y+5$, $y(0)=1$
+>>1. Find any integrating factor $\mu$ for the differential equation.
+>>2. Write the differential equation as a total derivative of a potential function $\psi$.
+>>3. Use the potential function to find the general solution of the differential equation
+>>4. Find the solution of the initial value problem above.
+
+## 3 - Linear Variable Coefficient Equations
