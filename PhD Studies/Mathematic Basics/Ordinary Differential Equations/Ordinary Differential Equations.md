@@ -1,0 +1,259 @@
+---
+aliases:
+- ODE
+- ordinary differential equations
+---
+
+>[!Source]-
+>URL: 
+>PDF: [PDF](nagy.pdf)
+>Zotero: [Zotero-Link](zotero://select/items/@nagy)
+
+>[!observation]- Introduction ([[../../../Sources/nagy.pdf#page=12|Source]])
+> A differential equation is an equation, where the unknown is a function and both the function and its derivatives may appear in the equation.
+>
+>>[!example] Example Newton's law
+>> Mass $\times$ Acceleration $=$ Force
+>> $$ ma =f $$
+>>
+| variable                           | meaning                       |
+| ---------------------------------- | ----------------------------- |
+| $m$                                | particle                      |
+| $a = \dfrac{d^2 \mathbf{x}}{dt^2}$ | particle acceleration         |
+| $f$                                | force acting on the particle  |
+| $\mathbf{x}(t)$                    | particle position at time $t$ |
+>> can be rewritten as
+>> $$ m \frac{d^2\mathbf{x}}{dt^2}(t) = \mathbf{f}\Big(f, \mathbf{x}(t), \frac{d\mathbf{x}}{dt}(t)\Big)$$
+>> being a **Second Order Ordinary Differential Equation (ODE)** with the unknown 
+>
+>>[!example] Example Radioactive Decay
+>>The amount $u$ of radioactive material changes in time as follows
+>>$$ \frac{du}{dt}(t) = -k\,u(t)$$
+>>with $k>0$ representing the radioactive properties of the material. This is a **First order ODE**
+>
+>>[!example] The Heat Equation
+>>Temperature $T$ changes in solid material over time in three space dimensions $\mathbf{x} = (x,y,z)$
+>>$$\frac{\partial T}{\partial t}(t, \mathbf{x}) = k \left(\frac{\partial^2 T}{\partial x^2}(t, \mathbf{x}) + \frac{\partial^2 T}{\partial y^2}(t, \mathbf{x}) \frac{\partial^2 T}{\partial z^2}(t, \mathbf{x})\right)$$
+>>with $k>0$ being the positive constant representing thermal properties of the material. This is a **First Order Partial Differential Equation (PDE) in Time** and a **Second Order PDE in Space**. 
+>
+
+<br>
+
+## 1 - Solving Linear Differential Equations
+
+>[!def] Definition First Order ODE ([[../../../Sources/nagy.pdf#page=13|Source]])
+>A first order ODE on the unknown $y$ is given as 
+>$$ y'(t) = f(t,y(t))$$
+>where $f$ is given and $y' = \dfrac{dy}{dt}$. The equation is linear iff the source function is linear on its second argument, i.e.
+>$$y' = a(t)y + b(t) \tag{1}$$
+> with the coefficient name convention
+> 
+| Name                      | Condition                |
+| ------------------------- | ------------------------ |
+| **Constant Coefficients** | $a, b$ both are constant |
+| **Variable Coefficients** | Otherwise                |
+>>[!note]- Note Different Sign Conventions
+>>There are different name conventions used for equation (1) in literature, which are only a matter of taste, i.e.
+>>$$ y' = -ay + b $$
+>>^deffirstorderODE
+
+>[!example]- Examples (Equations)
+>>[!example] Example 1 (First Order Linear ODE)
+>>$$ y' =  2y + 3$$
+>>with the function 
+>>$$ \begin{align} f(t,y) &= 2y+3 \\ &= 2y(t) + 3 \end{align}$$
+>>and
+>>$$ \begin{align} a(t) &=2 \\ b(t) &= 3 \end{align}$$
+>
+>>[!example] Example 2 (First Order Linear ODE)
+>>$$ y' = -\frac{2}{t} y + 4t$$
+>>with the function 
+>>$$ \begin{align} f(t,y) &= -\frac{2y}{t} y + 4t \\ &= -\frac{2y(t)}{t} y + 4t \end{align}$$
+>>and
+>>$$ \begin{align} a(t) &=-\frac{2}{t} \\ b(t) &= 4t \end{align}$$
+>
+>>[!example] Example 3 (Nonlinear ODE)
+>>$$ y' = -\frac{2}{ty} +4t $$
+>>because $y$ is in the numerator and therefore not linear with respect to $f(t,y(t))$
+
+>[!example]- Examples (Tasks)
+>>[!example]- Task: Show that $y(t) = e^{2t}-\frac{3}{2}$ is a solution for $y' = 2y+3$
+>>We have the ODE $y' = 2y + 3$. To verify the statement we first calculate the derivative of $y(t)$ which is
+>>$$\frac{dy}{dt}=y'=2e^{2t}$$
+>>Plugging these in, yields
+>>$$ \begin{align} 2e^{2t} &= 2\left(e^{2t} - \frac{3}{2}\right) + 3 \\
+>>&= 2e^{2t} -3 +3 \\
+>>&= 2e^{2t}\end{align}$$
+>
+>>[!example]- Task: Find the differential equation $y' = f(y)$ satisfied by $y(t) = 4e^{2t} + 3$
+>>First we find the derivative of $y(t)$, i.e.
+>>$$\frac{dy}{dt}=y'=8e^{2t}$$
+>>Since $y(t)$ is the [[Ordinary Differential Equations#^deffirstorderODE|first order ODE]] it is of the form
+>>$$y' = a(t)y + b(t)$$
+>>We now rewrite $y(t)$ such that we yield $y'(t)$
+>>$$\begin{align}
+>>y &= 4e^{2t} +3 \\ 
+>>y - 3 &= 4e^{2t} \\
+>>2(y-3) &= 8e^{2t} \\
+>>2y-6&= y'
+>>\end{align}$$
+>>Hence we have
+>>$$ y' = a(t)y + b(t)$$
+>>with $a(t)=2$ and $b(t)=-6$ 
+
+>[!theorem] Theorem: Solveability of First Order ODEs with Constant Coefficients ([[../../../Sources/nagy.pdf#page=14|Source]])
+> The linear differential equation 
+> $$y'=ay+b \tag{1}$$
+> with $a\neq0$, $b$ constants, has infinitely many solutions,
+> $$y(t) = ce^{at}- \frac{b}a \tag{2}$$
+> with $c \in \mathbb{R}$
+>>[!note]-
+>>1. equation $(2)$ is called the **general solution** of the differential equation $(1)$
+>>2. the theorem states there are infinitely many solutions, one solution for each constant $c$
+>>3. the constant $c$ is related to the vanishing constants in the first derivative, i.e. the integration constant $c$
+>
+>>[!proof]-
+>> First, let's use the notation $y' = \dfrac{dy}{dt}$. Then we have
+>> $$\begin{alignat}{2} 
+>> \frac{dy}{dt} &= ay+b \qquad\qquad &&\Big|\cdot a^{-1} \\
+>> \frac{1}{a}\frac{dy}{dt} &= y+\frac{b}{a} &&\Big| \cdot a\, dt\,\frac{1}{y+\frac{b}{a}} \\
+>> \frac{1}{y+\frac{b}{a}} \,dy  &= a \, dt &&\Big| \int\\
+>> \int \frac{1}{y+\frac{b}{a}} \,dy &= \int a \, dt \\
+>> \ln\left(\left|y + \frac{b}{a}\right|\right) &= at + c_0 &&\Big|\;e^{(\,.\,)} \\
+>> y +\frac{b}{a} &=e^{at+c_0} &&\Big|-\frac{b}{a} \\
+>> y &=e^{at} \underbrace{e^{c_0}}_{=c} - \frac{b}{a} \\
+>> y&=ce^{at} -\frac{b}{a} \tag*{$\square$}
+>> \end{alignat}$$
+>> with $c$ being the constant resulting from integration and $c = e^{c_0}$. Note, for integrating $\frac{1}{y + \frac{b}a}$ we use [[../Calculus/Differentiation Statements#^dernatlog| the derivative of the natural logarithm]]. Since the logarithm is not defined on negative values, we have to take the absolute value of the integrating term.
+>> 
+>
+>>[!example]- Task: Find all solutions to the constant coefficient equation $y'=2y+3$
+>>$$\begin{align} \frac{dy}{dt} &= 2y + 3 \\ 
+>>\frac{dy}{2dt} &= y + \frac{3}{2} \\
+>>\frac{1}{y+\frac{3}{2}}\; dy&= 2\; dt \\
+>>\int \frac{1}{y+\frac32} \; dy &= \int 2 \; dt \\
+>>\ln\left(y+\frac32\right) &= 2t +c_0\\
+>>y + \frac32&=e^{2t} e^{c_0}\\
+>>y &= ce^{2t}-\frac32
+>>\end{align}$$
+>
+>>[!proof]- Proof using Integrating Factor Method
+>> First recall the product rule for derivatives, i.e. let $f(x) = f$, $\,u(x) = u$ be two functions, then
+>> $$ \begin{align} \frac{d f \cdot u}{dx} &= \left(\frac{df}{dx}\right)u + \left(\frac{du}{dx}\right)f \\
+>> &= f'u + fu'\end{align}$$
+>> We introduce an **integrating factor** which is a function of $t$, i.e. $\mu(t)$. We want to choose $\mu(t)$ in a way, that for
+>> $$ \begin{alignat}{2}
+>> \frac{dy}{dt} &= ya +b \qquad \Big| -ya\\
+>> \frac{dy}{dt} + (-a)y &= b 
+>> \end{alignat}
+>> $$
+>> we can multiply the left-hand side by the integrating factor and yield the derivative of the product-rule, which is given by the right hand-side. Therefore, we are looking for $\mu(t)$ satisfying
+>> $$
+>> \begin{alignat}{1}
+>> \left(\frac{dy}{dt}\right)\mu + (-a)y\mu &= \frac{d \mu y}{dt} \tag{3}
+>> \end{alignat}$$
+>> Note, we can consider $a,b$ to be functions of $t$, i.e. $a(t), b(t)$. 
+>> To find $\mu(t)$ we use the product rule
+>> $$\begin{align} 
+>> 	\frac{d\mu y}{dt} &= \left(\frac{d \mu}{dt}\right) y +\left(\frac{dy}{dt}\right) \mu \tag{4}
+>> \end{align} $$
+>> Comparing $(3)$ and $(4)$ and setting them equal yields
+>> $$\begin{alignat}{2}
+>> 	\left(\frac{dy}{dt}\right)\mu + (-a)y\mu &= \left(\frac{d \mu}{dt}\right) y +\left(\frac{dy}{dt}\right) \mu \qquad && \Big|-\left(\frac{dy}{dt}\right) \mu \\
+>> 	-ay\mu &= \left(\frac{d \mu}{dt}\right) y &&\Big| \cdot y^{-1}\\
+>> 	-a\mu &=\frac{d \mu}{dt} &&\Big|\cdot dt, \cdot \mu^{-1} \\
+>> 	-a\, dt &=\frac{d \mu}{\mu} &&\Big|\int \\
+>> 	\int -a\, dt &= \int \frac{1}{\mu} \, d \mu \\
+>> 	\int -a\, dt &=\ln\mu &&\Big|\;e^{( \, . \, )} \\
+>> 	e^{\int -a\, dt} &=\mu 	\tag{5}
+>> \end{alignat}$$
+>> Thereby we found an expression for $\mu$ which is our **integrating factor**. Note, the constant of integration cancels out when we multiply with $\mu$ on both sides of our first order ODE.
+>> $$\begin{alignat}{2} 
+>> \frac{dy}{dt} &= ay + b \qquad&&\Big| -ay \\
+>> \frac{dy}{dt} - ay &= b &&\Big| \cdot \mu \\
+>> \frac{dy}{dt}\mu - ay \mu &= b\mu  &&\Big| \text{ inserting } \mu = e^{\int a\, dt}\\
+>> \underbrace{\frac{d}{dt} ye^{\int -a\, dt}}_{=f'u} - \underbrace{ya e^{\int -a\, dt}}_{=fu'} &= b e^{\int -a\, dt}  &&\Big| \int (\, . )\,dt\\
+>> \int \frac{d}{dt}\left[ye^{\int -a\, dt}\right] \, dt &= \int b e^{\int -a\, dt}  \, dt\\
+>> y e^{\int -a\, dt}  &= \int b e^{\int -a\, dt} \, dt  \qquad &&\Big| \;\cdot  e^{-\int -a\, dt} \\
+>> y&=\frac{1}{e^{\int -a\, dt}} \int b e^{\int -a\, dt} \, dt \tag{6}
+>> \end{alignat}$$
+>> Assuming $a = a(t)$ and $b=b(t)$ are functions, then equation $(6)$ is the solution. Next we assume $a,b$ are constants again, then we have
+>> $$ \begin{align} 
+>> \int -a\, dt &= -ta + c\\
+>> \int b e^{\int -a\, dt} \, dt &= \int b e^{-ta + c} \, dt \\
+>> &= \frac{b}{a}e^{-ta + c} + c
+>> \end{align}$$
+>> Ignoring the second constant of the integration, we have
+>> $$\begin{align} y&=\frac{1}{e^{\int -a\, dt}} \int b e^{\int -a\, dt} \, dt \\
+>> &=\frac{1}{e^{ta - c_0}}\left(-\frac{b}{a}e^{-ta+c_0}+c_1\right) \\
+>> &=e^{at}\underbrace{e^{-c_0}c_1}_{=c} - \frac{b}{a}e^{0} \\
+>> &=ce^{at} - \frac{b}{a} \tag*{$\square$}
+>> \end{align}$$
+>
+>>[!Example]- Task: Find all solutions to the constant coefficient equation $y'=2y+3$
+>>Let $\mu = e^{\int -2 \, dt} = e^{-2t}$
+>>$$\begin{alignat}{2} 
+>> \frac{dy}{dt} &= 2y + 3 \qquad &&\Big|-2y \\
+>> \frac{dy}{dt} - 2y &= 3  &&\Big| \cdot \mu \\
+>> \frac{d}{dt}y e^{-2t} - 2y e^{-2t} &= 3 e^{-2t}  &&\Big| \int ( \, . ) \,dt\\
+>> \int \frac{d}{dt} \left[ye^{-2t}\right] \, dt &= \int 3 e^{-2t} \, dt  \\
+>> ye^{-2t} + c_0&=  -\frac{3}{2} e^{-2t} +c_1 \qquad &&\Big|-c_0 \\
+>> ye^{-2t} &=  -\frac{3}{2} e^{-2t} +c \qquad &&\Big| \cdot e^{2t} \\
+>> y &=  -\frac{3}{2} +ce^{2t}
+>>\end{alignat}$$
+>
+>^thmsolvefoode
+
+<br>
+
+## 2 - Initial Value Problem
+
+>[!def] Definition Initial Value Problem ([[../../../Sources/nagy.pdf#page=18|Source]])
+> The initial value problem (IVP) is to find all solutions $y$ to 
+> $$ y' = ay+b $$
+> that satisfy the initial condition 
+> $$ y(t_0) = y_0 \tag{Initial Condition}$$
+> where $a,b,t_0, y_0$ are given constants.
+>>[!note]
+>>The differential equation has a unique solution with respect to the initial condition.
+>
+
+>[!theorem] Theorem: Solveability of IVPs  ([[../../../Sources/nagy.pdf#page=18|Source]])
+> Given the constants $a,b,t_0,y_0 \in \mathbb{R}$, with $a \neq 0$, the initial value problem 
+> $$ y' = ay + b, \qquad  y(t_0) = y_0,$$
+> has the unique solution
+> $$ y(t) = \left(y_0 + \frac{b}{a}\right)e^{a(t-t_0)} - \frac{b}{a}$$
+>>[!proof]-
+>>First we use the results of the [[Ordinary Differential Equations#^thmsolvefoode|Theorem for solveability of first order ODEs]], i.e.
+>> $$y(t) = ce^{at} - \frac{b}a$$
+>> and solve $y_0 = y(t_0)$ for $c$
+>> $$\begin{align}
+>> 	y_0 &= ce^{at_0} -\frac{b}{a} \\
+>> 	y_0 + \frac{b}{a} &= ce^{at_0} \\
+>> 	\left(y_0 + \frac{b}{a}\right)e^{-at_0} &= c \\
+>> \end{align}$$
+>> Using this result for the integration constant yields
+>> $$\begin{align}
+>> y(t)&=ce^{at} - \frac{b}a \\
+>> &= \left(y_0 + \frac{b}{a}\right)e^{-at_0}e^{at} - \frac{b}a \\
+>> &= \left(y_0 + \frac{b}{a}\right)e^{a(t-t_0)} - \frac{b}a \tag*{$\square$}
+>>\end{align}$$
+>^thmsolivp
+>
+>>[!example]- Task: Find the unique solution of the initial value problem $y'=2y + 3$ with $y(0) = 1$
+>>Solutions for $y$ can be given as 
+>>$$ \begin{align}
+>>y=ce^{2t} - \frac{3}{2} \tag{1}
+>>\end{align}$$
+>>Determining the value for the integrating constant $c$ gives
+>>$$\begin{align} 
+>>y(0)&= ce^{0}-\frac32 \\
+>>1 &= c - \frac32 \\
+>>c &= \frac52
+>>\end{align}$$
+>>Inserting the result into $(1)$ gives
+>>$$\begin{equation}y = \frac52 e^{2t}-\frac32\end{equation}$$
+>
+>>[!example]- Task: Find the unique solution of the initial value problem $y'=-3y + 1$ with $y(0) = 1$
+
+>[!example] Exercises

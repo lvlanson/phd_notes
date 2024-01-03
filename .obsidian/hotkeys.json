@@ -15,5 +15,14 @@
       ],
       "key": "P"
     }
+  ],
+  "duplicate-line:duplicate-line": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "ArrowDown"
+    }
   ]
 }

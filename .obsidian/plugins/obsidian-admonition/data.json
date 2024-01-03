@@ -156,6 +156,18 @@
       "injectColor": true,
       "noTitle": false,
       "copy": false
+    },
+    "Example": {
+      "type": "Example",
+      "color": "247, 184, 255",
+      "icon": {
+        "name": "bars",
+        "type": "font-awesome"
+      },
+      "command": true,
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
     }
   },
   "syntaxHighlight": false,

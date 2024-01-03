@@ -9,17 +9,17 @@
         "dimension": 47.270306258322236,
         "children": [
           {
-            "id": "60ed75dc871465f9",
+            "id": "e02a88fd0e5f9dd5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md",
                 "mode": "source",
                 "source": true
               }
             },
-            "group": "9c276979aaded7f6"
+            "group": "63028a07e989609a"
           }
         ]
       },
@@ -34,12 +34,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md",
                 "mode": "preview",
                 "source": true
               }
             },
-            "group": "9c276979aaded7f6"
+            "group": "63028a07e989609a"
           }
         ]
       }
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md"
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md"
               }
             }
           },
@@ -187,11 +187,31 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "60ed75dc871465f9",
+  "active": "e02a88fd0e5f9dd5",
   "lastOpenFiles": [
-    "Sources/bishop2006.pdf",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/State Space Models.md",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems Preliminaries.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
-    "PhD Studies/Machine Learning/Network Architectures/Mamba/selective_state_space_model.png",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems.md",
+    "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+    "PhD Studies/Mathematic Basics/Calculus",
+    "PhD Studies/Mathematic Basics/Untitled.md",
+    "Sources/nagy.pdf",
+    "Sources/Nagy - Ordinary Diﬀerential Equations.pdf",
+    "Literature/@nagy.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations",
+    "Literature/@zabczyk2008.md",
+    "Sources/zabczyk2008.pdf",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/selective_state_space_model.png",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/closed_loop_control_system.png",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/open_loop_control_system.png",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/figures",
+    "Sources/brogan1991.pdf",
+    "Literature/@brogan1991.md",
+    "Literature/@gu2022.md",
+    "Sources/gu2022.pdf",
+    "Sources/bishop2006.pdf",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Screenshot from 2023-12-31 15-43-28.png",
     "PhD Studies/Machine Learning/Network Architectures/Screenshot from 2023-12-31 15-43-28.png",
     "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
@@ -199,8 +219,6 @@
     "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba",
-    "Sources/kalman1960.pdf",
-    "Sources/kalman1960.pdf.crdownload",
     "Literature/@gu2023.md",
     "PhD Studies/Machine Learning/Network Architectures/arch.png",
     "PhD Studies/Machine Learning/Network Architectures/Bidirectional Multi-Label Classifier.md",
@@ -208,32 +226,15 @@
     "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
     "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection.md",
     "Literature/@ben-baruch2021.md",
-    "Sources/ben-baruch2021.pdf",
     "PhD Studies/Mathematic Basics/Statistics/Mathematical Statistics Book/Chapter 1 (Probability Theory)/Chapter 1 Probability Theory Notes.md",
     "Literature/@lin2018.md",
     "PhD Studies/Mathematic Basics/Statistics/Mathematical Statistics Book/Chapter 1 (Probability Theory)/Figure1_1.md",
     "Chapter 1 Probability Theory Notes^def12.md",
     "PhD Studies/Mathematic Basics/Statistics/Mathematical Statistics Book/Source.md",
-    "Sources/shao2003.pdf",
-    "Literature/@shao2003.md",
-    "PhD Studies/Mathematic Basics/Statistics/Methods/Generalized Linear Model.md",
-    "PhD Studies/Mathematic Basics/Statistics/Mathematical Statistics Book/Chapter 1 (Probability Theory)",
-    "PhD Studies/Mathematic Basics/Statistics/Mathematical Statistics Book",
-    "Sources/nelder1972.pdf",
-    "PhD Studies/Mathematic Basics/Statistics/Methods/Maximum Likelihood Estimation.md",
-    "PhD Studies/Mathematic Basics/Statistics/Sufficient Statistic.md",
-    "PhD Studies/Mathematic Basics/Statistics/Distributions/Generalization of the Bernoulli Distribution.md",
-    "PhD Studies/Mathematic Basics/Statistics/Vocabulary.md",
-    "Sources/millar2011.pdf",
-    "Literature/@greene2019.md",
-    "PhD Studies/Machine Learning/Activation Functions/Logistic Sigmoid.md",
-    "Literature/@miura2011.md",
     "ML Programming/PyTorch/Layers/LSTM_gates.png",
     "ML Programming/PyTorch/Layers/LSTM.jpeg",
     "PhD Studies/Machine Learning/Network Architectures/Screenshot from 2023-12-15 12-19-54.png",
     "Reviews/Stance Classification/BERT.png",
-    "Untitled.canvas",
-    "PhD Studies/Transformer Vector Quantization/partioning(2).jpg",
-    "PhD Studies/Transformer Vector Quantization/qips_lemma.jpg"
+    "Untitled.canvas"
   ]
 }

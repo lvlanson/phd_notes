@@ -356,6 +356,16 @@
   keywords = {Computers / Computer Graphics,Computers / Computer Vision \& Pattern Recognition,Computers / Intelligence (AI) \& Semantics,Mathematics / Probability \& Statistics / General}
 }
 
+@book{brogan1991,
+  title = {Modern Control Theory (3rd Ed.)},
+  author = {Brogan, William L.},
+  date = {1991-02},
+  publisher = {{Prentice-Hall, Inc.}},
+  location = {{USA}},
+  isbn = {978-0-13-589763-8},
+  pagetotal = {653}
+}
+
 @online{devlin2019,
   title = {{{BERT}}: {{Pre-training}} of {{Deep Bidirectional Transformers}} for {{Language Understanding}}},
   shorttitle = {{{BERT}}},
@@ -416,6 +426,22 @@
   isbn = {978-0-19-853264-4},
   langid = {english},
   pagetotal = {230}
+}
+
+@online{gu2022,
+  title = {Efficiently {{Modeling Long Sequences}} with {{Structured State Spaces}}},
+  author = {Gu, Albert and Goel, Karan and Ré, Christopher},
+  date = {2022-08-05},
+  eprint = {2111.00396},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2111.00396},
+  url = {http://arxiv.org/abs/2111.00396},
+  urldate = {2024-01-01},
+  abstract = {A central goal of sequence modeling is designing a single principled model that can address sequence data across a range of modalities and tasks, particularly on long-range dependencies. Although conventional models including RNNs, CNNs, and Transformers have specialized variants for capturing long dependencies, they still struggle to scale to very long sequences of \$10000\$ or more steps. A promising recent approach proposed modeling sequences by simulating the fundamental state space model (SSM) \textbackslash ( x'(t) = Ax(t) + Bu(t), y(t) = Cx(t) + Du(t) \textbackslash ), and showed that for appropriate choices of the state matrix \textbackslash ( A \textbackslash ), this system could handle long-range dependencies mathematically and empirically. However, this method has prohibitive computation and memory requirements, rendering it infeasible as a general sequence modeling solution. We propose the Structured State Space sequence model (S4) based on a new parameterization for the SSM, and show that it can be computed much more efficiently than prior approaches while preserving their theoretical strengths. Our technique involves conditioning \textbackslash ( A \textbackslash ) with a low-rank correction, allowing it to be diagonalized stably and reducing the SSM to the well-studied computation of a Cauchy kernel. S4 achieves strong empirical results across a diverse range of established benchmarks, including (i) 91\textbackslash\% accuracy on sequential CIFAR-10 with no data augmentation or auxiliary losses, on par with a larger 2-D ResNet, (ii) substantially closing the gap to Transformers on image and language modeling tasks, while performing generation \$60\textbackslash times\$ faster (iii) SoTA on every task from the Long Range Arena benchmark, including solving the challenging Path-X task of length 16k that all prior work fails on, while being as efficient as all competitors.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Machine Learning},
+  file = {/home/thomas/Documents/Obsidian Vault/Sources/gu2022.pdf;/home/thomas/Zotero/storage/LGUIB4RK/2111.html}
 }
 
 @online{gu2023,
@@ -635,6 +661,13 @@
   file = {/home/thomas/Documents/Obsidian Vault/Sources/miura2011.pdf}
 }
 
+@article{nagy,
+  title = {Ordinary {{Diﬀerential Equations}}},
+  author = {Nagy, Gabriel},
+  langid = {english},
+  file = {/home/thomas/Zotero/storage/DMSY57RB/Nagy - Ordinary Diﬀerential Equations.pdf}
+}
+
 @inproceedings{nam2014,
   title = {Large-{{Scale Multi-label Text Classification}} — {{Revisiting Neural Networks}}},
   booktitle = {Machine {{Learning}} and {{Knowledge Discovery}} in {{Databases}}},
@@ -783,6 +816,21 @@
   abstract = {This textbook is an introduction to the theory of Hilbert space and its applications. The notion of Hilbert space is central in functional analysis and is used in numerous branches of pure and applied mathematics. Dr Young has stressed applications of the theory, particularly to the solution of partial differential equations in mathematical physics and to the approximation of functions in complex analysis. Some basic familiarity with real analysis, linear algebra and metric spaces is assumed, but otherwise the book is self-contained. It is based on courses given at the University of Glasgow and contains numerous examples and exercises (many with solutions). Thus it will make an excellent first course in Hilbert space theory at either undergraduate or graduate level and will also be of interest to electrical engineers and physicists, particularly those involved in control theory and filter design.},
   isbn = {978-0-521-33717-5},
   file = {/home/thomas/Zotero/storage/Q72XTLTI/41D80B163B8E186820B5A48F3665EC22.html}
+}
+
+@book{zabczyk2008,
+  title = {Mathematical {{Control Theory}}},
+  author = {Zabczyk, Jerzy},
+  date = {2008},
+  publisher = {{Birkhäuser}},
+  location = {{Boston, MA}},
+  doi = {10.1007/978-0-8176-4733-9},
+  url = {http://link.springer.com/10.1007/978-0-8176-4733-9},
+  urldate = {2024-01-01},
+  isbn = {978-0-8176-4732-2 978-0-8176-4733-9},
+  langid = {english},
+  keywords = {control,control system,control theory,dynamic programming,infinite dimensional linear systems,linear systems,mathematical control theory,nonlinear control,nonlinear system,observability,optimal control,programming,stability,stabilization,sys},
+  file = {/home/thomas/Documents/Obsidian Vault/Sources/zabczyk2008.pdf}
 }
 
 @online{zotero-146,
