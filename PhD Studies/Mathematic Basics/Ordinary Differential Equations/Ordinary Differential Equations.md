@@ -164,7 +164,7 @@ aliases:
 >> 	-a\mu &=\frac{d \mu}{dt} &&\Big|\cdot dt, \cdot \mu^{-1} \\
 >> 	-a\, dt &=\frac{d \mu}{\mu} &&\Big|\int \\
 >> 	\int -a\, dt &= \int \frac{1}{\mu} \, d \mu \\
->> 	\int -a\, dt &=\ln\mu &&\Big|\;e^{( \, . \, )} \\
+>> 	\int -a\, dt &=\ln|\mu| &&\Big|\;e^{( \, . \, )} \\
 >> 	e^{\int -a\, dt} &=\mu 	\tag{5}
 >> \end{alignat}$$
 >> Thereby we found an expression for $\mu$ which is our **integrating factor**. Note, the constant of integration cancels out when we multiply with $\mu$ on both sides of our first order ODE.
@@ -173,21 +173,25 @@ aliases:
 >> \frac{dy}{dt} - ay &= b &&\Big| \cdot \mu \\
 >> \frac{dy}{dt}\mu - ay \mu &= b\mu  &&\Big| \text{ inserting } \mu = e^{\int a\, dt}\\
 >> \underbrace{\frac{d}{dt} ye^{\int -a\, dt}}_{=f'u} - \underbrace{ya e^{\int -a\, dt}}_{=fu'} &= b e^{\int -a\, dt}  &&\Big| \int (\, . )\,dt\\
->> \int \frac{d}{dt}\left[ye^{\int -a\, dt}\right] \, dt &= \int b e^{\int -a\, dt}  \, dt\\
->> y e^{\int -a\, dt}  &= \int b e^{\int -a\, dt} \, dt  \qquad &&\Big| \;\cdot  e^{-\int -a\, dt} \\
->> y&=\frac{1}{e^{\int -a\, dt}} \int b e^{\int -a\, dt} \, dt \tag{6}
+>> \underbrace{\frac{d}{dt} ye^{\int -a\, dt}}_{=f'u} - \underbrace{ya e^{\int -a\, dt}}_{=fu'} &= b e^{\int -a\, dt}  &&\Big| \int (\, . )\,dt\\
+>> \int \frac{d}{dt}\left[ye^{\int -a\, dt}\right] \, dt  &= \int b e^{\int -a\, dt}  \, dt\\
+>> y e^{\int -a\, dt}  - c&= \int b e^{\int -a\, dt} \, dt  \qquad &&\Big| \;\cdot  + c \\
+>> y e^{\int -a\, dt} &= c + \int b e^{\int -a\, dt} \, dt  \qquad &&\Big| \;\cdot  e^{-\int -a\, dt} \\
+>> y&=ce^{\int a\, dt} + e^{\int a\, dt}  \int b e^{\int -a\, dt} \, dt \tag{6}
 >> \end{alignat}$$
 >> Assuming $a = a(t)$ and $b=b(t)$ are functions, then equation $(6)$ is the solution. Next we assume $a,b$ are constants again, then we have
 >> $$ \begin{align} 
 >> \int -a\, dt &= -ta + c\\
+>> \int a\, dt &= ta + c\\
 >> \int b e^{\int -a\, dt} \, dt &= \int b e^{-ta + c} \, dt \\
 >> &= \frac{b}{a}e^{-ta + c} + c
 >> \end{align}$$
->> Ignoring the second constant of the integration, we have
->> $$\begin{align} y&=\frac{1}{e^{\int -a\, dt}} \int b e^{\int -a\, dt} \, dt \\
->> &=\frac{1}{e^{ta - c_0}}\left(-\frac{b}{a}e^{-ta+c_0}+c_1\right) \\
->> &=e^{at}\underbrace{e^{-c_0}c_1}_{=c} - \frac{b}{a}e^{0} \\
->> &=ce^{at} - \frac{b}{a} \tag*{$\square$}
+>> Setting the constant of the integration $c_0=0$, we have
+>> $$\begin{align} y&=ce^{\int a\, dt} + e^{\int a\, dt}  \int b e^{\int -a\, dt} \, dt  \\
+>>  &=c_1e^{ta + c_0} + e^{ta + c_0}  \left(-\frac{b}{a}e^{-ta+c_0}+c_1\right)  \\
+>>  &=c_1e^{ta + c_0} -\frac{b}{a}e^{2c_0}+ c_1e^{ta + c_0}  \\
+>>  &=2c_1e^{ta + c_0} -\frac{b}{a}e^{2c_0} \\
+>>  &=ce^{ta} -\frac{b}{a} \tag*{$\square$}\\
 >> \end{align}$$
 >
 >>[!Example]- Task: Find all solutions to the constant coefficient equation $y'=2y+3$
@@ -224,7 +228,7 @@ aliases:
 > $$ y' = ay + b, \qquad  y(t_0) = y_0,$$
 > has the unique solution
 > $$ y(t) = \left(y_0 + \frac{b}{a}\right)e^{a(t-t_0)} - \frac{b}{a}$$
->>[!proof]-
+>>[!proof]
 >>First we use the results of the [[Ordinary Differential Equations#^thmsolvefoode|Theorem for solveability of first order ODEs]], i.e.
 >> $$y(t) = ce^{at} - \frac{b}a$$
 >> and solve $y_0 = y(t_0)$ for $c$
@@ -269,7 +273,7 @@ aliases:
 >>Inserting the result into $(1)$ gives
 >>$$ y=\frac23e^{-3t} + \frac13$$
 
->[!example] Exercises
+>[!example]- Exercises
 >>[!example]- Task: Find the differential equation of the form $y' = f(y)$ satisfied by the function $y(t) = 8e^{5t} - \frac25$
 >>$$\begin{align} y(t) &= 8e^{5t} - \frac25 \\
 >>\frac{dy}{dt} = y' &= 40e^{5t} 
@@ -386,7 +390,7 @@ aliases:
 >>>\end{align}$$
 >>>According to the [[Ordinary Differential Equations#^thmsolvefoode| theorem for solving this]], we get the following result 
 >>>$$\mu = e^{-6t}$$
->>> Further we determine the potential function by inserting $\mu$ into $(1)$. Recall the LHS is constructed to be the product-rule.
+>>> Further we determine the potential function by inserting $\mu$ into $(1)$. Recall, the LHS is constructed to be the product-rule.
 >>> $$ \begin{align}
 >>> 	\frac{dy}{dt} e^{-6t} - 6y e^{-6t} &= e^{-6t} \\
 >>> 	\frac{d}{dt} \left[ye^{-6t}\right]  &= e^{-6t} \\
@@ -438,7 +442,7 @@ aliases:
 >>>According to the [[Ordinary Differential Equations#^thmsolvefoode| theorem for solving this]], we get the following result 
 >>>$$\mu = e^{3t}$$
 >>>
->>>2. Further we determine the potential function by inserting $\mu$ into $(1)$. Recall the LHS is constructed to be the product-rule.
+>>>2. Further, we determine the potential function by inserting $\mu$ into $(1)$. Recall, the LHS is constructed to be the product-rule.
 >>> $$ \begin{align}
 >>> 	\frac{dy}{dt} e^{3t} + 3y e^{3t} &= 5e^{3t} \\
 >>> 	\frac{d}{dt} \left[ye^{3t}\right]  &= 5e^{3t} \\
@@ -465,4 +469,92 @@ aliases:
 >>> Inserting this into $(2)$ gives the solution for the IVP, hence we have
 >>> $$ y(t) = -\frac{2}{3}e^{-3t} + \frac{5}{3}$$
 
+<br>
+
 ## 3 - Linear Variable Coefficient Equations
+
+>[!theorem] Theorem Solving First Order ODEs with Variable Coefficients([[../../../Sources/nagy.pdf#page=23|Source]])
+>If the functions $a,b$ are continuous, then
+>$$ y' = a(t)y + b(t)$$
+>has infinitely many solutions given by
+>$$ \begin{equation}y(t) = ce^{A(t)}+e^{A(t)} \int e^{-A(t)} b(t) \, dt \tag{General Solution}\end{equation}$$
+>where $A(t) = \int a(t) \, dt$ being the **integrating factor** and $c \in \mathbb{R}$
+>>[!proof] Proof: See [[Ordinary Differential Equations#^thmsolvefoode| Proof for constant coefficients Integrating Factor Method]]
+>
+>>[!example]- Task: Find all solutions $y$ for the differential equation $y'=\frac3ty+t^5$ with $t>0$
+>>First compute $\mu(t)$ following the form of the product rule as previously already shown. Note, that the parameters $a,b$ are functions of $t$, i.e. $a(t) = \frac3t$ and $b(t) = t^5$.
+>>$$\begin{alignat}{2} 
+>>\frac{dy}{dt} &= \frac3ty + t^5 \qquad &&\Big|-\frac3ty \\
+>>\frac{dy}{dt} -\frac3ty  &= t^5 \qquad &&\Big|\cdot \mu \\
+>>\left(\frac{dy}{dt}\right)\mu -\frac3ty\mu  &= t^5\mu  \tag{1} \\
+>>\end{alignat}$$
+>>Setting the LHS of $(1)$ equal to the product rule, yields
+>>$$\begin{alignat}{2} 
+>>\left(\frac{dy}{dt}\right)\mu -\frac3ty\mu  &= \left(\frac{dy}{dt}\right)\mu + \left(\frac{d\mu}{dt}\right)y \qquad &&\Big|-\left(\frac{dy}{dt}\right)\mu, \;\cdot y^{-1}   \\
+>>-\frac3t\mu  &= \frac{d}{dt}\mu \qquad &&\Big|\cdot \mu^{-1}\ \cdot dt \\
+>>-\frac3t dt  &= \frac{1}{\mu} d\mu \qquad &&\Big|\int(\,. )\, dt\\
+>>\int-\frac3t dt  &= \int \frac{1}{\mu} d\mu\qquad \\
+>>-3 \ln |t| + c_0 &= \ln|\mu| \qquad &&\Big|e^{(\,.\,)}\\
+>>e^{\ln |t|^{-3}}(\pm e^{c_0}) &= \mu &&\Big|\text{ choosing } c_0 = 0\\
+>>\pm t^{-3}  &= \mu \\
+>>\end{alignat}$$
+>>Now we can apply the product rule for $(1)$ and then insert the result for $\mu$ found in $(2)$
+>>$$\begin{alignat}{2} 
+>>\left(\frac{dy}{dt}\right)\mu -\frac3ty\mu  &= t^5\mu \qquad  \\
+>>\frac{d}{dt}\left[\mu y\right]  &= t^5\mu \qquad &&\Big|-t^5\mu\\ 
+>>\frac{d}{dt}\left[t^{-3} y\right]  -t^5t^{-3}&= 0 \qquad &&\Big|\;\mu = t^{-3} \\ 
+>>\frac{d}{dt}\left[t^{-3} y\right]  -t^2&= 0 \qquad &&\Big|\int(\,.)\, dt \\ 
+>>t^{-3}y + c_0  - \int t^2&= c_1 \qquad &&\\ 
+>>t^{-3}y + c_0  - \left(\frac13 t^3 + c_2\right) &= c_1 \qquad &&\Big|c_0 - c_2 = c_3\\ 
+>>t^{-3}y   &= c + \frac13 t^3 \qquad &&\Big| \cdot t^{3}\\ 
+>>y   &= ct^{3} + \frac13 t^6 \qquad &&\\ 
+>>\end{alignat}$$
+>
+>>[!example]- Task: Find all solutions $y$ for the differential equation $ty'=-2y+4t^2$ with $t>0$
+>>First we determine the **integration factor** $\mu(t)$ by identifying it over the product rule
+>>$$\begin{alignat}{2}
+>>	t\frac{dy}{dt} &= -2y + 4t^2 \qquad &&\Big|\cdot t^{-1} \\ 
+>>	\frac{dy}{dt} &= -\frac2t y + 4t \qquad &&\Big|+\frac2t y \\ 
+>>	\frac{dy}{dt} +\frac2t y &=  4t \qquad &&\Big|\cdot \mu \\ 
+>>	\frac{dy}{dt} \mu +\frac2t y \mu &=  4t\mu \tag{1}\\ 
+>>\end{alignat}$$
+>>Now we use the LHS on the product rule
+>>$$\begin{alignat}{2}
+>>	\frac{dy}{dt} \mu +\frac2t y \mu &= \left(\frac{dy}{dt}\right)\mu + \left(\frac{d\mu}{dt}\right)y \qquad &&\Big|-\left(\frac{dy}{dt}\right)\mu, \;\cdot y^{-1}   \\ \\ 
+>>	\frac2t \mu &=\frac{d\mu}{dt} \qquad &&\Big|\cdot dt, \; \cdot \mu^{-1} \\ 
+>>	\frac2t dt &= \frac{1}{\mu} d\mu   \qquad &&\Big|\int(\,.)\, dt \ \\ 
+>>	2\ln |t| +c_0&= \ln|\mu| +c_1   \qquad &&\Big|c_0 - c_1 = c_3 \\ 
+>>	\ln t^2 +c_3&= \ln|\mu|   \qquad &&\Big|e^{(\,.\,)} \\ 
+>>	t^2 e^{c_3}&= \mu   \qquad &&\Big| \text{ choosing } c_3 = 0 \\ 
+>>	\pm t^2 &= \mu   \\ 
+>>\end{alignat}$$
+>>Using this result in $(1)$ gives
+>>$$\begin{alignat}{2} 
+>>	\frac{dy}{dt} \mu +\frac2t y \mu &=  4t\mu \\ 
+>>	\frac{d}{dt} \left[ \mu y\right] &= 4t\mu \qquad &&\Big|\;\mu = t^2\\
+>>	\frac{d}{dt} \left[ t^2 y\right] &= 4t^3 \\ 
+>>	\frac{d}{dt} \left[ t^2 y\right] &= \frac{d}{dt} \left[t^4\right] \qquad &&\Big| - \frac{d}{dt} \left[t^4\right]\\ 
+>>	\frac{d}{dt} \left[ t^2y -t^4\right] &= 0 \qquad &&\Big| \int (\, . ) \;dt\\ 
+>>	t^2y -t^4 &= c \qquad &&\Big| +t^4\\ 
+>>	t^2y &= c + t^4 \qquad &&\Big| \cdot ta^{-2}\\ 
+>>	y &= ct^{-2} + t^2 \\ 
+>>\end{alignat}$$
+
+>[!def] Definition Initial Value Problem for Variable Coefficients
+>The **initial value problem (IVP)** is to find all solutions $y$ of
+>$$ y' = a(t) y + b(t)$$
+>that satisfy the initial condition
+>$$\begin{equation} y(t_0) = y_0 \tag{Initial Condition}\end{equation}$$
+>where $a,b$ are given functions and $t_0, y_0$ are given constants.
+>>[!note]
+>>The IVP has a unique solution.
+>^defIVPvar
+
+>[!theorem] Theorem: Solveability of IVP with Variable Coefficients
+> Given continuous functions $a,b$ with domain $(t_1, t_2)$ and constants $t_0 \in (t_1, t_2)$ and $y_0 \in \mathbb{R}$, the IVP
+> $$ y' = a(t)y + b(t), \qquad y(t_0) = y_0 $$
+> has the unique solution $y$ on the domain $(t_1, t_2)$, given by
+> $$ y(t) = y_0e^{A(t)} + e^{A(t)}\int_{t_0}^t e^{-A(s)}b(s) \, ds$$
+> where the function $A(t) = \int_{t_0}^t a(s) \, ds$ is a particular antiderivative of function $a$.
+>^thmsolIVPvar
+

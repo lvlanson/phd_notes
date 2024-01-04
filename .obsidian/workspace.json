@@ -91,7 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263.51103591918945
+    "width": 210.5
   },
   "right": {
     "id": "93b677ed21c6c6cb",
@@ -189,6 +189,8 @@
   },
   "active": "e02a88fd0e5f9dd5",
   "lastOpenFiles": [
+    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection.md",
+    "Literature/@guo2020.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md",
     "PhD Studies/Mathematic Basics/Statistics/Distributions/Bernoulli Distribution.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/State Space Models.md",
@@ -225,12 +227,10 @@
     "PhD Studies/Machine Learning/Network Architectures/Bidirectional Multi-Label Classifier.md",
     "Aussagenlogik.md",
     "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection.md",
     "Literature/@ben-baruch2021.md",
     "PhD Studies/Mathematic Basics/Statistics/Mathematical Statistics Book/Chapter 1 (Probability Theory)/Chapter 1 Probability Theory Notes.md",
     "Literature/@lin2018.md",
     "PhD Studies/Mathematic Basics/Statistics/Mathematical Statistics Book/Chapter 1 (Probability Theory)/Figure1_1.md",
-    "Chapter 1 Probability Theory Notes^def12.md",
     "ML Programming/PyTorch/Layers/LSTM_gates.png",
     "ML Programming/PyTorch/Layers/LSTM.jpeg",
     "PhD Studies/Machine Learning/Network Architectures/Screenshot from 2023-12-15 12-19-54.png",

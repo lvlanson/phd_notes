@@ -7,7 +7,8 @@
   "spellcheckDictionary": [
     " parallelit",
     "callout",
-    "ODEs"
+    "ODEs",
+    "IVP"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,
