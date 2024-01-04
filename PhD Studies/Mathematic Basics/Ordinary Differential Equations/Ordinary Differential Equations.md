@@ -201,6 +201,7 @@ aliases:
 >> ye^{-2t} &=  -\frac{3}{2} e^{-2t} +c \qquad &&\Big| \cdot e^{2t} \\
 >> y &=  -\frac{3}{2} +ce^{2t}
 >>\end{alignat}$$
+>>
 >
 >^thmsolvefoode
 
@@ -255,37 +256,213 @@ aliases:
 >>$$\begin{equation}y = \frac52 e^{2t}-\frac32\end{equation}$$
 >
 >>[!example]- Task: Find the unique solution of the initial value problem $y'=-3y + 1$ with $y(0) = 1$
+>>Solutions for $y$ can be given as 
+>>$$ \begin{align}
+>>y=ce^{-3t} - \frac{1}{3} \tag{1}
+>>\end{align}$$
+>>Determining the value for the integrating constant $c$ gives
+>>$$\begin{align} 
+>>y(0)&= ce^{0}-\frac13 \\
+>>1 &= c - \frac13 \\
+>>c &= \frac23
+>>\end{align}$$
+>>Inserting the result into $(1)$ gives
+>>$$ y=\frac23e^{-3t} + \frac13$$
 
->[!example]- Exercises
->>[!example] Task: Find the differential equation of the form $y' = f(y)$ satisfied by the function $y(t) = 8e^{5t} - \frac25$
+>[!example] Exercises
+>>[!example]- Task: Find the differential equation of the form $y' = f(y)$ satisfied by the function $y(t) = 8e^{5t} - \frac25$
+>>$$\begin{align} y(t) &= 8e^{5t} - \frac25 \\
+>>\frac{dy}{dt} = y' &= 40e^{5t} 
+>>\end{align}$$
+>>Inserting this result in the standard form gives
+>>$$\begin{alignat}{2}
+>>y'&=ay+b \\
+>>40e^{5t} &= a(8e^5t - \frac25) + b \qquad &&\Big|\text{ clearly } a=5  \\ 
+>>40e^{5t} &= 40e^5t - \frac{10}5 + b \qquad &&\Big|\text{ clearly } b=2  \\
+>>40e^{5t} &= 40e^{5t}
+>>\end{alignat}$$
+>>Hence the solution is
+>>$$ y' = 5y + 2$$
 >
->>[!example] Task: Find constants a,b, such that $y(t) = (t+3)e^{2t}$ is solution of the IVP $y'=ay+e^{2t}$, $y(0)=b$
 >
->>[!example] Task: Find all solutions of $y$ of $y' = 3y$
+>>[!example]- Task: Find all solutions of $y$ of $y' = 3y$
+>> We identify $a=3$ and $b=0$. Using theorem [[Ordinary Differential Equations#^thmsolvefoode|Theorem for ODE solving]] we have
+>> $$ y =  ce^{3t} $$
 >
 >>[!example] Task: Follow the steps below to find all solutions of $y' = -4y + 2$
 >>1. Find the integrating factor $\mu$
 >>2. Write the equations as a total derivative of a function $\psi$, that is $y'=-4y+2 \Leftrightarrow \psi'=0$
 >>3. Integrate the equation for $\psi$
->>4. Compute $y$ using part (c)
+>>4. Compute $y$ using part (3)
+>>>[!example]- Solution
+>>>Following the procedure from the proof using the [[Ordinary Differential Equations#^thmsolvefoode| integrating factors method]].
+>>>1. First, we put the equation into the form, that we can compare it to the product rule. Let $\mu(t) = \mu$ denote the integrating factor
+>>> $$\begin{align}
+>>> 	\frac{dy}{dt} &= -4y +2\\
+>>> 	\frac{dy}{dt} +4y &= 2\\
+>>> 	\left(\frac{dy}{dt}\right)\mu +4y\mu &= 2\mu \tag{1}\\
+>>> \end{align}$$
+>>> Recall the product rule
+>>> $$\begin{align}
+>>> \frac{d}{dt}\left[y\mu\right] = \left(\frac{dy}{dt}\right)\mu + \left(\frac{d\mu}{dt}\right)y \tag{2}
+>>> \end{align}$$
+>>> We want to choose $\mu$ such that the right hand-side of $(1)$ is giving the product rule, i.e. $(2)$. Therefor, we set $(1)$ LHS $=(2)$ RHS
+>>>  $$\begin{alignat}{2}
+>>> \left(\frac{dy}{dt}\right)\mu +4y\mu &= \left(\frac{dy}{dt}\right)\mu + \left(\frac{d\mu}{dt}\right)y  \qquad &&\Big| - \left(\frac{dy}{dt}\right)\mu \\
+>>> 4y\mu &= \left(\frac{d\mu}{dt}\right)y   &&\Big| :y \\
+>>> 4\mu &= \frac{d\mu}{dt}   
+>>> \end{alignat}$$
+>>> This can easily be solved for $a=4, b=0$ with $\mu = ce^{4t} = e^{4t}$ where we choose for convenience $c=1$. Therefore, we yield the following equation from (1) and the found expression for $\mu$
+>>> $$ \begin{align} 
+>>> \left(\frac{dy}{dt}\right)e^{4t} +4ye^{4t} &= 2e^{4t} \\
+>>> \frac{d}{dt} \left[e^{4t}y\right] &=2e^{4t} \tag{3}
+>>> \end{align}$$
+>>> 2. To find the expression for the total derivative, we first put the right hand-side in an equivalent derivative form and rearrange to get $\psi(y,t)=0$. First we assert
+>>> $$ \frac{d}{dt} \frac{1}{2}e^{4t} = 2e^{4t}$$
+>>> Substituting this result in $(3)$, rearranging gives
+>>> $$ \begin{alignat}{2} 
+>>> \frac{d}{dt} \left[e^{4t}y\right] &=\frac{d}{dt} \frac{1}{2}e^{4t} \qquad&&\Big| - \frac{d}{dt} \frac{1}{2}e^{4t}  \\
+>>> \frac{d}{dt} \left[e^{4t}y-\frac{1}{2}e^{4t}\right] &=0 \\
+>>> \end{alignat}
+>>> $$
+>>> 3. Integrating gives
+>>> $$ \begin{alignat}{2}
+>>> \frac{d}{dt} \left[y-\frac{1}{2}\right]e^{4t} &=0 \qquad&&\Big|\int \\
+>>> \left[y-\frac{1}{2}\right]e^{4t} &=c 
+>>> \end{alignat}$$
+>>> 4. Computing $y$ gives
+>>>  $$ \begin{alignat}{2}
+>>> \left[y-\frac{1}{2}\right]e^{4t} &=c \qquad\qquad\qquad&&\Big| \cdot e^{-4t},\; +\frac12 \\
+>>> y &= ce^{-4t}+\frac12
+>>> \end{alignat}$$
 >
->>[!example] Task: Find all solutions of $y'=2y+5$
+>>[!example]- Task: Find all solutions of $y'=2y+5$
+>> We identify $a=2$ and $b=5$. Using theorem [[Ordinary Differential Equations#^thmsolvefoode|Theorem for ODE solving]] we have
+>> $$ y =  ce^{2t} -\frac52 $$
 >
->>[!example] Task: Find all solutions of the IVP $y'=-4y+2$, $y(0)=5$
+>>[!example]- Task: Find all solutions of the IVP $y'=-4y+2$, $y(0)=5$
+>> Using the [[Ordinary Differential Equations#^thmsolivp|Theorem for solving IVP with constant coefficients]] we can identify 
+>> $$\begin{align} 
+>>  t_0 &= 0 \\
+>>  y_0 &= 5 \\
+>>  a &= -4 \\
+>>  b &= 2 \\
+>> \end{align}$$
+>> Hence, we have
+>>$$\begin{align} 
+>> y(t) &= \left(5+ \frac{2}{-4}\right) e^{-4t} - \frac{2}{-4} \\
+>> y(t) &= \frac{9}{2} e^{-4t}+ \frac{1}{2} \\
+>>\end{align}$$
 >
->>[!example] Task: Find the solution of the IVP $\frac{dy}{dt}(t)=3y(t)-2$, $y(1)=1$
+>>[!example]- Task: Find the solution of the IVP $\frac{dy}{dt}(t)=3y(t)-2$, $y(1)=1$
+>> Using the [[Ordinary Differential Equations#^thmsolivp|Theorem for solving IVP with constant coefficients]] we can identify 
+>> $$\begin{align} 
+>>  t_0 &= 1 \\
+>>  y_0 &= 1 \\
+>>  a &= 3 \\
+>>  b &= -2 \\
+>> \end{align}$$
+>> Hence, we have
+>>$$\begin{align} 
+>> y(t) &= \left(1+ \frac{-2}{3}\right) e^{3t-3} - \frac{-2}{3} \\
+>> y(t) &= \frac{1}{3} e^{3t-3} + \frac{2}{3} \\
+>>\end{align}$$
 >
 >>[!example] Task
 >>Express the differential equation $y'=6y+1$ as a total derivative of a potential function $\psi(t,y)$, that is, find $\psi$ satisfying 
 >>$$ y'=6y+1 \Leftrightarrow \psi'=0$$
->>Integrate the equation for the potential function $psi$ to find all solutions of $y$.
+>>Integrate the equation for the potential function $\psi$ to find all solutions of $y$.
+>>>[!example]- Solution
+>>>We first determine the integrating factor $\mu(t)$ to apply the product rule. 
+>>>$$\begin{align} 
+>>>\frac{dy}{dt} - 6y &= 1 \\
+>>>\frac{dy}{dt} \mu - 6y\mu &= \mu \tag{1}
+>>>\end{align}$$
+>>> Settings the LHS equal to the product rule
+>>> $$\begin{align} 
+>>>\frac{dy}{dt}\mu - 6y\mu &= \left(\frac{d\mu}{dt}\right)y + \left(\frac{dy}{dt}\right)\mu\\
+>>> - 6\mu y &= \left(\frac{d\mu}{dt}\right)y\\
+>>> - 6\mu &= \frac{d\mu}{dt} \\
+>>>\end{align}$$
+>>>According to the [[Ordinary Differential Equations#^thmsolvefoode| theorem for solving this]], we get the following result 
+>>>$$\mu = e^{-6t}$$
+>>> Further we determine the potential function by inserting $\mu$ into $(1)$. Recall the LHS is constructed to be the product-rule.
+>>> $$ \begin{align}
+>>> 	\frac{dy}{dt} e^{-6t} - 6y e^{-6t} &= e^{-6t} \\
+>>> 	\frac{d}{dt} \left[ye^{-6t}\right]  &= e^{-6t} \\
+>>> 	\frac{d}{dt} \left[ye^{-6t}\right]  &= \frac{d}{dt} \frac{1}{-6}e^{-6t} \\
+>>> 	\frac{d}{dt} \left[ye^{-6t} + \frac{1}{6}e^{-6t}\right]  &= 0  \\
+>>> \end{align}
+>>> $$
+>>> Hence, we have found the potential function $\psi(y,t) = ye^{-6t} + \frac{1}{6}e^{-6t}$. Integrating yields a solution for $y$.
+>>> $$ \begin{align}
+>>> 	\frac{d}{dt} \left[ye^{-6t} + \frac{1}{6}e^{-6t}\right]  &= 0 \\
+>>> 	ye^{-6t} + \frac{1}{6}e^{-6t} &= c \\
+>>> 	\left(y + \frac{1}{6}\right)e^{-6t} &= c \\
+>>> 	y + \frac{1}{6} &= ce^{6t} \\
+>>> 	y  &= ce^{6t} - \frac{1}{6} \\
+>>> \end{align}
+>>> $$
 >
->>[!example] Task: Find the solution of the IVP $y'=6y+1$, $y(0) = 1$
+>>[!example]- Task: Find the solution of the IVP $y'=6y+1$, $y(0) = 1$
+>> $$\begin{align} 
+>>  t_0 &= 0 \\
+>>  y_0 &= 1 \\
+>>  a &= -6 \\
+>>  b &= 1 \\
+>> \end{align}$$
+>> Hence, we have
+>>$$\begin{align} 
+>> y(t) &= \left(1+ \frac{1}{6}\right) e^{6t} - \frac{1}{6} \\
+>> y(t) &= \frac{7}{6} e^{6t}- \frac{1}{6} \\
+>>\end{align}$$
 >
 >>[!example] Task: Follow the steps below to find all solutions of $y'=-3y+5$, $y(0)=1$
->>1. Find any integrating factor $\mu$ for the differential equation.
+>>1. Find an integrating factor $\mu$ for the differential equation.
 >>2. Write the differential equation as a total derivative of a potential function $\psi$.
 >>3. Use the potential function to find the general solution of the differential equation
 >>4. Find the solution of the initial value problem above.
+>>>[!example]- Solution
+>>>1. We first determine the integrating factor $\mu(t)$ to apply the product rule. 
+>>>$$\begin{align} 
+>>>\frac{dy}{dt} + 3y &= 5 \\
+>>>\frac{dy}{dt} \mu + 3y\mu &= 5\mu \tag{1}
+>>>\end{align}$$
+>>> Settings the LHS equal to the product rule
+>>> 
+>>> $$\begin{align} 
+>>>\frac{dy}{dt}\mu + 3y\mu &= \left(\frac{d\mu}{dt}\right)y + \left(\frac{dy}{dt}\right)\mu\\
+>>> 3\mu y &= \left(\frac{d\mu}{dt}\right)y\\
+>>> 3\mu &= \frac{d\mu}{dt} \\
+>>>\end{align}$$
+>>>According to the [[Ordinary Differential Equations#^thmsolvefoode| theorem for solving this]], we get the following result 
+>>>$$\mu = e^{3t}$$
+>>>
+>>>2. Further we determine the potential function by inserting $\mu$ into $(1)$. Recall the LHS is constructed to be the product-rule.
+>>> $$ \begin{align}
+>>> 	\frac{dy}{dt} e^{3t} + 3y e^{3t} &= 5e^{3t} \\
+>>> 	\frac{d}{dt} \left[ye^{3t}\right]  &= 5e^{3t} \\
+>>> 	\frac{d}{dt} \left[ye^{3t}\right]  &= \frac{d}{dt} \frac{5}{3}e^{3t} \\
+>>> 	\frac{d}{dt} \left[ye^{3t} - \frac{5}{3}e^{3t}\right]  &= 0  \\
+>>> \end{align}
+>>> $$
+>>> Hence, we have found the potential function $\psi(y,t) = ye^{3t} - \frac{5}{3}e^{3t}$. 
+>>> 3. Integrating yields a solution for $y$.
+>>> $$ \begin{align}
+>>> 	\frac{d}{dt} \left[ye^{3t} - \frac{5}{3}e^{3t}\right]  &= 0 \\
+>>> 	ye^{3t} - \frac{5}{3}e^{3t} &= c \\
+>>> 	\left(y - \frac{5}{3}\right)e^{3t} &= c \\
+>>> 	y - \frac{5}{3} &= ce^{-3t} \\
+>>> 	y  &= ce^{-3t} + \frac{5}{3} \tag{2}\\
+>>> \end{align}
+>>> $$
+>>> 4.  Solving for $c$ with $t=0$ and $y(0) = 1$ yields
+>>> $$ \begin{align} 
+>>> y(0)  &= ce^{0} + \frac{5}{3} \\
+>>> 1  &= c + \frac{5}{3} \\
+>>> -\frac{2}{3}  &= c \\
+>>> \end{align}$$
+>>> Inserting this into $(2)$ gives the solution for the IVP, hence we have
+>>> $$ y(t) = -\frac{2}{3}e^{-3t} + \frac{5}{3}$$
 
 ## 3 - Linear Variable Coefficient Equations
