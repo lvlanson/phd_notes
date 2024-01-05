@@ -2,7 +2,7 @@
   "userAdmonitions": {
     "def": {
       "type": "def",
-      "color": "38, 180, 19",
+      "color": "56, 255, 169",
       "icon": {
         "name": "book",
         "type": "font-awesome"
@@ -15,7 +15,7 @@
     },
     "note": {
       "type": "note",
-      "color": "107, 132, 255",
+      "color": "56, 132, 255",
       "icon": {
         "type": "obsidian",
         "name": "lucide-lightbulb"
@@ -28,7 +28,7 @@
     },
     "remark": {
       "type": "remark",
-      "color": "240, 237, 137",
+      "color": "233, 255, 173",
       "icon": {
         "name": "angle-double-right",
         "type": "font-awesome"
@@ -36,7 +36,8 @@
       "command": true,
       "title": "Remark",
       "injectColor": true,
-      "noTitle": false
+      "noTitle": false,
+      "copy": false
     },
     "attention": {
       "type": "attention",
@@ -59,11 +60,12 @@
       },
       "command": true,
       "injectColor": true,
-      "noTitle": false
+      "noTitle": false,
+      "copy": false
     },
     "algo": {
       "type": "algo",
-      "color": "255, 112, 243",
+      "color": "247, 184, 255",
       "icon": {
         "type": "obsidian",
         "name": "lucide-file-digit"
@@ -71,7 +73,8 @@
       "command": true,
       "title": "Algorithm",
       "injectColor": true,
-      "noTitle": false
+      "noTitle": false,
+      "copy": false
     },
     "pic": {
       "type": "pic",
@@ -88,7 +91,7 @@
     },
     "Code": {
       "type": "Code",
-      "color": "116, 121, 251",
+      "color": "56, 132, 255",
       "icon": {
         "name": "code",
         "type": "font-awesome"
@@ -96,7 +99,8 @@
       "command": true,
       "title": "Code",
       "injectColor": true,
-      "noTitle": false
+      "noTitle": false,
+      "copy": false
     },
     "Theorem": {
       "type": "Theorem",
@@ -162,6 +166,18 @@
       "color": "247, 184, 255",
       "icon": {
         "name": "bars",
+        "type": "font-awesome"
+      },
+      "command": true,
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "proof": {
+      "type": "proof",
+      "color": "200, 200, 200",
+      "icon": {
+        "name": "map-pin",
         "type": "font-awesome"
       },
       "command": true,

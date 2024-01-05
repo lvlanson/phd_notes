@@ -228,7 +228,7 @@ aliases:
 > $$ y' = ay + b, \qquad  y(t_0) = y_0,$$
 > has the unique solution
 > $$ y(t) = \left(y_0 + \frac{b}{a}\right)e^{a(t-t_0)} - \frac{b}{a}$$
->>[!proof]
+>>[!proof]-
 >>First we use the results of the [[Ordinary Differential Equations#^thmsolvefoode|Theorem for solveability of first order ODEs]], i.e.
 >> $$y(t) = ce^{at} - \frac{b}a$$
 >> and solve $y_0 = y(t_0)$ for $c$
@@ -539,6 +539,7 @@ aliases:
 >>	t^2y &= c + t^4 \qquad &&\Big| \cdot ta^{-2}\\ 
 >>	y &= ct^{-2} + t^2 \\ 
 >>\end{alignat}$$
+>^defThmSolODEVar
 
 >[!def] Definition Initial Value Problem for Variable Coefficients
 >The **initial value problem (IVP)** is to find all solutions $y$ of
@@ -556,5 +557,54 @@ aliases:
 > has the unique solution $y$ on the domain $(t_1, t_2)$, given by
 > $$ y(t) = y_0e^{A(t)} + e^{A(t)}\int_{t_0}^t e^{-A(s)}b(s) \, ds$$
 > where the function $A(t) = \int_{t_0}^t a(s) \, ds$ is a particular antiderivative of function $a$.
+>>[!proof]
+>> First we use the results of the [[Ordinary Differential Equations#^defThmSolODEVar | Theorem Solving First Order ODEs with Variable Coefficients]]. 
+>> $$ \begin{equation}y(t) = ce^{A(t)}+e^{A(t)} \int e^{-A(t)} b(t) \, dt \tag{General Solution}\end{equation}$$
+>>where $A(t) = \int a(t) \, dt$. Setting $y(t_0) = y_0$ and rearranging for $c$ gives
 >^thmsolIVPvar
 
+>[!remark]- Remark: Recovering Constant Coefficient Form
+> We can get the [[Ordinary Differential Equations#^thmsolivp|constant coefficient form]] back by assuming $a(t), b(t)$ being constant. First we reduce $A(t)$ to be constant with
+> $$
+> \begin{align}
+> 	A(t) &= \int_{t_0}^t a \, ds \\
+> 	     &=  sa \; \Bigg\vert_{t_0}^t \\
+> 	     &=  ta - t_0a  \\
+> 	     &=  a(t - t_0)  \\
+> \end{align}
+> $$
+> Next we insert this result into the solution equation
+> $$ 
+> \begin{align} 
+> 	y(t) &= y_0e^{A(t)} + e^{A(t)}\int_{t_0}^t e^{-A(s)}b(s) \; ds \\
+> 	     &= y_0e^{a(t - t_0)} + e^{a(t - t_0)}\int_{t_0}^t e^{-a(t - t_0)}b \; ds \tag{1}\\
+> \end{align}
+> $$
+> Now we solve the definite integral using the [[../Calculus/Integration#^thmSubstitutionRule|substitution method]]. We identify the form of the given definition in the substitution method and apply the method
+> $$
+> \begin{align}
+> 	\int_{t_0}^t e^{-a(s-t_0)}b \; ds &= \int_a^b f\Big(g(s)\Big)g'(s) \,ds \\
+> 	g(s) &=  s-t_0 \\
+> 	g'(s) &= 1 \\
+> 	f(g(s)) &= e^{-ag(s)}b\\  
+> 	&= e^{-a(s-t_0)}b \\
+> 	g(a)=g(t_0)&= t_0-t_0 \\
+> 	&= 0 \\
+> 	g(b) =g(t) &=t - t_0
+> \end{align}
+> $$
+> Which captures the inner form of the integral. Applying the method with $g(s) = u= s-t_0$ yields
+> $$\begin{align}
+>	\int_a^b f(g(x))g'(x) \;dx &= \int_{g(a)}^{g(b)}f(u) \; du \tag{Substitution Rule} \\
+>	\int_{t_0}^t e^{-a(t - t_0)}b\; ds &= \int_{0}^{t - t_0} e^{-au}b \; du \tag{Applying the Rule} \\
+>									  &= b \int_{0}^{t - t_0} e^{-au} \; du  \\
+>									  &= b \Bigg(-\frac{1}{a}e^{-au} \Bigg\vert_{0}^{t - t_0}\Bigg)   \\
+>									  &= b \Bigg(-\frac{1}{a}e^{-a(t - t_0)} - \left(-\frac{1}{a}e^{0}\right) \Bigg)   \\
+>									  &= -\frac{b}{a}e^{-a(t - t_0)} + \frac{b}{a}     \\
+>\end{align}$$
+>Inserting this result into $(1)$ gives 
+>$$ \begin{align}
+>	y_0e^{a(t - t_0)} + e^{a(t - t_0)}\left(-\frac{b}{a}e^{-a(t - t_0)} + \frac{b}{a}\right)  &=y_0e^{a(t - t_0)} - \frac{b}{a}e^0 + e^{a(t - t_0)}\frac{b}{a} \\
+>	&=\left(y_0 + \frac{b}{a}\right)e^{a(t - t_0)} - \frac{b}{a} \tag*{$\square$}
+>\end{align}$$
+>which concludes this remark.
