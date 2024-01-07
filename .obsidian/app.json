@@ -8,7 +8,8 @@
     " parallelit",
     "callout",
     "ODEs",
-    "IVP"
+    "IVP",
+    "iff"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,

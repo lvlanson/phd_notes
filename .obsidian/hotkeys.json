@@ -24,5 +24,14 @@
       ],
       "key": "ArrowDown"
     }
+  ],
+  "outline:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "`"
+    }
   ]
 }

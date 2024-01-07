@@ -473,7 +473,7 @@ aliases:
 
 ## 3 - Linear Variable Coefficient Equations
 
->[!theorem] Theorem Solving First Order ODEs with Variable Coefficients([[../../../Sources/nagy.pdf#page=23|Source]])
+>[!theorem] Theorem Solving First Order ODEs with Variable Coefficients ([[../../../Sources/nagy.pdf#page=23|Source]])
 >If the functions $a,b$ are continuous, then
 >$$ y' = a(t)y + b(t)$$
 >has infinitely many solutions given by
@@ -541,7 +541,7 @@ aliases:
 >>\end{alignat}$$
 >^defThmSolODEVar
 
->[!def] Definition Initial Value Problem for Variable Coefficients
+>[!def] Definition Initial Value Problem for Variable Coefficients ([[../../../Sources/nagy.pdf#page=25|Source]])
 >The **initial value problem (IVP)** is to find all solutions $y$ of
 >$$ y' = a(t) y + b(t)$$
 >that satisfy the initial condition
@@ -551,20 +551,89 @@ aliases:
 >>The IVP has a unique solution.
 >^defIVPvar
 
->[!theorem] Theorem: Solveability of IVP with Variable Coefficients
+>[!theorem] Theorem: Solveability of IVP with Variable Coefficients ([[../../../Sources/nagy.pdf#page=26|Source]])
 > Given continuous functions $a,b$ with domain $(t_1, t_2)$ and constants $t_0 \in (t_1, t_2)$ and $y_0 \in \mathbb{R}$, the IVP
 > $$ y' = a(t)y + b(t), \qquad y(t_0) = y_0 $$
 > has the unique solution $y$ on the domain $(t_1, t_2)$, given by
 > $$ y(t) = y_0e^{A(t)} + e^{A(t)}\int_{t_0}^t e^{-A(s)}b(s) \, ds$$
 > where the function $A(t) = \int_{t_0}^t a(s) \, ds$ is a particular antiderivative of function $a$.
->>[!proof]
+>>[!proof]-
 >> First we use the results of the [[Ordinary Differential Equations#^defThmSolODEVar | Theorem Solving First Order ODEs with Variable Coefficients]]. 
->> $$ \begin{equation}y(t) = ce^{A(t)}+e^{A(t)} \int e^{-A(t)} b(t) \, dt \tag{General Solution}\end{equation}$$
->>where $A(t) = \int a(t) \, dt$. Setting $y(t_0) = y_0$ and rearranging for $c$ gives
+>> $$ \begin{equation}y(t) = ce^{A(t)}+e^{A(t)} \int e^{-A(t)} b(t) \, dt \tag{1}\end{equation}$$
+>>where $A(t) = \int a(t) \, dt$. Setting 
+>>$$\begin{align} y(t_0) &= y_0 \\ K(t) &= \int e^{-A(t)} b(t) \, dt \end{align}$$ 
+>>and rearranging for $c$ gives
+>>$$\begin{alignat}{2}
+>>  y_0 &= ce^{A(t_0)} + e^{A(t_0)} K(t_0) &&\qquad \Big\vert -e^{A(t_0)} K(t_0)\\
+>>   y_0 - e^{A(t_0)} K(t_0) &= ce^{A(t_0)}  &&\qquad \Big\vert \cdot e^{-A(t_0)}\\
+>>   y_0e^{-A(t_0)} -  K(t_0) &= c  &&\qquad 
+>>\end{alignat} $$
+>>Substituting $c$ this back into $(1)$ gives
+>>$$\begin{alignat}{2}
+>>  y(t) &= \left(y_0e^{-A(t_0)} -  K(t_0)\right)e^{A(t)}+e^{A(t)} K(t) \\
+>>  &= y_0e^{A(t)-A(t_0)} - e^{A(t)}K(t_0) +e^{A(t)} K(t) \\
+>>  &= y_0e^{A(t)-A(t_0)} + e^{A(t)}\left(K(t) - K(t_0)\right) \tag{2}\\
+>>\end{alignat} $$
+>>Further, we notice $A(t_0) = \int_{t_0}^{t_0}a(s) \,ds$ is vanishing due to its integration limits. Therefore, we define 
+>>$$\begin{align}
+>> \widehat{A}(t) &= A(t) - \underbrace{A(t_0)}_{=0} \\
+>> &= A(t) \tag{3}
+>>\end{align}$$
+>>Next, we specify $K(t)$. Since we are interested in finding an **initial value**, we have to turn the indefinite integral in $K(t)$ in to a definite one. Since we are inspecting the initial value of $t_0$ with respect to $t$, we define the integral on the range of $[t_0, t]$, hence, we have
+>>$$\begin{align}
+>>\widehat{K}(t) &= K_{t_0}^{t}(t) - K_{t_0}^{t_0}(t) \\
+>>&= K_{t_0}^{t}(t) - K_{t_0}^{t_0}(t) \\
+>>&=  \int_{t_0}^t e^{-A(t)} b(t) - \underbrace{\int_{t_0}^{t_0} e^{-A(t)} b(t)}_{=0} \\
+>>&= \int_{t_0}^t e^{-A(t)} b(t) \tag{4}
+>>\end{align}$$
+>> We insert the findings of $(3)$ and $(4)$ into $(2)$. Further notice, we can add $A(t_0)=0$ as we need
+>> $$\begin{align}
+>> y_0e^{A(t)-A(t_0)} + e^{A(t)}\left(K(t) - K(t_0)\right) &= y_0e^{\widehat{A}(t)} +  e^{A(t)} \int_{t_0}^t e^{-A(t)} b(t) \\
+>>  &= y_0e^{\widehat{A}(t)} +  e^{A(t) - A(t_0)} \int_{t_0}^t e^{-(A(t) - A(t_0))} b(t) \\
+>>  &= y_0e^{\widehat{A}(t)} +  e^{\widehat{A}(t)} \int_{t_0}^t e^{-\widehat{A}(t)} b(t) \\
+>>\end{align}$$
+>>Changing the naming of $\widehat{A}(t)$ to $A(t)$ yields the theorem to be proven, i.e.
+>>$$ y(t) = y_0e^{A(t)} + e^{A(t)}\int_{t_0}^t e^{-A(s)}b(s) \, ds$$
+>> 
+>
+>>[!example]- Task: Find the function $y$ solution of the IVP $ty' + 2y = 4t^2$ with $t>0$ and $y(1) = 2$
+>>We use the result of the [[Ordinary Differential Equations#^thmsolivp| theorem solution for IVP with variable coefficients]]. First we rearrange the formula
+>>$$\begin{align}
+>>ty' +2y &= 4t^2 \qquad \Big\vert-2y, \; \cdot t^{-1} \\
+>>y' &= -\frac{2}{t}y + 4t \qquad \\
+>>\end{align}$$
+>>Next we specify the terms of the formula with respect to the given parameters
+>>$$\begin{align} 
+>>A(t) &=  \int_{t_0}^{t}a(s) \,ds  \\
+>>     &=  \int_{1}^{t}-\frac{2}s \,ds \\ 
+>>     &=  -2\int_{1}^{t}\frac{1}s \,ds \\ 
+>>     &=  -2\Bigg( \ln |s|\Bigg\vert^t_{1}\Bigg) \,\\ 
+>>     &=  -2\Bigg( \ln |t| - \underbrace{\ln 1}_{=0}\Bigg) \\ 
+>>     &=  -2\ln |t|  \\ 
+>>     &=  \ln |t|^{-2}  \\
+>> 				    \\
+>>      \int_{t_0}^t e^{-A(s)}b(s) \, ds &= \int_{1}^t e^{-\ln s^{-2}} 4s \, ds \\
+>> 								      &= \int_{1}^t e^{\ln s^{2}} 4s \, ds \\
+>> 								      &= \int_{1}^t s^{2} 4s \, ds \\ 
+>> 								      &= \int_{1}^t 4s^3 \, ds \\ 
+>> 								      &= s^4 \Bigg\vert_1^t  \\ 
+>> 								      &= t^4 - 1 \\ 
+>>\end{align}$$
+>>Now we insert the results into the formula
+>>$$\begin{align}
+>>	y(t) &= y_0e^{A(t)} + e^{A(t)}\int_{t_0}^t e^{-A(s)}b(s) \, ds \\
+>>	&= 2e^{\ln |t|^{-2}} + e^{\ln |t|^{-2}}\left(t^4 - 1 \right) \\
+>>	&= 2t^{-2} + t^{-2}\left(t^4 - 1 \right) \\
+>>	&= 2t^{-2} + t^{2} - t^{-2}\\
+>>	&= \frac{1}{t^2} + t^{2} \\
+>>\end{align}$$
+>
 >^thmsolIVPvar
+>
+
 
 >[!remark]- Remark: Recovering Constant Coefficient Form
-> We can get the [[Ordinary Differential Equations#^thmsolivp|constant coefficient form]] back by assuming $a(t), b(t)$ being constant. First we reduce $A(t)$ to be constant with
+> We can get the [[Ordinary Differential Equations#^thmsolivp|constant coefficient form]] back by assuming $a(t), b(t)$ being constant. First, we reduce $A(t)$ to be constant with
 > $$
 > \begin{align}
 > 	A(t) &= \int_{t_0}^t a \, ds \\
@@ -608,3 +677,159 @@ aliases:
 >	&=\left(y_0 + \frac{b}{a}\right)e^{a(t - t_0)} - \frac{b}{a} \tag*{$\square$}
 >\end{align}$$
 >which concludes this remark.
+
+## 4 - The Bernoulli Equation
+
+>[!def] Definition: Bernoulli Equation ([[../../../Sources/nagy.pdf#page=27|Source]])
+>The **Bernoulli equation** is
+>$$\begin{align} 
+>y' = p(t)y + q(t)y^n
+>\end{align}$$
+>where $p,q$ are given functions and $n \in \mathbb{R}$.
+>^defBernoulli
+
+>[!remark]- Remark: Regarding $n$ in the Bernoulli equation
+> - $n \neq 0, 1$ => Bernoulli equation is **non-linear**
+> - $n = 2$ => Bernoulli equation is **logistic equation**
+
+>[!theorem] Theorem: Solutions for the Bernoulli equation  ([[../../../Sources/nagy.pdf#page=26|Source]])
+>The function $y$ is a solution of the Bernoulli equation iff the function 
+>$$ \nu = \frac{1}{y^{n-1}}$$
+>is solution of the linear differential equation
+>$$ \nu' = -(n-1)p(t)\nu - (n-1)q(t)$$
+>>[!note]-
+>>The non-linear representation of the Bernoulli equation is linearized in its representation, such that it can be solved using methods of linear ODEs.
+>
+>>[!proof]-
+>>We take the Bernoulli equation and divide by $y^n$
+>>$$\begin{align} 
+>>	y' &= p(t)y + q(t)y^n \\
+>>	\frac{y'}{y^n} &= \frac{p(t)}{y^{n-1}} + q(t) \tag{1}\\
+>>\end{align}$$
+>>Now we set $\nu = y^{-(n-1)} \;(2)$ and determine $\nu'=\frac{d\nu}{dt}$
+>>$$\begin{align}
+>>	\frac{d\nu}{dt} &= \frac{d}{dt} \left(y^{-(n-1)} \right) \\
+>>					&= -(n-1)y^{-n} \frac{dy}{dt} \tag{chain rule}
+>>\end{align}$$
+>>We continue to rearrange to have the expression of the LHS of $(1)$
+>>$$\begin{align} 
+>>\nu' &=-(n-1)y^{-n}y' \qquad\Big|: (-(n-1)) \\
+>>\frac{\nu'}{-(n-1)} &=\frac{y'}{y^{n}} \qquad\Big|: (-(n-1)) \tag{3}\\
+>>\end{align}$$
+>>
+>>Now we set the LHS $(1)$ = RHS $(3)$ with  $\nu = y^{-(n-1)}$ from $(2)$
+>>$$\begin{alignat}{2}
+>>\frac{\nu'}{-(n-1)}&= p(t)\nu + q(t) \qquad &&\Big|\cdot (-(n-1)) \\
+>>\nu' &= -(n-1)p(t)\nu - (n-1)q(t) \qquad&& \tag*{$\square$}
+>>\end{alignat}$$
+>
+>>[!example]- Task: Find every nonzero solution of the differential equation $y' = y+2y⁵$
+>>Note, this is a Bernoulli equation with $n=5$. We use the procedure shown in the proof.
+>>$$\begin{alignat}{2} 
+>>y' &= y+2y⁵ \qquad &&\Big|:y⁵ \\
+>>\frac{y'}{y^5} &= y^{-4}+2  \tag{1}\\
+>>\end{alignat}$$
+>>We now set $\nu = y^{-4} \;\;(2)$ and have 
+>>$$ \begin{alignat}{2} 
+>>	\nu' &= -4y^{-5} y' \qquad &&\Big|\cdot -4^{-1} \\
+>>	-\frac{\nu'}{4} &= \frac{y'}{y^5} &&\tag{3}
+>>\end{alignat}$$ 
+>>Setting $(1) = (3)$ 
+>>$$\begin{alignat}{2}
+>>	-\frac{\nu'}{4} &= \nu+2 \qquad &&\Big|\cdot (-4) \\
+>>	\nu' &= -4\nu-8 \qquad 
+>>\end{alignat}$$
+>>This equation can now be solved using the [[Ordinary Differential Equations#^thmsolvefoode|solution for first order ODEs with constant coefficients]] which is
+>>$$y(t) = ce^{at} - \frac{b}{a} $$
+>>We identify
+>>$$\begin{align}
+>>	a &= -4\\
+>>	b &= -8
+>>\end{align}$$
+>>We find
+>>$$ \begin{equation} \nu = ce^{-4t} - 2 \tag{4}\end{equation}$$
+>>Substituting $(4)$ back into $(2)$ yields
+>>$$\begin{alignat}{2}
+>>	y^{-4} &= \nu \\ 
+>>	y^{-4} &= ce^{-4t} - 2 \qquad&&\Big|( \,. )^{-1/4}\\ 
+>>	y^4 &= \frac1{\left(ce^{-4t} - 2\right)^{1/4}} 
+>>\end{alignat}$$ 
+>
+>>[!example]- Task: Given any constants $a_0, b_0$ find every solution of the differential equation $y'= a_0y +b_0y^3$
+>> The given equation is a Bernoulli equation with $n=3$. Therefore, we use the procedure of the proof
+>> $$\begin{alignat}{2}
+>> y' &= ay + by^3 \qquad &&\Big| \cdot y^{-3}\\
+>> \frac{y'}{y^{-3}} &= ay^{-2} + b  \tag{1} 
+>> \end{alignat}$$
+>> We define $\nu=\frac{1}{y^2} \;\;(2)$ 
+>> $$\begin{alignat}{2}
+>> \frac{d \nu}{dt} &= \frac{d}{dt} \frac{1}{y^2} \\
+>>  &= -2y{-3} \frac{dy}{dt} \\
+>>  \nu' &= -2 \frac{ y'}{y{3}} \tag{3}
+>>\end{alignat}$$
+>>We insert the result $(3)$ into $(1)$ 
+>>$$\begin{alignat}{2}
+>> -\frac{\nu'}{2} &= \frac{a}{y^2} + b \qquad&&\Big\vert \cdot (-2) \\
+>> \nu' &= -2a \nu - 2b 
+>>\end{alignat}$$
+>>Solving this using [[Ordinary Differential Equations#^thmsolvefoode|first order ODE with constant coefficients solution]] gives
+>>$$\begin{alignat}{2}
+>> \nu &= ce^{-2t} - \frac{b}{a}
+>>\end{alignat}$$
+>>Now inserting the result into $(2)$ yields
+>>$$\begin{alignat}{2}
+>> \nu &= \frac{1}{y^2} \\
+>> ce^{-2t} - \frac{b}{a} &= \frac{1}{y^2}  \qquad&&\Big\vert (\,.)^{-2}\\
+>> y &= \pm\frac{1}{\sqrt{   ce^{-2t} - \frac{b}{a}}}   
+>>\end{alignat}$$
+>
+>>[!example]- Task: Find every solution of the equation $ty'=3y+t^5y^{1/3}$
+>>Note this equation is a Bernoulli equation with $n=\frac{1}{3}$. We use the results from the theorem. Rearranging the equation gives 
+>>$$\begin{align}
+>> y' &= \frac{3}{t}y + t^4 y^{1/3} \\ 
+>> \frac{y'}{y^{1/3}} &= \frac{3}{t}y^{2/3} + t^4 
+>>\end{align} $$
+>>Setting $\nu$ and its derivative according to the theorem
+>>$$\begin{align}
+>> \nu &= \frac{1}{y^{n-1}} \\
+>> \nu &= \frac{1}{y^{-2/3}} \\
+>> &= y^{2/3} \tag{1} \\
+>> \nu' &= \frac{2}{3} \frac{y'}{y^{1/3}} \\
+>> \nu' \frac{3}{2} &= \frac{y'}{y^{1/3}} 
+>>\end{align}$$
+>>Using the results
+>>$$\begin{align}
+>> \nu' \frac{3}{2} &= \frac{3}{t}y^{2/3} + t^4 \\
+>> \nu' &= \frac{2}{t}\nu + \frac{2}{3}t^4 \\
+>>\end{align}$$
+>>This equation represents an ODE with variable coefficients with $a(t) = \frac{2}{t}$ and $b(t)=\frac{2}{3}t^4$. Following the [[Ordinary Differential Equations#^defThmSolODEVar|solution theorem]] we have
+>> $$\begin{align}
+>> y(t)&=ce^{A(t)} + e^{A(t)} \int  e^{-A(t)} b(t) \, dt 
+>>\end{align}$$
+>>
+>>with $$A(t) = \int  a(t)\, dt$$ 
+>>We solve $A(t)$
+>>$$\begin{align}
+>>A(t) &= \int \frac{2}{t} \, dt \\
+>> &= 2 \int  \frac{1}{t} \, dt \\
+>> &= 2 \ln{|t|} +c_{0}\\ 
+>> &= \ln{t^2} + c_{0} 
+>>\end{align}$$
+>>Then we have with $c_{0}=0$
+>>$$\begin{align}
+>> e^{-A(t)} &= e^{-\ln t^2} \\
+>> &= t^{-2} \\
+>>\int  e^{-A(t)} b(t) \, dt &= \int   t^{-2} \frac{2}{3}t^4 \, dt\\
+>> &= \int   \frac{2}{3}t^2 \, dt\\
+>> &= \frac{2}{9}t^3 + c_{1}\\
+>>\end{align}$$
+>>Finally with $c_1=0$
+>>$$\begin{align}
+>> \nu(t) = t^2 + \frac{2}{9}t^5
+>>\end{align}$$
+>>Inserting this result into $(1)$
+>>$$\begin{alignat}{2}
+>> \nu &= y^{2/3} \\
+>>  t^2 + \frac{2}{9}t^5 &= y^{2/3} \qquad&&\Big\vert (\,.)^{3/2}\\
+>>  y&= \pm \left(t^2 + \frac{2}{9}t^5\right)^{3/2}
+>>\end{alignat}$$
