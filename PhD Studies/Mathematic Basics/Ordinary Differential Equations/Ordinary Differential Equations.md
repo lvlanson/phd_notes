@@ -752,7 +752,7 @@ aliases:
 >>$$\begin{alignat}{2}
 >>	y^{-4} &= \nu \\ 
 >>	y^{-4} &= ce^{-4t} - 2 \qquad&&\Big|( \,. )^{-1/4}\\ 
->>	y^4 &= \frac1{\left(ce^{-4t} - 2\right)^{1/4}} 
+>>	y &= \frac1{\left(ce^{-4t} - 2\right)^{1/4}} 
 >>\end{alignat}$$ 
 >
 >>[!example]- Task: Given any constants $a_0, b_0$ find every solution of the differential equation $y'= a_0y +b_0y^3$
@@ -833,3 +833,30 @@ aliases:
 >>  t^2 + \frac{2}{9}t^5 &= y^{2/3} \qquad&&\Big\vert (\,.)^{3/2}\\
 >>  y&= \pm \left(t^2 + \frac{2}{9}t^5\right)^{3/2}
 >>\end{alignat}$$
+
+>[!example] Exercises
+>>[!example] Find all solutions of $y' = 4ty$
+>
+>>[!example] Find the general solution of $y' = -y + e^{-2t}$
+>
+>>[!example] Find the solution of $y$ to the IVP $y' = y + 2te^{2t}, \quad y(0)=0$
+>
+>>[!example] Find the solution of $y$ to the IVP $ty' +2y = \frac{\sin(t)}{t} \quad y\left(\frac{\pi}{2}\right)=\frac{2}{\pi}$ for $t>0$
+>
+>>[!example] Find all solutions $y$ to the ODE $\dfrac{y'}{(t^2+1)y} = 4t$
+>
+>>[!example] Find all solutions $y$ to the ODE $ty' +ny = t^2$ with $n$ a positive integer
+>
+>>[!example] Find the solutions to the IVP $2ty - y' = 02$ with $y(0)=3$
+>
+>>[!example] Find all solutions of the equation $y' = y - 2\sin(t)$
+>
+>>[!example] Find the solution to the IVP $ty' = 2y + 4t³ \cos(4t)$ with $y\left(\frac{\pi}{8}\right)=0$
+>
+>>[!example] Find all solutions of the equation $y' ty = ty²$
+>
+>>[!example] Find all solutions of the equation $y'= -xy + 6x\sqrt{ y }$
+>
+>>[!example] Find all solutions of the equation $y' = y + \frac{3}{y^2}$ with $y(0)=1$
+>
+>>[!example] Find all solutions of $y' = ay + by^n$ with $a\neq 0$ and $b,n\in \mathbb{R}$ constants with $n\neq0,1$
