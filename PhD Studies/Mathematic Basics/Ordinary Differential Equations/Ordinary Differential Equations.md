@@ -846,7 +846,7 @@ aliases:
 >> y &= ce^{2t^2}\\
 >>\end{align}$$
 >
->>[!example]- Find the general solution of $y' = -y + e^{-2t}$
+>>[!example]- Find the general sol.łution of $y' = -y + e^{-2t}$
 >>Given is a first order [[Ordinary Differential Equations#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=-1$ and $b(t)=e^{-2t}$. We therefore use the solution theorem.
 >>$$\begin{align}
 >> y &= ce^{A(t)} + e^{A(t)} \int  e^{-A(t)} b(t) \, dt \\
@@ -860,11 +860,11 @@ aliases:
 >> y &= ce^{-t} -e^{-2t}\\
 >>\end{align}$$
 >
->>[!example] Find the solution of $y$ to the IVP $y' = y + 2te^{2t}, \quad y(0)=0$
+>>[!example]- Find the solution of $y$ to the IVP $y' = y + 2te^{2t}, \quad y(0)=0$
 >>Given is a first order [[Ordinary Differential Equations#^thmsolIVPvar | ODE IVP problem with variable coefficients]] with 
 >>$$\begin{align}
 >> a(t)  & = 1 \\ 
->> b(t)  & = 2te^{2t}  \\ \\
+>> b(t)  & = 2te^{2t}  \\ 
 >> t_{0} &= 0 \\
 >> y_{0} &= y(0) = 0 \\
 >>\end{align}$$
@@ -879,14 +879,32 @@ aliases:
 >>       & = s \Big\vert_{0}^t \\ 
 >>       & = t \\
 >> \int_{t_0}^t e^{-A(s)}b(s) \, ds &= \int_{0}^t e^{-s}2se^{2s} \, ds \\
->>       &= \int_{0}^t 2se^{s} \, ds \\
->>       &= 2e^{s} \Big\vert_{0}^t\\
->>       &= 2e^{t} - 2 \\
+>>       &= \int_{0}^t 2se^{s} \, ds \\ \\
+>>\end{align}$$
+>>For this we use [[../Calculus/Integration#^thmIntByParts| integration by parts]]
+>>$$\begin{align}
+>> \int  u \, dv = uv - \int  v \, du 
+>>\end{align}$$
+>>We choose
+>>$$\begin{align} \\
+>> u &= 2s \\ 
+>> dv &= e^{s}\\
+>>\end{align}$$
+>> and determine
+>> $$\begin{align} \\
+>> du &= 2\\ 
+>> v &= e^s \\ \\
+>> \int 2se^{s} \, ds &= 2se^s - \int 2e^s \, ds \\
+>>   &= 2se^s - 2e^s + c  \\
+>>\end{align}$$
+>>Evaluating the integral between $t_0 = 0$ and $t$ gives
+>>$$\begin{align}
+>> \left[2se^s- 2e^2\right]_0^t &= 2se^t - 2e^t +2
 >>\end{align}$$
 >>Plugging the found terms into $(1)$ gives
->>$$\begin{align}
->> y &= 0 + e^t \left(2e^{t} - 2\right) \\
->> y &= 2e^{2t} - 2e^t \\
+>>$$\begin{align} \\
+>> y &= 0 + e^t \left(2se^t - 2e^t + 2\right) \\
+>> y &= 2e^t \left(se^t - e^t + 1\right) \\
 >>\end{align}$$
 
 
@@ -913,13 +931,24 @@ aliases:
 >>$$\begin{align}
 >> A(t) &= \int _{\pi / 2}^t -\frac{2}{s}\, dt \\
 >>      &= -2\int _{\pi / 2}^t \frac{1}{s}\, dt \\ 
->>      &= -2 \left(\ln s \right) \Big\vert_{\pi / 2}^{t} \\
->>      &= -2 \left(\ln t - \ln \pi / 2 \right) \\
->>      &= -2 \left(\ln t \frac{2}{\pi}\right) \\
->>      &=  \ln \left(t \frac{2}{\pi}\right)^{-2} \\
->>      &=  \ln \left(t \frac{\pi}{2t}\right)^{2} \\
+>>      &= -2 \left(\ln |s| \right) \Big\vert_{\pi / 2}^{t} \\
+>>      &= -2 \left(\ln |t| - \ln |\pi / 2| \right) \\
+>>      &= -2 \left(\ln  \frac{2|t|}{\pi}\right) \\
+>>      &=  \ln \left[\left(|t| \frac{2}{\pi}\right)^{-2}\right] \\
+>>\int_{t_0}^t e^{-A(s)}b(s) \, ds&= \int_{\pi / 2}^t e^{-\ln \Big[\big(|s| {\pi}/{2}\big)^{-2}\Big]} \frac{\sin s}{s}\, ds \\ \\
+>> &= \int_{\pi / 2}^t \left(s \frac{\pi}{2}\right)^{2} \frac{\sin s}{s} \, ds  \\
+>> &=\frac{\pi^2}{4} \int_{\pi / 2}^t s^2 \frac{\sin s}{s} \, ds \\
+>> &=\frac{\pi^2}{4} \int_{\pi / 2}^t  s \sin (s)\, ds 
 >>\end{align}$$
-
+>>The integral can be solved using integration by parts and use the results from [[../Calculus/Integration#^thmIntByParts|example 1 from the integration by parts theorem]]. We have
+>>$$\int  x \sin (x) \, dx = -x\cos x + \sin x + c$$
+>>Hence
+>>$$\begin{align}
+>> \frac{\pi^2}{4} \int_{\pi /2}^t  s \sin (s)\, ds &=  \frac{\pi^2}{4} \Big[-s\cos s + \sin s \Big]_{\pi / 2}^{t}\\
+>>  &=  \frac{\pi^2}{4} \left( -t\cos t + \sin t - \left( -\frac{\pi}{2} \cos \frac{\pi}{2} + \sin \frac{\pi}{2} \right) \right) \\
+>>  &=  \frac{\pi^2}{4} \left( -t\cos t + \sin t - 1 \right)
+>>\end{align}$$
+>
 >>[!example] Find all solutions $y$ to the ODE $\dfrac{y'}{(t^2+1)y} = 4t$
 >
 >>[!example] Find all solutions $y$ to the ODE $ty' +ny = t^2$ with $n$ a positive integer

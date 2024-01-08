@@ -9,7 +9,8 @@
     "callout",
     "ODEs",
     "IVP",
-    "iff"
+    "iff",
+    "parts"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,
