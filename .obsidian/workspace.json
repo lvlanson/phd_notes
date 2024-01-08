@@ -6,6 +6,7 @@
       {
         "id": "7675683e84a8c351",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "e02a88fd0e5f9dd5",
@@ -25,6 +26,7 @@
       {
         "id": "d0adceee64becfe7",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "a5609126f72395a1",
@@ -181,12 +183,13 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
   "active": "e02a88fd0e5f9dd5",
   "lastOpenFiles": [
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
@@ -198,7 +201,6 @@
     "Sources/albertsson2018.pdf",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems Preliminaries.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/State Space Models.md",
-    "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
     "Sources/briggs2019.pdf",
     "Sources/Calculus_ Early Transcendentals (3rd Ed) -- William L. Briggs, Lyle Cochran, Bernard Gillett, Eric Schulz -- 3, 2018 -- Pearson -- 9780134763644 -- 23b075287bd1a7fb4136be0de8643a48 -- Anna’s Archive.pdf",
     "Literature/@zotero-171.md",

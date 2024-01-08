@@ -678,7 +678,7 @@ aliases:
 >\end{align}$$
 >which concludes this remark.
 
-## 4 - The Bernoulli Equation
+## 3.1 - The Bernoulli Equation
 
 >[!def] Definition: Bernoulli Equation ([[../../../Sources/nagy.pdf#page=27|Source]])
 >The **Bernoulli equation** is
@@ -835,14 +835,91 @@ aliases:
 >>\end{alignat}$$
 
 >[!example] Exercises
->>[!example] Find all solutions of $y' = 4ty$
+>>[!example]- Find all solutions of $y' = 4ty$
+>> Given is a first order [[Ordinary Differential Equations#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=4t$ and $b(t)=0$. We therefore use the solution theorem.
+>> $$\begin{align}
+>> y &= ce^{A(t)} + e^{A(t)} \int  e^{-A(t)} b(t) \, dt \\
+>> A(t)&= \int  a(t) \, dt \\ 
+>> &= \int  4t dt \\   
+>> &= 2t^2 + \underbrace{ c_{0} }_{ =0 }   \\ 
+>> y &= ce^{2t^2} + e^{2t^2} \cdot 0\\
+>> y &= ce^{2t^2}\\
+>>\end{align}$$
 >
->>[!example] Find the general solution of $y' = -y + e^{-2t}$
+>>[!example]- Find the general solution of $y' = -y + e^{-2t}$
+>>Given is a first order [[Ordinary Differential Equations#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=-1$ and $b(t)=e^{-2t}$. We therefore use the solution theorem.
+>>$$\begin{align}
+>> y &= ce^{A(t)} + e^{A(t)} \int  e^{-A(t)} b(t) \, dt \\
+>> A(t)&= \int  a(t) \, dt \\ 
+>> &= \int  -1 dt \\   
+>> &= -t + \underbrace{ c_{0} }_{ =0 }   \\  
+>> \int  e^{-A(t)} b(t) \, dt &= \int  e^t e^{-2t} \, dt \\
+>> &= \int  e^{-t} \, dt \\
+>> &= -e^{-t} \\
+>> y &= ce^{-t} + e^{-t} \cdot \left(-e^{-t}\right)\\
+>> y &= ce^{-t} -e^{-2t}\\
+>>\end{align}$$
 >
 >>[!example] Find the solution of $y$ to the IVP $y' = y + 2te^{2t}, \quad y(0)=0$
->
+>>Given is a first order [[Ordinary Differential Equations#^thmsolIVPvar | ODE IVP problem with variable coefficients]] with 
+>>$$\begin{align}
+>> a(t)  & = 1 \\ 
+>> b(t)  & = 2te^{2t}  \\ \\
+>> t_{0} &= 0 \\
+>> y_{0} &= y(0) = 0 \\
+>>\end{align}$$
+>> We use the formula of the theorem, i.e.
+>> $$\begin{align}
+>> y(t) &= y_0e^{A(t)} + e^{A(t)}\int_{t_0}^t e^{-A(s)}b(s) \, ds \tag{1}\\
+>> A(t) &= \int _{t_{0}}^t a(s) \, ds 
+>>\end{align}$$
+>>Hence, we solve
+>>$$\begin{align}
+>> A(t)  & = \int _{0}^t 1\, ds \\
+>>       & = s \Big\vert_{0}^t \\ 
+>>       & = t \\
+>> \int_{t_0}^t e^{-A(s)}b(s) \, ds &= \int_{0}^t e^{-s}2se^{2s} \, ds \\
+>>       &= \int_{0}^t 2se^{s} \, ds \\
+>>       &= 2e^{s} \Big\vert_{0}^t\\
+>>       &= 2e^{t} - 2 \\
+>>\end{align}$$
+>>Plugging the found terms into $(1)$ gives
+>>$$\begin{align}
+>> y &= 0 + e^t \left(2e^{t} - 2\right) \\
+>> y &= 2e^{2t} - 2e^t \\
+>>\end{align}$$
+
+
 >>[!example] Find the solution of $y$ to the IVP $ty' +2y = \frac{\sin(t)}{t} \quad y\left(\frac{\pi}{2}\right)=\frac{2}{\pi}$ for $t>0$
->
+>> First reorder the task to identify the problem properly
+>> $$\begin{alignat}{2}
+>>  ty' + 2y & = \frac{\sin(t)}{t} \qquad&&\Big\vert -2y\\
+>>  ty' & = \frac{\sin(t)}{t} - 2y\qquad&&\Big\vert \cdot t^{-1}\\
+>>  y' & = \frac{\sin(t)}{t^2} - \frac{2}{t}y\\
+>>\end{alignat}$$
+>>This can be identified as an [[Ordinary Differential Equations#^thmsolIVPvar | ODE IVP problem with variable coefficients]] with
+>>$$\begin{align}
+>>  a(t) &= -\frac{2}{t} \\
+>>  b(t) &= \frac{\sin(t)}{t}  \\
+>> t_{0} &= \frac{\pi}{2}\\ 
+>> y_{0} &= \frac{2}{\pi}
+>>\end{align}$$
+>>We use the solution equation 
+>>$$\begin{align}
+>> y(t) &= y_0e^{A(t)} + e^{A(t)}\int_{t_0}^t e^{-A(s)}b(s) \, ds \tag{1}\\
+>> A(t) &= \int _{t_{0}}^t a(t) \, dt 
+>>\end{align}$$
+>>and solve 
+>>$$\begin{align}
+>> A(t) &= \int _{\pi / 2}^t -\frac{2}{s}\, dt \\
+>>      &= -2\int _{\pi / 2}^t \frac{1}{s}\, dt \\ 
+>>      &= -2 \left(\ln s \right) \Big\vert_{\pi / 2}^{t} \\
+>>      &= -2 \left(\ln t - \ln \pi / 2 \right) \\
+>>      &= -2 \left(\ln t \frac{2}{\pi}\right) \\
+>>      &=  \ln \left(t \frac{2}{\pi}\right)^{-2} \\
+>>      &=  \ln \left(t \frac{\pi}{2t}\right)^{2} \\
+>>\end{align}$$
+
 >>[!example] Find all solutions $y$ to the ODE $\dfrac{y'}{(t^2+1)y} = 4t$
 >
 >>[!example] Find all solutions $y$ to the ODE $ty' +ny = t^2$ with $n$ a positive integer
