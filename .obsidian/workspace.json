@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
                 "mode": "source",
                 "source": true
               }
@@ -34,7 +34,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
                 "mode": "preview",
                 "source": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md"
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md"
               }
             }
           },
@@ -187,13 +187,50 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e02a88fd0e5f9dd5",
+  "floating": {
+    "id": "94b467ab908a8333",
+    "type": "floating",
+    "children": [
+      {
+        "id": "2397615ba69a9539",
+        "type": "window",
+        "children": [
+          {
+            "id": "48fab4d41d09d54c",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "40aa5c3b49c18fcb",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+                    "mode": "preview",
+                    "source": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1397,
+        "y": 435,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "a5609126f72395a1",
   "lastOpenFiles": [
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Ordinary Differential Equations.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
     "Sources/zotero-182.pdf",
     "Literature/@zotero-182.md",
-    "Sources/CalculusVolume2-OP.pdf",
+    "git_branch",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems.md",

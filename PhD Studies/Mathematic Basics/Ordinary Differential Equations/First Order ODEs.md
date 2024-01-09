@@ -1,7 +1,7 @@
 ---
 aliases:
-- ODE
-- ordinary differential equations
+- First Order ODE
+- Linear First Order ODE
 ---
 
 >[!Source]-
@@ -56,50 +56,50 @@ aliases:
 >>There are different name conventions used for equation (1) in literature, which are only a matter of taste, i.e.
 >>$$ y' = -ay + b $$
 >>^deffirstorderODE
-
->[!example]- Examples (Equations)
->>[!example] Example 1 (First Order Linear ODE)
->>$$ y' =  2y + 3$$
->>with the function 
->>$$ \begin{align} f(t,y) &= 2y+3 \\ &= 2y(t) + 3 \end{align}$$
->>and
->>$$ \begin{align} a(t) &=2 \\ b(t) &= 3 \end{align}$$
 >
->>[!example] Example 2 (First Order Linear ODE)
->>$$ y' = -\frac{2}{t} y + 4t$$
->>with the function 
->>$$ \begin{align} f(t,y) &= -\frac{2y}{t} y + 4t \\ &= -\frac{2y(t)}{t} y + 4t \end{align}$$
->>and
->>$$ \begin{align} a(t) &=-\frac{2}{t} \\ b(t) &= 4t \end{align}$$
+>>[!example]- Examples (Equations)
+>>>[!example] Example 1 (First Order Linear ODE)
+>>>$$ y' =  2y + 3$$
+>>>with the function 
+>>>$$ \begin{align} f(t,y) &= 2y+3 \\ &= 2y(t) + 3 \end{align}$$
+>>>and
+>>>$$ \begin{align} a(t) &=2 \\ b(t) &= 3 \end{align}$$
+>>
+>>>[!example] Example 2 (First Order Linear ODE)
+>>>$$ y' = -\frac{2}{t} y + 4t$$
+>>>with the function 
+>>>$$ \begin{align} f(t,y) &= -\frac{2y}{t} y + 4t \\ &= -\frac{2y(t)}{t} y + 4t \end{align}$$
+>>>and
+>>>$$ \begin{align} a(t) &=-\frac{2}{t} \\ b(t) &= 4t \end{align}$$
+>>
+>>>[!example] Example 3 (Nonlinear ODE)
+>>>$$ y' = -\frac{2}{ty} +4t $$
+>>>because $y$ is in the numerator and therefore not linear with respect to $f(t,y(t))$
 >
->>[!example] Example 3 (Nonlinear ODE)
->>$$ y' = -\frac{2}{ty} +4t $$
->>because $y$ is in the numerator and therefore not linear with respect to $f(t,y(t))$
-
->[!example]- Examples (Tasks)
->>[!example]- Task: Show that $y(t) = e^{2t}-\frac{3}{2}$ is a solution for $y' = 2y+3$
->>We have the ODE $y' = 2y + 3$. To verify the statement we first calculate the derivative of $y(t)$ which is
->>$$\frac{dy}{dt}=y'=2e^{2t}$$
->>Plugging these in, yields
->>$$ \begin{align} 2e^{2t} &= 2\left(e^{2t} - \frac{3}{2}\right) + 3 \\
->>&= 2e^{2t} -3 +3 \\
->>&= 2e^{2t}\end{align}$$
->
->>[!example]- Task: Find the differential equation $y' = f(y)$ satisfied by $y(t) = 4e^{2t} + 3$
->>First we find the derivative of $y(t)$, i.e.
->>$$\frac{dy}{dt}=y'=8e^{2t}$$
->>Since $y(t)$ is the [[Ordinary Differential Equations#^deffirstorderODE|first order ODE]] it is of the form
->>$$y' = a(t)y + b(t)$$
->>We now rewrite $y(t)$ such that we yield $y'(t)$
->>$$\begin{align}
->>y &= 4e^{2t} +3 \\ 
->>y - 3 &= 4e^{2t} \\
->>2(y-3) &= 8e^{2t} \\
->>2y-6&= y'
->>\end{align}$$
->>Hence we have
->>$$ y' = a(t)y + b(t)$$
->>with $a(t)=2$ and $b(t)=-6$ 
+>>[!example]- Examples (Tasks)
+>>>[!example]- Task: Show that $y(t) = e^{2t}-\frac{3}{2}$ is a solution for $y' = 2y+3$
+>>>We have the ODE $y' = 2y + 3$. To verify the statement we first calculate the derivative of $y(t)$ which is
+>>>$$\frac{dy}{dt}=y'=2e^{2t}$$
+>>>Plugging these in, yields
+>>>$$ \begin{align} 2e^{2t} &= 2\left(e^{2t} - \frac{3}{2}\right) + 3 \\
+>>>&= 2e^{2t} -3 +3 \\
+>>>&= 2e^{2t}\end{align}$$
+>>
+>>>[!example]- Task: Find the differential equation $y' = f(y)$ satisfied by $y(t) = 4e^{2t} + 3$
+>>>First we find the derivative of $y(t)$, i.e.
+>>>$$\frac{dy}{dt}=y'=8e^{2t}$$
+>>>Since $y(t)$ is the [[First Order ODEs#^deffirstorderODE|first order ODE]] it is of the form
+>>>$$y' = a(t)y + b(t)$$
+>>>We now rewrite $y(t)$ such that we yield $y'(t)$
+>>>$$\begin{align}
+>>>y &= 4e^{2t} +3 \\ 
+>>>y - 3 &= 4e^{2t} \\
+>>>2(y-3) &= 8e^{2t} \\
+>>>2y-6&= y'
+>>>\end{align}$$
+>>>Hence we have
+>>>$$ y' = a(t)y + b(t)$$
+>>>with $a(t)=2$ and $b(t)=-6$ 
 
 >[!theorem] Theorem: Solveability of First Order ODEs with Constant Coefficients ([[../../../Sources/nagy.pdf#page=14|Source]])
 > The linear differential equation 
@@ -229,7 +229,7 @@ aliases:
 > has the unique solution
 > $$ y(t) = \left(y_0 + \frac{b}{a}\right)e^{a(t-t_0)} - \frac{b}{a}$$
 >>[!proof]-
->>First we use the results of the [[Ordinary Differential Equations#^thmsolvefoode|Theorem for solveability of first order ODEs]], i.e.
+>>First we use the results of the [[First Order ODEs#^thmsolvefoode|Theorem for solveability of first order ODEs]], i.e.
 >> $$y(t) = ce^{at} - \frac{b}a$$
 >> and solve $y_0 = y(t_0)$ for $c$
 >> $$\begin{align}
@@ -290,7 +290,7 @@ aliases:
 >
 >
 >>[!example]- Task: Find all solutions of $y$ of $y' = 3y$
->> We identify $a=3$ and $b=0$. Using theorem [[Ordinary Differential Equations#^thmsolvefoode|Theorem for ODE solving]] we have
+>> We identify $a=3$ and $b=0$. Using theorem [[First Order ODEs#^thmsolvefoode|Theorem for ODE solving]] we have
 >> $$ y =  ce^{3t} $$
 >
 >>[!example] Task: Follow the steps below to find all solutions of $y' = -4y + 2$
@@ -299,7 +299,7 @@ aliases:
 >>3. Integrate the equation for $\psi$
 >>4. Compute $y$ using part (3)
 >>>[!example]- Solution
->>>Following the procedure from the proof using the [[Ordinary Differential Equations#^thmsolvefoode| integrating factors method]].
+>>>Following the procedure from the proof using the [[First Order ODEs#^thmsolvefoode| integrating factors method]].
 >>>1. First, we put the equation into the form, that we can compare it to the product rule. Let $\mu(t) = \mu$ denote the integrating factor
 >>> $$\begin{align}
 >>> 	\frac{dy}{dt} &= -4y +2\\
@@ -341,11 +341,11 @@ aliases:
 >>> \end{alignat}$$
 >
 >>[!example]- Task: Find all solutions of $y'=2y+5$
->> We identify $a=2$ and $b=5$. Using theorem [[Ordinary Differential Equations#^thmsolvefoode|Theorem for ODE solving]] we have
+>> We identify $a=2$ and $b=5$. Using theorem [[First Order ODEs#^thmsolvefoode|Theorem for ODE solving]] we have
 >> $$ y =  ce^{2t} -\frac52 $$
 >
 >>[!example]- Task: Find all solutions of the IVP $y'=-4y+2$, $y(0)=5$
->> Using the [[Ordinary Differential Equations#^thmsolivp|Theorem for solving IVP with constant coefficients]] we can identify 
+>> Using the [[First Order ODEs#^thmsolivp|Theorem for solving IVP with constant coefficients]] we can identify 
 >> $$\begin{align} 
 >>  t_0 &= 0 \\
 >>  y_0 &= 5 \\
@@ -359,7 +359,7 @@ aliases:
 >>\end{align}$$
 >
 >>[!example]- Task: Find the solution of the IVP $\frac{dy}{dt}(t)=3y(t)-2$, $y(1)=1$
->> Using the [[Ordinary Differential Equations#^thmsolivp|Theorem for solving IVP with constant coefficients]] we can identify 
+>> Using the [[First Order ODEs#^thmsolivp|Theorem for solving IVP with constant coefficients]] we can identify 
 >> $$\begin{align} 
 >>  t_0 &= 1 \\
 >>  y_0 &= 1 \\
@@ -388,7 +388,7 @@ aliases:
 >>> - 6\mu y &= \left(\frac{d\mu}{dt}\right)y\\
 >>> - 6\mu &= \frac{d\mu}{dt} \\
 >>>\end{align}$$
->>>According to the [[Ordinary Differential Equations#^thmsolvefoode| theorem for solving this]], we get the following result 
+>>>According to the [[First Order ODEs#^thmsolvefoode| theorem for solving this]], we get the following result 
 >>>$$\mu = e^{-6t}$$
 >>> Further we determine the potential function by inserting $\mu$ into $(1)$. Recall, the LHS is constructed to be the product-rule.
 >>> $$ \begin{align}
@@ -439,7 +439,7 @@ aliases:
 >>> 3\mu y &= \left(\frac{d\mu}{dt}\right)y\\
 >>> 3\mu &= \frac{d\mu}{dt} \\
 >>>\end{align}$$
->>>According to the [[Ordinary Differential Equations#^thmsolvefoode| theorem for solving this]], we get the following result 
+>>>According to the [[First Order ODEs#^thmsolvefoode| theorem for solving this]], we get the following result 
 >>>$$\mu = e^{3t}$$
 >>>
 >>>2. Further, we determine the potential function by inserting $\mu$ into $(1)$. Recall, the LHS is constructed to be the product-rule.
@@ -479,7 +479,7 @@ aliases:
 >has infinitely many solutions given by
 >$$ \begin{equation}y(t) = ce^{A(t)}+e^{A(t)} \int e^{-A(t)} b(t) \, dt \tag{General Solution}\end{equation}$$
 >where $A(t) = \int a(t) \, dt$ being the **integrating factor** and $c \in \mathbb{R}$
->>[!proof] Proof: See [[Ordinary Differential Equations#^thmsolvefoode| Proof for constant coefficients Integrating Factor Method]]
+>>[!proof] Proof: See [[First Order ODEs#^thmsolvefoode| Proof for constant coefficients Integrating Factor Method]]
 >
 >>[!example]- Task: Find all solutions $y$ for the differential equation $y'=\frac3ty+t^5$ with $t>0$
 >>First compute $\mu(t)$ following the form of the product rule as previously already shown. Note, that the parameters $a,b$ are functions of $t$, i.e. $a(t) = \frac3t$ and $b(t) = t^5$.
@@ -558,7 +558,7 @@ aliases:
 > $$ y(t) = y_0e^{A(t)} + e^{A(t)}\int_{t_0}^t e^{-A(s)}b(s) \, ds$$
 > where the function $A(t) = \int_{t_0}^t a(s) \, ds$ is a particular antiderivative of function $a$.
 >>[!proof]-
->> First we use the results of the [[Ordinary Differential Equations#^defThmSolODEVar | Theorem Solving First Order ODEs with Variable Coefficients]]. 
+>> First we use the results of the [[First Order ODEs#^defThmSolODEVar| Theorem Solving First Order ODEs with Variable Coefficients]]. 
 >> $$ \begin{equation}y(t) = ce^{A(t)}+e^{A(t)} \int e^{-A(t)} b(t) \, dt \tag{1}\end{equation}$$
 >>where $A(t) = \int a(t) \, dt$. Setting 
 >>$$\begin{align} y(t_0) &= y_0 \\ K(t) &= \int e^{-A(t)} b(t) \, dt \end{align}$$ 
@@ -597,7 +597,7 @@ aliases:
 >> 
 >
 >>[!example]- Task: Find the function $y$ solution of the IVP $ty' + 2y = 4t^2$ with $t>0$ and $y(1) = 2$
->>We use the result of the [[Ordinary Differential Equations#^thmsolivp| theorem solution for IVP with variable coefficients]]. First we rearrange the formula
+>>We use the result of the [[First Order ODEs#^thmsolivp| theorem solution for IVP with variable coefficients]]. First we rearrange the formula
 >>$$\begin{align}
 >>ty' +2y &= 4t^2 \qquad \Big\vert-2y, \; \cdot t^{-1} \\
 >>y' &= -\frac{2}{t}y + 4t \qquad \\
@@ -633,7 +633,7 @@ aliases:
 
 
 >[!remark]- Remark: Recovering Constant Coefficient Form
-> We can get the [[Ordinary Differential Equations#^thmsolivp|constant coefficient form]] back by assuming $a(t), b(t)$ being constant. First, we reduce $A(t)$ to be constant with
+> We can get the [[First Order ODEs#^thmsolivp|constant coefficient form]] back by assuming $a(t), b(t)$ being constant. First, we reduce $A(t)$ to be constant with
 > $$
 > \begin{align}
 > 	A(t) &= \int_{t_0}^t a \, ds \\
@@ -739,7 +739,7 @@ aliases:
 >>	-\frac{\nu'}{4} &= \nu+2 \qquad &&\Big|\cdot (-4) \\
 >>	\nu' &= -4\nu-8 \qquad 
 >>\end{alignat}$$
->>This equation can now be solved using the [[Ordinary Differential Equations#^thmsolvefoode|solution for first order ODEs with constant coefficients]] which is
+>>This equation can now be solved using the [[First Order ODEs#^thmsolvefoode|solution for first order ODEs with constant coefficients]] which is
 >>$$y(t) = ce^{at} - \frac{b}{a} $$
 >>We identify
 >>$$\begin{align}
@@ -772,7 +772,7 @@ aliases:
 >> -\frac{\nu'}{2} &= \frac{a}{y^2} + b \qquad&&\Big\vert \cdot (-2) \\
 >> \nu' &= -2a \nu - 2b 
 >>\end{alignat}$$
->>Solving this using [[Ordinary Differential Equations#^thmsolvefoode|first order ODE with constant coefficients solution]] gives
+>>Solving this using [[First Order ODEs#^thmsolvefoode|first order ODE with constant coefficients solution]] gives
 >>$$\begin{alignat}{2}
 >> \nu &= ce^{-2t} - \frac{b}{a}
 >>\end{alignat}$$
@@ -802,7 +802,7 @@ aliases:
 >> \nu' \frac{3}{2} &= \frac{3}{t}y^{2/3} + t^4 \\
 >> \nu' &= \frac{2}{t}\nu + \frac{2}{3}t^4 \\
 >>\end{align}$$
->>This equation represents an ODE with variable coefficients with $a(t) = \frac{2}{t}$ and $b(t)=\frac{2}{3}t^4$. Following the [[Ordinary Differential Equations#^defThmSolODEVar|solution theorem]] we have
+>>This equation represents an ODE with variable coefficients with $a(t) = \frac{2}{t}$ and $b(t)=\frac{2}{3}t^4$. Following the [[First Order ODEs#^defThmSolODEVar|solution theorem]] we have
 >> $$\begin{align}
 >> y(t)&=ce^{A(t)} + e^{A(t)} \int  e^{-A(t)} b(t) \, dt 
 >>\end{align}$$
@@ -834,9 +834,9 @@ aliases:
 >>  y&= \pm \left(t^2 + \frac{2}{9}t^5\right)^{3/2}
 >>\end{alignat}$$
 
->[!example] Exercises
+>[!example]- Exercises
 >>[!example]- Find all solutions of $y' = 4ty$
->> Given is a first order [[Ordinary Differential Equations#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=4t$ and $b(t)=0$. We therefore use the solution theorem.
+>> Given is a first order [[First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=4t$ and $b(t)=0$. We therefore use the solution theorem.
 >> $$\begin{align}
 >> y &= ce^{A(t)} + e^{A(t)} \int  e^{-A(t)} b(t) \, dt \\
 >> A(t)&= \int  a(t) \, dt \\ 
@@ -846,8 +846,8 @@ aliases:
 >> y &= ce^{2t^2}\\
 >>\end{align}$$
 >
->>[!example]- Find the general sol.łution of $y' = -y + e^{-2t}$
->>Given is a first order [[Ordinary Differential Equations#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=-1$ and $b(t)=e^{-2t}$. We therefore use the solution theorem.
+>>[!example]- Find the general solution of $y' = -y + e^{-2t}$
+>>Given is a first order [[First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=-1$ and $b(t)=e^{-2t}$. We therefore use the solution theorem.
 >>$$\begin{align}
 >> y &= ce^{A(t)} + e^{A(t)} \int  e^{-A(t)} b(t) \, dt \\
 >> A(t)&= \int  a(t) \, dt \\ 
@@ -860,8 +860,8 @@ aliases:
 >> y &= ce^{-t} -e^{-2t}\\
 >>\end{align}$$
 >
->>[!example]- Find the solution of $y$ to the IVP $y' = y + 2te^{2t}, \quad y(0)=0$
->>Given is a first order [[Ordinary Differential Equations#^thmsolIVPvar | ODE IVP problem with variable coefficients]] with 
+>>[!example]- Find the solution of $y$ to the IVP $y' = y + 2te^{2t}, \quad y(0)=0$ 
+>>Given is a first order [[First Order ODEs#^thmsolIVPvar| ODE IVP problem with variable coefficients]] with 
 >>$$\begin{align}
 >> a(t)  & = 1 \\ 
 >> b(t)  & = 2te^{2t}  \\ 
@@ -906,16 +906,15 @@ aliases:
 >> y &= 0 + e^t \left(2se^t - 2e^t + 2\right) \\
 >> y &= 2e^t \left(se^t - e^t + 1\right) \\
 >>\end{align}$$
-
-
->>[!example] Find the solution of $y$ to the IVP $ty' +2y = \frac{\sin(t)}{t} \quad y\left(\frac{\pi}{2}\right)=\frac{2}{\pi}$ for $t>0$
+>
+>>[!example]- Find the solution of $y$ to the IVP $ty' +2y = \frac{\sin(t)}{t} \quad y\left(\frac{\pi}{2}\right)=\frac{2}{\pi}$ for $t>0$ ❌
 >> First reorder the task to identify the problem properly
 >> $$\begin{alignat}{2}
 >>  ty' + 2y & = \frac{\sin(t)}{t} \qquad&&\Big\vert -2y\\
 >>  ty' & = \frac{\sin(t)}{t} - 2y\qquad&&\Big\vert \cdot t^{-1}\\
 >>  y' & = \frac{\sin(t)}{t^2} - \frac{2}{t}y\\
 >>\end{alignat}$$
->>This can be identified as an [[Ordinary Differential Equations#^thmsolIVPvar | ODE IVP problem with variable coefficients]] with
+>>This can be identified as an [[First Order ODEs#^thmsolIVPvar| ODE IVP problem with variable coefficients]] with
 >>$$\begin{align}
 >>  a(t) &= -\frac{2}{t} \\
 >>  b(t) &= \frac{\sin(t)}{t}  \\
@@ -949,9 +948,50 @@ aliases:
 >>  &=  \frac{\pi^2}{4} \left( -t\cos t + \sin t - 1 \right)
 >>\end{align}$$
 >
->>[!example] Find all solutions $y$ to the ODE $\dfrac{y'}{(t^2+1)y} = 4t$
+>>[!example]- Find all solutions $y$ to the ODE $\dfrac{y'}{(t^2+1)y} = 4t$
+>> First we reformulate the given equation to solve
+>> $$\begin{alignat}{2}
+>> \dfrac{y'}{(t^2+1)y} &= 4t \qquad&&\Big\vert \cdot (t²+1)y\\
+>> y' &= (4t^4+4t)y \\
+>>\end{alignat}$$
+>> Given is a first order [[First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=4t^4+4t$ and $b(t)=0$. First we solve
+>> $$\begin{align}
+>> A(t)&= \int  4t^3 \, dt + \int  4t \, dt \\ 
+>> &= t^4 + 2t^2 + \underbrace{ c }_{ =0 }
+>>\end{align}$$
+>>Now we plug into the solution formula and get
+>> $$\begin{align}
+>> y&= ce^{t^4+2t^2}+e^{t^4+2t^2}\int e^{-(t^4+2t^2)} \cdot 0 \, dt \\
+>> y&= ce^{t^4+2t^2} 
+>>\end{align}
+>> $$
 >
->>[!example] Find all solutions $y$ to the ODE $ty' +ny = t^2$ with $n$ a positive integer
+>>[!example]- Find all solutions $y$ to the ODE $ty' +ny = t^2$ with $n$ a positive integer
+>> First we rearrange the formula
+>>$$\begin{alignat}{2}
+>> ty' +ny&=t^2  \qquad&&\Big\vert -ny\\
+>> ty' &=t^2 -ny  \qquad&&\Big\vert \cdot t^{-1}\\
+>> y' &=t -\frac{n}{t} y  \\
+>>\end{alignat}$$
+>>Given is a first order [[First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=-\frac{n}{t}$ and $b(t)=t$. First we solve
+>>$$\begin{align}
+>> A(t) &=  \int - \frac{n}{t} \, dt \\
+>>      &=  -n \int  \frac{1}{t} \, dt \\
+>>      &=  -n \ln t + \underbrace{ c }_{ =0 }\\
+>>      &=  \ln t^{-n} \\ \\
+>> \int e^{-\ln t^{-n}} t \, dt &= \int  t^n t \, dt \\  
+>>      &= \int  t^{n+1} \, dt \\  
+>>      &=  \frac{1}{n+2}t^{n+2} + \underbrace{ c }_{ =0 }\\  
+>>\end{align}$$
+>>Now we plug into the solution formula and get
+>>$$\begin{align}
+>> y &= ce^{A(t)} + e^{A(t)}\int e^{-A(t)}b(t) \, dt \\
+>>   &= ce^{\ln t^{-n}} + e^{\ln t^{-n}}\frac{1}{n+2}t^{n+2}  \\
+>>   &= \frac{c}{t^{n}} + \frac{1}{t^{n}}\frac{1}{n+2}t^{n+2}  \\
+>>   &= \frac{c}{t^{n}} + \frac{1}{n+2}t^{2}  \\
+>>\end{align}
+>>
+>>$$
 >
 >>[!example] Find the solutions to the IVP $2ty - y' = 02$ with $y(0)=3$
 >
@@ -966,3 +1006,55 @@ aliases:
 >>[!example] Find all solutions of the equation $y' = y + \frac{3}{y^2}$ with $y(0)=1$
 >
 >>[!example] Find all solutions of $y' = ay + by^n$ with $a\neq 0$ and $b,n\in \mathbb{R}$ constants with $n\neq0,1$
+
+## 4 - Separable Equations
+
+>[!def] Definition Sepearble Differential Equation ([[../../../Sources/nagy.pdf#page=32|Source]]) 
+>A **separable** differential equation for the function $y$ is 
+>$$ h(y) y' = g(t)$$
+>where $h, g$ are given functions
+>>[!note]-
+>>- LHS depends explicitly on $y$, while
+>>- RHS depends explicitly on $t$
+>
+>>[!note]
+>>If an equation is separable, it can be easily solved by integrating both sides with respect to $t$
+>
+>
+>>[!example]- Examples Identifying  Separable Equations
+>>>[!example]
+>>>$$ \begin{align}
+>>> y' &= \frac{t^2}{1-y^2} \\
+>>> (1-y^2)y' &= t^2 \\
+>>>\end{align}$$
+>>>with
+>>>$$\begin{align}
+>>> g(t) &= t^2 \\
+>>> h(y) &= 1 - y^2
+>>>\end{align}$$
+>>
+>>>[!example]
+>>>The equation $y'=e^y + \cos(t)$ is not separable.
+>
+>>[!example] Examples Solving Separable Equations
+>>>[!example] Example Find all solutions $y$ to the differential equation $-\frac{y'}{y^2} = \cos (2t)$
+>>>Note the differential equation is separable. Note
+>>>$$\begin{align}
+>>> h(y) &= -\frac{1}{y^2} \\ 
+>>> g(t) &= \cos (2t)
+>>>\end{align}$$ 
+>>>Therefore, we can solve by integration
+>>>$$\begin{alignat}{2}
+>>> -\frac{y'}{y^2} &= \cos (2t) \qquad&&\Big\vert \int  \, dt \\
+>>> \int -\frac{y'}{y^2}  \,dt  &= \int \cos (2t)  \, dt \\
+>>>\end{alignat}$$
+>>>Using the [[../Calculus/Integration#^thmSubstitutionRule | substitution rule]] with 
+>>>$$\begin{align}
+>>> g(t) &= y \\
+>>> g'(t) &= y' \\
+>>> f(g(t)) &= -\frac{1}{y^2}
+>>>\end{align}$$ 
+>>>we have
+>>>$$\begin{align}
+>>>
+>>>\end{align}$$
