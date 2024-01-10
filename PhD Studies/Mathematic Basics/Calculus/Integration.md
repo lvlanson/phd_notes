@@ -1,12 +1,73 @@
 ---
 aliases: integration
 ---
-
->[!Theorem] Theorem Substitution Rule for Definite Integrals ([[../../../Sources/briggs2019.pdf#page=418|Source]])
-> Let $u = g(x)$, where $g'$ is continuous on $[a,b]$ and let $f$ be continuous on the range of $g$. Then
-> $$ \int_a^b f(g(x))g'(x) \,dx = \int_{g(a)}^{g(b)}f(u) \, du$$
+>[!Theorem] Theorem Substitution Rule for Indefinite Integrals ([[../../../Sources/briggs2019.pdf#page=414|Source 1]], [[../../../Sources/zotero-182.pdf#page=90|Source 2]])
+> Let $u=g(x)$, where $g$ is differentiable on an interval, and let $f$ be continuous on the corresponding range of $g$. On that interval
+> $$\begin{align}
+>\int  \underbrace{ f\Big(g(x)\Big) }_{ f(u) }\underbrace{ g'(x) }_{ du } \, dx &= \int f(u) \, du  \\
+> &= F(u) + c  \\
+> &= F\Big(g(x)\Big) + c
+>\end{align}$$
 >>[!note]-
 >>The substitution rule reverses the chain rule of derivation
+>
+>>[!proof]-
+>>Let $f,g,u$ and $F$ be as specified in the theorem. Then 
+>>$$\begin{align}
+>> \frac{d}{dx}F(g(x)) &= F'(g(x))g'(x) \tag{Chain Rule} \\
+>> &= f(g(x))g'(x)
+>>\end{align}$$
+>>Integrating both sides with respect to $x$, we have
+>>$$\begin{align}
+>> F(g(x)) + c&= \int f(g(x))g'(x) \, dx 
+>>\end{align}$$
+>>Substituting $u= g(x)$ and $du = g'(x) dx$ we yield
+>>$$\begin{align}
+>> \int f(g(x))g'(x) \, dx &= \int f(u) \, du \\ 
+>> &= F(u) + c  \\
+>> &= F(g(x))+ c \tag*{$\square$} 
+>>\end{align}$$
+>
+>>[!example]- Example Solve $\int  6x (3x^2 +4 )^4 \, dx$
+>>Solving with the substitution rule we choose $u=3x^2 + 4$. We have
+>>$$ \int u^4  \, du = \frac{u^5}{5} + c$$
+>>Substituting back yields
+>>$$ \frac{(3x^2 + 4)^5}{5}+c$$
+>
+>>[!example]- Example Solve $\int  z \sqrt{ z^2 -5 } \, dz$
+>>We rewrite the integral as
+>>$$\int  z \left(z^2 - 5\right)^{1/2} \, dz \tag{1}$$
+>>We identify
+>>$$\begin{alignat}{2}
+>> u &= z^2 - 5 \\
+>> &= g(z)\\
+>> f(u) &= u^{1/2} \\
+>> &= (z^2 - 5)^{1/2} \\
+>> \frac{du}{dz} &= 2z \qquad&&\Big\vert \cdot dz\\
+>> du &= 2z \,dz \tag{2} 
+>>\end{alignat}$$
+>>Note our results currently substitute the following terms in $(1)$
+>>$$\int \underbrace{ (z^2-5)^{1/2} }_{ =f(u) } \, \underbrace{ z\,dz }_{ \text{remaining} } $$
+>>We rearrange $(2)$ to find a proper term to substitute
+>>$$\begin{alignat}{2}
+>> du &= 2z \,dz \qquad&&\Big\vert \cdot \frac{1}{2}\\
+>> \frac{1}{2}du &= z dz
+>>\end{alignat}$$
+>>Now can successfully substitute with $u$ and $f(u)=u^{1/2}$, i.e.
+>>$$\begin{align}
+>> \int \underbrace{ (z^2-5)^{1/2} }_{ =f(u) } \, \underbrace{ z\,dz }_{ \frac{1}{2} \, du }  &= \int  \frac{1}{2}u^{1/2} \, du  \\
+>> &= \frac{1}{2} \int  u^{1/2} \, du  \\
+>> &= \frac{1}{2} \frac{2}{3}u^{3/2} + c\\
+>> &= \frac{1}{3}u^{3/2} + c\\
+>>\end{align}$$
+>>Substituting back gives
+>>$$\int  z \left(z^2 - 5\right)^{1/2} \, dz =  \frac{1}{3}(z^2-5)^{3/2}+c$$
+>
+>^thmSubstitutionRuleIndef
+
+>[!Theorem] Theorem Substitution Rule for Definite Integrals ([[../../../Sources/briggs2019.pdf#page=418|Source]])
+> Let $u = g(x)$, where $g'$ is continuous on $[a,b]$ and let $f$ be continuous on the range of $g$, and let $F(x)$ be an antiderivative of $f(x)$. Then,
+> $$ \int_a^b f\Big(g(x)\Big)g'(x) \,dx = \int_{g(a)}^{g(b)}f(u) \, du$$
 >
 >>[!example]- Example $\int_0^2 \frac{1}{(x+3)^3} \, dx$
 >>First we identify from the definition
@@ -60,7 +121,7 @@ aliases: integration
 >> 							     &\approx 0.999  \\
 >>\end{align}$$
 >
->^thmSubstitutionRule
+>^thmSubstitutionRuleDef
 
 
 >[!Theorem] Theorem Integration by Parts ([[../../../Sources/briggs2019.pdf#page=550|Source 1]], [[../../../Sources/zotero-182.pdf#page=270|Source 2]])
@@ -73,7 +134,7 @@ aliases: integration
 >>$$ \int h'(x) \, dx = \int  g(x) f'(x) \, dx + \int  f(x) g'(x)\, dx $$ 
 >>Now we solve for $\int f(x)g'(x) dx$
 >>$$ \int f(x)g'(x)  \, dx = f(x)g(x) - \int g(x)f'(x) \, dx $$ 
->>Making the substitution 
+>>Doing the substitution 
 >>$$\begin{align}
 >> u &= f(x) \\
 >> v &=g(x) \end{align}$$

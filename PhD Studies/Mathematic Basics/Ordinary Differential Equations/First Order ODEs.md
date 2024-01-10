@@ -649,7 +649,7 @@ aliases:
 > 	     &= y_0e^{a(t - t_0)} + e^{a(t - t_0)}\int_{t_0}^t e^{-a(t - t_0)}b \; ds \tag{1}\\
 > \end{align}
 > $$
-> Now we solve the definite integral using the [[../Calculus/Integration#^thmSubstitutionRule|substitution method]]. We identify the form of the given definition in the substitution method and apply the method
+> Now we solve the definite integral using the [[../Calculus/Integration#^thmSubstitutionRuleDef|substitution method]]. We identify the form of the given definition in the substitution method and apply the method
 > $$
 > \begin{align}
 > 	\int_{t_0}^t e^{-a(s-t_0)}b \; ds &= \int_a^b f\Big(g(s)\Big)g'(s) \,ds \\
@@ -1046,15 +1046,47 @@ aliases:
 >>>Therefore, we can solve by integration
 >>>$$\begin{alignat}{2}
 >>> -\frac{y'}{y^2} &= \cos (2t) \qquad&&\Big\vert \int  \, dt \\
->>> \int -\frac{y'}{y^2}  \,dt  &= \int \cos (2t)  \, dt \\
+>>> \int -\frac{y'}{y^2}  \,dt  &= \int \cos (2t)  \, dt \tag{1}\\
 >>>\end{alignat}$$
->>>Using the [[../Calculus/Integration#^thmSubstitutionRule | substitution rule]] with 
+>>>Using the [[../Calculus/Integration#^thmSubstitutionRuleIndef | substitution rule]] with 
 >>>$$\begin{align}
->>> g(t) &= y \\
->>> g'(t) &= y' \\
->>> f(g(t)) &= -\frac{1}{y^2}
+>>> u &= y  \\
+>>> &= g(t)\\
+>>> \frac{du}{dt} &= y' \\
+>>> {du} &= y' {dt}\\
+>>> f(u) &= -\frac{1}{u^2}
 >>>\end{align}$$ 
->>>we have
+>>>we have for $u=y$
 >>>$$\begin{align}
->>>
+>>>\int f(g(t))g'(t) \, dt &= \int f(u) \, du  \\
+>>>                        &= \int -\frac{1}{u^2} \, du  \\
+>>>                        &= \frac{1}{u} +c  \\
 >>>\end{align}$$
+>>>Substituting back yields
+>>>$$ \begin{align}
+>>>\int -\frac{y'}{y^2}  \,dt  &= \frac{1}{y} + c \tag{2}
+>>>\end{align}$$
+>>>We use again the substitution rule for solving the RHS of $(1)$, i.e. $\int \cos (2t)  \, dt$ 
+>>>$$ \begin{align}
+>>> u &= 2t \\
+>>>  &= g(t) \\
+>>> f(u) &= \cos(u) \\
+>>> \frac{du}{dt} &= 2 \\ 
+>>> du &= 2dt \\ 
+>>> \frac{1}{2} du &= dt\\
+>>>\end{align}$$
+>>>Hence, we have for $u=g(t)$
+>>>$$\begin{align}
+>>>\int \underbrace{ \cos(2t) }_{ =f(u) } \,\underbrace{  dt }_{ \frac{1}{2} du } &= \int \cos(u) \frac{1}{2}du  \\
+>>>                        &= \frac{1}{2}\int \cos (u) \, du  \\
+>>>                        &= \frac{1}{2} \sin (u) + c \\
+>>>\end{align}$$
+>>>Resubst>>>ituting $u=2t$ solves the RHS
+>>>$$\begin{equation}
+>>>\int \cos (2t)  \, dt = \frac{1}{2} \sin (u) + c \tag{3}
+>>>\end{equation} $$
+>>>Using the results from $(2)$ and $(3)$ gives
+>>>$$\begin{alignat}{2}
+>>> \frac{1}{y} &= \frac{1}{2}\sin (2t) + c \qquad&&\Big\vert (\,.)^{-1}\\
+>>> {y} &= \frac{2}{\sin (2t) + 2c} \\
+>>>\end{alignat} $$

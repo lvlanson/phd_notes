@@ -221,13 +221,48 @@
         "height": 800,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "99f8f14577764aad",
+        "type": "window",
+        "children": [
+          {
+            "id": "263d7e90a04c62e7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "a81774cc4514a0b7",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+                    "mode": "preview",
+                    "source": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 28,
+        "y": 560,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
       }
     ]
   },
-  "active": "a5609126f72395a1",
+  "active": "e02a88fd0e5f9dd5",
   "lastOpenFiles": [
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+    "Literature/@shao2003.md",
+    "Literature/@schmidhuber2015.md",
+    "Sources/schmidhuber2015.pdf",
+    "ML Programming/PyTorch/Layers/LSTM.md",
     "Sources/zotero-182.pdf",
     "Literature/@zotero-182.md",
     "git_branch",
@@ -235,7 +270,6 @@
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems.md",
     "Literature/@briggs2019.md",
-    "ML Programming/PyTorch/Layers/LSTM.md",
     "PhD Studies/To-Do.md",
     "Literature/@albertsson2018.md",
     "Sources/albertsson2018.pdf",
@@ -254,7 +288,6 @@
     "Literature/@nagy.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations",
     "Literature/@zabczyk2008.md",
-    "Sources/zabczyk2008.pdf",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/selective_state_space_model.png",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/closed_loop_control_system.png",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/open_loop_control_system.png",
@@ -265,7 +298,6 @@
     "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
     "Literature/@kalman1960.md",
     "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
-    "PhD Studies/Machine Learning/Network Architectures/Mamba.md",
     "PhD Studies/Machine Learning/Network Architectures/arch.png",
     "ML Programming/PyTorch/Layers/LSTM_gates.png",
     "ML Programming/PyTorch/Layers/LSTM.jpeg",
