@@ -834,6 +834,8 @@ aliases:
 >>  y&= \pm \left(t^2 + \frac{2}{9}t^5\right)^{3/2}
 >>\end{alignat}$$
 
+^c27f79
+
 >[!example]- Exercises
 >>[!example]- Find all solutions of $y' = 4ty$
 >> Given is a first order [[First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=4t$ and $b(t)=0$. We therefore use the solution theorem.
@@ -993,13 +995,146 @@ aliases:
 >>
 >>$$
 >
->>[!example] Find the solutions to the IVP $2ty - y' = 02$ with $y(0)=3$
+>>[!example]- Find the solutions to the IVP $2ty - y' = 02$ with $y(0)=3$
+>> Rearranging we have 
+>> $$ y' = 2ty$$
+>> which is a [[First Order ODEs#^thmsolIVPvar | First Order ODE IVP with variable coefficients]] with 
+>> $$\begin{align}
+>> a(t) &= 2t \\
+>> b(t) &= 0 \\
+>> y_{0} &= y(0)= 3  \\
+>> t_{0}  &= 0
+>>\end{align}$$
+>>Using the solution formula we get
+>>$$\begin{align}
+>>  y &= y_{0}^{A(t)} + \underbrace{ e^{A(t)} \int_{t_{0}}^t e^{-A(s)}b(s)  \, ds }_{ =0 } 
+>>\end{align}$$
+>>Solving $A(t)$ yields
+>>$$\begin{align}
+>> A(t) &= \int _{t_{0}}^t a(s) \, ds \\
+>> A(t) &= \int _{0}^t 2t \, ds  \\
+>> A(t) &= \left[ t^2\right]_{0}^t  \\
+>> A(t) &= t^2  \\
+>>\end{align}$$
+>>which solves to
+>>$$ y=3e^{2t} $$
 >
->>[!example] Find all solutions of the equation $y' = y - 2\sin(t)$
+>>[!example]- Find all solutions of the equation $y' = y - 2\sin(t)$
+>> We have a [[First Order ODEs#^defThmSolODEVar| First Order ODE with variable coefficients]] with 
+>> $$\begin{align}
+>> a(t) &= 1 \\
+>> b(t) &= -2\sin(t) \\
+>>\end{align}$$
+>>We use the solution formula
+>>$$\begin{align}
+>> y &= ce^{A(t)} + e^{A(t)} \int e^{-A(t)} b(t) \, dt 
+>>\end{align}$$
+>>First we find $$\begin{align}
+>> A(t) &= \int a(t) \, dt \\
+>> &= \int 1 \, dt \\  
+>> &= t \\  
+>>\end{align}$$
+>>Then solving the integral yields the following problem
+>>$$\begin{align}
+>> \int  e^{-t} -2\sin(t)\, dt &=  -2 \int e^{-t}\sin(t) \, dt 
+>>\end{align}$$
+>>We use the [[../Calculus/Integration#^thmSubstitutionRuleIndef|substitution rule]] to solve the integral $\int u\,dv = uv - \int v\, du$
+>>$$\begin{align}
+>> -2 \int \underbrace{ e^{-t} }_{ =dv }\underbrace{ \sin(t) }_{ =u } \, dt &= -2 \left(-e^{-t}\sin(t) -\int -e^{-t} \cos(t) \, dt \right)
+>>\end{align}$$
+>>Again we have to use the [[../Calculus/Integration#^thmSubstitutionRuleIndef|substitution rule]] for the next integral
+>>$$\begin{align}
+>> \phantom{-2 \int \underbrace{ e^{-t} }_{ =dv }\underbrace{ \sin(t) }_{ =u } \, dt }&= -2\left(-e^{-t}\sin(t) +\int \underbrace{ e^{-t} }_{ =dv } \underbrace{ \cos(t) }_{ =u } \, dt \right)\\ 
+>> &= -2\left(-e^{-t}\sin(t) + \underbrace{ \Big(-e^{-t} \cos(t)\Big) }_{ =uv }-\int -e^{-t}  (-\sin(t)) \, dt \right) \\
+>> &= -2\left(-e^{-t}\sin(t) -e^{-t} \cos(t)- \int e^{-t}  \sin(t) \, dt \right) \\
+>> &= -2\left(-e^{-t}\sin(t) -e^{-t} \cos(t)\right) -2 \int e^{-t}  \sin(t) \, dt  \\
+>>\end{align}$$ 
+>>Now we bring the integral to one side and remove the factor, hence 
+>>$$\begin{alignat}{2}
+>> -2 \int \underbrace{ e^{-t} }_{ =dv }\underbrace{ \sin(t) }_{ =u } \, dt &= -2\left(-e^{-t}\sin(t) -e^{-t} \cos(t)\right) +2 \int e^{-t}  \sin(t) \, dt  \qquad&&\Big\vert - 2 \int e^{-t}  \sin(t) \, dt\\
+>> -4 \int \underbrace{ e^{-t} }_{ =dv }\underbrace{ \sin(t) }_{ =u } \, dt &= -2\left(-e^{-t}\sin(t) -e^{-t} \cos(t)\right)  \qquad&&\Big\vert :(-4)\\
+>> \int \underbrace{ e^{-t} }_{ =dv }\underbrace{ \sin(t) }_{ =u } \, dt &= \frac{1}{2}\left(-e^{-t}\sin(t) -e^{-t} \cos(t)\right)  \\
+>> 
+>>\end{alignat}$$
+>>Inserting the found terms into the solution formula yields
+>>$$ y= c^{t}- \frac{1}{2} \sin t - \frac{1}{2}\cos t$$ 
 >
->>[!example] Find the solution to the IVP $ty' = 2y + 4t³ \cos(4t)$ with $y\left(\frac{\pi}{8}\right)=0$
+>>[!example]- Find the solution to the IVP $ty' = 2y + 4t³ \cos(4t)$ with $y\left(\frac{\pi}{8}\right)=0$ ❔
+>> Rearranging the equation to
+>> $$ y' = \frac{2}{t}y +4 t^2 \cos (4t)$$
+>> This is an first order ODE with variable coefficients with
+>> $$\begin{align}
+>> a(t)&= \frac{2}{t} \\ 
+>> b(t) &= 4t^2 \cos (4t)  \\
+>> t_{0} &= \frac{\pi}{8}  \\
+>> y_{0} &= y(t_{0}) = 0
+>>\end{align}$$
+>> Using the solution formula
+>> $$ y = y_{0} e^{A(t)} + e^{A(t)} \int _{t_{0}}^t e^{-A(s)}b(s) \, ds $$
+>> we first solve
+>> $$\begin{align}
+>> A(t) &= \int_{t_{0}}^t a(s)  \, ds \\ 
+>>  &= \int_{{\pi}/{8}}^t \frac{2}{s}  \, ds \\ 
+>>  &= 2\int_{{\pi}/{8}}^t \frac{1}{s}  \, ds \\ 
+>>  &= 2\left[\ln s \right]_{{\pi}/{8}}^t   \\
+>>  &= 2\left[\ln t - \ln \frac{\pi}{8}\right]   \\
+>>  &= 2\ln\left( t  \frac{8}{\pi}\right)   \\
+>>  &= \ln\left( t  \frac{8}{\pi}\right)^2   \\
+>>\end{align}$$ 
+>>Now we solve the integral of the solution formula
+>>$$\begin{align}
+>> \int _{t_{0}}^t e^{-A(s)}b(s) \, ds &= \int _{{\pi}/{8}}^t e^{\ln\left( s  \frac{8}{\pi}\right)^{-2}}4s^2 \cos (4s) \, ds \\
+>>  &= \int _{{\pi}/{8}}^t \left(\frac{\pi}{8s}\right)^2 4s^2 \cos (4s) \, ds \\
+>>  &= \left(\frac{\pi}{8}\right)^2\int _{{\pi}/{8}}^t \cancel{\frac{1}{s^2}} 4\cancel{s^2} \cos (4s) \, ds \\
+>>  &= \left(\frac{\pi}{8}\right)^2\int _{{\pi}/{8}}^t 4 \cos (4s) \, ds \\
+>>  &= \left(\frac{\pi}{8}\right)^2 \Big[\sin (4s)\Big]_{{\pi}/{8}}^t \\
+>>  &= \left(\frac{\pi}{8}\right)^2 \Big[\sin (4t) - 0\Big] \\
+>>  &= \left(\frac{\pi}{8}\right)^2 \sin (4t)\\
+>>\end{align}$$
+>>Now we have
+>>$$\begin{align}
+>>y &= y_{0} e^{A(t)} + e^{A(t)} \int _{t_{0}}^t e^{-A(s)}b(s) \, ds \\  
+>>  &= 0 \cdot e^{\ln\left( 8t/{\pi}\right)^2} + e^{\ln\left( 8t/{\pi}\right)^2} \left(\left(\frac{\pi}{8}\right)^2 \sin (4t)\right)   \\
+>>  &= t^2\cancel{\left(\frac{8}{\pi}\right)^2} \cancel{\left(\frac{\pi}{8}\right)^2} \sin (4t)  \\
+>>  &= t^2\sin (4t)  \\
+>>\end{align}$$
 >
->>[!example] Find all solutions of the equation $y' ty = ty²$
+>>[!example]- Find all solutions of the equation $y' + ty = ty²$ ❔
+>> We rearrange 
+>> $$\begin{alignat}{2}
+>> y' + ty &= ty² \qquad&&\Big\vert -ty\\
+>> y' &= ty² -ty \\
+>>\end{alignat}$$
+>> This is a [[First Order ODEs#^defBernoulli|Bernoulli equation]] with $n=2$, $p(t)=-t$ and $q(t)=t$. We solve using the $\nu$ [[First Order ODEs#^c27f79 | linearization formula]]. Therefore,
+>>$$\begin{align}
+>> \nu' &= -(n-1) p(t)\nu - (n-1)q(t)  \\
+>> &=t\nu-t 
+>>\end{align}$$
+>>This now is a [[First Order ODEs#^defThmSolODEVar|first order ODE with variable coefficients]]. Solving gives
+>>$$\begin{align}
+>> \nu &= ce^{A(t)} + e^{A(t)}\int e^{-A(t)}b(t) \, dt \\
+>>  &= ce^{\frac{1}{2}t^2} + e^{\frac{1}{2}t^2}\int e^{-\frac{1}{2}t^2}t \, dt \\
+>>\end{align}$$
+>>Solving the integral $\int e^{-\frac{1}{2}t^2}t \, dt$ using the [[../Calculus/Integration#^thmSubstitutionRuleIndef | substitution rule]]
+>>$$\begin{alignat}{2}
+>> u &= -\frac{1}{2}t^2 \\ 
+>> du &= -t\, dt \qquad&&\Big\vert :(-t)\\
+>> -\frac{1}{t}du &= dt \\
+>> \int e^{-\frac{1}{2}t^2}t \, dt &= \int -e^{u} \, du \tag{Substitution}\\
+>>  &= -e^{u} + c\\
+>>  &= -e^{-\frac{1}{2}t^2}+ \underbrace{ c }_{ =0 } \tag{Resubstitution}\\
+>>\end{alignat}$$
+>>Solving $\nu$
+>>$$\begin{align}
+>> \nu &= ce^{\frac{1}{2}t^2} - \underbrace{ e^{\frac{1}{2}t^2}e^{-\frac{1}{2}t^2} }_{ =1 }\\
+>>   &= ce^{\frac{1}{2}t^2} - 1\\
+>>\end{align}$$
+>>Resubstituting it with respect to $y$ gives
+>>$$ \begin{alignat}{2}
+>> \nu &= \frac{1}{y^{n-1}} \\
+>> ce^{\frac{1}{2}t^2} - 1 &= \frac{1}{y} \qquad&&\Big\vert \;(\,.)^{-1}\\
+>> \frac{1}{ce^{\frac{1}{2}t^2} - 1} &= y
+>>\end{alignat}$$
 >
 >>[!example] Find all solutions of the equation $y'= -xy + 6x\sqrt{ y }$
 >
@@ -1009,7 +1144,7 @@ aliases:
 
 ## 4 - Separable Equations
 
->[!def] Definition Sepearble Differential Equation ([[../../../Sources/nagy.pdf#page=32|Source]]) 
+>[!def] Definition Separable Differential Equation ([[../../../Sources/nagy.pdf#page=32|Source]]) 
 >A **separable** differential equation for the function $y$ is 
 >$$ h(y) y' = g(t)$$
 >where $h, g$ are given functions
@@ -1021,7 +1156,7 @@ aliases:
 >>If an equation is separable, it can be easily solved by integrating both sides with respect to $t$
 >
 >
->>[!example]- Examples Identifying  Separable Equations
+>>[!example]- Examples Identifying Separable Equations
 >>>[!example]
 >>>$$ \begin{align}
 >>> y' &= \frac{t^2}{1-y^2} \\
@@ -1036,8 +1171,8 @@ aliases:
 >>>[!example]
 >>>The equation $y'=e^y + \cos(t)$ is not separable.
 >
->>[!example] Examples Solving Separable Equations
->>>[!example] Example Find all solutions $y$ to the differential equation $-\frac{y'}{y^2} = \cos (2t)$
+>>[!example]- Examples Solving Separable Equations
+>>>[!example]- Example Find all solutions $y$ to the differential equation $-\frac{y'}{y^2} = \cos (2t)$
 >>>Note the differential equation is separable. Note
 >>>$$\begin{align}
 >>> h(y) &= -\frac{1}{y^2} \\ 
@@ -1081,7 +1216,7 @@ aliases:
 >>>                        &= \frac{1}{2}\int \cos (u) \, du  \\
 >>>                        &= \frac{1}{2} \sin (u) + c \\
 >>>\end{align}$$
->>>Resubst>>>ituting $u=2t$ solves the RHS
+>>>Resubstituting $u=2t$ solves the RHS
 >>>$$\begin{equation}
 >>>\int \cos (2t)  \, dt = \frac{1}{2} \sin (u) + c \tag{3}
 >>>\end{equation} $$
@@ -1090,3 +1225,172 @@ aliases:
 >>> \frac{1}{y} &= \frac{1}{2}\sin (2t) + c \qquad&&\Big\vert (\,.)^{-1}\\
 >>> {y} &= \frac{2}{\sin (2t) + 2c} \\
 >>>\end{alignat} $$
+>^defSeparableDifferentialEquation
+
+>[!Theorem] Theorem Solutions to Separable Equations ([[../../../Sources/nagy.pdf#page=33|Source]]) 
+>If $h,g$ are continuous with $h\neq 0$, then
+>$$ h(y)y' = g(t)$$
+>has infinitely many solutions $y$ satisfying the algebraic equation
+>$$ H(y(t)) = G(t)+c$$
+>where $c \in \mathbb{R}$ is arbitrary, $H$ and $G$ are antiderivatives of $h$ and $g$.
+>>[!proof]-
+>>$$\begin{alignat}{2}
+>> h(y)y' &= g(t) \qquad&&\Big\vert \int (\,.) \, dt \\
+>> \int h(y)y' \, dt  &= \int g(t) \, dt + c  \\
+>>\end{alignat}$$
+>>Using the [[../Calculus/Integration#^thmSubstitutionRuleDef| substitution rule]] for LHS we have
+>>$$\begin{align}
+>> u &= y(t) \\ 
+>> du & = y'(t) dt \\
+>> \int h(\underbrace{ y }_{ =u })\underbrace{ y' \, dt  }_{ = du }&= \int h(u)\, du   \\
+>>&= \int h(y)\, dy \tag{Resubstitution} 
+>>\end{align}$$
+>>Hence, we have
+>>$$\begin{align}
+>>	\int h(y)y \, dy &= \int g(t) \, dt + c
+>>\end{align}$$
+>>We denote
+>>$$\begin{align}
+>> H(y) = \int h(y) \, dy \tag{Antiderivative of $h$} \\
+>> G(t) = \int  g(t) \, dt \tag{Antiderivative of $g$} 
+>>\end{align}$$
+>>Hence we have
+>>$$\begin{align}
+>> H(y) = G(t) + c \tag*{$\square$}
+>>\end{align}$$
+>
+>>[!Example]- Example Find all solutions $y$ to the differential equation $y' = \frac{t^2}{1-y^2}$
+>>First we bring the equation into its separated form
+>>$$\begin{alignat}{2}
+>> y' &= \frac{t^2}{1-y^2} \qquad&&\Big\vert \cdot (1-y^2)\\
+>> y'(1-y^2) &= t^2
+>>\end{alignat} $$
+>>Now we can apply the theorem
+>>$$\begin{align}
+>> h(y) &= 1-y^2 \\  
+>> g(t) &= t^2 
+>>\end{align}$$
+>>We determine the antiderivatives
+>>$$\begin{align}
+>> H(y) &= \int 1-y^2 \, dy  \\
+>> &= y-\frac{1}{3}y^3 \\
+>> G(t) &= \int  t^2 \, dt \\
+>> &= \frac{1}{3}t^3 
+>>\end{align}$$
+>>The solution to the given differential equation is
+>>$$\begin{align}
+>>y-\frac{1}{3}y^3 = \frac{1}{3}t ³ + c
+>>\end{align}$$
+
+>[!def] Definition Implicit and Explicit Form
+> A function $y$ is a solution in **implicit form** of the equation $h(y)y'=g(t)$ iff the function $y$ is solution of the algebraic equation $$H(y(t)) = G(t) + c$$ where $H$ and $G$ are any antiderivatives of $h$ and $g$. In the case that function $H$ is invertible, the solution $y$ above is given in **explicit form** iff is written as 
+> $$y(t) = H^{-1}\big(G(t) + c\big)$$ 
+> 
+>>[!note]
+>>In the case that $H$ is not invertible or $H^{-1}$ is difficult to compute, we leave the solution $y$ in implicit form.
+>^defImplicitExplicit
+
+## 4.1 - Euler Homogeneous Equations
+
+>[!def] Definition Euler Homogeneous Differential Equation
+>An **Euler homogenous** differential equation has the form
+>$$\begin{align}
+> y'(t) = F\left( \frac{y(t)}{t} \right)
+>\end{align}$$
+
+>[!remark] Remark on Scale Invariance and Homogeneous Functions
+>1. Any function $F$ of $t, y$ that depends only on the quotient $\frac{y}{t}$ is scale invariant. This means that $F$ does not change when we do the transformation $y \mapsto cy$ and $t \mapsto ct$,
+>  $$F\left(\frac{cy}{ct}\right) = F\left( \frac{y}{t} \right)$$
+>  For this reason the differential equations above are also called **scale invariant equations**.
+>2. Scale invariant functions are a particular case of **homogeneous functions of degree $n$**, which are functions $f$ satisfying $$f(ct, cy)=c^n f(y,t)$$
+>    Scale invariant functions are the case $n=0$. Note that the exponents of each summand of $y$ and $t$ sum up to $n$.
+>3. An example of a homogeneous function is the energy of a thermodynamical system, such as a gas in a bottle. The energy, $E$, of a fixed amount of gas is a function of the gas entropy, $S$, and the gas volume, $V$. Such energy is a homogeneous function of degree one, $$E(cS, cV) = cE(S,V)$$ for all $c\in\mathbb{R}$
+>
+>>[!example] Example Show that functions $f_1$ and $f_2$ are homogeneous and find their degree
+>>$$\begin{align}
+>> f_1(ct,cy) &= c^4t^4c^2y^2 + ctc^5y^5 + c^3t^3c^3y^3 \tag{1} \\
+>> f_{2}(ct,cy) &= c^2t^2c^2y^2 + ctc^3y^3 \tag{2}
+>>\end{align}$$
+>>>[!example]- Solution
+>>>1. $\,$ $$\begin{align}
+>>>f_1(ct,cy) &= c^4t^4c^2y^2 + ctc^5y^5 + c^3t^3c^3y^3  \\
+>>> &= c^6t^4y^2 + c^6ty^5 + c^6t^3y^3 \\
+>>> &= c^6(t^4y^2 + ty^5 + t^3y^3) \\
+>>> &= c^6f_{1}(t,y)
+>>>\end{align}$$
+>>> Hence, $f_1$ is a **homogeneous differential equation** of degree 6.
+>>>2. $\,$ $$\begin{align}
+>>>f_{2}(ct,cy) &= c^2t^2c^2y^2 + ctc^3y^3 \\ 
+>>> &= c^44(t^2y^2+ty^3) \\
+>>> &=c^4 f_{2}(t,y) 
+>>>\end{align}$$
+>>> Hence, $f_2$ is a **homogeneous differential equation** of degree 4.
+>>
+>
+>>[!example] Example Show that the functions $f_1$ and $f_2$ are scale invariant functions
+>>$$\begin{align}
+>> f_{1}(t,y)&= \frac{y}{t} \tag{1}\\
+>> f_{2}(t,y)&= \frac{t^3+t^2y+ty^2+y^3}{t^3+ty^2}\tag{2}
+>>\end{align}$$
+>>>[!example]- Solution
+>>>1. $\,$ $$\begin{align}
+>>> f_{1}(ct,cy)&= \frac{cy}{ct}  \\
+>>> &= \frac{c}{t} \\
+>>> &= f_{1}(t,y)
+>>>\end{align}$$
+>>>Hence, $f_1$ is scale invariant
+>>>1. $\,$ $$\begin{align}
+>>> f_{2}(ct, cy) &=  \frac{(ct)^3+(ct)^2(cy)+(ct)(cy)^2+(cy)^3}{(ct)^3+(ct)(cy)^2} \\
+>> &=  \frac{c³t^3+c³t^2y+c³ty^2+c³y^3}{c³t^3+c³ty^2}\\
+>> &=  \frac{\cancel{ c^3 }(t^3+t^2y+ty^2+y^3)}{\cancel{ c^3 }(t^3+ty^2)}\\
+>> &=  f_{2}(ct, cy)
+>>>\end{align}$$
+>>>Hence, $f_2$ is scale invariant
+>
+>^remScaleInvarianceHomogenousFunctions
+
+>[!Theorem] Theorem Identification of Euler Homogeneous Differential Equations
+> If the functions $N, M$ of $t,y$ are homogeneous of the same degree, then the differential equation
+> $$ N(t,y)y'(t) + M(t,y) = 0 $$
+>is **Euler homogeneous**.
+>>[!proof]-
+>> We rewrite the equation as
+>> $$\begin{align}
+>> y'(t) = - \frac{M(t,y)}{N(t,y)}
+>>\end{align}$$
+>>It can easily be shown, that $f(t,y) = - \frac{M(t,y)}{N(t,y)}$ is scale invariant.
+>>>[!proof]- Proof $f(t,y)$ being scale invariant
+>>>$$\begin{align}
+>>> f(ct,cy) &= - \frac{M(ct,cy)}{N(ct,cy)} \\
+>>>  &= - \frac{\cancel{ c^n }M(t,y)}{\cancel{ c^n }N(t,y)} \\
+>>>  &= - \frac{M(t,y)}{N(t,y)} \\
+>>>  &= f(t,y) \\
+>>>\end{align}$$
+>>>because both $M$ and $N$ are homogeneous of degree $n$
+>>
+>>Now we try to find a function $F$ such that we can write
+>>$$y'(t) = F\left( \frac{y}{t} \right)$$
+>>Therefore, we set $c=1/t^n$ and use the property of the homogeneous equation. We have
+>>$$\begin{align}
+>> y'(t) &= - \frac{M(t,y)}{N(t,y)} \underbrace{ \frac{1/t^n}{1/t^n} }_{ =c^n/c^n }  \\
+>> &=  - \frac{M(t/t,y/t)}{N(t/t,y/t)} \\
+>> &=  - \frac{M(1,y/t)}{N(1,y/t)} \\ \\
+>>\end{align}$$
+>>Now we can formulate
+>>$$ \begin{align}F\left( \frac{y}{t} \right) &= - \frac{M(1,y/t)}{N(1,y/t)} \tag*{$\square$}\end{align}$$
+>
+>>[!example] Show that $(t-y)y'-2y+3t+\frac{y^2}{t} =0$ is an Euler homogeneous equation.
+>> We first rearrange 
+>> $$\begin{align}
+>> (t-y)y'-2y+3t+\frac{y^2}{t} = 0 \\
+>> (t-y)y' = 2y-3t-\frac{y^2}{t} \\
+>> y' = \frac{2y-3t-\frac{y^2}{t}}{(t-y)} \\
+>>\end{align}$$
+>>We note that $f(t,y) = \frac{2y-3t-{y^2}/{t}}{(t-y)}$ is a homogeneous differential equation of degree 1, i.e.
+>>$$\begin{align}
+>> f(ct,cy) &= \frac{2cy-3ct-{\frac{c^{\cancel{ 2 }}y^2}{\cancel{ c }t}}}{(ct-cy)} \\
+>>  &= \frac{\cancel{ c }\left(2y-3t-{\frac{y^2}{t}}\right)}{\cancel{ c }(t-y)} \\
+>>  &= f(t,y) \\
+>>\end{align}$$
+>
+>^thmIdentificationEulerHomogeneous
