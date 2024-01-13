@@ -77,7 +77,7 @@ aliases:
 >>>because $y$ is in the numerator and therefore not linear with respect to $f(t,y(t))$
 >
 >>[!example]- Examples (Tasks)
->>>[!example]- Task: Show that $y(t) = e^{2t}-\frac{3}{2}$ is a solution for $y' = 2y+3$
+>>>[!example]- Task Show that $y(t) = e^{2t}-\frac{3}{2}$ is a solution for $y' = 2y+3$
 >>>We have the ODE $y' = 2y + 3$. To verify the statement we first calculate the derivative of $y(t)$ which is
 >>>$$\frac{dy}{dt}=y'=2e^{2t}$$
 >>>Plugging these in, yields
@@ -85,7 +85,7 @@ aliases:
 >>>&= 2e^{2t} -3 +3 \\
 >>>&= 2e^{2t}\end{align}$$
 >>
->>>[!example]- Task: Find the differential equation $y' = f(y)$ satisfied by $y(t) = 4e^{2t} + 3$
+>>>[!example]- Task Find the differential equation $y' = f(y)$ satisfied by $y(t) = 4e^{2t} + 3$
 >>>First we find the derivative of $y(t)$, i.e.
 >>>$$\frac{dy}{dt}=y'=8e^{2t}$$
 >>>Since $y(t)$ is the [[First Order ODEs#^deffirstorderODE|first order ODE]] it is of the form
@@ -101,7 +101,7 @@ aliases:
 >>>$$ y' = a(t)y + b(t)$$
 >>>with $a(t)=2$ and $b(t)=-6$ 
 
->[!theorem] Theorem: Solveability of First Order ODEs with Constant Coefficients ([[../../../Sources/nagy.pdf#page=14|Source]])
+>[!theorem] Theorem Solutions of First Order ODEs with Constant Coefficients ([[../../../Sources/nagy.pdf#page=14|Source]])
 > The linear differential equation 
 > $$y'=ay+b \tag{1}$$
 > with $a\neq0$, $b$ constants, has infinitely many solutions,
@@ -127,7 +127,7 @@ aliases:
 >> with $c$ being the constant resulting from integration and $c = e^{c_0}$. Note, for integrating $\frac{1}{y + \frac{b}a}$ we use [[../Calculus/Differentiation Statements#^dernatlog| the derivative of the natural logarithm]]. Since the logarithm is not defined on negative values, we have to take the absolute value of the integrating term.
 >> 
 >
->>[!example]- Task: Find all solutions to the constant coefficient equation $y'=2y+3$
+>>[!example]- Task Find all solutions to the constant coefficient equation $y'=2y+3$
 >>$$\begin{align} \frac{dy}{dt} &= 2y + 3 \\ 
 >>\frac{dy}{2dt} &= y + \frac{3}{2} \\
 >>\frac{1}{y+\frac{3}{2}}\; dy&= 2\; dt \\
@@ -194,7 +194,7 @@ aliases:
 >>  &=ce^{ta} -\frac{b}{a} \tag*{$\square$}\\
 >> \end{align}$$
 >
->>[!Example]- Task: Find all solutions to the constant coefficient equation $y'=2y+3$
+>>[!Example]- Task Find all solutions to the constant coefficient equation $y'=2y+3$
 >>Let $\mu = e^{\int -2 \, dt} = e^{-2t}$
 >>$$\begin{alignat}{2} 
 >> \frac{dy}{dt} &= 2y + 3 \qquad &&\Big|-2y \\
@@ -223,7 +223,7 @@ aliases:
 >>The differential equation has a unique solution with respect to the initial condition.
 >
 
->[!theorem] Theorem: Solveability of IVPs  ([[../../../Sources/nagy.pdf#page=18|Source]])
+>[!theorem] Theorem Solutions of IVPs  ([[../../../Sources/nagy.pdf#page=18|Source]])
 > Given the constants $a,b,t_0,y_0 \in \mathbb{R}$, with $a \neq 0$, the initial value problem 
 > $$ y' = ay + b, \qquad  y(t_0) = y_0,$$
 > has the unique solution
@@ -245,7 +245,7 @@ aliases:
 >>\end{align}$$
 >^thmsolivp
 >
->>[!example]- Task: Find the unique solution of the initial value problem $y'=2y + 3$ with $y(0) = 1$
+>>[!example]- Task Find the unique solution of the initial value problem $y'=2y + 3$ with $y(0) = 1$
 >>Solutions for $y$ can be given as 
 >>$$ \begin{align}
 >>y=ce^{2t} - \frac{3}{2} \tag{1}
@@ -259,7 +259,7 @@ aliases:
 >>Inserting the result into $(1)$ gives
 >>$$\begin{equation}y = \frac52 e^{2t}-\frac32\end{equation}$$
 >
->>[!example]- Task: Find the unique solution of the initial value problem $y'=-3y + 1$ with $y(0) = 1$
+>>[!example]- Task Find the unique solution of the initial value problem $y'=-3y + 1$ with $y(0) = 1$
 >>Solutions for $y$ can be given as 
 >>$$ \begin{align}
 >>y=ce^{-3t} - \frac{1}{3} \tag{1}
@@ -274,7 +274,7 @@ aliases:
 >>$$ y=\frac23e^{-3t} + \frac13$$
 
 >[!example]- Exercises
->>[!example]- Task: Find the differential equation of the form $y' = f(y)$ satisfied by the function $y(t) = 8e^{5t} - \frac25$
+>>[!example]- Task Find the differential equation of the form $y' = f(y)$ satisfied by the function $y(t) = 8e^{5t} - \frac25$
 >>$$\begin{align} y(t) &= 8e^{5t} - \frac25 \\
 >>\frac{dy}{dt} = y' &= 40e^{5t} 
 >>\end{align}$$
@@ -289,11 +289,11 @@ aliases:
 >>$$ y' = 5y + 2$$
 >
 >
->>[!example]- Task: Find all solutions of $y$ of $y' = 3y$
+>>[!example]- Task Find all solutions of $y$ of $y' = 3y$
 >> We identify $a=3$ and $b=0$. Using theorem [[First Order ODEs#^thmsolvefoode|Theorem for ODE solving]] we have
 >> $$ y =  ce^{3t} $$
 >
->>[!example] Task: Follow the steps below to find all solutions of $y' = -4y + 2$
+>>[!example] Task Follow the steps below to find all solutions of $y' = -4y + 2$
 >>1. Find the integrating factor $\mu$
 >>2. Write the equations as a total derivative of a function $\psi$, that is $y'=-4y+2 \Leftrightarrow \psi'=0$
 >>3. Integrate the equation for $\psi$
@@ -340,11 +340,11 @@ aliases:
 >>> y &= ce^{-4t}+\frac12
 >>> \end{alignat}$$
 >
->>[!example]- Task: Find all solutions of $y'=2y+5$
+>>[!example]- Task Find all solutions of $y'=2y+5$
 >> We identify $a=2$ and $b=5$. Using theorem [[First Order ODEs#^thmsolvefoode|Theorem for ODE solving]] we have
 >> $$ y =  ce^{2t} -\frac52 $$
 >
->>[!example]- Task: Find all solutions of the IVP $y'=-4y+2$, $y(0)=5$
+>>[!example]- Task Find all solutions of the IVP $y'=-4y+2$, $y(0)=5$
 >> Using the [[First Order ODEs#^thmsolivp|Theorem for solving IVP with constant coefficients]] we can identify 
 >> $$\begin{align} 
 >>  t_0 &= 0 \\
@@ -358,7 +358,7 @@ aliases:
 >> y(t) &= \frac{9}{2} e^{-4t}+ \frac{1}{2} \\
 >>\end{align}$$
 >
->>[!example]- Task: Find the solution of the IVP $\frac{dy}{dt}(t)=3y(t)-2$, $y(1)=1$
+>>[!example]- Task Find the solution of the IVP $\frac{dy}{dt}(t)=3y(t)-2$, $y(1)=1$
 >> Using the [[First Order ODEs#^thmsolivp|Theorem for solving IVP with constant coefficients]] we can identify 
 >> $$\begin{align} 
 >>  t_0 &= 1 \\
@@ -408,7 +408,7 @@ aliases:
 >>> \end{align}
 >>> $$
 >
->>[!example]- Task: Find the solution of the IVP $y'=6y+1$, $y(0) = 1$
+>>[!example]- Task Find the solution of the IVP $y'=6y+1$, $y(0) = 1$
 >> $$\begin{align} 
 >>  t_0 &= 0 \\
 >>  y_0 &= 1 \\
@@ -421,7 +421,7 @@ aliases:
 >> y(t) &= \frac{7}{6} e^{6t}- \frac{1}{6} \\
 >>\end{align}$$
 >
->>[!example] Task: Follow the steps below to find all solutions of $y'=-3y+5$, $y(0)=1$
+>>[!example] Task Follow the steps below to find all solutions of $y'=-3y+5$, $y(0)=1$
 >>1. Find an integrating factor $\mu$ for the differential equation.
 >>2. Write the differential equation as a total derivative of a potential function $\psi$.
 >>3. Use the potential function to find the general solution of the differential equation
@@ -473,7 +473,7 @@ aliases:
 
 ## 3 - Linear Variable Coefficient Equations
 
->[!theorem] Theorem Solving First Order ODEs with Variable Coefficients ([[../../../Sources/nagy.pdf#page=23|Source]])
+>[!theorem] Theorem Solutions to First Order ODEs with Variable Coefficients ([[../../../Sources/nagy.pdf#page=23|Source]])
 >If the functions $a,b$ are continuous, then
 >$$ y' = a(t)y + b(t)$$
 >has infinitely many solutions given by
@@ -481,7 +481,7 @@ aliases:
 >where $A(t) = \int a(t) \, dt$ being the **integrating factor** and $c \in \mathbb{R}$
 >>[!proof] Proof: See [[First Order ODEs#^thmsolvefoode| Proof for constant coefficients Integrating Factor Method]]
 >
->>[!example]- Task: Find all solutions $y$ for the differential equation $y'=\frac3ty+t^5$ with $t>0$
+>>[!example]- Task Find all solutions $y$ for the differential equation $y'=\frac3ty+t^5$ with $t>0$
 >>First compute $\mu(t)$ following the form of the product rule as previously already shown. Note, that the parameters $a,b$ are functions of $t$, i.e. $a(t) = \frac3t$ and $b(t) = t^5$.
 >>$$\begin{alignat}{2} 
 >>\frac{dy}{dt} &= \frac3ty + t^5 \qquad &&\Big|-\frac3ty \\
@@ -510,7 +510,7 @@ aliases:
 >>y   &= ct^{3} + \frac13 t^6 \qquad &&\\ 
 >>\end{alignat}$$
 >
->>[!example]- Task: Find all solutions $y$ for the differential equation $ty'=-2y+4t^2$ with $t>0$
+>>[!example]- Task Find all solutions $y$ for the differential equation $ty'=-2y+4t^2$ with $t>0$
 >>First we determine the **integration factor** $\mu(t)$ by identifying it over the product rule
 >>$$\begin{alignat}{2}
 >>	t\frac{dy}{dt} &= -2y + 4t^2 \qquad &&\Big|\cdot t^{-1} \\ 
@@ -551,7 +551,7 @@ aliases:
 >>The IVP has a unique solution.
 >^defIVPvar
 
->[!theorem] Theorem: Solveability of IVP with Variable Coefficients ([[../../../Sources/nagy.pdf#page=26|Source]])
+>[!theorem] Theorem Solutions of IVP with Variable Coefficients ([[../../../Sources/nagy.pdf#page=26|Source]])
 > Given continuous functions $a,b$ with domain $(t_1, t_2)$ and constants $t_0 \in (t_1, t_2)$ and $y_0 \in \mathbb{R}$, the IVP
 > $$ y' = a(t)y + b(t), \qquad y(t_0) = y_0 $$
 > has the unique solution $y$ on the domain $(t_1, t_2)$, given by
@@ -596,7 +596,7 @@ aliases:
 >>$$ y(t) = y_0e^{A(t)} + e^{A(t)}\int_{t_0}^t e^{-A(s)}b(s) \, ds$$
 >> 
 >
->>[!example]- Task: Find the function $y$ solution of the IVP $ty' + 2y = 4t^2$ with $t>0$ and $y(1) = 2$
+>>[!example]- Task Find the function $y$ solution of the IVP $ty' + 2y = 4t^2$ with $t>0$ and $y(1) = 2$
 >>We use the result of the [[First Order ODEs#^thmsolivp| theorem solution for IVP with variable coefficients]]. First we rearrange the formula
 >>$$\begin{align}
 >>ty' +2y &= 4t^2 \qquad \Big\vert-2y, \; \cdot t^{-1} \\
@@ -632,7 +632,7 @@ aliases:
 >
 
 
->[!remark]- Remark: Recovering Constant Coefficient Form
+>[!remark]- Remark Recovering Constant Coefficient Form
 > We can get the [[First Order ODEs#^thmsolivp|constant coefficient form]] back by assuming $a(t), b(t)$ being constant. First, we reduce $A(t)$ to be constant with
 > $$
 > \begin{align}
@@ -680,7 +680,7 @@ aliases:
 
 ## 3.1 - The Bernoulli Equation
 
->[!def] Definition: Bernoulli Equation ([[../../../Sources/nagy.pdf#page=27|Source]])
+>[!def] Definition Bernoulli Equation ([[../../../Sources/nagy.pdf#page=27|Source]])
 >The **Bernoulli equation** is
 >$$\begin{align} 
 >y' = p(t)y + q(t)y^n
@@ -688,11 +688,11 @@ aliases:
 >where $p,q$ are given functions and $n \in \mathbb{R}$.
 >^defBernoulli
 
->[!remark]- Remark: Regarding $n$ in the Bernoulli equation
+>[!remark]- Remark Regarding $n$ in the Bernoulli equation
 > - $n \neq 0, 1$ => Bernoulli equation is **non-linear**
 > - $n = 2$ => Bernoulli equation is **logistic equation**
 
->[!theorem] Theorem: Solutions for the Bernoulli equation  ([[../../../Sources/nagy.pdf#page=26|Source]])
+>[!theorem] Theorem Solutions for the Bernoulli equation  ([[../../../Sources/nagy.pdf#page=26|Source]])
 >The function $y$ is a solution of the Bernoulli equation iff the function 
 >$$ \nu = \frac{1}{y^{n-1}}$$
 >is solution of the linear differential equation
@@ -723,7 +723,7 @@ aliases:
 >>\nu' &= -(n-1)p(t)\nu - (n-1)q(t) \qquad&& \tag*{$\square$}
 >>\end{alignat}$$
 >
->>[!example]- Task: Find every nonzero solution of the differential equation $y' = y+2y⁵$
+>>[!example]- Task Find every nonzero solution of the differential equation $y' = y+2y⁵$
 >>Note, this is a Bernoulli equation with $n=5$. We use the procedure shown in the proof.
 >>$$\begin{alignat}{2} 
 >>y' &= y+2y⁵ \qquad &&\Big|:y⁵ \\
@@ -755,7 +755,7 @@ aliases:
 >>	y &= \frac1{\left(ce^{-4t} - 2\right)^{1/4}} 
 >>\end{alignat}$$ 
 >
->>[!example]- Task: Given any constants $a_0, b_0$ find every solution of the differential equation $y'= a_0y +b_0y^3$
+>>[!example]- Task Given any constants $a_0, b_0$ find every solution of the differential equation $y'= a_0y +b_0y^3$
 >> The given equation is a Bernoulli equation with $n=3$. Therefore, we use the procedure of the proof
 >> $$\begin{alignat}{2}
 >> y' &= ay + by^3 \qquad &&\Big| \cdot y^{-3}\\
@@ -783,7 +783,7 @@ aliases:
 >> y &= \pm\frac{1}{\sqrt{   ce^{-2t} - \frac{b}{a}}}   
 >>\end{alignat}$$
 >
->>[!example]- Task: Find every solution of the equation $ty'=3y+t^5y^{1/3}$
+>>[!example]- Task Find every solution of the equation $ty'=3y+t^5y^{1/3}$
 >>Note this equation is a Bernoulli equation with $n=\frac{1}{3}$. We use the results from the theorem. Rearranging the equation gives 
 >>$$\begin{align}
 >> y' &= \frac{3}{t}y + t^4 y^{1/3} \\ 
@@ -1282,7 +1282,7 @@ aliases:
 >>y-\frac{1}{3}y^3 = \frac{1}{3}t ³ + c
 >>\end{align}$$
 
->[!def] Definition Implicit and Explicit Form
+>[!def] Definition Implicit and Explicit Form ([[../../../Sources/nagy.pdf#page=35|Source]]) 
 > A function $y$ is a solution in **implicit form** of the equation $h(y)y'=g(t)$ iff the function $y$ is solution of the algebraic equation $$H(y(t)) = G(t) + c$$ where $H$ and $G$ are any antiderivatives of $h$ and $g$. In the case that function $H$ is invertible, the solution $y$ above is given in **explicit form** iff is written as 
 > $$y(t) = H^{-1}\big(G(t) + c\big)$$ 
 > 
@@ -1292,20 +1292,40 @@ aliases:
 
 ## 4.1 - Euler Homogeneous Equations
 
->[!def] Definition Euler Homogeneous Differential Equation
+>[!def] Definition Euler Homogeneous Differential Equation ([[../../../Sources/nagy.pdf#page=37|Source]]) 
 >An **Euler homogenous** differential equation has the form
 >$$\begin{align}
 > y'(t) = F\left( \frac{y(t)}{t} \right)
 >\end{align}$$
 
->[!remark] Remark on Scale Invariance and Homogeneous Functions
->1. Any function $F$ of $t, y$ that depends only on the quotient $\frac{y}{t}$ is scale invariant. This means that $F$ does not change when we do the transformation $y \mapsto cy$ and $t \mapsto ct$,
+>[!lemma]  Scale Invariance and Homogeneous Functions
+>1. **Scale Invariance** 
+>  Any function $F$ of $t, y$ that depends only on the quotient $\frac{y}{t}$ is scale invariant. This means that $F$ does not change when we do the transformation $y \mapsto cy$ and $t \mapsto ct$,
 >  $$F\left(\frac{cy}{ct}\right) = F\left( \frac{y}{t} \right)$$
 >  For this reason the differential equations above are also called **scale invariant equations**.
->2. Scale invariant functions are a particular case of **homogeneous functions of degree $n$**, which are functions $f$ satisfying $$f(ct, cy)=c^n f(y,t)$$
+>>[!example] Example Show that the functions $f_1$ and $f_2$ are scale invariant functions
+>>$$\begin{align}
+>> f_{1}(t,y)&= \frac{y}{t} \tag{1}\\
+>> f_{2}(t,y)&= \frac{t^3+t^2y+ty^2+y^3}{t^3+ty^2}\tag{2}
+>>\end{align}$$
+>>>[!example]- Solution
+>>>1. $\,$ $$\begin{align}
+>>> f_{1}(ct,cy)&= \frac{cy}{ct}  \\
+>>> &= \frac{c}{t} \\
+>>> &= f_{1}(t,y)
+>>>\end{align}$$
+>>>Hence, $f_1$ is scale invariant
+>>>1. $\,$ $$\begin{align}
+>>> f_{2}(ct, cy) &=  \frac{(ct)^3+(ct)^2(cy)+(ct)(cy)^2+(cy)^3}{(ct)^3+(ct)(cy)^2} \\
+>> &=  \frac{c³t^3+c³t^2y+c³ty^2+c³y^3}{c³t^3+c³ty^2}\\
+>> &=  \frac{\cancel{ c^3 }(t^3+t^2y+ty^2+y^3)}{\cancel{ c^3 }(t^3+ty^2)}\\
+>> &=  f_{2}(ct, cy)
+>>>\end{align}$$
+>>>Hence, $f_2$ is scale invariant
+>  <br>
+>2. **Homogeneous Functions**
+>    Scale invariant functions are a particular case of **homogeneous functions of degree $n$**, which are functions $f$ satisfying $$f(ct, cy)=c^n f(y,t)$$
 >    Scale invariant functions are the case $n=0$. Note that the exponents of each summand of $y$ and $t$ sum up to $n$.
->3. An example of a homogeneous function is the energy of a thermodynamical system, such as a gas in a bottle. The energy, $E$, of a fixed amount of gas is a function of the gas entropy, $S$, and the gas volume, $V$. Such energy is a homogeneous function of degree one, $$E(cS, cV) = cE(S,V)$$ for all $c\in\mathbb{R}$
->
 >>[!example] Example Show that functions $f_1$ and $f_2$ are homogeneous and find their degree
 >>$$\begin{align}
 >> f_1(ct,cy) &= c^4t^4c^2y^2 + ctc^5y^5 + c^3t^3c^3y^3 \tag{1} \\
@@ -1326,30 +1346,13 @@ aliases:
 >>>\end{align}$$
 >>> Hence, $f_2$ is a **homogeneous differential equation** of degree 4.
 >>
->
->>[!example] Example Show that the functions $f_1$ and $f_2$ are scale invariant functions
->>$$\begin{align}
->> f_{1}(t,y)&= \frac{y}{t} \tag{1}\\
->> f_{2}(t,y)&= \frac{t^3+t^2y+ty^2+y^3}{t^3+ty^2}\tag{2}
->>\end{align}$$
->>>[!example]- Solution
->>>1. $\,$ $$\begin{align}
->>> f_{1}(ct,cy)&= \frac{cy}{ct}  \\
->>> &= \frac{c}{t} \\
->>> &= f_{1}(t,y)
->>>\end{align}$$
->>>Hence, $f_1$ is scale invariant
->>>1. $\,$ $$\begin{align}
->>> f_{2}(ct, cy) &=  \frac{(ct)^3+(ct)^2(cy)+(ct)(cy)^2+(cy)^3}{(ct)^3+(ct)(cy)^2} \\
->> &=  \frac{c³t^3+c³t^2y+c³ty^2+c³y^3}{c³t^3+c³ty^2}\\
->> &=  \frac{\cancel{ c^3 }(t^3+t^2y+ty^2+y^3)}{\cancel{ c^3 }(t^3+ty^2)}\\
->> &=  f_{2}(ct, cy)
->>>\end{align}$$
->>>Hence, $f_2$ is scale invariant
+>    
+>>[!note]- Note Physics Example
+>>An example of a homogeneous function is the energy of a thermodynamical system, such as a gas in a bottle. The energy, $E$, of a fixed amount of gas is a function of the gas entropy, $S$, and the gas volume, $V$. Such energy is a homogeneous function of degree one, $$E(cS, cV) = cE(S,V)$$ for all $c\in\mathbb{R}$
 >
 >^remScaleInvarianceHomogenousFunctions
 
->[!Theorem] Theorem Identification of Euler Homogeneous Differential Equations
+>[!Theorem] Theorem Identification of Euler Homogeneous Differential Equations ([[../../../Sources/nagy.pdf#page=39|Source]]) 
 > If the functions $N, M$ of $t,y$ are homogeneous of the same degree, then the differential equation
 > $$ N(t,y)y'(t) + M(t,y) = 0 $$
 >is **Euler homogeneous**.
@@ -1379,7 +1382,7 @@ aliases:
 >>Now we can formulate
 >>$$ \begin{align}F\left( \frac{y}{t} \right) &= - \frac{M(1,y/t)}{N(1,y/t)} \tag*{$\square$}\end{align}$$
 >
->>[!example] Show that $(t-y)y'-2y+3t+\frac{y^2}{t} =0$ is an Euler homogeneous equation.
+>>[!example]- Example Show that $(t-y)y'-2y+3t+\frac{y^2}{t} =0$ is an Euler homogeneous equation.
 >> We first rearrange 
 >> $$\begin{align}
 >> (t-y)y'-2y+3t+\frac{y^2}{t} = 0 \\
@@ -1392,5 +1395,162 @@ aliases:
 >>  &= \frac{\cancel{ c }\left(2y-3t-{\frac{y^2}{t}}\right)}{\cancel{ c }(t-y)} \\
 >>  &= f(t,y) \\
 >>\end{align}$$
+>>Now we rewrite the equation in the form $y'=F(\frac{y}{t})$. Since the numerator and denominator are both of degree $n=1$, we multiply the fraction with $\frac{1/t}{1/t}$
+>>$$\begin{align}
+>> y' &= \frac{2y-3t-\frac{y^2}{t}}{(t-y)} \frac{\frac{1}{t}}{\frac{1}{t}}\\
+>>    &= \frac{2\frac{y}{t}-3-\frac{y^2}{t^2}}{\left( 1-\frac{y}{t} \right)}
+>>\end{align}$$
+>>We have found
+>>$$F\left( \frac{y}{t} \right) = \frac{2\frac{y}{t}-3-\frac{y^2}{t^2}}{\left( 1-\frac{y}{t} \right)}$$
+>
+>>[!example]- Example Determine whether the equation $(1-y^3)y'=t^2$ is Euler homogeneous.
+>> First we determine a proper form for $f(t,y)$
+>> $$\begin{align}
+>> (1-y^3)y' &= t^2 \\
+>> y' &= \frac{t^2}{1-y^3} \\
+>> &= f(t,y) 
+>>\end{align}$$
+>>We now check the condition for homogeneity  
+>>$$\begin{align}
+>> f(ct, cy) &= \frac{c^2 t^2}{1-c^3y^3} \\
+>> &\neq f(t,y)
+>>\end{align}$$
+>>Hence, the equation is not homogeneous.
 >
 >^thmIdentificationEulerHomogeneous
+
+>[!theorem] Theorem Solutions to Euler Homogeneous Differential Equations ([[../../../Sources/nagy.pdf#page=40|Source]]) 
+> The Euler homogeneous equation 
+> $$ y' = F\left( \frac{y}{t} \right)$$
+> for the function $y$ determines a separable equation for $$\begin{align}
+>\nu = \frac{y}{t} \tag{Change of Functions}
+>\end{align}$$  given by 
+> $$\frac{\nu'}{(F(\nu)-\nu)}=\frac{1}{t}$$
+>>[!proof]-
+>> First we denote $\nu = \frac{y}{t}$ and
+>> $$y' = F(\nu)$$
+>> Now  we use the identity $y = t\nu$ to find a replacement for $y'$
+>>>[!note]- Note on the identity $y = t\nu$
+>>>Since $\nu = \frac{y}{t}$, we have
+>>>$$\begin{align}
+>>> y &= t\nu \\
+>>> y &= \cancel{ t } \frac{y}{\cancel{ t }} \\ 
+>>> y &= y
+>>>\end{align}$$
+>>
+>>$$\begin{alignat}{2}
+>> y(t) &= t\nu(t) \qquad&&\Big\vert \frac{d}{dt}\\
+>> y' &= \nu + \nu't \qquad&& \tag{Product Rule} \\
+>> &= F(\nu) \tag{By Definition}
+>>\end{alignat}$$
+>>Rearranging gives
+>>$$\begin{alignat}{2}
+>> F(\nu) &= \nu + t\nu' \qquad&&\Big\vert -\nu; \;\;:\nu'\\
+>> \frac{F(\nu)-\nu}{\nu'} &= t \qquad&&\Big\vert\, (\,.)^{-1}\\
+>> \frac{\nu'}{F(\nu)-\nu} &= \frac{1}{t} \tag*{$\square$}\\
+>>\end{alignat}$$
+>
+>>[!example]- Example Find all solutions $y$ of the differential equation $y'= \frac{t^2 + 3y^2}{2ty}$
+>>First we verify that the given equation is a Euler homogeneous for $f(t,y) = \frac{t^2 + 3y^2}{2ty}$
+>>$$\begin{align}
+>>f(ct,cy) &= \frac{c^2t^2 + 3c^2y^2}{2ctcy} \\
+>> &= \frac{\cancel{ c^2 }(t^2 + 3y^2)}{\cancel{ c² }(2ty)} \\
+>> &= f(t,y)
+>>\end{align}$$
+>>Knowing that its a Euler homogeneous of degree $n=2$ we just multiply the fraction with $\frac{1/t^2}{1/t^2}$ to find $F(\frac{y}{t})$
+>>$$\begin{align}
+>> F\left( \frac{y}{t} \right) &= \frac{t^2 + 3y^2}{2ty} \frac{\frac{1}{t^2}}{\frac{1}{t^2}} \\
+>>  &= \frac{1 + 3(\frac{y}{t})^2}{2\frac{y}{t}} \\
+>>\end{align}$$
+>>Denote $\nu(t) = \frac{y(t)}{t}$ (change of functions), hence we have
+>>$$\begin{align}
+>> y' = \frac{1+3\nu}{2\nu^2} \tag{1}
+>>\end{align}$$
+>>Now we substitute $y'$. Note 
+>>$$\begin{align}
+>> y &= \nu t \\ 
+>> y' &= \nu't + \nu 
+>>\end{align}$$
+>>We substitute into $(1)$
+>>$$\begin{alignat}{2}
+>> \nu't + \nu &= \frac{1+3\nu^2}{2\nu} \qquad&&\Big\vert -\nu\\
+>> v't&= \frac{1+3\nu^2}{2\nu} - \frac{2\nu^2}{2\nu} \\
+>> v't&= \frac{1+\nu^2}{2\nu} \qquad&&\Big\vert :t \\
+>> v'&= \frac{1+\nu^2}{2t\nu} \\
+>> v'&= \frac{1}{t}\left(\frac{1+\nu^2}{2\nu}\right)
+>>\end{alignat}$$
+>>which is a [[First Order ODEs#^defSeparableDifferentialEquation| separable equation]], rearranging we have
+>>$$\begin{align}
+>> \left( \frac{2\nu}{1 + \nu^2} \right)\nu' = \frac{1}{t} 
+>>\end{align}$$
+>>We solve by integrating on both sides. First we apply the  [[../Calculus/Integration#^thmSubstitutionRuleIndef | substitution rule]] to the LHS. We have
+>>$$\begin{align}
+>> u &= 1+\nu^2(t) \tag{2}\\
+>> du &= 2\nu(t) \nu'(t) \;dt \\
+>>  \int \frac{2\nu}{1+\nu^2} \nu' \, dt  &= \int \frac{1}{u} \, du \tag{Substitution}\\
+>>\end{align}$$
+>>Hence, we have by integrating on both sides
+>>$$ \begin{alignat}{2}
+>> \int \frac{1}{u}  \, du  &= \int \frac{1}{t} \, dt  + c \qquad&&  \\\\
+>>      \ln(u)&= \ln t + c \qquad&&\Big\vert \,e^{(\,.\,)} \\
+>>      u&= e^{\ln t + c}  \\
+>>      u&= t \underbrace{ e^{c}  }_{ =c_{1} } \\
+>>      u&= c_{1}t  \\
+>>\end{alignat}$$ 
+>>Plugging the solution for $u$ into $(2)$ yields
+>>$$\begin{alignat}{2}
+>> 1+\nu^2 &= c_{1}t  \qquad&&\Big\vert -1 \\
+>> \nu^2 &=c_{1}t -1 \qquad&&\Big\vert \sqrt{ (\,.) } \\
+>> \nu &=\pm\sqrt{c_{1}t -1 } 
+>>\end{alignat}$$
+>
+>>[!example] Example Find all solutions $y$ of the differential equation $y' = \frac{t(y+1)+(y+1)^2}{t^2}$
+>> First we show that the given function is a homogeneous function $f(t,y) = \frac{t(y+1)+(y+1)^2}{t^2}$. Therefore, we set $u = y+1$.
+>>>[!note]
+>>>Substituting $u=y+1$ is valid, since 
+>>>$$\begin{align}
+>>> \frac{du}{dt} &=\frac{d}{dt}(y+1) \\
+>>> u' &= y' \\
+>>>\end{align}$$
+>>
+>>Substituting  yields
+>>$$ \begin{align}
+>>u' = \frac{tu+u^2}{t^2} \tag{1}
+>>\end{align}$$
+>>Now we check the conditions of homogeneity
+>> $$\begin{align}
+>> f(ct,cu) &= \frac{(ct)(cu)+c^2u^2}{c^2t^2} \\
+>>          &= \frac{\cancel{ c^2 }(tu+u^2)}{\cancel{ c^2 }t^2} \\ 
+>>          &= f(t,u) 
+>>\end{align}$$
+>>We introduce $\nu=\frac{u}{t}$ with
+>>$$\begin{align}
+>> u &= \nu t  \\
+>> u' &= \nu't + \nu
+>>\end{align}$$
+>>We set the found expression equal to $(1)$
+>>$$\begin{alignat}{2}
+>> \nu't + \nu &= \frac{t(\nu t)+(\nu t)^2}{t^2} \qquad&&\Big\vert -\nu \\
+>> \nu't  &= \frac{t^2\nu+\nu^2t^2}{t^2} -\frac{t^2\nu}{t^2}\qquad&& \\
+>> \nu't  &= \frac{\nu^2\cancel{ t^2 }}{\cancel{ t^2 }} \qquad&&\Big\vert :\nu'\\
+>> t  &= \frac{\nu^2}{\nu'} \qquad&& \\
+>>\end{alignat}$$
+
+>[!example] Exercises
+>>[!example] Find all solution $y$ to the ODE $y' = \frac{t^2}{y}$. Express the solutions in explicit form.
+>
+>>[!example] Find every solution $y$ of the ODE $3t^2+4y^3y'-1+y'=0$. Leave the solution in implicit form.
+>
+>>[!example] Find the solution $y$ to the IVP $y'=t^2y^2$ with $y(0)=1$
+>
+>>[!example] Find every solution $y$ of the ODE $ty + \sqrt{ 1+t^2 }\;y'=0$
+>
+>>[!example] Find every solution $y$ of the Euler homogeneous equation $y' = \frac{y+t}{t}$
+>
+>>[!example] Find all solutions $y$ to the ODE $y' = \frac{t^2+y^2}{ty}$
+>
+>>[!example] Find the explicit solution to the IVP $(t^2+2ty)y' = y^2$ with $y(1)=1$
+>
+>>[!example] Prove that if $y' = f(t,y)$ is an Euler homogeneous equation and $y_1(t)$ is solution, then $y(t) = \frac{1}{k}y_{1}(kt)$ is also a solution for every non-zero $k \in \mathbb{R}$
+>
+>>[!example] Find the explicit solution of the IVP $y' = \frac{4t-6t^2}{y}$ with $y(0)= -3$
