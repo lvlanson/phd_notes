@@ -1171,60 +1171,59 @@ aliases:
 >>>[!example]
 >>>The equation $y'=e^y + \cos(t)$ is not separable.
 >
->>[!example]- Examples Solving Separable Equations
->>>[!example]- Example Find all solutions $y$ to the differential equation $-\frac{y'}{y^2} = \cos (2t)$
->>>Note the differential equation is separable. Note
->>>$$\begin{align}
->>> h(y) &= -\frac{1}{y^2} \\ 
->>> g(t) &= \cos (2t)
->>>\end{align}$$ 
->>>Therefore, we can solve by integration
->>>$$\begin{alignat}{2}
->>> -\frac{y'}{y^2} &= \cos (2t) \qquad&&\Big\vert \int  \, dt \\
->>> \int -\frac{y'}{y^2}  \,dt  &= \int \cos (2t)  \, dt \tag{1}\\
->>>\end{alignat}$$
->>>Using the [[../Calculus/Integration#^thmSubstitutionRuleIndef | substitution rule]] with 
->>>$$\begin{align}
->>> u &= y  \\
->>> &= g(t)\\
->>> \frac{du}{dt} &= y' \\
->>> {du} &= y' {dt}\\
->>> f(u) &= -\frac{1}{u^2}
->>>\end{align}$$ 
->>>we have for $u=y$
->>>$$\begin{align}
->>>\int f(g(t))g'(t) \, dt &= \int f(u) \, du  \\
->>>                        &= \int -\frac{1}{u^2} \, du  \\
->>>                        &= \frac{1}{u} +c  \\
->>>\end{align}$$
->>>Substituting back yields
->>>$$ \begin{align}
->>>\int -\frac{y'}{y^2}  \,dt  &= \frac{1}{y} + c \tag{2}
->>>\end{align}$$
->>>We use again the substitution rule for solving the RHS of $(1)$, i.e. $\int \cos (2t)  \, dt$ 
->>>$$ \begin{align}
->>> u &= 2t \\
->>>  &= g(t) \\
->>> f(u) &= \cos(u) \\
->>> \frac{du}{dt} &= 2 \\ 
->>> du &= 2dt \\ 
->>> \frac{1}{2} du &= dt\\
->>>\end{align}$$
->>>Hence, we have for $u=g(t)$
->>>$$\begin{align}
->>>\int \underbrace{ \cos(2t) }_{ =f(u) } \,\underbrace{  dt }_{ \frac{1}{2} du } &= \int \cos(u) \frac{1}{2}du  \\
->>>                        &= \frac{1}{2}\int \cos (u) \, du  \\
->>>                        &= \frac{1}{2} \sin (u) + c \\
->>>\end{align}$$
->>>Resubstituting $u=2t$ solves the RHS
->>>$$\begin{equation}
->>>\int \cos (2t)  \, dt = \frac{1}{2} \sin (u) + c \tag{3}
->>>\end{equation} $$
->>>Using the results from $(2)$ and $(3)$ gives
->>>$$\begin{alignat}{2}
->>> \frac{1}{y} &= \frac{1}{2}\sin (2t) + c \qquad&&\Big\vert (\,.)^{-1}\\
->>> {y} &= \frac{2}{\sin (2t) + 2c} \\
->>>\end{alignat} $$
+>>[!example]- Example Find all solutions $y$ to the differential equation $-\frac{y'}{y^2} = \cos (2t)$
+>>Note the differential equation is separable. Note
+>>$$\begin{align}
+>> h(y) &= -\frac{1}{y^2} \\ 
+>> g(t) &= \cos (2t)
+>>\end{align}$$ 
+>>Therefore, we can solve by integration
+>>$$\begin{alignat}{2}
+>> -\frac{y'}{y^2} &= \cos (2t) \qquad&&\Big\vert \int  \, dt \\
+>> \int -\frac{y'}{y^2}  \,dt  &= \int \cos (2t)  \, dt \tag{1}\\
+>>\end{alignat}$$
+>>Using the [[../Calculus/Integration#^thmSubstitutionRuleIndef | substitution rule]] with 
+>>$$\begin{align}
+>> u &= y  \\
+>> &= g(t)\\
+>> \frac{du}{dt} &= y' \\
+>> {du} &= y' {dt}\\
+>> f(u) &= -\frac{1}{u^2}
+>>\end{align}$$ 
+>>we have for $u=y$
+>>$$\begin{align}
+>>\int f(g(t))g'(t) \, dt &= \int f(u) \, du  \\
+>>                        &= \int -\frac{1}{u^2} \, du  \\
+>>                        &= \frac{1}{u} +c  \\
+>>\end{align}$$
+>>Substituting back yields
+>>$$ \begin{align}
+>>\int -\frac{y'}{y^2}  \,dt  &= \frac{1}{y} + c \tag{2}
+>>\end{align}$$
+>>We use again the substitution rule for solving the RHS of $(1)$, i.e. $\int \cos (2t)  \, dt$ 
+>>$$ \begin{align}
+>> u &= 2t \\
+>>  &= g(t) \\
+>> f(u) &= \cos(u) \\
+>> \frac{du}{dt} &= 2 \\ 
+>> du &= 2dt \\ 
+>> \frac{1}{2} du &= dt\\
+>>\end{align}$$
+>>Hence, we have for $u=g(t)$
+>>$$\begin{align}
+>>\int \underbrace{ \cos(2t) }_{ =f(u) } \,\underbrace{  dt }_{ \frac{1}{2} du } &= \int \cos(u) \frac{1}{2}du  \\
+>>                        &= \frac{1}{2}\int \cos (u) \, du  \\
+>>                        &= \frac{1}{2} \sin (u) + c \\
+>>\end{align}$$
+>>Resubstituting $u=2t$ solves the RHS
+>>$$\begin{equation}
+>>\int \cos (2t)  \, dt = \frac{1}{2} \sin (u) + c \tag{3}
+>>\end{equation} $$
+>>Using the results from $(2)$ and $(3)$ gives
+>>$$\begin{alignat}{2}
+>> \frac{1}{y} &= \frac{1}{2}\sin (2t) + c \qquad&&\Big\vert (\,.)^{-1}\\
+>> {y} &= \frac{2}{\sin (2t) + 2c} \\
+>>\end{alignat} $$
 >^defSeparableDifferentialEquation
 
 >[!Theorem] Theorem Solutions to Separable Equations ([[../../../Sources/nagy.pdf#page=33|Source]]) 
@@ -1283,7 +1282,7 @@ aliases:
 >>\end{align}$$
 
 >[!def] Definition Implicit and Explicit Form ([[../../../Sources/nagy.pdf#page=35|Source]]) 
-> A function $y$ is a solution in **implicit form** of the equation $h(y)y'=g(t)$ iff the function $y$ is solution of the algebraic equation $$H(y(t)) = G(t) + c$$ where $H$ and $G$ are any antiderivatives of $h$ and $g$. In the case that function $H$ is invertible, the solution $y$ above is given in **explicit form** iff is written as 
+> A function $y$ is a solution in <u>**implicit form**</u> of the equation $h(y)y'=g(t)$ iff the function $y$ is solution of the algebraic equation $$H(y(t)) = G(t) + c$$ where $H$ and $G$ are any antiderivatives of $h$ and $g$. In the case that function $H$ is invertible, the solution $y$ above is given in <u>**explicit form**</u> iff is written as 
 > $$y(t) = H^{-1}\big(G(t) + c\big)$$ 
 > 
 >>[!note]
@@ -1479,7 +1478,7 @@ aliases:
 >> v'&= \frac{1+\nu^2}{2t\nu} \\
 >> v'&= \frac{1}{t}\left(\frac{1+\nu^2}{2\nu}\right)
 >>\end{alignat}$$
->>which is a [[First Order ODEs#^defSeparableDifferentialEquation| separable equation]], rearranging we have
+>>which is a [[First Order ODEs#^defSeparableDifferentialEquation | separable equation]], rearranging we have
 >>$$\begin{align}
 >> \left( \frac{2\nu}{1 + \nu^2} \right)\nu' = \frac{1}{t} 
 >>\end{align}$$
@@ -1504,8 +1503,8 @@ aliases:
 >> \nu &=\pm\sqrt{c_{1}t -1 } 
 >>\end{alignat}$$
 >
->>[!example] Example Find all solutions $y$ of the differential equation $y' = \frac{t(y+1)+(y+1)^2}{t^2}$
->> First we show that the given function is a homogeneous function $f(t,y) = \frac{t(y+1)+(y+1)^2}{t^2}$. Therefore, we set $u = y+1$.
+>>[!example]- Example Find all solutions $y$ of the differential equation $y' = \frac{t(y+1)+(y+1)^2}{t^2}$
+>> First we show that the given function is a homogeneous function $f(t,y) = \frac{t(y+1)+(y+1)^2}{t^2}$. Therefore, we set $u = y+1 \;\;(1)$.
 >>>[!note]
 >>>Substituting $u=y+1$ is valid, since 
 >>>$$\begin{align}
@@ -1515,7 +1514,7 @@ aliases:
 >>
 >>Substituting  yields
 >>$$ \begin{align}
->>u' = \frac{tu+u^2}{t^2} \tag{1}
+>>u' = \frac{tu+u^2}{t^2} \tag{2}
 >>\end{align}$$
 >>Now we check the conditions of homogeneity
 >> $$\begin{align}
@@ -1523,27 +1522,117 @@ aliases:
 >>          &= \frac{\cancel{ c^2 }(tu+u^2)}{\cancel{ c^2 }t^2} \\ 
 >>          &= f(t,u) 
 >>\end{align}$$
->>We introduce $\nu=\frac{u}{t}$ with
+>>We introduce $\nu=\frac{u}{t}\;\;(3)$ with
 >>$$\begin{align}
 >> u &= \nu t  \\
 >> u' &= \nu't + \nu
 >>\end{align}$$
->>We set the found expression equal to $(1)$
+>>We set the found expression equal to $(2)$
 >>$$\begin{alignat}{2}
 >> \nu't + \nu &= \frac{t(\nu t)+(\nu t)^2}{t^2} \qquad&&\Big\vert -\nu \\
 >> \nu't  &= \frac{t^2\nu+\nu^2t^2}{t^2} -\frac{t^2\nu}{t^2}\qquad&& \\
 >> \nu't  &= \frac{\nu^2\cancel{ t^2 }}{\cancel{ t^2 }} \qquad&&\Big\vert :\nu'\\
->> t  &= \frac{\nu^2}{\nu'} \qquad&& \\
+>> t  &= \frac{\nu^2}{\nu'} \qquad&&\Big\vert \;(\,.)^{-1} \\
+>> \frac{1}{t} &= v' \frac{1}{\nu^{2}}
 >>\end{alignat}$$
+>>This represents a [[First Order ODEs#^defSeparableDifferentialEquation | separable equation]]. We integrate on both sides accordingly
+>>$$\begin{alignat}{2}
+>> \int  \frac{1}{t} \, dt &= \int \frac{1}{\nu^2} \, d\nu  \\
+>> \ln t + c&= -\frac{1}{\nu} \qquad&&\Big\vert \,(\,.)^{-1} \\  
+>> \frac{1}{\ln t + c}&= -\nu \qquad&&\Big\vert \cdot (-1) \\  
+>> -\frac{1}{\ln t + c}&= \nu \\  
+>>\end{alignat}$$
+>>Resubstituting into $(3)$ and $(1)$ gives
+>>$$\begin{alignat}{2}
+>> \nu &= \frac{u}{t} \tag{Substituting (3)} \\
+>> -\frac{1}{\ln t + c}&= \frac{y+1}{t} \qquad&&\Big\vert \cdot t \tag{Substituting (1)} \\
+>> -\frac{t}{\ln t + c}&= y+1 \qquad&&\Big\vert -1 \\
+>> -\frac{t}{\ln t + c}-1&= y  \\
+>>\end{alignat}$$
+>>
 
 >[!example] Exercises
 >>[!example] Find all solution $y$ to the ODE $y' = \frac{t^2}{y}$. Express the solutions in explicit form.
+>>Rearranging the equation gives
+>>$$\begin{align}
+>> y'y = t^2
+>>\end{align}$$
+>>which is a [[First Order ODEs#^defSeparableDifferentialEquation | separable equation]]. We integrate both sides and have
+>>$$\begin{align}
+>> \int y \, dy &= \int t^2 \, dt \\
+>> \frac{1}{2}y^2 &= \frac{1}{3}t^3 + c \tag{Explicit Form}\\
+>> y  &= \pm\sqrt{ \frac{2}{3}t ³ + 2c } \tag{Implicit Form}
+>>\end{align}$$
 >
 >>[!example] Find every solution $y$ of the ODE $3t^2+4y^3y'-1+y'=0$. Leave the solution in implicit form.
+>> We rearrange
+>> $$\begin{alignat}{2}
+>> 3t^2+4y^3y'-1+y'&=0 \qquad&&\Big\vert -3t²+1 \\
+>> 4y^3y'+y'&=1 - 3t^2 \qquad&&\\
+>> y'\underbrace{ (4y^3+1) }_{ h(y) }&=\underbrace{ 1 - 3t^2 }_{ g(t) } \qquad&&\\
+>>\end{alignat}$$
+>>which is a [[First Order ODEs#^defSeparableDifferentialEquation | separable equation]]. We integrate both sides and have
+>>$$\begin{alignat}{2}
+>>\int 4y^3 + 1 \, dy &= \int 1-3t^2 \, dt  +c \\
+>>y^4 + y &= t-t^3  +c \tag{Implicit Form}\\
+>>\end{alignat}$$
 >
 >>[!example] Find the solution $y$ to the IVP $y'=t^2y^2$ with $y(0)=1$
+>>First we separate variables and solve by integrating both sides
+>>$$\begin{alignat}{2}
+>> y' &= t^2y^2 \qquad&&\Big\vert :y^2 \\
+>> y'y^{-2} &= t^2 \qquad&& \\
+>> \int y^{-2} \, dy &= \int t^2 \, dt  +c\qquad&& \\
+>> -\frac{1}{y}  &= \frac{1}{3}t^3  +c \qquad&&\Big\vert \cdot(-1); \; (\,.)^{-1} \\
+>> y &= -\frac{1}{\frac{1}{3}t^3 +c}
+>>\end{alignat}$$
+>>Now solving $y(0)=1$ for $c$
+>>$$\begin{alignat}{2}
+>>1 &= -\frac{1}{\frac{1}{3}0^3 +c} \qquad&& \\
+>>1 &= -\frac{1}{c} \qquad&&\Big\vert \cdot(-1); \; (\,.)^{-1} \\
+>>-1 &= c \qquad&& \\
+>>\end{alignat}$$
+>>For the IVP we have
+>>$$\begin{align}
+>> y &= -\frac{1}{\frac{1}{3}t^3 -1} \\
+>> y &= -\frac{3}{t^3 -3} \\
+>> y &= \frac{3}{3-t^3} \\
+>>\end{align}$$
 >
 >>[!example] Find every solution $y$ of the ODE $ty + \sqrt{ 1+t^2 }\;y'=0$
+>> We rearrange
+>> $$\begin{alignat}{2}
+>> ty + \sqrt{ 1+t^2 }\;y'&=0 \qquad&&\Big\vert -ty \\
+>> \sqrt{ 1+t^2 }\;y'&=-ty \qquad&&\Big\vert :\sqrt{ 1+t^2 } \\
+>> y'&=\frac{-t}{\sqrt{ 1+t^2 }}y \qquad&&\\
+>>\end{alignat}$$
+>>Which is an [[First Order ODEs#^defThmSolODEVar|first order ODE with variable coefficients]] with $a(t)=\frac{-t}{\sqrt{ 1+t^2 }}$ and $b(t)=0$. We use the solution formula
+>>$$\begin{align}
+>> y=ce^{A(t)} + \underbrace{ e^{A(t)} \int e^{-A(t)}b(t) \, dt }_{ =0 }
+>>\end{align}$$
+>>with
+>>$$A(t) = \int a(t) \, dt $$
+>>We solve $A(t)$ and rewrite therefore
+>>$$\begin{alignat}{2}
+>> \int \frac{-t}{\sqrt{ 1+t^2 }} \, dt  &=\int -t \left(1+t^2\right)^{-1/2} \, dt \\
+>>\end{alignat}$$
+>>Here we use the [[../Calculus/Integration#^thmSubstitutionRuleIndef|substitution method]] with $u=1+t^2$. We write
+>>$$\begin{alignat}{2}
+>> du &= 2t \; dt \qquad&&\Big\vert :(-2) \\
+>> -\frac{1}{2}du &= -t \; dt \qquad&&\\
+>>\end{alignat}$$
+>>We substitute now
+>>$$\begin{align}
+>> \int -t \left(1+t^2\right)^{-1/2} \, dt  &=\int  -\frac{1}{2}u^{-1/2}\, du \\
+>>  &=-\frac{1}{2}\int  u^{-1/2}\, du \\
+>>  &=-\frac{1}{2} \left(2u^{1/2}\right) + c\\
+>>  &=-(1+t^2)^{1/2} + c \tag{Resubstituting}\\
+>>  &=-\sqrt{ 1+t^2 } + \underbrace{ c }_{ =0 } \tag*{$=A(t)$}\\
+>>\end{align}$$
+>>We now insert the found expression into the solution formula
+>>$$\begin{align}
+>>y = ce^{-\sqrt{ 1+t^2 }}
+>>\end{align}$$
 >
 >>[!example] Find every solution $y$ of the Euler homogeneous equation $y' = \frac{y+t}{t}$
 >

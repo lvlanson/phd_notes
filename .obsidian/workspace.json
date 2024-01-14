@@ -87,7 +87,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -189,9 +190,11 @@
   },
   "active": "e02a88fd0e5f9dd5",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
-    "Sources/nagy.pdf",
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+    "Literature/@hornrogara.md",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
+    "Sources/nagy.pdf",
     "Literature/@shao2003.md",
     "Literature/@schmidhuber2015.md",
     "Sources/schmidhuber2015.pdf",
@@ -199,7 +202,6 @@
     "Sources/zotero-182.pdf",
     "Literature/@zotero-182.md",
     "git_branch",
-    "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems.md",
     "Literature/@briggs2019.md",
