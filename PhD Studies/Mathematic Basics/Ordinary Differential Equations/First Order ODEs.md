@@ -1741,23 +1741,42 @@ aliases:
 >>\end{align}$$
 >>Hence, the equation is **exact**.
 
->[!theorem] Theorem Poincaré ([[../../../Sources/nagy.pdf#page=46|Source]]) 
+
+>[!theorem] Theorem Poincaré's Lemma ([[../../../Sources/nagy.pdf#page=46|Source]]) 
 > Let $N,M$ denote continuously differentiable functions on $t,y$. We have
 > $$\begin{alignat}{2}
->\partial_{t}N(t,y) = \partial_{y}M(t,y) \Longleftrightarrow &\psi\in C^2  \\
->& \psi: t,y \mapsto \psi(t,y) \\
+>\partial_{t}N(t,y) = \partial_{y}M(t,y) \Longleftrightarrow &\exists\psi\in C^2  \\
+>& \psi: (t,y) \mapsto \psi(t,y) \\
 >& \text{such that}\\
 >& \partial_{y}\psi(t,y) = N(t,y) \\
 >& \partial_{t} \psi(t,y) = M(t,y))
 >\end{alignat}$$
 >with $C^2$ being the space of twice continuously differentiable functions.
+>>[!proof]- 
+>>$(\Rightarrow)$:
+>> omitted, but is given in [[../../../Sources/rudin1976.pdf|Principles of Mathematical Analysis by Rudin]]
+>>$(\Leftarrow)$:
+>> Assume that $\psi$ is a **potential function** satisfying
+>> $$\begin{align}
+>> N &= \partial_{y}\psi  \\
+>> M &= \partial_{t}\psi \\
+>>\end{align}$$
+>>$\psi$ is twice differentiable, hence we can further differentiate $N$ and $M$. Therefore, we write
+>>$$\begin{align}
+>>\partial_{t} N = \partial_{t}\partial_{y}\psi = \partial_{y}\partial_{t}\psi = \partial_{y}M \tag*{$\square$}
+>>\end{align}$$
+
 
 >[!theorem] Theorem Solving Exact Equations ([[../../../Sources/nagy.pdf#page=45|Source]]) 
 > If the differential equation
-> $$N(t,y)y' + M(t,y) = 0$$
+> $$\begin{align}
+>N(t,y)y' + M(t,y) = 0\tag{1}
+>\end{align}$$
 > is **exact**, then it can be written as
 > $$\frac{d\psi}{dt}(t,y(t))=0$$
 > where $\psi$ is called a **potential function** and satisfies
-> $$N = \partial y \psi, \qquad M= \partial_{t}\psi$$
+> $$N = \partial y \psi, \quad M= \partial_{t}\psi$$
 > Therefore, the solutions of the exact equation are given in [[First Order ODEs#^defImplicitExplicit |implicit form]] as
-> $$\psi(t,y(t)) = c, \qquad c\in \mathbb{R}$$
+> $$\psi(t,y(t)) = c, \quad c\in \mathbb{R}$$
+>>[!proof]
+>> Note that equation $(1)$ is an [[First Order ODEs#^7959bc|exact equation]]
