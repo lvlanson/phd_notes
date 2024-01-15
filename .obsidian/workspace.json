@@ -87,8 +87,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -169,7 +168,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -178,22 +177,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "switcher:Open quick switcher": false
     }
   },
   "active": "e02a88fd0e5f9dd5",
   "lastOpenFiles": [
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+    "PhD Studies/To-Do.md",
+    "Literature/@devlin2019.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
-    "Literature/@hornrogara.md",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems.md",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems Preliminaries.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
+    "Literature/@hornrogara.md",
     "Sources/nagy.pdf",
     "Literature/@shao2003.md",
     "Literature/@schmidhuber2015.md",
@@ -203,12 +206,9 @@
     "Literature/@zotero-182.md",
     "git_branch",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
-    "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems.md",
     "Literature/@briggs2019.md",
-    "PhD Studies/To-Do.md",
     "Literature/@albertsson2018.md",
     "Sources/albertsson2018.pdf",
-    "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems Preliminaries.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/State Space Models.md",
     "Sources/briggs2019.pdf",
     "Sources/Calculus_ Early Transcendentals (3rd Ed) -- William L. Briggs, Lyle Cochran, Bernard Gillett, Eric Schulz -- 3, 2018 -- Pearson -- 9780134763644 -- 23b075287bd1a7fb4136be0de8643a48 -- Anna’s Archive.pdf",
@@ -230,7 +230,6 @@
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Screenshot from 2023-12-31 15-43-28.png",
     "PhD Studies/Machine Learning/Network Architectures/Screenshot from 2023-12-31 15-43-28.png",
     "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
-    "Literature/@kalman1960.md",
     "PhD Studies/Machine Learning/Network Architectures/arch.png",
     "ML Programming/PyTorch/Layers/LSTM_gates.png",
     "ML Programming/PyTorch/Layers/LSTM.jpeg",

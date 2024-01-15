@@ -1281,6 +1281,8 @@ aliases:
 >>y-\frac{1}{3}y^3 = \frac{1}{3}t ³ + c
 >>\end{align}$$
 
+^017e13
+
 >[!def] Definition Implicit and Explicit Form ([[../../../Sources/nagy.pdf#page=35|Source]]) 
 > A function $y$ is a solution in <u>**implicit form**</u> of the equation $h(y)y'=g(t)$ iff the function $y$ is solution of the algebraic equation $$H(y(t)) = G(t) + c$$ where $H$ and $G$ are any antiderivatives of $h$ and $g$. In the case that function $H$ is invertible, the solution $y$ above is given in <u>**explicit form**</u> iff is written as 
 > $$y(t) = H^{-1}\big(G(t) + c\big)$$ 
@@ -1502,6 +1504,11 @@ aliases:
 >> \nu^2 &=c_{1}t -1 \qquad&&\Big\vert \sqrt{ (\,.) } \\
 >> \nu &=\pm\sqrt{c_{1}t -1 } 
 >>\end{alignat}$$
+>>Substituting back for $nu = \frac{y}{t}$ we have
+>>$$\begin{alignat}{2}
+>> \frac{y}{t} &=\pm\sqrt{c_{1}t -1 } \qquad&&\Big\vert \cdot t \\
+>> y &=\pm t\sqrt{c_{1}t -1 }  \\
+>>\end{alignat}$$
 >
 >>[!example]- Example Find all solutions $y$ of the differential equation $y' = \frac{t(y+1)+(y+1)^2}{t^2}$
 >> First we show that the given function is a homogeneous function $f(t,y) = \frac{t(y+1)+(y+1)^2}{t^2}$. Therefore, we set $u = y+1 \;\;(1)$.
@@ -1512,7 +1519,7 @@ aliases:
 >>> u' &= y' \\
 >>>\end{align}$$
 >>
->>Substituting  yields
+>>Substituting yields
 >>$$ \begin{align}
 >>u' = \frac{tu+u^2}{t^2} \tag{2}
 >>\end{align}$$
@@ -1549,9 +1556,9 @@ aliases:
 >> -\frac{t}{\ln t + c}&= y+1 \qquad&&\Big\vert -1 \\
 >> -\frac{t}{\ln t + c}-1&= y  \\
 >>\end{alignat}$$
->>
+>
 
->[!example] Exercises
+>[!example]- Exercises
 >>[!example] Find all solution $y$ to the ODE $y' = \frac{t^2}{y}$. Express the solutions in explicit form.
 >>Rearranging the equation gives
 >>$$\begin{align}
@@ -1643,3 +1650,114 @@ aliases:
 >>[!example] Prove that if $y' = f(t,y)$ is an Euler homogeneous equation and $y_1(t)$ is solution, then $y(t) = \frac{1}{k}y_{1}(kt)$ is also a solution for every non-zero $k \in \mathbb{R}$
 >
 >>[!example] Find the explicit solution of the IVP $y' = \frac{4t-6t^2}{y}$ with $y(0)= -3$
+
+## 5 - Exact Differential Equations
+
+>[!remark] Terminology
+>
+| Term                             | Meaning                                                                                                             |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Potential Function $\psi$        | the total derivative of a function                                                                                  |
+| Integrating Factor               | Is a function to transform a semi-exact equation into an exact equation                                             |
+| Exact Differential Equation      | it is a potential function, i.e. a total derivative of a function                                                   |
+| Semi-Exact Differential Equation | is a function, which is not exact yet, but can be transformed to be exact by multiplying with an integrating factor |
+
+
+>[!remark]-
+>Linear differential equations are special case of semi-exact equations. 
+
+>[!def] Definition Exact Equation ([[../../../Sources/nagy.pdf#page=44|Source]]) 
+>An **exact** differential equation for $y$ is
+>$$N(t,y)y' + M(t,y) = 0$$
+>where the functions $N$ and $M$ satisfy
+>$$\partial_{t}N(t,y) = \partial_{y} M(t,y)$$
+>>[!note]- Note on Notation
+>>$$\begin{align}
+>> \partial_{t}N &= \frac{\partial N}{\partial t}  \\
+>> \partial_{y}N &= \frac{\partial M}{\partial y}
+>>\end{align}$$
+>
+>>[!example]- Example Separable Equations being exact
+>> Recall [[First Order ODEs#^defSeparableDifferentialEquation | separable equations]] and their [[First Order ODEs#^017e13|solutions]]. Therefore, let 
+>> $$h(y)y'(t) = g(t)$$
+>> We rewrite the equation such that we have the **exact** form, i.e.
+>> $$h(y)y'(t)-g(t) = 0$$
+>> Now we denote
+>> $$\begin{align}
+>> N(t,y) &= h(y) \\
+>> M(t,y) &= g(t)
+>>\end{align} $$
+>>Determining the partial derivatives and selecting the deriving variable properly gives
+>>$$\begin{align}
+>> \partial_t N(t,y) &= 0  \\
+>> \partial_{y} M(t,y) &= 0
+>>\end{align}$$
+>>Clearly, we have
+>>$$ \partial_t N(t,y) = \partial_{y} M(t,y)$$
+>>Therefore, separable equations are exact equations.
+>
+>>[!example]- Example Linear Differential Equations being not exact
+>>Recall [[First Order ODEs#^defThmSolODEVar| Linear Differential Equations with variable coefficients]]. We denote them with
+>>$$ y'(t) = a(t)y(t)+b(t)\qquad a(t)\neq 0$$
+>>We rewrite again to gain the **exact** form
+>>$$ y' - a(t)y - b(t) = 0$$
+>>We denote
+>>$$\begin{align}
+>> N(t,y) &= 1  \\
+>> M(t,y) &= a(t)y - b(t)
+>>\end{align}$$
+>> Checking the conditions gives
+>> $$\begin{align}
+>> \partial_{t} N(t,y) &= 0 \\
+>> \partial_{y} M(t,y) &= -a(t)
+>>\end{align}$$
+>>Hence, we from $\partial_{t} N(t,y) \neq \partial_{y} M(t,y)$ we can conclude linear differential equations are not exact differential equations.
+>
+>>[!example]- Example Non-separable Differential Equations being exact
+>>Let $$2tyy' + 2t + y^2 = 0$$
+>>We denote
+>>$$\begin{align}
+>> N(t,y) &= 2ty  \\
+>> M(t,y) &= 2t+y^2
+>>\end{align}$$
+>>Determining the partial derivatives gives
+>>$$\begin{align}
+>> \partial_{t} N(t,y)&=2y \\
+>> \partial_{y}M(t,y)&=2y
+>>\end{align}$$
+>>Since the partial derivatives match, we can conclude the given example is an exact equation.
+>
+>>[!example]- Example Show whether $\sin(t)y'+t^2e^yy'-y'=-y\cos(t)-2te^y$ is exact or not.
+>>First, we rearrange to correctly identify the necessary terms
+>>$$\begin{alignat}{2}
+>> \sin(t)y'+t^2e^yy'-y'&=-y\cos(t)-2te^y \\
+>> y'\big(\sin(t)+t^2e^y-1\big)&=-y\cos(t)-2te^y \qquad&&\Big\vert +y\cos (t)+2te^y\\
+>> y'\underbrace{ \big(\sin(t)+t^2e^y-1\big) }_{ =N(t,y) } +\underbrace{ \big(- y\cos(t)-2te^y\big) }_{ =M(t,y) }&=0
+>>\end{alignat}$$
+>>Computing the partial derivatives will show if the equation is **exact**.
+>>$$\begin{align}
+>> \partial_{t}N(t,y) &= \cos (t) + 2te^y
+>> \partial_{y}M(t,y) &= \cos (t) + 2te^y
+>>\end{align}$$
+>>Hence, the equation is **exact**.
+
+>[!theorem] Theorem Poincaré ([[../../../Sources/nagy.pdf#page=46|Source]]) 
+> Let $N,M$ denote continuously differentiable functions on $t,y$. We have
+> $$\begin{alignat}{2}
+>\partial_{t}N(t,y) = \partial_{y}M(t,y) \Longleftrightarrow &\psi\in C^2  \\
+>& \psi: t,y \mapsto \psi(t,y) \\
+>& \text{such that}\\
+>& \partial_{y}\psi(t,y) = N(t,y) \\
+>& \partial_{t} \psi(t,y) = M(t,y))
+>\end{alignat}$$
+>with $C^2$ being the space of twice continuously differentiable functions.
+
+>[!theorem] Theorem Solving Exact Equations ([[../../../Sources/nagy.pdf#page=45|Source]]) 
+> If the differential equation
+> $$N(t,y)y' + M(t,y) = 0$$
+> is **exact**, then it can be written as
+> $$\frac{d\psi}{dt}(t,y(t))=0$$
+> where $\psi$ is called a **potential function** and satisfies
+> $$N = \partial y \psi, \qquad M= \partial_{t}\psi$$
+> Therefore, the solutions of the exact equation are given in [[First Order ODEs#^defImplicitExplicit |implicit form]] as
+> $$\psi(t,y(t)) = c, \qquad c\in \mathbb{R}$$
