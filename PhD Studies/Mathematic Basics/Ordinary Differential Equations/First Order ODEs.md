@@ -1780,7 +1780,7 @@ aliases:
 > is **exact**, then it can be written as
 > $$\frac{d\psi}{dt}(t,y(t))=0$$
 > where $\psi$ is called a **potential function** and satisfies
-> $$N = \partial y \psi, \quad M= \partial_{t}\psi$$
+> $$N = \partial_{y} \psi, \quad M= \partial_{t}\psi$$
 > Therefore, the solutions of the exact equation are given in [[First Order ODEs#^defImplicitExplicit |implicit form]] as
 > $$\psi(t,y(t)) = c, \quad c\in \mathbb{R}$$
 >>[!proof]-
