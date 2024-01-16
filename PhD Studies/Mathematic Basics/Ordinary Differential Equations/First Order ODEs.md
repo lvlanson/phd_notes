@@ -1655,12 +1655,14 @@ aliases:
 
 >[!remark] Terminology
 >
-| Term                             | Meaning                                                                                                             |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Potential Function $\psi$        | the total derivative of a function                                                                                  |
-| Integrating Factor               | Is a function to transform a semi-exact equation into an exact equation                                             |
-| Exact Differential Equation      | it is a potential function, i.e. a total derivative of a function                                                   |
-| Semi-Exact Differential Equation | is a function, which is not exact yet, but can be transformed to be exact by multiplying with an integrating factor |
+| Term                             | Meaning                                                                                                                                                                                                     |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Potential Function $\psi$        | the total derivative of a function                                                                                                                                                                          |
+| Integrating Factor               | Is a function to transform a semi-exact equation into an exact equation                                                                                                                                     |
+| Exact Differential Equation      | it is a potential function, i.e. a total derivative of a function                                                                                                                                           |
+| Semi-Exact Differential Equation | is a function, which is not exact yet, but can be transformed to be exact by multiplying with an integrating factor                                                                                         |
+| Total Derivative                 | Taking the derivative of a **multivariate function** with respect to all of the dependent variables                                                                                                         |
+| Total $t$-Derivative             | Taking the derivative of a **multivariate function** with respect to $t$ where all dependent variables not only directly depend on $t$, but also have indirect dependencies through other variables on $t$. | 
 
 
 >[!remark]-
@@ -1753,18 +1755,21 @@ aliases:
 >\end{alignat}$$
 >with $C^2$ being the space of twice continuously differentiable functions.
 >>[!proof]- 
->>$(\Rightarrow)$:
->> omitted, but is given in [[../../../Sources/rudin1976.pdf|Principles of Mathematical Analysis by Rudin]]
->>$(\Leftarrow)$:
->> Assume that $\psi$ is a **potential function** satisfying
->> $$\begin{align}
->> N &= \partial_{y}\psi  \\
->> M &= \partial_{t}\psi \\
->>\end{align}$$
->>$\psi$ is twice differentiable, hence we can further differentiate $N$ and $M$. Therefore, we write
->>$$\begin{align}
->>\partial_{t} N = \partial_{t}\partial_{y}\psi = \partial_{y}\partial_{t}\psi = \partial_{y}M \tag*{$\square$}
->>\end{align}$$
+>>>$(\Rightarrow)$
+>>> omitted, but is given in [[../../../Sources/rudin1976.pdf|Principles of Mathematical Analysis by Rudin]]
+>>
+>>>$(\Leftarrow)$
+>>> Assume that $\psi$ is a **potential function** satisfying
+>>> $$\begin{align}
+>>> N &= \partial_{y}\psi  \\
+>>> M &= \partial_{t}\psi \\
+>>>\end{align}$$
+>>>$\psi$ is twice differentiable, hence we can further differentiate $N$ and $M$. Therefore, we write
+>>>$$\begin{align}
+>>>\partial_{t} N = \partial_{t}\partial_{y}\psi = \partial_{y}\partial_{t}\psi = \partial_{y}M \tag*{$\square$}
+>>>\end{align}$$
+
+^0207e0
 
 
 >[!theorem] Theorem Solving Exact Equations ([[../../../Sources/nagy.pdf#page=45|Source]]) 
@@ -1778,5 +1783,20 @@ aliases:
 > $$N = \partial y \psi, \quad M= \partial_{t}\psi$$
 > Therefore, the solutions of the exact equation are given in [[First Order ODEs#^defImplicitExplicit |implicit form]] as
 > $$\psi(t,y(t)) = c, \quad c\in \mathbb{R}$$
->>[!proof]
->> Note that equation $(1)$ is an [[First Order ODEs#^7959bc|exact equation]]
+>>[!proof]-
+>> Note that equation $(1)$ is an [[First Order ODEs#^7959bc|exact equation]]. Hence, the condition of [[First Order ODEs#^0207e0 | Poincaré's Lemma]] hold. Therefore, we can state
+>> $$\begin{align}
+>> N &= \partial_{y} \psi \\M &= \partial_{t}\psi
+>>\end{align}$$
+>>We can rewrite $(1)$ with
+>>$$\begin{alignat}{2}
+>> 0 &= N(t,y)y' &&+ M(t,y) \\
+>>   &= \Big(\partial_{y}\psi(t,y)\Big) y' &&+ \partial_{t}\psi(t,y) \tag{2}\\
+>>   &= \frac{d}{dt} \psi(t, y(t)) \tag{3}
+>>\end{alignat}$$
+>>Note, equation $(2)$ is the form of the _chain rule_ applied on equation $(3)$, i.e. $\frac{d}{dx}f(g(x))= \frac{df}{dg} \frac{dg}{dx}$, since one variable is a function of $t$ itself, i.e. $y(t)$.  Hence, $(3)$ is a total $t$-derivative and is therefore simple to integrate.
+>>$$ \begin{align}
+>> \int \frac{d}{dt} \psi(t, y(t)) \, dt  &= \int 0 \, dt \\
+>> \psi(t,y(t)) &= c \tag*{$\square$}
+>>\end{align}$$
+>>
