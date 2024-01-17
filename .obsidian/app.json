@@ -15,7 +15,9 @@
     "antiderivatives",
     "Resubstituting",
     "ntiderivatives",
-    "thermodynamical"
+    "thermodynamical",
+    "extremum",
+    "Rolle"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,

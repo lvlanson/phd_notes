@@ -29,7 +29,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
                 "mode": "source",
                 "source": true
               }
@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
                 "mode": "preview",
                 "source": true
               }
@@ -123,7 +123,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 210.5
+    "width": 426.5
   },
   "right": {
     "id": "93b677ed21c6c6cb",
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/apostol1967.pdf",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/apostol1967.pdf",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/apostol1967.pdf"
+                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md"
               }
             }
           },
@@ -219,52 +219,22 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "floating": {
-    "id": "e2d0c6c93ae8e3f5",
-    "type": "floating",
-    "children": [
-      {
-        "id": "e5b44b5bffa81b06",
-        "type": "window",
-        "children": [
-          {
-            "id": "c088f8e782f3bc20",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "a8d2af5a0f31fb2e",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Sources/apostol1967.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 768,
-        "y": 336,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "a8d2af5a0f31fb2e",
+  "active": "ec9d5a586b961eb7",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
-    "Sources/apostol1967.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/figures/mean_value_theorem_real.png",
+    "PhD Studies/Mathematic Basics/Calculus/figures/rolles_theorem.png",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+    "Excalidraw/Drawing 2024-01-17 18.47.08.excalidraw.md",
+    "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
+    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+    "PhD Studies/Mathematic Basics/Calculus/figures",
+    "Sources/apostol1967.pdf",
     "PhD Studies/Mathematic Basics/Untitled",
     "Literature/@apostol1967.md",
-    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
     "Sources/zotero-182.pdf",
     "Zwischenbericht.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/Mahalabonis Distance.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
@@ -276,7 +246,6 @@
     "Sources/rudin1976.pdf",
     "Literature/@brogan1991.md",
     "Literature/@hornrogara.md",
-    "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
     "Sources/nagy.pdf",
     "Literature/@shao2003.md",
     "Literature/@schmidhuber2015.md",
@@ -289,8 +258,6 @@
     "PhD Studies/To-Do.md",
     "Literature/@albertsson2018.md",
     "Sources/albertsson2018.pdf",
-    "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems Preliminaries.md",
-    "Sources/briggs2019.pdf",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/selective_state_space_model.png",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/closed_loop_control_system.png",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/open_loop_control_system.png",
@@ -299,8 +266,6 @@
     "PhD Studies/Machine Learning/Network Architectures/arch.png",
     "ML Programming/PyTorch/Layers/LSTM_gates.png",
     "ML Programming/PyTorch/Layers/LSTM.jpeg",
-    "PhD Studies/Machine Learning/Network Architectures/Screenshot from 2023-12-15 12-19-54.png",
-    "Reviews/Stance Classification/BERT.png",
     "Untitled.canvas"
   ]
 }
