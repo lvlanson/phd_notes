@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+                "file": "Sources/apostol1967.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+                "file": "Sources/apostol1967.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md"
+                "file": "Sources/apostol1967.pdf"
               }
             }
           },
@@ -219,13 +219,48 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "ec9d5a586b961eb7",
+  "floating": {
+    "id": "e2d0c6c93ae8e3f5",
+    "type": "floating",
+    "children": [
+      {
+        "id": "e5b44b5bffa81b06",
+        "type": "window",
+        "children": [
+          {
+            "id": "c088f8e782f3bc20",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "a8d2af5a0f31fb2e",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/apostol1967.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 768,
+        "y": 336,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "a8d2af5a0f31fb2e",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+    "Sources/apostol1967.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "PhD Studies/Mathematic Basics/Untitled",
     "Literature/@apostol1967.md",
-    "Sources/apostol1967.pdf",
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
     "Sources/zotero-182.pdf",
     "Zwischenbericht.md",

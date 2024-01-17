@@ -4,11 +4,12 @@ aliases:
 ---
 >[!terminology]
 >
->| Term                                            | Meaning                                            |
->| ----------------------------------------------- | -------------------------------------------------- |
->| Real Valued Function $f$                        | $f:\mathbb{R} \rightarrow \mathbb{R}$              |
->| Scalar Valued Function $f$ <br>or Sacalar Field | $f:\mathbb{R} \rightarrow \mathbb{R}^m$ with $m>1$ |
->| Vector Valued Function $f$ <br>or Vector Field  | $\mathbf{f}:\mathbb{R}^n \rightarrow \mathbb{R}^m$ with $m,n > 1$                                                   |
+| Term                                            | Meaning                                                                            |
+| ----------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Real Valued Function $f$                        | $f:\mathbb{R} \rightarrow \mathbb{R}$                                              |
+| Scalar Valued Function $f$ <br>or Sacalar Field | $f:\mathbb{R} \rightarrow \mathbb{R}^m$ with $m>1$                                 |
+| Vector Valued Function $f$ <br>or Vector Field  | $\mathbf{f}:\mathbb{R}^n \rightarrow \mathbb{R}^m$ with $m,n > 1$                  |
+| Components                                      | If $\mathbf{f}$ is a vector field, then $f_i \in \mathbf{f}$ is called a component | 
 
 >[!def] Definition Open Ball ([[../../../Sources/apostol1967.pdf#page=266|Source]])
 >Let $\mathbf{a} \in \mathbb{R}^n$ with $r>0$. The set $\mathbf{x} \in\mathbb{R}^n$ satisfying
@@ -33,3 +34,35 @@ aliases:
 
 >[!def] Definition Boundary Point ([[../../../Sources/apostol1967.pdf#page=267|Source]])
 >A point $\mathbf{a} \in \mathbb{R}^n$ is said to be a **boundary point** of $S$ if it's neither an interior nor exterior point of $S$. The set of all boundary points of $S$ is denoted as $$ \partial S$$
+
+>[!def] Definition Derivative of a Scalar Field with Respect to a Vector
+> Let 
+> - $f: S \rightarrow \mathbb{R}^n$  be a scalar field with $S \subseteq \mathbb{R}^n$
+> - $\mathbf{a} \in S$ interior point of $S$
+> - $\mathbf{y} \in \mathbb{R}^n$ an arbitrary point
+> - $h \in \mathbb{R}$ with $h \neq 0$
+>
+>The derivative of $f$ at $\mathbf{a}$ with respect to $\mathbf{y}$ is denoted by
+>$$f'(\mathbf{a}; \mathbf{y}) = \lim_{ h \to 0 } \frac{f(\mathbf{a + h\mathbf{y}}) - f(\mathbf{a})}{h}$$
+>when the limit on the right exists.
+>>[!remark]
+>>1. the quotient is called the **average rate of change** of $f$ over the line segment joining $\mathbf{a}$ to $\mathbf{a} + h\mathbf{y}$ 
+>>2. as $h$ decreases the line segment joins
+>>3. since $\mathbf{a}$ is an interior point, i.e. $\exists r \in \mathbb{R}\,:\; B(\mathbf{a}, r) \in S$ then the line segment $\mathbf{a} + h\mathbf{y}$ will also lie in $S$ if $h$ is chosen such that $\lvert h \rvert \lvert\lvert y \rvert\rvert< r$
+>>4. If $\mathbf{y} = \mathbf{0}$ the difference is $0$ and therefore the limit is $0$, hence $f(\mathbf{a}, 0)$ always exists.
+
+>[!theorem] Theorem
+>Let $g(t) = f(\mathbf{a}+ t\mathbf{y})$. If one of the derivatives exists, then the other also exists, and they are equal, i.e.
+>$$g'(t) = f'(\mathbf{a} + t\mathbf{y}; \mathbf{y})$$
+>In particular, when $t=0$ we have $g'(0) =f'(\mathbf{a}; \mathbf{y})$.
+>>[!proof]
+>>We determine the difference quotient such that
+>>$$\begin{align}
+>> \lim_{ h \to 0 } \frac{g(t+h)-g(t)}{h} &= \lim_{ h \to 0 }\frac{f(\mathbf{a}+t\mathbf{y}+h\mathbf{y})-f(\mathbf{a},t\mathbf{y})}{h} \\ \\
+>> g'(t) &= f'(\mathbf{a}+ t\mathbf{y}; \mathbf{y}) \tag{By Definition}  \\
+>> \,\tag*{$\square$}
+>>\end{align}$$
+
+>[!theorem] Mean Value Theorem for Derivatives of Scalar Fields
+>Assume $f'(\mathbf{a}+ t\mathbf{y}; \mathbf{y})$ exists with $0 \geq t \geq 1$. Then for some real number $0 < \Theta < 1$ we have
+>$$f(\mathbf{a}+ )$$
