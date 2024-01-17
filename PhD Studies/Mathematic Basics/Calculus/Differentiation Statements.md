@@ -29,3 +29,6 @@ aliases:
 >> 				   
 >> \end{align}$$
 >^dernatlog
+
+>[!def] Definition Total Derivative [[../../../Sources/apostol1967.pdf#page=280|(Source)]]
+>

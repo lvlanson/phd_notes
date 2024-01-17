@@ -184,6 +184,18 @@
       "injectColor": true,
       "noTitle": false,
       "copy": false
+    },
+    "terminology": {
+      "type": "terminology",
+      "color": "150, 150, 150",
+      "icon": {
+        "name": "pen-nib",
+        "type": "font-awesome"
+      },
+      "command": true,
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
     }
   },
   "syntaxHighlight": false,

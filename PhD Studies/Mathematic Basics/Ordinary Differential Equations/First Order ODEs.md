@@ -1799,4 +1799,75 @@ aliases:
 >> \int \frac{d}{dt} \psi(t, y(t)) \, dt  &= \int 0 \, dt \\
 >> \psi(t,y(t)) &= c \tag*{$\square$}
 >>\end{align}$$
+>
+>>[!remark] Remark Background and Geometrical Interpretation of Exact Equations
+>> Exact equations come up frequently in physics and engineering. We denote $\psi(x,y)$ as the potential function being dependent on $x$ and $y$. The naming of the potential function with respect to physics and engineering suggests the it being connected to calculation of some energy or electrical potentials. See the following example
+>> $$ \psi(x,y) = x^2 + y^2$$
+>> ```tik
+>>\usepackage{pgfplots}
+>>\pgfplotsset{compat=1.16}
 >>
+>>\begin{document}
+>>\begin{tikzpicture}
+>>\begin{axis}[colormap/viridis]
+>>\addplot3[
+>>	surf,
+>>	samples=18,
+>>	domain=-3:3
+>>]
+>>{x^2 + y^2};
+>>\end{axis}
+>>\end{tikzpicture}
+>>
+>>\end{document}
+>> ```
+>> <div align="center">Figure 1 Plot of the potential function</div>
+>> 
+>> Taking the total derivative of the potential function gives
+>> $$\begin{align}
+>> \frac{d\,\psi(x,y)}{d x} &= \frac{\partial \psi}{\partial x} dx + \frac{\partial \, \psi}{\partial y}dy  \\
+>> &= \partial_{x} dx + \partial_{y} dy
+>>\end{align}$$
+>
+>>[!example]- Example Find all solutions $y$ to the differential equation $2tyy'+2t+y^2=0$
+>> First we verify that the given equation is **exact**. We have
+>> $$\begin{align}
+>> \underbrace{ 2ty }_{ N(t,y) }y'+\underbrace{2t+y^2 }_{ M(t,y) }&=0  \\ \\
+>> \partial_{t}N&=2y \\
+>> \partial_{y}M&= 2y
+>>\end{align}$$
+>>We can assert the given equation to be **exact**. By [[First Order ODEs#^0207e0 | Poincaré's Lemma]] we know there exists the potential function $\psi$  satisfying
+>>$$\begin{align}
+>> \partial_{y} \psi(t,y) &=N(t,y) \tag{1}\\
+>> \partial_{t} \psi(t,y) &= M(t,y)\tag{2}
+>>\end{align}$$
+>>We now determine the potential function $\psi$ by integrating equation $(1)$ with respect to $y$ and keeping $t$ constant. Hence, we have
+>>$$\begin{align}
+>>\psi(t,y) &= \int 2ty \, dy \\
+>> &= ty^2 + g(t) \tag{3}
+>>\end{align}$$
+>>>[!note] 
+>>>We integrated with respect to $y$. Clearly, $y$ is a function of $t$. Hence the value of $y$ is dependent of $t$. Therefore, we also allow the integration constant to be dependent of $t$. Therefore, we choose it to be the function $g(t)$.
+>>
+>>We use the found expression for the potential function and insert it into equation $(2)$.
+>>$$\begin{align}
+>> \partial_{t} \psi(t,y) &= \partial_{t} \Big(ty^2 + g(t)\Big)  \\
+>> &=y^2 + g'(t) \tag{4}
+>>\end{align}$$
+>>>[!note]
+>>>We treat $y$ as constant, even though it is also a function of $t$. In $(3)$ we already considered the change of rate of change with respect to $y$, that is why we strictly only consider $t$ and $g(t)$ since it is a constants expression with respect to $t$.
+>> 
+>> We now set the found expressions for $\partial_{t}\psi(t,y)$ from equation $(2)$ and $(4)$ equal
+>> $$\begin{alignat}{2}
+>> y^2 + g'(t) &= 2t+y^2 \qquad&&\Big\vert -y^2 \\
+>> g'(t) &= 2t
+>>\end{alignat}$$
+>>Integrating $g'(t)$ yields the missing parameter for equation $(3)$.
+>>$$g(t) = t^2 $$
+>>Inserting the solution for $g(t)$ into $(3)$.
+>>$$\begin{align}
+>> \psi(t,y) = ty^2 + t^2
+>>\end{align}$$
+>>Applying the solution the solution theorem gives
+>>$$ty^2 + t^2 = c$$
+>

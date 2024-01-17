@@ -22,8 +22,22 @@
               "pinned": true
             },
             "group": "1d2597f4fa86fdfb"
+          },
+          {
+            "id": "ec9d5a586b961eb7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+                "mode": "source",
+                "source": true
+              }
+            },
+            "group": "60343f9091bf49dc"
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "d0adceee64becfe7",
@@ -44,8 +58,22 @@
               "pinned": true
             },
             "group": "1d2597f4fa86fdfb"
+          },
+          {
+            "id": "ba3ba12eefe35aeb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+                "mode": "preview",
+                "source": true
+              }
+            },
+            "group": "60343f9091bf49dc"
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -111,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -151,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md"
+                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md"
               }
             }
           },
@@ -191,15 +219,27 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e02a88fd0e5f9dd5",
+  "active": "ec9d5a586b961eb7",
   "lastOpenFiles": [
-    "Dokumentation.md",
+    "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+    "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+    "PhD Studies/Mathematic Basics/Untitled",
+    "Literature/@apostol1967.md",
+    "Sources/apostol1967.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+    "Sources/zotero-182.pdf",
+    "Zwischenbericht.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/Mahalabonis Distance.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/1 - Maximum Inner Product Search.md",
+    "Dokumentation.md",
     "Literature/@rudin1976.md",
     "Sources/rudin1976.pdf.crdownload",
     "Sources/rudin1976.pdf",
     "Literature/@brogan1991.md",
-    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
     "Literature/@hornrogara.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
     "Sources/nagy.pdf",
@@ -207,31 +247,18 @@
     "Literature/@schmidhuber2015.md",
     "Sources/schmidhuber2015.pdf",
     "ML Programming/PyTorch/Layers/LSTM.md",
-    "Sources/zotero-182.pdf",
     "Literature/@zotero-182.md",
     "git_branch",
-    "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems.md",
     "Literature/@briggs2019.md",
     "PhD Studies/To-Do.md",
     "Literature/@albertsson2018.md",
     "Sources/albertsson2018.pdf",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems Preliminaries.md",
-    "PhD Studies/Machine Learning/Network Architectures/Mamba/State Space Models.md",
     "Sources/briggs2019.pdf",
-    "Sources/Calculus_ Early Transcendentals (3rd Ed) -- William L. Briggs, Lyle Cochran, Bernard Gillett, Eric Schulz -- 3, 2018 -- Pearson -- 9780134763644 -- 23b075287bd1a7fb4136be0de8643a48 -- Anna’s Archive.pdf",
-    "Literature/@zotero-171.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection.md",
-    "Literature/@guo2020.md",
-    "PhD Studies/Mathematic Basics/Statistics/Distributions/Bernoulli Distribution.md",
-    "PhD Studies/Mathematic Basics/Calculus",
-    "PhD Studies/Mathematic Basics/Untitled.md",
-    "Literature/@nagy.md",
-    "Literature/@zabczyk2008.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/selective_state_space_model.png",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/closed_loop_control_system.png",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/open_loop_control_system.png",
-    "Literature/@gu2022.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Screenshot from 2023-12-31 15-43-28.png",
     "PhD Studies/Machine Learning/Network Architectures/Screenshot from 2023-12-31 15-43-28.png",
     "PhD Studies/Machine Learning/Network Architectures/arch.png",
