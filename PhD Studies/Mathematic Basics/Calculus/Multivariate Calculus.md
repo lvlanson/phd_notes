@@ -55,7 +55,7 @@ aliases:
 >Let $g(t) = f(\mathbf{a}+ t\mathbf{y})$. If one of the derivatives exists, then the other also exists, and they are equal, i.e.
 >$$g'(t) = f'(\mathbf{a} + t\mathbf{y}; \mathbf{y})$$
 >In particular, when $t=0$ we have $g'(0) =f'(\mathbf{a}; \mathbf{y})$.
->>[!proof]
+>>[!proof]-
 >>We determine the difference quotient such that
 >>$$\begin{align}
 >> \lim_{ h \to 0 } \frac{g(t+h)-g(t)}{h} &= \lim_{ h \to 0 }\frac{f(\mathbf{a}+t\mathbf{y}+h\mathbf{y})-f(\mathbf{a},t\mathbf{y})}{h} \\ \\
@@ -64,5 +64,56 @@ aliases:
 >>\end{align}$$
 
 >[!theorem] Mean Value Theorem for Derivatives of Scalar Fields ([[../../../Sources/apostol1967.pdf#page=279|Source]])
->Assume $f'(\mathbf{a}+ t\mathbf{y}; \mathbf{y})$ exists with $0 \geq t \geq 1$. Then for some real number $0 < \Theta < 1$ we have
+>Assume $f'(\mathbf{a}+ t\mathbf{y}; \mathbf{y})$ exists with $t \in[0,1]$. Then for some real number $\Theta \in (0,1)$ we have
 >$$f(\mathbf{a}+ \mathbf{y})-f(\mathbf{a}) = f'(\mathbf{z}; \mathbf{y}), \qquad \text{with } \mathbf{z} = \mathbf{a} + \Theta \mathbf{y}$$
+>>[!proof]-
+>>We will use the same ideas as in the [[Differentiation#^71d429|real valued mean value theorem]]. We denote the real value function 
+>>$$ g(t) = f(\mathbf{a}+t\mathbf{y})$$
+>>We apply the [[Differentiation#^71d429|mean value theorem]] on $g$ over the interval $[0,1]$, such that we have for $\Theta \in (0,1)$
+>>$$\begin{align}
+>> g'(\Theta)= g(1)- g(0) \tag{1}
+>>\end{align}$$
+>>Note, the mappings
+>>$$\begin{align}
+>> g(1) &= f(\mathbf{a} + \mathbf{y}) \\
+>> g(0) &= f(\mathbf{a}) \\
+>> g(1)- g(0) &= f(\mathbf{a}+\mathbf{y})- f(\mathbf{a}) \tag{2}
+>>\end{align}$$
+>>Hence, $(1)$ and $(2)$ conclude
+>>$$\begin{align}
+>> g'(\Theta) &= f(\mathbf{a}+\mathbf{y})- f(\mathbf{a}) \tag*{$\square$}
+>>\end{align}$$
+>
+>>[!note]-
+>>Usually instead of $\mathbf{a}+\mathbf{y}$ the variable $\mathbf{b}$ is used, as it can also be seen in the [[Differentiation#^71d429|real valued mean value theorem]].
+
+>[!def] Definition Directional Derivative ([[../../../Sources/apostol1967.pdf#page=279|Source]])
+>If $\mathbf{y} \in \mathbb{R}^n$ is a normed vector, i.e. $\lvert\lvert y \rvert\rvert = 1$ The derivative $f'(\mathbf{a}; \mathbf{y})$ is called **the directional derivative of $f$ at $\mathbf{a}$ in the direction of $\mathbf{y}$**.
+
+^c59e8c
+
+>[!def] Definition Partial Derivative ([[../../../Sources/apostol1967.pdf#page=279|Source]])
+> The partial derivative is a particular form of the [[Multivariate Calculus#^c59e8c | directional derivative]], with $\mathbf{y} \in \mathbb{R}^n$ being the unit vector $\mathbf{e}_{k}$. Therefore, the partial derivative with respect to $\mathbf{e}_{k}$can be given as
+> $$D_{k}f(\mathbf{a})=f'(\mathbf{a}; \mathbf{e}_{k})$$
+> The following notations can also be used for the partial derivative $D_kf(\mathbf{a})$:
+> $$\begin{align}
+> D_{k}f&(a_{1}, \ldots, a_{n}) \\ \\
+> \frac{\partial f}{\partial x_{k}}&(a_{1}, \dots, a_{n})\\ \\
+> f'_{x_{k}}&(a_{1}, \dots, a_{n})
+>\end{align}$$
+
+>[!def] Definition Higher Order Partial Derivatives ([[../../../Sources/apostol1967.pdf#page=280|Source]])
+> Given some scalar field $D_{1}f, \dots, D_{n}f$. The partial derivative of such a scalar field (being already a partial derivative) is called a **second-order partial derivative of $f$**.
+>>[!remark]
+>>For functions of two variables, there are four second-order partial derivatives
+>>$$\begin{align}
+>> D_{1}(D_{1}f) &=\frac{\partial^2f}{\partial x^2} \\
+>> D_{1}(D_{2}f) &=\frac{\partial^2f}{\partial x \partial y} \\
+>> D_{2}(D_{1}f) &=\frac{\partial^2f}{\partial y \partial x} \\
+>> D_{2}(D_{2}f) &=\frac{\partial^2f}{\partial y^2} \\
+>>\end{align}$$
+
+>[!def] Definition Total Derivative ([[../../../Sources/apostol1967.pdf#page=283|Source]])
+>
+>>[!remark]
+>>The total derivative

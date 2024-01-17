@@ -29,7 +29,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
                 "mode": "source",
                 "source": true
               }
@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
                 "mode": "preview",
                 "source": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md"
+                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md"
               }
             }
           },
@@ -219,18 +219,54 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
+  "floating": {
+    "id": "64f6c46911d35139",
+    "type": "floating",
+    "children": [
+      {
+        "id": "272b6cbc95520956",
+        "type": "window",
+        "children": [
+          {
+            "id": "ff5cc9c5c156bcee",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b307c0a627e0deab",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/apostol1967.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 28,
+        "y": 560,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "ec9d5a586b961eb7",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Calculus/figures/mean_value_theorem_real.png",
-    "PhD Studies/Mathematic Basics/Calculus/figures/rolles_theorem.png",
+    "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+    "Sources/apostol1967.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+    "PhD Studies/Mathematic Basics/Calculus/figures/mean_value_theorem_real.png",
+    "PhD Studies/Mathematic Basics/Calculus/figures/rolles_theorem.png",
     "Excalidraw/Drawing 2024-01-17 18.47.08.excalidraw.md",
-    "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
     "PhD Studies/Mathematic Basics/Calculus/figures",
-    "Sources/apostol1967.pdf",
     "PhD Studies/Mathematic Basics/Untitled",
     "Literature/@apostol1967.md",
     "Sources/zotero-182.pdf",
@@ -256,7 +292,6 @@
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems.md",
     "Literature/@briggs2019.md",
     "PhD Studies/To-Do.md",
-    "Literature/@albertsson2018.md",
     "Sources/albertsson2018.pdf",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/selective_state_space_model.png",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/closed_loop_control_system.png",
