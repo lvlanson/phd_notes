@@ -43,13 +43,15 @@ aliases:
 > - $h \in \mathbb{R}$ with $h \neq 0$
 >
 >The derivative of $f$ at $\mathbf{a}$ with respect to $\mathbf{y}$ is denoted by
->$$f'(\mathbf{a}; \mathbf{y}) = \lim_{ h \to 0 } \frac{f(\mathbf{a + h\mathbf{y}}) - f(\mathbf{a})}{h}$$
+>$$f'(\mathbf{a}; \mathbf{y}) = \lim_{ h \to 0 } \frac{f(\mathbf{a} + h\mathbf{y}) - f(\mathbf{a})}{h}$$
 >when the limit on the right exists.
 >>[!remark]
 >>1. the quotient is called the **average rate of change** of $f$ over the line segment joining $\mathbf{a}$ to $\mathbf{a} + h\mathbf{y}$ 
 >>2. as $h$ decreases the line segment joins
 >>3. since $\mathbf{a}$ is an interior point, i.e. $\exists r \in \mathbb{R}\,:\; B(\mathbf{a}, r) \in S$ then the line segment $\mathbf{a} + h\mathbf{y}$ will also lie in $S$ if $h$ is chosen such that $\lvert h \rvert \lvert\lvert y \rvert\rvert< r$
 >>4. If $\mathbf{y} = \mathbf{0}$ the difference is $0$ and therefore the limit is $0$, hence $f(\mathbf{a}, 0)$ always exists.
+
+^c18601
 
 >[!theorem] Theorem ([[../../../Sources/apostol1967.pdf#page=278|Source]])
 >Let $g(t) = f(\mathbf{a}+ t\mathbf{y})$. If one of the derivatives exists, then the other also exists, and they are equal, i.e.
@@ -115,5 +117,54 @@ aliases:
 
 >[!def] Definition Total Derivative ([[../../../Sources/apostol1967.pdf#page=283|Source]])
 >
->>[!remark]
->>The total derivative
+>>[!remark]- Motivation
+>>Recall that the derivative in real analysis determines the infinitely small change of a function $f$ around a point $a$. The derivative of a function $f: \mathbb{R} \rightarrow \mathbb{R}$ is defined as
+>>$$\frac{df(x)}{dx} =\lim_{ h \to 0 } \frac{f(x + h) - f(x)}{h}$$
+>>It determines the change of values around the point $x$ as we close in on the mapping of the change. Now denote
+>>$$E(a,h) = \frac{f(a)+h -f(a)}{h}-f'(a)$$
+>>with $h \neq 0$ and $E(a,0)=0$. This formula denotes the difference between the first derivative and the change of the mapping $f$ with respect to the change $h$ on $a$. Rearranging this formula yields
+>>$$f(a+h)= f(a)+f'(a)h + hE(a,h)$$
+>>Note, this equation is the first order [[Differentiation#^916fa1 | Taylor series expansion ]] of $f$ centered at $a$. Note, this equation now holds for $h=0$. Further, the term $hE(a,h)$ denotes the error committed by the approximation of the Taylor series expansion. As $h\to_{0}$ the error decreases as well.
+>
+>Let 
+>- $f: S \to \mathbb{R}$ be a scalar field with $S \subseteq \mathbb{R}^n$
+>- $\mathbf{a} \in S \subseteq \mathbb{R}^n$ be an interior point of $S$
+>- $B(\mathbf{a}; r)$ be an $n$-ball in $S$
+>- $\mathbf{v} \in \mathbb{R}^n$ with $\lvert\lvert v \rvert\rvert<r$ such that $(\mathbf{a}+\mathbf{v})\in B(\mathbf{a}; r)$
+>
+>We say $f$ is differentiable at $\mathbf{a}$ if there exists a linear transformation
+>$$T_{\mathbf{a}}: \mathbb{R}^n \to \mathbb{R}$$
+>and a scalar function
+>$$ E:\mathbb{R}^n \times \mathbb{R}^{n} \to \mathbb{R}$$
+>such that
+>$$f(\mathbf{a}+\mathbf{v}) = f(\mathbf{a})+ T_{\mathbf{a}}(\mathbf{v}) + \lvert\lvert \mathbf{v} \rvert\rvert E(\mathbf{a},\mathbf{v})$$
+>where $E(\mathbf{a}, \mathbf{v}) \to 0$ as $\lvert\lvert v \rvert\rvert \to 0$. The linear transformation $T_{\mathbf{a}}$ is called the total derivative of $f$ at $\mathbf{a}$.
+
+>[!theorem] Theorem ([[../../../Sources/apostol1967.pdf#page=284|Source]])
+>Assume $f$ is differentiable at $\mathbf{a}$ with total derivative $T_{\mathbf{a}}$. Then the derivative $f'(\mathbf{a}; \mathbf{y})$ exists for every $\mathbf{y} \in \mathbb{R}^n$, and we have
+>$$T_{\mathbf{a}}(\mathbf{y}) = f'(\mathbf{a}; \mathbf{y})$$
+>Moreover, $f'(\mathbf{a};\mathbf{y})$ is a linear combination of the components of $\mathbf{y}$. We have
+>$$f'(\mathbf{a}; \mathbf{y}) = \sum_{k=1}^n D_{k}f(\mathbf{a})y_{k}$$
+>>[!proof]-
+>> If $\mathbf{y}=\mathbf{0}$ we have $T_{\mathbf{a}}(\mathbf{0})= 0$ due to linearity of $T_{\mathbf{a}}$, as well does $f'(\mathbf{a}, \mathbf{0}) = 0$ by [[Multivariate Calculus#^c18601 | definition]]. Assume now $\mathbf{y}\neq \mathbf{0}$. Since $f$ is differentiable at $\mathbf{a}$ we can state the first order [[Differentiation#^916fa1|Taylor series expansion]] of $f$ around the point $\mathbf{a}$ as
+>> $$\begin{alignat}{3}
+>> f(\mathbf{a} + \mathbf{v}) &= f(\mathbf{a} + \mathbf{v}) &&+ \underbrace{ f'(\mathbf{a} + \mathbf{v}) }_{ T_{\mathbf{a}}(\mathbf{v}) } &&+ \lvert\lvert \mathbf{v} \rvert\rvert E(\mathbf{a, \mathbf{ v}}) \\
+>> &=f(\mathbf{a}) &&+ T_{\mathbf{a}}(\mathbf{v}) &&+ \lvert\lvert \mathbf{v} \rvert\rvert E(\mathbf{a, \mathbf{ v}}) \tag{by definition}
+>>\end{alignat}$$
+>>where $E$ is the error term from the approximation. Note, the error term holds the removed $\mathbf{v}$ from the first term. Now we take $\mathbf{v}=h\mathbf{y}$ with $h \neq 0$ and $\lvert h \rvert\lvert\lvert \mathbf{y} \rvert\rvert < r$, such that the mapping is still contained inside the $n$-ball around $\mathbf{a}$. Note, $T_{\mathbf{a}}$ is linear, i.e.
+>>$$T_{\mathbf{a}}(\mathbf{v})= T_{\mathbf{a}}(h\mathbf{y}) = hT_{\mathbf{a}}(\mathbf{y})$$
+>>Therefore, we write
+>>$$\begin{align}
+>> f(\mathbf{a} + \mathbf{v}) &= f(\mathbf{a}) + T_{\mathbf{a}}(\mathbf{v})+ \lvert\lvert \mathbf{v} \rvert\rvert E(\mathbf{a, \mathbf{ v}})  \\
+>> f(\mathbf{a} +h\mathbf{y}) &= f(\mathbf{a}) + hT_{\mathbf{a}}(\mathbf{y})+ \lvert h \rvert \lvert\lvert \mathbf{y} \rvert\rvert E(\mathbf{a, \mathbf{ v}})  \\
+>> f(\mathbf{a} +h\mathbf{y}) - f(\mathbf{a}) &= hT_{\mathbf{a}}(\mathbf{y})+ \lvert h \rvert \lvert\lvert \mathbf{y} \rvert\rvert E(\mathbf{a, \mathbf{ v}})  \\ \\
+>> \frac{f(\mathbf{a} +h\mathbf{y}) - f(\mathbf{a}) }{h}&= T_{\mathbf{a}}(\mathbf{y})+ \lvert h \rvert \frac{\lvert\lvert \mathbf{y} \rvert\rvert E(\mathbf{a, \mathbf{ v}})}{h}
+>>\end{align}$$
+>> As $h \to 0$ we yield the expression given in the theorem
+>> For the second part we use the linearity of $T_{\mathbf{a}}$ again, hence
+>> $$\begin{align}
+>> T_{\mathbf{a}} &= T_{\mathbf{a}}\left(\sum_{k=1}^n y_{k} \mathbf{e}_{k}\right) \\
+>>  &= \sum_{k=1}^ny_{k}T_{\mathbf{a}}\left(\mathbf{e}_{k}\right) \\
+>>  &= \sum_{k=1}^ny_{k}f'(\mathbf{a}; \mathbf{e}_{k}) \tag{definition partial derivative}\\
+>>  &= \sum_{k=1}^ny_{k}D_{k}f(\mathbf{a}) \tag*{$\square$}\\
+>>\end{align}$$

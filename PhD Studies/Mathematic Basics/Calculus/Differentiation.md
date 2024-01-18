@@ -42,3 +42,10 @@
 >>\end{align}$$
 
 ^71d429
+>[!def] Definition Taylor/Maclaurin Series for a Function ([[../../../Sources/briggs2019.pdf#page=756 | Source]])
+>Suppose the function $f$ has derivatives of all orders on an interval centered at the point $a$. The **Taylor series for $f$ centered at $a$** is
+>$$\sum_{k=0}^\infty \frac{f^{k}(a)}{k!}(x-a)^k= f(a) + f'(a)(x-a)+ \frac{f''(a)}{2!}(x-a)^2 +\dots$$
+>>[!remark]
+>>A Taylor Series centered at $a=0$ is called a Maclaurin series.
+
+^916fa1

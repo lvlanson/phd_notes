@@ -251,15 +251,45 @@
         "height": 800,
         "maximize": true,
         "zoom": 0
+      },
+      {
+        "id": "472395605b7112af",
+        "type": "window",
+        "children": [
+          {
+            "id": "a4f32b97ec6a548f",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b50497d4e893cd49",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/apostol1967.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 2180,
+        "y": 606,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 0
       }
     ]
   },
   "active": "ec9d5a586b961eb7",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
     "Sources/apostol1967.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+    "Sources/briggs2019.pdf",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "PhD Studies/Mathematic Basics/Calculus/figures/mean_value_theorem_real.png",
     "PhD Studies/Mathematic Basics/Calculus/figures/rolles_theorem.png",
@@ -292,7 +322,6 @@
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems.md",
     "Literature/@briggs2019.md",
     "PhD Studies/To-Do.md",
-    "Sources/albertsson2018.pdf",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/selective_state_space_model.png",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/closed_loop_control_system.png",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/figures/open_loop_control_system.png",
