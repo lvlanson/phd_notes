@@ -140,6 +140,8 @@ aliases:
 >$$f(\mathbf{a}+\mathbf{v}) = f(\mathbf{a})+ T_{\mathbf{a}}(\mathbf{v}) + \lvert\lvert \mathbf{v} \rvert\rvert E(\mathbf{a},\mathbf{v})$$
 >where $E(\mathbf{a}, \mathbf{v}) \to 0$ as $\lvert\lvert v \rvert\rvert \to 0$. The linear transformation $T_{\mathbf{a}}$ is called the total derivative of $f$ at $\mathbf{a}$.
 
+^f5793c
+
 >[!theorem] Theorem ([[../../../Sources/apostol1967.pdf#page=284|Source]])
 >Assume $f$ is differentiable at $\mathbf{a}$ with total derivative $T_{\mathbf{a}}$. Then the derivative $f'(\mathbf{a}; \mathbf{y})$ exists for every $\mathbf{y} \in \mathbb{R}^n$, and we have
 >$$T_{\mathbf{a}}(\mathbf{y}) = f'(\mathbf{a}; \mathbf{y})$$
@@ -166,5 +168,8 @@ aliases:
 >> T_{\mathbf{a}} &= T_{\mathbf{a}}\left(\sum_{k=1}^n y_{k} \mathbf{e}_{k}\right) \\
 >>  &= \sum_{k=1}^ny_{k}T_{\mathbf{a}}\left(\mathbf{e}_{k}\right) \\
 >>  &= \sum_{k=1}^ny_{k}f'(\mathbf{a}; \mathbf{e}_{k}) \tag{definition partial derivative}\\
->>  &= \sum_{k=1}^ny_{k}D_{k}f(\mathbf{a}) \tag*{$\square$}\\
+>>  &= \sum_{k=1}^ny_{k}D_{k}f(\mathbf{a}) 
+>>\end{align}$$
+>>$$\begin{align}
+>>\,\tag*{$\square$}\\
 >>\end{align}$$

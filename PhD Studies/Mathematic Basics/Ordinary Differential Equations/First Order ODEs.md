@@ -64,6 +64,8 @@ aliases:
 >>>$$ \begin{align} f(t,y) &= 2y+3 \\ &= 2y(t) + 3 \end{align}$$
 >>>and
 >>>$$ \begin{align} a(t) &=2 \\ b(t) &= 3 \end{align}$$
+>>>![[ODE_example_1.png | center | 500 ]]
+>>>$$\text{Figure: Direction Field of ODE with solutions at } y_{0}=(-20, -15, -10, -5, 0, 5, 10, 15)$$
 >>
 >>>[!example] Example 2 (First Order Linear ODE)
 >>>$$ y' = -\frac{2}{t} y + 4t$$
@@ -71,6 +73,10 @@ aliases:
 >>>$$ \begin{align} f(t,y) &= -\frac{2y}{t} y + 4t \\ &= -\frac{2y(t)}{t} y + 4t \end{align}$$
 >>>and
 >>>$$ \begin{align} a(t) &=-\frac{2}{t} \\ b(t) &= 4t \end{align}$$
+>>>![[Figures/ODE_example_2_t_1.png | center | 500]]
+>>>$$\text{Figure: Direction Field of ODE with solutions at } y_{0}=(-20, -15, -10, -5, 0, 5, 10, 15) \text{ and } t=1$$
+>>>![[Figures/ODE_example_2_t_-1.png | center | 500]]
+>>>$$\text{Figure: Direction Field of ODE with solutions at } y_{0}=(-20, -15, -10, -5, 0, 5, 10, 15) \text{ and } t=-1$$
 >>
 >>>[!example] Example 3 (Nonlinear ODE)
 >>>$$ y' = -\frac{2}{ty} +4t $$
@@ -1653,6 +1659,8 @@ aliases:
 
 ## 5 - Exact Differential Equations
 
+^16963b
+
 >[!remark] Terminology
 >
 | Term                             | Meaning                                                                                                                                                                                                     |
@@ -1743,6 +1751,8 @@ aliases:
 >>\end{align}$$
 >>Hence, the equation is **exact**.
 
+^73ae5d
+
 
 >[!theorem] Theorem Poincaré's Lemma ([[../../../Sources/nagy.pdf#page=46|Source]]) 
 > Let $N,M$ denote continuously differentiable functions on $t,y$. We have
@@ -1778,7 +1788,7 @@ aliases:
 >N(t,y)y' + M(t,y) = 0\tag{1}
 >\end{align}$$
 > is **exact**, then it can be written as
-> $$\frac{d\psi}{dt}(t,y(t))=0$$
+> $$\frac{d}{dt}\psi(t,y(t))=0$$
 > where $\psi$ is called a **potential function** and satisfies
 > $$N = \partial_{y} \psi, \quad M= \partial_{t}\psi$$
 > Therefore, the solutions of the exact equation are given in [[First Order ODEs#^defImplicitExplicit |implicit form]] as
@@ -1803,7 +1813,7 @@ aliases:
 >>[!remark] Remark Background and Geometrical Interpretation of Exact Equations
 >> Exact equations come up frequently in physics and engineering. We denote $\psi(x,y)$ as the potential function being dependent on $x$ and $y$. The naming of the potential function with respect to physics and engineering suggests the it being connected to calculation of some energy or electrical potentials. See the following example
 >> $$ \psi(x,y) = x^2 + y^2$$
->> ```tik
+>> ```tikz
 >>\usepackage{pgfplots}
 >>\pgfplotsset{compat=1.16}
 >>
@@ -1821,13 +1831,23 @@ aliases:
 >>
 >>\end{document}
 >> ```
->> <div align="center">Figure 1 Plot of the potential function</div>
+>> $$\text{Figure Plot of the Potential Function}$$
 >> 
->> Taking the total derivative of the potential function gives
+>> Taking the [[../Calculus/Multivariate Calculus#^f5793c | total derivative]] of the potential function gives
 >> $$\begin{align}
 >> \frac{d\,\psi(x,y)}{d x} &= \frac{\partial \psi}{\partial x} dx + \frac{\partial \, \psi}{\partial y}dy  \\
->> &= \partial_{x} dx + \partial_{y} dy
+>> &= \partial_{x} dx + \partial_{y} dy \\
+>> &= 2x \, dx + 2y \, dy
 >>\end{align}$$
+>>We want to have the form of the [[First Order ODEs#^73ae5d | exact equation]]. Therefore we set it $0$ and divide by $dx$.
+>>$$\begin{align}
+>> 0 &= 2x \, dx + 2y \, dy \qquad&&\Big\vert :dx  \\
+>> 0 &= \underbrace{ 2x }_{ M(t,y) } + \underbrace{ 2y }_{ N(t,y) } \underbrace{ \frac{dy}{dx} }_{ y' }
+>>\end{align}$$
+>>Integrating would yield $C = x^2 + y^2$ again. This can be solved with respect to $y$ with
+>>$$y = \sqrt{ C-x^2 }$$
+>>![[Figures/motivation_example_3d.png]]
+>>$$\text{Figure: Showing } f(x,y)=x^2+y^2 \text{ in purple and solutions to the exact equation in red with } C=1,2,3$$
 >
 >>[!example]- Example Find all solutions $y$ to the differential equation $2tyy'+2t+y^2=0$
 >> First we verify that the given equation is **exact**. We have
@@ -1847,7 +1867,7 @@ aliases:
 >> &= ty^2 + g(t) \tag{3}
 >>\end{align}$$
 >>>[!note] 
->>>We integrated with respect to $y$. Clearly, $y$ is a function of $t$. Hence the value of $y$ is dependent of $t$. Therefore, we also allow the integration constant to be dependent of $t$. Therefore, we choose it to be the function $g(t)$.
+>>>We integrated with respect to $y$. Clearly, $y$ is a function of $t$. Hence, the value of $y$ is dependent of $t$. Therefore, we also allow the integration constant to be dependent of $t$. Therefore, we choose it to be the function $g(t)$.
 >>
 >>We use the found expression for the potential function and insert it into equation $(2)$.
 >>$$\begin{align}
@@ -1855,7 +1875,7 @@ aliases:
 >> &=y^2 + g'(t) \tag{4}
 >>\end{align}$$
 >>>[!note]
->>>We treat $y$ as constant, even though it is also a function of $t$. In $(3)$ we already considered the change of rate of change with respect to $y$, that is why we strictly only consider $t$ and $g(t)$ since it is a constants expression with respect to $t$.
+>>>We treat $y$ as constant, even though it is also a function of $t$. In $(3)$ we already considered the change of rate of change with respect to $y$, that is why we strictly only consider $t$ and $g(t)$ since it is a constant expression with respect to $t$.
 >> 
 >> We now set the found expressions for $\partial_{t}\psi(t,y)$ from equation $(2)$ and $(4)$ equal
 >> $$\begin{alignat}{2}
@@ -1870,4 +1890,3 @@ aliases:
 >>\end{align}$$
 >>Applying the solution the solution theorem gives
 >>$$ty^2 + t^2 = c$$
->

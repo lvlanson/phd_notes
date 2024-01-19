@@ -3853,7 +3853,7 @@ var require_lodash = __commonJS({
           result2.placeholder = curryRight.placeholder;
           return result2;
         }
-        function debounce(func, wait, options) {
+        function debounce2(func, wait, options) {
           var lastArgs, lastThis, maxWait, result2, timerId, lastCallTime, lastInvokeTime = 0, leading = false, maxing = false, trailing = true;
           if (typeof func != "function") {
             throw new TypeError2(FUNC_ERROR_TEXT);
@@ -4033,7 +4033,7 @@ var require_lodash = __commonJS({
             leading = "leading" in options ? !!options.leading : leading;
             trailing = "trailing" in options ? !!options.trailing : trailing;
           }
-          return debounce(func, wait, {
+          return debounce2(func, wait, {
             "leading": leading,
             "maxWait": wait,
             "trailing": trailing
@@ -5047,7 +5047,7 @@ var require_lodash = __commonJS({
         lodash.create = create;
         lodash.curry = curry;
         lodash.curryRight = curryRight;
-        lodash.debounce = debounce;
+        lodash.debounce = debounce2;
         lodash.defaults = defaults;
         lodash.defaultsDeep = defaultsDeep;
         lodash.defer = defer;
@@ -5515,13 +5515,306 @@ var require_lodash = __commonJS({
   }
 });
 
+// node_modules/dotenv/package.json
+var require_package = __commonJS({
+  "node_modules/dotenv/package.json"(exports, module2) {
+    module2.exports = {
+      name: "dotenv",
+      version: "16.3.1",
+      description: "Loads environment variables from .env file",
+      main: "lib/main.js",
+      types: "lib/main.d.ts",
+      exports: {
+        ".": {
+          types: "./lib/main.d.ts",
+          require: "./lib/main.js",
+          default: "./lib/main.js"
+        },
+        "./config": "./config.js",
+        "./config.js": "./config.js",
+        "./lib/env-options": "./lib/env-options.js",
+        "./lib/env-options.js": "./lib/env-options.js",
+        "./lib/cli-options": "./lib/cli-options.js",
+        "./lib/cli-options.js": "./lib/cli-options.js",
+        "./package.json": "./package.json"
+      },
+      scripts: {
+        "dts-check": "tsc --project tests/types/tsconfig.json",
+        lint: "standard",
+        "lint-readme": "standard-markdown",
+        pretest: "npm run lint && npm run dts-check",
+        test: "tap tests/*.js --100 -Rspec",
+        prerelease: "npm test",
+        release: "standard-version"
+      },
+      repository: {
+        type: "git",
+        url: "git://github.com/motdotla/dotenv.git"
+      },
+      funding: "https://github.com/motdotla/dotenv?sponsor=1",
+      keywords: [
+        "dotenv",
+        "env",
+        ".env",
+        "environment",
+        "variables",
+        "config",
+        "settings"
+      ],
+      readmeFilename: "README.md",
+      license: "BSD-2-Clause",
+      devDependencies: {
+        "@definitelytyped/dtslint": "^0.0.133",
+        "@types/node": "^18.11.3",
+        decache: "^4.6.1",
+        sinon: "^14.0.1",
+        standard: "^17.0.0",
+        "standard-markdown": "^7.1.0",
+        "standard-version": "^9.5.0",
+        tap: "^16.3.0",
+        tar: "^6.1.11",
+        typescript: "^4.8.4"
+      },
+      engines: {
+        node: ">=12"
+      },
+      browser: {
+        fs: false
+      }
+    };
+  }
+});
+
+// node_modules/dotenv/lib/main.js
+var require_main = __commonJS({
+  "node_modules/dotenv/lib/main.js"(exports, module2) {
+    var fs = require("fs");
+    var path = require("path");
+    var os = require("os");
+    var crypto = require("crypto");
+    var packageJson = require_package();
+    var version = packageJson.version;
+    var LINE = /(?:^|^)\s*(?:export\s+)?([\w.-]+)(?:\s*=\s*?|:\s+?)(\s*'(?:\\'|[^'])*'|\s*"(?:\\"|[^"])*"|\s*`(?:\\`|[^`])*`|[^#\r\n]+)?\s*(?:#.*)?(?:$|$)/mg;
+    function parse(src) {
+      const obj = {};
+      let lines = src.toString();
+      lines = lines.replace(/\r\n?/mg, "\n");
+      let match;
+      while ((match = LINE.exec(lines)) != null) {
+        const key = match[1];
+        let value = match[2] || "";
+        value = value.trim();
+        const maybeQuote = value[0];
+        value = value.replace(/^(['"`])([\s\S]*)\1$/mg, "$2");
+        if (maybeQuote === '"') {
+          value = value.replace(/\\n/g, "\n");
+          value = value.replace(/\\r/g, "\r");
+        }
+        obj[key] = value;
+      }
+      return obj;
+    }
+    function _parseVault(options) {
+      const vaultPath = _vaultPath(options);
+      const result = DotenvModule.configDotenv({ path: vaultPath });
+      if (!result.parsed) {
+        throw new Error(`MISSING_DATA: Cannot parse ${vaultPath} for an unknown reason`);
+      }
+      const keys = _dotenvKey(options).split(",");
+      const length = keys.length;
+      let decrypted;
+      for (let i = 0; i < length; i++) {
+        try {
+          const key = keys[i].trim();
+          const attrs = _instructions(result, key);
+          decrypted = DotenvModule.decrypt(attrs.ciphertext, attrs.key);
+          break;
+        } catch (error) {
+          if (i + 1 >= length) {
+            throw error;
+          }
+        }
+      }
+      return DotenvModule.parse(decrypted);
+    }
+    function _log(message) {
+      console.log(`[dotenv@${version}][INFO] ${message}`);
+    }
+    function _warn(message) {
+      console.log(`[dotenv@${version}][WARN] ${message}`);
+    }
+    function _debug(message) {
+      console.log(`[dotenv@${version}][DEBUG] ${message}`);
+    }
+    function _dotenvKey(options) {
+      if (options && options.DOTENV_KEY && options.DOTENV_KEY.length > 0) {
+        return options.DOTENV_KEY;
+      }
+      if (process.env.DOTENV_KEY && process.env.DOTENV_KEY.length > 0) {
+        return process.env.DOTENV_KEY;
+      }
+      return "";
+    }
+    function _instructions(result, dotenvKey) {
+      let uri;
+      try {
+        uri = new URL(dotenvKey);
+      } catch (error) {
+        if (error.code === "ERR_INVALID_URL") {
+          throw new Error("INVALID_DOTENV_KEY: Wrong format. Must be in valid uri format like dotenv://:key_1234@dotenv.org/vault/.env.vault?environment=development");
+        }
+        throw error;
+      }
+      const key = uri.password;
+      if (!key) {
+        throw new Error("INVALID_DOTENV_KEY: Missing key part");
+      }
+      const environment = uri.searchParams.get("environment");
+      if (!environment) {
+        throw new Error("INVALID_DOTENV_KEY: Missing environment part");
+      }
+      const environmentKey = `DOTENV_VAULT_${environment.toUpperCase()}`;
+      const ciphertext = result.parsed[environmentKey];
+      if (!ciphertext) {
+        throw new Error(`NOT_FOUND_DOTENV_ENVIRONMENT: Cannot locate environment ${environmentKey} in your .env.vault file.`);
+      }
+      return { ciphertext, key };
+    }
+    function _vaultPath(options) {
+      let dotenvPath = path.resolve(process.cwd(), ".env");
+      if (options && options.path && options.path.length > 0) {
+        dotenvPath = options.path;
+      }
+      return dotenvPath.endsWith(".vault") ? dotenvPath : `${dotenvPath}.vault`;
+    }
+    function _resolveHome(envPath) {
+      return envPath[0] === "~" ? path.join(os.homedir(), envPath.slice(1)) : envPath;
+    }
+    function _configVault(options) {
+      _log("Loading env from encrypted .env.vault");
+      const parsed = DotenvModule._parseVault(options);
+      let processEnv = process.env;
+      if (options && options.processEnv != null) {
+        processEnv = options.processEnv;
+      }
+      DotenvModule.populate(processEnv, parsed, options);
+      return { parsed };
+    }
+    function configDotenv(options) {
+      let dotenvPath = path.resolve(process.cwd(), ".env");
+      let encoding = "utf8";
+      const debug = Boolean(options && options.debug);
+      if (options) {
+        if (options.path != null) {
+          dotenvPath = _resolveHome(options.path);
+        }
+        if (options.encoding != null) {
+          encoding = options.encoding;
+        }
+      }
+      try {
+        const parsed = DotenvModule.parse(fs.readFileSync(dotenvPath, { encoding }));
+        let processEnv = process.env;
+        if (options && options.processEnv != null) {
+          processEnv = options.processEnv;
+        }
+        DotenvModule.populate(processEnv, parsed, options);
+        return { parsed };
+      } catch (e) {
+        if (debug) {
+          _debug(`Failed to load ${dotenvPath} ${e.message}`);
+        }
+        return { error: e };
+      }
+    }
+    function config(options) {
+      const vaultPath = _vaultPath(options);
+      if (_dotenvKey(options).length === 0) {
+        return DotenvModule.configDotenv(options);
+      }
+      if (!fs.existsSync(vaultPath)) {
+        _warn(`You set DOTENV_KEY but you are missing a .env.vault file at ${vaultPath}. Did you forget to build it?`);
+        return DotenvModule.configDotenv(options);
+      }
+      return DotenvModule._configVault(options);
+    }
+    function decrypt(encrypted, keyStr) {
+      const key = Buffer.from(keyStr.slice(-64), "hex");
+      let ciphertext = Buffer.from(encrypted, "base64");
+      const nonce = ciphertext.slice(0, 12);
+      const authTag = ciphertext.slice(-16);
+      ciphertext = ciphertext.slice(12, -16);
+      try {
+        const aesgcm = crypto.createDecipheriv("aes-256-gcm", key, nonce);
+        aesgcm.setAuthTag(authTag);
+        return `${aesgcm.update(ciphertext)}${aesgcm.final()}`;
+      } catch (error) {
+        const isRange = error instanceof RangeError;
+        const invalidKeyLength = error.message === "Invalid key length";
+        const decryptionFailed = error.message === "Unsupported state or unable to authenticate data";
+        if (isRange || invalidKeyLength) {
+          const msg = "INVALID_DOTENV_KEY: It must be 64 characters long (or more)";
+          throw new Error(msg);
+        } else if (decryptionFailed) {
+          const msg = "DECRYPTION_FAILED: Please check your DOTENV_KEY";
+          throw new Error(msg);
+        } else {
+          console.error("Error: ", error.code);
+          console.error("Error: ", error.message);
+          throw error;
+        }
+      }
+    }
+    function populate(processEnv, parsed, options = {}) {
+      const debug = Boolean(options && options.debug);
+      const override = Boolean(options && options.override);
+      if (typeof parsed !== "object") {
+        throw new Error("OBJECT_REQUIRED: Please check the processEnv argument being passed to populate");
+      }
+      for (const key of Object.keys(parsed)) {
+        if (Object.prototype.hasOwnProperty.call(processEnv, key)) {
+          if (override === true) {
+            processEnv[key] = parsed[key];
+          }
+          if (debug) {
+            if (override === true) {
+              _debug(`"${key}" is already defined and WAS overwritten`);
+            } else {
+              _debug(`"${key}" is already defined and was NOT overwritten`);
+            }
+          }
+        } else {
+          processEnv[key] = parsed[key];
+        }
+      }
+    }
+    var DotenvModule = {
+      configDotenv,
+      _configVault,
+      _parseVault,
+      config,
+      decrypt,
+      parse,
+      populate
+    };
+    module2.exports.configDotenv = DotenvModule.configDotenv;
+    module2.exports._configVault = DotenvModule._configVault;
+    module2.exports._parseVault = DotenvModule._parseVault;
+    module2.exports.config = DotenvModule.config;
+    module2.exports.decrypt = DotenvModule.decrypt;
+    module2.exports.parse = DotenvModule.parse;
+    module2.exports.populate = DotenvModule.populate;
+    module2.exports = DotenvModule;
+  }
+});
+
 // src/main.ts
 var main_exports = {};
 __export(main_exports, {
   default: () => DuplicateLine
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian3 = require("obsidian");
+var import_obsidian6 = require("obsidian");
 
 // src/settings.ts
 var import_obsidian2 = require("obsidian");
@@ -5565,7 +5858,11 @@ var DEFAULT_SETTINGS = {
   selectionDown: true,
   mixRightDown: false,
   addNextOcc: true,
-  selAllOcc: true
+  selAllOcc: true,
+  showOccurences: true,
+  matchCase: false,
+  color: "#C6AB85",
+  fontSize: 1.2
 };
 (0, import_obsidian.addIcon)("arrow-down-narrow-wide", arrow_down_narrow_wide);
 (0, import_obsidian.addIcon)("arrow-down-from-line", arrow_down_from_line);
@@ -5577,35 +5874,40 @@ var commandsToCreate = [
     name: "Duplicate Line Down",
     icon: "arrow-down-from-line",
     direction: 1 /* Down */,
-    condition: "lineDown"
+    condition: "lineDown",
+    desc: "recommanded shortcut shift alt \u2193"
   },
   {
     id: "duplicate-line-up",
     name: "Duplicate Line Up",
     icon: "arrow-up-from-line",
     direction: 0 /* Up */,
-    condition: "lineUp"
+    condition: "lineUp",
+    desc: "recommanded shortcut shift alt \u2191"
   },
   {
     id: "duplicate-selection-down",
     name: "Duplicate Selection Down",
     icon: "arrow-down",
     direction: 2 /* SelDown */,
-    condition: "selectionDown"
+    condition: "selectionDown",
+    desc: "recommanded shortcut ctrl shift \u2193"
   },
   {
     id: "duplicate-selection-up",
     name: "Duplicate Selection Up",
     icon: "arrow-up",
     direction: 3 /* SelUp */,
-    condition: "selectionUp"
+    condition: "selectionUp",
+    desc: "recommanded shortcut ctrl shift \u2191"
   },
   {
     id: "duplicate-line-right",
     name: "Duplicate Selection Right",
     icon: "arrow-right-from-line",
     direction: 5 /* Right */,
-    condition: "selectionRight"
+    condition: "selectionRight",
+    desc: "recommanded shortcut ctrl shift \u2192"
   },
   // {
   // 	id: "duplicate-line-left",
@@ -5619,35 +5921,40 @@ var commandsToCreate = [
     name: "Duplicate Selection Right/Line Down",
     icon: "arrow-down-right",
     direction: 6 /* RightDown */,
-    condition: "mixRightDown"
+    condition: "mixRightDown",
+    desc: "if no selection: duplicate line down, else duplicate selection right "
   },
   {
     id: "directional-move-right",
     name: "Move Right",
     icon: "arrow-right",
     direction: 5 /* Right */,
-    condition: "moveRight"
+    condition: "moveRight",
+    desc: "recommanded shortcut alt \u2192"
   },
   {
     id: "directional-move-left",
     name: "Move Left",
     icon: "arrow-left",
     direction: 4 /* Left */,
-    condition: "moveLeft"
+    condition: "moveLeft",
+    desc: "recommanded shortcut alt \u2190"
   },
   {
     id: "select-next-occurence",
     name: "Add next occurence",
     icon: "arrow-down-narrow-wide",
     direction: null,
-    condition: "addNextOcc"
+    condition: "addNextOcc",
+    desc: "recommanded shortcut ctrl D"
   },
   {
     id: "select-all-occurence",
     name: "Select all occurences",
     icon: "bar-chart-horizontal",
     direction: null,
-    condition: "selAllOcc"
+    condition: "selAllOcc",
+    desc: "recommanded shortcut ctrl shift L"
   }
 ];
 
@@ -5661,7 +5968,28 @@ var DuplicateLineSettings = class extends import_obsidian2.PluginSettingTab {
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl("h2", { text: "Duplicate Line" });
+    if (import_obsidian2.Platform.isDesktopApp) {
+      new import_obsidian2.Setting(containerEl).setName("Show selection occurences in status bar").setDesc("select at least 3 characters").addToggle((toggle) => {
+        toggle.setValue(this.plugin.settings.showOccurences).onChange(async (value) => {
+          this.plugin.settings.showOccurences = value;
+          await this.plugin.saveSettings();
+        });
+      });
+      const setting = new import_obsidian2.Setting(containerEl).setName("Set color & size").addColorPicker(
+        (color) => color.setValue(this.plugin.settings.color).onChange(async (value) => {
+          this.plugin.settings.color = value;
+          this.plugin.statusBarItemEl.style.color = value;
+          await this.plugin.saveSettings();
+        })
+      );
+      setting.addSlider((slider) => {
+        slider.setLimits(1, 1.7, 0.1).setValue(this.plugin.settings.fontSize).setDynamicTooltip().onChange(async (value) => {
+          this.plugin.settings.fontSize = value;
+          this.plugin.statusBarItemEl.style.fontSize = `${value}em`;
+          await this.plugin.saveSettings();
+        });
+      });
+    }
     new import_obsidian2.Setting(containerEl).setName("Add a space before right duplication").setDesc("eg: 'xyz xyz, to avoid to have to insert a space").addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.addSpaceBetween).onChange(async (value) => {
         this.plugin.settings.addSpaceBetween = value;
@@ -5672,10 +6000,7 @@ var DuplicateLineSettings = class extends import_obsidian2.PluginSettingTab {
       const setting = new import_obsidian2.Setting(containerEl).setName(
         commandConfig.name
       );
-      if (commandConfig.condition === "mixRightDown")
-        setting.setDesc(
-          "if no selection: duplicate line down, else duplicate selection right "
-        );
+      setting.setDesc(commandConfig.desc);
       setting.addToggle((toggle) => {
         toggle.setValue(
           this.plugin.settings[commandConfig.condition]
@@ -5695,7 +6020,30 @@ var DuplicateLineSettings = class extends import_obsidian2.PluginSettingTab {
 };
 
 // src/utils.ts
+var import_obsidian4 = require("obsidian");
 var import_lodash = __toESM(require_lodash());
+
+// src/Console.ts
+var import_obsidian3 = require("obsidian");
+var DEBUG = "false";
+if (import_obsidian3.Platform.isDesktopApp) {
+  require_main().config();
+  DEBUG = "false";
+}
+var Console = {
+  debug: (...args) => {
+    if (DEBUG.trim().toLowerCase() === "true") {
+      console.debug(...args);
+    }
+  },
+  log: (...args) => {
+    if (DEBUG.trim().toLowerCase() === "true") {
+      console.log(...args);
+    }
+  }
+};
+
+// src/utils.ts
 function selectionToLine(editor, selection, direction) {
   let range = selectionToRange(selection, true);
   const { from, to } = range;
@@ -5764,7 +6112,15 @@ var getContent = (ed) => {
 };
 var getSelectionContent = (ed, selections) => {
   const lastSelection = selections[selections.length - 1];
-  const wordRange = ed.wordAt(lastSelection.head);
+  const selection = ed.getSelection();
+  let wordRange;
+  if (selection) {
+    Console.log("lastSelection", lastSelection);
+    wordRange = selectionToRange(lastSelection, true);
+  } else {
+    wordRange = ed.wordAt(lastSelection.head);
+  }
+  Console.log("wordRange", wordRange);
   if (wordRange != null) {
     const { from, to } = wordRange;
     const word = ed.getRange(from, to);
@@ -5773,6 +6129,13 @@ var getSelectionContent = (ed, selections) => {
   }
   return { wordRange: null, word: "", isWordSelected: false };
 };
+function getEditor(plugin) {
+  const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian4.MarkdownView);
+  if (!activeView)
+    return;
+  const editor = activeView.editor;
+  return editor;
+}
 
 // src/AddNextOccurrence.ts
 var addNextOccurrence = (editor) => {
@@ -5781,7 +6144,7 @@ var addNextOccurrence = (editor) => {
     editor,
     selections
   );
-  if (wordRange !== null) {
+  if (wordRange !== null && word) {
     const doc = getContent(editor);
     const [_, endPos] = rangeToPositions(wordRange);
     const pos = editor.posToOffset(endPos);
@@ -5821,7 +6184,7 @@ var addAllOccurrences = (editor) => {
   let selections = editor.listSelections();
   const { word, wordRange } = getSelectionContent(editor, selections);
   selections = [];
-  if (wordRange !== null) {
+  if (wordRange !== null && word) {
     const doc = getContent(editor);
     let nextOccurrenceIndex = doc.indexOf(word);
     while (nextOccurrenceIndex !== -1) {
@@ -5852,8 +6215,83 @@ var addAllOccurrences = (editor) => {
   }
 };
 
+// src/status-bar-occurences.ts
+var import_obsidian5 = require("obsidian");
+var handleSelectionChange = (plugin) => {
+  reset(plugin);
+  const debounced = (0, import_obsidian5.debounce)(async () => {
+    plugin.nb = getOccurrences(plugin);
+    if (plugin.settings.showOccurences && plugin.nb > 1) {
+      if (!plugin.statusBarItemEl) {
+        await addStatusBarReps.bind(plugin)(plugin);
+      }
+    } else {
+      reset(plugin);
+    }
+  }, 300, true);
+  debounced();
+};
+function reset(plugin) {
+  var _a;
+  plugin.selectionRegex = null;
+  plugin.nb = 0;
+  (_a = plugin.statusBarItemEl) == null ? void 0 : _a.detach();
+  plugin.statusBarItemEl = null;
+}
+async function addStatusBarReps(plugin) {
+  plugin.statusBarItemEl = await this.addStatusBarItem();
+  const { statusBarItemEl } = plugin;
+  statusBarItemEl.setText(`${plugin.nb} Reps`);
+  statusBarItemEl.style.color = plugin.settings.color;
+  statusBarItemEl.style.fontSize = `${plugin.settings.fontSize}em`;
+}
+function getEditorContent(plugin) {
+  const editor = getEditor(plugin);
+  let text = "";
+  if (editor) {
+    text = getContent(editor);
+  }
+  return {
+    editor,
+    text
+  };
+}
+function getOccurrences(plugin) {
+  const { editor, text } = getEditorContent(plugin);
+  if (!editor)
+    return 0;
+  const selection = editor.getSelection().trim();
+  if (!selection)
+    return 0;
+  if (!plugin.selectionRegex) {
+    Console.log("compile regex 1", selection);
+    compileRegex(plugin, selection);
+  }
+  if (!plugin.selectionRegex) {
+    Console.log("selection regex is null");
+  } else if (plugin.selectionRegex.source !== selection) {
+    Console.log("compile regex 2", selection);
+    compileRegex(plugin, selection);
+  }
+  const matches = [...text.matchAll(plugin.selectionRegex)];
+  Console.log("matches length", matches.length);
+  return matches.length;
+}
+function compileRegex(plugin, selection) {
+  let modifiers = "g";
+  if (!plugin.settings.matchCase) {
+    Console.log("yes");
+    modifiers += "i";
+  }
+  try {
+    plugin.selectionRegex = new RegExp(selection, modifiers);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 // src/main.ts
-var DuplicateLine = class extends import_obsidian3.Plugin {
+var DuplicateLine = class extends import_obsidian6.Plugin {
   constructor() {
     super(...arguments);
     this.duplicateLine = (editor, direction) => {
@@ -6103,6 +6541,9 @@ var DuplicateLine = class extends import_obsidian3.Plugin {
     await this.loadSettings();
     this.addSettingTab(new DuplicateLineSettings(this.app, this));
     this.createCommandsFromSettings();
+    if (import_obsidian6.Platform.isDesktopApp) {
+      this.registerDomEvent(document, "selectionchange", () => handleSelectionChange(this));
+    }
   }
   createCommandsFromSettings() {
     commandsToCreate.forEach((commandConfig) => {
