@@ -1764,6 +1764,7 @@ aliases:
 >& \partial_{t} \psi(t,y) = M(t,y))
 >\end{alignat}$$
 >with $C^2$ being the space of twice continuously differentiable functions.
+>
 >>[!proof]- 
 >>>$(\Rightarrow)$
 >>> omitted, but is given in [[../../../Sources/rudin1976.pdf|Principles of Mathematical Analysis by Rudin]]
@@ -1810,7 +1811,7 @@ aliases:
 >> \psi(t,y(t)) &= c \tag*{$\square$}
 >>\end{align}$$
 >
->>[!remark] Remark Background and Geometrical Interpretation of Exact Equations
+>>[!remark]- Remark Background and Geometrical Interpretation of Exact Equations
 >> Exact equations come up frequently in physics and engineering. We denote $\psi(x,y)$ as the potential function being dependent on $x$ and $y$. The naming of the potential function with respect to physics and engineering suggests the it being connected to calculation of some energy or electrical potentials. See the following example
 >> $$ \psi(x,y) = x^2 + y^2$$
 >> ```tikz
@@ -1848,6 +1849,8 @@ aliases:
 >>$$y = \sqrt{ C-x^2 }$$
 >>![[Figures/motivation_example_3d.png]]
 >>$$\text{Figure: Showing } f(x,y)=x^2+y^2 \text{ in purple and solutions to the exact equation in red with } C=1,2,3$$
+>>>[!Note]
+>>>The red circles are also called the **level function**, because they cut the graph at $c$ and are embedded in the $x,y$-plane.
 >
 >>[!example]- Example Find all solutions $y$ to the differential equation $2tyy'+2t+y^2=0$
 >> First we verify that the given equation is **exact**. We have
@@ -1863,6 +1866,7 @@ aliases:
 >>\end{align}$$
 >>We now determine the potential function $\psi$ by integrating equation $(1)$ with respect to $y$ and keeping $t$ constant. Hence, we have
 >>$$\begin{align}
+>>\psi(t,y) &= \int \partial_{y}\psi(t,y) \,dy  \\
 >>\psi(t,y) &= \int 2ty \, dy \\
 >> &= ty^2 + g(t) \tag{3}
 >>\end{align}$$
@@ -1890,3 +1894,205 @@ aliases:
 >>\end{align}$$
 >>Applying the solution the solution theorem gives
 >>$$ty^2 + t^2 = c$$
+>
+>>[!example]- Example Find all solutions $y$ to the equation $\sin(t)y' + t^2 e^y y' - y' + y \cos (t)+2te^y - 3t^2 = 0$
+>>First we rearrange the function, such that its easier to determine $M(t,y)$ and $N(t,y)$
+>>$$\begin{align}
+>>\underbrace{ y'(\sin(t)+t^2e^y-1) }_{ y'N(t,y) }+\underbrace{ y\cos(t)+2te^y-3t^2 }_{ M(t,y) }&=0\\
+>>\end{align}$$
+>>Now we check if $\partial_{t}N(t,y) = \partial_{y}M(t,y)$, i.e. the equation is **exact**.
+>>$$\begin{align}
+>>\partial_{t}N(t,y) &= \cos(t)+2te^y  \\
+>>\partial_{y}M(t,y) &= \cos (t)+2te^y
+>>\end{align}$$
+>>Since the equation is exact we can apply [[First Order ODEs#^0207e0| Poincaré's Lemma]], such that we determine the potential function $\psi(t,y)$. Note, we have $\partial _{y}\psi(t,y)=N(t,y)$
+>>$$\begin{align}
+>>\psi(t,y) &= \int \partial_{y}\psi(t,y) \, dy \\
+>> &= \int N(t,y) \, dy \\
+>> &= \int  \sin(t)+t^2e^y-1 \, dy \\
+>> &= \int  \sin(t) \, dy +t^2\int  e^y \, dy-\int  1 \, dy \\
+>> &= y\sin(t) +t^2e^y - y +g(t) \\
+>>\end{align}$$
+>>Note, $g(t)$ is the integration constant dependent on $t$. Now determining $\partial_{t}\psi(t,y)$ gives 
+>>$$\begin{align}
+>> \partial_{t}\psi(t,y) &= y\cos(t)+2te^y+g'(t) \tag{1}
+>>\end{align}$$
+>>By Poincaré's Lemma we have $M(t,y)=\partial_{t}\psi(t,y)$. We now set this equal to equation $(1)$ and get
+>>$$\begin{align}
+>> \underbrace{ y\cos(t)+2te^y-3t^2 }_{ M(t,y) } &= \underbrace{ y\cos(t)+2te^y+g'(t) }_{ \partial_{t}\psi(t,y) }\qquad&&\Big\vert -y\cos(t)-2te^y \\ 
+>>-3t^2 &= g'(t) \qquad&&\Big\vert \int (\,.) \, dt  \\
+>>-t^3 + \underbrace{ c_{0} }_{ =0 }&= g(t) \qquad&&\Big\vert \int (\,.) \, dt  \\
+>>\end{align}$$
+>>Hence, the potential function can be given as
+>>$$ \psi(t,y)= y\sin(t) + t^2e^y - y-t^3$$
+>>by the [[First Order ODEs#^bd9fa8 | solution theorem]] we can give the solution to the ODE as
+>>$$\begin{align}
+>> c= y\sin(t) + t^2e^y - y-t^3
+>>\end{align}$$
+>>Note, the solution cannot be written in explicit form.
+
+^e52bb3
+
+>[!def] Definition Semi-Exact Differential Equations ([[../../../Sources/nagy.pdf#page=49|Source]]) 
+>A **semi-exact** differential equation is a non-exact equation that can be transformed into an exact equation after a multiplication by an integrating factor.
+>>[!example]- Example Show that the differential equations $y' = a(t)y + b(t)$ are semi exact
+>> First we rearrange the equation to get the form of the [[First Order ODEs#^73ae5d| exact equations]]
+>> $$0 = a(t)y +b(t) - y'$$
+>> with $N(t,y)=-1$ and $M(t,y)=a(t)y+b(t)$. Determining the partial derivatives we have
+>> $$\partial_{t}N(t,y) = 0 \neq a(t) = \partial_{y}M(t,y)$$
+>> We multiply both the linear equation by some function $\mu(t)$, we have
+>> $$y'\mu (t)= \mu(t)a(t)y + \mu (t)b(t)$$
+>> Now we check again for the conditions with $N(t,y)=\mu(t)$ and $M(t,y)= \mu (t) a(t)y+\mu(t)b(t)$ again, we have
+>> $$\begin{align}
+>>\partial_{t}N(t,y) &= \mu'(t) \\
+>>\partial_{y}M(t,y) &= \mu(t)a(t) 
+>>\end{align}$$
+>>Setting the equations equal yields
+>>$$\mu' = \mu a $$
+>>Hence, by choosing an appropriate $\mu$ we have an exact equation, hence the linear equation is **semi-exact**.
+>>>[!note]-
+>>>In [[First Order ODEs#^defThmSolODEVar| solving linear ODEs with variable coefficients]] we found the integrating factor $\mu=e^{-A(t)}$ with $A(t)=\int a(t) \, dt$.
+
+>[!theorem] Theorem Semi-Exact Equations to Exact Equations ([[../../../Sources/nagy.pdf#page=50|Source]]) 
+>Let the equation
+>$$ N(t,y)y' + M(t,y) = 0$$
+>be **not exact** with $\partial_{t}N \neq \partial_{y}M$ and $N\neq 0$. Denote $h(t)$ as the function 
+>$$\begin{align}
+>h(t)&=\frac{\partial_{y}M(t,y)-\partial_{t}N(t,y)}{N(t,y)} \tag{Full}\\
+>h &= \frac{\partial_{y}M-\partial_{t}N}{N} \tag{Short}
+>\end{align}$$
+>being completely dependent on $t$. Then the following equation is exact
+>$$(e^HN)y' + (e^HM)=0$$
+>with $H$ being the antiderivative of $h$, i.e.
+>$$H(t) = \int h(t) \, dt $$
+>>[!remark] Remarks
+>>1. The function $\mu(t)=e^{H(t)}$ is called the **integrating factor**
+>>2. Any integrating factor $\mu$ is solution of the differential equation
+>> $$\mu'(t)= h(t)\mu(t)$$
+>>3. When determining $h(t)$ the result **must** be only dependent on $t$, i.e. all $y$ cancel out, i.e. is independent on $y$.
+>
+>>[!proof]- Verification Proof
+>>We first verify that the given equation is exact
+>>$$\underbrace{ (e^HN) }_{ \widehat{N}(t,y) }y' + \underbrace{ (e^HM) }_{ \widehat{M}(t,y) }=0$$
+>>First note that 
+>>$$\begin{align}
+>>\partial_{t}e^{H} &= \partial_{t}e^{\int h(t) \, dt } \\
+>>     &= he^{\int h(t) \, dt } \\
+>>     &= he^{H } \\
+>>\end{align}$$
+>>Therefore we have
+>>$$\begin{align}
+>> \partial_{t}\widehat{N}&= he^HN + e^H\partial_{t}N \tag{Product Rule} \\
+>> \partial_{y}\widehat{M} &=e^H\partial_{y}M
+>>\end{align}$$
+>>Now we insert the definition of $h$ from the theorem, i.e. $h=\frac{\partial_{y}M-\partial_{t}N}{N}$, into $\partial_{t}\widehat{N}$ and get
+>>$$\begin{align}
+>> \partial_{t}\widehat{N} &= \underbrace{ \frac{\partial_{y}M-\partial_{t}N}{\cancel{ N }} }_{ =h } \cancel{ N }e^H + e^H\partial_{t}N \\
+>>               &= e^H\left(\partial_{y}M-\partial_{t}N\right)  + e^H \partial_{t}N \\
+>>               &= e^H\left(\partial_{y}M\cancel{ -\partial_{t}N+ \partial_{t}N } \right)\\
+>>               &= e^H\partial_{y}M\\
+>>               &= \partial_{y}\widehat{M} \tag*{$\square$}\\
+>>\end{align}$$
+>
+>>[!proof]- Constructive Proof
+>> The differential equation 
+>> $$ Ny' + M = 0$$
+>> is not exact in this theorem, i.e. $\partial_{t}N \neq \partial_{y}M$. We multiply the equation with a non-zero function $\mu(t)$
+>> $$ \mu Ny' + \mu = 0$$
+>> As stated in the example of [[First Order ODEs#^5596ee| semi-exact equations]] we want to construct $\mu$ such that it establishes exactness for the differential equation, hence, it must satisfy
+>> $$\begin{align}
+>> \partial_{t}(\mu N) = \partial_{y}(\mu M) \tag{1}
+>>\end{align}$$
+>>Since $\mu$ only depends on $t$ we have for the partial derivatives
+>>$$\begin{align}
+>>\partial_{t}(\mu N)&= \mu 'N  + \mu\partial_{t}N \\ \\
+>>\partial_{y}(\mu M)&= \mu \partial_{y}M
+>>\end{align}$$
+>>Inserting the partial derivatives into equation $(2)$ and solving for $\mu'$ yields
+>>$$\begin{align}
+>>\mu 'N  + \mu\partial_{t}N  &= \mu \partial_{y}M  \\
+>>\mu 'N    &= \mu \partial_{y}M - \mu\partial_{t}N \\
+>>\mu '    &= \underbrace{ \frac{\partial_{y}M - \partial_{t}N}{N} }_{ =h(t) }\mu \\
+>>\end{align}$$
+>>Hence, we get the following form
+>>$$\begin{align}
+>>\mu'(t) = h(t)\mu(t)
+>>\end{align}$$
+>>This can be solved using [[First Order ODEs#^defSeparableDifferentialEquation | separation of variables]], hence we have
+>>$$\begin{align}
+>>\mu'(t) &= h(t)\mu(t) \\
+>>\mu'(t) \frac{1}{\mu (t)} &= h(t) \\
+>>\int \mu'(t) \frac{1}{\mu (t)}  \, dt &= \int  h(t)  \, dt \\ 
+>> \ln \lvert \mu(t) \rvert = \int h(t) \, dt \\
+>> \mu(t) = e^{\int h(t)\, dt}  \\
+>>\end{align}$$ 
+>>where we denote as $H(t) = \int h(t)\, dt$. Therefore, the theorem is established.
+>>$$\begin{align}
+>> \,\tag*{$\square$}
+>>\end{align}$$
+>
+>>[!example]- Example Find all solutions $y$ to the differential equation $(t^2+ty)y' + (3ty+y^2)=0$
+>>First, we check if the equation is exact. We have 
+>>$$\begin{alignat}{2}
+>> \partial_{t}N(t,y) &= \partial_{t}\left( t^2 +ty\right) &&=2t+y \\
+>> \partial_{y}M(t,y) &= \partial_{y}(3ty+y^2) &&= 3t + 2y
+>>\end{alignat}$$
+>>We can easily see, that the equation is not exact. We now construct $h$ and check if it is strictly dependent on $t$.
+>>$$\begin{align}
+>> h &= \frac{\partial_{y}M-\partial_{t}N}{N} \\
+>> &= \frac{3t + 2y - (2t+y)}{ t^2 +ty} \\
+>> &= \frac{t+y}{ t^2 +ty} \\
+>> &= \frac{\cancel{ t+y }}{ t\cancel{ (t +y) }} \\
+>> &= \frac{1}{t} \\
+>>\end{align}$$
+>>We found $h(t)$ being completely dependent on $t$, hence we can apply the theorem and have
+>> $$\begin{align}
+>> H(t)&=\int h(t) \, dt && \\
+>>     &=\int \frac{1}{t} \, dt \\
+>> &= \ln \lvert t \rvert + \underbrace{ c_{0} }_{ =0 }  
+>>\end{align}$$ 
+>>The integration constant can be calculated as
+>>$$\begin{align}
+>> \mu(t) &= e^{H(t) }\\
+>>  &= e^{\ln \lvert t \rvert } \\
+>>  &= t
+>>\end{align}$$
+>>Inserting the integration constant into the **semi-exact** equation gives
+>>$$\begin{align}
+>>  (t^2+ty)y' + (3ty+y^2)&=0 \qquad&&\Big\vert \cdot t \\
+>>  (t^3+t^2y)y' + (3t^2y+ty^2)&=0  \\
+>>\end{align}$$
+>>By the theorem this equation is exact and can now be solved using [[First Order ODEs#^e52bb3| theorem for solving exact equations]].
+>>We have
+>>$$\begin{alignat}{2}
+>> \partial_{t}\widehat{N}(t,y) &= \partial_{t} t^3+t^2y &&= 3t^2+2ty \\
+>> \partial_{y}\widehat{M}(t,y) &= \partial_{y} 3t^2y+ty^2 &&=3t^2 + 2ty 
+>>\end{alignat}$$
+>>As can be seen here, the equation is clearly **exact**. By [[First Order ODEs#^0207e0 | Poincaré's Lemma]] we can find the potential function $\psi(t,y)$ which will yield a solution to the ODE. Hence, since $\partial_{y}\psi(t,y) = \widehat{N}(t,y)$, we integrate $N$ to find an expression for $\psi$.
+>>$$\begin{align}
+>> \psi(t,y) &= \int N(t,y) \, dy  \\
+>> &= \int t^3+t^2y  \, dy  \\
+>> &= yt^3 + \frac{1}{2}t^2y^2 + g(t)  \tag{1}  
+>>\end{align}$$
+>>Where $g(t)$ is the integration constant dependent on $t$. Now determine the partial derivative $\partial_{t}\psi(t,y)=M(t,y)$
+>>$$\begin{align}
+>> \partial_{t}\psi(t,y) &= 3yt^2 + ty^2 + g'(t)  \\
+>>\end{align}$$
+>>We now set this equal to $\psi_{t}(t,y)$ to find the function $g(t)$
+>>$$\begin{align}
+>>\partial_{t}\psi(t,y) &= M(t,y)\\ 
+>>3yt^2 + ty^2 + g'(t) &= 3t^2y+ty^2 \qquad&&\Big\vert -yt^2 - ty^2  \\
+>>g'(t) &= 0 \qquad&&\Big\vert \int  \, dt  \\
+>>g(t) &= \underbrace{ c }_{ =0 }   \\
+>>\end{align}$$
+>>Inserting this into equation $(1)$ gives
+>> $$\psi(t,y) = yt^3 + \frac{1}{2}t^2y^2$$
+>> From this we can conclude by the [[First Order ODEs#^e52bb3| solution theorem for exact equations]]
+>> $$yt^3 + \frac{1}{2}t^2y^2 = c$$
+
+>[!attention] 
+> The reverse of the function $y(t)$ is denoted as $t(y)$.
+
+>[!theorem] Theorem Inverse Function Exact
+>$$ Ny' + M = 0 \text{ is exact } \Longleftrightarrow Nt' + M = 0 \text{ is exact}$$
+>>[!proof]

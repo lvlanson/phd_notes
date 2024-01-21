@@ -41,6 +41,8 @@
 >> f'(c) = \frac{f(b)-f(a)}{b-a} \tag*{$\square$}
 >>\end{align}$$
 
+^d97652
+
 ^71d429
 >[!def] Definition Taylor/Maclaurin Series for a Function ([[../../../Sources/briggs2019.pdf#page=756 | Source]])
 >Suppose the function $f$ has derivatives of all orders on an interval centered at the point $a$. The **Taylor series for $f$ centered at $a$** is

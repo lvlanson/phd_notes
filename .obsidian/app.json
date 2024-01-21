@@ -17,7 +17,8 @@
     "ntiderivatives",
     "thermodynamical",
     "extremum",
-    "Rolle"
+    "Rolle",
+    "codomain"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,

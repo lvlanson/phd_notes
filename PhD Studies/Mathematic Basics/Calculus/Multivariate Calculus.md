@@ -15,7 +15,7 @@ aliases:
 >Let $\mathbf{a} \in \mathbb{R}^n$ with $r>0$. The set $\mathbf{x} \in\mathbb{R}^n$ satisfying
 >$$ \lvert\lvert \mathbf{x} -\mathbf{a} \rvert\rvert < r$$
 >is called the **open $n$-ball**. We denote it
->$$ B(\mathbf{a}, r) = \{ \mathbf{x} \in \mathbb{R}^n \; \vert \; \lvert\lvert \mathbf{x} - \mathbf{a} \rvert\rvert < r \}$$
+>$$ B(\mathbf{a}, r) = \{ \mathbf{x} \in \mathbb{R}^n \; \Big\vert \; \lvert\lvert \mathbf{x} - \mathbf{a} \rvert\rvert < r \}$$
 
 >[!def] Definition Interior Point ([[../../../Sources/apostol1967.pdf#page=269|Source]])
 > Let $S \subset \mathbb{R}^n$ and assume $\mathbf{a} \in S$. The point $\mathbf{a}$ is called an interior point of $S$ if there exists some $r > 0$ with $$ B(\mathbf{a}, r) \subseteq S$$
@@ -173,3 +173,209 @@ aliases:
 >>$$\begin{align}
 >>\,\tag*{$\square$}\\
 >>\end{align}$$
+>
+>>[!example] Example $f(x,y) = x^2 + y^2$
+>>$$\begin{align}
+>>df &= \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy \\
+>> &= 2x^2 dx +2y^2dy
+>>\end{align}$$
+>
+>>[!note]
+>>The terms $dx$ and $dy$ represent infinitely small values. Note, if we consider the derivative of a function on the real line $f: \mathbb{R}\to \mathbb{R}$
+>>$$\begin{align}
+>>\frac{df}{dx} &= \frac{\partial f}{\partial x} \qquad&&\Big\vert \cdot dx \\
+>> df &= \frac{\partial f}{\partial x} dx 
+>>\end{align}$$
+>>Note, that the infinitely small change in $f$ is equal to the derivative of $f$ with respect to $x$ times an infinitely small change in $x$, i.e. $dx$.
+>>
+
+>[!lemma] Lemma ([[../../../Sources/shifrin2005.pdf#page=112|Source]])
+> Suppose $\mathbf{g}:[a,b] \to \mathbb{R}^n$ is continuous. Then, defining the integral of $\mathbf{g}$ component by component, i.e.
+> $$\int _{a}^b \mathbf{g}(t) \, dt = \left[\begin{matrix}\int _{a}^b g_{1}(t)\, dt \\ \vdots \\ \int _{a}^b g_{n}(t)\, dt  \\
+>\end{matrix}\right] $$
+>we have the following property
+>$$\left\lvert \left\lvert  \int _{a}^b \mathbf{g}(t) \, dt   \right\rvert \right\rvert \leq \int _{a}^b \lvert\lvert \mathbf{g}(t) \rvert\rvert  \, dt $$
+>>[!proof]-
+>>Let $$\begin{align}
+>> \mathbf{v}=\int _{a}^b \mathbf{g}(t) \,dt \tag{1}
+>>\end{align}$$
+>>If $\mathbf{v}=\mathbf{0}$, both sides are equal. By the Cauchy-Schwartz inequality, i.e. $$\lvert \mathbf{v} \cdot \mathbf{g}(t)\rvert \leq \lvert\lvert \mathbf{v} \rvert\rvert \, \lvert\lvert \mathbf{g}(t) \rvert\rvert  $$
+>>Then we have
+>>$$\begin{align}
+>> \lvert\lvert \mathbf{v} \rvert\rvert^2 &= \mathbf{v} \cdot \int _{a}^b \mathbf{g}(t)\, dt  \tag*{by equation (1)}  \\
+>>          &= \int _{a}^b\mathbf{v} \cdot \mathbf{g}(t)\, dt \\
+>>          &\leq \int _{a}^b \lvert\lvert \mathbf{v}  \rvert\rvert \, \lvert\lvert \mathbf{g}(t) \rvert\rvert \, dt \tag*{Cauchy-Schwartz}\\
+>>          &= \lvert\lvert \mathbf{v}  \rvert\rvert \int _{a}^b \lvert\lvert \mathbf{g}(t) \rvert\rvert \, dt \\
+>>\end{align}$$
+>>Hence, we have
+>>$$\begin{alignat}{2}
+>> \lvert\lvert \mathbf{v} \rvert\rvert^2 &\leq \lvert\lvert \mathbf{v}  \rvert\rvert \int _{a}^b \lvert\lvert \mathbf{g}(t) \rvert\rvert \, dt \qquad&&\Big\vert :\lvert\lvert v \rvert\rvert \tag{$\mathbf{v}\neq 0$} \\
+>> \lvert\lvert \mathbf{v} \rvert\rvert &\leq \int _{a}^b \lvert\lvert \mathbf{g}(t) \rvert\rvert \, dt \tag*{$\square$} \\
+>>\end{alignat}$$
+>>^lemmamultiintegral
+
+>[!def] Proposition Mean Value Inequality ([[../../../Sources/shifrin2005.pdf#page=262|Source]])
+>Suppose $U \subset \mathbb{R}^n$ is open, $\mathbf{f}: U \to \mathbf{R}^m$ with $\mathbf{f}\in C^1$ and $\mathbf{a}, \mathbf{b} \in U$, such that the line segment between them is contained in $U$. Then
+>$$\lvert\lvert \mathbf{f}(\mathbf{b}) - \mathbf{f}(\mathbf{a}) \rvert\rvert \leq \left(\underset{\mathbf{x}\in [\mathbf{a}, \mathbf{b}]}{\text{max}}\lvert\lvert D\mathbf{f}(\mathbf{x}) \rvert\rvert \right)\lvert\lvert \mathbf{b}-\mathbf{a} \rvert\rvert  $$
+>
+>>[!remark]
+>> The **mean value inequality** is a generalization of the [[Differentiation#^d97652|mean value theorem]] defined on the real valued functions. This theorem tells us, that we have bounds on the size of the derivative of a differentiable function. Specifically it tells us how much a function can change from one point to another.
+>>
+>> The term $\underset{\mathbf{x}\in [\mathbf{a}, \mathbf{b}]}{\text{max}}\lvert\lvert D\mathbf{f}(\mathbf{x}) \rvert\rvert$ gives us the value of the most the function is stretching vectors along the line segment $\mathbf{b}-\mathbf{a}$ and multiplying it by how far we moved from one point to another.
+>
+>>[!proof]-
+>>Let 
+>>$$\mathbf{g}:[0,1] \to \mathbb{R}^m$$
+>>with
+>>$$\mathbf{g}(t)=\mathbf{f}(\mathbf{b}+t(\mathbf{a}-\mathbf{a}))$$
+>>Note that
+>>$$\mathbf{f}(\mathbf{b}) - \mathbf{f}(\mathbf{a}) = \mathbf{g}(1) - \mathbf{g}(0)$$
+>>$\mathbf{g}$ is differentiable, since it is defined by $\mathbf{f}\in C^1$. Differentiating using the chain rule yields
+>>$$\begin{align}
+>>\mathbf{g}'(t)= D\mathbf{f}\Big(\mathbf{a}+ t(\mathbf{b}-\mathbf{a})\Big)(\mathbf{b}-\mathbf{a}) \tag{1}
+>>\end{align}$$
+>>Further we have 
+>>$$\begin{align}
+>>\mathbf{g}(1)-\mathbf{g}(0) &= \mathbf{f}(\mathbf{a}+(\mathbf{b}-\mathbf{a}))- \mathbf{f}(\mathbf{a}) \\\left(\underset{\mathbf{x}\in [\mathbf{a}, \mathbf{b}]}{\text{max}}\lvert\lvert D\mathbf{f}(\mathbf{x}) \rvert\rvert \right)\lvert\lvert \mathbf{b}-\mathbf{a} \rvert\rvert
+>> &= \mathbf{f}(\mathbf{b})-\mathbf{f}(\mathbf{a})
+>>\end{align}$$
+>>Using this and [[#^lemmamultiintegral | the multivariate Cauchy Schwartz lemma on integrals]] 
+>>$$\begin{align}
+>> \lvert\lvert \mathbf{f}(\mathbf{b}) - \mathbf{f}(\mathbf{a}) \rvert\rvert &= \lvert\lvert \mathbf{g}(\mathbf{1}) - \mathbf{g}(\mathbf{0}) \rvert\rvert \tag{definition of $\mathbf{g}$}\\
+>>  &= \left\lvert \left\lvert  \int _{0}^1 \mathbf{g}'(t) \, dt   \right\rvert \right\rvert \\
+>>  &\leq  \int _{0}^1\left\lvert \left\lvert  \mathbf{g}'(t) \right\rvert \right\rvert  \, dt  \tag{Cauchy Schwartz with $\mathbf{v}=\mathbf{1}$}\\
+>>  &\leq \underset{\mathbf{x}\in [\mathbf{a}, \mathbf{b}]}{\text{max}} \lvert\lvert \mathbf{g}'(t) \rvert\rvert 
+>>\end{align}$$
+>>Inserting the result of equation $(1)$
+>>$$\begin{align}
+>> \lvert\lvert \mathbf{g}'(t) \rvert\rvert &\leq \lvert\lvert D\mathbf{f}(\mathbf{a}+t(\mathbf{b}-\mathbf{a})) \rvert\rvert\,\lvert\lvert \mathbf{b}-\mathbf{a} \rvert\rvert    \\
+>> \underset{t\in [0,1]}{\text{max}}\lvert\lvert \mathbf{g}'(t) \rvert\rvert &\leq  \left(\underset{\mathbf{x}\in [\mathbf{a}, \mathbf{b}]}{\text{max}}\lvert\lvert D\mathbf{f}(\mathbf{x}) \rvert\rvert \right)\lvert\lvert \mathbf{b}-\mathbf{a} \rvert\rvert \tag*{$\square$}
+>>\end{align}$$
+>
+>>
+>>
+
+^74523c
+
+>[!def] Definition Contraction Map ([[../../../Sources/shifrin2005.pdf#page=259|Source]])
+>Let $X$ be a subset of $\mathbb{R}^n$. A function $\mathbf{f}: X \to X$ is called a **contraction mapping** if there is a constant $c$ with $0 < c < 1$, such that
+>$$\begin{align}
+> \lvert\lvert \mathbf{f}(\mathbf{x}) - \mathbf{f}(\mathbf{y}) \rvert\rvert \leq c \lvert\lvert \mathbf{x}-\mathbf{y} \rvert\rvert  
+>\end{align}$$
+>for all $\mathbf{x}, \mathbf{y} \in X$
+>>[!proof]
+>>Let $\mathbf{x}_{0}\in X$ be arbitrary, and define a sequence recursively by 
+>>$$\mathbf{x}_{k+1}= \mathbf{f}(\mathbf{x}_{k})$$
+
+>[!theorem] Theorem Contraction Mapping Principle ([[../../../Sources/shifrin2005.pdf#page=259|Source]])
+>Let $X \subset \mathbb{R}^n$ be closed. Let $\mathbf{f}: X \to X$ be a contraction mapping. Then there is a unique point $\mathbf{x} \in X$ such that $\mathbf{f}(\mathbf{x})=\mathbf{x}$.
+>>[!note]
+>>$\mathbf{x}$ is called a fixed point of $\mathbf{f}$.
+>
+>>[!proof]
+>>>[!note] Plan
+>>>We want to show that $\mathbf{f}$ is a contraction mapping as the sequence will converge to a point $\mathbf{x}\in X$ using the continuity of $\mathbf{f}$ with
+>>>$$ \mathbf{f}(\mathbf{x}) = \lim_{ k \to \infty } \mathbf{f}(\mathbf{x}_{k})=\lim_{ k \to \infty } \mathbf{x_{k+1}}=\mathbf{x}$$
+>>
+>>Consider the equation
+>>$$\begin{align}
+>>\mathbf{x}_{k} &= \mathbf{x}_{0} + (\mathbf{x}_{1} - \mathbf{x}_{0}) + (\mathbf{x}_{2} - \mathbf{x}_{1}) + \dots + (\mathbf{x}_{k} - \mathbf{x}_{k-1})  \\
+>>   &= \mathbf{x}_{0} + \sum_{j=1}^k (\mathbf{x}_{j} - \mathbf{x}_{j-1}) \\
+>>\end{align}$$
+>>We can formulate each element with
+>>$$\mathbf{a}_{k} = \mathbf{x}_{k}-\mathbf{x}_{k-1}$$
+>>with $k>1$. Now we have
+>>$$\begin{align}
+>>\lvert\lvert \mathbf{a}_{k} \rvert\rvert &= \lvert\lvert \mathbf{x}_{k}-\mathbf{x}_{k-1} \rvert\rvert =\lvert\lvert \mathbf{f}(\mathbf{x}_{k-1})-\mathbf{f}(\mathbf{x}_{k-2}) \rvert\rvert    \\
+>> &\leq c\lvert\lvert \mathbf{x}_{k-1}-\mathbf{x}_{k-2} \rvert\rvert \\
+>>\lvert\lvert \mathbf{a}_{k} \rvert\rvert&\leq c\lvert\lvert \mathbf{a}_{k-1} \rvert\rvert \tag{1}
+>>\end{align}$$
+>>for some constant $0 < c < 1$. The contraction mapping principle can be seen by applying equation $(1)$ over and over again
+>>$$\begin{align}
+>> \lvert\lvert \mathbf{a}_{k} \rvert\rvert \;\leq\; c \lvert\lvert \mathbf{a}_{k-1} \rvert\rvert \;\leq\; c^2 \lvert\lvert \mathbf{a}_{k-2} \rvert\rvert \;\leq\; \dots \;\leq\; c^{k-1} \lvert\lvert \mathbf{a}_{1} \rvert\rvert
+>>\end{align}$$
+>>Therefore, we have
+>>$$\begin{align}
+>> \sum^K_{k=1} \lvert\lvert \mathbf{a} _{k}\rvert\rvert &\leq \left(\sum^K_{k=1}c^{k-1}\right)\lvert\lvert \mathbf{a}_{1} \rvert\rvert \\ 
+>> &=\frac{1-c^K}{1-c}\lvert\lvert \mathbf{a}_{1} \rvert\rvert 
+>>\end{align}$$
+>>Since $0 < c < 1$ we can conclude
+>NOT FINISHED!!!!!
+>!
+>!
+>!
+>!
+>!
+>!
+>!!
+>!
+>!
+>!
+
+>[!theorem] Inverse Function Theorem ([[../../../Sources/shifrin2005.pdf#page=266|Source]], [Video Source](https://youtu.be/CUZnkWa0Mr0?si=jMAR5W7H41a1WOlf), [Video Source Proof](https://youtu.be/LkUl8HTIJM4?si=NiuNRX0_Ds9o6-A6))
+>Suppose $U \subset \mathbb{R}^n$ is open and $\mathbf{f}: U \to \mathbb{R}^n$ is a vector field with $\mathbf{f} \in C^1$ with $D\mathbf{f}$ being invertible in $\mathbf{x}_{0} \in U$. Then there is a neighborhood $V \subset U$ of $\mathbf{x}_{0}$ on which $\mathbf{f}$ has a $C^1$ inverse function. That is, there are neighborhoods $V$ of $\mathbf{x}_{0}$ and $W$ of $\mathbf{f}(\mathbf{x}_{0}) = \mathbf{y}_{0}$ and a $C^1$ function $\mathbf{g}: W \to V$ such that
+>$$ \mathbf{f}(\mathbf{g}(\mathbf{y})) = \mathbf{x}\qquad \forall \mathbf{y} \in W$$
+>and
+>$$\mathbf{g}(\mathbf{f}(\mathbf{x})) = \mathbf{y} \qquad \forall \mathbf{x} \in V$$
+>Moreover, if $\mathbf{f}(\mathbf{x}) =  \mathbf{y}$, we have
+>$$D\mathbf{g}(\mathbf{y}) = (D\mathbf{f}(\mathbf{x}))^{-1}$$
+>>[!note]
+>>The mapping matches dimensions of its domain and codomain. Both have dimension $n$.
+>
+>>[!remark] Remark on the Inverse Function Theorem
+>> The last equation can be obtained $\forall \mathbf{x} \in V$ with
+>> $$\begin{align}
+>> \mathbf{g}(\mathbf{f}(\mathbf{x})) &= \mathbf{x}  \\
+>> D\mathbf{g}(\mathbf{f}(\mathbf{x})) &= D\mathbf{x} \tag{Total Derivative with respect to $\mathbf{x}$}\\ 
+>> \mathbf{g}'(\mathbf{f}(\mathbf{x}))f'(\mathbf{x}) &= \mathbf{1} \tag{Chain Rule} \\
+>> \mathbf{g}'(\mathbf{f}(\mathbf{x})) &= \frac{\mathbf{1}}{\mathbf{f}'(\mathbf{x})}
+>>\end{align} $$
+>
+>>[!proof]
+>>>[!Note] Plan
+>>>![[figures/inverse_function_theorem_proof.jpg]]
+>>> We want to show there are open sets around $\mathbf{0}$ such that for every $\mathbf{y}$ near $\mathbf{0}$ in range of some closed ball $B(\mathbf{0}; r)$, there is some **unique** $\mathbf{x}_{\mathbf{y}}$ near $\mathbf{0}$ in the domain of $\mathbf{f}(\mathbf{x}_{\mathbf{y}})= \mathbf{y}$. So if we vary the $\mathbf{y}$ we will get a different $\mathbf{x}$.
+>>>
+>>>We will try to convert the problem $\mathbf{f}(\mathbf{x})=\mathbf{y}$ into a fixed point problem such that
+>>>$$\phi_{{\mathbf{y}}}(\mathbf{x}) = \mathbf{x} \underbrace{ - \mathbf{f}(\mathbf{x})+\mathbf{y} }_{ =\mathbf{0} }$$
+>>>We will further define $D\mathbf{f}(\mathbf{0}) = \mathbf{1}$ and we require our operations to be in the defined subsets. Therefore we choose $-\mathbf{f}(\mathbf{x})+\mathbf{y}$ over $\mathbf{f}(\mathbf{x})-\mathbf{y}$ to have better control over the conditions we chose for our proof.
+>>
+>> Without loss of generality, let 
+>> - $\mathbf{a} = \mathbf{0}$
+>> - $\widehat{\mathbf{f}}(\mathbf{a})=\mathbf{0}$
+>> - $D\mathbf{f}(\mathbf{0}) =\mathbf{1}$
+>>
+>>>[!note]
+>>>This is just a change of coordinates. Note, if we'd map any $\mathbf{f}(\mathbf{x}) = \mathbf{y}$, we would now shift the mapping by $\mathbf{a}$ to yield the same result, i.e.
+>>>$$\mathbf{f}(\mathbf{x})= \widehat{\mathbf{f}}(\mathbf{x}+\mathbf{a})- \mathbf{f}(\mathbf{a})$$
+>>
+>>We can choose $r >0$ such that
+>>$$ \lvert\lvert D\mathbf{f}(\mathbf{x})- \mathbf{1} \rvert\rvert \leq \frac{1}{2} $$
+>>for $\lvert\lvert \mathbf{x} \rvert\rvert \leq r$. Further we fix $\mathbf{y}$ with $$\lvert\lvert \mathbf{y} \rvert\rvert \leq \frac{r}{2}$$
+>>Also, we now define the map for the fixed point problem
+>>$$\phi(\mathbf{x}) = \mathbf{x} - \mathbf{f}(\mathbf{x}) + \mathbf{y}$$
+>>Note that the total derivative with respect to $\mathbf{x}$ is
+>>$$\begin{align}
+>> \lvert\lvert D\phi(\mathbf{x}) \rvert\rvert &=\lvert\lvert D(\mathbf{x}- \mathbf{f}(\mathbf{x}) + \mathbf{y}) \rvert\rvert \tag{$\mathbf{y}$ is fixed}\\
+>>  &=\lvert\lvert \mathbf{1}- D\mathbf{f}(\mathbf{x}) \rvert\rvert \\ 
+>>  &= \lvert\lvert D\mathbf{f}(\mathbf{x})-\mathbf{1} \rvert\rvert \tag{1}
+>>\end{align}$$
+>>Whenever $\lvert\lvert \mathbf{x} \rvert\rvert \leq r$. We have by the [[#^74523c | mean value inequality]]
+>>$$\begin{align}
+>> \lvert\lvert \phi(\mathbf{x}) \rvert\rvert &= \lvert\lvert \phi(\mathbf{x}) - \phi(\mathbf{0}) + \mathbf{y}\rvert\rvert   \\
+>> \lvert\lvert \phi(\mathbf{x}) \rvert\rvert &\leq \lvert\lvert \phi(\mathbf{x}) - \phi(\mathbf{0})\rvert\rvert + \rvert\rvert\mathbf{y}\rvert\rvert   \\
+>> &= \left(\underset{\mathbf{x}\in [\mathbf{0}, \mathbf{x}]}{\text{max}}\lvert\lvert D\phi(\mathbf{x}) \rvert\rvert \right)+\lvert\lvert \mathbf{x} - \mathbf{0} \rvert\rvert  \lvert\lvert \mathbf{y} \rvert\rvert  \tag{Mean-Value Inequality} \\ 
+>> &= \left(\underset{\mathbf{x}\in [\mathbf{0}, \mathbf{x}]}{\text{max}}\underbrace{ \lvert\lvert D\mathbf{f}(\mathbf{x})-\mathbf{1} \rvert\rvert }_{ \leq \frac{1}{2} }  \right) \underbrace{ \mathbf{\lvert\lvert x \lvert\rvert } }_{ =r }+ \underbrace{ \lvert\lvert \mathbf{y} \rvert\rvert }_{ < \frac{r}{2} }   \\ 
+>> &< \frac{r}{2}+\frac{r}{2}=r 
+>>\end{align}$$
+>>>[!note]
+>>>We constructed $\phi(\mathbf{x})$ in such a way, that it maps from a ball into itself, but contracts by $1/2$. We had to add the term $\mathbf{y}$, such that it does not shift outside the ball, as can be seen when we used the trick to determine $\lvert\lvert \phi(\mathbf{x}) \rvert\rvert$ with the mean value inequality. Hence, our function $\phi_{\mathbf{y}}$ can be described as
+>>>$$ \phi_{\mathbf{y}}: \overline{B}(\mathbf{0}, r) \to  \overline{B}(\mathbf{0}, r)$$
+>>>We can easily confirm, that $\phi$ is a contraction map. We check that for some arbitrary points $\mathbf{a}, \mathbf{b} \in  \overline{B}(\mathbf{0}, r)$ they stay inside the ball by a constant factor. We have
+>>>$$\begin{align}
+>>> \lvert\lvert \phi_{\mathbf{y}}(\mathbf{b})-\phi_{\mathbf{y}}(\mathbf{a}) \rvert\rvert &= \Bigg(\underbrace{ \underset{\mathbf{x}\in [\mathbf{a}, \mathbf{b}]}{\text{max}}\lvert\lvert D\phi_{\mathbf{y}}(\mathbf{x}) \rvert\rvert }_{ \leq \frac{1}{2} } \Bigg)\lvert\lvert \mathbf{b}-\mathbf{a} \rvert\rvert   \\
+>>> &\leq \frac{1}{2}\lvert\lvert \mathbf{b}-\mathbf{a} \rvert\rvert 
+>>>\end{align}$$
+
+^7137a9
+
