@@ -8,7 +8,7 @@ aliases:
 | ----------------------------------------------- | ---------------------------------------------------------------------------------- |
 | Real Valued Function $f$                        | $f:\mathbb{R} \rightarrow \mathbb{R}$                                              |
 | Scalar Valued Function $f$ <br>or Sacalar Field | $f:\mathbb{R} \rightarrow \mathbb{R}^m$ with $m>1$                                 |
-| Vector Valued Function $f$ <br>or Vector Field  | $\mathbf{f}:\mathbb{R}^n \rightarrow \mathbb{R}^m$ with $m,n > 1$                  |
+| Vector Valued Function $\mathbf{f}$ <br>or Vector Field  | $\mathbf{f}:\mathbb{R}^n \rightarrow \mathbb{R}^m$ with $m,n > 1$                  |
 | Components                                      | If $\mathbf{f}$ is a vector field, then $f_i \in \mathbf{f}$ is called a component | 
 
 >[!def] Definition Open Ball ([[../../../Sources/apostol1967.pdf#page=269|Source]])
@@ -188,7 +188,7 @@ aliases:
 >>\end{align}$$
 >>Note, that the infinitely small change in $f$ is equal to the derivative of $f$ with respect to $x$ times an infinitely small change in $x$, i.e. $dx$.
 >>
-
+------
 >[!lemma] Lemma ([[../../../Sources/shifrin2005.pdf#page=112|Source]])
 > Suppose $\mathbf{g}:[a,b] \to \mathbb{R}^n$ is continuous. Then, defining the integral of $\mathbf{g}$ component by component, i.e.
 > $$\int _{a}^b \mathbf{g}(t) \, dt = \left[\begin{matrix}\int _{a}^b g_{1}(t)\, dt \\ \vdots \\ \int _{a}^b g_{n}(t)\, dt  \\
@@ -267,6 +267,49 @@ aliases:
 >>Let $\mathbf{x}_{0}\in X$ be arbitrary, and define a sequence recursively by 
 >>$$\mathbf{x}_{k+1}= \mathbf{f}(\mathbf{x}_{k})$$
 
+>[!Theorem] Proposition Absolute Convergence ([[../../../Sources/shifrin2005.pdf#page=258|Source]])
+>  Let $(\mathbf{a}_{k})_{k=1}^\infty \subseteq \mathbb{R}^n$ with
+>  $$\sum_{k=1}^\infty \lvert\lvert  \mathbf{a}_{k} \rvert\rvert $$ 
+> is convergent. Then the series
+> $$\sum_{k=1}^\infty \mathbf{a}_{k}$$
+> is convergent too.
+>>[!proof]-
+>> First consider the case of $\mathbb{R}^n = \mathbb{R}$. We define the following sequence, 
+>> $$\begin{align}
+>> b_{k} = a_{k} + \lvert a_{k} \rvert \tag{1}
+>>\end{align}$$
+>> Note,
+>> $$b_{k} = \begin{cases}
+>> 2a_k, & \text{ if } a_{k} \geq 0 \\
+>> 0, & \text{ else }
+>>\end{cases}$$
+>>Since by assumption that $\sum_{k=1}^{\infty} \lvert a_{k} \rvert$ is convergent, the series $\sum_{k=1}b_{k}$ must be convergent, since
+>>$$\sum_{k=1}^\infty b_{k} = \begin{cases}
+>> \sum_{k=1}^\infty 2\lvert a_{k} \rvert & \text{ if } a_{k}>0 \\
+>> 0 & \text{ else}
+>>\end{cases}$$
+>>Since $\sum_{k=1}^{\infty} \lvert a_{k} \rvert$ is convergent, $\sum_{k=1}^\infty b_{k}$ must be convergent too with upper bound $2\sum_{k=1}^\infty \lvert a_{k} \rvert$. Rearranging equation $(1)$ gives
+>>$$\begin{align}
+>>a_{k} = b_{k} + \lvert a_{k} \rvert 
+>>\end{align}$$
+>>Hence, $\sum_{i=1}^\infty a_{k}$ must converge, since it's the sum of two converging series.
+>>
+>>We generalize now this result on $\mathbb{R}^n$. Let $a_{k, j}$ denote the $k$-th vector in the sequence $(\mathbf{a}_{k})_{k=1}^\infty$ and there the $j$-th component, i.e. $$\underbrace{ \mathbf{a}_{k} }_{ \in (\mathbf{a}_{k})_{k=1}^\infty} = (a_{1}, \dots, \underbrace{ a_{j} }_{ = a_{k,j} }, \dots)$$
+>> Note that
+>> $$\lvert a_{k,j} \rvert \leq \lvert\lvert \mathbf{a}_{k} \rvert\rvert  $$
+ >>From this we can conclude
+ >>$$\sum_{k=1}^\infty \lvert a_{k,j} \rvert \leq \sum_{k=1}^\infty \lvert\lvert \mathbf{a}_{k} \rvert\rvert $$
+ >>Therefore, as shown in the case of $\mathbb{R}$, $\sum_{k=1}^\infty a_{k,j}$ must be convergent. This is true for any $j = 1, \dots, n$, i.e.
+ >>$$\sum_{k=1}^\infty \mathbf{a}_{k} = \left[\begin{matrix}
+>> \sum_{k=1}^\infty a_{k,1}  \\
+>> \vdots \\
+>> \sum_{k=1}^\infty a_{k,n}
+>>\end{matrix}\right]$$
+>>must be convergent too.
+>>$$\begin{align}
+>>\,\tag*{$\square$}
+>>\end{align}$$
+
 >[!theorem] Theorem Contraction Mapping Principle ([[../../../Sources/shifrin2005.pdf#page=259|Source]])
 >Let $X \subset \mathbb{R}^n$ be closed. Let $\mathbf{f}: X \to X$ be a contraction mapping. Then there is a unique point $\mathbf{x} \in X$ such that $\mathbf{f}(\mathbf{x})=\mathbf{x}$.
 >>[!note]
@@ -300,17 +343,8 @@ aliases:
 >> &=\frac{1-c^K}{1-c}\lvert\lvert \mathbf{a}_{1} \rvert\rvert 
 >>\end{align}$$
 >>Since $0 < c < 1$ we can conclude
->NOT FINISHED!!!!!
->!
->!
->!
->!
->!
->!
->!!
->!
->!
->!
+>> 
+
 
 >[!theorem] Inverse Function Theorem ([[../../../Sources/shifrin2005.pdf#page=266|Source]], [Video Source](https://youtu.be/CUZnkWa0Mr0?si=jMAR5W7H41a1WOlf), [Video Source Proof](https://youtu.be/LkUl8HTIJM4?si=NiuNRX0_Ds9o6-A6))
 >Suppose $U \subset \mathbb{R}^n$ is open and $\mathbf{f}: U \to \mathbb{R}^n$ is a vector field with $\mathbf{f} \in C^1$ with $D\mathbf{f}$ being invertible in $\mathbf{x}_{0} \in U$. Then there is a neighborhood $V \subset U$ of $\mathbf{x}_{0}$ on which $\mathbf{f}$ has a $C^1$ inverse function. That is, there are neighborhoods $V$ of $\mathbf{x}_{0}$ and $W$ of $\mathbf{f}(\mathbf{x}_{0}) = \mathbf{y}_{0}$ and a $C^1$ function $\mathbf{g}: W \to V$ such that
