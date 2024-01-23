@@ -2090,9 +2090,74 @@ aliases:
 >> From this we can conclude by the [[First Order ODEs#^e52bb3| solution theorem for exact equations]]
 >> $$yt^3 + \frac{1}{2}t^2y^2 = c$$
 
+^3a7e40
+
 >[!attention] 
 > The reverse of the function $y(t)$ is denoted as $t(y)$.
 
->[!theorem] Theorem Inverse Function Exact
+>[!theorem] Theorem Inverse Function Exact ([[../../../Sources/nagy.pdf#page=50|Source]]) 
 >$$ Ny' + M = 0 \text{ is exact } \Longleftrightarrow Nt' + M = 0 \text{ is exact}$$
->>[!proof]
+>>[!proof]-
+>>We write as
+>>$$\begin{alignat}{2}
+>>N(t,y)y'+M(t,y) &= 0 \qquad&&\Big\vert -M(t,y) \\
+>>N(t,y)y' &= -M(t,y) \qquad&&\Big\vert :N(t,y) \\
+>>y' &= -\frac{M(t,y)}{N(t,y)} \\
+>>\end{alignat}$$
+>>with $\partial_{t}N = \partial_{y}M$. If a solution $y$ is invertible, i.e. $y^{-1}(y)= t(y)$. Note, we can make use of the [[../Calculus/Multivariate Calculus#^7137a9| inverse function theorem]], i.e.
+>>$$t'(y) =  \frac{1}{y'(t(y))}$$
+>>Using the expression for $y'$ we have
+>>$$\begin{alignat}{2}
+>> t'(y) &=  -\left(\frac{M(t,y)}{N(t,y)}\right)^{-1} \\
+>> t'(y) &=  -\frac{N(t,y)}{M(t,y)} \qquad&&\Big\vert \cdot M(t,y) \\
+>> M(t,y)t'(y) &=  -{N(t,y)} \qquad&&\Big\vert +N(t,y)\\
+>> M(t,y)t'(y) +  N(t,y) &= 0 
+>>\end{alignat}$$
+>>Note, that $t'=\frac{dt}{dy}$, therefore, we have the condition
+>>$$ \partial _{y}M = \partial_{t}N$$
+>>which is the same condition for the original equation.
+>>$$\begin{align}
+>>\,\tag*{$\square$}
+>>\end{align}$$
+
+>[!remark]- Remark on Notation in other Literature
+>In other literature the equations $Ny'+M=0$ and $N+Mt'=0$ are unified as 
+>$$Ny'+Mt'=0$$
+>which is imprecise and will be avoided. Note, further instead of the variable $t$ the variable $x$ is used instead.
+
+>[!theorem] Theorem Solving Semi-Exact Inverse Equations
+> If the equation $$Mt'+N = 0$$
+> is **not exact**, with $\partial_{y}M \neq \partial_{x}N$ and function $M \neq 0$, where the function $l$ is defined as
+> $$l=-\frac{\partial_{y}M - \partial_{t}N}{M}$$
+> depends only on $y$, not on $t$, then the equation below is exact,
+> $$(e^LM)t'+(e^LN)=0$$
+> where $L$ is an antiderivative of $l$,
+> $$L(y)= \int l(y) \, dy $$
+>>[!proof]- Verification Proof
+>> We verify that the equation is indeed **exact**. Therefore, we denote
+>> $$\begin{align}
+>> \widehat{M} &= e^{L(y)}M(t,y) \\
+>> \widehat{N} &=  e^{L(y)}N(t,y) 
+>>\end{align}$$
+>>Note, that 
+>>$$\partial_{y}e^L=le^L$$
+>>Now we check the conditions for exactness
+>>$$\begin{align}
+>> \partial_{y}\widehat{M} &=le^L + e^L \partial_{y}M \\
+>> \partial_{t}\widehat{N} &= e^L \partial_{t}N(t,y) 
+>>\end{align}$$
+>>Using the definition of $l$ yields
+>>$$\begin{align}
+>>\partial_{y}\widehat{M} &= le^LM + e^L\partial_{y}M \\
+>> &= -\frac{\partial_{y}M-\partial_{t}N}{\cancel{ M }}\cancel{ M }e^L+e^L\partial_{y}M \\
+>> &= e^L\left( \cancel{ -\partial_{y}M } +\partial_{t}N \cancel{ +\partial_{y}M }\right) \\
+>> &= e^L \partial_{t}N \\
+>> &= \partial_{t}\widehat{N} \tag*{$\square$}
+>>\end{align}$$
+>
+>>[!proof]- Constructive Proof
+>>Since the verification proof holds, the constructive proof from the **semi-exact** equations can be applied.
+>>See [[#^3a7e40]]
+>
+>>[!example] Example Find all solutions to the differential equation $(5te^{-y}+2\cos(3t)y') + (5e^{-y}-3\sin(3t)) =0$
+>>
