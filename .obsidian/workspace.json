@@ -29,12 +29,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+                "file": "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
                 "mode": "source",
                 "source": true
               }
             },
             "group": "900f228cd3d0cb05"
+          },
+          {
+            "id": "8fda2889e2f2874d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
           }
         ],
         "currentTab": 1
@@ -65,7 +77,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+                "file": "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
                 "mode": "preview",
                 "source": true
               }
@@ -123,8 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 262.5,
-    "collapsed": true
+    "width": 262.5
   },
   "right": {
     "id": "93b677ed21c6c6cb",
@@ -140,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+                "file": "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+                "file": "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -180,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md"
+                "file": "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md"
               }
             }
           },
@@ -220,51 +231,20 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "floating": {
-    "id": "98463877106c03b5",
-    "type": "floating",
-    "children": [
-      {
-        "id": "f84fd028d1c40bcb",
-        "type": "window",
-        "children": [
-          {
-            "id": "1c12322bd3bf9420",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "d2f640218fa0346d",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Sources/nagy.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 480,
-        "width": 1080,
-        "height": 960,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "a6081b9e300ffbae",
+  "active": "fa5db71450d8c4c7",
   "lastOpenFiles": [
+    "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
+    "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
+    "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
+    "PhD Studies/To-Do.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+    "Sources/shifrin2005.pdf",
     "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+    "Sources/nagy.pdf",
     "PhD Studies/Mathematic Basics/Calculus/figures/inverse_function_theorem_proof.jpg",
     "PhD Studies/Mathematic Basics/Calculus/figures/inverse_function_theorem_proof",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
     "Literature/@shifrin2005.md",
-    "Sources/shifrin2005.pdf",
     "Literature/@stewart2007.md",
-    "Sources/nagy.pdf",
     "Literature/@book_{91865988}.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/Plot ODEs.md",
     "Paper/Hyperbox Metric/Timeline.md",
@@ -299,9 +279,6 @@
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/1 - Maximum Inner Product Search.md",
     "Literature/@rudin1976.md",
     "Literature/@brogan1991.md",
-    "Literature/@hornrogara.md",
-    "Literature/@shao2003.md",
-    "Literature/@schmidhuber2015.md",
     "Untitled.canvas"
   ]
 }

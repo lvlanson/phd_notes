@@ -310,12 +310,14 @@ aliases:
 >>\,\tag*{$\square$}
 >>\end{align}$$
 
+^62fac3
+
 >[!theorem] Theorem Contraction Mapping Principle ([[../../../Sources/shifrin2005.pdf#page=259|Source]])
 >Let $X \subset \mathbb{R}^n$ be closed. Let $\mathbf{f}: X \to X$ be a contraction mapping. Then there is a unique point $\mathbf{x} \in X$ such that $\mathbf{f}(\mathbf{x})=\mathbf{x}$.
 >>[!note]
 >>$\mathbf{x}$ is called a fixed point of $\mathbf{f}$.
 >
->>[!proof]
+>>[!proof]-
 >>>[!note] Plan
 >>>We want to show that $\mathbf{f}$ is a contraction mapping as the sequence will converge to a point $\mathbf{x}\in X$ using the continuity of $\mathbf{f}$ with
 >>>$$ \mathbf{f}(\mathbf{x}) = \lim_{ k \to \infty } \mathbf{f}(\mathbf{x}_{k})=\lim_{ k \to \infty } \mathbf{x_{k+1}}=\mathbf{x}$$
@@ -327,7 +329,7 @@ aliases:
 >>\end{align}$$
 >>We can formulate each element with
 >>$$\mathbf{a}_{k} = \mathbf{x}_{k}-\mathbf{x}_{k-1}$$
->>with $k>1$. Now we have
+>>with $k>1$. We want to estimate $\lvert\lvert \mathbf{a}_{k} \rvert\rvert$
 >>$$\begin{align}
 >>\lvert\lvert \mathbf{a}_{k} \rvert\rvert &= \lvert\lvert \mathbf{x}_{k}-\mathbf{x}_{k-1} \rvert\rvert =\lvert\lvert \mathbf{f}(\mathbf{x}_{k-1})-\mathbf{f}(\mathbf{x}_{k-2}) \rvert\rvert    \\
 >> &\leq c\lvert\lvert \mathbf{x}_{k-1}-\mathbf{x}_{k-2} \rvert\rvert \\
@@ -342,8 +344,13 @@ aliases:
 >> \sum^K_{k=1} \lvert\lvert \mathbf{a} _{k}\rvert\rvert &\leq \left(\sum^K_{k=1}c^{k-1}\right)\lvert\lvert \mathbf{a}_{1} \rvert\rvert \\ 
 >> &=\frac{1-c^K}{1-c}\lvert\lvert \mathbf{a}_{1} \rvert\rvert 
 >>\end{align}$$
->>Since $0 < c < 1$ we can conclude
+>>Since $0 < c < 1$ we see $c^K$ vanishing as $K \to \infty$, therefore we have
+>>$$\lim_{ K \to \infty } \frac{1-c^K}{1-c} = \frac{1}{1-c}$$
+>>Therefore, we can conclude the series $\sum_{k=1}^\infty \lvert\lvert \mathbf{a}_{k} \rvert\rvert$ converges, and hence $\sum_{k=1}^\infty \mathbf{a}_{k}$ converges too by [[#^62fac3 | the proposition about absolute convergence]]. Therefore, $$\mathbf{x}_{k} \to \mathbf{x}_{0}+\mathbf{a} = \mathbf{x}$$
+>>Since all $\mathbf{x}_{k} \in X$ and $X$ is closed, $\mathbf{x} \in X$.
 >> 
+
+^7623e0
 
 
 >[!theorem] Inverse Function Theorem ([[../../../Sources/shifrin2005.pdf#page=266|Source]], [Video Source](https://youtu.be/CUZnkWa0Mr0?si=jMAR5W7H41a1WOlf), [Video Source Proof](https://youtu.be/LkUl8HTIJM4?si=NiuNRX0_Ds9o6-A6))
@@ -410,6 +417,8 @@ aliases:
 >>> \lvert\lvert \phi_{\mathbf{y}}(\mathbf{b})-\phi_{\mathbf{y}}(\mathbf{a}) \rvert\rvert &= \Bigg(\underbrace{ \underset{\mathbf{x}\in [\mathbf{a}, \mathbf{b}]}{\text{max}}\lvert\lvert D\phi_{\mathbf{y}}(\mathbf{x}) \rvert\rvert }_{ \leq \frac{1}{2} } \Bigg)\lvert\lvert \mathbf{b}-\mathbf{a} \rvert\rvert   \\
 >>> &\leq \frac{1}{2}\lvert\lvert \mathbf{b}-\mathbf{a} \rvert\rvert 
 >>>\end{align}$$
+>>
+>>Since $\phi$ is a contraction map as shown in the note, we know that by [[#^7623e0 | contraction mapping principle]] there exists some unique fixed point $\mathbf{x}_{\mathbf{y}} \in \overline{B}(\mathbf{0}; r)$, such that $\mathbf{f}(\mathbf{x}_{\mathbf{y}})=\mathbf{y}$
 
 ^7137a9
 
