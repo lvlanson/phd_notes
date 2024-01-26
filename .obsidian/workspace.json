@@ -137,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/nagy.pdf",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/nagy.pdf",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -177,7 +177,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/nagy.pdf"
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md"
               }
             }
           },
@@ -312,13 +312,13 @@
       }
     ]
   },
-  "active": "961810fbf1a062f5",
+  "active": "e02a88fd0e5f9dd5",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
     "Sources/nagy.pdf",
-    "Sources/briggs2019.pdf",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
+    "Sources/briggs2019.pdf",
     "Literature/@kreyszig1978.md",
     "Sources/kreyszig1978.pdf",
     "Sources/Erwin Kreyszig - Introductory functional analysis with applications.pdf",

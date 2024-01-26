@@ -2324,7 +2324,7 @@ aliases:
 >>\lvert\lvert y_{n+1} - y_{n} \rvert\rvert_{\infty} &= \underset{t \in D_{b}}{\text{max}}\; \left\lvert  \int_{t_{0}}^t f(s,y_{n}(s)) \, ds - \int _{t_{0}}^t f(s,y_{n-1}(s)) \, ds   \right\rvert \\
 >> &\leq \underset{t \in D_{b}}{\text{max}}\; \int_{t_{0}}^t \left\lvert   f(s,y_{n}(s)) \, ds -  f(s,y_{n-1}(s)) \,    \right\rvert ds \tag{1}\\
 >>&\leq k\;\underset{t \in D_{b}}{\text{max}}\; \int_{t_{0}}^t \left\lvert   y_{n}(s) \, ds -  y_{n-1}(s) \,    \right\rvert ds \tag{2}\\
->>&\leq kb \lvert\lvert  y_{n}-y_{n-1} \rvert\rvert_{\infty}  \tag{3}\\
+>>&\leq kb \;\lvert\lvert  y_{n}-y_{n-1} \rvert\rvert_{\infty}  \tag{3}\\
 >>\end{align}$$
 >>where we make in equation $(i)$ we make use of
 >>1. [[../Calculus/Integration#^a5bf98| absolute value of definite integration]]
@@ -2344,4 +2344,25 @@ aliases:
 >> &= r^n\left( \frac{1-r^{n+m+1}}{1-r} \right)\lvert\lvert y_{1}-y_{0} \rvert\rvert \tag{4}\\
 >> &\leq r^n\left(\frac{1-r^m}{1-r}\right)\lvert\lvert y_{1}-y_{0} \rvert\rvert 
 >>\end{align}$$
->>where in equation $(4)$ we make use of the definition of the geometric series. Note, the estimations require that $0<r<1$.
+>>where in equation $(4)$ we make use of the definition of the geometric series. Note, the estimations require that $0<r<1$. Therefore, we choose
+>>$$ b < \text{min}\left\{  a,\frac{1}{k}  \right\}$$
+>>In the case, that the minimum is $1/k$, the product $r=kb$ is guaranteed to be less than one, otherwise $a < 1/k$, and $r$ is still less than $1$. Hence, we have shown there exists a solution to the problem, which is the limit of the Cauchy sequence, which is element of the closed subspace $D_{b}$, hence
+>>$$y(t) = y_{0} + \int _{t_{0}}^t f(s,y(s)) \, ds $$
+>>which also reveals $f$ being continuous and differentiable in $D_{b}$.
+>>
+>>Now we want to show that the solution is unique. Therefore, we consider two solutions with 
+>>$$\begin{align}
+>> y(t) &= y_{0} + \int _{t_{0}}^t f(s,y(s)) \, ds \\
+>> \tilde{y}(t) &= y_{0} + \int _{t_{0}}^t f(s,\tilde{y}(s)) \, ds 
+>>\end{align}$$
+>>We now determine the difference between $y$ and $\tilde{y}$, we have
+>>$$\begin{align}
+>>\lvert\lvert y-\tilde{y} \rvert\rvert_{\infty} &= \underset{t \in D_{b}}{\text{max}}\; \left\lvert \int _{t_{0}}^t f(s,y(s)) \, ds-  \int _{t_{0}}^t f(s,\tilde{y}(s)) \, ds  \right\rvert \\
+>> &\leq \underset{t \in D_{b}}{\text{max}}\;\int _{t_{0}}^t \left\lvert  f(s,y(s)) - f(s,\tilde{y}(s)) \right\rvert \\
+>> &\leq k\,\underset{t \in D_{b}}{\text{max}}\;\int _{t_{0}}^t \left\lvert  y(s) -  \tilde{y}(s) \right\rvert \\
+>> &\leq kb\, \lvert\lvert y -  \tilde{y} \rvert\rvert \\
+>>\end{align}$$
+>>by the same procedure steps as previously explained. Note, that we still have $r=kb < 1$. Applying the iterative process previously described, we can observe that the difference decreases and vanishes as we approach infinity, hence we have the conclusion
+>>$$\begin{align}
+>> \lvert\lvert y-\tilde{y} \rvert\rvert_{\infty} \leq r \lvert\lvert y-\tilde{y} \rvert\rvert_{\infty} \quad \Longrightarrow \quad \lvert\lvert y-\tilde{y} \rvert\rvert_{\infty} = 0 \Rightarrow y = \tilde{y} \tag*{$\square$}
+>>\end{align}$$
