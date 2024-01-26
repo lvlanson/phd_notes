@@ -1,6 +1,96 @@
----
-aliases: integration
----
+>[!theorem] Theorem Absolute Value Integral
+>Let $f$ be continuous over the interval $[a,b] \subset \mathbb{R}$, then we can state
+>$$ \left\lvert  \int_{a}^b f(x) \, dx   \right\rvert \leq \int _{a}^b \lvert f(x) \rvert  \, dx $$
+>>[!proof]-
+>>By the properties of the absolute value, we have
+>>$$\begin{align}
+>> -\lvert f(x) \rvert \leq f(x)\leq \lvert f(x) \rvert 
+>>\end{align}$$
+>>Integrating both sides
+>>$$\begin{align}
+>> -\int _{a}^b \, dx \lvert f(x) \rvert \leq \int _{a}^bf(x)\leq \int _{a}^b\lvert f(x) \rvert 
+>>\end{align}$$
+>>Using the following relation, we yield the desired statement
+>>$$\begin{alignat}{2}
+>> \int _{a}^bf(x)&\leq \int _{a}^b\lvert f(x) \rvert \qquad&&\Big\vert \;\;\lvert \,. \rvert \\
+>> \left\lvert\int _{a}^bf(x)\right\rvert&\leq \int _{a}^b\lvert f(x) \rvert \tag*{$\square$} \\
+>>\end{alignat}$$
+
+^a5bf98
+
+>[!theorem] Comparison Theorem  ([[../../../Sources/zotero-182.pdf#page=46|Source]])
+>1. If $f(x)\geq 0$ for $a \leq x \leq b$, then
+>$$\int _{a}^b f(x)\, dx \geq 0$$
+>2. If $f(x) \geq g(x)$ for $a \leq x \leq b$, then
+>$$ \int _{a}^b f(x) \, dx \geq \int _{a}^b g(x) \, dx $$
+>3. If $m$ and $M$ are constants such that $m \leq f(x) \leq M$ for $a \leq x \leq b$, then
+>$$\begin{align}
+> m(b-a) &\leq \int _{a}^bb f(x) \, dx \leq M(b-a) 
+>\end{align}$$
+
+^883fc9
+
+>[!theorem] The Mean Value Theorem for Integrals ([[../../../Sources/zotero-182.pdf#page=55|Source]])
+> If $f(x)$ is continuous over an interval $[a,b]$, then there is at least one point $c \in [a,b]$ such that
+> $$f(c) = \frac{1}{b-a}\int _{a}^b f(x) \, dx $$
+> This formula can also be stated as
+> $$\int _{a}^b f(x) \, dx = f(c)(b-a) $$
+>>[!remark]
+>> The main idea is that a continuous function $f$ over a closed interval $[a,b]$ takes its average value $f(x)$ at some point $c$.  This means, that we take the length of the interval, i.e. $b-a$, and calculate with this the average of the interval over $f(x)$, i.e. $\frac{1}{b-a}\int _{a}^b f(x) \, dx$. The theorem states, we can find a point $c$ within the interval $[a,b]$ which attains this average.
+>
+>>[!proof]-
+>>Since $f(x)$ is continuous on the closed interval $[a,b]$ it will attain its minimum and maximum values on that interval $[a,b]$
+>>$$\begin{align}
+>>\underset{x \in [a,b]}{\text{min}}f(x) &= m \\
+>>\underset{x \in [a,b]}{\text{max}}f(x) &= M
+>>\end{align}$$
+>>Therefore, we can state the relation
+>>$$m \leq f(x) \leq M$$
+>>by the [[#^883fc9| comparison theorem (3)]] we have
+>>$$\begin{alignat}{3}
+>> m(b-a) &\leq \int _{a}^b f(x) \, dx &\leq M(b-a) \qquad&&\Big\vert :(b-a) \\
+>> m &\leq \frac{1}{b-a}\int _{a}^b f(x) \, dx &\leq M \qquad
+>>\end{alignat}$$
+>>Note that the expression $\frac{1}{b-a}\int _{a}^b f(x)$ is bounded by $m$ and $M$. Since $f$ is continuous over $[a,b]$ we know there exists a number $c \in [a,b]$ such that we have
+>>$$\begin{align}
+>>f(c) = \frac{1}{b-a}\int _{a}^b f(x) \, dx  \tag*{$\square$}
+>>\end{align}$$ 
+
+^d7a2e0
+
+>[!Theorem] Fundamental Theorem of Calculus Part 1 ([[../../../Sources/zotero-182.pdf#page=90|Source]])
+>If $f(x)$ is continuous over an interval $[a,b]$, and the function $F(x)$ is defined by
+>$$F(x)=\int _{a}^x f(t) \, dt $$
+>then $F'(x)= f(x)$ over $[a,b]$.
+>>[!proof]-
+>>$$\begin{align}
+>> F'(x) &= \lim_{ h \to 0 } \frac{F(x+h)-F(x)}{h} \tag{Definition Derivative}\\
+>>       &= \lim_{ h \to 0 } \frac{1}{h} \int _{a}^{x+h}f(t) \, dt - \int _{a}^x f(t) \, dt  \tag{Definition Theorem} \\
+>>       &= \lim_{ h \to 0 } \frac{1}{h} \int _{a}^{x+h}f(t) \, dt + \int _{x}^a f(t) \, dt  \tag{Integral Property} \\
+>>       &= \lim_{ h \to 0 } \frac{1}{h} \int _{x}^{x+h}f(t) \, dt   \tag{Integral Property} \\
+>>\end{align}$$
+>>Note, the last equation is the [[#^d7a2e0| mean value]] over the interval $[x, x+h]$, therefore we can state by the [[#^d7a2e0| mean value theorem for integrals]] 
+>>$$\begin{align}
+>> \frac{1}{h} \int _{x}^{x+h}f(t) \, dt = f(c)
+>>\end{align}$$
+>>Note we have
+>>$$\begin{align}
+>> \lim_{ h \to 0 }f(c)=\lim_{ c \to x } f(c) = f(x) 
+>>\end{align}$$
+>>Therefore, putting everything together, we have
+>>$$\begin{align}
+>> F'(x) &= \lim_{ h \to 0 } \frac{1}{h}\int _{x}^{x+h} f(x) \, dx \\
+>> &= \lim_{ h \to 0 } f(c) \\
+>> &= f(x) \tag*{$\square$}
+>>\end{align}$$
+
+^8f29c7
+
+>[!Theorem] Fundamental Theorem of Calculus Part 2 ([[../../../Sources/zotero-182.pdf#page=90|Source]])
+>If $f$ is continuous over the interval $[a,b]$ and $F(x)$ is any antiderivative of $f(x)$, then 
+>$$\int _{a}^b f(x) \, dx = F(b)- F(a) $$
+
+
 >[!Theorem] Theorem Substitution Rule for Indefinite Integrals ([[../../../Sources/briggs2019.pdf#page=414|Source 1]], [[../../../Sources/zotero-182.pdf#page=90|Source 2]])
 > Let $u=g(x)$, where $g$ is differentiable on an interval, and let $f$ be continuous on the corresponding range of $g$. On that interval
 > $$\begin{align}

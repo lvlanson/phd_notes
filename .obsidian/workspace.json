@@ -29,7 +29,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Integration.md",
                 "mode": "source",
                 "source": true
               }
@@ -64,7 +64,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Integration.md",
                 "mode": "preview",
                 "source": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                "file": "Sources/nagy.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                "file": "Sources/nagy.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -177,7 +177,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md"
+                "file": "Sources/nagy.pdf"
               }
             }
           },
@@ -244,78 +244,90 @@
         ],
         "direction": "vertical",
         "x": 2560,
-        "y": 0,
+        "y": 32,
         "width": 1280,
         "height": 1440,
         "maximize": true,
         "zoom": 0
       },
       {
-        "id": "fe335f4b0614b6de",
+        "id": "1a39581e7c614f54",
         "type": "window",
         "children": [
           {
-            "id": "46b44b522e53cd6f",
+            "id": "608fe8ab7792366e",
             "type": "tabs",
             "children": [
               {
-                "id": "cf6135ae5b98caba",
+                "id": "ad4532b519a18355",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
-                    "mode": "preview",
-                    "source": true
-                  }
-                }
-              },
-              {
-                "id": "e8e5ea28fd127726",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
-                    "mode": "preview",
-                    "source": true
-                  }
-                }
-              },
-              {
-                "id": "a84715cc71fe555e",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
+                    "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
                     "mode": "preview",
                     "source": true
                   }
                 }
               }
-            ],
-            "currentTab": 2
+            ]
           }
         ],
         "direction": "vertical",
-        "x": 768,
-        "y": 336,
+        "x": 2144,
+        "y": 523,
         "width": 1024,
         "height": 800,
-        "maximize": true,
+        "maximize": false,
+        "zoom": 0
+      },
+      {
+        "id": "8c54a59c20d0c2a1",
+        "type": "window",
+        "children": [
+          {
+            "id": "fcbb8e3cf3b9a15e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "961810fbf1a062f5",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/nagy.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 960,
+        "width": 1080,
+        "height": 960,
+        "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "e02a88fd0e5f9dd5",
+  "active": "961810fbf1a062f5",
   "lastOpenFiles": [
-    "Sources/nagy.pdf",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+    "Sources/nagy.pdf",
+    "Sources/briggs2019.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
+    "Literature/@kreyszig1978.md",
+    "Sources/kreyszig1978.pdf",
+    "Sources/Erwin Kreyszig - Introductory functional analysis with applications.pdf",
+    "PhD Studies/Mathematic Basics/Functional Analysis",
+    "Sources/zotero-182.pdf",
+    "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
     "Sources/ben-baruch2021.pdf",
     "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
     "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
-    "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
     "PhD Studies/To-Do.md",
     "Sources/shifrin2005.pdf",
     "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
@@ -327,10 +339,7 @@
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/Plot ODEs.md",
     "Paper/Hyperbox Metric/Timeline.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/motivation_example_3d.ggb",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/motivation_example_3d",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/motivation_example_3d.png",
-    "Paper/Hyperbox Metric",
-    "Paper",
     "Dokumentation.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/ODE_example_2_t_-1.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/ODE_example_2_t_1.png",
@@ -340,21 +349,16 @@
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/ODE_example_1.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/ODE_example_2_1.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/ODE_example_1.png",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures",
-    "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.html",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "Excalidraw/Drawing 2024-01-17 18.47.08.excalidraw.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
-    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
     "Literature/@apostol1967.md",
     "Zwischenbericht.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/Mahalabonis Distance.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
-    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/1 - Maximum Inner Product Search.md",
-    "Literature/@rudin1976.md",
     "Untitled.canvas"
   ]
 }

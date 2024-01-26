@@ -2096,7 +2096,7 @@ aliases:
 > The reverse of the function $y(t)$ is denoted as $t(y)$.
 
 >[!theorem] Theorem Inverse Function Exact ([[../../../Sources/nagy.pdf#page=50|Source]]) 
->$$ Ny' + M = 0 \text{ is exact } \Longleftrightarrow Nt' + M = 0 \text{ is exact}$$
+>$$ Ny' + M = 0 \text{ is exact } \Longleftrightarrow N + Mt' = 0 \text{ is exact}$$
 >>[!proof]-
 >>We write as
 >>$$\begin{alignat}{2}
@@ -2125,7 +2125,7 @@ aliases:
 >$$Ny'+Mt'=0$$
 >which is imprecise and will be avoided. Note, further instead of the variable $t$ the variable $x$ is used instead.
 
->[!theorem] Theorem Solving Semi-Exact Inverse Equations
+>[!theorem] Theorem Solving Semi-Exact Inverse Equations ([[../../../Sources/nagy.pdf#page=51|Source]]) 
 > If the equation $$Mt'+N = 0$$
 > is **not exact**, with $\partial_{y}M \neq \partial_{x}N$ and function $M \neq 0$, where the function $l$ is defined as
 > $$l=-\frac{\partial_{y}M - \partial_{t}N}{M}$$
@@ -2159,5 +2159,189 @@ aliases:
 >>Since the verification proof holds, the constructive proof from the **semi-exact** equations can be applied.
 >>See [[#^3a7e40]]
 >
->>[!example] Example Find all solutions to the differential equation $(5te^{-y}+2\cos(3t)y') + (5e^{-y}-3\sin(3t)) =0$
+>>[!example]- Example Find all solutions to the differential equation $(5te^{-y}+2\cos(3t))y' + (5e^{-y}-3\sin(3t)) =0$
+>> First, we check if the given equation is an **exact** equation. We have
+>> $$\begin{align}
+>> \underbrace{ (5te^{-y}+2\cos(3t)) }_{ = N(t,y) }y' + \underbrace{ (5e^{-y}-3\sin(3t)) }_{ =M(t,y) } =0
+>>\end{align}$$
+>>Determining the partial derivatives yields
+>>$$\begin{align}
+>> \partial_{t}N(t,y) &= 5e^{-y}-6\sin(3t) \tag{1}\\
+>> \partial_{y}M(t,y) &= -5e^{-y} \tag{2}\\
+>>\end{align}$$
+>>Obviously, the given equation is **not exact**, we now check if it is **semi-exact**. We determine the integrating factor
+>>$$H(t) = \int h(t) \, dt$$
+>>with 
+>>$$h = \frac{\partial_{y}M - \partial_{t}N}{N}$$ 
+>>Therefore we have
+>>$$\begin{align}
+>>h &= \frac{-5e^{-y} - (5e^{-y}-6\sin(3t))}{5te^{-y}+2\cos(3t)}\\ 
+>> &=\frac{-10e^{-y} +6\sin(3t)}{5te^{-y}+2\cos(3t)}
+>>\end{align}$$
+>>which is a function dependent on $y$ and $t$, hence it is **not semi-exact**. Now we determine if we can find the inverted form to be **semi-exact**. Since the partial derivatives don't change, we know that it remains **not exact**, and we can further use these $(1,2)$. Hence, we check the semi exactness of the inverted representation, i.e.
+>>$$\begin{align}
+>> l &= -\frac{\partial_{y}M - \partial_{t}N}{M} \\
+>> &= -\frac{-10e^{-y} +6\sin(3t))}{5e^{-y}-3\sin(3t)}\\ 
+>> &= 2\cancel{ \frac{5e^{-y}-3\sin(3t)}{5e^{-y}-3\sin(3t)} }\\  
+>> &= 2
+>>\end{align}$$
+>>Since $l$ does not depend on any variable, it is a valid integrating factor, hence we have
+>>$$\begin{align}
+>> L &= \int 2 \, dy \\
+>>   &= 2y + \underbrace{ c_{0} }_{ =0 }
+>>\end{align}$$
+>>Hence, we have the integrating factor
+>>$$\begin{align}
+>> e^L = e^{2y}
+>>\end{align}$$
+>>Therefore, the **exact equation** can be given as
+>>$$\begin{align}
+>> e^{2y}(5te^{-y}+2\cos(3t)) + e^{2y}(5e^{-y}-3\sin(3t)t' &= 0 \\
+>> \underbrace{ (5te^y + 2e^{2y}\cos(3t)) }_{ = \widehat{N}(t,y) } + \underbrace{ (5e^y - 3e^{2y}\sin(3t)) }_{ =\widehat{M}(t,y) }t' &=0
+>>\end{align}$$
+>>We verify briefly, that the equation is indeed exact.
+>>$$\begin{align}
+>>\partial_{t} \widehat{N} &= 5e^y-6e^{2y}\sin(3t) \\
+>>\partial_{y} \widehat{M} &= 5e^y - 6e^{2y}\sin(3t)
+>>\end{align}$$
+>>Hence, the equation is now, as expected, **exact**. Therefore, we use [[#^e52bb3| the solution theorem of exact equations]]. First we determine the potential function $\phi(t,y)$. We know
+>>$$\begin{align}
+>> \partial_{y} \phi &= \widehat{N}(t,y) \\
+>> \partial_{t} \phi &= \widehat{M}(t,y)
+>>\end{align}$$
+>>Determining $\phi$ we integrate $\widehat{M}$
+>>$$\begin{align} \\
+>> \phi(t,y) &= \int \widehat{M}(t,y) \, dt \\
+>> &= \int   5e^y\, dt - \int  3e^{2y}\sin(3t))\, dt \\ 
+>>  &= 5te^y +e^{2y}\cos(3t) + g(y) \\
+>>\end{align}$$
+>>Note, that $t$ is here a function of $y$. Now we take the derivative with respect to $y$ to compare to $\widehat{N}$. We have
+>>$$\begin{align}
+>> \frac{d\phi}{dy} &= 5te^y + 2e^{2y}\cos(3t)+g'(y)
+>>\end{align}$$
+>>Comparing this to $\widehat{N}(t,y)$ we have
+>>$$\begin{alignat}{2}
+>> \cancel{ 5te^y + 2e^{2y}\cos(3t) }+g'(y) &= \cancel{ 5te^y + 2e^{2y}\cos(3t) } \\
+>> g'(y) &= 0
+>>\end{alignat}$$
+>>Integrating $g'(y)$ yields
+>>$$\begin{align}
+>>g(y) &= \int g'(y) \, dy \\
+>> &= \int 0 \, dy \\
+>> &= \underbrace{ c }_{ =0 }
+>>\end{align}$$
+>>Hence, the potential function can be given as
+>>$$ \phi(t,y) = 5te^y +e^{2y}\cos(3t)$$
+>>The solution to the equation is therefore
+>>$$c = 5te^y +e^{2y}\cos(3t)$$
+
+>[!example]- Exericses
+>>[!example] Task 
+>>Consider the equation $$(1+t^2)y' = -2ty$$
+>>1. Determine whether the differential equation is exact.
+>>2. Find every solution of the equation.
+>>>[!example] Solution
+>
+>>[!example] Task
+>>Consider the equation $$t \cos(y)y' - 2yy' = -t-\sin(y)$$
+>>1. Determine whether the differential equation is exact.
+>>2. Find every solution of the equation.
+>>>[!example] Solution
+>
+>>[!example] Task
+>>Consider the equation $$(6x^5-xy)+(-x^2+xy^2)y' = 0$$
+>>1. Determine whether the differential equation is exact.
+>>2. Find every solution of the equation.
+>>>[!example] Solution
+>
+>>[!example] Task
+>>Consider the equation
+>>$$\left(2x^2y+ \frac{y}{x^2}\right)y' + 4xy^2=0$$
+>>with initial condition $y(0)=-2$
+>>1. Find an integrating factor $\mu$ that converts the equation above into an exact equation.
+>>2. Find an implicit expression for the solution $y$ of the IVP.
+>>3. Find an explicit expression for the solution $y$ of the IVP.
+>>>[!example] Solution
+>
+>>[!example]
+>>Consider the equation
+>>$$\big(-3xe^{-2y}+\sin(5x)\big)y' + \big(3e^{-2y}+5\cos(5x)\big) = 0$$
+>>1. Is this equation for $y$ exact? If not, does this equation have an integrating factor depending on $x$?
+>>2. Is the equation for $x=y^{-1}$ exact? If not, does this equation have an integrating factor depending on $y$?
+>>3. Find an implicit expression for all solutions $y$ of the differential equation above.
+>>>[!example] Solution
+>
+>>[!example]
+>>Find the solution to the equation
+>>$$2t^2y+2t^2y^2+1+(t^3+2t^3y+2ty)y' = 0$$
+>>with initial condition $y(1)=2$
+
+## 6 - Nonlinear Equations
+
+>[!def] Definition Nonlinear Differential Equations ([[../../../Sources/nagy.pdf#page=68|Source]]) 
+>An ODE $$y'(t) = f(t,y(t))$$ is called **nonlinear** iff the function $f$ is nonlinear in the second argument.
+>>[!example]- Examples
+>>>[!example]
+>>> The differential equation
+>>> $$y'(t)=\frac{t^2}{y^3(t)}$$
+>>> is nonlinear, since the function $f(t,y)=\frac{t^2}{y^3}$ is nonlinear in the second argument, due to the term $y^{-3}$
 >>
+>>>[!example]
+>>>The differential equation
+>>>$$y'(t) =  2ty(t)+ \ln(y(t))$$
+>>>is nonlinear, since the function $f(t,y) = 2ty + \ln(y)$ is nonlinear in the second argument, due to the term $\ln(y)$.
+>>
+>>>[!example]
+>>>The differential equation
+>>>$$\frac{y'(t)}{y(t)}=2t^2$$
+>>>is linear, since the function $f(t,y)=2t^2y$ is linear in the second argument.
+
+>[!theorem] Theorem Picard-Lindelöf ([[../../../Sources/nagy.pdf#page=68|Source]]) 
+>Consider the initial value problem
+>$$y'(t) = f(t,y(t))$$
+>with
+>$$y(t_{0})=y_{0}$$
+>If the function $f$ is continuous on the domain $$D_{a} = [t_{0}-a, t_{0}+a] \times [y_{0}-a, y_{0}+a]\subset \mathbb{R}^2$$ for some $a>0$, and $f$ is Lipschitz continuous on $y$, that is there exists some $k>0$ such that
+>$$\lvert f(t,y_{2})-f(t,y_{1}) \rvert < k \lvert y_{2}-y_{1} \rvert  $$
+>for all $(t,y_{2}), (t,y_{1})\in D_{a}$, then there exists a positive $b<a$ such that there exists a unique solution $y$ on the domain $[t_{0}-b, t_{0}+b]$, to the initial value problem
+>>[!proof]
+>> We start by taking the integral on both sides 
+>> $$\begin{align}
+>> y'(t) &= f(t,y(t)) \\
+>> \int _{t_{0}}^t y'(s) \, ds  &= \int _{t_{0}}^t f(s,y(s))\, ds  \\
+>>   y(t)-\underbrace{ y(t_{0}) }_{ =y_{0} } &= \int _{t_{0}}^t f(s,y(s))\, ds  \tag{1}\\
+>> y(t) &= y_{0} + \int _{t_{0}}^t f(s,y(s))\, ds 
+>>\end{align}$$
+>>Where in equation $(1)$ the [[../Calculus/Integration#^8f29c7 | fundamental theorem of calculus part 1]] was used. We construct now a sequence of functions $(y_{n})_{n=0}^\infty$ using the last result.
+>>$$\begin{align}
+>> y_{n+1}(t) &= y_{0} + \int _{t_{0}}^t f(s,y_{n}(s))\, ds \tag{Picard Iteration}
+>>\end{align}$$
+>>with $n\geq 0$ and $y_{0}(t) = y(t_{0})= y_{0}$. We want to show now that the sequence $(y_n)_{n=0}^\infty$ is a [[../Functional Analysis/Functional Analysis Basics#^dd46be | Cauchy Sequence]] in the normed space $C(D_b)$, i.e. it is converging in the normed space $C(D_{b})$, with $D_b =[t_{0}-b, t_{0}+b]$ and some sufficiently small $b>0$. The norm of the function space of the Banach space is
+>>$$\lvert\lvert u \rvert\rvert = \underset{t \in D_{b}}{\text{max}}\;\lvert u(t) \rvert $$
+>>We first estimate the difference between two consecutive elements
+>>
+>>$$\begin{align}
+>>\lvert\lvert y_{n+1} - y_{n} \rvert\rvert_{\infty} &= \underset{t \in D_{b}}{\text{max}}\; \left\lvert  \int_{t_{0}}^t f(s,y_{n}(s)) \, ds - \int _{t_{0}}^t f(s,y_{n-1}(s)) \, ds   \right\rvert \\
+>> &\leq \underset{t \in D_{b}}{\text{max}}\; \int_{t_{0}}^t \left\lvert   f(s,y_{n}(s)) \, ds -  f(s,y_{n-1}(s)) \,    \right\rvert ds \tag{1}\\
+>>&\leq k\;\underset{t \in D_{b}}{\text{max}}\; \int_{t_{0}}^t \left\lvert   y_{n}(s) \, ds -  y_{n-1}(s) \,    \right\rvert ds \tag{2}\\
+>>&\leq kb \lvert\lvert  y_{n}-y_{n-1} \rvert\rvert_{\infty}  \tag{3}\\
+>>\end{align}$$
+>>where we make in equation $(i)$ we make use of
+>>1. [[../Calculus/Integration#^a5bf98| absolute value of definite integration]]
+>>2. Lipschitz continuity
+>>3. maximum estimation
+>>
+>>We further denote $r = kb$. The following relation can be asserted from equation $(3)$
+>>$$\lvert\lvert y_{n+1} - y_{n} \rvert\rvert_{\infty} \leq r \lvert\lvert  y_{n}-y_{n-1} \rvert\rvert_{\infty}\quad \Longrightarrow \quad \lvert\lvert y_{n+1} - y_{n} \rvert\rvert_{\infty} \leq r^n \lvert\lvert  y_{1}-y_{0} \rvert\rvert_{\infty}\quad$$ 
+>>>[!note]
+>>>The constant $r$ denotes an estimation of the factor of how two consecutive elements get closer the further the Cauchy sequences progresses. This property is necessary by the Cauchy sequence itself, because this is the requirement for the Cauchy sequence to converge. Therefore, $0 < r < 1$.
+>>
+>>Further, we can make the following estimation
+>>$$\begin{align}
+>> \lvert\lvert y_{n+1} - y_{n+m} \rvert\rvert_{\infty} &= \lvert\lvert y_{n} \underbrace{ - y_{n+1} + y_{n+1} }_{ =0 } -y_{n+2} + \dots + y_{n+(m-1)} - y_{n+m}\rvert\rvert_{\infty}  \\
+>> &\leq \underbrace{ \lvert\lvert  y_{n} - y_{n+1} \rvert\rvert_{\infty}   }_{ \leq r^n \lvert\lvert  y_{1}-y_{0} \rvert\rvert_{\infty}} + \underbrace{ \lvert\lvert y_{n+1}-y_{n+2} \rvert\rvert_{\infty} }_{  \leq r^{n+1} \lvert\lvert  y_{1}-y_{0} \rvert\rvert_{\infty}}   + \dots + \underbrace{ \lvert\lvert y_{n+(m-1)}-y_{n+m} \rvert\rvert_{\infty}  }_{ \leq r^{n+m} \lvert\lvert  y_{1}-y_{0} \rvert\rvert_{\infty} }  \\ \\
+>> &\leq r^n(1+r+r^2+\dots+r^{n+m})\lvert\lvert y_{1}-y_{0} \rvert\rvert \\
+>> &= r^n\left( \frac{1-r^{n+m+1}}{1-r} \right)\lvert\lvert y_{1}-y_{0} \rvert\rvert \tag{4}\\
+>> &\leq r^n\left(\frac{1-r^m}{1-r}\right)\lvert\lvert y_{1}-y_{0} \rvert\rvert 
+>>\end{align}$$
+>>where in equation $(4)$ we make use of the definition of the geometric series. Note, the estimations require that $0<r<1$.
