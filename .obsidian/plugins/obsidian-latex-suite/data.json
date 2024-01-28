@@ -8,7 +8,7 @@
   "concealEnabled": true,
   "colorPairedBracketsEnabled": true,
   "highlightCursorBracketsEnabled": true,
-  "mathPreviewEnabled": true,
+  "mathPreviewEnabled": false,
   "autofractionEnabled": true,
   "autofractionSymbol": "\\frac",
   "autofractionBreakingChars": "+-=\t",

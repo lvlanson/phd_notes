@@ -18,7 +18,8 @@
     "thermodynamical",
     "extremum",
     "Rolle",
-    "codomain"
+    "codomain",
+    "Maclaurin"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,

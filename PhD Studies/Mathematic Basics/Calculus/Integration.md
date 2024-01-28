@@ -90,6 +90,8 @@
 >If $f$ is continuous over the interval $[a,b]$ and $F(x)$ is any antiderivative of $f(x)$, then 
 >$$\int _{a}^b f(x) \, dx = F(b)- F(a) $$
 
+^f18d9f
+
 
 >[!Theorem] Theorem Substitution Rule for Indefinite Integrals ([[../../../Sources/briggs2019.pdf#page=414|Source 1]], [[../../../Sources/zotero-182.pdf#page=90|Source 2]])
 > Let $u=g(x)$, where $g$ is differentiable on an interval, and let $f$ be continuous on the corresponding range of $g$. On that interval

@@ -124,7 +124,7 @@ aliases:
 >>$$E(a,h) = \frac{f(a)+h -f(a)}{h}-f'(a)$$
 >>with $h \neq 0$ and $E(a,0)=0$. This formula denotes the difference between the first derivative and the change of the mapping $f$ with respect to the change $h$ on $a$. Rearranging this formula yields
 >>$$f(a+h)= f(a)+f'(a)h + hE(a,h)$$
->>Note, this equation is the first order [[Differentiation#^916fa1 | Taylor series expansion ]] of $f$ centered at $a$. Note, this equation now holds for $h=0$. Further, the term $hE(a,h)$ denotes the error committed by the approximation of the Taylor series expansion. As $h\to_{0}$ the error decreases as well.
+>>Note, this equation is the first order [[Series#^916fa1 | Taylor series expansion ]] of $f$ centered at $a$. Note, this equation now holds for $h=0$. Further, the term $hE(a,h)$ denotes the error committed by the approximation of the Taylor series expansion. As $h\to_{0}$ the error decreases as well.
 >
 >Let 
 >- $f: S \to \mathbb{R}$ be a scalar field with $S \subseteq \mathbb{R}^n$
@@ -148,7 +148,7 @@ aliases:
 >Moreover, $f'(\mathbf{a};\mathbf{y})$ is a linear combination of the components of $\mathbf{y}$. We have
 >$$f'(\mathbf{a}; \mathbf{y}) = \sum_{k=1}^n D_{k}f(\mathbf{a})y_{k}$$
 >>[!proof]-
->> If $\mathbf{y}=\mathbf{0}$ we have $T_{\mathbf{a}}(\mathbf{0})= 0$ due to linearity of $T_{\mathbf{a}}$, as well does $f'(\mathbf{a}, \mathbf{0}) = 0$ by [[Multivariate Calculus#^c18601 | definition]]. Assume now $\mathbf{y}\neq \mathbf{0}$. Since $f$ is differentiable at $\mathbf{a}$ we can state the first order [[Differentiation#^916fa1|Taylor series expansion]] of $f$ around the point $\mathbf{a}$ as
+>> If $\mathbf{y}=\mathbf{0}$ we have $T_{\mathbf{a}}(\mathbf{0})= 0$ due to linearity of $T_{\mathbf{a}}$, as well does $f'(\mathbf{a}, \mathbf{0}) = 0$ by [[Multivariate Calculus#^c18601 | definition]]. Assume now $\mathbf{y}\neq \mathbf{0}$. Since $f$ is differentiable at $\mathbf{a}$ we can state the first order [[Series#^916fa1|Taylor series expansion]] of $f$ around the point $\mathbf{a}$ as
 >> $$\begin{alignat}{3}
 >> f(\mathbf{a} + \mathbf{v}) &= f(\mathbf{a} + \mathbf{v}) &&+ \underbrace{ f'(\mathbf{a} + \mathbf{v}) }_{ T_{\mathbf{a}}(\mathbf{v}) } &&+ \lvert\lvert \mathbf{v} \rvert\rvert E(\mathbf{a, \mathbf{ v}}) \\
 >> &=f(\mathbf{a}) &&+ T_{\mathbf{a}}(\mathbf{v}) &&+ \lvert\lvert \mathbf{v} \rvert\rvert E(\mathbf{a, \mathbf{ v}}) \tag{by definition}
@@ -219,7 +219,7 @@ aliases:
 >$$\lvert\lvert \mathbf{f}(\mathbf{b}) - \mathbf{f}(\mathbf{a}) \rvert\rvert \leq \left(\underset{\mathbf{x}\in [\mathbf{a}, \mathbf{b}]}{\text{max}}\lvert\lvert D\mathbf{f}(\mathbf{x}) \rvert\rvert \right)\lvert\lvert \mathbf{b}-\mathbf{a} \rvert\rvert  $$
 >
 >>[!remark]
->> The **mean value inequality** is a generalization of the [[Differentiation#^d97652|mean value theorem]] defined on the real valued functions. This theorem tells us, that we have bounds on the size of the derivative of a differentiable function. Specifically it tells us how much a function can change from one point to another.
+>> The **mean value inequality** is a generalization of the [[Differentiation#^71d429|mean value theorem]] defined on the real valued functions. This theorem tells us, that we have bounds on the size of the derivative of a differentiable function. Specifically it tells us how much a function can change from one point to another.
 >>
 >> The term $\underset{\mathbf{x}\in [\mathbf{a}, \mathbf{b}]}{\text{max}}\lvert\lvert D\mathbf{f}(\mathbf{x}) \rvert\rvert$ gives us the value of the most the function is stretching vectors along the line segment $\mathbf{b}-\mathbf{a}$ and multiplying it by how far we moved from one point to another.
 >
@@ -252,8 +252,6 @@ aliases:
 >> \underset{t\in [0,1]}{\text{max}}\lvert\lvert \mathbf{g}'(t) \rvert\rvert &\leq  \left(\underset{\mathbf{x}\in [\mathbf{a}, \mathbf{b}]}{\text{max}}\lvert\lvert D\mathbf{f}(\mathbf{x}) \rvert\rvert \right)\lvert\lvert \mathbf{b}-\mathbf{a} \rvert\rvert \tag*{$\square$}
 >>\end{align}$$
 >
->>
->>
 
 ^74523c
 

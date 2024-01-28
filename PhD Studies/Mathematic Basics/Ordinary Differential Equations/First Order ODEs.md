@@ -1,8 +1,3 @@
----
-aliases:
-- First Order ODE
-- Linear First Order ODE
----
 
 >[!Source]-
 >URL: 
@@ -2304,7 +2299,7 @@ aliases:
 >If the function $f$ is continuous on the domain $$D_{a} = [t_{0}-a, t_{0}+a] \times [y_{0}-a, y_{0}+a]\subset \mathbb{R}^2$$ for some $a>0$, and $f$ is Lipschitz continuous on $y$, that is there exists some $k>0$ such that
 >$$\lvert f(t,y_{2})-f(t,y_{1}) \rvert < k \lvert y_{2}-y_{1} \rvert  $$
 >for all $(t,y_{2}), (t,y_{1})\in D_{a}$, then there exists a positive $b<a$ such that there exists a unique solution $y$ on the domain $[t_{0}-b, t_{0}+b]$, to the initial value problem
->>[!proof]
+>>[!proof]-
 >> We start by taking the integral on both sides 
 >> $$\begin{align}
 >> y'(t) &= f(t,y(t)) \\
@@ -2366,3 +2361,246 @@ aliases:
 >>$$\begin{align}
 >> \lvert\lvert y-\tilde{y} \rvert\rvert_{\infty} \leq r \lvert\lvert y-\tilde{y} \rvert\rvert_{\infty} \quad \Longrightarrow \quad \lvert\lvert y-\tilde{y} \rvert\rvert_{\infty} = 0 \Rightarrow y = \tilde{y} \tag*{$\square$}
 >>\end{align}$$
+>
+>>[!example]- Example Use the proof of Picard-Lindelöf's theorem to find the solution to $y'=2y+3$ with $y(0)=1$
+>> First we integrate with respect to the initial condition
+>> $$\int _{0}^t y'(s) \, ds = \int _{0}^t 2y(s)+3\, ds  $$
+>> We define the sequence with $n \geq 0$
+>> $$y_{n+1} = y_{0} + \int _{0}^t 2y_{n}+3 \, ds $$
+>> Inserting the initial condition $y_0 = y(0)=1$ gives
+>> $$y_{n+1} = 1 + \int _{0}^t 2y_{n}+3 \, ds $$
+>> Lets compute the first elements of the sequence
+>> $$\begin{align}
+>> y_{0} &= 1 \\
+>> y_{1} &= 1 + \int _{0}^t2y_0 + 3 \, ds \\
+>>    &= 1 + \int _{0}^t 5 \, ds  \\
+>>    &= 1 + 5t \\
+>> y_{2} &= 1 + \int _{0}^t 2y_{1}+3\, ds  \\
+>>    &= 1 + \int _{0}^t 2(1+5t) + 3 \,ds \\
+>>    &= 1 + \int _{0}^t 10t + 5 \,ds  \\
+>>    &= 1 + \frac{10}{2}t^2 + 5t \\
+>>    &= 1+ 5t^2 + 5t  \\
+>> y_{3} &= 1 + \int _{0}^t 2y_{2}+3 \, ds \\ 
+>>    &= 1 + \int _{0}^t 2(1+ 5t^2 + 5t )+3 \, ds \\ 
+>>    &= 1 + \int _{0}^t 10t^2 + 10t +5 \, ds \\ 
+>>    &= 1 + \frac{10}{3}t^3 + 5t^2 + 5t \\ 
+>>\end{align}$$
+>>We now try to formulate this sequence as [[../Calculus/Series#^588b80 |  power series expansion]] to determine the point of convergence. 
+>>$$\begin{align}
+>> y_{3} &= 1 + 5t + 5t^2 + \frac{5\cdot 2}{3}t^3 \\ \\
+>>    &= 1 + 5 \frac{t}{1!} + 5 \cdot 2 \frac{t^2}{2!}+ \frac{5 \cdot 2 \cdot (1 \cdot 2 \cdot \cancel{ 3 })}{\cancel{ 3 }}\frac{t^3}{3!} \\
+>>    &= 1 + 5 \frac{t}{1!} + 5 \cdot 2 \frac{t^2}{2!}+ 5 \cdot 4\frac{t^3}{3!} \\
+>>    &= 1 + 5 \cdot 2^0 \frac{t}{1!} + 5 \cdot 2^1 \frac{t^2}{2!}+ 5 \cdot 2^2\frac{t^3}{3!} \\
+>>    &= 1 + \frac{5}{2} \frac{2t}{1!} + \frac{5}{2} \frac{(2t)^2}{2!}+ \frac{5}{2} \frac{(2t)^3}{3!} \\
+>>    &= 1 + \frac{5}{2} \left(\frac{2t}{1!} + \frac{(2t)^2}{2!}+ \frac{(2t)^3}{3!}\right) \\
+>>\end{align}$$
+>>For $y_n$ we have
+>>$$\begin{align}
+>> y_{n} &= 1 + \frac{5}{2} \left(\frac{2t}{1!} + \frac{(2t)^2}{2!}+ \frac{(2t)^3}{3!}+\dots+\frac{(2t)^n}{n!}\right) \\
+>>    &= 1 + \frac{5}{2} \left(\sum_{k=1}^n \frac{(2t)^k}{k!}\right)\\
+>>    &= 1 + \frac{5}{2} \left(\sum_{k=0}^n \frac{(2t)^k}{k!}\right) -\frac{5}{2}\\
+>>    &= \frac{5}{2} \left(\sum_{k=0}^n \frac{(2t)^k}{k!}\right) -\frac{3}{2}\\
+>>\end{align}$$
+>>As we let $n\to \infty$ we obtain an [[../Calculus/Series#^9251bc | exponential function]]
+>>$$\begin{align}
+>> \lim_{ n \to \infty } y_{n} &=  \frac{5}{2} \left(\sum_{k=0}^\infty \frac{(2t)^k}{k!}\right) -\frac{3}{2} \\
+>>               &= \frac{5}{2}\left(e^{2t}\right) -\frac{3}{2}\\
+>>\end{align}$$
+>
+>>[!example]- Example Use the proof of Picard-Lindelöf's theorem to find the solution for $y'=ay+b$ with $y(0)= \hat{y}_{0}$ with $a,b \in \mathbb{R}$
+>> We first integrate with respect to the initial condition
+>> $$\begin{align}
+>> \int _{0}^t y'(s) \, ds &= \int _{0}^t ay(s)+b\, ds  \\ 
+>> y(t) - y(0) &= \int _{0}^t ay(s)+b\, ds  \tag{1}
+>>\end{align}$$
+>>where in $(1)$ we used the [[../Calculus/Integration#^f18d9f| fundamental theorem of calculus]]. We have the initial condition $y(0)= \hat{y}_{0}$
+>>$$\begin{align}
+>>y(t) &= \hat{y}_{0} + \int _{0}^t ay(s)+b\, ds
+>>\end{align}$$
+>>We now define the following sequence
+>>$$\begin{align}
+>> y_{0} &= y(0) = \hat{y}_{0}  \\
+>> y_{n+1}(t) &= \hat{y}_{0} + \int _{0}^t ay_{n}(s)+b\, ds
+>>\end{align}$$
+>>with $n \geq 0$. The first element of the sequence $n=0$ can be computed as follows
+>>$$\begin{align}
+>> y_{1}(t) &= \hat{y}_{0} + \int _{0}^t (ay_{0}(s)+b) \, ds \\ 
+>>  &= \hat{y}_{0} + \int _{0}^t (a \hat{y}_{0}+b) \, ds \\ 
+>>  &= \hat{y}_{0} + (a \hat{y}_{0}+b)t \, \\ 
+>>\end{align}$$
+>>We continue calculating the next element $y_2(t)$
+>>$$\begin{align}
+>> y_{2}(t) &= \hat{y}_{0} + \int _{0}^t (ay_{1}(s)+b) \, ds \\ 
+>>  &= \hat{y}_{0} + \int _{0}^t (a\underbrace{ (\hat{y}_{0} + (a \hat{y}_{0}+b)s) }_{ =y_{1}(s) } +b) \, ds \\ 
+>>  &= \hat{y}_{0} + \int _{0}^t (a\hat{y}_{0} + as(a \hat{y}_{0}+b) +b) \, ds \\ 
+>>  &= \hat{y}_{0} + \int _{0}^t (a\hat{y}_{0} + b) \,ds + \int _{0}^t   as(a \hat{y}_{0}+b) \, ds \\ 
+>>  &= \hat{y}_{0} + (a \hat{y}_{0}+b)t + \frac{at^2}{2}(a \hat{y}_{0}+b) \\ 
+>>\end{align}$$
+>>In similar fashion $y_3$ can be obtained as
+>>$$y_{3}(t)= \hat{y}_{0} + (a \hat{y}_{0}+b)t + \frac{at^2}{2}(a \hat{y}_{0}+b) + \frac{a^2t^3}{3!}(a \hat{y}_{0}+b) $$
+>>Note, we can make some rearrangements to obtain a [[../Calculus/Series#^78a81b| Maclaurin polynomial]]
+>>$$\begin{align}
+>> y_{n}(t)&= \hat{y}_{0} + (a \hat{y}_{0}+b)t + \frac{at^2}{2}(a \hat{y}_{0}+b) + \frac{a^2t^3}{3!}(a \hat{y}_{0}+b) + \dots +  \frac{a^{n-1}t^{n}}{n!}(a \hat{y}_{0}+b)  \\
+>>  &= \hat{y}_{0} + \frac{a \hat{y}_{0}+b}{a}at + \frac{(at)^2}{2!}\frac{a \hat{y}_{0}+b}{a} + \frac{(at)^3}{3!}\frac{a \hat{y}_{0}+b}{a} + \dots +  \frac{(at)^n}{n!}\frac{a \hat{y}_{0}+b}{a} \\
+>>  &= \hat{y}_{0} + \frac{a \hat{y}_{0}+b}{a}\left(at + \frac{(at)^2}{2!} + \frac{(at)^3}{3!} + \dots +  \frac{(at)^n}{n!} \right) \\
+>>  &= \hat{y}_{0} + \left(\hat{y}_{0}+\frac{b}{a}\right)\left(\sum_{k=1}^n \frac{(at)^k}{k!}\right) \\
+>>  &= \cancel{ \hat{y}_{0} } +\left(\hat{y}_{0}+\frac{b}{a}\right)\left(\sum_{k=0}^n \frac{(at)^k}{k!}\right) \cancel{ - \hat{y}_{0} }-\frac{b}{a}\\
+>>  &= \left(\hat{y}_{0}+\frac{b}{a}\right)\left(\sum_{k=0}^n \frac{(at)^k}{k!}\right) -\frac{b}{a}\\
+>>\end{align}$$
+>>As we let $n \to \infty$ we obtain the [[../Calculus/Series#^9251bc | exponential function]]
+>>$$\begin{align}
+>>\lim_{ n \to \infty } y_{n}(t) &=  \left(\hat{y}_{0}+\frac{b}{a}\right)\left(\sum_{k=0}^\infty \frac{(at)^k}{k!}\right) -\frac{b}{a} \\
+>> &= \left(\hat{y}_{0}+\frac{b}{a}\right)e^{at} -\frac{b}{a}
+>>\end{align}$$
+>
+>>[!example]- Example Use the Picard iteration to find the solution $y' = 5ty$ with $y(0)=1$
+>>First we integrate both sides with respect to the initial condition
+>>$$\int _{0}^t y'(s) \, ds = \int _{0}^t 5sy(s)\, ds  $$
+>>Now we determine the sequence $y_n$
+>>$$y_{n+1} = y_{0}+\int _{0}^t 5sy_{n}\, ds $$
+>>Inserting the initial condition $y_{0}=y(0)=1$ gives
+>>$$y_{n+1} = 1+\int _{0}^t 5sy_{n}\, ds $$
+>>We now determine the first elements of the sequence
+>>$$\begin{align}
+>> y_{0} &= 1  \\
+>> y_{1} &= 1 + \int _{0}^t 5sy_{1}\, ds  \\
+>>    &= 1 + \int _{0}^t 5s\, ds  \\
+>>    &= 1 + \frac{5}{2}t^2  \\ \\
+>> y_{2} &= 1 + \int _{0}^t 5sy_{2}\, ds  \\
+>>    &= 1 + \int _{0}^t 5s\left( 1 + \frac{5}{2}s^2 \right)\, ds  \\
+>>    &= \underbrace{ 1 + \int _{0}^t 5s \, ds  }_{ =y_{1} }  + \int _{0}^t\frac{25}{2}s^3\, ds  \\
+>>    &= 1 + \frac{5}{2}t^2 + \frac{25}{8}t^4\\ 
+>> y_{3} &= 1 + \int _{0}^t 5sy_{2}\, ds \\
+>>    &= 1 + \int _{0}^t 5s\left(1 + \frac{5}{2}s^2 + \frac{25}{8}s^4\right)\, ds \\
+>>    &= \underbrace{ 1 + \int _{0}^t 5s + \frac{25}{2}s^3 \, ds }_{ =y_{2} } + \int _{0}^t   \frac{125}{8}s^5 \, ds \\
+>>    &= 1 + \frac{5}{2}t^2 + \frac{25}{8}t^4 + \frac{125}{48}t^6 \\
+>>\end{align}$$
+>>Now we try to find a [[../Calculus/Series#^78a81b| Maclaurin polynomial]] for $y_3$
+>>$$\begin{align}
+>> y_{3} &= 1 + \frac{5^1}{2}t^2 + \frac{5^2}{8}t^4 + \frac{5^3}{48}t^6 \\
+>>    &= 1 + \frac{5^1}{2^1}t^2 + \frac{5^2}{2\cdot2^2}t^4 + \frac{5^3}{6\cdot 2^3}t^6 \\
+>>    &= 1 + \frac{\left( \frac{5}{2}t^{2} \right)^1}{1!} + \frac{\left( \frac{5}{2}t^2 \right)^2}{2!}+ \frac{\left( \frac{5}{2}t^2 \right)^3}{3!} \\
+>>\end{align}$$ 
+>>Generalizing this result for $y_n$ gives
+>>$$\begin{align}
+>> y_{n} &= 1 + \frac{\left( \frac{5}{2}t^{2} \right)^1}{1!} + \frac{\left( \frac{5}{2}t^2 \right)^2}{2!}+ \frac{\left( \frac{5}{2}t^2 \right)^3}{3!} + \dots + \frac{\left( \frac{5}{2}t^2 \right)^n}{n!} \\
+>>    &= \sum_{k=0}^n\frac{\left( \frac{5}{2}t^2 \right)^k}{k!} \\
+>>\end{align}$$
+>>As $n \to \infty$ we have an [[../Calculus/Series#^9251bc | exponential function]] form
+>>$$\begin{align}
+>> \lim_{ n \to \infty } y_{n} &= \sum_{k=0}^\infty\frac{\left( \frac{5}{2}t^2 \right)^k}{k!} \\ 
+>>              &= e^{t^2(5/2)} \\ 
+>>\end{align}$$
+>>>[!remark]
+>>>The equation is separable and the same result can be obtained using the known method of [[#^017e13| separable equations]], i.e. integrating both sides.
+>
+>>[!example]- Example Use the Picard iteration to find the solution of $y' = 2t^4 y$ with $y(0)= 1$
+>>We integrate both sides and get
+>>$$\int_{0}^t y'(s) \, ds =\int _{0}^t 2s^4 y(s) \,ds $$
+>>We now give the sequence
+>>$$y_{n+1} = y_{0}+ \int _{0}^t 2s^4y_{n}\, ds $$
+>>Inserting the initial condition gives
+>> $$y_{n+1} = 1+ \int _{0}^t 2s^4y_{n}\, ds  $$
+>> We compute the first elements of the sequence
+>> $$\begin{align}
+>> y_{0} &= 1 \\ 
+>> y_{1} &= y_{0}+ \int _{0}^t 2s^4y_{0}\, ds \\
+>>    &= 1 + \int _{0}^t 2s^4\, ds \\
+>>    &= 1 + \frac{2}{5}t^5 \\ 
+>> y_{2} &= 1 + \int _{0}^t 2s^4y_{1}\, ds  \\
+>>    &= 1 + \int _{0}^t 2s^4\left( 1 + \frac{2}{5}s^5 \right)\, ds  \\
+>>    &= \underbrace{ 1 + \int _{0}^t \, 2s^4  }_{ =y_{1} }+ \int _{0}^t \frac{4}{5}s^9\, ds  \\ 
+>>    &= 1 + \frac{2}{5}t^5 + \frac{4}{50}t^{10} \\
+>> y_{3} &= 1 + \int _{0}^t 2s^4y_{2}\, ds \\
+>>    &= 1 + \int _{0}^t 2s^4 \left( 1 + \frac{2}{5}s^5 + \frac{4}{50}s^{10} \right)\, ds \\
+>>    &= \underbrace{ 1 + \int _{0}^t 2s^4 + \frac{4}{5}s^9 \, ds }_{ =y_{2} } + \int _{0}^t \frac{8}{50}s^{14}\, ds \\
+>>    &= 1 + \frac{2}{5}t^5 + \frac{4}{50}t^{10} + \frac{8}{50\cdot 15}t^{15}
+>>\end{align}$$
+>>Now we try to find the [[../Calculus/Series#^78a81b | Maclaurin polynomial]] for $y_3$
+>>$$\begin{align}
+>> y_{3} &= 1 + \frac{2}{5}t^5 + \frac{4}{50}t^{10} + \frac{8}{50\cdot 15}t^{15}  \\
+>>    &= 1 + \frac{2^1}{1! \cdot 5}t^5 + \frac{2^2}{2! \cdot 5^2} t^{10}+\frac{2^3}{3! \cdot 5^3}t^{15} \\
+>>    &= 1 + \frac{\left( \frac{2}{5}t^5 \right)^1}{1!} + \frac{\left( \frac{2}{5}t^5 \right)^2}{2!}+\frac{\left( \frac{2}{5}t^5 \right)^3}{3!} \\
+>>\end{align}$$
+>>This can be generalized for $y_n$
+>>$$\begin{align}
+>>y_{n} &= 1 + \frac{\left( \frac{2}{5}t^5 \right)^1}{1!} + \frac{\left( \frac{2}{5}t^5 \right)^2}{2!}+\frac{\left( \frac{2}{5}t^5 \right)^3}{3!} + \dots +\frac{\left( \frac{2}{5}t^5 \right)^n}{n!} \\
+>>   &= \sum_{k=0}^n \frac{\left( \frac{2}{5}t^5 \right)^k}{k!}\\
+>>\end{align}$$
+>>This yields a [[../Calculus/Series#^9251bc|exponential function form]], hence we have as $n \to \infty$
+>>$$\begin{align}
+>> \lim_{ n \to \infty } y_{n} &=  \sum_{k=0}^\infty \frac{\left( \frac{2}{5}t^5 \right)^k}{k!} \\
+>> &= e^{t^5(2/5)}
+>>\end{align}$$
+
+>[!remark] Remark on Linear vs Non-Linear Differential Equations
+>
+>| Linear Equations                                                                                           | Non-Linear Equations                                                                                                                         |
+>| ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+>| 1. There is an explicit expression for the solutions of a differential equation                               | 1. There is no explicit formula for the solution to every nonlinear differential equation         <br><br>                                              |
+>| 2. For every initial condition $y_{0} \in \mathbb{R}$ there exists a unique solution                          | 2. Solutions to initial value problems for nonlinear equations may be non-unique when the function $f$ does not satisfy the Lipschitz condition <br><br> |
+>| 3. For every initial condition $y_{0} \in \mathbb{R}$ the solution $y(t)$ is defined for all $(t_{1}, t_{2})$ <br><br>| 3. The domain of a solution $y$ to a nonlinear initial value problem may change when we change the initial data $y_0$                                                                                                                                             |
+>
+>>[!example]- Example for 1. 
+>> For every constant $a_{1}, a_{2}, a_{3}, a_{4}$ find all solutions $y$ to the equation
+>> $$y'(t) = \frac{t^2}{y^4(t)+a_{4}y^3(t)+a_{3}y^2(t)+a_{2}y(t)+a_{1}}$$
+>>>[!example] Solution
+>>>Note, the equation is separable
+>>>$$(y^4+a_{4}y^3+a_{3}y^2+a_{2}y+a_{1})y' = t^2$$
+>>>We integrate both sides according to [[#^017e13| solving separable equations]]. We have
+>>>$$\begin{align}
+>>> \int y^4+a_{4}y^3+a_{3}y^2+a_{2}y+a_{1} \, dy &= \int t^2 \, dt  \\
+>>> \frac{1}{5}y^5 + \frac{a_{4}}{4}y^4 + \frac{a_{3}}{3}y^3 + \frac{a_{2}}{2}y^2 + a_{1}y &= \frac{1}{3}t^3 + c \tag{Implicit Form}
+>>>\end{align}$$
+>>>Since this a polynomial of degree $5$ we can't state an explicit form.
+>
+>>[!example]- Example for 2.
+>>Find every solution $y$ of the IVP 
+>>$$y'(t) = y^{1/3}(t)$$
+>>with $y(0)=0$
+>>>[!note]
+>>>The equation is nonlinear, separable. Denote 
+>>>$$f(t,u) = u^{1/3}$$
+>>>Determining $\partial_{u}f$ gives
+>>>$$\partial_{u}f = \frac{1}{u^{2/3}}$$
+>>>Clearly, $\partial_{u}f$ is not continuous at $u=0$, hence, it does not satisfy the Lipschitz condition on any domain of the form $[-a,a] \times [-a,a]$ with $a>0$. Since the partial derivative is not continuous and $f$ is defined at the point, it shows us $u=0$ to be a point of singularity.
+>>>
+>>
+>>>[!example] Solution
+>>> According to the remark a solution exists, but it is not unique. We show that two solutions. The first solutions is $$y_{1}(t) = 0$$
+>>> The second solution can be computed using [[#^017e13| solving separable equations]]. Hence, we have
+>>> $$\begin{align}
+>>>y'y^{-1/3} &= 1  \\
+>>> \int y^{-1/3} \, dy &= \int 1 \, dt \\ 
+>>> \frac{3}{2}y^{2/3} &= t + c \\
+>>> y(t) &= \left( \frac{2}{3}(t+c) \right)^{2/3}
+>>>\end{align}$$
+>>>Inserting the initial condition $y(0)=0$ gives 
+>>>$$\begin{align}
+>>> 0 &= \left( \frac{2}{3}c \right)^{2/3} \\
+>>> 0 &= c
+>>>\end{align}$$
+>>>Hence, the second solution is
+>>>$$y_{2}(t)=\left( \frac{2}{3}t \right)^{2/3}$$
+>
+>>[!example]- Example for 3.
+>> Find the solution $y$ to the initial value problem
+>> $$y'(t)=y^2(t)$$
+>> with $y(0)=y_{0}$
+>>>[!example] Solution
+>>>The given equation is nonlinear and separable, hence we can make use of [[#^017e13|solving separable equations]].
+>>>$$y'y^{-2} = 1$$
+>>>Integrating both sides gives
+>>>$$\begin{align}
+>>> \int y^{-2} \, dy&= \int  1  \, dt  \\ 
+>>> -y^{-1} &= t + c  \\
+>>> y(t)  &= -\frac{1}{t+c}
+>>>\end{align}$$
+>>>Now solving for the IVP we get
+>>>$$\begin{align}
+>>> y_{0} = -\frac{1}{c} \\
+>>> c = -\frac{1}{y_{0}}
+>>>\end{align}$$
+>>>Hence, we have
+>>>$$y(t)= -\frac{1}{t-\frac{1}{y_{0}}}$$
+>>>Clearly, the choice of $y_0$ changes the domain on which solutions can be defined for.

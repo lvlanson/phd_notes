@@ -29,12 +29,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Series.md",
                 "mode": "source",
                 "source": true
               }
             },
             "group": "900f228cd3d0cb05"
+          },
+          {
+            "id": "633303d60c06894e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
         ]
       },
@@ -64,7 +76,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Series.md",
                 "mode": "preview",
                 "source": true
               }
@@ -218,84 +230,26 @@
     }
   },
   "floating": {
-    "id": "e533fb9b3c57929b",
+    "id": "2bfc5b82be0f624b",
     "type": "floating",
     "children": [
       {
-        "id": "5fca0b8864fceba3",
+        "id": "e10841176753a693",
         "type": "window",
         "children": [
           {
-            "id": "df5369939053573f",
+            "id": "50cb773be158dff1",
             "type": "tabs",
             "children": [
               {
-                "id": "c1cdbd6578417d07",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Sources/nagy.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2560,
-        "y": 32,
-        "width": 1280,
-        "height": 1440,
-        "maximize": true,
-        "zoom": 0
-      },
-      {
-        "id": "1a39581e7c614f54",
-        "type": "window",
-        "children": [
-          {
-            "id": "608fe8ab7792366e",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "ad4532b519a18355",
+                "id": "1a3a9974ba5f858e",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                    "file": "PhD Studies/Mathematic Basics/Calculus/Series.md",
                     "mode": "preview",
                     "source": true
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2144,
-        "y": 523,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
-        "id": "8c54a59c20d0c2a1",
-        "type": "window",
-        "children": [
-          {
-            "id": "fcbb8e3cf3b9a15e",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "961810fbf1a062f5",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Sources/nagy.pdf"
                   }
                 }
               }
@@ -312,25 +266,30 @@
       }
     ]
   },
-  "active": "e02a88fd0e5f9dd5",
+  "active": "a5609126f72395a1",
   "lastOpenFiles": [
-    "Sources/nagy.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/Series.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+    "Sources/zotero-182.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+    "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+    "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
+    "PhD Studies/Mathematic Basics/Calculus/Calculus Limits.md",
+    "Sources/nagy.pdf",
+    "Sources/rudin1976.pdf",
     "Sources/briggs2019.pdf",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
     "Literature/@kreyszig1978.md",
     "Sources/kreyszig1978.pdf",
     "Sources/Erwin Kreyszig - Introductory functional analysis with applications.pdf",
     "PhD Studies/Mathematic Basics/Functional Analysis",
-    "Sources/zotero-182.pdf",
     "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
     "Sources/ben-baruch2021.pdf",
     "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
     "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
     "PhD Studies/To-Do.md",
     "Sources/shifrin2005.pdf",
-    "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
     "PhD Studies/Mathematic Basics/Calculus/figures/inverse_function_theorem_proof.jpg",
     "PhD Studies/Mathematic Basics/Calculus/figures/inverse_function_theorem_proof",
     "Literature/@shifrin2005.md",
@@ -338,7 +297,6 @@
     "Literature/@book_{91865988}.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/Plot ODEs.md",
     "Paper/Hyperbox Metric/Timeline.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/motivation_example_3d.ggb",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/motivation_example_3d.png",
     "Dokumentation.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/ODE_example_2_t_-1.png",
@@ -349,16 +307,12 @@
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/ODE_example_1.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/ODE_example_2_1.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/ODE_example_1.png",
-    "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
-    "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "Excalidraw/Drawing 2024-01-17 18.47.08.excalidraw.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
     "Literature/@apostol1967.md",
     "Zwischenbericht.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/Mahalabonis Distance.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
-    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
-    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
     "Untitled.canvas"
   ]
 }
