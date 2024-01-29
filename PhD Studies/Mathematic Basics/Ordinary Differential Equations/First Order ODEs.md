@@ -2533,6 +2533,8 @@
 >> &= e^{t^5(2/5)}
 >>\end{align}$$
 
+^2f934e
+
 >[!remark] Remark on Linear vs Non-Linear Differential Equations
 >
 >| Linear Equations                                                                                           | Non-Linear Equations                                                                                                                         |
@@ -2604,3 +2606,50 @@
 >>>Hence, we have
 >>>$$y(t)= -\frac{1}{t-\frac{1}{y_{0}}}$$
 >>>Clearly, the choice of $y_0$ changes the domain on which solutions can be defined for.
+
+>[!def] Definition Direction Field
+>A **direction field** for the differential equation $y'(t)=f(t,y(t))$ is the graph on the $ty$-plane of the values $f(t,y)$ as slopes of a small segment.
+>>[!pic ] Illustration
+>>![[Figures/def_direction_fields.png]]
+>
+>>[!example]- Example $y(t) = y_{0}e^t$
+>>![[Figures/dir_field_example_1.png]]
+>
+>>[!example]- Example $y' = \sin(y)$
+>>Note, the equation is separable, the solutions can be given as
+>>$$\ln \left\lvert  \frac{\csc(y_{0}) + \cot(y_{0})}{\csc(y)+ \cot(y)}  \right\rvert $$
+>>with $\csc(\alpha) = \frac{1}{\sin (\alpha)}$
+>>
+>>![[Figures/dir_field_example_2.png]]
+>
+>>[!example]- Example $y'=2\cos(t)\cos(y)$
+>>![[Figures/dir_field_example_3.png]]
+
+>[!example] Exercises
+>>[!example] Task 
+>>Use the Picard iteration to find the first four elements, $y_{0}, y_{1}, y_{2}$ and $y_3$, of the sequence $(y_{n})^\infty_{n=0}$ of approximate solutions to the IVP
+>>$$y' = 6y + 1$$ with $y(0)=0$.
+>
+>>[!example] Task
+>>Use the Picard iteration to find the information required below about the sequence $(y_{n})^{\infty}_{n=0}$ of approximate solutions to the IVP
+>>$$y'=3y+5$$
+>>with $y(0)=1$
+>>1. The first 4 elements in the sequence $y_{0}, y_{1}, y_{2}$ and $y_{3}$.
+>>2. The general term $c_{k}(t)$ of the approximation
+>> $$y_{n}(t)=1+\sum_{k=1}^n \frac{c_{k}(t)}{k!}$$
+>>3. Find the limit $y(t) = \lim_{ n \to \infty } y_{n}(t)$
+>
+>>[!example] Task
+>>Find the domain where the solution of the IVP below is well-defined
+>>1. $y' = \frac{-4t}{y}$ with $y(0) = y_0 >0$
+>>2. $y' = 2ty^2$ with $y(0) = y_0 >0$
+>
+>>[!example] Task
+>>By looking at the equation coefficients, find a domain where the solution of the IVP below exists
+>>1. $(t^2 - 4)y' + 2\ln(t)y =3t$ and the initial condition $y(1)=-2$
+>>2. $y' = \frac{y}{t(t-3)}$ and the initial condition $y(-1)=2$
+>
+>>[!example] Task
+>>State where in the plane with points $(t,y)$ the hypothesis of [[#^2f934e| Picard-Lindelöf's theorem]] are not satisfied
+>>1. $y' = \frac{y^2}{2t-3y}$
+>>2. $y' = \sqrt{ 1-t^2-y^2 }$
