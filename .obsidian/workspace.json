@@ -15,7 +15,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
                 "mode": "source",
                 "source": true
               },
@@ -29,22 +29,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
                 "mode": "source",
                 "source": true
               }
             },
             "group": "900f228cd3d0cb05"
-          },
-          {
-            "id": "633303d60c06894e",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/def_direction_fields.png"
-              }
-            }
           }
         ],
         "currentTab": 1
@@ -61,7 +51,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
                 "mode": "preview",
                 "source": true
               },
@@ -75,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
                 "mode": "preview",
                 "source": true
               }
@@ -149,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -189,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md"
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md"
               }
             }
           },
@@ -231,14 +221,15 @@
   },
   "active": "a6081b9e300ffbae",
   "lastOpenFiles": [
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/def_direction_fields.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/dir_field_example_3.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/example_1.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/dir_field_example_2.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/dir_field_example_1.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/example_1.png",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/def_direction_fields.png",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
     "PhD Studies/Mathematic Basics/Calculus/Calculus Limits.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
@@ -270,13 +261,11 @@
     "Dokumentation.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/ODE_example_2_t_-1.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/ODE_example_2_t_1.png",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/ODE_example_2_1_t_-1.png",
     "Excalidraw/Drawing 2024-01-17 18.47.08.excalidraw.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
     "Literature/@apostol1967.md",
     "Zwischenbericht.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/Mahalabonis Distance.md",
-    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
     "Untitled.canvas"
   ]
 }

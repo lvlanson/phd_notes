@@ -89,7 +89,7 @@
 >>>[!example]- Task Find the differential equation $y' = f(y)$ satisfied by $y(t) = 4e^{2t} + 3$
 >>>First we find the derivative of $y(t)$, i.e.
 >>>$$\frac{dy}{dt}=y'=8e^{2t}$$
->>>Since $y(t)$ is the [[First Order ODEs#^deffirstorderODE|first order ODE]] it is of the form
+>>>Since $y(t)$ is the [[1 - First Order ODEs#^deffirstorderODE|first order ODE]] it is of the form
 >>>$$y' = a(t)y + b(t)$$
 >>>We now rewrite $y(t)$ such that we yield $y'(t)$
 >>>$$\begin{align}
@@ -230,7 +230,7 @@
 > has the unique solution
 > $$ y(t) = \left(y_0 + \frac{b}{a}\right)e^{a(t-t_0)} - \frac{b}{a}$$
 >>[!proof]-
->>First we use the results of the [[First Order ODEs#^thmsolvefoode|Theorem for solveability of first order ODEs]], i.e.
+>>First we use the results of the [[1 - First Order ODEs#^thmsolvefoode|Theorem for solveability of first order ODEs]], i.e.
 >> $$y(t) = ce^{at} - \frac{b}a$$
 >> and solve $y_0 = y(t_0)$ for $c$
 >> $$\begin{align}
@@ -291,7 +291,7 @@
 >
 >
 >>[!example]- Task Find all solutions of $y$ of $y' = 3y$
->> We identify $a=3$ and $b=0$. Using theorem [[First Order ODEs#^thmsolvefoode|Theorem for ODE solving]] we have
+>> We identify $a=3$ and $b=0$. Using theorem [[1 - First Order ODEs#^thmsolvefoode|Theorem for ODE solving]] we have
 >> $$ y =  ce^{3t} $$
 >
 >>[!example] Task Follow the steps below to find all solutions of $y' = -4y + 2$
@@ -300,7 +300,7 @@
 >>3. Integrate the equation for $\psi$
 >>4. Compute $y$ using part (3)
 >>>[!example]- Solution
->>>Following the procedure from the proof using the [[First Order ODEs#^thmsolvefoode| integrating factors method]].
+>>>Following the procedure from the proof using the [[1 - First Order ODEs#^thmsolvefoode| integrating factors method]].
 >>>1. First, we put the equation into the form, that we can compare it to the product rule. Let $\mu(t) = \mu$ denote the integrating factor
 >>> $$\begin{align}
 >>> 	\frac{dy}{dt} &= -4y +2\\
@@ -342,11 +342,11 @@
 >>> \end{alignat}$$
 >
 >>[!example]- Task Find all solutions of $y'=2y+5$
->> We identify $a=2$ and $b=5$. Using theorem [[First Order ODEs#^thmsolvefoode|Theorem for ODE solving]] we have
+>> We identify $a=2$ and $b=5$. Using theorem [[1 - First Order ODEs#^thmsolvefoode|Theorem for ODE solving]] we have
 >> $$ y =  ce^{2t} -\frac52 $$
 >
 >>[!example]- Task Find all solutions of the IVP $y'=-4y+2$, $y(0)=5$
->> Using the [[First Order ODEs#^thmsolivp|Theorem for solving IVP with constant coefficients]] we can identify 
+>> Using the [[1 - First Order ODEs#^thmsolivp|Theorem for solving IVP with constant coefficients]] we can identify 
 >> $$\begin{align} 
 >>  t_0 &= 0 \\
 >>  y_0 &= 5 \\
@@ -360,7 +360,7 @@
 >>\end{align}$$
 >
 >>[!example]- Task Find the solution of the IVP $\frac{dy}{dt}(t)=3y(t)-2$, $y(1)=1$
->> Using the [[First Order ODEs#^thmsolivp|Theorem for solving IVP with constant coefficients]] we can identify 
+>> Using the [[1 - First Order ODEs#^thmsolivp|Theorem for solving IVP with constant coefficients]] we can identify 
 >> $$\begin{align} 
 >>  t_0 &= 1 \\
 >>  y_0 &= 1 \\
@@ -389,7 +389,7 @@
 >>> - 6\mu y &= \left(\frac{d\mu}{dt}\right)y\\
 >>> - 6\mu &= \frac{d\mu}{dt} \\
 >>>\end{align}$$
->>>According to the [[First Order ODEs#^thmsolvefoode| theorem for solving this]], we get the following result 
+>>>According to the [[1 - First Order ODEs#^thmsolvefoode| theorem for solving this]], we get the following result 
 >>>$$\mu = e^{-6t}$$
 >>> Further we determine the potential function by inserting $\mu$ into $(1)$. Recall, the LHS is constructed to be the product-rule.
 >>> $$ \begin{align}
@@ -440,7 +440,7 @@
 >>> 3\mu y &= \left(\frac{d\mu}{dt}\right)y\\
 >>> 3\mu &= \frac{d\mu}{dt} \\
 >>>\end{align}$$
->>>According to the [[First Order ODEs#^thmsolvefoode| theorem for solving this]], we get the following result 
+>>>According to the [[1 - First Order ODEs#^thmsolvefoode| theorem for solving this]], we get the following result 
 >>>$$\mu = e^{3t}$$
 >>>
 >>>2. Further, we determine the potential function by inserting $\mu$ into $(1)$. Recall, the LHS is constructed to be the product-rule.
@@ -480,7 +480,7 @@
 >has infinitely many solutions given by
 >$$ \begin{equation}y(t) = ce^{A(t)}+e^{A(t)} \int e^{-A(t)} b(t) \, dt \tag{General Solution}\end{equation}$$
 >where $A(t) = \int a(t) \, dt$ being the **integrating factor** and $c \in \mathbb{R}$
->>[!proof] Proof: See [[First Order ODEs#^thmsolvefoode| Proof for constant coefficients Integrating Factor Method]]
+>>[!proof] Proof: See [[1 - First Order ODEs#^thmsolvefoode| Proof for constant coefficients Integrating Factor Method]]
 >
 >>[!example]- Task Find all solutions $y$ for the differential equation $y'=\frac3ty+t^5$ with $t>0$
 >>First compute $\mu(t)$ following the form of the product rule as previously already shown. Note, that the parameters $a,b$ are functions of $t$, i.e. $a(t) = \frac3t$ and $b(t) = t^5$.
@@ -559,7 +559,7 @@
 > $$ y(t) = y_0e^{A(t)} + e^{A(t)}\int_{t_0}^t e^{-A(s)}b(s) \, ds$$
 > where the function $A(t) = \int_{t_0}^t a(s) \, ds$ is a particular antiderivative of function $a$.
 >>[!proof]-
->> First we use the results of the [[First Order ODEs#^defThmSolODEVar| Theorem Solving First Order ODEs with Variable Coefficients]]. 
+>> First we use the results of the [[1 - First Order ODEs#^defThmSolODEVar| Theorem Solving First Order ODEs with Variable Coefficients]]. 
 >> $$ \begin{equation}y(t) = ce^{A(t)}+e^{A(t)} \int e^{-A(t)} b(t) \, dt \tag{1}\end{equation}$$
 >>where $A(t) = \int a(t) \, dt$. Setting 
 >>$$\begin{align} y(t_0) &= y_0 \\ K(t) &= \int e^{-A(t)} b(t) \, dt \end{align}$$ 
@@ -598,7 +598,7 @@
 >> 
 >
 >>[!example]- Task Find the function $y$ solution of the IVP $ty' + 2y = 4t^2$ with $t>0$ and $y(1) = 2$
->>We use the result of the [[First Order ODEs#^thmsolivp| theorem solution for IVP with variable coefficients]]. First we rearrange the formula
+>>We use the result of the [[1 - First Order ODEs#^thmsolivp| theorem solution for IVP with variable coefficients]]. First we rearrange the formula
 >>$$\begin{align}
 >>ty' +2y &= 4t^2 \qquad \Big\vert-2y, \; \cdot t^{-1} \\
 >>y' &= -\frac{2}{t}y + 4t \qquad \\
@@ -634,7 +634,7 @@
 
 
 >[!remark]- Remark Recovering Constant Coefficient Form
-> We can get the [[First Order ODEs#^thmsolivp|constant coefficient form]] back by assuming $a(t), b(t)$ being constant. First, we reduce $A(t)$ to be constant with
+> We can get the [[1 - First Order ODEs#^thmsolivp|constant coefficient form]] back by assuming $a(t), b(t)$ being constant. First, we reduce $A(t)$ to be constant with
 > $$
 > \begin{align}
 > 	A(t) &= \int_{t_0}^t a \, ds \\
@@ -740,7 +740,7 @@
 >>	-\frac{\nu'}{4} &= \nu+2 \qquad &&\Big|\cdot (-4) \\
 >>	\nu' &= -4\nu-8 \qquad 
 >>\end{alignat}$$
->>This equation can now be solved using the [[First Order ODEs#^thmsolvefoode|solution for first order ODEs with constant coefficients]] which is
+>>This equation can now be solved using the [[1 - First Order ODEs#^thmsolvefoode|solution for first order ODEs with constant coefficients]] which is
 >>$$y(t) = ce^{at} - \frac{b}{a} $$
 >>We identify
 >>$$\begin{align}
@@ -773,7 +773,7 @@
 >> -\frac{\nu'}{2} &= \frac{a}{y^2} + b \qquad&&\Big\vert \cdot (-2) \\
 >> \nu' &= -2a \nu - 2b 
 >>\end{alignat}$$
->>Solving this using [[First Order ODEs#^thmsolvefoode|first order ODE with constant coefficients solution]] gives
+>>Solving this using [[1 - First Order ODEs#^thmsolvefoode|first order ODE with constant coefficients solution]] gives
 >>$$\begin{alignat}{2}
 >> \nu &= ce^{-2t} - \frac{b}{a}
 >>\end{alignat}$$
@@ -803,7 +803,7 @@
 >> \nu' \frac{3}{2} &= \frac{3}{t}y^{2/3} + t^4 \\
 >> \nu' &= \frac{2}{t}\nu + \frac{2}{3}t^4 \\
 >>\end{align}$$
->>This equation represents an ODE with variable coefficients with $a(t) = \frac{2}{t}$ and $b(t)=\frac{2}{3}t^4$. Following the [[First Order ODEs#^defThmSolODEVar|solution theorem]] we have
+>>This equation represents an ODE with variable coefficients with $a(t) = \frac{2}{t}$ and $b(t)=\frac{2}{3}t^4$. Following the [[1 - First Order ODEs#^defThmSolODEVar|solution theorem]] we have
 >> $$\begin{align}
 >> y(t)&=ce^{A(t)} + e^{A(t)} \int  e^{-A(t)} b(t) \, dt 
 >>\end{align}$$
@@ -839,7 +839,7 @@
 
 >[!example]- Exercises
 >>[!example]- Find all solutions of $y' = 4ty$
->> Given is a first order [[First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=4t$ and $b(t)=0$. We therefore use the solution theorem.
+>> Given is a first order [[1 - First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=4t$ and $b(t)=0$. We therefore use the solution theorem.
 >> $$\begin{align}
 >> y &= ce^{A(t)} + e^{A(t)} \int  e^{-A(t)} b(t) \, dt \\
 >> A(t)&= \int  a(t) \, dt \\ 
@@ -850,7 +850,7 @@
 >>\end{align}$$
 >
 >>[!example]- Find the general solution of $y' = -y + e^{-2t}$
->>Given is a first order [[First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=-1$ and $b(t)=e^{-2t}$. We therefore use the solution theorem.
+>>Given is a first order [[1 - First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=-1$ and $b(t)=e^{-2t}$. We therefore use the solution theorem.
 >>$$\begin{align}
 >> y &= ce^{A(t)} + e^{A(t)} \int  e^{-A(t)} b(t) \, dt \\
 >> A(t)&= \int  a(t) \, dt \\ 
@@ -864,7 +864,7 @@
 >>\end{align}$$
 >
 >>[!example]- Find the solution of $y$ to the IVP $y' = y + 2te^{2t}, \quad y(0)=0$ 
->>Given is a first order [[First Order ODEs#^thmsolIVPvar| ODE IVP problem with variable coefficients]] with 
+>>Given is a first order [[1 - First Order ODEs#^thmsolIVPvar| ODE IVP problem with variable coefficients]] with 
 >>$$\begin{align}
 >> a(t)  & = 1 \\ 
 >> b(t)  & = 2te^{2t}  \\ 
@@ -917,7 +917,7 @@
 >>  ty' & = \frac{\sin(t)}{t} - 2y\qquad&&\Big\vert \cdot t^{-1}\\
 >>  y' & = \frac{\sin(t)}{t^2} - \frac{2}{t}y\\
 >>\end{alignat}$$
->>This can be identified as an [[First Order ODEs#^thmsolIVPvar| ODE IVP problem with variable coefficients]] with
+>>This can be identified as an [[1 - First Order ODEs#^thmsolIVPvar| ODE IVP problem with variable coefficients]] with
 >>$$\begin{align}
 >>  a(t) &= -\frac{2}{t} \\
 >>  b(t) &= \frac{\sin(t)}{t}  \\
@@ -957,7 +957,7 @@
 >> \dfrac{y'}{(t^2+1)y} &= 4t \qquad&&\Big\vert \cdot (t²+1)y\\
 >> y' &= (4t^4+4t)y \\
 >>\end{alignat}$$
->> Given is a first order [[First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=4t^4+4t$ and $b(t)=0$. First we solve
+>> Given is a first order [[1 - First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=4t^4+4t$ and $b(t)=0$. First we solve
 >> $$\begin{align}
 >> A(t)&= \int  4t^3 \, dt + \int  4t \, dt \\ 
 >> &= t^4 + 2t^2 + \underbrace{ c }_{ =0 }
@@ -976,7 +976,7 @@
 >> ty' &=t^2 -ny  \qquad&&\Big\vert \cdot t^{-1}\\
 >> y' &=t -\frac{n}{t} y  \\
 >>\end{alignat}$$
->>Given is a first order [[First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=-\frac{n}{t}$ and $b(t)=t$. First we solve
+>>Given is a first order [[1 - First Order ODEs#^defThmSolODEVar|ODE with variable coefficients]] with $a(t)=-\frac{n}{t}$ and $b(t)=t$. First we solve
 >>$$\begin{align}
 >> A(t) &=  \int - \frac{n}{t} \, dt \\
 >>      &=  -n \int  \frac{1}{t} \, dt \\
@@ -999,7 +999,7 @@
 >>[!example]- Find the solutions to the IVP $2ty - y' = 02$ with $y(0)=3$
 >> Rearranging we have 
 >> $$ y' = 2ty$$
->> which is a [[First Order ODEs#^thmsolIVPvar | First Order ODE IVP with variable coefficients]] with 
+>> which is a [[1 - First Order ODEs#^thmsolIVPvar| First Order ODE IVP with variable coefficients]] with 
 >> $$\begin{align}
 >> a(t) &= 2t \\
 >> b(t) &= 0 \\
@@ -1021,7 +1021,7 @@
 >>$$ y=3e^{2t} $$
 >
 >>[!example]- Find all solutions of the equation $y' = y - 2\sin(t)$
->> We have a [[First Order ODEs#^defThmSolODEVar| First Order ODE with variable coefficients]] with 
+>> We have a [[1 - First Order ODEs#^defThmSolODEVar| First Order ODE with variable coefficients]] with 
 >> $$\begin{align}
 >> a(t) &= 1 \\
 >> b(t) &= -2\sin(t) \\
@@ -1106,12 +1106,12 @@
 >> y' + ty &= ty² \qquad&&\Big\vert -ty\\
 >> y' &= ty² -ty \\
 >>\end{alignat}$$
->> This is a [[First Order ODEs#^defBernoulli|Bernoulli equation]] with $n=2$, $p(t)=-t$ and $q(t)=t$. We solve using the $\nu$ [[First Order ODEs#^c27f79 | linearization formula]]. Therefore,
+>> This is a [[1 - First Order ODEs#^defBernoulli|Bernoulli equation]] with $n=2$, $p(t)=-t$ and $q(t)=t$. We solve using the $\nu$ [[1 - First Order ODEs#^c27f79| linearization formula]]. Therefore,
 >>$$\begin{align}
 >> \nu' &= -(n-1) p(t)\nu - (n-1)q(t)  \\
 >> &=t\nu-t 
 >>\end{align}$$
->>This now is a [[First Order ODEs#^defThmSolODEVar|first order ODE with variable coefficients]]. Solving gives
+>>This now is a [[1 - First Order ODEs#^defThmSolODEVar|first order ODE with variable coefficients]]. Solving gives
 >>$$\begin{align}
 >> \nu &= ce^{A(t)} + e^{A(t)}\int e^{-A(t)}b(t) \, dt \\
 >>  &= ce^{\frac{1}{2}t^2} + e^{\frac{1}{2}t^2}\int e^{-\frac{1}{2}t^2}t \, dt \\
@@ -1481,7 +1481,7 @@
 >> v'&= \frac{1+\nu^2}{2t\nu} \\
 >> v'&= \frac{1}{t}\left(\frac{1+\nu^2}{2\nu}\right)
 >>\end{alignat}$$
->>which is a [[First Order ODEs#^defSeparableDifferentialEquation | separable equation]], rearranging we have
+>>which is a [[1 - First Order ODEs#^defSeparableDifferentialEquation| separable equation]], rearranging we have
 >>$$\begin{align}
 >> \left( \frac{2\nu}{1 + \nu^2} \right)\nu' = \frac{1}{t} 
 >>\end{align}$$
@@ -1543,7 +1543,7 @@
 >> t  &= \frac{\nu^2}{\nu'} \qquad&&\Big\vert \;(\,.)^{-1} \\
 >> \frac{1}{t} &= v' \frac{1}{\nu^{2}}
 >>\end{alignat}$$
->>This represents a [[First Order ODEs#^defSeparableDifferentialEquation | separable equation]]. We integrate on both sides accordingly
+>>This represents a [[1 - First Order ODEs#^defSeparableDifferentialEquation| separable equation]]. We integrate on both sides accordingly
 >>$$\begin{alignat}{2}
 >> \int  \frac{1}{t} \, dt &= \int \frac{1}{\nu^2} \, d\nu  \\
 >> \ln t + c&= -\frac{1}{\nu} \qquad&&\Big\vert \,(\,.)^{-1} \\  
@@ -1565,7 +1565,7 @@
 >>$$\begin{align}
 >> y'y = t^2
 >>\end{align}$$
->>which is a [[First Order ODEs#^defSeparableDifferentialEquation | separable equation]]. We integrate both sides and have
+>>which is a [[1 - First Order ODEs#^defSeparableDifferentialEquation| separable equation]]. We integrate both sides and have
 >>$$\begin{align}
 >> \int y \, dy &= \int t^2 \, dt \\
 >> \frac{1}{2}y^2 &= \frac{1}{3}t^3 + c \tag{Explicit Form}\\
@@ -1579,7 +1579,7 @@
 >> 4y^3y'+y'&=1 - 3t^2 \qquad&&\\
 >> y'\underbrace{ (4y^3+1) }_{ h(y) }&=\underbrace{ 1 - 3t^2 }_{ g(t) } \qquad&&\\
 >>\end{alignat}$$
->>which is a [[First Order ODEs#^defSeparableDifferentialEquation | separable equation]]. We integrate both sides and have
+>>which is a [[1 - First Order ODEs#^defSeparableDifferentialEquation| separable equation]]. We integrate both sides and have
 >>$$\begin{alignat}{2}
 >>\int 4y^3 + 1 \, dy &= \int 1-3t^2 \, dt  +c \\
 >>y^4 + y &= t-t^3  +c \tag{Implicit Form}\\
@@ -1614,7 +1614,7 @@
 >> \sqrt{ 1+t^2 }\;y'&=-ty \qquad&&\Big\vert :\sqrt{ 1+t^2 } \\
 >> y'&=\frac{-t}{\sqrt{ 1+t^2 }}y \qquad&&\\
 >>\end{alignat}$$
->>Which is an [[First Order ODEs#^defThmSolODEVar|first order ODE with variable coefficients]] with $a(t)=\frac{-t}{\sqrt{ 1+t^2 }}$ and $b(t)=0$. We use the solution formula
+>>Which is an [[1 - First Order ODEs#^defThmSolODEVar|first order ODE with variable coefficients]] with $a(t)=\frac{-t}{\sqrt{ 1+t^2 }}$ and $b(t)=0$. We use the solution formula
 >>$$\begin{align}
 >> y=ce^{A(t)} + \underbrace{ e^{A(t)} \int e^{-A(t)}b(t) \, dt }_{ =0 }
 >>\end{align}$$
@@ -1683,7 +1683,7 @@
 >>\end{align}$$
 >
 >>[!example]- Example Separable Equations being exact
->> Recall [[First Order ODEs#^defSeparableDifferentialEquation | separable equations]] and their [[First Order ODEs#^017e13|solutions]]. Therefore, let 
+>> Recall [[1 - First Order ODEs#^defSeparableDifferentialEquation| separable equations]] and their [[1 - First Order ODEs#^017e13|solutions]]. Therefore, let 
 >> $$h(y)y'(t) = g(t)$$
 >> We rewrite the equation such that we have the **exact** form, i.e.
 >> $$h(y)y'(t)-g(t) = 0$$
@@ -1702,7 +1702,7 @@
 >>Therefore, separable equations are exact equations.
 >
 >>[!example]- Example Linear Differential Equations being not exact
->>Recall [[First Order ODEs#^defThmSolODEVar| Linear Differential Equations with variable coefficients]]. We denote them with
+>>Recall [[1 - First Order ODEs#^defThmSolODEVar| Linear Differential Equations with variable coefficients]]. We denote them with
 >>$$ y'(t) = a(t)y(t)+b(t)\qquad a(t)\neq 0$$
 >>We rewrite again to gain the **exact** form
 >>$$ y' - a(t)y - b(t) = 0$$
@@ -1787,10 +1787,10 @@
 > $$\frac{d}{dt}\psi(t,y(t))=0$$
 > where $\psi$ is called a **potential function** and satisfies
 > $$N = \partial_{y} \psi, \quad M= \partial_{t}\psi$$
-> Therefore, the solutions of the exact equation are given in [[First Order ODEs#^defImplicitExplicit |implicit form]] as
+> Therefore, the solutions of the exact equation are given in [[1 - First Order ODEs#^defImplicitExplicit|implicit form]] as
 > $$\psi(t,y(t)) = c, \quad c\in \mathbb{R}$$
 >>[!proof]-
->> Note that equation $(1)$ is an [[First Order ODEs#^7959bc|exact equation]]. Hence, the condition of [[First Order ODEs#^0207e0 | Poincaré's Lemma]] hold. Therefore, we can state
+>> Note that equation $(1)$ is an [[1 - First Order ODEs#^7959bc|exact equation]]. Hence, the condition of [[1 - First Order ODEs#^0207e0| Poincaré's Lemma]] hold. Therefore, we can state
 >> $$\begin{align}
 >> N &= \partial_{y} \psi \\M &= \partial_{t}\psi
 >>\end{align}$$
@@ -1835,7 +1835,7 @@
 >> &= \partial_{x} dx + \partial_{y} dy \\
 >> &= 2x \, dx + 2y \, dy
 >>\end{align}$$
->>We want to have the form of the [[First Order ODEs#^73ae5d | exact equation]]. Therefore we set it $0$ and divide by $dx$.
+>>We want to have the form of the [[1 - First Order ODEs#^73ae5d| exact equation]]. Therefore we set it $0$ and divide by $dx$.
 >>$$\begin{align}
 >> 0 &= 2x \, dx + 2y \, dy \qquad&&\Big\vert :dx  \\
 >> 0 &= \underbrace{ 2x }_{ M(t,y) } + \underbrace{ 2y }_{ N(t,y) } \underbrace{ \frac{dy}{dx} }_{ y' }
@@ -1854,7 +1854,7 @@
 >> \partial_{t}N&=2y \\
 >> \partial_{y}M&= 2y
 >>\end{align}$$
->>We can assert the given equation to be **exact**. By [[First Order ODEs#^0207e0 | Poincaré's Lemma]] we know there exists the potential function $\psi$  satisfying
+>>We can assert the given equation to be **exact**. By [[1 - First Order ODEs#^0207e0| Poincaré's Lemma]] we know there exists the potential function $\psi$  satisfying
 >>$$\begin{align}
 >> \partial_{y} \psi(t,y) &=N(t,y) \tag{1}\\
 >> \partial_{t} \psi(t,y) &= M(t,y)\tag{2}
@@ -1900,7 +1900,7 @@
 >>\partial_{t}N(t,y) &= \cos(t)+2te^y  \\
 >>\partial_{y}M(t,y) &= \cos (t)+2te^y
 >>\end{align}$$
->>Since the equation is exact we can apply [[First Order ODEs#^0207e0| Poincaré's Lemma]], such that we determine the potential function $\psi(t,y)$. Note, we have $\partial _{y}\psi(t,y)=N(t,y)$
+>>Since the equation is exact we can apply [[1 - First Order ODEs#^0207e0| Poincaré's Lemma]], such that we determine the potential function $\psi(t,y)$. Note, we have $\partial _{y}\psi(t,y)=N(t,y)$
 >>$$\begin{align}
 >>\psi(t,y) &= \int \partial_{y}\psi(t,y) \, dy \\
 >> &= \int N(t,y) \, dy \\
@@ -1920,7 +1920,7 @@
 >>\end{align}$$
 >>Hence, the potential function can be given as
 >>$$ \psi(t,y)= y\sin(t) + t^2e^y - y-t^3$$
->>by the [[First Order ODEs#^bd9fa8 | solution theorem]] we can give the solution to the ODE as
+>>by the [[1 - First Order ODEs#^bd9fa8| solution theorem]] we can give the solution to the ODE as
 >>$$\begin{align}
 >> c= y\sin(t) + t^2e^y - y-t^3
 >>\end{align}$$
@@ -1931,7 +1931,7 @@
 >[!def] Definition Semi-Exact Differential Equations ([[../../../Sources/nagy.pdf#page=49|Source]]) 
 >A **semi-exact** differential equation is a non-exact equation that can be transformed into an exact equation after a multiplication by an integrating factor.
 >>[!example]- Example Show that the differential equations $y' = a(t)y + b(t)$ are semi exact
->> First we rearrange the equation to get the form of the [[First Order ODEs#^73ae5d| exact equations]]
+>> First we rearrange the equation to get the form of the [[1 - First Order ODEs#^73ae5d| exact equations]]
 >> $$0 = a(t)y +b(t) - y'$$
 >> with $N(t,y)=-1$ and $M(t,y)=a(t)y+b(t)$. Determining the partial derivatives we have
 >> $$\partial_{t}N(t,y) = 0 \neq a(t) = \partial_{y}M(t,y)$$
@@ -1946,7 +1946,7 @@
 >>$$\mu' = \mu a $$
 >>Hence, by choosing an appropriate $\mu$ we have an exact equation, hence the linear equation is **semi-exact**.
 >>>[!note]-
->>>In [[First Order ODEs#^defThmSolODEVar| solving linear ODEs with variable coefficients]] we found the integrating factor $\mu=e^{-A(t)}$ with $A(t)=\int a(t) \, dt$.
+>>>In [[1 - First Order ODEs#^defThmSolODEVar| solving linear ODEs with variable coefficients]] we found the integrating factor $\mu=e^{-A(t)}$ with $A(t)=\int a(t) \, dt$.
 
 >[!theorem] Theorem Semi-Exact Equations to Exact Equations ([[../../../Sources/nagy.pdf#page=50|Source]]) 
 >Let the equation
@@ -1994,7 +1994,7 @@
 >> $$ Ny' + M = 0$$
 >> is not exact in this theorem, i.e. $\partial_{t}N \neq \partial_{y}M$. We multiply the equation with a non-zero function $\mu(t)$
 >> $$ \mu Ny' + \mu = 0$$
->> As stated in the example of [[First Order ODEs#^5596ee| semi-exact equations]] we want to construct $\mu$ such that it establishes exactness for the differential equation, hence, it must satisfy
+>> As stated in the example of [[1 - First Order ODEs#^5596ee| semi-exact equations]] we want to construct $\mu$ such that it establishes exactness for the differential equation, hence, it must satisfy
 >> $$\begin{align}
 >> \partial_{t}(\mu N) = \partial_{y}(\mu M) \tag{1}
 >>\end{align}$$
@@ -2013,7 +2013,7 @@
 >>$$\begin{align}
 >>\mu'(t) = h(t)\mu(t)
 >>\end{align}$$
->>This can be solved using [[First Order ODEs#^defSeparableDifferentialEquation | separation of variables]], hence we have
+>>This can be solved using [[1 - First Order ODEs#^defSeparableDifferentialEquation| separation of variables]], hence we have
 >>$$\begin{align}
 >>\mu'(t) &= h(t)\mu(t) \\
 >>\mu'(t) \frac{1}{\mu (t)} &= h(t) \\
@@ -2057,13 +2057,13 @@
 >>  (t^2+ty)y' + (3ty+y^2)&=0 \qquad&&\Big\vert \cdot t \\
 >>  (t^3+t^2y)y' + (3t^2y+ty^2)&=0  \\
 >>\end{align}$$
->>By the theorem this equation is exact and can now be solved using [[First Order ODEs#^e52bb3| theorem for solving exact equations]].
+>>By the theorem this equation is exact and can now be solved using [[1 - First Order ODEs#^e52bb3| theorem for solving exact equations]].
 >>We have
 >>$$\begin{alignat}{2}
 >> \partial_{t}\widehat{N}(t,y) &= \partial_{t} t^3+t^2y &&= 3t^2+2ty \\
 >> \partial_{y}\widehat{M}(t,y) &= \partial_{y} 3t^2y+ty^2 &&=3t^2 + 2ty 
 >>\end{alignat}$$
->>As can be seen here, the equation is clearly **exact**. By [[First Order ODEs#^0207e0 | Poincaré's Lemma]] we can find the potential function $\psi(t,y)$ which will yield a solution to the ODE. Hence, since $\partial_{y}\psi(t,y) = \widehat{N}(t,y)$, we integrate $N$ to find an expression for $\psi$.
+>>As can be seen here, the equation is clearly **exact**. By [[1 - First Order ODEs#^0207e0| Poincaré's Lemma]] we can find the potential function $\psi(t,y)$ which will yield a solution to the ODE. Hence, since $\partial_{y}\psi(t,y) = \widehat{N}(t,y)$, we integrate $N$ to find an expression for $\psi$.
 >>$$\begin{align}
 >> \psi(t,y) &= \int N(t,y) \, dy  \\
 >> &= \int t^3+t^2y  \, dy  \\
@@ -2082,7 +2082,7 @@
 >>\end{align}$$
 >>Inserting this into equation $(1)$ gives
 >> $$\psi(t,y) = yt^3 + \frac{1}{2}t^2y^2$$
->> From this we can conclude by the [[First Order ODEs#^e52bb3| solution theorem for exact equations]]
+>> From this we can conclude by the [[1 - First Order ODEs#^e52bb3| solution theorem for exact equations]]
 >> $$yt^3 + \frac{1}{2}t^2y^2 = c$$
 
 ^3a7e40

@@ -19,7 +19,8 @@
     "extremum",
     "Rolle",
     "codomain",
-    "Maclaurin"
+    "Maclaurin",
+    "eq"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,
