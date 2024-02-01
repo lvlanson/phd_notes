@@ -83,3 +83,32 @@
 >0 &= y'' \frac{1}{x}-y' \frac{2}{x^2}+y \frac{2}{x^3} \qquad&&\Big\vert \cdot x^3\\
 >0 &= y''x^2 -2y'x +2y  \qquad&& \\
 >\end{alignat}$$
+
+
+>[!theorem] Theorem Solutions to IVP of Second Order ODEs ([[../../../Sources/nagy.pdf#page=88 | Source]])
+>If 
+>- the functions $a_{0},a_{1}, b$ are continuous on a closed interval $I \subset \mathbb{R}$, 
+>- the constant $t_{0} \in I$, 
+>- and $y_{0}, y_{1} \in \mathbb{R}$ are arbitrary constants
+>
+>then there is a unique solution $y$, defined on $I$, of the initial value problem
+>$$y'' + a_{1}(t)y'+ a_{0}(t)y = b(t)$$
+>with $$ y(t_{0})=y_{0} \quad y'(t_{0})= y_{1}$$
+>>[!proof]-
+>>Fixed point argument can be extended of [[1 - First Order ODEs#^2f934e| Picard-Lindelöf's theorem]].
+>
+>>[!example]-
+>>Find the domain of the solution to the initial value problem 
+>>$$(t-1)y''-3ty'+\frac{4(t-1)}{(t-3)}y=t(t-1)$$
+>>with $y(2)=1$ and $y'(2)=0$
+>>>[!example] Solution
+>>>We rearrange to get the form of the theorem. We have
+>>>$$\begin{alignat}{2}
+>>>(t-1)y''-3ty'+\frac{4(t-1)}{(t-3)}y=t(t-1) \qquad&&\Big\vert :(t-1) \\
+>>>y''-3ty'+\frac{4(t-1)}{(t-3)}y=t \qquad&&
+>>>\end{alignat}$$
+>>>Note, since we divided by $(t-1)$, we can not allow $t=1$. Further, since $(t-3)$ is in the denominator, $t=3$ is also disallowed. Therefore, we can state the domain of the equation coefficients as
+>>>$$(-\infty,1) \cup (1,3)\cup(3,\infty)$$
+>>>Since $t_{0}=2 \in (1,3)$, the domain is given as $$D=(1,3)$$ 
+>>>>[!Note]
+>>>> We require all parameters $a_0, a_{1}, b$ to be continuous on the same interval. Only $(1,3)$ suffices this condition, hence it is the sought solution
