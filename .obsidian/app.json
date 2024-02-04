@@ -20,7 +20,8 @@
     "Rolle",
     "codomain",
     "Maclaurin",
-    "eq"
+    "eq",
+    "Wronskian"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,

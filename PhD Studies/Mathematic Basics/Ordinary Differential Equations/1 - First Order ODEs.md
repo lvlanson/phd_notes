@@ -1916,7 +1916,7 @@
 >>$$\begin{align}
 >> \underbrace{ y\cos(t)+2te^y-3t^2 }_{ M(t,y) } &= \underbrace{ y\cos(t)+2te^y+g'(t) }_{ \partial_{t}\psi(t,y) }\qquad&&\Big\vert -y\cos(t)-2te^y \\ 
 >>-3t^2 &= g'(t) \qquad&&\Big\vert \int (\,.) \, dt  \\
->>-t^3 + \underbrace{ c_{0} }_{ =0 }&= g(t) \qquad&&\Big\vert \int (\,.) \, dt  \\
+>>-t^3 + \underbrace{ c_{0} }_{ =0 }&= g(t) \qquad  \\
 >>\end{align}$$
 >>Hence, the potential function can be given as
 >>$$ \psi(t,y)= y\sin(t) + t^2e^y - y-t^3$$
@@ -2235,19 +2235,157 @@
 >>Consider the equation $$(1+t^2)y' = -2ty$$
 >>1. Determine whether the differential equation is exact.
 >>2. Find every solution of the equation.
->>>[!example] Solution
+>>>[!example]- Solution
+>>> First we bring the equation into a form to easily evaluate if it is exact
+>>> $$\underbrace{ (1+t^2) }_{ N(t,y) }y' + \underbrace{ 2ty }_{ M(t,y) } = 0$$
+>>> We can state
+>>> $$\begin{align}
+>>> \partial_{y} \phi(t,y) &= N(t,y) = 1+t^2\\
+>>> \partial_{t} \phi(t,y) &= M(t,y) = 2ty
+>>>\end{align}$$
+>>>If the equation is exact, then the potential function $\phi$ exists with
+>>>$$\partial_{t}N(t,y) = \partial_{y}M(t,y)$$
+>>>We have
+>>>$$\begin{align}
+>>> \partial_{t}N(t,y) &= 2t \\
+>>> \partial_{y}M(t,y) &= 2t
+>>>\end{align}$$
+>>>This verifies the equation being exact. Now we can determine the potential function $\phi$
+>>>$$\begin{align}
+>>> \phi(t,y) &= \int N(t,y) \, dy \\
+>>>  &= \int 1+t^2 \, dy \\
+>>>  &= y + yt^2 + g(t) 
+>>>\end{align}$$
+>>>with $g(t)$ being the integrating factor. Taking the derivative with respect to $t$ should give an equivalent representation of $M(t,y)$, hence
+>>>$$\begin{align}
+>>> \partial_{t} \phi(t,y) = 2ty+ g'(t)
+>>>\end{align}$$
+>>> Setting this equal to $M(t,y)$ lets us solve for $g(t)$ to yields $\phi$.
+>>>$$\begin{align}
+>>> \partial_{t} \phi(t,y) &= M(t,y)  \\
+>>> 2ty+ g'(t) &= 2ty \\
+>>> g'(t) &= 0 \\
+>>> g(t) &= c
+>>>\end{align}$$
+>>>This produces the solution for the ODE by inserting $g(t)$ into $\phi$ and solving for $y$
+>>>$$\begin{align}
+>>> c &= y + yt^2  \\
+>>> c &= y(1+t^2) \\
+>>> y(t) &= \frac{c}{1+t^2}
+>>>\end{align}$$
 >
 >>[!example] Task
 >>Consider the equation $$t \cos(y)y' - 2yy' = -t-\sin(y)$$
 >>1. Determine whether the differential equation is exact.
 >>2. Find every solution of the equation.
->>>[!example] Solution
+>>>[!example]- Solution
+>>>First we rearrange the equation to determine exactness
+>>>$$\begin{align}
+>>>y'(\underbrace{ t\cos(y)-2y }_{ N(t,y) })+\underbrace{ t+\sin(y) }_{ M(t,y) }=0
+>>>\end{align}$$
+>>> We can state
+>>> $$\begin{align}
+>>> \partial_{y} \phi(t,y) &= N(t,y) = t\cos(y)-2y\\
+>>> \partial_{t} \phi(t,y) &= M(t,y) = t+\sin(y)
+>>>\end{align}$$
+>>>If the equation is exact, then the potential function $\phi$ exists with
+>>>$$\partial_{t}N(t,y) = \partial_{y}M(t,y)$$
+>>>We have
+>>>$$\begin{align}
+>>> \partial_{t}N(t,y) &= \cos(y) \\
+>>> \partial_{y}M(t,y) &= \cos(y)
+>>>\end{align}$$
+>>>This verifies the equation being exact. Now we can determine the potential function $\phi$
+>>>$$\begin{align}
+>>> \phi(t,y) &= \int N(t,y) \, dy \\
+>>>  &= \int t\cos(y)-2y \, dy \\
+>>>  &= t\sin(y)-y^2 + g(t)
+>>>\end{align}$$
+>>>with $g(t)$ being the integrating factor. Taking the derivative with respect to $t$ should give an equivalent representation of $M(t,y)$, hence
+>>>$$\begin{align}
+>>> \partial_{t} \phi(t,y) = \sin(y)+ g'(t)
+>>>\end{align}$$
+>>> Setting this equal to $M(t,y)$ lets us solve for $g(t)$ to yields $\phi$.
+>>> $$\begin{align}
+>>> \partial_{t} \phi(t,y) &= M(t,y) \\
+>>> \sin(y)+ g'(t) &= t+\sin(y) \\
+>>> g'(t) &= t \\
+>>> g(t) &= \frac{1}{2}t^2
+>>>\end{align}$$
+>>>This produces the solution for the ODE by inserting $g(t)$ into $\phi$ and solving for $y$
+>>>$$\begin{align}
+>>> c &= t\sin(y)-y^2 + \frac{1}{2}t^2  \\
+>>>\end{align}$$
 >
 >>[!example] Task
 >>Consider the equation $$(6x^5-xy)+(-x^2+xy^2)y' = 0$$
 >>1. Determine whether the differential equation is exact.
 >>2. Find every solution of the equation.
->>>[!example] Solution
+>>>[!example]- Solution
+>>> Having
+>>>$$\begin{align}
+>>>y'(\underbrace{ -x^2+xy^2}_{ N(x,y) })+\underbrace{ 6x^5-xy }_{ M(x,y) }=0
+>>>\end{align}$$
+>>> we can state
+>>> $$\begin{align}
+>>> \partial_{y} \phi(x,y) &= N(x,y) = -x^2+xy^2\\
+>>> \partial_{x} \phi(x,y) &= M(x,y) = 6x^5-xy
+>>>\end{align}$$
+>>>If the equation is exact, then the potential function $\phi$ exists with
+>>>$$\partial_{t}N(t,y) = \partial_{y}M(t,y)$$
+>>>We have
+>>>$$\begin{align}
+>>> \partial_{t}N(t,y) &= -2x+y \\
+>>> \partial_{y}M(t,y) &= -x
+>>>\end{align}$$
+>>>Hence, the equation is not exact. We now check if the equation is semi-exact by checking if $h$ is only dependent on $x$. We have
+>>>$$\begin{align}
+>>>h(x) &= \frac{\partial_{y}M - \partial_{x}N}{N} \\ 
+>>> &= \frac{-x+2x-y}{-x^2+xy} \\
+>>> &= \frac{\cancel{ x-y }}{-x\cancel{ (x-y })} \\
+>>> &= -\frac{1}{x}
+>>>\end{align}$$
+>>>We can now determine
+>>>$$\begin{align}
+>>> H &= \int h(x) \, dx  \\
+>>>   &= -\ln x
+>>>\end{align}$$
+>>>We have the integrating factor 
+>>>$$\begin{align}
+>>> e^{-\ln x} &= (e^{\ln x})^{-1} \\
+>>>  &= \frac{1}{x} 
+>>>\end{align}$$
+>>>Multiplying both sides of the equation gives
+>>>$$\begin{align}
+>>>y' \underbrace{ \left(\frac{1}{x}(-x^2+xy^2)\right)}_{ \hat{N}(x,y) } +\underbrace{ \frac{1}{x}(6x^5-xy) }_{ \hat{M}(x,y) }=0
+>>>\end{align}$$
+>>> we can state
+>>> $$\begin{align}
+>>> \partial_{y} \phi(x,y) &= \hat{N}(x,y) = -x+y^2\\
+>>> \partial_{x} \phi(x,y) &= \hat{M}(x,y) = 6x^4-y
+>>>\end{align}$$
+>>>We verify that by multiplying with the integrating factor, the equation is now in fact exact
+>>>$$\begin{align}
+>>> \partial_{x} \hat{N}(x,y) &= -1\\
+>>> \partial_{y} \hat{M}(x,y) &= -1
+>>>\end{align}$$
+>>>Hence, we have now the exact form. We continue determining the potential function $\phi$
+>>>$$\begin{align}
+>>> \phi(x,y) &= \int \hat{N}(x,y) \, dy \\
+>>> &= \int -x+y^2 \, dy \\ 
+>>> &= -xy + \frac{1}{3}y^3 + g(x) \\ 
+>>>\end{align}$$
+>>>Determining the derivative with respect to $x$, setting this equal to $\hat{M}(x,y)$ and solving for $g(x)$ yields the final form of the potential function $\phi$. We have
+>>>$$\begin{align}
+>>> \partial_{x} \phi(x,y) &= \hat{M}(x,y)  \\
+>>>   -y + g'(x) &=  6x^4-y  \\
+>>> g'(x) &= 6x^4 \\
+>>> g(x) &= \frac{6}{5}x^5
+>>>\end{align}$$
+>>>We have as the solution of the ODE
+>>>$$\begin{align}
+>>> c = -xy + \frac{1}{3}y^3 + \frac{6}{5}x^5
+>>>\end{align}$$
 >
 >>[!example] Task
 >>Consider the equation
