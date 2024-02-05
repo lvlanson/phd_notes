@@ -1,3 +1,5 @@
+## 2.1 Variable Coefficients
+
 >[!def] Definition Second Order Linear Differential Equations ([[../../../Sources/nagy.pdf#page=86 | Source]])
 >A **second order linear differential equation** for the function $y$ is
 >$$y'' + a_{1}(t) y' + a_{0}(t)y = b(t)$$
@@ -450,7 +452,7 @@
 
 >[!Corollary] Corollary Inverse Wronskian (II) Theorem 
 >If $y_{1},y_{2}$ are solutions of $L(y)=0$ on $I \subset \mathbb{R}$ and there is a point $t_{1} \in I$ such that $W_{12}(t_{1})=0$, then $y_{1},y_{2}$ are linearly dependent on $I$.
->>[!proof]
+>>[!proof]-
 >>By the theorem's condition we know that $y_{1},y_{2}$ are solutions of $L(y)=0$ on $I \subset \mathbb{R}$. By [[#^78710b|Abel's theorem]] we know
 >>$$W_{12}(t)=W_{12}(t_{0})e^{-A_{1}(t)}$$
 >>for any $t_{0} \in I$. We choose $t_0$ to be $t_1$ and have by the corollary
@@ -473,3 +475,70 @@
 >>$$\begin{align}
 >> \, \tag*{$\square$}
 >>\end{align}$$
+
+>[!example] Exercises
+>>[!example] Task
+>>Find the constants $c$ and $k$ such that the function $y(t)=ct^k$ is solution of
+>>$$-t^3y+t^2y+4ty=1$$
+>
+>>[!example] Task
+>>Let $$y(t)=c_{1}t+c_{2}t^2$$
+>>be the general solution of a second order linear differential equation $L(y)=0$. By eliminating the constants $c_{1}$ and $c_{2}$, find the differential equation satisfied by $y$.
+>
+>>[!example] Task
+>>1. Verify that $y_{1}(t)=t^2$ and $y_{2}(t)=\frac{1}{t}$ are solutions of the differential equation
+>> $$t²y''-2y=0$$
+>> with $t>0$
+>>2. Show that $y(t)=at^2+\frac{b}{t}$  is solution of the same equation for all constants $a,b \in \mathbb{R}$
+>
+>>[!example] Task
+>>Find the longest interval where the solution $y$ of the IVP below is defined, not solving
+>>1. $t^2 y'' + 6y = 2t$ with $y(1)=2$ and $y'(1)=3$
+>>2. $(t-6)y'+3ty'-y=1$ with $y(3)=-1$ and $y'(3)=2$
+>
+>>[!example] Task
+>> If the graph of $y$, solution to a second order linear differential equation $L(y(t))=0$ on the interval $[a,b]$ is tangent to the $t$-axis at any point $t_{0}\in[a,b]$, then find the solution $y$ explicitly.
+>
+>>[!example] Task
+>>Can the function $y(t)=\sin(t^2)$ be solution on an open interval containing $t=0$ of a differential equation $$y''+a(t)y'+b(t)y=0$$
+>>with continuous coefficients $a$ and $b$? Explain your answer
+>
+>>[!example] Task
+>>Compute the Wronskian of the following functions
+>>1. $f(t)=\sin(t)$ and $g(t)=\cos(t)$
+>>2. $f(x)=x$ and $g(x)=xe^x$
+>>3. $f(\theta)=\cos²(\theta)$ and $g(\theta)=1+\cos(2\theta)$
+>
+>>[!example] Task
+>>Verify whether the functions $y_{1}, y_{2}$ below are a fundamental set for the differential equations given below
+>>1. $y_{1}(t)=\cos(2t)$ and $y_{2}(t)=\sin(2t)$ for
+>>	$$y''+4y=0$$
+>>2.$y_{1}(t)=e^t$ and $y_{2}(t)=te^t$ for $$y''-2y'+y=0$$
+>>3.$y_{1}(x)=x$ and $y_{2}(t)=xe^x$ for $$x^2y''-2x(x+2)y'+(x+2)y=0$$
+>
+>>[!example] Task
+>>If the Wronskian of any two solutions of the differential equation 
+>>$$y'' + p(t)y'+q(t)y=0$$
+>>is constant, what does this imply about the coefficients $p$ and $q$?
+>
+>>[!example] Task*
+>>Suppose $y_{1}$ is solution of the IVP
+>>$$y_{1}''+a_{1}y_{1}'+a_{0}y_{1}=0$$
+>>with
+>>$$y_{1}(0)=0 \;\; \text{ and }\;\; y_{1}'(0)=5$$
+>>and $y_{2}$ is solution of the IVP
+>>$$y_{2}''+a_{1}y_{2}'+a_{0}y_{2}=0$$
+>>with
+>>$$y_{1}(0)=0 \;\; \text{ and }\;\; y_{1}'(0)=1$$
+>>that is, same differential equation and same initial condition for the function, but different intial conditions for the derivatives. Then show that the functions $y_{1}$ and $y_{2}$ mus be proportional to each other, i.e.
+>>$$y_{1}(t)=cy_{2}(t)$$
+>>and find the proportionality factor $c$.
+>>>[!note]- Hint 1
+>>>[[#^786ff5 | The second order solution theorem]] states
+>>>$$y'' + a_{1}y' + a_{0}y = 0$$
+>>>with $y(0)=0$ and $y'(0)=0$ has a unique solution. The solution is $y(t)=0$ for all $t$.
+>>
+>>>[!note]- Hint 2
+>>>Find what is the IVP problem for the function $$y_{c}(t) = y_{1}(t)-cy_{2}(t)$$ and fine tune $c$ to use hint 1
+
+## 2.2 Reduction Order Methods
