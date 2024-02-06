@@ -317,7 +317,7 @@
 >>\end{align}$$
 >>
 
->[!theorem] Theorem Wronskian (I)
+>[!theorem] Theorem Wronskian (I) ([[../../../Sources/nagy.pdf#page=93 | Source]])
 >If $y_{1}, y_{2}$ are linearly dependent on $I \subset \mathbb{R}$ then
 >$$W_{12}=0 \;\; \text{ on }\;\; I$$
 >>[!proof]-
@@ -366,10 +366,10 @@
 >>\end{align}$$
 >>Hence, $W_{12} = 0$
 
->[!corollary] Corollary Inverse Wronskian (I) Theorem
+>[!corollary] Corollary Inverse Wronskian (I) Theorem ([[../../../Sources/nagy.pdf#page=94 | Source]])
 > If the Wronskian $W_{12}(t_{0}) \neq 0$ at a point $t_{0}\in I$, then the functions $y_{1}, y_{2}$ are linearly independent.
 
->[!Theorem] Abel's Theorem
+>[!Theorem] Abel's Theorem ([[../../../Sources/nagy.pdf#page=94 | Source]])
 >If $y_{1},y_{2}$ are twice continuously differentiable solutions of $$y''+a_{1}(t)y'+a_{0}(t)y=0$$
 >where $a_{0}, a_{1}$ are continuous on $I \subset \mathbb{R}$, then the Wronskian $W_{12}$ satisfies
 >$$W_{12}'+a_{1}(t)W_{12} = 0$$
@@ -446,11 +446,11 @@
 
 ^78710b
 
->[!theorem] Theorem Wronskian (II)
+>[!theorem] Theorem Wronskian (II) ([[../../../Sources/nagy.pdf#page=95 | Source]])
 >If $y_{1},y_{2}$ are fundamental solutions of $L(y)=0$ on $I \subset \mathbb{R}$, then $W_{12}(t) \neq 0$ on $I$.
 >>[!proof] Proof is given by the inverse Corollary
 
->[!Corollary] Corollary Inverse Wronskian (II) Theorem 
+>[!Corollary] Corollary Inverse Wronskian (II) Theorem ([[../../../Sources/nagy.pdf#page=95 | Source]])
 >If $y_{1},y_{2}$ are solutions of $L(y)=0$ on $I \subset \mathbb{R}$ and there is a point $t_{1} \in I$ such that $W_{12}(t_{1})=0$, then $y_{1},y_{2}$ are linearly dependent on $I$.
 >>[!proof]-
 >>By the theorem's condition we know that $y_{1},y_{2}$ are solutions of $L(y)=0$ on $I \subset \mathbb{R}$. By [[#^78710b|Abel's theorem]] we know
@@ -476,50 +476,207 @@
 >> \, \tag*{$\square$}
 >>\end{align}$$
 
->[!example] Exercises
->>[!example] Task
->>Find the constants $c$ and $k$ such that the function $y(t)=ct^k$ is solution of
->>$$-t^3y+t^2y+4ty=1$$
->
+>[!example]- Exercises
 >>[!example] Task
 >>Let $$y(t)=c_{1}t+c_{2}t^2$$
 >>be the general solution of a second order linear differential equation $L(y)=0$. By eliminating the constants $c_{1}$ and $c_{2}$, find the differential equation satisfied by $y$.
+>>>[!example]- Solution
+>>> First taking the derivative with respect to $t$ and finding an expression for $c_{1}$
+>>> $$\begin{align}
+>>> y' &= c_{1} + 2c_{2}t \\
+>>> c_{1}&= 2c_{2}t - y'
+>>>\end{align}$$
+>>> Inserting this into the original equation gives
+>>> $$\begin{align}
+>>> y &= (y'-2c_{2}t)t+c_{2}t^2  \\
+>>> y &= y't - c_{2}t^2 \\
+>>> c_{2}t^2 &= y't - y \\
+>>> c_{2} &= \frac{1}{t}y'-\frac{1}{t^2}y 
+>>>\end{align}$$
+>>>Taking now the derivative with respect to $t$ gives
+>>>$$\begin{align}
+>>> 0 = -\frac{1}{t^2}y' + \frac{1}{t}y'' - \left( -\frac{1}{t^3}y + \frac{1}{t^2}y' \right) \\
+>>> 0 = \frac{1}{t^3}y -\frac{2}{t^2}y'+\frac{1}{t}y'' \qquad&&\Big\vert \cdot t^3 \\ 
+>>> 0 = y -2ty'+t^2y''  
+>>>\end{align}$$
+>>>which is the second order differential equation
 >
 >>[!example] Task
 >>1. Verify that $y_{1}(t)=t^2$ and $y_{2}(t)=\frac{1}{t}$ are solutions of the differential equation
 >> $$t²y''-2y=0$$
 >> with $t>0$
 >>2. Show that $y(t)=at^2+\frac{b}{t}$  is solution of the same equation for all constants $a,b \in \mathbb{R}$
+>>
+>>>[!example]- Solution
+>>> 1. $\,$ 
+>>> Since the differential equation is of the form
+>>> $$L(y) = 0$$
+>>> we can apply the [[#^88d6f3 | superposition theorem]] and have 
+>>> $$y_{\text{gen}} = t^2 + \frac{1}{t}$$
+>>> Computing the derivatives of $y_{\text{gen}}$ yields
+>>> $$\begin{align}
+>>> y' &= 2t -\frac{1}{t^2} \\
+>>> y'' &= 2 + \frac{2}{t^3}
+>>>\end{align}$$
+>>>Inserting these into the differential equation gives
+>>>$$\begin{align}
+>>> t²y''-2y&=0  \\
+>>> t^2\left( 2 + \frac{2}{t^3} \right)-2\left( t^2 + \frac{1}{t} \right) &=0 \\
+>>> 2t^2+\frac{2}{t} - 2t^2 -\frac{2}{t} &= 0 \\
+>>> 0&=0
+>>>\end{align}$$
+>>>which confirms the solutions.
+>>>2. $\,$
+>>>Having $y(t)=at^2+\frac{b}{t}$ we take the first two derivatives with respect to $t$
+>>>$$\begin{align}
+>>> y' &= 2at - \frac{b}{t^2}  \\
+>>> y'' &=2a + \frac{b}{t^3} 
+>>>\end{align}$$
+>>>Inserting these into the solution we get
+>>>$$\begin{align}
+>>> t^2\left( 2a+2 \frac{b}{t^3} \right) - 2 \left( at^2+\frac{b}{t} \right) &= 0 \\
+>>> 2at^2 + \frac{2b}{t} - 2at^2 - \frac{2b}{t} &=0
+>>>\end{align}$$
+>>>which confirms the solution.
 >
 >>[!example] Task
 >>Find the longest interval where the solution $y$ of the IVP below is defined, not solving
 >>1. $t^2 y'' + 6y = 2t$ with $y(1)=2$ and $y'(1)=3$
->>2. $(t-6)y'+3ty'-y=1$ with $y(3)=-1$ and $y'(3)=2$
->
->>[!example] Task
->> If the graph of $y$, solution to a second order linear differential equation $L(y(t))=0$ on the interval $[a,b]$ is tangent to the $t$-axis at any point $t_{0}\in[a,b]$, then find the solution $y$ explicitly.
+>>2. $(t-6)y''+3ty'-y=1$ with $y(3)=-1$ and $y'(3)=2$
+>>
+>>>[!example]- Solution
+>>> 1. $\,$
+>>> First we rearrange for the form of [[#^786ff5 | the solution theorem for second order ODEs]]
+>>> $$\begin{alignat}{2}
+>>> t^2 y'' +6y &= 2t \qquad&&\Big\vert :t^2 \\
+>>> y'' + \frac{6}{t^2}y &= \frac{2}{t}
+>>>\end{alignat}$$
+>>>We can conclude $t\neq 0 \Rightarrow t \in[-\infty, 0) \cup (0,\infty]$. Since $t_0 = 1$, we choose
+>>>$$D = (0, \infty]$$
+>>>2. $\,$
+>>>First we rearrange for the form of [[#^786ff5 | the solution theorem for second order ODEs]]
+>>> $$\begin{alignat}{2}
+>>> (t-6) y'' +3ty' -y &= 1 \qquad&&\Big\vert :(t-6) \\
+>>> y'' + \frac{3}{t-6}y' - \frac{1}{t-6}y &= \frac{1}{t-6}
+>>>\end{alignat}$$
+>>>We can conclude $t\neq 6 \Rightarrow t \in[-\infty, 6) \cup (6,\infty]$. Since $t_0 = 3$, we choose
+>>>$$D = [-\infty, 6)$$
 >
 >>[!example] Task
 >>Can the function $y(t)=\sin(t^2)$ be solution on an open interval containing $t=0$ of a differential equation $$y''+a(t)y'+b(t)y=0$$
 >>with continuous coefficients $a$ and $b$? Explain your answer
+>>>[!example]- Solution
+>>>Looking at the derivatives
+>>>$$\begin{align}
+>>> y' &= 2t \cos(t^2) \\
+>> y'' &= -4t^2\sin(t^2)
+>>>\end{align}$$
+>>>we can see that $y''$ is continuous on the open interval containing $t=0$. For $y'$ we must further consider the behavior of $a(t)$. Since we require $a(t)$ to be also continuous on the same interval containing $t=0$, we can't find a function $a(t)$ such that the combination of $a(t)y'$ would become discontinuous on such interval. The solution $y(t)=\sin(t^2)$ is continuous on  the real numbers, we can conclude that the function can be a solution.
 >
 >>[!example] Task
 >>Compute the Wronskian of the following functions
 >>1. $f(t)=\sin(t)$ and $g(t)=\cos(t)$
 >>2. $f(x)=x$ and $g(x)=xe^x$
 >>3. $f(\theta)=\cos²(\theta)$ and $g(\theta)=1+\cos(2\theta)$
+>>
+>>>[!example]- Solution
+>>>1. $f(t)=\sin(t)$ and $g(t)=\cos(t)$ 
+>>>$$\begin{align}
+>>> W_{12} &= \begin{vmatrix}
+>>>\sin(t) &\cos(t) \\
+>>> \cos(t) &-\sin(t)
+>>>\end{vmatrix}  \\
+>>> &= -\sin^2 (t)-\cos^2(t)
+>>>\end{align}$$
+>>>2.  $f(x)=x$ and $g(x)=xe^x$
+>>>$$\begin{align}
+>>> W_{12} &= \begin{vmatrix}
+>>> x &xe^x \\
+>>> 1 &e^x+xe^x
+>>>\end{vmatrix}   \\
+>>> &=x (e^x+xe^x)-xe^x \\
+>>> &=x^2e^x
+>>>\end{align}$$
+>>>3. $f(\theta)=\cos²(\theta)$ and $g(\theta)=1+\cos(2\theta)$
+>>>$$\begin{align}
+>>> W_{12} &= \begin{vmatrix}
+>>> \cos^2(\theta) &1+\cos(2\theta) \\
+>>> -2\sin(\theta)\cos(\theta) &-2\sin(\theta)
+>>>\end{vmatrix}  \\
+>>> &= -2\cos^2(\theta)\sin(\theta)+2\sin(\theta)\cos(\theta)+2\sin(\theta)\cos(\theta)\cos(2\theta) \\
+>>> &= 2\cos(\theta)\sin(\theta)\Big(-\cos(\theta)+1+\cos(2\theta)\Big)
+>>>\end{align}$$
 >
 >>[!example] Task
 >>Verify whether the functions $y_{1}, y_{2}$ below are a fundamental set for the differential equations given below
 >>1. $y_{1}(t)=\cos(2t)$ and $y_{2}(t)=\sin(2t)$ for
 >>	$$y''+4y=0$$
->>2.$y_{1}(t)=e^t$ and $y_{2}(t)=te^t$ for $$y''-2y'+y=0$$
->>3.$y_{1}(x)=x$ and $y_{2}(t)=xe^x$ for $$x^2y''-2x(x+2)y'+(x+2)y=0$$
+>>2. $y_{1}(t)=e^t$ and $y_{2}(t)=te^t$ for $$y''-2y'+y=0$$
+>>3. $y_{1}(x)=x$ and $y_{2}(t)=xe^x$ for $$x^2y''-2x(x+2)y'+(x+2)y=0$$
+>>
+>>>[!example]- Solution
+>>>1. By the [[#^88d6f3| superposition theorem]] we can give a general solution as
+>>>$$y=c_{1}y_{1}+c_{2}y_{2}$$
+>>>We now compute until the second derivative
+>>>$$\begin{align}
+>>> y &= c_{1}\cos(2t)+c_{2}\sin(2t) \\
+>>> y' &= -2c_{1}\sin(2t) + 2c_{2}\cos(2t) \\
+>>> y'' &= -4c_{1}\cos(2t)-4c_{2}\sin(2t)
+>>>\end{align}$$
+>>>Inserting into the given ODE yields
+>>>$$\begin{align}
+>>> y'' + 4y &= 0 \\
+>>> -4c_{1}\cos(2t)-4c_{2}\sin(2t) + 4(c_{1}\cos(2t)+c_{2}\sin(2t)) &= 0 \\
+>>> 0 &=0
+>>>\end{align}$$
+>>>Hence, the given solutions can be verified.
+>>>2. By the [[#^88d6f3| superposition theorem]] we can give a general solution as
+>>>$$y=c_{1}y_{1}+c_{2}y_{2}$$
+>>>We now compute until the second derivative
+>>>$$\begin{align}
+>>> y &= c_{1}e^t+c_{2}te^t \\
+>>> y' &= c_{1}e^t + c_{2}te^t + c_{2}e^t \\
+>>> y'' &= c_{1}e^t + c_{2}te^t + 2c_{2}e^t
+>>>\end{align}$$
+>>>Inserting into the given ODE yields
+>>>$$\begin{align}
+>>> 0 &= y'' -2y' + y \\
+>>> 0 &= c_{1}e^t + c_{2}te^t + 2c_{2}e^t -2(c_{1}e^t + c_{2}te^t + c_{2}e^t) + c_{1}e^t+c_{2}te^t \\
+>>> 0 &= 0
+>>>\end{align}$$ 
+>>>Hence, the given solutions can be verified.
+>>>3. By the [[#^88d6f3| superposition theorem]] we can give a general solution as
+>>>$$y=c_{1}y_{1}+c_{2}y_{2}$$
+>>>We now compute until the second derivative
+>>>$$\begin{align}
+>>> y &= c_{1}x+c_{2}xe^x \\
+>>> y' &= c_{1} + c_{2}xe^x + c_{2}e^x\\
+>>> y'' &= c_{2}xe^x+2c_{2}e^x
+>>>\end{align}$$
+>>>Inserting into the given ODE yields
+>>>$$\begin{align}
+>>> 0 &= x^2y''-2x(x+2)y'+(x+2)y  \\
+>>> 0 &= x^2 \big(c_{2}xe^x+2c_{2}e^x\big)-(2x^2+4x)\big(c_{1} + c_{2}xe^x + c_{2}e^x\big)+(x+2)\big(c_{1}x+c_{2}xe^x \big) \\
+>>> 0 &= c_{2}x^3e^x+2c_{2}x^2e^x -\big(2c_{1}x^2 + 2c_{2}x^3e^x+2c_{2}x^2e^x+4c_{1}x+4c_{2}x^2e^x+4c_{2}xe^x\big) \\
+>>>   &+\big(c_{1}x^2+c_{2}x^2e^x+2c_{1}x+2c_{2}xe^x\big) \\
+>>> 0 &= -c_{2}x^3e^x - 3c_{2}x^2e^x -2c_{2}xe^x-2c_{1}x-c_{1}x^2 \\
+>>>\end{align}$$
+>>>Hence, the given solutions are not solutions to the ODE.
 >
 >>[!example] Task
 >>If the Wronskian of any two solutions of the differential equation 
 >>$$y'' + p(t)y'+q(t)y=0$$
 >>is constant, what does this imply about the coefficients $p$ and $q$?
+>>>[!example]- Solution
+>>>By [[#^78710b|Abel's theorem]] we know that the Wronskian for two twice differentiable solutions can be expressed as
+>>>$$\begin{align}
+>>> W_{12}(t) &= W_{12}(t_{0})e^{-A_{1}(t)}
+>>>\end{align}$$
+>>>for some $t_{0} \in I$ where the parameters $p, q$ are continuous on $I$ for the given ODE. Let's denote $$W_{12}(t_{0}) = c$$ since it will be a constant after computing the Wronskian for $t_{0}$, we have
+>>>$$W_{12}(t) = ce^{-A_{1}(t)}$$
+>>>with $$A_{1}(t)= \int_{t_{0}}^t p(s) \, ds $$
+>>>For the claim of the Wronskian being constant, we have to only deal with the variable parameter $A_{1}(t)$. To have this parameter constant, it must satisfy $$p \equiv 0$$
+>>>The parameter $q(t)$ does not play a role for the given condition.
 >
 >>[!example] Task*
 >>Suppose $y_{1}$ is solution of the IVP
@@ -542,3 +699,52 @@
 >>>Find what is the IVP problem for the function $$y_{c}(t) = y_{1}(t)-cy_{2}(t)$$ and fine tune $c$ to use hint 1
 
 ## 2.2 Reduction Order Methods
+
+>[!def] Definition Second Order Equation ([[../../../Sources/nagy.pdf#page=98 | Source]])
+> A **second order** equation in the unknown function $y$ is an equation
+> $$y'' = f(t,y,y')$$
+> where the function $f:\mathbb{R}^3 \to \mathbb{R}$ is given. The equation is **linear** iff the function $f$ is linear in both arguments $y$ and $y'$. 
+
+>[!def] Definition Special Second Order Equation ([[../../../Sources/nagy.pdf#page=98 | Source]])
+>A second order differential equation is **special** iff one of the following condition holds
+>1. $y'' = f(t,\cancel{ y },y')$, where $y$ does not appear explicitly
+>2. $y'' = f(\cancel{ t },y,y')$, where $t$ does not appear explicitly
+>3. $y'' = f(\cancel{ t },y,\cancel{ y' })$, where $t$ and $y'$ do not appear explicitly
+
+>[!theorem] Theorem Function $y$ is Missing (Case 1)
+>If a second order differential equation has the form
+>$$y''=f(t,y')$$
+>then $v=y'$ satisfies the first order equation $v'=f(t,v)$
+>>[!example] Example Find the $y$ solution of the second order nonlinear equation $y''=-2t(y')^2$ with initial conditions $y(0)=2$ and $y'(0)=-1$
+>>We introduce
+>>$$v=y' \text{ and } v' = y''$$
+>>therefore we have
+>>$$v'=-2tv^2$$
+>>We separate variables according to the [[1 - First Order ODEs#^defSeparableDifferentialEquation|solution theorem for separable equations]]
+>>$$\begin{alignat}{2}
+>> v'&=-2tv^2 \qquad&&\Big\vert :v^2 \\
+>> \frac{1}{v^2}v' &= -2t \qquad&&\Big\vert \int    \\
+>> -\frac{1}{v} &= -t^2+c \\
+>>\end{alignat}$$
+>>Resubstitung $v=y'$ gives
+>>$$\begin{align}
+>> -\frac{1}{y'} = -t^2+c \tag{1}
+>>\end{align}$$
+>>Solving for $c$ with the initial condition $y'(0)=-1$
+>>$$\begin{align}
+>>1 &= 0^2+c \\
+>>1 &= c
+>>\end{align}$$
+>>Hence we have for equation $(1)$
+>>$$\begin{align}
+>> -\frac{1}{y'} &= -t^2+1 \\ 
+>> \frac{1}{y'} &= t^2-1 \\
+>> y' &= \frac{1}{t^2-1} \\
+>>\end{align}$$ 
+>>Integrating gives
+>>$$\begin{align}
+>> y &= \int \frac{1}{t^2-1} \, dt \\ 
+>> y &= \int \frac{1}{(t+1)(t-1)} \, dt \\
+>>\end{align}$$
+>>By the partial fractions method we look for $a,b$ satisfying
+>>$$\frac{1}{(t+1)(t-1)}=\frac{A}{t+1}+\frac{B}{t-1}$$
