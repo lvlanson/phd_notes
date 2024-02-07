@@ -687,7 +687,7 @@
 >>$$y_{2}''+a_{1}y_{2}'+a_{0}y_{2}=0$$
 >>with
 >>$$y_{1}(0)=0 \;\; \text{ and }\;\; y_{1}'(0)=1$$
->>that is, same differential equation and same initial condition for the function, but different intial conditions for the derivatives. Then show that the functions $y_{1}$ and $y_{2}$ mus be proportional to each other, i.e.
+>>that is, same differential equation and same initial condition for the function, but different initial conditions for the derivatives. Then show that the functions $y_{1}$ and $y_{2}$ must be proportional to each other, i.e.
 >>$$y_{1}(t)=cy_{2}(t)$$
 >>and find the proportionality factor $c$.
 >>>[!note]- Hint 1
