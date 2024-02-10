@@ -1,3 +1,3 @@
-- 14. April fertig sein
+- 14.April fertig sein
 - 19.2. Code angucken (selbstständig)
 - 20.2 Alex Meeting

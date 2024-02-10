@@ -29,7 +29,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/0 - Progress.md",
                 "mode": "source",
                 "source": true
               }
@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/0 - Progress.md",
                 "mode": "preview",
                 "source": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/0 - Progress.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/0 - Progress.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md"
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/0 - Progress.md"
               }
             }
           },
@@ -219,11 +219,54 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
+  "floating": {
+    "id": "10bcc6e176d5bc21",
+    "type": "floating",
+    "children": [
+      {
+        "id": "bfa9fe708997bd95",
+        "type": "window",
+        "children": [
+          {
+            "id": "84df8b798d37a858",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "144ad2ed0b71247f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+                    "mode": "preview",
+                    "source": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 4062,
+        "y": 0,
+        "width": 960,
+        "height": 1080,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "a6081b9e300ffbae",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/0 - Progress.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Terminology.md",
+    "Paper/Hyperbox Metric/Timeline.md",
+    "Paper/Hyperbox Metric/Work.md",
+    "Paper/Hyperbox Metric/Literature/End-to-End Neural Network Training for Hyper-based Classification ES2023-33.pdf",
+    "Paper/Hyperbox Metric/Literature",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
     "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/def_direction_fields.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/dir_field_example_3.png",
@@ -250,23 +293,17 @@
     "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
     "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
     "PhD Studies/To-Do.md",
-    "Sources/shifrin2005.pdf",
     "PhD Studies/Mathematic Basics/Calculus/figures/inverse_function_theorem_proof.jpg",
-    "PhD Studies/Mathematic Basics/Calculus/figures/inverse_function_theorem_proof",
     "Literature/@shifrin2005.md",
     "Literature/@stewart2007.md",
     "Literature/@book_{91865988}.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/Plot ODEs.md",
-    "Paper/Hyperbox Metric/Timeline.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/motivation_example_3d.png",
     "Dokumentation.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/ODE_example_2_t_-1.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/ODE_example_2_t_1.png",
     "Excalidraw/Drawing 2024-01-17 18.47.08.excalidraw.md",
     "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
-    "Literature/@apostol1967.md",
-    "Zwischenbericht.md",
-    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/Mahalabonis Distance.md",
     "Untitled.canvas"
   ]
 }

@@ -711,11 +711,11 @@
 >2. $y'' = f(\cancel{ t },y,y')$, where $t$ does not appear explicitly
 >3. $y'' = f(\cancel{ t },y,\cancel{ y' })$, where $t$ and $y'$ do not appear explicitly
 
->[!theorem] Theorem Function $y$ is Missing (Case 1)
+>[!theorem] Theorem Function $y$ is Missing (Case 1) ([[../../../Sources/nagy.pdf#page=98 | Source]])
 >If a second order differential equation has the form
 >$$y''=f(t,y')$$
 >then $v=y'$ satisfies the first order equation $v'=f(t,v)$
->>[!example] Example Find the $y$ solution of the second order nonlinear equation $y''=-2t(y')^2$ with initial conditions $y(0)=2$ and $y'(0)=-1$
+>>[!example]- Example Find the $y$ solution of the second order nonlinear equation $y''=-2t(y')^2$ with initial conditions $y(0)=2$ and $y'(0)=-1$
 >>We introduce
 >>$$v=y' \text{ and } v' = y''$$
 >>therefore we have
@@ -746,5 +746,295 @@
 >> y &= \int \frac{1}{t^2-1} \, dt \\ 
 >> y &= \int \frac{1}{(t+1)(t-1)} \, dt \\
 >>\end{align}$$
->>By the partial fractions method we look for $a,b$ satisfying
->>$$\frac{1}{(t+1)(t-1)}=\frac{A}{t+1}+\frac{B}{t-1}$$
+>>>[!note]- Partial Fractions
+>>>By the partial fractions method we look for $a,b$ satisfying
+>>>$$\begin{alignat}{2}
+>>>\frac{1}{(t+1)(t-1)}&=\frac{A}{t+1}+\frac{B}{t-1} \qquad&&\Big\vert \cdot(t+1)(t-1) \\
+>>>1&=\frac{A\cancel{ (t+1) }(t-1)}{\cancel{ t+1 }}+\frac{B(t+1)\cancel{ (t-1) }}{\cancel{ t-1 }} \qquad&& \\
+>>>1 &= A(t-1)+B(t+1) \\
+>>>1 &= At-A+Bt+B \\
+>>>1 &= At+Bt - A+B \\
+>>>1 &=t(A+B)-A+B
+>>>\end{alignat}$$
+>>>We choose $A+B = 0$ and therefore require $1 = -A+B$. We have a system of linear equations and solve
+>>>$$\begin{alignat}{2}
+>>> \begin{pmatrix}
+>>>1 &1 \\
+>>>-1 & 1
+>>>\end{pmatrix} &=\begin{pmatrix}
+>>> 0\\1 
+>>>\end{pmatrix} \qquad&&\Big\vert (I)+(II) \\
+>>> \begin{pmatrix}
+>>>1 &1 \\
+>>>0 & 2
+>>>\end{pmatrix} &=\begin{pmatrix}
+>>> 0\\1 
+>>>\end{pmatrix} \qquad&&\Big\vert (II):2 \\
+>>> \begin{pmatrix}
+>>>1 &1 \\
+>>>0 & 1
+>>>\end{pmatrix} &=\begin{pmatrix}
+>>> 0\\ \frac{1}{2} 
+>>>\end{pmatrix} \qquad&&\\
+>>>\end{alignat}$$
+>>>Hence we have $$B=\frac{1}{2}$$ and
+>>>$$\begin{align}
+>>>A + \frac{1}{2} &= 0  \\
+>>>A &= -\frac{1}{2}
+>>>\end{align}$$
+>>
+>> The fraction under the integral can be simplified to
+>> $$\begin{align}
+>> \frac{1}{(t+1)(t-1)}&=\frac{-\frac{1}{2}}{(t+1)}+\frac{\frac{1}{2}}{(t-1)} \\
+>> &= \frac{1}{2} \left( \frac{1}{t-1}-\frac{1}{t+1} \right)
+>>\end{align}$$
+>>Hence, we have
+>>$$\begin{align}
+>>y &= \frac{1}{2}\int \frac{1}{t-1}-\frac{1}{t+1} \, dt  \\
+>>  &= \frac{1}{2}\Big(\ln \lvert t-1 \rvert  - \ln\lvert t+1 \rvert \Big) + c
+>>\end{align}$$
+>>We now check for the initial value given as $y(0)=2$ and solve for $c$
+>>$$\begin{align}
+>>2 &= \frac{1}{2}(0-0) + c \\
+>> 2&= c
+>>\end{align}$$
+>>Hence, the solution is
+>>$$y=\frac{1}{2}\Big(\ln \lvert t-1 \rvert  - \ln\lvert t+1 \rvert \Big) + 2$$
+
+>[!theorem] Theorem Variable $t$ is Missing (Case 2) ([[../../../Sources/nagy.pdf#page=99 | Source]])
+> If the IVP
+> $$y''=f(y,y')$$
+> with 
+> $$y(0)=y_{0} \; \text{ and } \; y'(0)=y_{1}$$
+> has an _invertible_ solution $y$, then the function
+> $$w(y)=v(t(y))$$
+> where $$v(t)=y'(t)$$ and $t(y)$ is the inverse of $y(t)$, satisfies the IVP
+> $$w' = \frac{f(y,w)}{w}$$
+> with $$w(y_{0})=y_{1}$$
+> and $$w' = \frac{dw}{dy}$$
+>>[!proof]-
+>> The original equation is denoted as
+>> $$\begin{align}
+>> y'' = f(y,y') 
+>>\end{align}$$
+>> We now denote $v(t)=y(t)'$, hence $v(t)' = y(t)''$. Therefore, we substitute and have
+>> $$v'=f(y,v) \tag{1}$$
+>> Given $y$ is invertible we denote the inverse as $t(y)$. We denote $$w(y)=v(t(y)) \tag{2}$$
+>>>[!note]- Notation of inverse
+>>> Assume the function $f(t) = y$, then the inverse is $f^{-1}(y)=g(y) =t$. We have
+>>> $$\begin{align}
+>>> f(t) &= y(t) \\
+>>> g(y) = f^{-1}(y) &= t(y)
+>>>\end{align}$$
+>>
+>> By the chain rule we can find the derivative of $w$, i.e. $w'$
+>> $$\begin{align}
+>> w'&= \frac{dw}{dy} \\
+>>   &= \frac{dv}{\cancel{ dt }} \frac{\cancel{ dt }}{dy} \\
+>>   &= \frac{dv}{dy} \\ 
+>>   &= \frac{v'}{y'}
+>>\end{align}$$
+>>Recall in equation $(1)$, we substitute and have with equation $(2)$
+>>$$\begin{align}
+>> \frac{f\big(y(t),v(t)\big)}{v(t)} &= \frac{f(y,w(y))}{w(y)}
+>>\end{align}$$
+>>Hence, we have for found
+>>$$w' = \frac{f(y,w)}{w}$$
+>>Finally, we verify the initial condition for $w$. Recall we want to apply the initial condition to the inverse functions with $v=y'$, we have
+>>$$\begin{alignat}{3}
+>> y(t=0)&=y_{0} \quad &&\Longleftrightarrow \quad t(y=y_{0})&&=0 \\
+>> y'(t=0)&=y_{1} &&\Longleftrightarrow \quad v(t=0)&&=y_{1}
+>>\end{alignat}$$
+>>Hence, for the claim $w(y_{0})$ we have
+>>$$\begin{align}
+>> w(y=y_{0})&=v(\underbrace{ t(y=y_{0}) }_{ =0 }) \tag*{by (2)} \\
+>>  &= v(t=0) \\
+>>  &= y_{1} \tag*{$\square$}
+>>\end{align}$$
+>
+>>[!example]- Example Find a solution $y$ to the second order equation $y''=2yy'$
+>>Note we do not have any variable $t$, such that we can make use of the theorem. We make the following substitution as suggested by the theorem
+>>$$\begin{align}
+>> v' = 2yv
+>>\end{align}$$
+>>We now want to determine $w(y)$, we use the suggested definition
+>>$$\begin{align}
+>> w' &= \frac{dw}{dy} \\
+>> &= \frac{dv}{dy} \\
+>> &= \frac{dv}{\cancel{ dt }} \frac{\cancel{ dt }}{dy} \\
+>> &= \frac{dv}{dy}
+>>\end{align}$$
+>>Inserting gives
+>>$$\begin{align}
+>> \frac{dv}{dy} &=\frac{2yv}{y'} \\
+>> &= \frac{2y\cancel{ v }}{\cancel{ v }} \\
+>> &= 2y
+>>\end{align}$$
+>>Integrating with respect to y gives
+>>$$\begin{align}
+>> w &= \int 2y \, dy \\
+>>  &= y^2+c 
+>>\end{align}$$
+>> By definition $w(y) = v(t(y))$, hence
+>> $$\begin{align}
+>> v&=y^2+c  \\
+>> y' &= y^2 + c
+>>\end{align}$$
+>>This is a [[1 - First Order ODEs#^defSeparableDifferentialEquation| separable equation]], we solve accordingly and choose $c=1$
+>>$$\begin{alignat}{2}
+>>y'\frac{1}{y^2+c} &= 1 \\ 
+>> \int \frac{1}{y^2 + 1} \, dy &= \int 1 \, dt  \\
+>> \arctan(y) &= t + c_{0} \\
+>> y &= \tan(t + c_{0})
+>>\end{alignat}$$
+>>Choosing $c_{0}=0$ gives
+>>$$ y = \tan(t)$$
+>
+>>[!example]- Example Find the solution $y$ to the IVP $yy''+3(y')^2=0$ with $y(0)=1$ and $y'(0)=6$
+>>Again we have an ODE with missing $t$, hence we can make use of the given theorem. We denote
+>>$$\begin{align}
+>> v&=y' \\
+>> v' &= y''
+>>\end{align}$$
+>>Then the ODE can be given as 
+>>$$\begin{align}
+>> yv'+3v^2 = 0 \tag{1}
+>>\end{align}$$
+>>Now we want to determine $w(t)$ again which can be found over
+>>$$\begin{align}
+>> \frac{dw}{dy} &= \frac{dv}{dy} \\
+>>           &= \frac{dv}{\cancel{ dt }} \frac{\cancel{ dt }}{dy} \\
+>>           &= \frac{dv}{dy} \\
+>>           &= \frac{v'}{v} \tag{2}
+>>\end{align}$$
+>>Solving equation $(1)$ for $y'$ gives
+>>$$\begin{align}
+>> v'=-\frac{3v^2}{y}
+>>\end{align}$$
+>>We insert this in $w'$, i.e. equation $(2)$
+>>$$\begin{align}
+>> w' &= \frac{v'}{v} \\
+>>    &= \frac{\left( -\frac{3v²}{y} \right)}{v} \\
+>>    &= -\frac{3v^2}{vy}
+>>\end{align}$$
+>>Note, we defined $w(y) = v(t(y))$, so we substitute
+>>$$\begin{align}
+>> w' = -\frac{3w^\cancel{ 2 }}{\cancel{ w }y}
+>>\end{align}$$
+>>This can be solved using [[1 - First Order ODEs#^defSeparableDifferentialEquation | separation of variables]], we get
+>>$$\begin{alignat}{2}
+>>w' \frac{1}{w} &= -\frac{3}{y}  \qquad&&\Big\vert \int   \\
+>> \int \frac{1}{w} \, dw &= -3\int  \frac{1}{y} \, dy  + c_{0} \qquad&& \\
+>> \ln(w) &= -3\ln(y) + c_{0} \qquad&&\Big\vert \exp() \\
+>> w &= y^{-3} \underbrace{ e^{c_{0}} }_{ =c_{1} } \qquad&&\Big\vert :3 \\
+>> w &=c_{1}y^{-3} \tag{3}
+>>\end{alignat}$$
+>>Our initial conditions are
+>>$$\begin{alignat}{2}
+>> y_{0} &= y(0) &&= 1 \\
+>> y_{1} &=y'(0) &&= 6
+>>\end{alignat}$$
+>>and we have
+>>$$w(y_{0}) = y_{1} \quad \Longrightarrow \quad w(1)=6 $$
+>>inserting this result into equation $(3)$
+>>$$ 6 = c_{1}$$
+>>Having found $c_{1}$ we have a proper form for $w(y)$
+>>$$w(y)= 6y^{-3}$$
+>>Resubstituting $w(y)=v(t(y))=y'$ we get
+>>$$y'=6y^{-3}$$
+>>This can easily be solved by [[1 - First Order ODEs#^defSeparableDifferentialEquation | separation of variables]]
+>>$$\begin{align}
+>>y'y^3 &= 6 \\
+>> \frac{1}{4}y^4 &= 6t + c \tag{4}
+>>\end{align}$$
+>>He we can use the initial condition $y_0=y(0)=1$ and get
+>>$$\begin{align}
+>> \frac{1}{4} &= c_{2}
+>>\end{align}$$
+>>Inserting the result into equation $(4)$ yields the solution to the IVP
+>>$$\begin{alignat}{2}
+>> \frac{1}{4}y^4 &= 6t+\frac{1}{4} \qquad&&\Big\vert \cdot 4 \\
+>> y^4 &= 24t+1 \qquad&&\Big\vert \sqrt[4]{  }\\
+>> y &= \sqrt[4]{  24t+1} \qquad\\
+>>\end{alignat}$$
+
+>[!theorem] Theorem Conservation of Energy ([[../../../Sources/nagy.pdf#page=101 | Source]])
+>>[!note]- Change of Notation
+>> We adapt the notation to its physical roots, which originate from Newtonian mechanics. We write now
+>> $$y'' = f(y) \quad \Longleftrightarrow \quad my''=f(y)$$
+>> with 
+>> - $m$ being a constant, in Newtonian mechanics it represents the mass for a particle
+>> - $y$ being the particle position function dependent of time $t$
+>> - $f$ being a force depending on the particle position $y$
+>
+>Consider 
+>- a particle with positive mass $m$ 
+>- position $y$ as function of time $t$
+>- velocity $v = y'$
+>
+>where $y$ is a solution of Newton's second law of motion
+>$$my''=f(y) \tag{1}$$
+>with initial conditions
+>$$y(t_{0})=y_{0} \quad \text{and} \quad y'(t_{0})=v_{0}$$
+>where $f(y)$ is the force acting on the particle at the position $y$. 
+>
+>Then, the position function $y$ satisfies
+>$$\frac{1}{2}mv^2 + V(y) = E_{0}$$
+>where $E_{0}=\frac{1}{2}mv_{0}^2 + V(y_{0})$ is fixed by the initial conditions $v(t)=y'(t)$ is the particle velocity, and $V$ is the potential of the force $f$, that is
+>$$V(y)=-\int f(y) \, dy \quad\Longleftrightarrow\quad f(y)=-\frac{dV}{dy} \tag{2}$$
+>>[!remark]-
+>>The term $T(v)=\frac{1}{2}mv^2$ is the kinetic energy of the particle. The term $V(y)$ is the potential energy. The theorem above says that the total mechanical energy
+>>$$E=T(v)+ V(y)$$
+>>remains constant during the motion of the particle. Potential energy can be interpreted as the energy "stored" in an object, like the gravitational energy stored in an object.
+>
+>>[!proof]-
+>> We use equation $(1)$ and $(2)$ and set them equal, we have
+>> $$\begin{alignat}{2}
+>> my'' &= -\frac{dV}{dy} \\
+>> m \frac{d^2y}{dt^2} &= -\frac{dV}{dy} \qquad&&\Big\vert \cdot y'=\frac{dy}{dt} \\
+>> m \frac{d^2y}{dt^2}\frac{dy}{dt} &= -\frac{dV}{\cancel{ dy }}\frac{\cancel{ dy }}{dt} \qquad&& \\
+>> \frac{d}{dt}\left( \frac{1}{2}m \left( \frac{dy}{dt} \right)^2 \right) &= -\frac{dV}{dt} \qquad&& \tag{Inverse Chain Rule}\\
+>>\end{alignat}$$
+>>Inserting the definition of the velocity $v(t)=\frac{dy}{dt}$ gives
+>>$$\begin{alignat}{2}
+>> -\frac{dV}{dt} &= \frac{d}{dt} \left( \frac{1}{2}mv^2  \right) \qquad&&\Big\vert +\frac{dV}{dt} \\
+>> 0 &= \frac{d}{dt} \left( \frac{1}{2}mv^2 +V \right) \qquad&&  \\
+>>\end{alignat}$$
+>>Integrating with respect to $t$ yields the constant
+>>$$\begin{align}
+>> E(y,v) = \frac{1}{2}mv(t)^2+V(y)
+>>\end{align}$$
+>>which is the verifies the conservation of energy. $$\tag*{$\square$}$$
+>
+>>[!example] Examples Find the potential energy and write the energy conservation for the following systems
+>>>[!example]- A particle attached to a spring with constant $k$, moving in one space dimension
+>>> The force on a particle of mass $m$ attached to a spring with spring constant $k>0$, when displaced an amount $y$ from the equilibrium position $y=0$ is $f(y)=-ky$. Imagine the spring being squished, hence the position of $y$ is decreased by the displacement $k$. Applying Newton's law of motion we have
+>>> $$\begin{align}
+>>> my''=-ky
+>>>\end{align}$$
+>>>The potential energy is given by
+>>>$$\begin{align}
+>>> V(y)&= -\int f(y) \, dy \\
+>>>&= -\int -ky \, dy \\
+>>>&= \frac{1}{2}ky^2  \\
+>>>\end{align}$$
+>>>Note, we have the acceleration $v=y'$ and can therefore write by the given theorem the total mechanical energy can be given as
+>>>$$E=\frac{1}{2}mv^2 + \frac{1}{2}ky^2$$
+>>>with it also being the initial energy $E_0$ as the energy remains constant.
+>>
+>>>[!example]- A particle moving vertically close to the Earth surface, under Earth's constant gravitational acceleration. In this case the force on the particle having mass $m$ is $f(y)=mg$ with $g=9.81 \frac{m}{s^2}$
+>>>Again we have the location of the particle given by
+>>>$$f(y)=mg$$
+>>>Hence, by the theorem we have
+>>>$$\begin{alignat}{2}
+>>> my''&=mg \qquad&&\Big\vert \cdot y' \\
+>>> my''y' &= mgy' \\
+>>> \frac{d}{dt}\left( \frac{1}{2}m(y')^2 \right) &= \frac{d}{dt}(mgy) \qquad&&\Big\vert -\frac{d}{dt}(mgy) \\
+>>> \frac{d}{dt}\left( \frac{1}{2}m(y')^2 - mgy \right) &= 0 \qquad&&\Big\vert \int  \, dt  \\ 
+>>>  \frac{1}{2}mv^2 - mgy &= E(y,v)\tag{$v=y'$}
+>>>\end{alignat}$$
+>>>>[!remark]
+>>>>The gravitational Energy is constant, because $\frac{d}{dt}E(y,v)=0$.
+
+
+>[!theorem] Theorem Reduction of Order

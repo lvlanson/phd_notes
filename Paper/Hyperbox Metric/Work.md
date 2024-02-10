@@ -1,0 +1,1 @@
+- [ ] Hausdorff Metric und Zusammenhang HyperboxGLVQ

@@ -21,7 +21,8 @@
     "codomain",
     "Maclaurin",
     "eq",
-    "Wronskian"
+    "Wronskian",
+    "Resubstitung"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,
