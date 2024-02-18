@@ -196,6 +196,18 @@
       "injectColor": true,
       "noTitle": false,
       "copy": false
+    },
+    "property": {
+      "type": "property",
+      "color": "56, 132, 255",
+      "icon": {
+        "type": "obsidian",
+        "name": "lucide-table-properties"
+      },
+      "command": true,
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
     }
   },
   "syntaxHighlight": false,
