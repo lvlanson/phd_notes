@@ -197,11 +197,16 @@
 >3. A set of functions is orthonormal if they are orthogonal and $\lvert\lvert o_{j} \rvert\rvert = 1$
 
 >[!theorem] Theorem Orthogonality of Sine and Cosine Functions
->The functions $\{ \cos(kt) \}_{k=0}^\infty$ and $\{ \sin(kt) \}_{k=0}^\infty$ are orthogonal on the interval $[-\pi,\pi]$. 
+>The functions $\{ \cos(kt) \}_{k=0}^\infty$ and $\{ \sin(kt) \}_{k=0}^\infty$ are orthogonal on the interval $[-\pi,\pi]$, i.e.
+>$$\begin{align}
+> \int  \cos(mt)\sin(nt) \, dt &= 0 \\
+> \int  \cos(mt)\cos(nt) \, dt &= 0 \qquad \text{ with }n\neq m\\
+> \int  \sin(mt)\sin(nt) \, dt &= 0 \qquad \text{ with }n\neq m\\ 
+>\end{align}$$
 >>[!remark]-
 >> The functions described by the [[#^93ee52| Generalized Fourier Transformation]] are also orthogonal on the corresponding interval $[a,b]$
 >
->>[!proof]
+>>[!proof]-
 >>>[!recall] Trigonometric Addition Identities
 >>>$$\begin{align}
 >>> \sin(\alpha \pm \beta) &= \sin(\alpha)\sin(\beta) \pm \cos(\alpha)\cos(\beta) \\
@@ -216,4 +221,44 @@
 >>1.  Note, $\sin$ is even and $\cos$ is odd, hence $\sin \cdot \cos$  is odd too. By the [[#^e42703| definition of even and odd functions]] we know, that 
 >>$$\int _{-\pi}^\pi \cos(mt)\sin(nt) \, dt =0 $$
 >>regardless of $m$ and $n$
->>2.
+>>2. We want to show that
+>> $$\int _{-\pi}^\pi \cos(mt)\cos(nt) \, dt =0 \qquad \text{ with } m \neq n$$
+>>Note, the following identities hold
+>>$$\begin{align}
+>> \cos(mt+nt) &= \cos(mt)\cos(nt)-\sin(mt)\sin(nt) \tag{1} \\
+>> \cos(mt-nt) &= \cos(mt)\cos(nt)+\sin(mt)\sin(nt) \tag{2}
+>>\end{align}$$
+>>Adding these terms yield
+>>$$\begin{align}
+>> \cos(mt+nt)+\cos(mt-nt) &= \cos(mt)\cos(nt)\cancel{ -\sin(mt)\sin(nt) }( +  \cos(mt)\cos(nt)+\cancel{ \sin(mt)\sin(nt) } \\
+>> &= 2\cos(mt)\cos(nt)
+>>\end{align}$$
+>>Dividing by two gives the expression under the integral
+>>$$\cos(mt)\cos(nt) = \frac{1}{2} (\cos(mt+nt)+\cos(mt-nt))$$
+>>Hence, we can substitute under the integral and get
+>>$$\begin{align}
+>> \int _{-\pi}^\pi \cos(mt)\cos(nt) \, dt &= \frac{1}{2}\int _{-\pi}^\pi   \cos(mt+nt)+\cos(mt-nt) \, dt \\
+>> &= \frac{1}{2} \left[\frac{\sin((m+n)t)}{m+n} + \frac{\sin((m-n)t)}{m-n}\right]_{-\pi}^\pi \\
+>>\end{align}$$
+>>Since $m,n \in \mathbb{N}$ we know that $\sin(k\pi) = 0$ for any $k = n+m$ with $n \neq m$, hence
+>>$$ \int _{-\pi}^\pi \cos(mt)\cos(nt) \, dt = 0$$
+>>3. We want to show that
+>> $$\int _{-\pi}^\pi \sin(mt)\sin(nt) \, dt = 0 \qquad\text{ with } m \neq n$$
+>> Note, the following identities hold
+>> $$\begin{align}
+>> \cos(mt+nt) &= \cos(mt)\cos(nt)-\sin(mt)\sin(nt) \tag{1} \\
+>> \cos(mt-nt) &= \cos(mt)\cos(nt)+\sin(mt)\sin(nt) \tag{2}
+>>\end{align}$$
+>>Subtracting these terms yield
+>>$$\begin{align}
+>> \cos(mt+nt) - \cos(mt-nt) &= \cancel{ \cos(mt)\cos(nt) }-\sin(mt)\sin(nt)\cancel{  -\cos(mt)\cos(nt) }-\sin(mt)\sin(nt)\\ \\
+>> &= -2\sin(mt)\sin(nt)
+>>\end{align} $$
+>>Dividing by minus two gives the expression under the integral
+>>$$\begin{align}
+>> -\frac{1}{2}(\cos(mt+nt) - \cos(mt-nt)) &= \sin(mt)\sin(nt)
+>>\end{align}$$
+>>We substitute this and get the same expression as in case 2. except the factor in front of the integral is negative, i.e.
+>>$$\int _{-\pi}^\pi \sin(mt)\sin(nt) \, dt = -\frac{1}{2}\int _{-\pi}^\pi   \cos(mt+nt)+\cos(mt-nt) \, dt $$
+>>Hence, the conclusion is the same as in case 2, i.e. for $m,n \in \mathbb{N}$ we know that $\sin(k\pi) = 0$ for any $k = n+m$ with $n \neq m$, hence
+>>$$\int _{-\pi}^\pi \sin(mt)\sin(nt) \, dt = 0 \tag*{$\square$}$$

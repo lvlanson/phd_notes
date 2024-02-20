@@ -123,7 +123,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 262.5
+    "width": 262.5,
+    "collapsed": true
   },
   "right": {
     "id": "93b677ed21c6c6cb",
@@ -219,18 +220,84 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "fa5db71450d8c4c7",
+  "floating": {
+    "id": "d65004c7f109e0b4",
+    "type": "floating",
+    "children": [
+      {
+        "id": "0cd2ab8ed4ee61f6",
+        "type": "window",
+        "children": [
+          {
+            "id": "beaf1f5bfdf628f1",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "17699288480a9def",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/olson2017.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 2560,
+        "y": 0,
+        "width": 1280,
+        "height": 1440,
+        "maximize": false,
+        "zoom": 0
+      },
+      {
+        "id": "bad36d52773c8de7",
+        "type": "window",
+        "children": [
+          {
+            "id": "8af955b21562fcd4",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "581313db5fe3ef89",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/nagy.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 768,
+        "y": 336,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "80ad1641f8b624a9",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p500.png",
+    "Untitled.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
+    "Sources/olson2017.pdf",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "Sources/nagy.pdf",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p500.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p10.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p50.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures",
     "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
     "Sources/princeton_script.pdf",
     "Sources/princeton_script.pdf.crdownload",
-    "Sources/olson2017.pdf",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/0 - Progress.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
@@ -253,7 +320,6 @@
     "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
     "PhD Studies/Mathematic Basics/Calculus/Series.md",
     "Sources/zotero-182.pdf",
-    "Sources/nagy.pdf",
     "Sources/rudin1976.pdf",
     "Literature/@kreyszig1978.md",
     "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
