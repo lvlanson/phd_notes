@@ -22,7 +22,10 @@
     "Maclaurin",
     "eq",
     "Wronskian",
-    "Resubstitung"
+    "Resubstitung",
+    "infimum",
+    "supremuma",
+    ""
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,

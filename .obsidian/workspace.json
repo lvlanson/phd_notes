@@ -24,7 +24,7 @@
             "group": "1d2597f4fa86fdfb"
           },
           {
-            "id": "80ad1641f8b624a9",
+            "id": "d12c4cfe81c08b2a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,7 +34,7 @@
                 "source": true
               }
             },
-            "group": "7fa3d2acdf7ecb99"
+            "group": "0a3d119af79d0ac4"
           }
         ],
         "currentTab": 1
@@ -70,7 +70,7 @@
                 "source": true
               }
             },
-            "group": "7fa3d2acdf7ecb99"
+            "group": "0a3d119af79d0ac4"
           }
         ],
         "currentTab": 1
@@ -123,8 +123,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 262.5,
-    "collapsed": true
+    "width": 339.5
   },
   "right": {
     "id": "93b677ed21c6c6cb",
@@ -220,92 +219,40 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "floating": {
-    "id": "d65004c7f109e0b4",
-    "type": "floating",
-    "children": [
-      {
-        "id": "0cd2ab8ed4ee61f6",
-        "type": "window",
-        "children": [
-          {
-            "id": "beaf1f5bfdf628f1",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "17699288480a9def",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Sources/olson2017.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2560,
-        "y": 0,
-        "width": 1280,
-        "height": 1440,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
-        "id": "bad36d52773c8de7",
-        "type": "window",
-        "children": [
-          {
-            "id": "8af955b21562fcd4",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "581313db5fe3ef89",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Sources/nagy.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 768,
-        "y": 336,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "80ad1641f8b624a9",
+  "active": "fa5db71450d8c4c7",
   "lastOpenFiles": [
-    "Untitled.md",
+    "Sources/conci2018.pdf",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
-    "Sources/olson2017.pdf",
+    "PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/A - Signals.md",
+    "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.md",
+    "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.excalidraw.md",
+    "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.pdf",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
-    "Sources/nagy.pdf",
+    "PhD Studies/Mathematic Basics/Metrics/Figures/point_set.excalidraw.md",
+    "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.aux",
+    "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.log",
+    "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.tex",
+    "Paper/Hyperbox Metric/Emails",
+    "PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric.tex",
+    "PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric.html",
+    "PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric.txt",
+    "PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric.pdf",
+    "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.png",
+    "PhD Studies/Mathematic Basics/Metrics/Dissimilarity.md",
+    "PhD Studies/To-Do.md",
+    "Paper/Hyperbox Metric/Hyperbox Metric.md",
+    "Literature/@conci2018.md",
+    "Untitled.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p500.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p10.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p50.png",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/figures",
     "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
-    "Sources/princeton_script.pdf",
-    "Sources/princeton_script.pdf.crdownload",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/0 - Progress.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Terminology.md",
     "Paper/Hyperbox Metric/Timeline.md",
     "Paper/Hyperbox Metric/Work.md",
-    "Paper/Hyperbox Metric/Literature/End-to-End Neural Network Training for Hyper-based Classification ES2023-33.pdf",
-    "Paper/Hyperbox Metric/Literature",
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
     "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/def_direction_fields.png",
@@ -313,25 +260,11 @@
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/example_1.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/dir_field_example_2.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/dir_field_example_1.png",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/example_1.png",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "PhD Studies/Mathematic Basics/Calculus/Calculus Limits.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
     "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
     "PhD Studies/Mathematic Basics/Calculus/Series.md",
-    "Sources/zotero-182.pdf",
-    "Sources/rudin1976.pdf",
-    "Literature/@kreyszig1978.md",
-    "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
-    "PhD Studies/Machine Learning/Loss Functions/Asymmetric Loss for Multi-Label Classification (ASL).md",
-    "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
-    "PhD Studies/To-Do.md",
-    "PhD Studies/Mathematic Basics/Calculus/figures/inverse_function_theorem_proof.jpg",
-    "Literature/@shifrin2005.md",
-    "Literature/@stewart2007.md",
-    "Literature/@book_{91865988}.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/Plot ODEs.md",
-    "Dokumentation.md",
     "Untitled.canvas"
   ]
 }

@@ -1,3 +1,4 @@
+### 1.1 Basic Definitions 
 >[!def] Definition $L^2[a,b]$ Space ([[../../../Sources/olson2017.pdf#page=33|Source]])
 >The set of functions $$f(t):[a,b] \to \mathbb{R}$$ whose squared integral is finite, i.e.
 >$$\int _{a}^b \lvert f(t) \rvert^2  \, dt < \infty $$
@@ -23,7 +24,7 @@
 
 >[!theorem] Theorem Fourier Transformation ([[../../../Sources/olson2017.pdf#page=34|Source]])
 >Let $f \in L^2[-\pi, \pi ]$, then $f$ can be represented as
->$$f(t) = \frac{a_{0}}{2} + \sum_{k=1}^\infty a_{k} \cos(kt)+b_{k} \sin(kt)$$
+>$$\hat{f}(t) = \frac{a_{0}}{2} + \sum_{k=1}^\infty a_{k} \cos(kt)+b_{k} \sin(kt)$$
 >with
 >$$\begin{align}
 > a_{k} &= \frac{1}{\pi}\int _{-\pi}^\pi f(t)\cos(kt) \, dt \\
@@ -33,8 +34,8 @@
 ^da9999
 
 >[!theorem] Theorem Generalized Fourier Transformation ([[../../../Sources/olson2017.pdf#page=34|Source]])
->Let $f \in L^2[-\pi, \pi ]$, then $f$ can be represented as
->$$f(t) = \frac{a_{0}}{2} + \sum_{k=1}^\infty a_{k} \cos\left( \frac{k\pi(t-h)}{H} \right)+b_{k} \sin\left( \frac{k\pi(t-h)}{H} \right)$$
+>Let $f \in L^2[-\pi, \pi ]$, then $f$ can be represented as the Fourier Series
+>$$\hat{f}(t) = \frac{a_{0}}{2} + \sum_{k=1}^\infty a_{k} \cos\left( \frac{k\pi(t-h)}{H} \right)+b_{k} \sin\left( \frac{k\pi(t-h)}{H} \right)$$
 >with 
 >$$\begin{align}
 > a_{k} &= \frac{1}{H}\int _{a}^b f(t) \cos\left(\frac{k\pi(t-h)}{H} \right) \, dt \\
@@ -54,8 +55,8 @@
 >Setting $a=-\pi$ and $b=\pi$ in the [[#^93ee52|Generalized Fourier Transformation]] yields the [[#^da9999| Fourier Transformation]].
 
 >[!property] Corollary
->Let $f \in L^2[-T, T]$, then $f$ can be represented as
->$$f(t)=\frac{a_{0}}{2} + \sum_{k=1}^\infty a_{k} \cos\left( \frac{k\pi t}{T} \right) + b_{k} \sin\left( \frac{k\pi t}{T} \right)$$
+>Let $f \in L^2[-T, T]$, then $f$ can be represented as the Fourier series
+>$$\hat{f}(t)=\frac{a_{0}}{2} + \sum_{k=1}^\infty a_{k} \cos\left( \frac{k\pi t}{T} \right) + b_{k} \sin\left( \frac{k\pi t}{T} \right)$$
 >with 
 >$$\begin{align}
 > a_{k}&=\frac{1}{T} \int _{-T}^T f(t)\cos\left( \frac{k\pi t}{T} \right) \, dt \\
@@ -85,6 +86,8 @@
 >>>[!note]
 >>> If $f$ is odd we have
 >>> $$\int _{-T}^T f(t) \, dt = 0 $$
+>>> If $f$ is even we have
+>>> $$\int _{-T}^T f(t) \, dt = 2\int _{0}^T f(t) \, dt $$
 
 ^e42703
 
@@ -180,6 +183,8 @@
 >The approximation using the Fourier series has the property that
 >$$\lim_{ n \to \infty } E_{n}(f) = 0$$
 
+### 1.2 Orthogonality and Completeness
+
 >[!def] Definition Inner Product ([[../../../Sources/olson2017.pdf#page=45|Source]])
 >Let $f,g \in L^2[a,b]$, then the inner product between $f,g$ is
 >$$(f \cdot g) \equiv \langle f,g \rangle = \int _{a}^b f(t)\overline{g(t)} \, dt $$
@@ -189,6 +194,8 @@
 >        &= \sqrt{ \langle f,f \rangle  }
 >\end{align} $$
 
+^a7fb8f
+
 >[!def] Definition Orthogonality ([[../../../Sources/olson2017.pdf#page=46|Source]])
 >1. The functions $f,g \in L^2[a,b]$ are orthogonal if
 >$$\langle f,g \rangle =0$$
@@ -196,7 +203,7 @@
 >$$ \langle o_{j}, o_{i} \rangle= 0 \qquad \forall i\neq j$$
 >3. A set of functions is orthonormal if they are orthogonal and $\lvert\lvert o_{j} \rvert\rvert = 1$
 
->[!theorem] Theorem Orthogonality of Sine and Cosine Functions
+>[!theorem] Theorem Orthogonality of Sine and Cosine Functions ([[../../../Sources/olson2017.pdf#page=46|Source]])
 >The functions $\{ \cos(kt) \}_{k=0}^\infty$ and $\{ \sin(kt) \}_{k=0}^\infty$ are orthogonal on the interval $[-\pi,\pi]$, i.e.
 >$$\begin{align}
 > \int  \cos(mt)\sin(nt) \, dt &= 0 \\
@@ -262,3 +269,153 @@
 >>$$\int _{-\pi}^\pi \sin(mt)\sin(nt) \, dt = -\frac{1}{2}\int _{-\pi}^\pi   \cos(mt+nt)+\cos(mt-nt) \, dt $$
 >>Hence, the conclusion is the same as in case 2, i.e. for $m,n \in \mathbb{N}$ we know that $\sin(k\pi) = 0$ for any $k = n+m$ with $n \neq m$, hence
 >>$$\int _{-\pi}^\pi \sin(mt)\sin(nt) \, dt = 0 \tag*{$\square$}$$
+>
+>>[!note]- The case $m=n$
+>>If $m=n$ we have
+>>$$\begin{align}
+>> \int _{-\pi}^\pi \cos(nt)\cos(nt) \, dt &= \int _{-\pi}^\pi   \cos^2(nt) \, dt \\
+>>  &= 2\int _{0}^\pi   \cos^2(nt) \, dt \tag{$\cos$ even function}\\
+>>  &= 2\left[\frac{1}{2}(\cos(t)\sin(t) + t)\right]_{0}^\pi \, \\
+>>  &= \cos(\pi)\sin(\pi) + \pi - \underbrace{ (\cos(0)\sin(0)) }_{ =0 } \,  \\
+>>  &= (-1)\cdot0 + \pi \,  \\
+>>  &= \pi \,  \\
+>>\end{align}$$
+>>Similarly, for the $\sin$ part we have
+>>$$\begin{align}
+>>\int_{-\pi}^\pi \sin(nt)\sin(nt) \, dt &= \int_{-\pi}^\pi \sin^2(nt) \, dt \\
+>>&= \int_{-\pi}^\pi \frac{1 - \cos(2nt)}{2} \, dt \\
+>>&= \frac{1}{2} \int_{-\pi}^\pi (1 - \cos(2nt)) \, dt \\
+>>&= \frac{1}{2} \left[t - \frac{\sin(2nt)}{2n}\right]_{-\pi}^\pi \\
+>>&= \frac{1}{2} \left(\pi - (-\pi) - \frac{\sin(2n\pi)}{2n} + \frac{\sin(-2n\pi)}{2n}\right) \\
+>>&= \frac{1}{2} \left(2\pi + \frac{\sin(2n\pi)}{2n} - \frac{\sin(2n\pi)}{2n}\right) \\
+>>&= \pi
+>>\end{align}$$
+>
+>>[!note]- The case $m=n=0$
+>>If $m=n=0$ we have
+>>$$\begin{align}
+>>\int _{-\pi}^\pi \cos(0)\cos(0) \, dt &= \int _{-\pi}^\pi   1 \, dt \\
+>> &= [t]_{-\pi}^\pi \\
+>> &= 2\pi
+>>\end{align}$$>>If $m=n$ we have
+>>$$\begin{align}
+>> \int _{-\pi}^\pi \cos(nt)\cos(nt) \, dt &= \int _{-\pi}^\pi   \cos^2(nt) \, dt \\
+>>  &= 2\int _{0}^\pi   \cos^2(nt) \, dt \tag{$\cos$ even function}\\
+>>  &= 2\left[\frac{1}{2}(\cos(t)\sin(t) + t)\right]_{0}^\pi \, \\
+>>  &= \cos(\pi)\sin(\pi) + \pi - \underbrace{ (\cos(0)\sin(0)) }_{ =0 } \,  \\
+>>  &= (-1)\cdot0 + \pi \,  \\
+>>  &= \pi \,  \\
+>>\end{align}$$
+>>Similarly, for the $\sin$ part we have
+>>$$\begin{align}
+>>\int_{-\pi}^\pi \sin(nt)\sin(nt) \, dt &= \int_{-\pi}^\pi \sin^2(nt) \, dt \\
+>>&= \int_{-\pi}^\pi \frac{1 - \cos(2nt)}{2} \, dt \\
+>>&= \frac{1}{2} \int_{-\pi}^\pi (1 - \cos(2nt)) \, dt \\
+>>&= \frac{1}{2} \left[t - \frac{\sin(2nt)}{2n}\right]_{-\pi}^\pi \\
+>>&= \frac{1}{2} \left(\pi - (-\pi) - \frac{\sin(2n\pi)}{2n} + \frac{\sin(-2n\pi)}{2n}\right) \\
+>>&= \frac{1}{2} \left(2\pi + \frac{\sin(2n\pi)}{2n} - \frac{\sin(2n\pi)}{2n}\right) \\
+>>&= \pi
+>>\end{align}$$
+>>and
+>>$$\begin{align}
+>>\int _{-\pi}^\pi \sin(0)\sin(0) \, dt &= \int _{-\pi}^\pi   0 \, dt \\
+>> &= 0 \\
+>> &= 0
+>>\end{align}$$
+
+>[!proof]- Proof Correctness of $a_k$ and $b_k$ for the Fourier Series
+>>We proof the correctness of the coefficients $a_k$ and $b_k$ of the [[#^93ee52| Generalized Fourier Series]] and the [[#^da9999| Fourier Series]].
+>
+>Using the [[#^da9999 | Fourier series]] of $f$ in the following inner product, we have
+>$$\begin{align}
+>\langle f(t), \cos(jt) \rangle  &= \int _{-\pi}^\pi f(t) \cos(jt) \, dt \\
+>                    &=\int _{-\pi}^\pi  \underbrace{ \left( \frac{a_{0}}{2} + \sum_{k=1}^\infty a_{k}\cos(kt)+b_{k}\sin(kt) \right) }_{ \text{Fourier series of $f$} } \cos(jt)\, dt \\
+>                    &= \underbrace{ \int _{-\pi}^\pi  \frac{a_{0}}{2}\cos(jt)\,  dt }_{ =0 \substack{ \text{ because} \\ \;\;\;\;\sin(\pm\pi) = 0}} +  \underbrace{\sum_{k=1}^\infty \int _{-\pi}^\pi a_{k}\cos(kt)\cos(jt) }_{ =\begin{cases}
+>0 & \text{ if } j \neq k \\
+>\pi a_{k} & \text{ if } j = k 
+>\end{cases} } \, dt + \underbrace{ \int _{-\pi}^\pi b_{k} \sin(kt) \cos(jt) \, dt  }_{ =0 }  \\
+>&= a_{k}\pi
+>\end{align}$$
+> Hence, we have
+> $$\begin{align}
+> \pi a_{k} &= \int _{-\pi}^\pi f(t) \cos(kt) \, dt \\
+> a_{k} &= \frac{1}{\pi}\int _{-\pi}^\pi f(t) \cos(kt) \, dt 
+>\end{align}$$
+>>[!note]
+>>We exploited the property of the scalar product, that the estimation of $f(t)$ by the Fourier series is a composition of $\sin$ and $\cos$ terms, where all terms cancel out due to orthogonality except for the case where $k=j$. Therefore, we can determine each $k$-th term precisely.
+>
+>
+> Similarly, for $\sin$ we get
+> $$\begin{align}
+> \langle f(t), \sin(jt) \rangle &= \int _{-\pi}^\pi f(t) \sin(jt) \, dt \\ \\
+> &=\int _{-\pi}^\pi  \underbrace{ \left( \frac{a_{0}}{2} + \sum_{k=1}^\infty a_{k}\cos(kt)+b_{k}\sin(kt) \right) }_{ \text{Fourier series of $f$} } \sin(jt)\, dt \\
+> &= \underbrace{ \int _{-\pi}^\pi  \frac{a_{0}}{2}\sin(jt)\,  dt }_{ =0 \text{ sin is odd} }  +  \underbrace{\sum_{k=1}^\infty \int _{-\pi}^\pi a_{k}\cos(kt)\sin(jt) \, dt}_{ = 0 }  + \underbrace{ \int _{-\pi}^\pi b_{k} \sin(kt) \sin(jt) \, dt  }_{ =\begin{cases}
+>0 & \text{ if } j \neq k \\
+>\pi b_{k} & \text{ if } j = k 
+>\end{cases}  }  \\
+>&= \pi b_{k}
+>\end{align}$$
+> Hence, we have
+> $$\begin{align}
+> \pi b_{k} &= \int _{-\pi}^\pi f(t) \sin(kt) \, dt \\
+> b_{k} &= \frac{1}{\pi}\int _{-\pi}^\pi f(t) \cos(kt) \, dt \tag*{$\square$}
+>\end{align}$$
+
+>[!remark] Remark Length of $\sin$ and $\cos$ in $L^2[-T,T]$
+>Let $(L^2[-T,T], \lvert\lvert \cdot \rvert\rvert)$ as stated in the [[#^a7fb8f| inner product]]
+>1. $\lvert\lvert \sin \rvert\rvert = \sqrt{T }$
+>2. $\lvert\lvert \cos \rvert\rvert = \sqrt{T }$
+>
+>>[!note] Note Change of Variables
+>> To properly show this, we need a change of variables which is used in Fouries series. Consider a function $f$ to be represented on a compact interval $[-T, T]$. By the property of the Fourier series to be periodic, we can conclude that the given Fourier series representation $\hat{f}(t)$ will be periodic on the interval $[-T,T]$, hence we require the periodicity of $\hat{f}(t)$ to match the length of the given interval, which is $2T$.
+>>
+>>We introduce the frequency parameter $\omega$ controlling the oscillation factor of the trigonometric functions. Note, the standard $\sin$ and $\cos$ are $2\pi$ periodic, which means a period is closed under the interval $[-\pi, \pi]$.  Therefore, $\omega=1$ in
+>>$$\begin{align}
+>> \sin(\omega x) \\
+>> \cos(\omega x)
+>>\end{align}$$
+>>We have the relation
+>>$$\begin{align}
+>> \frac{2\pi}{\omega}&= \underbrace{ 2\pi }_{ \substack{\text{Length of}\\ \text{the period}}} \\
+>> \omega &= 1 
+>>\end{align}$$
+>>Now, if we want to change the period from $[-\pi, \pi]$ to $[-T, T]$, we have do adjust $\omega$ such that the following condition holds
+>>$$\begin{align}
+>> \frac{2\pi}{\omega}&= \underbrace{ 2T }_{ \substack{\text{Length of}\\ \text{the period}}} \\ 
+>> \omega &= \frac{\pi}{T}
+>>\end{align}$$
+>>If we state $$\begin{align}
+>> \sin \left( \frac{\pi}{T}x \right) \\
+>> \cos \left( \frac{\pi}{T}x \right)
+>>\end{align}$$
+>>the functions are guaranteed to perfectly close the period on the interval $[-T,T]$. This change of variable makes it possible to determine the length of the trigonometric functions on the more general interval by introducing $\omega$.
+>>
+>>The parameter $\omega$ can therefore easily be determined if you consider the period $P$ being half the length of the interval. Then we have
+>>$$\omega =\frac{\pi}{P}$$
+>>
+>
+>>[!proof]-
+>>1. Note, we have $\omega=\frac{\pi}{T}$  for $\sin(\omega t)$
+>>$$\begin{align}
+>>\lvert\lvert \sin \rvert\rvert &= \sqrt{ \int _{-T}^T  \left\lvert  \sin\left( \frac{\pi t}{T} \right)  \right\rvert^2 \, dt }  \\
+>> &= \sqrt{ \int _{-T}^T \sin^2\left( \frac{\pi t}{T} \right)  \, dt  } \\
+>> &= \sqrt{ \int_{-T}^T \frac{1 - \cos\left( \frac{2\pi t}{T} \right)}{2} \, dt }\\
+>> &= \sqrt{\frac{1}{2} \int_{-T}^T 1-\cos\left( \frac{2\pi t}{T} \right) \, dt } \\
+>> &= \sqrt{ \frac{1}{2} \left[t-\frac{\sin\left( \frac{2\pi t}{T} \right)}{2}\right]_{-T}^T  } \\
+>> &= \sqrt{ \frac{1}{2} \left(T-\frac{\sin\left( \frac{2\pi \cancel{ T }}{\cancel{ T }} \right)}{2} - \left( -T-\frac{\sin\left( \frac{-2\pi \cancel{ T }}{\cancel{ T }} \right)}{2} \right)\right)  }\\
+>> &= \sqrt{ \frac{1}{2} \left(T  \underbrace{- \sin(2\pi) }_{ =0 }  + T  \underbrace{+ \sin(-2\pi) }_{ =0 }  \right)  } \\
+>> &= \sqrt{ \frac{1}{2} \left(2T\right)  } \\
+>> &= \sqrt{ T  } \\
+>>\end{align}$$
+>>2. Note, we have $\omega=\frac{\pi}{T}$ for $\cos(\omega  t)$
+>>$$\begin{align}
+>> \lvert\lvert \cos \rvert\rvert &= \sqrt{ \int _{-T}^T \lvert \cos\left(\frac{\pi t}{T}\right) \rvert^2 \, dt  } \\
+>>  &= \sqrt{ \int _{-T}^T \cos^2\left(\frac{\pi t}{T}\right) \, dt  } \\
+>>  &= \sqrt{ 2\int _{0}^T \cos^2\left(\frac{\pi t}{T}\right) \, dt  } \tag{1} \\ 
+>>  &= \sqrt{ 2\left[\frac{1}{2}\left(\cos\left(\frac{\pi t}{T}\right)\sin\left(\frac{\pi t}{T}\right) + t\right)\right]_{0}^T } \\
+>>  &= \sqrt{ \cos(\pi)\underbrace{ \sin(\pi) }_{ =0 } + T } \\  
+>>  &= \sqrt{ T }
+>>\end{align}$$
+>> Note in equation $(1)$ we made use of the fact that $\cos$ is an [[#^e42703 | even function]], i.e. $\int _{-T}^T \cos(t)\, dt = 2\int _{0}^T \cos(t)\, dt$
+
+>[!remark] Remark Length of $\sin$ and $\cos$ in $L^2[a,b]$
