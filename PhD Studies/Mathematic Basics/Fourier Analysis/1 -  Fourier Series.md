@@ -23,7 +23,7 @@
 >>$$\left\lvert  \int _{a}^b fg \, dt   \right\rvert \leq \underbrace{ \lvert\lvert f \rvert\rvert^2_{2} \; \lvert\lvert g \rvert\rvert^2_{2} }_{ < \infty }   \tag*{$\square$}$$
 
 >[!theorem] Theorem Fourier Transformation ([[../../../Sources/olson2017.pdf#page=34|Source]])
->Let $f \in L^2[-\pi, \pi ]$, then $f$ can be represented as
+>Let $f \in L^2[a, b ]$, then $f$ can be represented as
 >$$\hat{f}(t) = \frac{a_{0}}{2} + \sum_{k=1}^\infty a_{k} \cos(kt)+b_{k} \sin(kt)$$
 >with
 >$$\begin{align}
@@ -399,4 +399,66 @@
 >>  &= \sqrt{ T }
 >>\end{align}$$
 >> Note in equation $(1)$ we made use of the fact that $\cos$ is an [[#^e42703 | even function]], i.e. $\int _{-T}^T \cos(t)\, dt = 2\int _{0}^T \cos(t)\, dt$
+>> $$\tag*{$\square$}$$
+
+>[!remark] Remark Length of $\sin$ and $\cos$ in $L^2[a,b]$
+>$\lvert\lvert \cos \rvert\rvert = \lvert\lvert \sin \rvert\rvert = \sqrt{ \frac{b-a}{2} }$
+>>[!proof]
+>>To determine the norm of the given functions we will make use of the property of their periodicity. Note that, given the length of the period of $\sin, \cos$ on the interval $[a,b]$ is $b-a$, we shift the limits of integration. By keeping the length of the integration constant over the length of their period, we can guarantee the area under the curve to be constant. Let $L=b-a$ denote the length of the period of $\sin$ and $\cos$, then we can rewrite
+>>$$\begin{align}
+>> \int _{a}^b \sin(\omega t)\, dt &= \int _{0}^L \sin(\omega t) \, dt \\
+>> \int _{a}^b \cos(\omega t)\, dt &= \int _{0}^L \cos(\omega t) \, dt 
+>>\end{align}$$ 
+>>Further, using the same property we can center the period around the y-axis, i.e we have the interval $\left[ -\frac{L}{2}, \frac{L}{2} \right] = \left[ - \frac{b-a}{2},\frac{b-a}{2}\right]$. Previously, we have shown the norm on the interval $[-T, T]$. By setting $T=\frac{b-a}{2}$ we yield the desired results.
+>>$$\tag*{$\square$}$$
+
+>[!proposition] Proposition Orthonormal Expansion of Fourier Series
+>1. in $L^2[-\pi, \pi]$
+>$$\begin{align}
+> \hat{f}(t) &= \frac{a_{0}}{\sqrt{ 2 \pi }} + \sum_{k=1}^\infty a_{k}\frac{\cos(kt)}{\sqrt{ \pi }} + b_{k}\frac{\sin(kt)}{\sqrt{ \pi }} \\
+>\end{align}$$
+> with 
+> $$\begin{align}
+> a_{k} &= \int _{-\pi}^\pi \frac{\cos(kt)}{\sqrt{ \pi }}f(t) \, dt \\
+> b_{k} &= \int_{-\pi}^\pi  \frac{\sin(kt)}{\sqrt{ \pi }}f(t) \, dt \\
+>\end{align}$$
+>2. in $L^2[-T, T]$
+>$$\begin{align}
+> \hat{f}(t) &= \frac{a_{0}}{\sqrt{ 2 T }} + \sum_{k=1}^\infty a_{k}\frac{\cos(kt)}{\sqrt{ T }} + b_{k}\frac{\sin(kt)}{\sqrt{ T }} \\
+>\end{align}$$
+> with 
+> $$\begin{align}
+> a_{k} &= \int _{-T}^T \frac{\cos(kt)}{\sqrt{ T }}f(t) \, dt \\
+> b_{k} &= \int_{-T}^T  \frac{\sin(kt)}{\sqrt{ T }}f(t) \, dt \\
+>\end{align}$$
+>3. in $L^2[a,b]$
+>$$\hat{f}(t) = \frac{a_{0}}{\sqrt{ 2(b-a) }} + \sum_{k=1}^\infty a_{k} \frac{\cos\left( \frac{k\pi(t-h)}{H} \right)}{\sqrt{ b-a }}+b_{k} \frac{\sin\left( \frac{k\pi(t-h)}{H} \right)}{\sqrt{ b-a }}$$
+>with 
+>$$\begin{align}
+> a_{k} &= \frac{1}{H}\int _{a}^b f(t) \frac{\cos\left(\frac{k\pi(t-h)}{H} \right)}{\sqrt{ b-a }} \, dt \\
+> b_{k} &= \frac{1}{H}\int _{a}^b f(t)\frac{\sin\left(\frac{k\pi(t-h)}{H} \right) }{\sqrt{ b-a }}\, dt 
+>\end{align}$$
+>and 
+>$$\begin{align}
+> H &= \frac{b-a}{2} \\
+> h &= \frac{a+b}{2}
+>\end{align}$$
+>
+>>[!note]
+>>The terms are normalized. For some vector $\mathbf{a}$ it is normalized as
+>>$$\frac{\mathbf{a}}{\lvert\lvert \mathbf{a} \rvert\rvert }$$
+>>Since we have $\sin$ and $\cos$ terms we have
+>>$$\begin{align}
+>> \frac{\sin}{\lvert\lvert \sin \rvert\rvert } \\
+>> \frac{\cos}{\lvert\lvert \cos \rvert\rvert }
+>>\end{align}$$
+>>as their normalized versions.
+
+>[!theorem] Theorem Inner Product Representation of Fourier Series
+>Let $\{ o_{k} \}$ be a complete set of orthonormal functions in $L^2[a,b]$, then for any function in $L^2[a,b]$ we have
+>$$f(t) = \sum_{k} \langle f(t), o_{k} \rangle o_{k} $$
+>>[!note]
+>>The notion _complete set_ refers to the completeness axiom, which implies that any limit of converging sequences is included in such set. In this context it implies that $f(t)$ can be approximated by the given formula.
+
+### 1.3 The Pythagorean Theorem
 

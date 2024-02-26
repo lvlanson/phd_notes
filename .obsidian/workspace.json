@@ -22,8 +22,22 @@
               "pinned": true
             },
             "group": "1d2597f4fa86fdfb"
+          },
+          {
+            "id": "3cf23456821b7e76",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
+                "mode": "source",
+                "source": true
+              }
+            },
+            "group": "26f9123d5b6f46ac"
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "d0adceee64becfe7",
@@ -44,8 +58,22 @@
               "pinned": true
             },
             "group": "1d2597f4fa86fdfb"
+          },
+          {
+            "id": "9ea431424c52f6a0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
+                "mode": "preview",
+                "source": true
+              }
+            },
+            "group": "26f9123d5b6f46ac"
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -111,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -151,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md"
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md"
               }
             }
           },
@@ -191,27 +219,63 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a5609126f72395a1",
+  "floating": {
+    "id": "d349cba26c44e346",
+    "type": "floating",
+    "children": [
+      {
+        "id": "f63baa50718587d0",
+        "type": "window",
+        "children": [
+          {
+            "id": "3ad93b00c0f5baa4",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "2de1cdc6116af7ca",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/olson2017.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 960,
+        "width": 1080,
+        "height": 960,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "3cf23456821b7e76",
   "lastOpenFiles": [
+    "Sources/olson2017.pdf",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
+    "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "PhD Studies/Mathematic Basics/Trigonometry",
     "Literature/@stanley2012.md",
     "Sources/stanley2012.pdf",
     "PhD Studies/Mathematic Basics/Combinatorics",
     "PhD Studies/Mathematic Basics/Untitled.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
     "Sources/conci2018.pdf",
     "PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/A - Signals.md",
     "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.md",
     "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.excalidraw.md",
     "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.pdf",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Metrics/Figures/point_set.excalidraw.md",
     "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.aux",
     "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.log",
     "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.tex",
     "Paper/Hyperbox Metric/Emails",
-    "PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric.tex",
-    "PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric.html",
     "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.png",
     "PhD Studies/Mathematic Basics/Metrics/Dissimilarity.md",
     "PhD Studies/To-Do.md",
@@ -236,7 +300,6 @@
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/dir_field_example_1.png",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "PhD Studies/Mathematic Basics/Calculus/Calculus Limits.md",
-    "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
     "Untitled.canvas"
   ]
 }
