@@ -297,24 +297,6 @@
 >>\int _{-\pi}^\pi \cos(0)\cos(0) \, dt &= \int _{-\pi}^\pi   1 \, dt \\
 >> &= [t]_{-\pi}^\pi \\
 >> &= 2\pi
->>\end{align}$$>>If $m=n$ we have
->>$$\begin{align}
->> \int _{-\pi}^\pi \cos(nt)\cos(nt) \, dt &= \int _{-\pi}^\pi   \cos^2(nt) \, dt \\
->>  &= 2\int _{0}^\pi   \cos^2(nt) \, dt \tag{$\cos$ even function}\\
->>  &= 2\left[\frac{1}{2}(\cos(t)\sin(t) + t)\right]_{0}^\pi \, \\
->>  &= \cos(\pi)\sin(\pi) + \pi - \underbrace{ (\cos(0)\sin(0)) }_{ =0 } \,  \\
->>  &= (-1)\cdot0 + \pi \,  \\
->>  &= \pi \,  \\
->>\end{align}$$
->>Similarly, for the $\sin$ part we have
->>$$\begin{align}
->>\int_{-\pi}^\pi \sin(nt)\sin(nt) \, dt &= \int_{-\pi}^\pi \sin^2(nt) \, dt \\
->>&= \int_{-\pi}^\pi \frac{1 - \cos(2nt)}{2} \, dt \\
->>&= \frac{1}{2} \int_{-\pi}^\pi (1 - \cos(2nt)) \, dt \\
->>&= \frac{1}{2} \left[t - \frac{\sin(2nt)}{2n}\right]_{-\pi}^\pi \\
->>&= \frac{1}{2} \left(\pi - (-\pi) - \frac{\sin(2n\pi)}{2n} + \frac{\sin(-2n\pi)}{2n}\right) \\
->>&= \frac{1}{2} \left(2\pi + \frac{\sin(2n\pi)}{2n} - \frac{\sin(2n\pi)}{2n}\right) \\
->>&= \pi
 >>\end{align}$$
 >>and
 >>$$\begin{align}
@@ -401,9 +383,9 @@
 >> &= \sqrt{ \int _{-T}^T \sin^2\left( \frac{\pi t}{T} \right)  \, dt  } \\
 >> &= \sqrt{ \int_{-T}^T \frac{1 - \cos\left( \frac{2\pi t}{T} \right)}{2} \, dt }\\
 >> &= \sqrt{\frac{1}{2} \int_{-T}^T 1-\cos\left( \frac{2\pi t}{T} \right) \, dt } \\
->> &= \sqrt{ \frac{1}{2} \left[t-\frac{\sin\left( \frac{2\pi t}{T} \right)}{2}\right]_{-T}^T  } \\
->> &= \sqrt{ \frac{1}{2} \left(T-\frac{\sin\left( \frac{2\pi \cancel{ T }}{\cancel{ T }} \right)}{2} - \left( -T-\frac{\sin\left( \frac{-2\pi \cancel{ T }}{\cancel{ T }} \right)}{2} \right)\right)  }\\
->> &= \sqrt{ \frac{1}{2} \left(T  \underbrace{- \sin(2\pi) }_{ =0 }  + T  \underbrace{+ \sin(-2\pi) }_{ =0 }  \right)  } \\
+>> &= \sqrt{ \frac{1}{2} \left[t-\frac{\sin\left( \frac{2\pi t}{T} \right)T}{2\pi}\right]_{-T}^T  } \\
+>> &= \sqrt{ \frac{1}{2} \left(T-\frac{\sin\left( \frac{2\pi \cancel{ T }}{\cancel{ T }} \right)T}{2\pi} - \left( -T-\frac{\sin\left( \frac{-2\pi \cancel{ T }}{\cancel{ T }} \right)T}{2\pi} \right)\right)  }\\
+>> &= \sqrt{ \frac{1}{2} \left(T  \underbrace{- \frac{\sin(2\pi)T}{2\pi} }_{ =0 }  + T  \underbrace{+ \frac{\sin(-2\pi)T}{2\pi} }_{ =0 }  \right)  } \\
 >> &= \sqrt{ \frac{1}{2} \left(2T\right)  } \\
 >> &= \sqrt{ T  } \\
 >>\end{align}$$
@@ -418,4 +400,3 @@
 >>\end{align}$$
 >> Note in equation $(1)$ we made use of the fact that $\cos$ is an [[#^e42703 | even function]], i.e. $\int _{-T}^T \cos(t)\, dt = 2\int _{0}^T \cos(t)\, dt$
 
->[!remark] Remark Length of $\sin$ and $\cos$ in $L^2[a,b]$
