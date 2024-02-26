@@ -29,7 +29,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
+                "file": "Literature/@howell2016.md",
                 "mode": "source",
                 "source": true
               }
@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
+                "file": "Literature/@howell2016.md",
                 "mode": "preview",
                 "source": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
+                "file": "Literature/@howell2016.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
+                "file": "Literature/@howell2016.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md"
+                "file": "Literature/@howell2016.md"
               }
             }
           },
@@ -251,13 +251,46 @@
         "height": 960,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "74819fd851d3ce85",
+        "type": "window",
+        "children": [
+          {
+            "id": "48ee1ae18756fe4b",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "974658236ad3af5f",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Sources/folland2009.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 28,
+        "y": 560,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 0
       }
     ]
   },
-  "active": "3cf23456821b7e76",
+  "active": "9ea431424c52f6a0",
   "lastOpenFiles": [
-    "Sources/olson2017.pdf",
+    "Sources/howell2016.pdf",
+    "Sources/folland2009.pdf",
+    "Literature/@howell2016.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
+    "Literature/@folland2009.md",
+    "Sources/olson2017.pdf",
     "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Trigonometry",
@@ -274,8 +307,6 @@
     "PhD Studies/Mathematic Basics/Metrics/Figures/point_set.excalidraw.md",
     "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.aux",
     "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.log",
-    "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.tex",
-    "Paper/Hyperbox Metric/Emails",
     "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.png",
     "PhD Studies/Mathematic Basics/Metrics/Dissimilarity.md",
     "PhD Studies/To-Do.md",
@@ -298,8 +329,6 @@
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/example_1.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/dir_field_example_2.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/dir_field_example_1.png",
-    "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
-    "PhD Studies/Mathematic Basics/Calculus/Calculus Limits.md",
     "Untitled.canvas"
   ]
 }
