@@ -27,6 +27,8 @@
   \tan x \cot y &= \frac{ \tan x + \cot y }{ \cot x + \tan y }
 \end{align*}$$
 
+^282081
+
 >[!def] Double Angles
 >$$\begin{align*}
 >  \sin(2x)  &= 2 \sin x \cos x\\

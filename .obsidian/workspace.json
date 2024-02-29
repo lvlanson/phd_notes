@@ -6,7 +6,7 @@
       {
         "id": "7675683e84a8c351",
         "type": "tabs",
-        "dimension": 49.96025437201908,
+        "dimension": 42.170111287758345,
         "children": [
           {
             "id": "e02a88fd0e5f9dd5",
@@ -29,12 +29,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Literature/@howell2016.md",
+                "file": "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
                 "mode": "source",
                 "source": true
               }
             },
-            "group": "26f9123d5b6f46ac"
+            "group": "eb0837e55d173c16"
           }
         ],
         "currentTab": 1
@@ -42,7 +42,7 @@
       {
         "id": "d0adceee64becfe7",
         "type": "tabs",
-        "dimension": 50.03974562798093,
+        "dimension": 57.82988871224165,
         "children": [
           {
             "id": "a5609126f72395a1",
@@ -60,17 +60,17 @@
             "group": "1d2597f4fa86fdfb"
           },
           {
-            "id": "9ea431424c52f6a0",
+            "id": "233b5035da7f6b4e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Literature/@howell2016.md",
+                "file": "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
                 "mode": "preview",
                 "source": true
               }
             },
-            "group": "26f9123d5b6f46ac"
+            "group": "eb0837e55d173c16"
           }
         ],
         "currentTab": 1
@@ -123,7 +123,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 339.5
+    "width": 339.5,
+    "collapsed": true
   },
   "right": {
     "id": "93b677ed21c6c6cb",
@@ -139,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Literature/@howell2016.md",
+                "file": "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Literature/@howell2016.md",
+                "file": "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -179,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Literature/@howell2016.md"
+                "file": "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md"
               }
             }
           },
@@ -219,116 +220,54 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "floating": {
-    "id": "d349cba26c44e346",
-    "type": "floating",
-    "children": [
-      {
-        "id": "f63baa50718587d0",
-        "type": "window",
-        "children": [
-          {
-            "id": "3ad93b00c0f5baa4",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "2de1cdc6116af7ca",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Sources/olson2017.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 960,
-        "width": 1080,
-        "height": 960,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
-        "id": "74819fd851d3ce85",
-        "type": "window",
-        "children": [
-          {
-            "id": "48ee1ae18756fe4b",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "974658236ad3af5f",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Sources/folland2009.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 28,
-        "y": 560,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "9ea431424c52f6a0",
+  "active": "233b5035da7f6b4e",
   "lastOpenFiles": [
-    "Sources/howell2016.pdf",
-    "Sources/folland2009.pdf",
-    "Literature/@howell2016.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
-    "Literature/@folland2009.md",
-    "Sources/olson2017.pdf",
+    "Research Seminar/Figures/rs_1_fig_4.png",
+    "Research Seminar/Figures/example_1.png",
+    "Research Seminar/Figures/rs_1_fig_3.png",
+    "Research Seminar/Figures/rs_1_example_1.png",
     "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
+    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+    "Research Seminar/Figures/rs_1_fig_1.png",
+    "Research Seminar/Figures/rs_1_fig_2.png",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
-    "PhD Studies/Mathematic Basics/Trigonometry",
-    "Literature/@stanley2012.md",
-    "Sources/stanley2012.pdf",
-    "PhD Studies/Mathematic Basics/Combinatorics",
-    "PhD Studies/Mathematic Basics/Untitled.md",
+    "Research Seminar/Figures",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1.md",
+    "Research Seminar/Research Seminar 1 Introduction ODE LVQ",
+    "Research Seminar",
+    "Lehre/Wahrscheinlichkeitsrechnung",
+    "Lehre",
     "Sources/conci2018.pdf",
     "PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/A - Signals.md",
+    "Paper/Hyperbox Metric/Hyperbox Metric.md",
+    "Paper/Hyperbox Metric/Timeline.md",
+    "Paper/Hyperbox Metric/Work.md",
     "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.md",
+    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+    "Sources/howell2016.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/figures/discontinuities.png",
+    "Literature/@howell2016.md",
+    "PhD Studies/Mathematic Basics/Calculus/Discontinuities.md",
+    "PhD Studies/Mathematic Basics/Complex Analysis",
+    "PhD Studies/Mathematic Basics/Untitled.md",
+    "Sources/folland2009.pdf",
+    "Literature/@folland2009.md",
+    "Sources/olson2017.pdf",
+    "Literature/@stanley2012.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/A - Signals.md",
     "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.excalidraw.md",
-    "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.pdf",
     "PhD Studies/Mathematic Basics/Metrics/Figures/point_set.excalidraw.md",
-    "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.aux",
-    "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.log",
     "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.png",
     "PhD Studies/Mathematic Basics/Metrics/Dissimilarity.md",
     "PhD Studies/To-Do.md",
-    "Paper/Hyperbox Metric/Hyperbox Metric.md",
     "Literature/@conci2018.md",
     "Untitled.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p500.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p10.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p50.png",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/0 - Progress.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Terminology.md",
-    "Paper/Hyperbox Metric/Timeline.md",
-    "Paper/Hyperbox Metric/Work.md",
-    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/def_direction_fields.png",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/dir_field_example_3.png",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/example_1.png",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/dir_field_example_2.png",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Figures/dir_field_example_1.png",
     "Untitled.canvas"
   ]
 }

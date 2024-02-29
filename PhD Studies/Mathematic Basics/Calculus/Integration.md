@@ -1,3 +1,19 @@
+>[!def] Definition Partition ([[../../../Sources/zotero-182.pdf#page=18|Source]])
+>A set of point $P=\{ x_{i} \}$ for $i=0,1,2,\dots,n$ with $a=x_{0}<x_{1}<x_{2}<\dots<x_{n}=b$, which divides the interval $[a,b]$ into subintervals of the form $[x_{0},x_{1}], [x_{1},x_{2}], \dots, [x_{n-1}, x_{n}]$ is called a **partition** of $[a,b]$.
+>
+>If the subintervals all have the same width, the set of points forms a **regular partition** of the interval $[a,b]$.
+
+^2971b4
+
+>[!def] Definition Riemann Integral ([[../../../Sources/zotero-182.pdf#page=25|Source]])
+> Let $f(x)$ be defined on a closed interval $[a,b]$ and let $P$ be a [[#^2971b4|regular partition]] of $[a,b]$. Let $\Delta x$ be the width of each subinterval $[x_{i-1}, x_{i}]$ and for each $i$, let $x_{i}^*$ be any point in $[x_{i-1},x_{i}]$. A **Riemann sum** is defined for $f(x)$ as 
+> $$\sum_{i=1}^n f(x_{i}^*)\Delta x$$
+
+>[!def] Definition Definite Integral ([[../../../Sources/zotero-182.pdf#page=35|Source]])
+>If $f(x)$ is a function defined on an interval $[a,b]$, the **definite integral** of $f$ from $a$ to $b$ is given by
+>$$\int _{a}^b f(x)\, dx = \lim_{ n \to \infty } \sum_{i=1}^n f(x_{i}^*)\Delta x$$
+>provided the limit exists. If this limit exists, the function $f(x)$ is said to be integrable on $[a,b]$, or is an **integrable function**.
+
 >[!theorem] Theorem Absolute Value Integral
 >Let $f$ be continuous over the interval $[a,b] \subset \mathbb{R}$, then we can state
 >$$ \left\lvert  \int_{a}^b f(x) \, dx   \right\rvert \leq \int _{a}^b \lvert f(x) \rvert  \, dx $$
