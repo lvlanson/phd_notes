@@ -17,5 +17,6 @@
   "duplicate-line",
   "obsidian-latex-suite",
   "obsidian-desmos",
-  "obsidian-pandoc"
+  "obsidian-pandoc",
+  "marp-slides"
 ]

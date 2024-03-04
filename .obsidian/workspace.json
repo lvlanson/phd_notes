@@ -6,7 +6,7 @@
       {
         "id": "7675683e84a8c351",
         "type": "tabs",
-        "dimension": 42.170111287758345,
+        "dimension": 44.63434022257552,
         "children": [
           {
             "id": "e02a88fd0e5f9dd5",
@@ -29,7 +29,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
                 "mode": "source",
                 "source": true
               }
@@ -42,7 +42,7 @@
       {
         "id": "d0adceee64becfe7",
         "type": "tabs",
-        "dimension": 57.82988871224165,
+        "dimension": 55.36565977742448,
         "children": [
           {
             "id": "a5609126f72395a1",
@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
                 "mode": "preview",
                 "source": true
               }
@@ -123,8 +123,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 339.5,
-    "collapsed": true
+    "width": 339.5
   },
   "right": {
     "id": "93b677ed21c6c6cb",
@@ -140,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -180,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md"
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md"
               }
             }
           },
@@ -217,45 +216,49 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "233b5035da7f6b4e",
+  "active": "3cf23456821b7e76",
   "lastOpenFiles": [
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+    "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "PhD Studies/Mathematic Basics/Combinatorics/Figures/ex_puzzle.png",
+    "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
+    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+    "PhD Studies/Mathematic Basics/Trigonometry/Figures/Untitled.md",
+    "PhD Studies/Mathematic Basics/Combinatorics/Figures",
+    "Sources/brualdi2004.pdf",
+    "Sources/Richard A Brualdi - Introductory combinatorics-North-Holland  (2004).pdf",
+    "Sources/bogart_script.pdf",
+    "Sources/bogart_script.pdf.crdownload",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1",
     "Research Seminar/Figures/rs_1_fig_4.png",
     "Research Seminar/Figures/example_1.png",
     "Research Seminar/Figures/rs_1_fig_3.png",
     "Research Seminar/Figures/rs_1_example_1.png",
-    "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
-    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
     "Research Seminar/Figures/rs_1_fig_1.png",
     "Research Seminar/Figures/rs_1_fig_2.png",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "Research Seminar/Figures",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1.md",
     "Research Seminar/Research Seminar 1 Introduction ODE LVQ",
-    "Research Seminar",
-    "Lehre/Wahrscheinlichkeitsrechnung",
-    "Lehre",
-    "Sources/conci2018.pdf",
     "PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric.md",
     "Paper/Hyperbox Metric/Hyperbox Metric.md",
     "Paper/Hyperbox Metric/Timeline.md",
     "Paper/Hyperbox Metric/Work.md",
     "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.md",
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
-    "Sources/howell2016.pdf",
     "PhD Studies/Mathematic Basics/Calculus/figures/discontinuities.png",
     "Literature/@howell2016.md",
     "PhD Studies/Mathematic Basics/Calculus/Discontinuities.md",
-    "PhD Studies/Mathematic Basics/Complex Analysis",
     "PhD Studies/Mathematic Basics/Untitled.md",
-    "Sources/folland2009.pdf",
     "Literature/@folland2009.md",
-    "Sources/olson2017.pdf",
     "Literature/@stanley2012.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/A - Signals.md",
     "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.excalidraw.md",
@@ -263,11 +266,7 @@
     "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.png",
     "PhD Studies/Mathematic Basics/Metrics/Dissimilarity.md",
     "PhD Studies/To-Do.md",
-    "Literature/@conci2018.md",
-    "Untitled.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p500.png",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p10.png",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/ex_1_p50.png",
     "Untitled.canvas"
   ]
 }
