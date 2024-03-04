@@ -89,7 +89,7 @@
 >> und statt $n$ haben wir $n-1$.
 
 #### Aufgabe 1(f)
-> Zunächst bemerken wir, die 6 Objekte sind nicht unterscheidbar, daher gibt es keine Reihenfolge, die relevant ist. Daher können wir bereits auf eine Kombination schließen. Da wir eine Wiederholung der nicht unterscheidbaren Elemente erwarten, handelt es sich um eine Kombination mit Wiederholung. Daher verwenden wir Definition 1.18 mit
+> Zunächst bemerken wir, die 6 Objekte sind nicht unterscheidbar, und somit gibt es keine Reihenfolge, die relevant ist. Daher können wir bereits auf eine Kombination schließen. Da wir eine Wiederholung der nicht unterscheidbaren Elemente erwarten, handelt es sich um eine Kombination mit Wiederholung. Deshalb  verwenden wir Definition 1.18 mit
 > $$\begin{align}
 > n &= 12 \\
 > k &= 6  
@@ -101,3 +101,13 @@
 > &= \frac{17!}{(17-6)!} \\
 > &= 8\;910\;720
 >\end{align}$$
+
+
+#### Aufgabe 1(g)
+> Da wir eine Auswahl treffen, statt eine Anordnung durchzuführen, spielt die Reihenfolge keine Rolle und wir arbeiten mit der Kombination. Da hier nach beliebigen 2 Damen und beliebigen 2 Luschen gefragt wird, gehen wir davon aus, dass eine Unterscheidung ebenfalls keine Rolle spielt und wir daher eine Kombination mit Wiederholung haben. Ein Romméblatt hat
+> - 4 Damen
+> - 4 Asse
+> - 36 Luschen
+> 
+> Wir wählen daher
+> - Damen: $^wC_{4}^2 = \binom{4+2-1}{2}=\frac{5!}{(5-2)!} = 20$

@@ -345,10 +345,10 @@
 >>>$$\lvert S \rvert = \underbrace{ 181\;440 }_{ =\lvert T \rvert  } - \underbrace{ 30\;240 }_{ =\lvert \overline{S} \rvert  } = 151\;200$$
 
 >[!note] Note, Circular Permutations have been omitted
-### Combination of Sets
+## Combination of Sets
 
 >[!def] Definition $r$-Combination ([[../../../Sources/brualdi2004.pdf#page=72|Source]])
-> Let $r$ be a nonnegative integer. By an $r$-combination of a set $S$ of $n$ elements, we understand an unordered selection of $r$ of the $n$ objects of $S$.
+> Let $r$ be a non-negative integer. By an $r$-combination of a set $S$ of $n$ elements, we understand an unordered selection of $r$ of the $n$ objects of $S$.
 >
 >We denote the $r$-combination as
 >$$C(n,r)$$
@@ -362,6 +362,8 @@
 >$$\begin{align}
 > \binom{n}{k} = \frac{n^{\underline{k}}}{k!} = \frac{n!}{k!(n-k)!}
 >\end{align}$$
+
+^4dc155
 
 >[!property] Properties
 >$$\begin{alignat}{2}
@@ -423,11 +425,11 @@
 >>> $$C(15,12)\cdot P(25,12)$$
 >
 
->[!property] Corollary
+>[!property] Corollary ([[../../../Sources/brualdi2004.pdf#page=75|Source]])
 >For $0 \leq r \leq n$
 >$$\binom{n}{r}= \binom{n}{n-r}$$
 
->[!theorem]
+>[!theorem] Theorem ([[../../../Sources/brualdi2004.pdf#page=75|Source]])
 >$$\binom{n}{0}+\binom{n}{1}+\binom{n}{2}+ \dots + \binom{n}{n} = 2^n$$
 >>[!proof]-
 >> Let $S$ denote a set of cardinality $n$. First we note, that any binomial coefficient is the $r$-combination
@@ -439,7 +441,111 @@
 >>Now we describe the set of all combinations in terms of $2^n$. If we wanted to choose for each element of $S$ to go into a combination or not, i.e. a binary decision with two outcomes. Since $S$ has $n$ elements, we would have to decide $n$ times. Thus, by the multiplication principle we have $$2^n\tag{2}$$ different combinations. Since equation $(1)$ and $(2)$ both represent the total amount of combinations, they must be equal
 >>$$\sum_{i=1}^n \binom{n}{i} = 2^n \tag*{$\square$}$$
 
-### Permutation of Multisets
+## Permutation of Multisets
 
->[!def] Definition Multiset Permutation
+>[!def] Definition Multiset Permutation ([[../../../Sources/brualdi2004.pdf#page=76|Source]])
+> If $S$ is a multiset, an $r$-permutation of $S$ is an ordered arrangement of $r$ of the objects of $S$. If the total number of objects of $S$ is $n$ (including repetitions), then an $n$-permutation of $S$ will also be called a permutation of $S$
+
+>[!theorem] Theorem ([[../../../Sources/brualdi2004.pdf#page=76|Source]])
+>Let $S$ be a multiset with objects of $k$ different types, where each has an **infinite** repetition number.
+> $$S = \{ \infty \cdot \alpha_{1}, \infty \cdot \alpha_{2}, \dots, \infty \cdot \alpha_{k} \}$$
+>Then the number of $r$-permutations of $S$ is $$k^r$$
+>>[!proof]-
+>> Note, we want to arrange $r$ objects, where we can choose for each of the objects one of the $k$ distinct objects, which are in infinite supply. Let's denote the objects chosen from $S$ as $x_i$ with $1\leq i \leq r$. The first choice $x_1$ can be chosen from $k$ different objects. For any subsequent $x_i$ the choice remains the same. By the [[#^e662cc|multiplication principle]] we yield
+>> $$k^r \tag*{$\square$}$$
 >
+>>[!example]
+>>What is the number of ternary numerals (a number in base 3) with at most 4 digits
+>>>[!example] Solution
+>>> Note, the alphabet to choose from is $\Sigma = \{ 0,1,2 \}$. The multiset constructed from the alphabet is denoted as
+>>> $$S = \{  \infty \cdot 0, \infty \cdot 1, \infty \cdot 2 \}$$
+>>> Since we are looking for 4 digits ternary numerals, we can also give the multiset as
+>>> $$S= \{  4 \cdot 0, 4 \cdot 1, 4 \cdot 2 \}$$
+>>> Using the theorem, we arrange 4 digits from the multiset with 3 distinct objects, i.e.
+>>> $$\begin{align}
+>>> k&=3 \\
+>>> r &= 4 \\
+>>> k^r &= 3^4 = 81
+>>>\end{align}$$
+
+>[!theorem] Theorem ([[../../../Sources/brualdi2004.pdf#page=77|Source]])
+>Let $S$ be a multiset with objects of $k$ different types with **finite** repetition numbers $n_{1},n_{2}, \dots, n_{k}$ respectively. Let the size of $S$ be $n=n_{1}+n_{2}+\dots+n_{k}$. Then the number of permutations of $S$ equals
+>$$\frac{n!}{n_{1}!n_{2}!\dots n_{k}!}$$
+>>[!proof]-
+>> Consider we want to put the objects into $n$ places. First we arrange all objects of type $n_1$ into places. Note, the objects of type $n_1$ are indistinguishable, hence, the order how they are placed is not of interest. Therefore, to place $n_{1}$ objects into $n$ places is a combination $$C_{n}^{n_{1}} = \binom{n}{n_{1}}$$
+>> We repeat this process for the following objects. Note, the number of total reduces each time by the places occupied of the $n_i$ objects, i.e.
+>> $$\begin{align}
+>> C_{n-n_{1}}^{n_{2}} &= \binom{n-n_{1}}{n_{2}} \\
+>> &\;\;\vdots \\
+>> C_{n-\sum_{i=1}^{k-1}}^{n_{k}} &=\binom{n-\sum_{i=1}^{k-1} n_{i}}{n_{k}}  \\
+>> &= \binom{n-n_{1}-n_{2}-\dots-n_{k-1}}{n_{k}}
+>>\end{align}$$
+>>By the multiplication principle we get
+>>$$\binom{n}{n_{1}}\binom{n-n_{1}}{n_{2}}\binom{n-n_{1}-n_{2}}{n_{3}}\dots\binom{n-n_{1}-n_{2}-\dots-n_{k-1}}{n_{k}}$$
+>>Using the definition of the [[#^4dc155| binomial coefficient]] we get
+>>$$\begin{align}
+>> &\frac{n!}{n_{1}!\cancel{ (n-n_{1})! }}\frac{\cancel{ (n-n_{1})! }}{n_{2}!\cancel{ (n-n_{1}-n_{2})! }}\frac{\cancel{ (n-n_{1}-n_{2}) }!}{n_{3}!\cancel{ (n-n_{1}-n_{2}-n_{3}) !}}\dots\frac{\cancel{ (n-n_{1}-n_{2}-\dots-n_{k-1})! }}{n_{k}!\underbrace{ (n-n_{1}-n_{2}-n_{3}-\dots-n_{k}) }_{ =0 }!}\\ 
+>> =& \frac{n!}{n_{1}!n_{2}!n_{3}!\dots n_{k}!0!} \\
+>> =&\frac{n!}{n_{1}!n_{2}!n_{3}!\dots n_{k}!} \tag*{$\square$} 
+>>\end{align}$$
+>
+>>[!example]
+>>How many permutations exist of the letters in the word "MISSISSIPPI"?
+>>>[!example] Solution
+>>> First we denote the multiset derived from the letters in the word MISSISSIPPI as
+>>> $$S = \{ 1 \cdot M, 4 \cdot I, 4 \cdot S, 2 \cdot P \}$$
+>>> Applying the theorem we have
+>>> $$\begin{align}
+>>> n &= 11 \\
+>>> \frac{n!}{n_{1}!n_{2}!n_{3}!n_{4}!} &= \frac{11!}{1!\cdot 4!\cdot 4!\cdot 2!} \\
+>>> &= \frac{39\;916\;800}{1\;152} \\
+>>> &= 34\;650
+>>>\end{align}$$
+>
+>>[!example]
+>>How many possibilities are there for 8 non-attacking rooks on an 8-by-8 chessboard?
+>>![[../../../Pasted image 20240304122332.png| center]]
+>>>[!example]- Solution
+>>>Lets denote a square on the board as $(i,j)$ with $i$ denoting a row and $j$ a column and $1 \leq i,j \leq 8$. Since rooks attack each other if they are on the same row or column, we know that a rook must be placed on each row and column. Lets first fix the position of the rows, i.e.
+>>>$$(1, j_{1}), (2, j_{2}), \dots, (8, j_{8})$$
+>>>To find all possible configurations of non-attacking rooks, we require all $j$ to be distinct, hence the $j$ form a permutation over the set $\{ 1,2,\dots ,8 \}$, which can be given as
+>>>$$P(8,8)=8! = 40\;320$$
+>>
+>>Now assume the rooks are distinguishable, hence, each rook has a different color.
+>>>[!example]- Solution
+>>>Assuming each rook has a different color means, that for any of the squares a different rook can be chosen. Hence, given one solution for the non-attacking rook problem, we can choose for 8 squares from 8 different rooks, which is
+>>>$$P(8,8) = 8! =  40\;320$$
+>>>Since there are $8!$ different possible configurations where we can place the 8 different rooks distinctly, we have by the multiplication principle
+>>>$$8!\cdot 8! =  40\;320^2 = 1\;625\;702\;400$$
+>>
+>>Suppose the rooks are partitioned into the following set of colors
+>>- 1 red rook (R)
+>>- 3 blue rooks (B)
+>>- 4 yellow rooks (Y)
+>>
+>>>[!example]- Solution
+>>>As in the previous example the number of rook placements is given by $8!$, now we ask again, given a certain placement solution for the non-attacking rook problem, how can we place the rooks of the multiset
+>>>$$S = \{ 1 \cdot R, 3 \cdot B, 4 \cdot Y \}$$
+>>>This can easily be solved using the introduced theorem
+>>>$$\begin{align}
+>>> \frac{n!}{n_{1}!n_{2}!n_{3}!} &= \frac{8!}{1 \cdot 3! \cdot 4!} \\
+>>> &= 280
+>>>\end{align}$$
+>>>Again, we have to consider this for each of the $8!$ configurations, hence, by the multiplication principle we get
+>>>$$8! \cdot 280 = 11\,289\,600$$
+
+## Combination of Multisets
+
+>[!theorem] Theorem ([[../../../Sources/brualdi2004.pdf#page=83|Source]])
+> Let $S$ be a multiset with objects of $k$ types, each with an infinite repetition number. Then the number of $r$-combinations of $S$ equals
+> $$\binom{r+k-1}{r} = \binom{r+k-1}{k-1}$$
+>>[!proof]
+>>Let $S$ denote the multiset with $k$ different objects, i.e.
+>>$$S = \{ \infty \cdot a_{1}, \infty \cdot a_{2}, \dots, \infty \cdot a_{k} \}$$
+>>Any $r$-combination therefore will be a set
+>>$$\{ x_{1}\cdot a_{1}, x_{2} \cdot a_{2}, \dots, x_{k} \cdot a_{k} \}$$
+>>where $x_{1} \geq 0$ are integers. Note, that any selection of $x_1, x_2,\dots, x_{k}$ with
+>>$$x_{1}+ x_{2}+ \dots+ x_{k} = r$$
+>>represents an $r$-combination. Let $T$ denote a multiset of zeros and ones with
+>>$$T = \{ r \cdot 1, (k-1) \cdot 0 \}$$
+>>We want to show, that the combination of a multiset is equal to the permutation of $T$
