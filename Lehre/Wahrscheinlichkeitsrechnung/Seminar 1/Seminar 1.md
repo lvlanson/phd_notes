@@ -104,10 +104,56 @@
 
 
 #### Aufgabe 1(g)
-> Da wir eine Auswahl treffen, statt eine Anordnung durchzuführen, spielt die Reihenfolge keine Rolle und wir arbeiten mit der Kombination. Da hier nach beliebigen 2 Damen und beliebigen 2 Luschen gefragt wird, gehen wir davon aus, dass eine Unterscheidung ebenfalls keine Rolle spielt und wir daher eine Kombination mit Wiederholung haben. Ein Romméblatt hat
-> - 4 Damen
-> - 4 Asse
-> - 36 Luschen
+> Da wir eine Auswahl treffen, statt eine Anordnung durchzuführen, spielt die Reihenfolge keine Rolle und wir arbeiten mit der Kombination. Die jeweiligen Kartenkategorien sind durch ihre Zugehörigkeit zu Herz, Pik, Karo und Kreuz unterscheidbar. Wir werden zunächst jeweils die Möglichkeiten die jeweiligen Elemente auszuwählen untersuchen.
 > 
-> Wir wählen daher
-> - Damen: $^wC_{4}^2 = \binom{4+2-1}{2}=\frac{5!}{(5-2)!} = 20$
+> Da jeweils die Damen/Asse/Luschen unterscheidbar sind, nur ihre Reihenfolge keine Rolle spielt. Wir wählen wie folgt aus
+> - 2 aus 4 Damen => $n=4$ und $k=2$
+> - 1 aus 4 Asse => $n=4$ und $k=1$
+> - 2 aus 36 Luschen => $n=36$ und $k=2$
+> 
+> und erhalten:
+> 1. Wahl der Damen
+> $$\begin{align}
+> C^k_{n} &= \binom{n}{k} = \frac{n!}{n!(n-k)!} \\
+> C^2_{4} &= \binom{4}{2} = \frac{4!}{2!\cdot2!} \\
+>     &= 6
+>\end{align}$$
+>2. Wahl der Asse:
+>$$\begin{align}
+> C^1_{4} &= \binom{4}{1} = \frac{4!}{(4-1)!} \\
+> &=4
+>\end{align}$$
+>3. Wahl der Luschen:
+>$$\begin{align}
+>  C^2_{36} &= \binom{2}{36} = \frac{36!}{2!(36-2)!} \\
+> &= 630
+>\end{align}$$
+>
+>Um die gesamte Möglichkeiten zu erhalten, müssen wir jede der Möglichkeiten mit denen der anderen verknüpfen. Dies ist als das Multiplikationsprinzip bekannt und wie der Name andeutet multiplizieren wir die einzelnen Ergebnisse und erhalten
+>$$6 \cdot 4 \cdot 630 = 15\;120$$
+
+
+#### Aufgabe 1(h)
+> Um die Aufgabe effektiv zu lösen, teilen wir die Menge der Ziffern in die, die wir ohne Bedingung anordnen können und diese, die unter Bedingung platziert werden
+> - Mit Bedingung: $M_{1} = \{ 1,3,5 \}$
+> - Ohne Bedingung: $M_{2} = \{ 1,2,4,6 \}$
+>
+> Den ersten Schritt können wir unabhängig von der Teilaufgabe durchführen. Für jede Variante, die wir ermitteln, können die Elemente aus $M_2$ (ohne Bedingungen) verschiedenartig angeordnet werden, ohne, dass es unsere Bedingung verletzt. Also erhalten wir eine Permutation für $M_2$ mit $n=4$
+> $$\begin{align}
+> P_{4} &= 4! \\
+>    &= 24
+>\end{align}$$
+>Nun lösen wir für $M_1$ unter den verschiedenen Teilaufgaben
+>1. $(1,3,5)$ werden nebeneinander in gegebener Reihenfolge platziert <br>
+>Wir stellen uns eine Reihenfolge der Zahlen aus $M_{2}$ vor, beispielsweise:
+>$$\begin{align}
+> |\; 4 \; | \; 2 \; | \;1\; | \;6\; |   
+>\end{align}$$
+>Bemerkt die vertikalen Striche, die als Platzhalter für das Paar $(1,3,5)$ stehen. Wir fragen nun, wieviele Möglichkeiten gibt es dieses Paar dort einzufügen. Genau genommen handelt es sich hier um eine Variation, in der wir einen der Positionen aus 5 wählen. Offensichtlich, auch ohne Berechnungen zu bemühen, sehen wir, dass wir lediglich 5 Möglichkeiten haben.
+>$$V_{5}^1 = 5\,$$Nach dem Multiplikationsprinzip multiplizieren wir das Ergebnis mit den Permutationen aus unserer Vorbereitung und erhalten
+>$$5 \cdot 24 = 120$$
+>2. $\{ 1,3,5 \}$ werden nebeneinander aber in beliebiger Reihenfolge platziert <br>
+>Wenn die Reihenfolge beliebig ist, suchen wir die Permutationen unter den 3 gegebenen Elementen. Wir erhalten
+>$$P_{3} = 3! = 6$$
+>Da diese Bedingung eine Erweiterung der Teilaufgabe 1. ist und für jede Möglichkeit in 1. jede Permutation aus 2. verwendet werden kann, verwenden wir wieder das Multiplikationsprinzip und erhalten
+>$$5 \cdot 24 \cdot 6 = 720$$

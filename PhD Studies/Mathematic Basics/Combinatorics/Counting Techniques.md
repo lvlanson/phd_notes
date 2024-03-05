@@ -468,6 +468,8 @@
 >>> k^r &= 3^4 = 81
 >>>\end{align}$$
 
+^9a298e
+
 >[!theorem] Theorem ([[../../../Sources/brualdi2004.pdf#page=77|Source]])
 >Let $S$ be a multiset with objects of $k$ different types with **finite** repetition numbers $n_{1},n_{2}, \dots, n_{k}$ respectively. Let the size of $S$ be $n=n_{1}+n_{2}+\dots+n_{k}$. Then the number of permutations of $S$ equals
 >$$\frac{n!}{n_{1}!n_{2}!\dots n_{k}!}$$
@@ -534,6 +536,8 @@
 >>>Again, we have to consider this for each of the $8!$ configurations, hence, by the multiplication principle we get
 >>>$$8! \cdot 280 = 11\,289\,600$$
 
+^0a387a
+
 ## Combination of Multisets
 
 >[!theorem] Theorem ([[../../../Sources/brualdi2004.pdf#page=83|Source]])
@@ -545,7 +549,20 @@
 >>Any $r$-combination therefore will be a set
 >>$$\{ x_{1}\cdot a_{1}, x_{2} \cdot a_{2}, \dots, x_{k} \cdot a_{k} \}$$
 >>where $x_{1} \geq 0$ are integers. Note, that any selection of $x_1, x_2,\dots, x_{k}$ with
->>$$x_{1}+ x_{2}+ \dots+ x_{k} = r$$
+>>$$x_{1}+ x_{2}+ \dots+ x_{k} = r \tag{1}$$
 >>represents an $r$-combination. Let $T$ denote a multiset of zeros and ones with
 >>$$T = \{ r \cdot 1, (k-1) \cdot 0 \}$$
->>We want to show, that the combination of a multiset is equal to the permutation of $T$
+>>We want to show, that the combination of a multiset is equal to the permutation of $T$. Note, by equation $(1)$ we can separate the 1's by the (k-1) 0's, i.e.
+>>$$\underbrace{ 11\dots 1 }_{ x_{1} \text{ times} }0\underbrace{ 11\dots 1 }_{ x_{2} \text{ times} }0\underbrace{ 1\dots 11 }_{ x_{k-1} \text{ times} }0\underbrace{ 1\dots11 }_{ x_{k} \text{ times} }$$
+>>Note, there are exactly $(k-1)$ 0's between the one's. Further note, all $x_i$ can have different values with the condition that $\sum_{i=1}^k x_{i} = r$. 
+>>>[!example]
+>>>Let $T=\{ 5 \cdot 1, 3 \cdot 0 \}$, then possible permutations can be given as
+>>>$$\begin{align} 
+>>> &11010101  \\
+>>> &11111000 \\
+>>> & 10101101 \\
+>>> & \dots
+>>>\end{align}$$
+>>
+>>Hence, the multiset permutations of $T$ can be calculated as according to the [[#^0a387a| solution theorem for finite multiset permutations]]
+>>$$\frac{(r+k-1)!}{r!(k-1)!} = \binom{r+k-1}{r}$$
