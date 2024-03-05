@@ -1,4 +1,4 @@
-
+### Kombinatorik
 #### Aufgabe (1a)
 
 >Bemerke, wir haben 6 **verschiedene** Personen, die wir in allen möglichen Anordnungen ablichten lassen wollen. Da keine Person mehrfach auftauchen kann, können wir auf eine **Permutation ohne Wiederholungen** schließen und wenden die Formel unter **Defintion 1.1** an. Wir haben
@@ -157,3 +157,103 @@
 >$$P_{3} = 3! = 6$$
 >Da diese Bedingung eine Erweiterung der Teilaufgabe 1. ist und für jede Möglichkeit in 1. jede Permutation aus 2. verwendet werden kann, verwenden wir wieder das Multiplikationsprinzip und erhalten
 >$$5 \cdot 24 \cdot 6 = 720$$
+
+### Elementarereignisse
+#### Aufgabe (2)
+ Um diese Aufgabe möglichst einfach lösen zu können, überlegen wir uns wie die Elementarereignismenge $\Omega$ aussieht. Die Elementarereignismenge hängt vom vorgeschlagenen Zufallsexperiment ab. 
+ 
+ Nehmen wir das Würfeln eines idealen Würfels, dann ist es unstrittig, dass dieser 6 verschiedenen Augen hat. Wie die Elementarereignisse hier aussehen hängt nun davon ab, wie wir definieren wie oft wir werfen. Angenommen wir beschreiben das Zufallsexperiment "zwei mal zu würfeln", dann würde der Gesamtereignisraum wie folgt aussehen
+
+$$\begin{align}
+ \Omega &= \{ (1,1), (1,2), \dots, (6,6) \} \\
+&= \{ (i,j)\; | \; 1 \leq i,j \leq 6 \}
+\end{align}$$
+ 
+ Haben wir uns auf eine Elementarereignismenge festgelegt, prüfen wir, ob die vorgeschlagenen Ereignisse dort enthalten ist. Wir können auch immer prüfen, dass die Elementarereignisse sich untereinander ausschließen ausschließen und somit Definition 2.2 erfüllen.
+#### (2a)
+> 
+> Zunächst kodieren wir die möglichen Beobachtungen im Zufallsexperiment
+> $$\begin{align}
+> N &\; \widehat{ = } \text{ Nicht-Treffer}  \\
+> T &\; \widehat{ = } \text{ Treffer}  \\
+>\end{align}$$ 
+>Da wir unser Experiment mit "zwei abgefeuerten Schüssen" beschreiben, sieht die Ereignismenge wie folgt aus
+>$$\Omega =\{ NN, NT, TN, TT \}$$
+>
+>Für die weitere Analyse behelfen wir uns der Definition 2.3, und erkennen, dass Ereignisse $A_1, A_2, A_3$ Mengen sein müssen. Wir drücken diese somit wie folgt aus
+>$$\begin{align}
+> A_{1} &= \{ N \} \\
+> A_{2} &= \{ T \} \\
+> A_{3} &= \{  TT \}
+>\end{align}$$
+>Damit eines dieser Ereignisse ein Elementarereignis ist, muss es in $\Omega$ enthalten sein, wir prüfen nun
+>$$\begin{align}
+> A_{1} \not\subseteq \Omega \quad &\Longrightarrow \quad \text{ kein Elementarereignis} \\
+> A_{2} \not\subseteq \Omega \quad &\Longrightarrow \quad \text{ kein Elementarereignis} \\
+> A_{3} \subseteq \Omega \quad &\Longrightarrow \quad \text{ Elementarereignis}
+>\end{align}$$
+
+#### (2b)
+> Wieder einigen wir uns auf eine sinnvolle Kodierung der Karten. Wir haben die Karten 
+> - der Kategorie $7-10$ und Bube, Dame König Ass, und 
+> - der Kategorie der Farbe, die wir auf rot und schwarz reduziert haben 
+> 
+> Wir kodieren die Begriffe wie folgt
+> $$\begin{align}
+> 7\text{-}10 &\; \widehat{ = } 7\text{-}10   \\
+> B &\; \widehat{ = } \text{ Bube}  \\
+> D &\; \widehat{ = } \text{ Dame}  \\
+> K &\; \widehat{ = } \text{ König}  \\
+> A &\; \widehat{ = } \text{ As}  \\
+> R &\; \widehat{ = } \text{ Rot}  \\
+> S &\; \widehat{ = } \text{ Schwarz}  \\
+>\end{align}$$
+>Eine Karte beschreiben wir als Tupel bestehend aus (Wert, Farbe). Beispiel, der schwarze Bube wäre demnach:
+>$$(B, S)$$
+>oder die rote 7 wäre
+>$$(7, R)$$
+>Wir beschreiben die Menge der Werte durch $W$ und die Menge der Farben durch $F$. Das Zufallsexperiment wird beschrieben durch "das Ziehen zweier Karten", und kann daher als folgende Ereignismenge dargestellt werden
+>$$\begin{align}
+> \Omega &= \Big\{\{ (w_{1},f_{1}), (w_{2},f_{2}) \} \; \Big| \; w_{1} \neq w_{2} \lor \;f_{1} \neq f_{2}, \;\; w_{1},w_{2} \in W, f_{1},f_{2} \in F  \Big\} \\ \\
+> &= \Big\{ \{ (7,R), (7, S) \}, \dots, \{(A, R), (A,S)  \} \Big\}
+>\end{align}$$
+>Um die folgenden Ereignisse zu beschreiben, einigen wir uns darauf für einen beliebigen Wert einer Kategorie das Symbol $x$ zu verwenden. Also wenn wir schreiben $(x, R)$ ist jede der 8 roten Karten möglich.
+>$$\begin{align}
+> A_{1} &= \Big\{ (x_{1}, R), (x_{2}, R) \Big\} \\
+> A_{2} &= \Big\{ (x_{1}, S), (x_{2}, S)\Big\} \\
+> A_{3} &= \Big((x_{1}, R), (x_{2}, S)\Big) \\
+> A_{4} &= \Big\{ (x_{1}, R), (x_{2},  S) \Big\}
+>\end{align}$$
+> Unter unserer Konstruktion von $\Omega$ sind $A_1, A_{2}, A_{4}$ Elementarereignisse und $A_3$ nicht, da
+>$$\begin{align}
+> A_{1} \subseteq \Omega \quad &\Longrightarrow \quad \text{Elementarereignis} \\
+> A_{2} \subseteq \Omega \quad &\Longrightarrow \quad \text{ Elementarereignis} \\
+> A_{3} \not\subseteq \Omega \quad &\Longrightarrow \quad \text{ kein Elementarereignis} \\
+> A_{4} \subseteq \Omega \quad &\Longrightarrow \quad \text{ Elementarereignis} \\
+>\end{align}$$
+>$A_{3}$ is dadurch kein Elementarereignis, das es durch ein geordnetes Wertepaar beschrieben wird und die elemente in $\Omega$ ungeordnet, also Mengen sind.
+>
+> Jedoch, da die Aufgabe nicht genau definiert, ob die vorgenommene Auswahl geordnet oder ungeordnet ist, können wir die Elemente von $\Omega$ auch als geordnete Auswahl konstruieren, wodurch dann $A_1, A_{2}, A_{4}$ keine Elementarerignisse sind und wiederum $A_3$ ein Elementarereignis ist.
+
+#### Aufgabe 3
+> Für diese Aufgabe konstruieren wir zunächst die Ereignisse. Das Zufallsexperiment beschreibt die Abgabe von **2 Schüssen**. Wir kodieren wie zuvor die Beobachtungen als
+>  $$\begin{align}
+> N &\; \widehat{ = } \text{ Nicht-Treffer}  \\
+> T &\; \widehat{ = } \text{ Treffer}  \\
+>\end{align}$$ 
+>und können die Ereignisse wie folgt beschreiben
+> $$\begin{align}
+> A_{1} &= \{ NN  \} \\
+> A_{2} &= \{  TN ,  NT  \} \\
+> A_{3} &= \{  NN ,  NT , TN \} \\
+> A_{4} &= \{ NT, TN, TT \}
+>\end{align}$$ 
+>Über die Mengenoperation des Schnitts prüfen wir, ob die Ereignisse paarweise disjunkt sind.
+>$$\begin{alignat}{2}
+> A_{1} \cap A_{2} &=  \emptyset \quad &&\Longrightarrow \quad \text{disjunkt} \\
+> A_{1} \cap A_{3} &=  \{ NN \} \quad &&\Longrightarrow \quad \text{nicht disjunkt} \\ 
+> A_{1} \cap A_{4} &=  \emptyset \quad &&\Longrightarrow \quad \text{disjunkt} \\  
+> A_{2} \cap A_{3} &=  \{ NT, TN \} \quad &&\Longrightarrow \quad \text{nicht disjunkt} \\  
+> A_{2} \cap A_{4} &=  \{ NT, TN \} \quad &&\Longrightarrow \quad \text{nicht disjunkt} \\  
+> A_{3} \cap A_{4} &=  \{ NT, TN \} \quad &&\Longrightarrow \quad \text{nicht disjunkt} \\  
+>\end{alignat}$$
