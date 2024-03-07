@@ -1,15 +1,15 @@
->[!def] Definition Partition ([[../../../Sources/zotero-182.pdf#page=18|Source]])
+>[!def] Definition Partition ([[../../../PDFs/zotero-182.pdf#page=18|Source]])
 >A set of point $P=\{ x_{i} \}$ for $i=0,1,2,\dots,n$ with $a=x_{0}<x_{1}<x_{2}<\dots<x_{n}=b$, which divides the interval $[a,b]$ into subintervals of the form $[x_{0},x_{1}], [x_{1},x_{2}], \dots, [x_{n-1}, x_{n}]$ is called a **partition** of $[a,b]$.
 >
 >If the subintervals all have the same width, the set of points forms a **regular partition** of the interval $[a,b]$.
 
 ^2971b4
 
->[!def] Definition Riemann Integral ([[../../../Sources/zotero-182.pdf#page=25|Source]])
+>[!def] Definition Riemann Integral ([[../../../PDFs/zotero-182.pdf#page=25|Source]])
 > Let $f(x)$ be defined on a closed interval $[a,b]$ and let $P$ be a [[#^2971b4|regular partition]] of $[a,b]$. Let $\Delta x$ be the width of each subinterval $[x_{i-1}, x_{i}]$ and for each $i$, let $x_{i}^*$ be any point in $[x_{i-1},x_{i}]$. A **Riemann sum** is defined for $f(x)$ as 
 > $$\sum_{i=1}^n f(x_{i}^*)\Delta x$$
 
->[!def] Definition Definite Integral ([[../../../Sources/zotero-182.pdf#page=35|Source]])
+>[!def] Definition Definite Integral ([[../../../PDFs/zotero-182.pdf#page=35|Source]])
 >If $f(x)$ is a function defined on an interval $[a,b]$, the **definite integral** of $f$ from $a$ to $b$ is given by
 >$$\int _{a}^b f(x)\, dx = \lim_{ n \to \infty } \sum_{i=1}^n f(x_{i}^*)\Delta x$$
 >provided the limit exists. If this limit exists, the function $f(x)$ is said to be integrable on $[a,b]$, or is an **integrable function**.
@@ -34,7 +34,7 @@
 
 ^a5bf98
 
->[!theorem] Comparison Theorem  ([[../../../Sources/zotero-182.pdf#page=46|Source]])
+>[!theorem] Comparison Theorem  ([[../../../PDFs/zotero-182.pdf#page=46|Source]])
 >1. If $f(x)\geq 0$ for $a \leq x \leq b$, then
 >$$\int _{a}^b f(x)\, dx \geq 0$$
 >2. If $f(x) \geq g(x)$ for $a \leq x \leq b$, then
@@ -46,7 +46,7 @@
 
 ^883fc9
 
->[!theorem] The Mean Value Theorem for Integrals ([[../../../Sources/zotero-182.pdf#page=55|Source]])
+>[!theorem] The Mean Value Theorem for Integrals ([[../../../PDFs/zotero-182.pdf#page=55|Source]])
 > If $f(x)$ is continuous over an interval $[a,b]$, then there is at least one point $c \in [a,b]$ such that
 > $$f(c) = \frac{1}{b-a}\int _{a}^b f(x) \, dx $$
 > This formula can also be stated as
@@ -74,7 +74,7 @@
 
 ^d7a2e0
 
->[!Theorem] Fundamental Theorem of Calculus Part 1 ([[../../../Sources/zotero-182.pdf#page=90|Source]])
+>[!Theorem] Fundamental Theorem of Calculus Part 1 ([[../../../PDFs/zotero-182.pdf#page=90|Source]])
 >If $f(x)$ is continuous over an interval $[a,b]$, and the function $F(x)$ is defined by
 >$$F(x)=\int _{a}^x f(t) \, dt $$
 >then $F'(x)= f(x)$ over $[a,b]$.
@@ -102,14 +102,14 @@
 
 ^8f29c7
 
->[!Theorem] Fundamental Theorem of Calculus Part 2 ([[../../../Sources/zotero-182.pdf#page=90|Source]])
+>[!Theorem] Fundamental Theorem of Calculus Part 2 ([[../../../PDFs/zotero-182.pdf#page=90|Source]])
 >If $f$ is continuous over the interval $[a,b]$ and $F(x)$ is any antiderivative of $f(x)$, then 
 >$$\int _{a}^b f(x) \, dx = F(b)- F(a) $$
 
 ^f18d9f
 
 
->[!Theorem] Theorem Substitution Rule for Indefinite Integrals ([[../../../Sources/briggs2019.pdf#page=414|Source 1]], [[../../../Sources/zotero-182.pdf#page=90|Source 2]])
+>[!Theorem] Theorem Substitution Rule for Indefinite Integrals ([[../../../PDFs/briggs2019.pdf#page=414|Source 1]], [[../../../PDFs/zotero-182.pdf#page=90|Source 2]])
 > Let $u=g(x)$, where $g$ is differentiable on an interval, and let $f$ be continuous on the corresponding range of $g$. On that interval
 > $$\begin{align}
 >\int  \underbrace{ f\Big(g(x)\Big) }_{ f(u) }\underbrace{ g'(x) }_{ du } \, dx &= \int f(u) \, du  \\
@@ -173,7 +173,7 @@
 >
 >^thmSubstitutionRuleIndef
 
->[!Theorem] Theorem Substitution Rule for Definite Integrals ([[../../../Sources/briggs2019.pdf#page=418|Source]])
+>[!Theorem] Theorem Substitution Rule for Definite Integrals ([[../../../PDFs/briggs2019.pdf#page=418|Source]])
 > Let $u = g(x)$, where $g'$ is continuous on $[a,b]$ and let $f$ be continuous on the range of $g$, and let $F(x)$ be an antiderivative of $f(x)$. Then,
 > $$ \int_a^b f\Big(g(x)\Big)g'(x) \,dx = \int_{g(a)}^{g(b)}f(u) \, du$$
 >
@@ -232,7 +232,7 @@
 >^thmSubstitutionRuleDef
 
 
->[!Theorem] Theorem Integration by Parts ([[../../../Sources/briggs2019.pdf#page=550|Source 1]], [[../../../Sources/zotero-182.pdf#page=270|Source 2]])
+>[!Theorem] Theorem Integration by Parts ([[../../../PDFs/briggs2019.pdf#page=550|Source 1]], [[../../../PDFs/zotero-182.pdf#page=270|Source 2]])
 > Let $u = f(x)$ and $v=g(x)$ be functions with continuous derivatives. The integration by parts formula for the given two functions can be formulated as
 > $$ \int u\, dv \, = uv - \int v \,du  $$
 >>[!proof]-
@@ -256,7 +256,7 @@
 >>1. The integration by parts reverses the product rule.
 >>2. The complete formula looks like $$\int f(x)\, \frac{dg(x)}{dx} dx \, = f(x)g(x) - \int g(x) \frac{df(x)}{dx} dx$$
 >
->>[!example]- Example $\int  x \sin (x) \, dx$  ([[../../../Sources/zotero-182.pdf#page=270|Source]])
+>>[!example]- Example $\int  x \sin (x) \, dx$  ([[../../../PDFs/zotero-182.pdf#page=270|Source]])
 >>We choose 
 >>$$\begin{align}
 >> u & = x \\
@@ -275,7 +275,7 @@
 >> &= -x\cos x + \sin x + c
 >>\end{align}$$
 >
->>[!example]- Example $\int \frac{\ln x}{x^3} \,dx$ ([[../../../Sources/zotero-182.pdf#page=272|Source]])
+>>[!example]- Example $\int \frac{\ln x}{x^3} \,dx$ ([[../../../PDFs/zotero-182.pdf#page=272|Source]])
 >>We rewrite as
 >>$$\int \frac{\ln x}{x^3} \,dx = \int x^{-3} \ln x \, dx $$
 >>Now we choose

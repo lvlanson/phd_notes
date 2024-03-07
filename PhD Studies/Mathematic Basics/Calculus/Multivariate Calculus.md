@@ -11,31 +11,31 @@ aliases:
 | Vector Valued Function $\mathbf{f}$ <br>or Vector Field  | $\mathbf{f}:\mathbb{R}^n \rightarrow \mathbb{R}^m$ with $m,n > 1$                  |
 | Components                                      | If $\mathbf{f}$ is a vector field, then $f_i \in \mathbf{f}$ is called a component | 
 
->[!def] Definition Open Ball ([[../../../Sources/apostol1967.pdf#page=269|Source]])
+>[!def] Definition Open Ball ([[../../../PDFs/apostol1967.pdf#page=269|Source]])
 >Let $\mathbf{a} \in \mathbb{R}^n$ with $r>0$. The set $\mathbf{x} \in\mathbb{R}^n$ satisfying
 >$$ \lvert\lvert \mathbf{x} -\mathbf{a} \rvert\rvert < r$$
 >is called the **open $n$-ball**. We denote it
 >$$ B(\mathbf{a}, r) = \{ \mathbf{x} \in \mathbb{R}^n \; \Big\vert \; \lvert\lvert \mathbf{x} - \mathbf{a} \rvert\rvert < r \}$$
 
->[!def] Definition Interior Point ([[../../../Sources/apostol1967.pdf#page=269|Source]])
+>[!def] Definition Interior Point ([[../../../PDFs/apostol1967.pdf#page=269|Source]])
 > Let $S \subset \mathbb{R}^n$ and assume $\mathbf{a} \in S$. The point $\mathbf{a}$ is called an interior point of $S$ if there exists some $r > 0$ with $$ B(\mathbf{a}, r) \subseteq S$$
 > The set of all interior points with respect to $S$ is denoted as
 > $$ \text{int } S$$
 
->[!def] Definition Open Set ([[../../../Sources/apostol1967.pdf#page=269|Source]])
+>[!def] Definition Open Set ([[../../../PDFs/apostol1967.pdf#page=269|Source]])
 >A set $S$ in $\mathbb{R}^n$ is called open if all its points are interior points, i.e. 
 >$$ S \text{ is open } \Leftrightarrow S = \text{int } S$$
 
->[!def] Definition Exterior Point ([[../../../Sources/apostol1967.pdf#page=270|Source]])
+>[!def] Definition Exterior Point ([[../../../PDFs/apostol1967.pdf#page=270|Source]])
 >A point $\mathbf{a} \in \mathbb{R}^n$ is said to be **exterior** with respect to a set $S \in \mathbb{R}^n$ if 
 >$$\exists r > 0 \; : \; B(\mathbf{a}, r) \cap S = \emptyset$$
 >The set of all exterior points with respect to $S$ is denoted as
 >$$ \text{ext } S$$
 
->[!def] Definition Boundary Point ([[../../../Sources/apostol1967.pdf#page=270|Source]])
+>[!def] Definition Boundary Point ([[../../../PDFs/apostol1967.pdf#page=270|Source]])
 >A point $\mathbf{a} \in \mathbb{R}^n$ is said to be a **boundary point** of $S$ if it's neither an interior nor exterior point of $S$. The set of all boundary points of $S$ is denoted as $$ \partial S$$
 
->[!def] Definition Derivative of a Scalar Field with Respect to a Vector ([[../../../Sources/apostol1967.pdf#page=278|Source]])
+>[!def] Definition Derivative of a Scalar Field with Respect to a Vector ([[../../../PDFs/apostol1967.pdf#page=278|Source]])
 > Let 
 > - $f: S \rightarrow \mathbb{R}^n$  be a scalar field with $S \subseteq \mathbb{R}^n$
 > - $\mathbf{a} \in S$ interior point of $S$
@@ -53,7 +53,7 @@ aliases:
 
 ^c18601
 
->[!theorem] Theorem ([[../../../Sources/apostol1967.pdf#page=278|Source]])
+>[!theorem] Theorem ([[../../../PDFs/apostol1967.pdf#page=278|Source]])
 >Let $g(t) = f(\mathbf{a}+ t\mathbf{y})$. If one of the derivatives exists, then the other also exists, and they are equal, i.e.
 >$$g'(t) = f'(\mathbf{a} + t\mathbf{y}; \mathbf{y})$$
 >In particular, when $t=0$ we have $g'(0) =f'(\mathbf{a}; \mathbf{y})$.
@@ -65,7 +65,7 @@ aliases:
 >> \,\tag*{$\square$}
 >>\end{align}$$
 
->[!theorem] Mean Value Theorem for Derivatives of Scalar Fields ([[../../../Sources/apostol1967.pdf#page=279|Source]])
+>[!theorem] Mean Value Theorem for Derivatives of Scalar Fields ([[../../../PDFs/apostol1967.pdf#page=279|Source]])
 >Assume $f'(\mathbf{a}+ t\mathbf{y}; \mathbf{y})$ exists with $t \in[0,1]$. Then for some real number $\Theta \in (0,1)$ we have
 >$$f(\mathbf{a}+ \mathbf{y})-f(\mathbf{a}) = f'(\mathbf{z}; \mathbf{y}), \qquad \text{with } \mathbf{z} = \mathbf{a} + \Theta \mathbf{y}$$
 >>[!proof]-
@@ -89,12 +89,12 @@ aliases:
 >>[!note]-
 >>Usually instead of $\mathbf{a}+\mathbf{y}$ the variable $\mathbf{b}$ is used, as it can also be seen in the [[Differentiation#^71d429|real valued mean value theorem]].
 
->[!def] Definition Directional Derivative ([[../../../Sources/apostol1967.pdf#page=279|Source]])
+>[!def] Definition Directional Derivative ([[../../../PDFs/apostol1967.pdf#page=279|Source]])
 >If $\mathbf{y} \in \mathbb{R}^n$ is a normed vector, i.e. $\lvert\lvert y \rvert\rvert = 1$ The derivative $f'(\mathbf{a}; \mathbf{y})$ is called **the directional derivative of $f$ at $\mathbf{a}$ in the direction of $\mathbf{y}$**.
 
 ^c59e8c
 
->[!def] Definition Partial Derivative ([[../../../Sources/apostol1967.pdf#page=279|Source]])
+>[!def] Definition Partial Derivative ([[../../../PDFs/apostol1967.pdf#page=279|Source]])
 > The partial derivative is a particular form of the [[Multivariate Calculus#^c59e8c | directional derivative]], with $\mathbf{y} \in \mathbb{R}^n$ being the unit vector $\mathbf{e}_{k}$. Therefore, the partial derivative with respect to $\mathbf{e}_{k}$can be given as
 > $$D_{k}f(\mathbf{a})=f'(\mathbf{a}; \mathbf{e}_{k})$$
 > The following notations can also be used for the partial derivative $D_kf(\mathbf{a})$:
@@ -104,7 +104,7 @@ aliases:
 > f'_{x_{k}}&(a_{1}, \dots, a_{n})
 >\end{align}$$
 
->[!def] Definition Higher Order Partial Derivatives ([[../../../Sources/apostol1967.pdf#page=280|Source]])
+>[!def] Definition Higher Order Partial Derivatives ([[../../../PDFs/apostol1967.pdf#page=280|Source]])
 > Given some scalar field $D_{1}f, \dots, D_{n}f$. The partial derivative of such a scalar field (being already a partial derivative) is called a **second-order partial derivative of $f$**.
 >>[!remark]
 >>For functions of two variables, there are four second-order partial derivatives
@@ -115,7 +115,7 @@ aliases:
 >> D_{2}(D_{2}f) &=\frac{\partial^2f}{\partial y^2} \\
 >>\end{align}$$
 
->[!def] Definition Total Derivative ([[../../../Sources/apostol1967.pdf#page=283|Source]])
+>[!def] Definition Total Derivative ([[../../../PDFs/apostol1967.pdf#page=283|Source]])
 >
 >>[!remark]- Motivation
 >>Recall that the derivative in real analysis determines the infinitely small change of a function $f$ around a point $a$. The derivative of a function $f: \mathbb{R} \rightarrow \mathbb{R}$ is defined as
@@ -142,7 +142,7 @@ aliases:
 
 ^f5793c
 
->[!theorem] Theorem ([[../../../Sources/apostol1967.pdf#page=284|Source]])
+>[!theorem] Theorem ([[../../../PDFs/apostol1967.pdf#page=284|Source]])
 >Assume $f$ is differentiable at $\mathbf{a}$ with total derivative $T_{\mathbf{a}}$. Then the derivative $f'(\mathbf{a}; \mathbf{y})$ exists for every $\mathbf{y} \in \mathbb{R}^n$, and we have
 >$$T_{\mathbf{a}}(\mathbf{y}) = f'(\mathbf{a}; \mathbf{y})$$
 >Moreover, $f'(\mathbf{a};\mathbf{y})$ is a linear combination of the components of $\mathbf{y}$. We have
@@ -189,7 +189,7 @@ aliases:
 >>Note, that the infinitely small change in $f$ is equal to the derivative of $f$ with respect to $x$ times an infinitely small change in $x$, i.e. $dx$.
 >>
 ------
->[!lemma] Lemma ([[../../../Sources/shifrin2005.pdf#page=112|Source]])
+>[!lemma] Lemma ([[../../../PDFs/shifrin2005.pdf#page=112|Source]])
 > Suppose $\mathbf{g}:[a,b] \to \mathbb{R}^n$ is continuous. Then, defining the integral of $\mathbf{g}$ component by component, i.e.
 > $$\int _{a}^b \mathbf{g}(t) \, dt = \left[\begin{matrix}\int _{a}^b g_{1}(t)\, dt \\ \vdots \\ \int _{a}^b g_{n}(t)\, dt  \\
 >\end{matrix}\right] $$
@@ -214,7 +214,7 @@ aliases:
 >>\end{alignat}$$
 >>^lemmamultiintegral
 
->[!def] Proposition Mean Value Inequality ([[../../../Sources/shifrin2005.pdf#page=262|Source]])
+>[!def] Proposition Mean Value Inequality ([[../../../PDFs/shifrin2005.pdf#page=262|Source]])
 >Suppose $U \subset \mathbb{R}^n$ is open, $\mathbf{f}: U \to \mathbf{R}^m$ with $\mathbf{f}\in C^1$ and $\mathbf{a}, \mathbf{b} \in U$, such that the line segment between them is contained in $U$. Then
 >$$\lvert\lvert \mathbf{f}(\mathbf{b}) - \mathbf{f}(\mathbf{a}) \rvert\rvert \leq \left(\underset{\mathbf{x}\in [\mathbf{a}, \mathbf{b}]}{\text{max}}\lvert\lvert D\mathbf{f}(\mathbf{x}) \rvert\rvert \right)\lvert\lvert \mathbf{b}-\mathbf{a} \rvert\rvert  $$
 >
@@ -255,7 +255,7 @@ aliases:
 
 ^74523c
 
->[!def] Definition Contraction Map ([[../../../Sources/shifrin2005.pdf#page=259|Source]])
+>[!def] Definition Contraction Map ([[../../../PDFs/shifrin2005.pdf#page=259|Source]])
 >Let $X$ be a subset of $\mathbb{R}^n$. A function $\mathbf{f}: X \to X$ is called a **contraction mapping** if there is a constant $c$ with $0 < c < 1$, such that
 >$$\begin{align}
 > \lvert\lvert \mathbf{f}(\mathbf{x}) - \mathbf{f}(\mathbf{y}) \rvert\rvert \leq c \lvert\lvert \mathbf{x}-\mathbf{y} \rvert\rvert  
@@ -265,7 +265,7 @@ aliases:
 >>Let $\mathbf{x}_{0}\in X$ be arbitrary, and define a sequence recursively by 
 >>$$\mathbf{x}_{k+1}= \mathbf{f}(\mathbf{x}_{k})$$
 
->[!Theorem] Proposition Absolute Convergence ([[../../../Sources/shifrin2005.pdf#page=258|Source]])
+>[!Theorem] Proposition Absolute Convergence ([[../../../PDFs/shifrin2005.pdf#page=258|Source]])
 >  Let $(\mathbf{a}_{k})_{k=1}^\infty \subseteq \mathbb{R}^n$ with
 >  $$\sum_{k=1}^\infty \lvert\lvert  \mathbf{a}_{k} \rvert\rvert $$ 
 > is convergent. Then the series
@@ -310,7 +310,7 @@ aliases:
 
 ^62fac3
 
->[!theorem] Theorem Contraction Mapping Principle ([[../../../Sources/shifrin2005.pdf#page=259|Source]])
+>[!theorem] Theorem Contraction Mapping Principle ([[../../../PDFs/shifrin2005.pdf#page=259|Source]])
 >Let $X \subset \mathbb{R}^n$ be closed. Let $\mathbf{f}: X \to X$ be a contraction mapping. Then there is a unique point $\mathbf{x} \in X$ such that $\mathbf{f}(\mathbf{x})=\mathbf{x}$.
 >>[!note]
 >>$\mathbf{x}$ is called a fixed point of $\mathbf{f}$.
@@ -351,7 +351,7 @@ aliases:
 ^7623e0
 
 
->[!theorem] Inverse Function Theorem ([[../../../Sources/shifrin2005.pdf#page=266|Source]], [Video Source](https://youtu.be/CUZnkWa0Mr0?si=jMAR5W7H41a1WOlf), [Video Source Proof](https://youtu.be/LkUl8HTIJM4?si=NiuNRX0_Ds9o6-A6))
+>[!theorem] Inverse Function Theorem ([[../../../PDFs/shifrin2005.pdf#page=266|Source]], [Video Source](https://youtu.be/CUZnkWa0Mr0?si=jMAR5W7H41a1WOlf), [Video Source Proof](https://youtu.be/LkUl8HTIJM4?si=NiuNRX0_Ds9o6-A6))
 >Suppose $U \subset \mathbb{R}^n$ is open and $\mathbf{f}: U \to \mathbb{R}^n$ is a vector field with $\mathbf{f} \in C^1$ with $D\mathbf{f}$ being invertible in $\mathbf{x}_{0} \in U$. Then there is a neighborhood $V \subset U$ of $\mathbf{x}_{0}$ on which $\mathbf{f}$ has a $C^1$ inverse function. That is, there are neighborhoods $V$ of $\mathbf{x}_{0}$ and $W$ of $\mathbf{f}(\mathbf{x}_{0}) = \mathbf{y}_{0}$ and a $C^1$ function $\mathbf{g}: W \to V$ such that
 >$$ \mathbf{f}(\mathbf{g}(\mathbf{y})) = \mathbf{x}\qquad \forall \mathbf{y} \in W$$
 >and

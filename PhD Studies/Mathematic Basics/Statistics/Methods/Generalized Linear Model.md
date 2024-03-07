@@ -7,7 +7,7 @@ aliases:
 
 >[!Source]-
 >URL: https://www.jstor.org/stable/2344614
->PDF: [PDF](nelder1972.pdf)
+>PDF: [PDF](../../../../PDFs/nelder1972.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@nelder1972)
 
 >[!ABSTRACT]-

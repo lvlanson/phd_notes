@@ -74,7 +74,7 @@
 
 ### Issue 2 Function Choice in ODE
 
->[!def] Definition Initial Value Problem ([[../../../Sources/nagy.pdf#page=18|Source]])
+>[!def] Definition Initial Value Problem ([[../PDFs/nagy.pdf#page=18|Source]])
 > The initial value problem (IVP) is to find all solutions $y$ to 
 > $$ y' = ay+b $$
 > that satisfy the initial condition 
@@ -84,7 +84,7 @@
 >>The differential equation has a unique solution with respect to the initial condition.
 
 Similarly for second order ODEs etc.
->[!theorem] Theorem Solutions to IVP of Second Order ODEs ([[../../../Sources/nagy.pdf#page=88 | Source]])
+>[!theorem] Theorem Solutions to IVP of Second Order ODEs ([[../PDFs/nagy.pdf#page=88| Source]])
 >If 
 >- the functions $a_{0},a_{1}, b$ are continuous on a closed interval $I \subset \mathbb{R}$, 
 >- the constant $t_{0} \in I$, 

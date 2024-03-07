@@ -1,0 +1,32 @@
+>[!def] Definition Matrix and Vector Multiplication
+>$$\begin{align*}
+>  A\mathbf{x}=
+>  \left[
+>    \begin{array}{cccc}
+>      a_{11} & a_{12} & \ldots & a_{1n}\\
+>      a_{21} & a_{22} & \ldots & a_{2n}\\
+>      \vdots & \vdots & \ddots & \vdots\\
+>      a_{m1} & a_{m2} & \ldots & a_{mn}
+>    \end{array}
+>  \right]
+>  \left[
+>    \begin{array}{c}
+>      x_1\\
+>      x_2\\
+>      \vdots\\
+>      x_n
+>    \end{array}
+>  \right]
+>  =
+>  \left[
+>    \begin{array}{c}
+>      a_{11}x_1+a_{12}x_2 + \cdots + a_{1n} x_n\\
+>      a_{21}x_1+a_{22}x_2 + \cdots + a_{2n} x_n\\
+>      \vdots\\
+>      a_{m1}x_1+a_{m2}x_2 + \cdots + a_{mn} x_n\\
+>    \end{array}
+>  \right]
+>\end{align*}$$
+>>[!example]
+>>![[media/matrix_vector_multiplication.webm|matrix_vector_multiplication]]
+>>[Source](http://matrixmultiplication.xyz)

@@ -7,7 +7,7 @@ DOI: 10.1007/b97553
 
 >[!Links]-
 >URL: http://link.springer.com/10.1007/b97553
->PDF: [PDF](shao2003.pdf)
+>PDF: [PDF](../../../../PDFs/shao2003.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@shao2003)
 
 ---

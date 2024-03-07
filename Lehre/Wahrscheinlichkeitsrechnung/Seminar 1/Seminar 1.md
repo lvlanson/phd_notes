@@ -76,17 +76,16 @@
 
 
 #### Aufgabe 1(e)
-> Wir haben insgesamt 8 Spieler zur Verfügung, wenn wir Spieler 1 mit den verbleibenden 7 Spielern. Paaren wir nun Spieler 2, ist hier nun bereits das Spiel mit Spieler 1 erfasst, also verbleiben für diesen nur noch 6 Spieler. Setzen wir das so fort, verbleiben für Spieler $n$ immer noch $n-1$ weitere Spieler.
+> Wir haben insgesamt 8 Spieler zur Verfügung, wenn wir Spieler 1 mit den verbleibenden 7 Spielern. Paaren wir nun Spieler 2, ist hier nun bereits das Spiel mit Spieler 1 erfasst, also verbleiben für diesen nur noch 6 Spieler. Setzen wir das so fort, verbleiben für Spieler $n$ immer noch $n-1$ weitere Spieler. Daher summieren wir alle Paarungen mit
 >
 > Daher sind es
 > $$\begin{align}
-> \sum_{k=1}^{n-1}k & = \frac{n(n-1)}{2}  \\
->  \sum_{k=1}^7 k &= 21
+> \sum_{k=1}^{m}k & = \frac{m(m+1)}{2}  \\
+>  \sum_{k=1}^7 k &= 28
 >\end{align}$$
 >
 >> Wir haben Gebrauch der Gaußschen Summenformel gemacht, die da lautet
 >> $$\sum_{k=1}^n k = \frac{n(n+1)}{2}  $$
->> und statt $n$ haben wir $n-1$.
 
 #### Aufgabe 1(f)
 > Zunächst bemerken wir, die 6 Objekte sind nicht unterscheidbar, und somit gibt es keine Reihenfolge, die relevant ist. Daher können wir bereits auf eine Kombination schließen. Da wir eine Wiederholung der nicht unterscheidbaren Elemente erwarten, handelt es sich um eine Kombination mit Wiederholung. Deshalb  verwenden wir Definition 1.18 mit
@@ -98,8 +97,8 @@
 >$$\begin{align}
 >^wC^k_{n} &= \binom{n+k-1}{k} \\
 >^wC^6_{12} &= \binom{17}{6}  \\
-> &= \frac{17!}{(17-6)!} \\
-> &= 8\;910\;720
+> &= \frac{17!}{6!(17-6)!} \\
+> &= 12\;376
 >\end{align}$$
 
 
@@ -109,7 +108,7 @@
 > Da jeweils die Damen/Asse/Luschen unterscheidbar sind, nur ihre Reihenfolge keine Rolle spielt. Wir wählen wie folgt aus
 > - 2 aus 4 Damen => $n=4$ und $k=2$
 > - 1 aus 4 Asse => $n=4$ und $k=1$
-> - 2 aus 36 Luschen => $n=36$ und $k=2$
+> - 2 aus 32 Luschen => $n=36$ und $k=2$
 > 
 > und erhalten:
 > 1. Wahl der Damen
@@ -125,12 +124,12 @@
 >\end{align}$$
 >3. Wahl der Luschen:
 >$$\begin{align}
->  C^2_{36} &= \binom{2}{36} = \frac{36!}{2!(36-2)!} \\
-> &= 630
+>  C^2_{36} &= \binom{32}{2} = \frac{32!}{2!(32-2)!} \\
+> &= 496
 >\end{align}$$
 >
 >Um die gesamte Möglichkeiten zu erhalten, müssen wir jede der Möglichkeiten mit denen der anderen verknüpfen. Dies ist als das Multiplikationsprinzip bekannt und wie der Name andeutet multiplizieren wir die einzelnen Ergebnisse und erhalten
->$$6 \cdot 4 \cdot 630 = 15\;120$$
+>$$6 \cdot 4 \cdot 496 = 11\;904$$
 
 
 #### Aufgabe 1(h)

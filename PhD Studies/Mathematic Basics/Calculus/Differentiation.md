@@ -1,4 +1,4 @@
->[!theorem] Rolle's Theorem ([[../../../Sources/briggs2019.pdf#page=276  | Source]])
+>[!theorem] Rolle's Theorem ([[../../../PDFs/briggs2019.pdf#page=276| Source]])
 >Let $f$ be continuous on a closed interval $[a,b]$ and differentiable on $(a,b)$ with $f(a) = f(b)$. There is at least one point $c$ in $(a,b)$ such that $f'(c) = 0$.
 >
 >![[figures/rolles_theorem.png | 350]]
@@ -15,7 +15,7 @@
 
 ^5732a4
 
->[!theorem] Mean Value Theorem ([[../../../Sources/briggs2019.pdf#page=277 | Source]])
+>[!theorem] Mean Value Theorem ([[../../../PDFs/briggs2019.pdf#page=277| Source]])
 > If $f$ is continuous on the closed interval $[a,b]$ and differentiable on $(a,b)$, then there is at least on point $c$ in $(a,b)$ such that
 > $$\frac{f(b)-f(a)}{b-a} = f'(c)$$
 > 

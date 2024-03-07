@@ -1,12 +1,12 @@
 >[!Source]
 ><u>Book:</u> Maximum Likelihood Estimation and Inference: With Examples in R, SAS and ADMB
 >>URL: https://www.wiley.com/en-us/Maximum+Likelihood+Estimation+and+Inference%3A+With+Examples+in+R%2C+SAS+and+ADMB-p-9780470094822
->PDF: [PDF](millar2011.pdf)
+>PDF: [PDF](../../../../PDFs/millar2011.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@millar2011)
 >
 ><u>Book:</u> Econometric Analysis (Page 537)
 >>URL: https://elibrary.pearson.de/book/99.150005/9781292231150
->PDF: [PDF](greene2019.pdf)
+>PDF: [PDF](../../../../PDFs/greene2019.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@greene2019)
 
 

@@ -6,7 +6,7 @@ aliases:
 
 >[!Source]
 >Page 114
->PDF: [PDF](bishop2006.pdf)
+>PDF: [PDF](../../../PDFs/bishop2006.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@bishop2006)
 
 >[!Introduction]

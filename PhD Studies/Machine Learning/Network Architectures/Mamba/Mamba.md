@@ -8,7 +8,7 @@ aliases:
 
 >[!Links]-
 >URL: http://arxiv.org/abs/2312.00752
->PDF: [PDF](gu2023.pdf)
+>PDF: [PDF](../../../../PDFs/gu2023.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@gu2023)
 
 >[!ABSTRACT]-
@@ -30,7 +30,7 @@ aliases:
 >>
 >> Examples for these general state space models are recurrent neural networks, hidden Markov models, Kalman filters, linear dynamical systems etc.
 >>
->> See [Pattern Recognition and Machine Learning by Bishop](../../../../Sources/bishop2006.pdf) page 605 ff.
+>> See [Pattern Recognition and Machine Learning by Bishop](../../../../PDFs/bishop2006.pdf) page 605 ff.
 
 >[!observation]
 >Transformers are mostly used for creating complex sequence based models. They mostly utilize some *attention mechanic (self-attention)*. Attention models suffer from 

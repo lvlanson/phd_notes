@@ -1,5 +1,5 @@
 ### 1.1 Basic Definitions 
->[!def] Definition $L^2[a,b]$ Space ([[../../../Sources/olson2017.pdf#page=33|Source]])
+>[!def] Definition $L^2[a,b]$ Space ([[../../../PDFs/olson2017.pdf#page=33|Source]])
 >The set of functions $$f(t):[a,b] \to \mathbb{R}$$ whose squared integral is finite, i.e.
 >$$\int _{a}^b \lvert f(t) \rvert^2  \, dt < \infty $$
 >is referred to as 
@@ -22,7 +22,7 @@
 >>The first two terms are finite, because the square of two finite values must be squared. For the last term we use the [[../Functional Analysis/Functional Analysis Basics#^8d565e|Cauchy-Schwartz Inequality]]
 >>$$\left\lvert  \int _{a}^b fg \, dt   \right\rvert \leq \underbrace{ \lvert\lvert f \rvert\rvert^2_{2} \; \lvert\lvert g \rvert\rvert^2_{2} }_{ < \infty }   \tag*{$\square$}$$
 
->[!theorem] Theorem Fourier Transformation ([[../../../Sources/olson2017.pdf#page=34|Source]])
+>[!theorem] Theorem Fourier Transformation ([[../../../PDFs/olson2017.pdf#page=34|Source]])
 >Let $f \in L^2[a, b ]$, then $f$ can be represented as
 >$$\hat{f}(t) = \frac{a_{0}}{2} + \sum_{k=1}^\infty a_{k} \cos(kt)+b_{k} \sin(kt)$$
 >with
@@ -33,7 +33,7 @@
 
 ^da9999
 
->[!theorem] Theorem Generalized Fourier Transformation ([[../../../Sources/olson2017.pdf#page=34|Source]])
+>[!theorem] Theorem Generalized Fourier Transformation ([[../../../PDFs/olson2017.pdf#page=34|Source]])
 >Let $f \in L^2[-\pi, \pi ]$, then $f$ can be represented as the Fourier Series
 >$$\hat{f}(t) = \frac{a_{0}}{2} + \sum_{k=1}^\infty a_{k} \cos\left( \frac{k\pi(t-h)}{H} \right)+b_{k} \sin\left( \frac{k\pi(t-h)}{H} \right)$$
 >with 
@@ -72,7 +72,7 @@
 >\end{align}$$
 >with coefficients being defined as above
 
->[!def] Definition Even and Odd Functions ([[../../../Sources/olson2017.pdf#page=37|Source]])
+>[!def] Definition Even and Odd Functions ([[../../../PDFs/olson2017.pdf#page=37|Source]])
 >A function $f$ is said to be **even** if
 >$$ f(t) = f(-t)$$
 >A function $f$ is said to be **odd** if
@@ -97,7 +97,7 @@
 >- even and odd -> odd
 >- odd and odd -> even
 
->[!def] Definition Characteristic Binary Function ([[../../../Sources/olson2017.pdf#page=36|Source]])
+>[!def] Definition Characteristic Binary Function ([[../../../PDFs/olson2017.pdf#page=36|Source]])
 >$$\begin{align}
 >\mathcal{X}_a(t) &= \begin{cases}
 >1 & \text{ if } \lvert t \rvert< a \\
@@ -176,7 +176,7 @@
 >[!remark]
 >Fourier series approximate functions only on the interval, but not outside the interval.
 
->[!def] Definition Error Function ([[../../../Sources/olson2017.pdf#page=42|Source]])
+>[!def] Definition Error Function ([[../../../PDFs/olson2017.pdf#page=42|Source]])
 >$$E_{n}(f) = \int _{-\pi}^\pi \lvert f(t) - S_{n}(t) \rvert^2  \, dt $$
 
 >[!remark]
@@ -185,7 +185,7 @@
 
 ### 1.2 Orthogonality and Completeness
 
->[!def] Definition Inner Product ([[../../../Sources/olson2017.pdf#page=45|Source]])
+>[!def] Definition Inner Product ([[../../../PDFs/olson2017.pdf#page=45|Source]])
 >Let $f,g \in L^2[a,b]$, then the inner product between $f,g$ is
 >$$(f \cdot g) \equiv \langle f,g \rangle = \int _{a}^b f(t)\overline{g(t)} \, dt $$
 >The length of $f$ is given as
@@ -196,14 +196,14 @@
 
 ^a7fb8f
 
->[!def] Definition Orthogonality ([[../../../Sources/olson2017.pdf#page=46|Source]])
+>[!def] Definition Orthogonality ([[../../../PDFs/olson2017.pdf#page=46|Source]])
 >1. The functions $f,g \in L^2[a,b]$ are orthogonal if
 >$$\langle f,g \rangle =0$$
 >2. A collection or set of functions $\{ o_{k}(t) \}_{k=0}^N$ is orthogonal if
 >$$ \langle o_{j}, o_{i} \rangle= 0 \qquad \forall i\neq j$$
 >3. A set of functions is orthonormal if they are orthogonal and $\lvert\lvert o_{j} \rvert\rvert = 1$
 
->[!theorem] Theorem Orthogonality of Sine and Cosine Functions ([[../../../Sources/olson2017.pdf#page=46|Source]])
+>[!theorem] Theorem Orthogonality of Sine and Cosine Functions ([[../../../PDFs/olson2017.pdf#page=46|Source]])
 >The functions $\{ \cos(kt) \}_{k=0}^\infty$ and $\{ \sin(kt) \}_{k=0}^\infty$ are orthogonal on the interval $[-\pi,\pi]$, i.e.
 >$$\begin{align}
 > \int  \cos(mt)\sin(nt) \, dt &= 0 \\

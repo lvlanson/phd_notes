@@ -92,7 +92,7 @@
 >[!Quote]- Quotes - What is BERT?
 >##### What is BERT?
 >>(...) BERT is designed to pretrain deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be finetuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial taskspecific architecture modifications.
->>	-  [[../../Literature/@devlin2019|@devlin2019]]
+>>	-  [[../../References/@devlin2019|@devlin2019]]
 >
 >>BERT’s model architecture is a multi-layer bidirectional Transformer encoder based on the original implementation described in Vaswani et al. (2017)(...).
 >

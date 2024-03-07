@@ -1,6 +1,6 @@
 ## Fundamental Principles
 
->[!def] Definition Addition Principle ([[../../../Sources/brualdi2004.pdf#page=57|Source]])
+>[!def] Definition Addition Principle ([[../../../PDFs/brualdi2004.pdf#page=57|Source]])
 >Suppose that a set $S$ is partitioned into parts $S_{1}, S_{2}, \dots, S_{m}$. The number of objects in $S$ can be determined by finding the number of objects in each of the parts, and adding the numbers so obtained: $$\lvert S \rvert = \lvert S_{1} \rvert + \lvert S_{2} \rvert + \dots+ \lvert S_{m} \rvert   $$
 >>[!example] 
 >> Suppose we wish to find the number of different courses offered by the University of Wisconsin-Madison. We partition the courses according to the department in which they are listed.
@@ -13,7 +13,7 @@
 ^2c1488
 
 
->[!def] Definition Multiplication Principle ([[../../../Sources/brualdi2004.pdf#page=58|Source]])
+>[!def] Definition Multiplication Principle ([[../../../PDFs/brualdi2004.pdf#page=58|Source]])
 >Let $S$ be a set of ordered pairs $(a,b)$ of objects, where the first object $a$ comes from a set of size $p$, and for each choice of object $a$ there are $q$ choices for object $b$. Then the size of $S$ is $p \times q$:
 >$$\lvert S \rvert = p \times q $$
 >>[!remark] Remark Multiplication Principle a consequence of the Addition Principle
@@ -79,7 +79,7 @@
 
 ^e662cc
 
->[!def] Definition Subtraction Principle ([[../../../Sources/brualdi2004.pdf#page=60|Source]])
+>[!def] Definition Subtraction Principle ([[../../../PDFs/brualdi2004.pdf#page=60|Source]])
 >Let $A$ be a set and let $U$ be a larger set containing $A$. Let 
 >$$\overline{A} = \{  x \in U : x \not\in A \}$$
 >be the complement of $A$ in $U$. Then the number $\lvert A \rvert$ of objects in $A$ is given by the rule 
@@ -106,7 +106,7 @@
 >>\end{align}$$
 >> 
 
->[!def] Definition Division Principle ([[../../../Sources/brualdi2004.pdf#page=61|Source]])
+>[!def] Definition Division Principle ([[../../../PDFs/brualdi2004.pdf#page=61|Source]])
 >Let $S$ be a finite set that is partitioned into $k$ parts in such a way that each part contains the same number of objects. Then the number of parts in the partition is given by the rule
 >$$k = \frac{\lvert S \rvert }{\text{number of obects in a part}}$$
 >
@@ -164,7 +164,7 @@
 >>> &= 69 \tag*{$\square$}  
 >>>\end{align}$$
 
->[!def] Definition Multiset ([[../../../Sources/brualdi2004.pdf#page=50|Source]])
+>[!def] Definition Multiset ([[../../../PDFs/brualdi2004.pdf#page=50|Source]])
 > A multiset is a collection of objects which can occur multiple, i.e. elements of such a set need not to be distinct
 > $$\begin{align}
 > M&= \left\{  \underbrace{ a_{1}, \dots ,a_{1} }_{ k_{1}\text{ times} }, \underbrace{ a_{2}, \dots, a_{2} }_{ k_{2}\text{ times} }, \dots, \underbrace{ a_{r}, \dots, a_{r} }_{ k_{r}\text{ times} }\right\} \\
@@ -175,7 +175,7 @@
 
 ## Permutation of Sets
 
->[!def] Definition $r$-permutations ([[../../../Sources/brualdi2004.pdf#page=65|Source]])
+>[!def] Definition $r$-permutations ([[../../../PDFs/brualdi2004.pdf#page=65|Source]])
 >Let $r$ be a positive integer. By an $r$-permutation of a set $S$ of $n$ elements, we understand an ordered arrangement of $r$ of the $n$ elements.
 >
 >We denote the $r$-permutation as 
@@ -187,7 +187,7 @@
 >>****
 
 
->[!theorem] Theorem ([[../../../Sources/brualdi2004.pdf#page=65|Source]])
+>[!theorem] Theorem ([[../../../PDFs/brualdi2004.pdf#page=65|Source]])
 >For $n,r \in \mathbb{N}^+$ with $r \leq n$ 
 >$$\begin{align}
 > P(n,r) &= n \cdot (n-1) \cdot \dots \cdot (n-r+1) \\ 
@@ -347,7 +347,7 @@
 >[!note] Note, Circular Permutations have been omitted
 ## Combination of Sets
 
->[!def] Definition $r$-Combination ([[../../../Sources/brualdi2004.pdf#page=72|Source]])
+>[!def] Definition $r$-Combination ([[../../../PDFs/brualdi2004.pdf#page=72|Source]])
 > Let $r$ be a non-negative integer. By an $r$-combination of a set $S$ of $n$ elements, we understand an unordered selection of $r$ of the $n$ objects of $S$.
 >
 >We denote the $r$-combination as
@@ -425,11 +425,11 @@
 >>> $$C(15,12)\cdot P(25,12)$$
 >
 
->[!property] Corollary ([[../../../Sources/brualdi2004.pdf#page=75|Source]])
+>[!property] Corollary ([[../../../PDFs/brualdi2004.pdf#page=75|Source]])
 >For $0 \leq r \leq n$
 >$$\binom{n}{r}= \binom{n}{n-r}$$
 
->[!theorem] Theorem ([[../../../Sources/brualdi2004.pdf#page=75|Source]])
+>[!theorem] Theorem ([[../../../PDFs/brualdi2004.pdf#page=75|Source]])
 >$$\binom{n}{0}+\binom{n}{1}+\binom{n}{2}+ \dots + \binom{n}{n} = 2^n$$
 >>[!proof]-
 >> Let $S$ denote a set of cardinality $n$. First we note, that any binomial coefficient is the $r$-combination
@@ -443,10 +443,10 @@
 
 ## Permutation of Multisets
 
->[!def] Definition Multiset Permutation ([[../../../Sources/brualdi2004.pdf#page=76|Source]])
+>[!def] Definition Multiset Permutation ([[../../../PDFs/brualdi2004.pdf#page=76|Source]])
 > If $S$ is a multiset, an $r$-permutation of $S$ is an ordered arrangement of $r$ of the objects of $S$. If the total number of objects of $S$ is $n$ (including repetitions), then an $n$-permutation of $S$ will also be called a permutation of $S$
 
->[!theorem] Theorem ([[../../../Sources/brualdi2004.pdf#page=76|Source]])
+>[!theorem] Theorem ([[../../../PDFs/brualdi2004.pdf#page=76|Source]])
 >Let $S$ be a multiset with objects of $k$ different types, where each has an **infinite** repetition number.
 > $$S = \{ \infty \cdot \alpha_{1}, \infty \cdot \alpha_{2}, \dots, \infty \cdot \alpha_{k} \}$$
 >Then the number of $r$-permutations of $S$ is $$k^r$$
@@ -470,7 +470,7 @@
 
 ^9a298e
 
->[!theorem] Theorem ([[../../../Sources/brualdi2004.pdf#page=77|Source]])
+>[!theorem] Theorem ([[../../../PDFs/brualdi2004.pdf#page=77|Source]])
 >Let $S$ be a multiset with objects of $k$ different types with **finite** repetition numbers $n_{1},n_{2}, \dots, n_{k}$ respectively. Let the size of $S$ be $n=n_{1}+n_{2}+\dots+n_{k}$. Then the number of permutations of $S$ equals
 >$$\frac{n!}{n_{1}!n_{2}!\dots n_{k}!}$$
 >>[!proof]-
@@ -506,7 +506,7 @@
 >
 >>[!example]
 >>How many possibilities are there for 8 non-attacking rooks on an 8-by-8 chessboard?
->>![[../../../Pasted image 20240304122332.png| center]]
+>>![[Figures/rook_example.png| center]]
 >>>[!example]- Solution
 >>>Lets denote a square on the board as $(i,j)$ with $i$ denoting a row and $j$ a column and $1 \leq i,j \leq 8$. Since rooks attack each other if they are on the same row or column, we know that a rook must be placed on each row and column. Lets first fix the position of the rows, i.e.
 >>>$$(1, j_{1}), (2, j_{2}), \dots, (8, j_{8})$$
@@ -540,7 +540,7 @@
 
 ## Combination of Multisets
 
->[!theorem] Theorem ([[../../../Sources/brualdi2004.pdf#page=83|Source]])
+>[!theorem] Theorem ([[../../../PDFs/brualdi2004.pdf#page=83|Source]])
 > Let $S$ be a multiset with objects of $k$ types, each with an infinite repetition number. Then the number of $r$-combinations of $S$ equals
 > $$\binom{r+k-1}{r} = \binom{r+k-1}{k-1}$$
 >>[!proof]

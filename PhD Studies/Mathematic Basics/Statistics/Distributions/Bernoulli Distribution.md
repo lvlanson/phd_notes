@@ -3,7 +3,7 @@ aliases:
 - Bernoulli Distribution
 ---
 >[!source]
->PDF: [PDF](grimmett1986.pdf)
+>PDF: [PDF](../../../../PDFs/grimmett1986.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@grimmett1986)
 
 >[!introduction]

@@ -1,0 +1,264 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\subsection{1. Introduction to Linear Ordinary Differential
+Equations}\label{introduction-to-linear-ordinary-differential-equations}
+
+\begin{quote}
+{[}!Question{]} Question: What is a Linear Ordinary Differential
+Equation (ODE)? A linear ODE is an equation of the form
+\[y^{(n)} =\sum_{i=0}^{n-1} a_{i}y^{(i)}\] where \(y^{(i)}\) is the
+\(i\)-th derivative of the function real/complex valued function
+\(y(t)\) and \(a_i\) are either constants or functions of \(t\). In this
+definition \(n\) gives the order of the ODE.
+
+In an ODE the variable of interest is the unknown function \(y\).
+\end{quote}
+
+\begin{quote}
+{[}!example{]} Example Linear First Order ODE ODE: \(y'=2y+3\) Solution:
+\(y = ce^{2t}-\frac32\) \textgreater{[}!Calculation{]}- Calculation
+(Separation of Variables)
+\textgreater{}\[\begin{align} \frac{dy}{dt} &= 2y + 3 \\ 
+>\frac{dy}{2dt} &= y + \frac{3}{2} \\
+>\frac{1}{y+\frac{3}{2}}\; dy&= 2\; dt \\
+>\int \frac{1}{y+\frac32} \; dy &= \int 2 \; dt \\
+>\ln\left(y+\frac32\right) &= 2t +c_0\\
+>y + \frac32&=e^{2t} e^{c_0}\\
+>y &= ce^{2t}-\frac32
+>\end{align}\]
+
+Note, solving an ODE yields an integration constant \(c\). Any choice of
+\(c\) will be a solution to the ODE.
+
+!{[}{[}ODE\_example\_1.png \textbar{} center \textbar{} 500 {]}{]}
+\[\text{Figure: Direction Field of ODE with solutions at } y_{0}=(-20, -15, -10, -5, 0, 5, 10, 15) \text{ with } y_{0} = y(0)\]
+\end{quote}
+
+\begin{quote}
+{[}!remark{]} The solution for a first order ODE characterizes
+infinitely many functions, dependent on the choice of the integration
+constant \(c\).
+\end{quote}
+
+\begin{quote}
+{[}!theorem{]} Hypothesis: ODE LVQ Fundamental Principle 1. Let an ODE
+represent a prototype in an LVQ learning scheme 2. Let an (for now)
+arbitrary function represent a data point in the LVQ learning scheme
+
+\textbf{Main Idea:} As previously remarked, an ODE \textbf{represents a
+set of functions prototyped by the ODE}. What if we can develop a
+learning scheme, such that * an ODE will be learned discriminating
+functions
+\end{quote}
+
+\begin{quote}
+{[}!Warning{]} Issues 1. How to initialize prototypes? 2. Given an ODE,
+how to determine which function out of the set of functions described by
+the ODE fits best to a datapoint (function)? 3. Time series data more
+often than not is a set of discrete points. How should we get an ODE
+from such a set of discrete data points? 4. How to compare an ODE
+(prototype) to another function (data point)? (Metric) 5. Given we
+solved the first issues, how to formulate an update rule?
+\end{quote}
+
+\subsection{2. Road to ODE LVQ}\label{road-to-ode-lvq}
+
+\subsubsection{Issue 1 Prototype
+Inititialization}\label{issue-1-prototype-inititialization}
+
+\begin{quote}
+{[}!theorem{]} Initialization of Prototypes 1. Choose an arbitrary
+datapoint for a given class. 2. An ODE can be calculated given there is
+a function suitable for calculating its ODE
+\end{quote}
+
+\begin{quote}
+{[}!example{]} Example: Determining the ODE for a function
+\(y(t)=\frac{c_{1}}{t}+c_{2}t\) First, we take the derivative with
+respect to \(t\) \[\begin{align}
+y' = -\frac{c_{1}}{t^2}+c_{2}
+\end{align}\] Solving for \(c_2\) gives \[c_{2} = \frac{c_{1}}{t^2}+y'\]
+Inserting this solution into the original equation gives \[\begin{align}
+y &= \frac{c_{1}}{t}+ \left( \frac{c_{1}}{t^2}+y' \right)t \\
+  &= \frac{c_{1}}{t}+ \frac{c_{1}}{t}+y't \\
+  &= \frac{2c_{1}}{t}+y't \\
+y-y't  &= 2c_{1}\\ 
+yt-y't^2  &= 2c_{1} \\ 
+\end{align}\] Taking now again the derivative with respect to \(t\)
+yields \[\begin{align}
+y+y't-2y't-y''t^2 = 0 \\
+y-y't-y''t^2 = 0 \\
+\end{align}\]
+\end{quote}
+
+\subsubsection{Issue 2 Function Choice in
+ODE}\label{issue-2-function-choice-in-ode}
+
+\begin{quote}
+{[}!def{]} Definition Initial Value Problem
+({[}{[}../../../Sources/nagy.pdf\#page=18\textbar Source{]}{]}) The
+initial value problem (IVP) is to find all solutions \(y\) to
+\[ y' = ay+b \] that satisfy the initial condition
+\[ y(t_0) = y_0 \tag{Initial Condition}\] where \(a,b,t_0, y_0\) are
+given constants. \textgreater{[}!note{]} \textgreater The differential
+equation has a unique solution with respect to the initial condition.
+\end{quote}
+
+Similarly for second order ODEs etc. \textgreater{[}!theorem{]} Theorem
+Solutions to IVP of Second Order ODEs
+({[}{[}../../../Sources/nagy.pdf\#page=88 \textbar{} Source{]}{]})
+\textgreater If \textgreater- the functions \(a_{0},a_{1}, b\) are
+continuous on a closed interval \(I \subset \mathbb{R}\), \textgreater-
+the constant \(t_{0} \in I\), \textgreater- and
+\(y_{0}, y_{1} \in \mathbb{R}\) are arbitrary constants \textgreater{}
+\textgreater then there is a unique solution \(y\), defined on \(I\), of
+the initial value problem
+\textgreater{}\[y'' + a_{1}(t)y'+ a_{0}(t)y = b(t)\] \textgreater with
+\[ y(t_{0})=y_{0} \quad y'(t_{0})= y_{1}\]
+
+\begin{quote}
+{[}!remark{]} Remarks 1. Even if we would construct ODEs of higher
+orders, we could still find a matching function in the higher order ODE
+by utilizing the initial value problem. 2. Alex suggested that there
+might be other ways to pick a matching ODE, so this can still be changed
+if needed (needs more research) 3. This method for now allows a straight
+forward approach to pick a function from the ODE
+\end{quote}
+
+\subsubsection{Issue 3 Discrete Data}\label{issue-3-discrete-data}
+
+!{[}{[}Figures/rs\_1\_fig\_1.png\textbar center\textbar1000{]}{]}
+\[\text{Figure: How to find an ODE representing the sequence of discrete points}\]
+
+\begin{quote}
+{[}!remark{]} Discussion: Many possibilities 1. Interpolation (Spline)
+2. Possibly using Laplace transform and treat it as piecewise continuous
+functions (not confirmed yet) 3. Dirac Delta Expansion with Fourier
+Transform 4. My Approach: Discrete Fourier Transform (DFT)
+\end{quote}
+
+\begin{quote}
+{[}!properties{]} Properties of Sine and Cosine Functions The
+derivatives/anti-derivatives of \(\sin\) and \(cos\) behave nicely, i.e.
+\[\begin{align}
+\frac{d}{dt} \sin(ct) &= c \cos(ct) \\
+\frac{d}{dt} \cos(ct) &= -c \sin(ct)
+\end{align}\] \textgreater{[}!note{]} \textgreater The notion \emph{nice
+behavior} means \(\sin\) and \(\cos\) are very predictable in their
+derivatives/antiderivatives. The arguments inside the function stay
+constant and, the derivatives switch between \(\sin\) and \(\cos\).
+\end{quote}
+
+\begin{quote}
+{[}!example{]} Example Step Function Let's approximate the step function
+the step function \[f(x) = \begin{cases}
+1 & \text{ if } 0 \leq x < \pi \\
+-1 & \text{ if } \pi \leq x < 2\pi
+\end{cases}\] by a partial Fourier sum \(FS_{N}[f]_{t}\) with accuracy
+\(N=2\), we get
+\[y = \frac{4}{\pi}\left( \sin(x)+ \frac{1}{3}\sin(3x) + \frac{1}{5}\sin(5x)+ \frac{1}{7}\sin(7x) + \frac{1}{9}\sin(9x) \right)\]
+We will omit the factor \(\frac{4}{\pi}\) for simplification purposes
+\[y =  \sin(x)+ \frac{1}{3}\sin(3x) \]
+!{[}{[}Figures/rs\_1\_fig\_2.png{]}{]}
+\[\text{Figure: partial sum in green, step function in orange}\] Lets
+determine an ODE from the approximation and parameterize the first
+coefficient. Hence,
+\[y = \underbrace{ c_{1} \sin(x) }_{ \substack{\text{ first}\\ \text{ coefficient}} }+ \frac{1}{3}\sin(3x) + \frac{1}{5}\sin(5x) + \frac{1}{7}\sin(7x) + \frac{1}{9}\sin(9x) \tag{1}\]
+We determine the first derivative
+\[y' = c_{1} \cos(x)+ \cos(3x)+ \cos(5x)+\cos(7x)+ \cos(9x)\] We solve
+for \(c_{1}\)
+\[c_{1} = \frac{y' - \cos(3x)-\cos(5x)-\cos(7x)-\cos(9x)}{\cos (x)}\]
+Inserting \(c_{1}\) into equation \((1)\) gives \[\begin{align}
+y &= \frac{(y' - \cos(3x)-\cos(5x)- \cos(7x)-\cos(9x))\sin (x)}{\cos (x)}+ \frac{1}{3}\sin(3x) + \frac{1}{5}\sin(5x)+ \frac{1}{7}\sin(7x) + \frac{1}{9}\sin(9x) \\
+&=\frac{y'\sin(x)}{\cos(x)} -\frac{\sin(x)(\cos(3x)+ \cos(5x)+\cos(7x)+\cos(9x))}{\cos(x)} + \frac{1}{3}\sin(3x) + \frac{1}{5}\sin(5x)+ \frac{1}{7}\sin(7x) + \frac{1}{9}\sin(9x)
+\end{align} \] We now need to solve for \(y'\) to yield the ODE, the
+solution is \[\begin{align}
+y' = \cos(3x)+\cos(5x)+\cos(7x)+\cos(9x) - \frac{\cos(x)}{\sin(x)}\left(\frac{1}{3}\sin(3x) + \frac{1}{5}\sin(5x)+\frac{1}{7}\sin(7x) + \frac{1}{9}\sin(9x) - y\right)
+\end{align}\] !{[}{[}Figures/rs\_1\_fig\_3.png{]}{]}
+\[\text{ODE with dependence on }\sin(x)\] If we solve for the \(4\)-th
+coefficient (\(\frac{1}{7}\sin(7x)\)), we get
+\[y' = \cos(x)+\cos(3x)+\cos(5x)+\cos(9x) - \frac{7\cos(7x)}{\sin(x)}\left(\sin(x)+\frac{1}{3}\sin(3x) + \frac{1}{5}\sin(5x)+ \frac{1}{9}\sin(9x) - y\right)\]
+!{[}{[}Figures/rs\_1\_fig\_4.png{]}{]}
+\[\text{ODE with dependence on } \frac{1}{7}\sin(7x)\]
+\end{quote}
+
+\begin{quote}
+{[}!Observation{]} Dependent on which frequency term we use, the ODE
+\end{quote}
+
+\begin{quote}
+{[}!question{]} Questions 1. Which parameter should be chosen to define
+the ODE, and could it be beneficial to use higher order ODEs? 2. How
+many should be chosen? 3. How would many parameters affect the
+construction?
+\end{quote}
+
+\subsubsection{Issue 4 + 5 Comparing ODE to Function (Metric) and
+updating
+prototype}\label{issue-4-5-comparing-ode-to-function-metric-and-updating-prototype}
+
+\begin{quote}
+{[}!observation{]} Idea 1. Find function with \emph{initial value
+problem} (IVP) 2. Compare IVP determined function with data point
+function * using Dynamic Timewarping * using distance on \(L^2[a,b]\)
+norm * using distance based on maximums norm 3. ??? * update IVP
+function \(u^*\)-\textgreater{} determine ODE -\textgreater{} update
+prototype with ODE from \(u^*\)
+\end{quote}
+
+\end{document}

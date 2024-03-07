@@ -1,4 +1,4 @@
->[!def] Definition Metric ([[../../../Sources/conci2018.pdf|Source]])
+>[!def] Definition Metric ([[../../../PDFs/conci2018.pdf|Source]])
 > Let $X$ be an arbitrary nonempty set, let $d$ be a real-valued function on the Cartesian product $X \times X$, i.e.
 > $$d: X \times X \to \mathbb{R}$$
 > holding the properties $\forall x,y,z \in X$

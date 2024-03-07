@@ -18,5 +18,6 @@
   "obsidian-latex-suite",
   "obsidian-desmos",
   "obsidian-pandoc",
-  "marp-slides"
+  "marp-slides",
+  "webpage-html-export"
 ]

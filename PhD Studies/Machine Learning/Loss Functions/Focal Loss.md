@@ -6,7 +6,7 @@ aliases:
 ---
 >[!sources]-
 >URL: http://arxiv.org/abs/1708.02002
->PDF: [PDF](lin2018.pdf)
+>PDF: [PDF](../../../PDFs/lin2018.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@lin2018)
 >
 

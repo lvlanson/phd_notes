@@ -1,5 +1,5 @@
 
->[!def] Definition Trigonometric Fourier Series ([[../../../Sources/howell2016.pdf#page=113|Source]])
+>[!def] Definition Trigonometric Fourier Series ([[../../../PDFs/howell2016.pdf#page=113|Source]])
 >Let $f$ be a periodic function with period $p$ where $p$ is some positive number. The (trigonometric) Fourier $FS$ series for $f$ is the infinite series
 >$$FS[f]\rvert_{t} = A_{0} + \sum_{k=1}^\infty \Big[ a_{k} \cos\big(2\pi \omega_{k}t\big) + b_{k} \sin\big(2\pi \omega_{k}t\big)\Big]$$
 >where, for $k = 1,2,3, \dots$

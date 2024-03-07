@@ -9,7 +9,7 @@ aliases:
 
 >[!Links]-
 >URL: http://arxiv.org/abs/2111.00396
->PDF: [PDF](gu2022.pdf)
+>PDF: [PDF](../../../../PDFs/gu2022.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@gu2022)
 
 >[!question] Question *How to model long-range dependencies (LDRs)?*

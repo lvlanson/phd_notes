@@ -1,6 +1,6 @@
 ## 2.1 Variable Coefficients
 
->[!def] Definition Second Order Linear Differential Equations ([[../../../Sources/nagy.pdf#page=86 | Source]])
+>[!def] Definition Second Order Linear Differential Equations ([[../../../PDFs/nagy.pdf#page=86| Source]])
 >A **second order linear differential equation** for the function $y$ is
 >$$y'' + a_{1}(t) y' + a_{0}(t)y = b(t)$$
 >where $a_{1}, a_{0}, b$ are given functions on the interval $I \subset \mathbb{R}$. The equation above 
@@ -87,7 +87,7 @@
 >\end{alignat}$$
 
 
->[!theorem] Theorem Solutions to IVP of Second Order ODEs ([[../../../Sources/nagy.pdf#page=88 | Source]])
+>[!theorem] Theorem Solutions to IVP of Second Order ODEs ([[../../../PDFs/nagy.pdf#page=88| Source]])
 >If 
 >- the functions $a_{0},a_{1}, b$ are continuous on a closed interval $I \subset \mathbb{R}$, 
 >- the constant $t_{0} \in I$, 
@@ -132,12 +132,12 @@
 >>[!note]
 >>$L$ is an **operator**, because it takes a function $y$ as input. Since we are describing $L$ as a mapping of differentials on $y$, we call $L$ a **differential operator**.
 
->[!def] Definition Linear Operator ([[../../../Sources/nagy.pdf#page=89 | Source]])
+>[!def] Definition Linear Operator ([[../../../PDFs/nagy.pdf#page=89| Source]])
 >An operator $L$ is a **linear operator** iff for every pair of functions $y_{1},y_{2}$ and constants $c_{1}, c_{2}$ holds
 >$$L(c_{1}y_{1}+ c_{2}y_{2}) = c_{1}L(y_{1})+ c_{2}L(y_{2})$$
 
 
->[!theorem] Theorem Linear Differential Operator ([[../../../Sources/nagy.pdf#page=89 | Source]])
+>[!theorem] Theorem Linear Differential Operator ([[../../../PDFs/nagy.pdf#page=89| Source]])
 >The operator $L(y)=y'' + a_{1}y' + a_{0}y$, where $a_{0},a_{1}$ are continuous functions and $y$ is a twice differentiable function, **is a linear operator**
 >>[!proof]-
 >>$$\begin{align}
@@ -150,7 +150,7 @@
 
 ^dec49d
 
->[!theorem] Theorem Superposition ([[../../../Sources/nagy.pdf#page=90 | Source]])
+>[!theorem] Theorem Superposition ([[../../../PDFs/nagy.pdf#page=90| Source]])
 > If $L$ is a linear operator and $y_{1}, y_{2}$ are solutions of the homogeneous equations $L(y_{1})=0$ and $L(y_{2})=0$, then for every constant $c_1, c_2$ holds
 > $$L(c_{1}y_{1}+ c_{2}y_{2})=0$$
 >>[!note]
@@ -196,7 +196,7 @@
 
 ^2aec50
 
->[!def] Definition Fundamental and General Solution ([[../../../Sources/nagy.pdf#page=91 | Source]])
+>[!def] Definition Fundamental and General Solution ([[../../../PDFs/nagy.pdf#page=91| Source]])
 >1. The function $y_1$ and $y_2$ are **fundamental solutions** of the equation $L(y)=0$ iff $y_1, y_{2}$ are linear linearly independent and $$L(y_{1})=0, \quad L(y_{2})= 0$$
 >2. The **general solution** of the homogeneous equation $L(y)=0$ is a two-parameter family of functions $y_{\text{gen}}$ given by
 >   $$y_{\text{gen}}(t) = c_{1}y_{1}(t)+c_{2}y_{2}(t)$$
@@ -230,7 +230,7 @@
 >>[!remark]- Remark Fundamental Solutions not Unique
 >>Note, fundamental solutions are not unique. The preceding example also has solutions $y_1 = \frac{2}{3}e^t + \frac{1}{3}e^{-2t}$ and $y_2 = \frac{1}{3} (e^t - e^{-2t})$
 
->[!theorem] Theorem General Solution to Second Order ODEs ([[../../../Sources/nagy.pdf#page=91 | Source]])
+>[!theorem] Theorem General Solution to Second Order ODEs ([[../../../PDFs/nagy.pdf#page=91| Source]])
 >If $y_{1}$ and $y_{2}$ are linearly independent solutions of the equation $L(y)=0$ on an interval $I \subset \mathbb{R}$, where $L(y)=y'' + a_{1}y' + a_{0}y$, and $a_{1},a_{2}$ are continuous functions on $I$, then there are unique constants $c_{1},c_{2}$ such that every solution $y$ of the differential equation $L(y)=0$ on $I$ can be written as a linear combination
 >$$y(t) = c_{1}y_{1}(t) + c_{2}y_{2}(t)$$
 >>[!proof]-
@@ -279,7 +279,7 @@
 >>>[!note]
 >>>The Wronskian function and its properties will be discussed following
 
->[!def] Definition The Wronskian Function ([[../../../Sources/nagy.pdf#page=93 | Source]])
+>[!def] Definition The Wronskian Function ([[../../../PDFs/nagy.pdf#page=93| Source]])
 > The **Wronskian** of the differentiable functions $y_{1}, y_{2}$ is the function
 > $$W_{12}(t)=y_{1}(t)y_{2}'(t)-y_{1}'y_{2}(t)$$
 > 
@@ -317,7 +317,7 @@
 >>\end{align}$$
 >>
 
->[!theorem] Theorem Wronskian (I) ([[../../../Sources/nagy.pdf#page=93 | Source]])
+>[!theorem] Theorem Wronskian (I) ([[../../../PDFs/nagy.pdf#page=93| Source]])
 >If $y_{1}, y_{2}$ are linearly dependent on $I \subset \mathbb{R}$ then
 >$$W_{12}=0 \;\; \text{ on }\;\; I$$
 >>[!proof]-
@@ -366,10 +366,10 @@
 >>\end{align}$$
 >>Hence, $W_{12} = 0$
 
->[!corollary] Corollary Inverse Wronskian (I) Theorem ([[../../../Sources/nagy.pdf#page=94 | Source]])
+>[!corollary] Corollary Inverse Wronskian (I) Theorem ([[../../../PDFs/nagy.pdf#page=94| Source]])
 > If the Wronskian $W_{12}(t_{0}) \neq 0$ at a point $t_{0}\in I$, then the functions $y_{1}, y_{2}$ are linearly independent.
 
->[!Theorem] Abel's Theorem ([[../../../Sources/nagy.pdf#page=94 | Source]])
+>[!Theorem] Abel's Theorem ([[../../../PDFs/nagy.pdf#page=94| Source]])
 >If $y_{1},y_{2}$ are twice continuously differentiable solutions of $$y''+a_{1}(t)y'+a_{0}(t)y=0$$
 >where $a_{0}, a_{1}$ are continuous on $I \subset \mathbb{R}$, then the Wronskian $W_{12}$ satisfies
 >$$W_{12}'+a_{1}(t)W_{12} = 0$$
@@ -446,11 +446,11 @@
 
 ^78710b
 
->[!theorem] Theorem Wronskian (II) ([[../../../Sources/nagy.pdf#page=95 | Source]])
+>[!theorem] Theorem Wronskian (II) ([[../../../PDFs/nagy.pdf#page=95| Source]])
 >If $y_{1},y_{2}$ are fundamental solutions of $L(y)=0$ on $I \subset \mathbb{R}$, then $W_{12}(t) \neq 0$ on $I$.
 >>[!proof] Proof is given by the inverse Corollary
 
->[!Corollary] Corollary Inverse Wronskian (II) Theorem ([[../../../Sources/nagy.pdf#page=95 | Source]])
+>[!Corollary] Corollary Inverse Wronskian (II) Theorem ([[../../../PDFs/nagy.pdf#page=95| Source]])
 >If $y_{1},y_{2}$ are solutions of $L(y)=0$ on $I \subset \mathbb{R}$ and there is a point $t_{1} \in I$ such that $W_{12}(t_{1})=0$, then $y_{1},y_{2}$ are linearly dependent on $I$.
 >>[!proof]-
 >>By the theorem's condition we know that $y_{1},y_{2}$ are solutions of $L(y)=0$ on $I \subset \mathbb{R}$. By [[#^78710b|Abel's theorem]] we know
@@ -700,18 +700,18 @@
 
 ## 2.2 Reduction Order Methods
 
->[!def] Definition Second Order Equation ([[../../../Sources/nagy.pdf#page=98 | Source]])
+>[!def] Definition Second Order Equation ([[../../../PDFs/nagy.pdf#page=98| Source]])
 > A **second order** equation in the unknown function $y$ is an equation
 > $$y'' = f(t,y,y')$$
 > where the function $f:\mathbb{R}^3 \to \mathbb{R}$ is given. The equation is **linear** iff the function $f$ is linear in both arguments $y$ and $y'$. 
 
->[!def] Definition Special Second Order Equation ([[../../../Sources/nagy.pdf#page=98 | Source]])
+>[!def] Definition Special Second Order Equation ([[../../../PDFs/nagy.pdf#page=98| Source]])
 >A second order differential equation is **special** iff one of the following condition holds
 >1. $y'' = f(t,\cancel{ y },y')$, where $y$ does not appear explicitly
 >2. $y'' = f(\cancel{ t },y,y')$, where $t$ does not appear explicitly
 >3. $y'' = f(\cancel{ t },y,\cancel{ y' })$, where $t$ and $y'$ do not appear explicitly
 
->[!theorem] Theorem Function $y$ is Missing (Case 1) ([[../../../Sources/nagy.pdf#page=98 | Source]])
+>[!theorem] Theorem Function $y$ is Missing (Case 1) ([[../../../PDFs/nagy.pdf#page=98| Source]])
 >If a second order differential equation has the form
 >$$y''=f(t,y')$$
 >then $v=y'$ satisfies the first order equation $v'=f(t,v)$
@@ -801,7 +801,7 @@
 >>Hence, the solution is
 >>$$y=\frac{1}{2}\Big(\ln \lvert t-1 \rvert  - \ln\lvert t+1 \rvert \Big) + 2$$
 
->[!theorem] Theorem Variable $t$ is Missing (Case 2) ([[../../../Sources/nagy.pdf#page=99 | Source]])
+>[!theorem] Theorem Variable $t$ is Missing (Case 2) ([[../../../PDFs/nagy.pdf#page=99| Source]])
 > If the IVP
 > $$y''=f(y,y')$$
 > with 
@@ -958,7 +958,7 @@
 >> y &= \sqrt[4]{  24t+1} \qquad\\
 >>\end{alignat}$$
 
->[!theorem] Theorem Conservation of Energy ([[../../../Sources/nagy.pdf#page=101 | Source]])
+>[!theorem] Theorem Conservation of Energy ([[../../../PDFs/nagy.pdf#page=101| Source]])
 >>[!note]- Change of Notation
 >> We adapt the notation to its physical roots, which originate from Newtonian mechanics. We write now
 >> $$y'' = f(y) \quad \Longleftrightarrow \quad my''=f(y)$$

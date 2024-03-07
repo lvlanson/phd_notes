@@ -1,6 +1,6 @@
 >[!Source]
 >Page 113
->PDF: [PDF](bishop2006.pdf)
+>PDF: [PDF](../../../PDFs/bishop2006.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@bishop2006)
 
 >[!notation]

@@ -29,7 +29,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
                 "mode": "source",
                 "source": true
               }
@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
                 "mode": "preview",
                 "source": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md"
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md"
               }
             }
           },
@@ -221,24 +221,24 @@
     }
   },
   "floating": {
-    "id": "24e3e9ecd4f8a31c",
+    "id": "bb161cdc59ef9899",
     "type": "floating",
     "children": [
       {
-        "id": "a64a8988dc7977a5",
+        "id": "4fa42accbc238719",
         "type": "window",
         "children": [
           {
-            "id": "1e193903cc233b54",
+            "id": "3d5e57d68c552c11",
             "type": "tabs",
             "children": [
               {
-                "id": "24f0535cffcd62f2",
+                "id": "47905f41f2cac4a3",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
                   "state": {
-                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf"
+                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf"
                   }
                 }
               }
@@ -246,23 +246,23 @@
           }
         ],
         "direction": "vertical",
-        "x": 2560,
-        "y": 32,
-        "width": 1280,
-        "height": 1440,
+        "x": 0,
+        "y": 960,
+        "width": 1080,
+        "height": 960,
         "maximize": false,
         "zoom": 0
       },
       {
-        "id": "7e4982ddff754ad7",
+        "id": "4136499eb6197935",
         "type": "window",
         "children": [
           {
-            "id": "9dbb4b9cbd887d1d",
+            "id": "92f993f5e29da490",
             "type": "tabs",
             "children": [
               {
-                "id": "293331cf3b6f085d",
+                "id": "b7a900662b45c06c",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -275,53 +275,28 @@
           }
         ],
         "direction": "vertical",
-        "x": 3840,
-        "y": 0,
-        "width": 1280,
-        "height": 1440,
+        "x": 4463,
+        "y": 952,
+        "width": 1024,
+        "height": 800,
         "maximize": true,
         "zoom": 0
-      },
-      {
-        "id": "a40191007368fa34",
-        "type": "window",
-        "children": [
-          {
-            "id": "6986ec8d55057d6f",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "ac2cab5b068811ae",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Sources/brualdi2004.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2560,
-        "y": 32,
-        "width": 1280,
-        "height": 1440,
-        "maximize": false,
-        "zoom": -1
       }
     ]
   },
   "active": "3cf23456821b7e76",
   "lastOpenFiles": [
-    "Sources/brualdi2004.pdf",
-    "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
-    "Pasted image 20240304122332.png",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.pdf",
+    "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2",
+    "Sources/brualdi2004.pdf",
+    "Pasted image 20240304122332.png",
     "PhD Studies/Mathematic Basics/Combinatorics/Figures/ex_puzzle.png",
     "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
     "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
@@ -330,18 +305,15 @@
     "Sources/Richard A Brualdi - Introductory combinatorics-North-Holland  (2004).pdf",
     "Sources/bogart_script.pdf",
     "Sources/bogart_script.pdf.crdownload",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1",
     "Research Seminar/Figures/rs_1_fig_4.png",
     "Research Seminar/Figures/example_1.png",
     "Research Seminar/Figures/rs_1_fig_3.png",
     "Research Seminar/Figures/rs_1_example_1.png",
     "Research Seminar/Figures/rs_1_fig_1.png",
     "Research Seminar/Figures/rs_1_fig_2.png",
-    "Research Seminar/Figures",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
-    "Research Seminar/Research Seminar 1 Introduction ODE LVQ",
     "PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric.md",
     "Paper/Hyperbox Metric/Hyperbox Metric.md",
     "Paper/Hyperbox Metric/Timeline.md",
@@ -359,7 +331,6 @@
     "PhD Studies/Mathematic Basics/Metrics/Figures/point_set.excalidraw.md",
     "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.png",
     "PhD Studies/Mathematic Basics/Metrics/Dissimilarity.md",
-    "PhD Studies/To-Do.md",
     "Untitled.canvas"
   ]
 }

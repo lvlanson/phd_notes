@@ -1,7 +1,7 @@
 >[!source]
 >>[!Links]-
 >>URL: http://arxiv.org/abs/1808.02574
->>PDF: [PDF](conci2018.pdf)
+>>PDF: [PDF](../../../PDFs/conci2018.pdf)
 >>Zotero: [Zotero-Link](zotero://select/items/@conci2018)
 >
 >>[!ABSTRACT]-

@@ -7,7 +7,7 @@ aliases:
 
 >[!Links]-
 >URL: http://arxiv.org/abs/2009.14119
->PDF: [PDF](ben-baruch2021.pdf)
+>PDF: [PDF](../../../PDFs/ben-baruch2021.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@ben-baruch2021)
 
 >[!ABSTRACT]-

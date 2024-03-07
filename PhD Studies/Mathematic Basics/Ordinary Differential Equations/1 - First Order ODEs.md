@@ -1,10 +1,10 @@
 
 >[!Source]-
 >URL: 
->PDF: [PDF](nagy.pdf)
+>PDF: [PDF](../../../PDFs/nagy.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@nagy)
 
->[!observation]- Introduction ([[../../../Sources/nagy.pdf#page=12|Source]])
+>[!observation]- Introduction ([[../../../PDFs/nagy.pdf#page=12|Source]])
 > A differential equation is an equation, where the unknown is a function and both the function and its derivatives may appear in the equation.
 >
 >>[!example] Example Newton's law
@@ -36,7 +36,7 @@
 
 ## 1 - Solving Linear Differential Equations
 
->[!def] Definition First Order ODE ([[../../../Sources/nagy.pdf#page=13|Source]])
+>[!def] Definition First Order ODE ([[../../../PDFs/nagy.pdf#page=13|Source]])
 >A first order ODE on the unknown $y$ is given as 
 >$$ y'(t) = f(t,y(t))$$
 >where $f$ is given and $y' = \dfrac{dy}{dt}$. The equation is linear iff the source function is linear on its second argument, i.e.
@@ -102,7 +102,7 @@
 >>>$$ y' = a(t)y + b(t)$$
 >>>with $a(t)=2$ and $b(t)=-6$ 
 
->[!theorem] Theorem Solutions of First Order ODEs with Constant Coefficients ([[../../../Sources/nagy.pdf#page=14|Source]])
+>[!theorem] Theorem Solutions of First Order ODEs with Constant Coefficients ([[../../../PDFs/nagy.pdf#page=14|Source]])
 > The linear differential equation 
 > $$y'=ay+b \tag{1}$$
 > with $a\neq0$, $b$ constants, has infinitely many solutions,
@@ -214,7 +214,7 @@
 
 ## 2 - Initial Value Problem
 
->[!def] Definition Initial Value Problem ([[../../../Sources/nagy.pdf#page=18|Source]])
+>[!def] Definition Initial Value Problem ([[../../../PDFs/nagy.pdf#page=18|Source]])
 > The initial value problem (IVP) is to find all solutions $y$ to 
 > $$ y' = ay+b $$
 > that satisfy the initial condition 
@@ -224,7 +224,7 @@
 >>The differential equation has a unique solution with respect to the initial condition.
 >
 
->[!theorem] Theorem Solutions of IVPs  ([[../../../Sources/nagy.pdf#page=18|Source]])
+>[!theorem] Theorem Solutions of IVPs  ([[../../../PDFs/nagy.pdf#page=18|Source]])
 > Given the constants $a,b,t_0,y_0 \in \mathbb{R}$, with $a \neq 0$, the initial value problem 
 > $$ y' = ay + b, \qquad  y(t_0) = y_0,$$
 > has the unique solution
@@ -474,7 +474,7 @@
 
 ## 3 - Linear Variable Coefficient Equations
 
->[!theorem] Theorem Solutions to First Order ODEs with Variable Coefficients ([[../../../Sources/nagy.pdf#page=23|Source]])
+>[!theorem] Theorem Solutions to First Order ODEs with Variable Coefficients ([[../../../PDFs/nagy.pdf#page=23|Source]])
 >If the functions $a,b$ are continuous, then
 >$$ y' = a(t)y + b(t)$$
 >has infinitely many solutions given by
@@ -542,7 +542,7 @@
 >>\end{alignat}$$
 >^defThmSolODEVar
 
->[!def] Definition Initial Value Problem for Variable Coefficients ([[../../../Sources/nagy.pdf#page=25|Source]])
+>[!def] Definition Initial Value Problem for Variable Coefficients ([[../../../PDFs/nagy.pdf#page=25|Source]])
 >The **initial value problem (IVP)** is to find all solutions $y$ of
 >$$ y' = a(t) y + b(t)$$
 >that satisfy the initial condition
@@ -552,7 +552,7 @@
 >>The IVP has a unique solution.
 >^defIVPvar
 
->[!theorem] Theorem Solutions of IVP with Variable Coefficients ([[../../../Sources/nagy.pdf#page=26|Source]])
+>[!theorem] Theorem Solutions of IVP with Variable Coefficients ([[../../../PDFs/nagy.pdf#page=26|Source]])
 > Given continuous functions $a,b$ with domain $(t_1, t_2)$ and constants $t_0 \in (t_1, t_2)$ and $y_0 \in \mathbb{R}$, the IVP
 > $$ y' = a(t)y + b(t), \qquad y(t_0) = y_0 $$
 > has the unique solution $y$ on the domain $(t_1, t_2)$, given by
@@ -681,7 +681,7 @@
 
 ## 3.1 - The Bernoulli Equation
 
->[!def] Definition Bernoulli Equation ([[../../../Sources/nagy.pdf#page=27|Source]])
+>[!def] Definition Bernoulli Equation ([[../../../PDFs/nagy.pdf#page=27|Source]])
 >The **Bernoulli equation** is
 >$$\begin{align} 
 >y' = p(t)y + q(t)y^n
@@ -693,7 +693,7 @@
 > - $n \neq 0, 1$ => Bernoulli equation is **non-linear**
 > - $n = 2$ => Bernoulli equation is **logistic equation**
 
->[!theorem] Theorem Solutions for the Bernoulli equation  ([[../../../Sources/nagy.pdf#page=26|Source]])
+>[!theorem] Theorem Solutions for the Bernoulli equation  ([[../../../PDFs/nagy.pdf#page=26|Source]])
 >The function $y$ is a solution of the Bernoulli equation iff the function 
 >$$ \nu = \frac{1}{y^{n-1}}$$
 >is solution of the linear differential equation
@@ -1145,7 +1145,7 @@
 
 ## 4 - Separable Equations
 
->[!def] Definition Separable Differential Equation ([[../../../Sources/nagy.pdf#page=32|Source]]) 
+>[!def] Definition Separable Differential Equation ([[../../../PDFs/nagy.pdf#page=32|Source]]) 
 >A **separable** differential equation for the function $y$ is 
 >$$ h(y) y' = g(t)$$
 >where $h, g$ are given functions
@@ -1227,7 +1227,7 @@
 >>\end{alignat} $$
 >^defSeparableDifferentialEquation
 
->[!Theorem] Theorem Solutions to Separable Equations ([[../../../Sources/nagy.pdf#page=33|Source]]) 
+>[!Theorem] Theorem Solutions to Separable Equations ([[../../../PDFs/nagy.pdf#page=33|Source]]) 
 >If $h,g$ are continuous with $h\neq 0$, then
 >$$ h(y)y' = g(t)$$
 >has infinitely many solutions $y$ satisfying the algebraic equation
@@ -1284,7 +1284,7 @@
 
 ^017e13
 
->[!def] Definition Implicit and Explicit Form ([[../../../Sources/nagy.pdf#page=35|Source]]) 
+>[!def] Definition Implicit and Explicit Form ([[../../../PDFs/nagy.pdf#page=35|Source]]) 
 > A function $y$ is a solution in <u>**implicit form**</u> of the equation $h(y)y'=g(t)$ iff the function $y$ is solution of the algebraic equation $$H(y(t)) = G(t) + c$$ where $H$ and $G$ are any antiderivatives of $h$ and $g$. In the case that function $H$ is invertible, the solution $y$ above is given in <u>**explicit form**</u> iff is written as 
 > $$y(t) = H^{-1}\big(G(t) + c\big)$$ 
 > 
@@ -1294,7 +1294,7 @@
 
 ## 4.1 - Euler Homogeneous Equations
 
->[!def] Definition Euler Homogeneous Differential Equation ([[../../../Sources/nagy.pdf#page=37|Source]]) 
+>[!def] Definition Euler Homogeneous Differential Equation ([[../../../PDFs/nagy.pdf#page=37|Source]]) 
 >An **Euler homogenous** differential equation has the form
 >$$\begin{align}
 > y'(t) = F\left( \frac{y(t)}{t} \right)
@@ -1354,7 +1354,7 @@
 >
 >^remScaleInvarianceHomogenousFunctions
 
->[!Theorem] Theorem Identification of Euler Homogeneous Differential Equations ([[../../../Sources/nagy.pdf#page=39|Source]]) 
+>[!Theorem] Theorem Identification of Euler Homogeneous Differential Equations ([[../../../PDFs/nagy.pdf#page=39|Source]]) 
 > If the functions $N, M$ of $t,y$ are homogeneous of the same degree, then the differential equation
 > $$ N(t,y)y'(t) + M(t,y) = 0 $$
 >is **Euler homogeneous**.
@@ -1421,7 +1421,7 @@
 >
 >^thmIdentificationEulerHomogeneous
 
->[!theorem] Theorem Solutions to Euler Homogeneous Differential Equations ([[../../../Sources/nagy.pdf#page=40|Source]]) 
+>[!theorem] Theorem Solutions to Euler Homogeneous Differential Equations ([[../../../PDFs/nagy.pdf#page=40|Source]]) 
 > The Euler homogeneous equation 
 > $$ y' = F\left( \frac{y}{t} \right)$$
 > for the function $y$ determines a separable equation for $$\begin{align}
@@ -1671,7 +1671,7 @@
 >[!remark]-
 >Linear differential equations are special case of semi-exact equations. 
 
->[!def] Definition Exact Equation ([[../../../Sources/nagy.pdf#page=44|Source]]) 
+>[!def] Definition Exact Equation ([[../../../PDFs/nagy.pdf#page=44|Source]]) 
 >An **exact** differential equation for $y$ is
 >$$N(t,y)y' + M(t,y) = 0$$
 >where the functions $N$ and $M$ satisfy
@@ -1749,7 +1749,7 @@
 ^73ae5d
 
 
->[!theorem] Theorem Poincaré's Lemma ([[../../../Sources/nagy.pdf#page=46|Source]]) 
+>[!theorem] Theorem Poincaré's Lemma ([[../../../PDFs/nagy.pdf#page=46|Source]]) 
 > Let $N,M$ denote continuously differentiable functions on $t,y$. We have
 > $$\begin{alignat}{2}
 >\partial_{t}N(t,y) = \partial_{y}M(t,y) \Longleftrightarrow &\exists\psi\in C^2  \\
@@ -1762,7 +1762,7 @@
 >
 >>[!proof]- 
 >>>$(\Rightarrow)$
->>> omitted, but is given in [[../../../Sources/rudin1976.pdf|Principles of Mathematical Analysis by Rudin]]
+>>> omitted, but is given in [[../../../PDFs/rudin1976.pdf|Principles of Mathematical Analysis by Rudin]]
 >>
 >>>$(\Leftarrow)$
 >>> Assume that $\psi$ is a **potential function** satisfying
@@ -1778,7 +1778,7 @@
 ^0207e0
 
 
->[!theorem] Theorem Solving Exact Equations ([[../../../Sources/nagy.pdf#page=45|Source]]) 
+>[!theorem] Theorem Solving Exact Equations ([[../../../PDFs/nagy.pdf#page=45|Source]]) 
 > If the differential equation
 > $$\begin{align}
 >N(t,y)y' + M(t,y) = 0\tag{1}
@@ -1928,7 +1928,7 @@
 
 ^e52bb3
 
->[!def] Definition Semi-Exact Differential Equations ([[../../../Sources/nagy.pdf#page=49|Source]]) 
+>[!def] Definition Semi-Exact Differential Equations ([[../../../PDFs/nagy.pdf#page=49|Source]]) 
 >A **semi-exact** differential equation is a non-exact equation that can be transformed into an exact equation after a multiplication by an integrating factor.
 >>[!example]- Example Show that the differential equations $y' = a(t)y + b(t)$ are semi exact
 >> First we rearrange the equation to get the form of the [[1 - First Order ODEs#^73ae5d| exact equations]]
@@ -1948,7 +1948,7 @@
 >>>[!note]-
 >>>In [[1 - First Order ODEs#^defThmSolODEVar| solving linear ODEs with variable coefficients]] we found the integrating factor $\mu=e^{-A(t)}$ with $A(t)=\int a(t) \, dt$.
 
->[!theorem] Theorem Semi-Exact Equations to Exact Equations ([[../../../Sources/nagy.pdf#page=50|Source]]) 
+>[!theorem] Theorem Semi-Exact Equations to Exact Equations ([[../../../PDFs/nagy.pdf#page=50|Source]]) 
 >Let the equation
 >$$ N(t,y)y' + M(t,y) = 0$$
 >be **not exact** with $\partial_{t}N \neq \partial_{y}M$ and $N\neq 0$. Denote $h(t)$ as the function 
@@ -2090,7 +2090,7 @@
 >[!attention] 
 > The reverse of the function $y(t)$ is denoted as $t(y)$.
 
->[!theorem] Theorem Inverse Function Exact ([[../../../Sources/nagy.pdf#page=50|Source]]) 
+>[!theorem] Theorem Inverse Function Exact ([[../../../PDFs/nagy.pdf#page=50|Source]]) 
 >$$ Ny' + M = 0 \text{ is exact } \Longleftrightarrow N + Mt' = 0 \text{ is exact}$$
 >>[!proof]-
 >>We write as
@@ -2120,7 +2120,7 @@
 >$$Ny'+Mt'=0$$
 >which is imprecise and will be avoided. Note, further instead of the variable $t$ the variable $x$ is used instead.
 
->[!theorem] Theorem Solving Semi-Exact Inverse Equations ([[../../../Sources/nagy.pdf#page=51|Source]]) 
+>[!theorem] Theorem Solving Semi-Exact Inverse Equations ([[../../../PDFs/nagy.pdf#page=51|Source]]) 
 > If the equation $$Mt'+N = 0$$
 > is **not exact**, with $\partial_{y}M \neq \partial_{x}N$ and function $M \neq 0$, where the function $l$ is defined as
 > $$l=-\frac{\partial_{y}M - \partial_{t}N}{M}$$
@@ -2411,7 +2411,7 @@
 
 ## 6 - Nonlinear Equations
 
->[!def] Definition Nonlinear Differential Equations ([[../../../Sources/nagy.pdf#page=68|Source]]) 
+>[!def] Definition Nonlinear Differential Equations ([[../../../PDFs/nagy.pdf#page=68|Source]]) 
 >An ODE $$y'(t) = f(t,y(t))$$ is called **nonlinear** iff the function $f$ is nonlinear in the second argument.
 >>[!example]- Examples
 >>>[!example]
@@ -2429,7 +2429,7 @@
 >>>$$\frac{y'(t)}{y(t)}=2t^2$$
 >>>is linear, since the function $f(t,y)=2t^2y$ is linear in the second argument.
 
->[!theorem] Theorem Picard-Lindelöf ([[../../../Sources/nagy.pdf#page=68|Source]]) 
+>[!theorem] Theorem Picard-Lindelöf ([[../../../PDFs/nagy.pdf#page=68|Source]]) 
 >Consider the initial value problem
 >$$y'(t) = f(t,y(t))$$
 >with

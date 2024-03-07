@@ -1,4 +1,4 @@
->[!def] Definition Power Series ([[../../../Sources/zotero-182.pdf#page=540 | Source 1]], [[../../../Sources/briggs2019.pdf#page=733 | Source 2]], [[../../../Sources/rudin1976.pdf#page=79 | Source 3]])
+>[!def] Definition Power Series ([[../../../PDFs/zotero-182.pdf#page=540| Source 1]], [[../../../PDFs/briggs2019.pdf#page=733| Source 2]], [[../../../PDFs/rudin1976.pdf#page=79| Source 3]])
 >A series of the form
 >$$\sum_{n=0}^\infty c_{n}x^n = c_{0} + c_{1}x + c_{2}x^2+ \dots$$
 >is a power series centered at $x=0$. A series of the form
@@ -7,7 +7,7 @@
 
 ^588b80
 
->[!theorem] Theorem Convergence of a Power Series ([[../../../Sources/zotero-182.pdf#page=541 | Source 1]], [[../../../Sources/rudin1976.pdf#page=79 | Source 2]])
+>[!theorem] Theorem Convergence of a Power Series ([[../../../PDFs/zotero-182.pdf#page=541| Source 1]], [[../../../PDFs/rudin1976.pdf#page=79| Source 2]])
 > Consider the power series $\sum_{n=0}^\infty c_{n}(x-a)^n$. The series satisfies exactly one of the following properties:
 > 1. The series converges at $x = a$ and diverges for all $x \neq a$ 
 > 2. The series converges for all real numbers $x$.
@@ -33,7 +33,7 @@
 >> 2. $S=\mathbb{R}$
 >> 3. Assume $S\neq \{ 0 \}$ and $S\neq \mathbb{R}$, then there exists a real number $x^* \neq 0$ such that the series does not converge. The series cannot converge for any $x$ such that $\lvert x \rvert> \lvert x^* \rvert$. Therefore, $S$ must be bounded. Hence, the series converges by some smallest upper bound $R$ with $\lvert x \rvert < R$.
 
->[!def] Definition Taylor/Maclaurin Series for a Function ([[../../../Sources/briggs2019.pdf#page=756 | Source]])
+>[!def] Definition Taylor/Maclaurin Series for a Function ([[../../../PDFs/briggs2019.pdf#page=756| Source]])
 >Suppose the function $f$ has derivatives of all orders on an interval centered at the point $a$. The **Taylor series for $f$ centered at $a$** is
 >$$\sum_{k=0}^\infty \frac{f^{k}(a)}{k!}(x-a)^k= f(a) + f'(a)(x-a)+ \frac{f''(a)}{2!}(x-a)^2 +\dots$$
 >>[!remark]
@@ -49,7 +49,7 @@
 
 ^78a81b
 
->[!def] Definition Exponential Function ([[../../../Sources/zotero-182.pdf#page=572| Source]])
+>[!def] Definition Exponential Function ([[../../../PDFs/zotero-182.pdf#page=572| Source]])
 >The exponential function $e^x$ can be expressed as Maclaurin series
 >$$e^x = \sum_{n=0}^\infty \frac{x^n}{n!}$$
 >>[!remark]
