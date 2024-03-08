@@ -29,7 +29,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
                 "mode": "source",
                 "source": true
               }
@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
                 "mode": "preview",
                 "source": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md"
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md"
               }
             }
           },
@@ -209,6 +209,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "webpage-html-export:Export Vault to HTML": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -220,74 +221,14 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "floating": {
-    "id": "bb161cdc59ef9899",
-    "type": "floating",
-    "children": [
-      {
-        "id": "4fa42accbc238719",
-        "type": "window",
-        "children": [
-          {
-            "id": "3d5e57d68c552c11",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "47905f41f2cac4a3",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 960,
-        "width": 1080,
-        "height": 960,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
-        "id": "4136499eb6197935",
-        "type": "window",
-        "children": [
-          {
-            "id": "92f993f5e29da490",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "b7a900662b45c06c",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 4463,
-        "y": 952,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "3cf23456821b7e76",
   "lastOpenFiles": [
-    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+    "PDFs/nagy.pdf",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+    "Sachbericht Promotion.md",
+    "index.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
@@ -304,7 +245,6 @@
     "PhD Studies/Mathematic Basics/Combinatorics/Figures",
     "Sources/Richard A Brualdi - Introductory combinatorics-North-Holland  (2004).pdf",
     "Sources/bogart_script.pdf",
-    "Sources/bogart_script.pdf.crdownload",
     "Research Seminar/Figures/rs_1_fig_4.png",
     "Research Seminar/Figures/example_1.png",
     "Research Seminar/Figures/rs_1_fig_3.png",
@@ -327,10 +267,7 @@
     "Literature/@folland2009.md",
     "Literature/@stanley2012.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/A - Signals.md",
-    "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.excalidraw.md",
-    "PhD Studies/Mathematic Basics/Metrics/Figures/point_set.excalidraw.md",
     "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.png",
-    "PhD Studies/Mathematic Basics/Metrics/Dissimilarity.md",
     "Untitled.canvas"
   ]
 }

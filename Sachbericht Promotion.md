@@ -1,3 +1,9 @@
+### Daten
+- Promovend: Thomas Davies
+- Titel: Prozessierung von heterogenen Datenstrukturen und Sequenzdaten in komplexen KI-System unter Einbeziehung robuster, interpretierbarer KI-Modelle
+- Antragsnr: 100670478
+- Berichtszeitraum: September-Dezember 2023
+
 ### 1. Erreichung der Projektziele 
 
 Das Projektvorhaben der Promotion ist beschreiben als "Prozessierung von heterogenen Datenstrukturen und Sequenzdaten in komplexen KI-System unter Einbeziehung robuster, interpretierbarer KI-Modelle". Hierbei handelt es sich, um den Entwicklungsauftrag grundsätzlich ein KI-Modell zu entwerfen, was besagte Bedingungen der Interpretierbarkeit, Robustheit und Eingabedaten erfüllt.
@@ -5,6 +11,8 @@ Das Projektvorhaben der Promotion ist beschreiben als "Prozessierung von heterog
 Heterogene Datenstrukturen haben einen besonderen Stellenwert in der Forschung im Bereich künstlicher Intelligenz, da diese schwierig in stabilen KI Modellen lernbar umzusetzen. Ihre besondere Datenstruktur erlaubt es nicht, Modelle für homogene Datenstrukturen anzuwenden. Ein aktuell prominentes Beispiel solcher Datenstrukturen sind Sequenzdaten, wie zum Beispiel Textdaten in Form von Sprache (Natural Language Processing). Hier haben in jüngster Zeit Modelle wie Transformer (ChatGPT) oder mit Attention verknüpfte Long Short Term Memory (LSTM) rekurrente Netze große Fortschritte gemacht. Diese sind allerdings in ihrer Interpretierbarkeit und Erklärbarkeit stark eingeschränkt. Der Auftrag ist es vergleichbare Modelle mit ähnlichen Fähigkeiten in einer robusten und interpretierbaren Ausführung zu entwickeln. 
 
 Das Projektvorhaben kann qualitativ als erfolgreich bezeichnet werden, wenn es gelingt, interpretierbare, neuartige Modelle zu entwickeln, die auf dieser Art von Daten erfolgreich lernen kann. Erfolgreich heißt hierbei, dass eine Zuverlässigkeit der Vorhersagen eines solchen Modells vergleichbar mit annehmbaren Modellen im Bereich der sogenannten Blackbox Modelle sind. Neben der Leistungsfähigkeit eines solchen Modells ist ebenfalls eine mathematische Verifikation der Lernfähigkeit bestimmter oder auch allgemeiner Kriterien wünschenswert.
+
+Der Projekt verläuft somit bislang wie vorhergesehen.
 
 ### 2. Umsetzung der geplanten Arbeitsschritte und Methoden zur Erreichung der Projektziele
 
@@ -23,3 +31,8 @@ Diese Datenbank an Erkenntnissen wird in einem Verwaltungssystem online hinterle
 ### 4. Beachtung von Grundsätzen/Querschnittsaufgaben
 
 Der Projektauftrag gibt keinen Anlass, Themen der Nachhaltigkeit oder besonderer Umweltverträglichkeit hervorzuheben. Es ist aus informatischer Sicht stets wünschenswert Modelle zu entwickeln, die in ihrer Laufzeit- und Speicherkomplexität möglichst niedrig sind, was indirekt diese Anforderungen ohnehin erfüllt. Über diese inhärenten Effekte hinaus gibt es keine formulierbaren Beiträge.
+
+<br><br><br><br>
+
+----
+Unterschrift                                                        Datum

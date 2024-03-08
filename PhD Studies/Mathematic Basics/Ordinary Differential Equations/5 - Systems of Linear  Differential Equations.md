@@ -141,3 +141,21 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >[!theorem] Theorem Existence and Uniqueness of Solutions ([[../../../PDFs/nagy.pdf#page=242| Source]])
 >If the function $A$ and $\mathbf{b}$ are continuous on an open interval $I \subset \mathbb{R}$, and if $\mathbf{x}_{0}$ is any constant vector and $t_{0}$ is any constant in $I$, then there exist only one function $\mathbf{x}$, defined an interval $\tilde{I} \subset I$ with $t_{0} \in \tilde{I}$, solution of the initial value problem
 >$$\mathbf{x}' = A(t)\mathbf{x}+\mathbf{b}(t), \qquad \mathbf{x}(t_{0})=\mathbf{x}_{0}$$
+
+>[!remark]
+>There exists a correspondence between $n \times n$ systems of linear differential equations and $n$-th order differential equations.
+
+>[!theorem] Theorem First Order Reduction ([[../../../PDFs/nagy.pdf#page=243| Source]])
+> A function $y$ solves the second order equation
+> $$
+> y'' + a_{1}(t)y' + a_{0}(t)y = b(t) \tag{1}
+>$$
+>**iff** the function $x_{1}=y$ and $x_{2}=y'$ are solutions to the $2 \times 2$ first order differential system
+>$$\begin{align}
+> x_{1}' &= x_{2} \tag{2} \\ 
+> x_{2}' &= -a_{0}(t)x_{1}-a_{1}(t)x_{2}+b(t) \tag{3}
+>\end{align}$$
+>>[!proof]
+>>> $\implies$
+>>
+>> Given a solution of $y$ of 
