@@ -801,6 +801,8 @@
 >>Hence, the solution is
 >>$$y=\frac{1}{2}\Big(\ln \lvert t-1 \rvert  - \ln\lvert t+1 \rvert \Big) + 2$$
 
+^235d4c
+
 >[!theorem] Theorem Variable $t$ is Missing (Case 2) ([[../../../PDFs/nagy.pdf#page=99| Source]])
 > If the IVP
 > $$y''=f(y,y')$$
@@ -1037,4 +1039,55 @@
 >>>>The gravitational Energy is constant, because $\frac{d}{dt}E(y,v)=0$.
 
 
->[!theorem] Theorem Reduction of Order
+>[!theorem] Theorem Reduction of Order ([[../../../PDFs/nagy.pdf#page=106| Source]])
+>If a nonzero function $y_{1}$ is solution to 
+>$$y''+a_{1}(t)y' + a_{0}(t)y = 0 \tag{1}$$
+>where $a_{1},a_{0}$ are given functions, then a second solution not proportional to $y_{1}$ is
+>$$y_{2}(t)=y_{1}(t)\int \frac{e^{-A_{1}(t)}}{y^2_{1}(t)} \, dt $$
+>where $$A_{1}(t)=\int a_{1}(t) \, dt $$
+>>[!remark] Important Remark
+>> Here we assume, we have found already a solution $y_1$ and we are interested to find all solutions in the solutions space for a given _second order, linear, homogeneous, differential equation_. **We transform the problem of a second order problem to two first order problems.**
+>
+>>[!remark] Remark on non-proportional Solutions
+>>In the theory of linear ordinary differential equations, solutions that are linearly independent are crucial because they form a basis for the solution space. Having solutions that are linearly independent ensures that you can form any solution to the differential equation as a linear combination of these solutions.
+>
+>>[!proof]
+>>We first rewrite $y_2$ as **linear combination of the solution** $y_1$ with $v$ being a function of $t$ and compute its derivatives
+>>$$\begin{align}
+>> y_{2}&= v y_{1} \\
+>> y_{2}' &= v'y_{1} + vy_{1}' \\
+>> y_{2}'' &= v''y_{1} + v'y_{1}' + v'y_{1}' + vy_{1}'' \\
+>>  &= v''y_{1}+ 2v'y_{1}' + vy_{1}''
+>>\end{align}$$
+>>and insert the expression into the second order derivative $(1)$, such that we yield and sort for $v$
+>>$$\begin{align}
+>> ( v''y_{1}+ 2v'y_{1}' + vy_{1}'') + a_{1}(v'y_{1} + vy_{1}') + a_{0}v y_{1} &= 0 \\
+>> y_{1}v'' + \Big(2y_{1}'+ a_{1}y_{1}\Big)v' + \Big(y_{1}''+a_{1}y_{1}'+a_{0}y_{1}\Big)v &= 0
+>>\end{align}$$
+>>
+>>The function $y_1$ is solution to the differential original equation
+>>$$\begin{align}
+>> y_{1}'' + a_{1}y_{1}' + a_{0}y_{1} &= 0 \\
+>> y_{1}'' &= -a_{1}y_{1}' - a_{0}y_{1} \tag{2}
+>>\end{align}$$
+>>then, the equation for $v$ is given by
+>>$$\begin{alignat}{2}
+>> y_{1}v'' + \Big(2y_{1}'+ a_{1}y_{1}\Big)v' + \Big(\underbrace{ y_{1}'' }_{ =(2) }+a_{1}y_{1}'+a_{0}y_{1}\Big)v &= 0 \\
+>> y_{1}v'' + \Big(2y_{1}'+ a_{1}y_{1}\Big)v' + \cancel{ \Big(-a_{1}y_{1}' - a_{0}y_{1}+a_{1}y_{1}'+a_{0}y_{1}\Big)v } &= 0 \\
+>> y_{1}v'' + \Big(2y_{1}'+ a_{1}y_{1}\Big)v' &= 0 \qquad&&\Big\vert :y_{1} \\
+>> v'' + \left( 2\frac{y_{1}'}{y_{1}}+ a_{1} \right)v' &= 0
+>>\end{alignat}$$
+>>Here we can make use of [[#^235d4c| Theorem Function y is missing (Case 1)]] and substitute $w=v'$ and get 
+>>$$w' + \left( 2\frac{y_{1}'}{y_{1}}+ a_{1} \right)w = 0$$
+>>This can be solved using the first order ODE method of [[1 - First Order ODEs#^defSeparableDifferentialEquation| separation of variables]]. We have
+>>$$\begin{alignat}{2}
+>> w' + \left( 2\frac{y_{1}'}{y_{1}}+ a_{1} \right)w &= 0 \qquad&&\Big\vert :w \\
+>> \frac{w'}{w} + 2\frac{y_{1}'}{y_{1}}+ a_{1} &= 0 \qquad&&\Big\vert -2\frac{y_{1}'}{y_{1}}-a_{1} \\
+>> \frac{w'}{w} &= -2\frac{y_{1}'}{y_{1}}-a_{1} \qquad&&\Big\vert \int  \,    \tag{Separation} \\
+>> \int \frac{1}{w} \, dw &= -2 \int \frac{1}{y_{1}} \, dy_{1} -\underbrace{ \int a_{1} \, dt }_{ =A_{1} } +c   \qquad&& \\
+>> \ln \lvert w \rvert &= -2\ln \lvert y_{1} \rvert  -A_{1} + c \qquad&&\Big\vert e^{(\cdot)} \\
+>> w &= y_{1}^{-2}\underbrace{ e^c }_{ =w_{0} }e^{-A_{1}} \\
+>> w &= w_{0}\frac{e^{-A_{1}}}{y_{1}^2}
+>>\end{alignat}$$
+>>Note, we introduced $w=v'$, therefore we still need to integrate one more time with respect to $t$
+>>$$$$

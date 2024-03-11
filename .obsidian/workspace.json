@@ -24,17 +24,31 @@
             "group": "1d2597f4fa86fdfb"
           },
           {
-            "id": "3cf23456821b7e76",
+            "id": "f4f05c5651e7500e",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+                "mode": "source",
+                "source": true
+              },
+              "pinned": true
+            },
+            "group": "0795e44b2f1623c9"
+          },
+          {
+            "id": "988889338f52576b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": true
               }
-            },
-            "group": "eb0837e55d173c16"
+            }
           }
         ],
         "currentTab": 1
@@ -65,12 +79,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
                 "mode": "preview",
                 "source": true
               }
             },
-            "group": "eb0837e55d173c16"
+            "group": "0795e44b2f1623c9"
+          },
+          {
+            "id": "5323870b380a8f2e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
           }
         ],
         "currentTab": 1
@@ -139,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+                "file": "PDFs/nagy.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +182,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+                "file": "PDFs/nagy.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -179,7 +205,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md"
+                "file": "PDFs/nagy.pdf"
               }
             }
           },
@@ -221,27 +247,169 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "3cf23456821b7e76",
+  "floating": {
+    "id": "6179844a3f69adbd",
+    "type": "floating",
+    "children": [
+      {
+        "id": "920516cd1fba1e96",
+        "type": "window",
+        "children": [
+          {
+            "id": "2d0f19db299788e3",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "2e1ca86b41555292",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "PDFs/nagy.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 960,
+        "width": 1080,
+        "height": 960,
+        "maximize": true,
+        "zoom": 0
+      },
+      {
+        "id": "78186e768344ff28",
+        "type": "window",
+        "children": [
+          {
+            "id": "6083bfd675fa3d51",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "d709c8f338a14b36",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+                    "mode": "preview",
+                    "source": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 28,
+        "y": 560,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 0
+      },
+      {
+        "id": "30d338e7c8ec24e4",
+        "type": "window",
+        "children": [
+          {
+            "id": "c4a03d8e00b64eca",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "994a13f8ed112eff",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+                    "mode": "preview",
+                    "source": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 3264,
+        "y": 141,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 0
+      },
+      {
+        "id": "2b953da5e948afa6",
+        "type": "window",
+        "children": [
+          {
+            "id": "7b939ba9013b3dfa",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f661f88b0a155dd1",
+                "type": "leaf",
+                "state": {
+                  "type": "excalidraw",
+                  "state": {
+                    "file": "PhD Studies/Mathematic Basics/Metrics/Figures/point_set.excalidraw.md"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1080,
+        "y": 915,
+        "width": 900,
+        "height": 500,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "2e1ca86b41555292",
   "lastOpenFiles": [
+    "PhD Studies/Mathematic Basics/Linear Algebra/Terminology.md",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Eigenvectors and Eigenvalues.md",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Basics.md",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection.md",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Inner Products.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
+    "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
+    "PhD Studies/Mathematic Basics/Calculus/Series.md",
+    "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
+    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+    "PhD Studies/Mathematic Basics/Calculus/Discontinuities.md",
+    "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+    "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
+    "PhD Studies/Mathematic Basics/Calculus/Calculus Limits.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/Transformer Vector Quantization.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/Mahalabonis Distance.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/1 - Maximum Inner Product Search.md",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/State Space Models.md",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
+    "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems Preliminaries.md",
     "PDFs/nagy.pdf",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
-    "Sachbericht Promotion.md",
-    "index.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.pdf",
-    "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2",
     "Sources/brualdi2004.pdf",
     "Pasted image 20240304122332.png",
     "PhD Studies/Mathematic Basics/Combinatorics/Figures/ex_puzzle.png",
-    "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
-    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
-    "PhD Studies/Mathematic Basics/Trigonometry/Figures/Untitled.md",
     "PhD Studies/Mathematic Basics/Combinatorics/Figures",
     "Sources/Richard A Brualdi - Introductory combinatorics-North-Holland  (2004).pdf",
     "Sources/bogart_script.pdf",
@@ -251,22 +419,7 @@
     "Research Seminar/Figures/rs_1_example_1.png",
     "Research Seminar/Figures/rs_1_fig_1.png",
     "Research Seminar/Figures/rs_1_fig_2.png",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
-    "PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric.md",
-    "Paper/Hyperbox Metric/Hyperbox Metric.md",
-    "Paper/Hyperbox Metric/Timeline.md",
-    "Paper/Hyperbox Metric/Work.md",
-    "Paper/Hyperbox Metric/Emails/Ideas on Distancefunctions.md",
-    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
     "PhD Studies/Mathematic Basics/Calculus/figures/discontinuities.png",
-    "Literature/@howell2016.md",
-    "PhD Studies/Mathematic Basics/Calculus/Discontinuities.md",
-    "PhD Studies/Mathematic Basics/Untitled.md",
-    "Literature/@folland2009.md",
-    "Literature/@stanley2012.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/A - Signals.md",
     "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.png",
     "Untitled.canvas"
   ]
