@@ -1132,7 +1132,7 @@
 >>[!example]
 >>Find a second solution $y_{2}$ linearly independent to the solution $y_{1}(t)=t$ of the differential equation
 >>$$t²y''+2ty'-2y=0$$
->>>[!example] Solution
+>>>[!example]- Solution
 >>>First we rearrange the given second order equation, such that we have the form of the theorem.
 >>>$$\begin{align}
 >>> y'' + \frac{2}{t}y' - \frac{2}{t^2}y =0
@@ -1148,10 +1148,73 @@
 >>> a_{1}(t) &= \frac{2}{t}  \\
 >>> A_{1}(t) &= \int a_{1}(t) \, dt \\
 >>> &= \int \frac{2}{t} \, dt  \\
->>> &= \frac{\cancel{ 2 }t^2}{\cancel{ 2 }} + \underbrace{ c }_{ =0 } \\
->>> &= t^2
+>>> &= 2 \ln \lvert t \rvert  \\
+>>> &= \ln t^2 \\
+>>> \int \frac{e^{-A_{1}(t)}}{y^2_{1}(t)} \, dt &= \int \frac{e^{- \ln t^2}}{t^2} \, dt \\
+>>>  &= \int \frac{1}{t^2t^2} \, dt \\
+>>>  &= \int \frac{1}{t^4} \, dt \\
+>>>  &= -\frac{1}{3}t^{-3} +\underbrace{ c }_{ =0 }
 >>>\end{align}$$
->>>We choose the integration constant to be zero, because we are only interested in a single solution for $y_2$. Continuing 
+>>>We choose the integration constant to be zero, since it is sufficient to find a single fundamental solution linearly independent to $y_1$. We now solve
 >>>$$\begin{align}
->>> \int \frac{e^{-A_{1}(t)}}{y^2_{1}(t)} \, dt &= \int \frac{e^{t^2}}{t^2} \, dt 
+>>> y_{2}(t)&=y_{1}(t)\int \frac{e^{-A_{1}(t)}}{y^2_{1}(t)} \, dt \\
+>>> y_{2}(t) &= t \left( -\frac{1}{3}t^{-3} \right) \\
+>>> y_{2}(t) &= -\frac{1}{3}t^{-2} 
+>>>\end{align}$$
+>>>>[!note]- Solution Validation
+>>>>$$\begin{align} \\
+>>>> y_{2} &= -\frac{1}{3}t^{-2} \\
+>>>> y_{2}' &= \frac{2}{3}t^{-3} \\
+>>>> y_{2}'' &= -2t^{-4}
+>>>>\end{align}$$
+>>>>We insert into 
+>>>>$$\begin{align}
+>>>> t²y''+2ty'-2y&=0 \\
+>>>> t^2 \cdot (-2t^{-4}) + 2t \left( -\frac{2}{3}t^{-3} \right) - 2 \left( -\frac{1}{3}t^{-2} \right) &= 0 \\
+>>>> -2t^{-2} -\frac{4}{3}t^{-2}+\frac{2}{3}t^{-2} &= 0 \\
+>>>> 0 &= 0
+>>>>\end{align}$$
+>>>>Note, linear independence should be validated too using the Wronskian function.
+
+>[!example] Exercises
+>>[!example] Task
+>>Consider the differential equation
+>>$$t^2y''+3ty'-3=0, \quad t>0$$
+>>with initial conditions
+>>$$y(1)= 3 \qquad y'(1)=\frac{3}{2}$$
+>>1. Find the initial value problem satisfied by $v(t)=y'(t)$
+>>2. Solve the differential equation for $v$
+>>3. Find the solution $y$ of the differential equation above
+>>
+>>>[!example] Solution
+>>>Note, we have the case $y'' = f(t,\cancel{ y },y')$, where $y$ does not appear explicitly. We can use [[#^235d4c | the corresponding theorem]] and substitute $v = y'$ and get
+>>>$$t^2v'+2tv-3=0$$
+>>>This is a [[1 - First Order ODEs#^defThmSolODEVar | first order differential equation with variable coefficients]], we have
+>>>$$v' = \underbrace{ -\frac{3}{t} }_{ =a(t) }v \underbrace{- \frac{3}{t^2} }_{ =b(t) }$$ 
+>>>We use the solution formula
+>>>$$\begin{align}
+>>> v &= c_{1}e^{A(t)}+e^{A(t)}\int e^{-A(t)}b(t) \, dt  \\
+>>> A(t) &= \int a(t) \, dt 
+>>>\end{align}$$
+>>>We get
+>>>$$\begin{align}
+>>> A(t) &= \int a(t) \, dt \\
+>>> &=   \int -\frac{3}{t} \, dt \\
+>>> &=   -3\ln \lvert t \rvert  \\
+>>> &= \ln \lvert t^{-3} \rvert \\
+>>> e^{A(t)} &=  t^{-3} \\
+>>> e^{-A(t)} &= t^{3} \\
+>>> \int e^{-A(t)}b(t) \, dt &= \int t^3\left( -\frac{3}{t^2} \right)  \, dt \\
+>>>  &= -\int 3t  \, dt \\
+>>>  &= \frac{3}{2}t^2   
+>>>\end{align}$$
+>>>We finally get for $v$
+>>>$$\begin{align}
+>>> v &= c_{1}t^{-3}+ t^{-3}\left( \frac{3}{2}t^2 \right) \\
+>>>   &= c_{1}t^{-3}+  \frac{3}{2}t^{-1}
+>>>\end{align}$$
+>>>Since we defined $v= y'$ we integrate one more time to yield $y$
+>>>$$\begin{align}
+>>> y &= \int c_{1}t^{-3}  \, dt + \int \frac{3}{2}t^{-1} \, dt   \\
+>>> &= -c_{1} \frac{1}{2}t^{-2}+\frac{3}{2}\ln \lvert t \rvert + c 
 >>>\end{align}$$

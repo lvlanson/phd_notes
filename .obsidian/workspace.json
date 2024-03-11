@@ -51,8 +51,7 @@
             },
             "group": "ff7aa4e2110e2490"
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "d0adceee64becfe7",
@@ -167,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PDFs/nagy.pdf",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PDFs/nagy.pdf",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -207,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PDFs/nagy.pdf"
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md"
               }
             }
           },
@@ -254,37 +253,6 @@
     "type": "floating",
     "children": [
       {
-        "id": "78186e768344ff28",
-        "type": "window",
-        "children": [
-          {
-            "id": "6083bfd675fa3d51",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "d709c8f338a14b36",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
-                    "mode": "preview",
-                    "source": true
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 28,
-        "y": 560,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0
-      },
-      {
         "id": "2b953da5e948afa6",
         "type": "window",
         "children": [
@@ -311,35 +279,6 @@
         "width": 900,
         "height": 500,
         "maximize": false,
-        "zoom": 0
-      },
-      {
-        "id": "d9be5d8a2b6b78e3",
-        "type": "window",
-        "children": [
-          {
-            "id": "097f517240919447",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "1be2de3313845968",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "PDFs/nagy.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 3096,
-        "y": 400,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
         "zoom": 0
       },
       {
@@ -375,10 +314,10 @@
       }
     ]
   },
-  "active": "1be2de3313845968",
+  "active": "e02a88fd0e5f9dd5",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
     "PDFs/nagy.pdf",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
     "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
     "index.md",
