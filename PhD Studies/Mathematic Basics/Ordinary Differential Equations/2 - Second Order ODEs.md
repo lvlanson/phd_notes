@@ -317,6 +317,8 @@
 >>\end{align}$$
 >>
 
+^42635c
+
 >[!theorem] Theorem Wronskian (I) ([[../../../PDFs/nagy.pdf#page=93| Source]])
 >If $y_{1}, y_{2}$ are linearly dependent on $I \subset \mathbb{R}$ then
 >$$W_{12}=0 \;\; \text{ on }\;\; I$$
@@ -449,6 +451,8 @@
 >[!theorem] Theorem Wronskian (II) ([[../../../PDFs/nagy.pdf#page=95| Source]])
 >If $y_{1},y_{2}$ are fundamental solutions of $L(y)=0$ on $I \subset \mathbb{R}$, then $W_{12}(t) \neq 0$ on $I$.
 >>[!proof] Proof is given by the inverse Corollary
+
+^5577c0
 
 >[!Corollary] Corollary Inverse Wronskian (II) Theorem ([[../../../PDFs/nagy.pdf#page=95| Source]])
 >If $y_{1},y_{2}$ are solutions of $L(y)=0$ on $I \subset \mathbb{R}$ and there is a point $t_{1} \in I$ such that $W_{12}(t_{1})=0$, then $y_{1},y_{2}$ are linearly dependent on $I$.
@@ -1051,10 +1055,10 @@
 >>[!remark] Remark on non-proportional Solutions
 >>In the theory of linear ordinary differential equations, solutions that are linearly independent are crucial because they form a basis for the solution space. Having solutions that are linearly independent ensures that you can form any solution to the differential equation as a linear combination of these solutions.
 >
->>[!proof]
+>>[!proof]-
 >>We first rewrite $y_2$ as **linear combination of the solution** $y_1$ with $v$ being a function of $t$ and compute its derivatives
 >>$$\begin{align}
->> y_{2}&= v y_{1} \\
+>> y_{2}&= v y_{1}  \tag{2}\\
 >> y_{2}' &= v'y_{1} + vy_{1}' \\
 >> y_{2}'' &= v''y_{1} + v'y_{1}' + v'y_{1}' + vy_{1}'' \\
 >>  &= v''y_{1}+ 2v'y_{1}' + vy_{1}''
@@ -1068,7 +1072,7 @@
 >>The function $y_1$ is solution to the differential original equation
 >>$$\begin{align}
 >> y_{1}'' + a_{1}y_{1}' + a_{0}y_{1} &= 0 \\
->> y_{1}'' &= -a_{1}y_{1}' - a_{0}y_{1} \tag{2}
+>> y_{1}'' &= -a_{1}y_{1}' - a_{0}y_{1} \tag{3}
 >>\end{align}$$
 >>then, the equation for $v$ is given by
 >>$$\begin{alignat}{2}
@@ -1087,7 +1091,67 @@
 >> \int \frac{1}{w} \, dw &= -2 \int \frac{1}{y_{1}} \, dy_{1} -\underbrace{ \int a_{1} \, dt }_{ =A_{1} } +c   \qquad&& \\
 >> \ln \lvert w \rvert &= -2\ln \lvert y_{1} \rvert  -A_{1} + c \qquad&&\Big\vert e^{(\cdot)} \\
 >> w &= y_{1}^{-2}\underbrace{ e^c }_{ =w_{0} }e^{-A_{1}} \\
->> w &= w_{0}\frac{e^{-A_{1}}}{y_{1}^2}
+>> w &= w_{0}\frac{e^{-A_{1}}}{y_{1}^2} \tag{4}
 >>\end{alignat}$$
 >>Note, we introduced $w=v'$, therefore we still need to integrate one more time with respect to $t$
->>$$$$
+>>$$v(t) = w_{0} \int \frac{e^{-A_{1}}}{y_{1}^2} + v_{0} \, dt $$
+>> Since we are trying to determine no specific solution to the given ODE, we can choose sensible integration constants $w_{0},v_{0}$, therefore, we choose
+>> $$\begin{align}
+>> w_{0}&=1 \\
+>> v_{0}&=0
+>>\end{align}$$
+>>and get
+>>$$v(t) = \int \frac{e^{-A_{1}}}{y_{1}^2} \, dt$$
+>>Note, from equation $(2)$ we can derive
+>>$$\begin{align}
+>> y_{2}&= v y_{1} \\
+>> v &= \frac{y_{2}}{y_{1}} 
+>>\end{align}$$
+>>Inserting and rearranging yields
+>>$$\begin{align}
+>> \frac{y_{2}}{y_{1} }&= \int \frac{e^{-A_{1}}}{y_{1}^2} \, dt \\
+>> y_{2} &= y_{1}\int \frac{e^{-A_{1}}}{y_{1}^2} \, dt
+>>\end{align}$$
+>> Finally, we show that $y_{1},y_{2}$ are fundamental solutions, i.e. are linearly independent. We use for this [[#^5577c0| Wronskian's second theorem]]. Therefore we compute the [[#^42635c| Wronskian function]] $W_{12}$ and get
+>> $$\begin{align}
+>> W_{12} &= \begin{vmatrix}
+>> y_{1} & vy_{1} \\
+>> y_{1}' & (v'y_{1} + vy_{1}') \\
+>>\end{vmatrix} \\
+>> &= y_{1}(v'y_{1}+vy_{1}') - vy_{1}'y_{1}\\ 
+>> &= v'y_{1}^2+\cancel{ vy_{1}'y_{1} } \cancel{ - vy_{1}'y_{1} }\\ 
+>>\end{align}$$
+>>Note, we computed earlier in equation $(4)$ an expression for $w = v'$, hence, we substitute for $v'$ with $w_{0}=1$ and get
+>>$$\begin{align}
+>> v'y_{1^2} &= \frac{e^{-A_{1}}}{\cancel{ y_{1}^2 }}\cancel{ y_{1}^2 } \\
+>>  &= e^{-A_{1}}
+>>\end{align}$$
+>>Hence, the Wronskian can never equal to zero. By [[#^5577c0| Wronskian's second theorem]] we know that the solutions are linearly independent. This concludes the proof.
+>>$$\tag*{$\square$}$$
+>
+>>[!example]
+>>Find a second solution $y_{2}$ linearly independent to the solution $y_{1}(t)=t$ of the differential equation
+>>$$t²y''+2ty'-2y=0$$
+>>>[!example] Solution
+>>>First we rearrange the given second order equation, such that we have the form of the theorem.
+>>>$$\begin{align}
+>>> y'' + \frac{2}{t}y' - \frac{2}{t^2}y =0
+>>>\end{align}$$
+>>>To find a second fundamental solution we use
+>>>$$\begin{align}  
+>>> y_{2}(t)&=y_{1}(t)\int \frac{e^{-A_{1}(t)}}{y^2_{1}(t)} \, dt \\
+>>> A_{1}(t) &= \int a_{1}(t) \, dt 
+>>>\end{align}$$
+>>>We have 
+>>>$$\begin{align}
+>>> y_{1}(t) &= t \\
+>>> a_{1}(t) &= \frac{2}{t}  \\
+>>> A_{1}(t) &= \int a_{1}(t) \, dt \\
+>>> &= \int \frac{2}{t} \, dt  \\
+>>> &= \frac{\cancel{ 2 }t^2}{\cancel{ 2 }} + \underbrace{ c }_{ =0 } \\
+>>> &= t^2
+>>>\end{align}$$
+>>>We choose the integration constant to be zero, because we are only interested in a single solution for $y_2$. Continuing 
+>>>$$\begin{align}
+>>> \int \frac{e^{-A_{1}(t)}}{y^2_{1}(t)} \, dt &= \int \frac{e^{t^2}}{t^2} \, dt 
+>>>\end{align}$$

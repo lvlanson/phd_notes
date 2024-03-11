@@ -6,7 +6,7 @@
       {
         "id": "7675683e84a8c351",
         "type": "tabs",
-        "dimension": 44.63434022257552,
+        "dimension": 45.08272058823529,
         "children": [
           {
             "id": "e02a88fd0e5f9dd5",
@@ -44,11 +44,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Integration.md",
                 "mode": "source",
                 "source": true
               }
-            }
+            },
+            "group": "ff7aa4e2110e2490"
           }
         ],
         "currentTab": 1
@@ -56,7 +57,7 @@
       {
         "id": "d0adceee64becfe7",
         "type": "tabs",
-        "dimension": 55.36565977742448,
+        "dimension": 54.91727941176471,
         "children": [
           {
             "id": "a5609126f72395a1",
@@ -92,11 +93,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Integration.md",
                 "mode": "preview",
                 "source": true
               }
-            }
+            },
+            "group": "ff7aa4e2110e2490"
           }
         ],
         "currentTab": 1
@@ -252,35 +254,6 @@
     "type": "floating",
     "children": [
       {
-        "id": "920516cd1fba1e96",
-        "type": "window",
-        "children": [
-          {
-            "id": "2d0f19db299788e3",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "2e1ca86b41555292",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "PDFs/nagy.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 960,
-        "width": 1080,
-        "height": 960,
-        "maximize": true,
-        "zoom": 0
-      },
-      {
         "id": "78186e768344ff28",
         "type": "window",
         "children": [
@@ -306,37 +279,6 @@
         "direction": "vertical",
         "x": 28,
         "y": 560,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0
-      },
-      {
-        "id": "30d338e7c8ec24e4",
-        "type": "window",
-        "children": [
-          {
-            "id": "c4a03d8e00b64eca",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "994a13f8ed112eff",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
-                    "mode": "preview",
-                    "source": true
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 3264,
-        "y": 141,
         "width": 1024,
         "height": 800,
         "maximize": true,
@@ -370,11 +312,80 @@
         "height": 500,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "d9be5d8a2b6b78e3",
+        "type": "window",
+        "children": [
+          {
+            "id": "097f517240919447",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1be2de3313845968",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "PDFs/nagy.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 3096,
+        "y": 400,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 0
+      },
+      {
+        "id": "5a01ba0577b4ba30",
+        "type": "window",
+        "children": [
+          {
+            "id": "b8ec37763a441382",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "718c5c1bcf0c41a3",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+                    "mode": "preview",
+                    "source": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 768,
+        "y": 336,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 0
       }
     ]
   },
-  "active": "2e1ca86b41555292",
+  "active": "1be2de3313845968",
   "lastOpenFiles": [
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+    "PDFs/nagy.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+    "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
+    "index.md",
+    "Own Projects/ODE LVQ",
+    "Own Projects",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Terminology.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Linear Algebra/Terminology.md",
     "PhD Studies/Mathematic Basics/Linear Algebra/Eigenvectors and Eigenvalues.md",
     "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
@@ -387,7 +398,6 @@
     "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
     "PhD Studies/Mathematic Basics/Calculus/Series.md",
     "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
-    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
     "PhD Studies/Mathematic Basics/Calculus/Discontinuities.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
@@ -395,13 +405,6 @@
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/Transformer Vector Quantization.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/Mahalabonis Distance.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
-    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
-    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
-    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/1 - Maximum Inner Product Search.md",
-    "PhD Studies/Machine Learning/Network Architectures/Mamba/State Space Models.md",
-    "PhD Studies/Machine Learning/Network Architectures/Mamba/Mamba.md",
-    "PhD Studies/Machine Learning/Network Architectures/Mamba/Control Systems Preliminaries.md",
-    "PDFs/nagy.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
@@ -411,8 +414,6 @@
     "Pasted image 20240304122332.png",
     "PhD Studies/Mathematic Basics/Combinatorics/Figures/ex_puzzle.png",
     "PhD Studies/Mathematic Basics/Combinatorics/Figures",
-    "Sources/Richard A Brualdi - Introductory combinatorics-North-Holland  (2004).pdf",
-    "Sources/bogart_script.pdf",
     "Research Seminar/Figures/rs_1_fig_4.png",
     "Research Seminar/Figures/example_1.png",
     "Research Seminar/Figures/rs_1_fig_3.png",
