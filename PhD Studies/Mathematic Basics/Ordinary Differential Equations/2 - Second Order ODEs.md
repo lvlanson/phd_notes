@@ -1186,7 +1186,7 @@
 >>2. Solve the differential equation for $v$
 >>3. Find the solution $y$ of the differential equation above
 >>
->>>[!example] Solution
+>>>[!example]- Solution
 >>>Note, we have the case $y'' = f(t,\cancel{ y },y')$, where $y$ does not appear explicitly. We can use [[#^235d4c | the corresponding theorem]] and substitute $v = y'$ and get
 >>>$$t^2v'+2tv-3=0$$
 >>>This is a [[1 - First Order ODEs#^defThmSolODEVar | first order differential equation with variable coefficients]], we have
@@ -1218,3 +1218,59 @@
 >>> y &= \int c_{1}t^{-3}  \, dt + \int \frac{3}{2}t^{-1} \, dt   \\
 >>> &= -c_{1} \frac{1}{2}t^{-2}+\frac{3}{2}\ln \lvert t \rvert + c 
 >>>\end{align}$$
+
+## 2.3 Homogeneous Constant Coefficients Equations
+
+>[!def] Definition Characteristic Polynomial ([[../../../PDFs/nagy.pdf#page=111| Source]])
+>The **characteristic polynomial** and **characteristic equation** of the second order linear homogeneous equation with constant coefficients
+>$$y''+a_{1}y'+a_{0}y = 0$$
+>are given by
+>$$p(r)=r^2+a_{1}r+a_{0}, \qquad p(r)=0$$
+
+>[!theorem] Theorem Solutions for the Characteristic Polynomial with Constant Coefficients([[../../../PDFs/nagy.pdf#page=111| Source]])
+>If $r_{\pm}$ are the roots of the characteristic polynomial to the second order linear homogeneous equation with constant coefficients
+>$$y''+a_{1}y'+a_{0}y=0 \tag{1}$$
+>and if $c_{+}, c_{-}$ are arbitrary constants, then the following statement holds true
+>1. If $r_{+} \neq r_{-}$, real or complex, then the general solution of equation $(1)$ can be given by
+>$$y_{gen}(t)=c_{+}e^{r_{+}t} + c_{-}e^{r_{-}t}$$
+>2. If $r_{+}=r_{-}=r_{0} \in \mathbb{R}$, then the general solution of equation $(1)$ is given by
+>$$y_{gen}(t)=c_{+}e^{r_{0}t} + c_{-}te^{r_{0}t}$$
+>
+>>[!proof]
+>>>[!remark]
+>>>This proof involves guessing that functions $y(t)=e^{rt}$ must be solutions. The next proof will be constructive and won't involve guessing the solutions.
+>>
+>>As mentioned we guess, that $y(t)=e^{rt}$ must be solution for the given ODE, since we can cancel out the exponential function as follows. Therefore, we insert the solution in equation $(1)$ accordingly
+>>$$\begin{align}
+>> y''+a_{1}y'+a_{0}y&=0 \\
+>> (e^{rt})''+a_{1}(e^{rt})'+a_{0}e^{rt}&=0 \\
+>> r^2e^{rt}+a_{1}re^{rt}+a_{0}e^{rt}&=0 \qquad&&\Big\vert : e^{rt} \\ 
+>> r^2+a_{1}r+a_{0}&=0 \tag{2}
+>>\end{align}$$
+>>From equation $(2)$ we understand, that we have two cases for the the solutions $r_{+}, r_{-}$ as suggested by the theorem.
+>>> Case $r_+ \neq r_-$
+>>
+>>We have the solutions
+>>$$y_{+}(t) = e^{r_{+}t}\qquad y_{-}(t)=e^{r_{-}t}$$
+>> which must be linearly independent, because the exponential functions have different exponents. Hence, we  can give the general solution as the linear combination
+>> $$y_{gen}(t)=c_{+}e^{r_{+}t} + c_{-}e^{r_{-}t} $$
+>>> Case $r_{+} = r_{-}=r_{0}$
+>>
+>>We now have the single solution
+>>$$y_{+}(t)=e^{r_{0}t}$$
+>> To find a second solution not proportional to $y_{+}$, we use the reduction of order method. Therefore we write
+>> $$\begin{align}
+>> y_{-}(t) &= v(t)y_{+}(t) \\
+>>  &= v(t)e^{r_{0}t}
+>>\end{align}$$
+>>We have to determine the first two derivatives to insert those into equation $(1)$
+>>$$\begin{align}
+>> y_{-} &= ve^{r_{0}t}  \\
+>> y_{-}' &= v'e^{r_{0}t} + r_{0}ve^{r_{0}t} \\
+>> y_{-}'' &= v''e^{r_{0}t} + 2r_{0}v'e^{r_{0}t} + r_{0}^2ve^{r_{0}t}
+>>\end{align}$$
+>>We insert the derivatives into equation $(1)$ and rearrange, such that we make the terms dependent on $v$.
+>>$$\begin{align}
+>> y''+a_{1}y'+a_{0}y&=0  \\
+>> v''e^{r_{0}t} + 2r_{0}v'e^{r_{0}t} + r_{0}^2ve^{r_{0}t}
+>>\end{align}$$

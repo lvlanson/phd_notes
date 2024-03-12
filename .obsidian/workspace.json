@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -206,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md"
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md"
               }
             }
           },
@@ -314,8 +314,9 @@
       }
     ]
   },
-  "active": "e02a88fd0e5f9dd5",
+  "active": "718c5c1bcf0c41a3",
   "lastOpenFiles": [
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "PDFs/nagy.pdf",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
@@ -324,7 +325,6 @@
     "Own Projects/ODE LVQ",
     "Own Projects",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Terminology.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Linear Algebra/Terminology.md",
     "PhD Studies/Mathematic Basics/Linear Algebra/Eigenvectors and Eigenvalues.md",
     "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
