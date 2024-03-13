@@ -65,7 +65,7 @@
             "group": "d05361c51622cf84"
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "d0adceee64becfe7",
@@ -127,7 +127,7 @@
             "group": "d05361c51622cf84"
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -193,7 +193,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -210,7 +210,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -233,7 +233,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md"
+                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md"
               }
             }
           },
@@ -310,39 +310,39 @@
       }
     ]
   },
-  "active": "f4f05c5651e7500e",
+  "active": "5323870b380a8f2e",
   "lastOpenFiles": [
     "PDFs/nagy.pdf",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+    "References/@lang1999.md",
+    "References/@needham1999.md",
     "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "index.md",
+    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+    "References/@apostol1967.md",
+    "References/@ben-baruch2021.md",
+    "References/@bishop2006.md",
+    "References/@briggs2019.md",
+    "References/@brogan1991.md",
+    "References/@conci2018.md",
+    "References/@devlin2019.md",
+    "References/@folland2009.md",
+    "References/@greene2019.md",
+    "References/@grimmett1986.md",
+    "References/@gu2022.md",
+    "References/@gu2023.md",
+    "References/@guo2015.md",
+    "References/@guo2020.md",
+    "References/@hornrogara.md",
+    "References/@howell2016.md",
+    "References/@kalman1960.md",
+    "References/@kreyszig1978.md",
     "PDFs/needham1999.pdf",
     "Sources/lang1999.pdf",
     "Sources",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
-    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
-    "PhD Studies/Mathematic Basics/Metrics/Figures/point_set.excalidraw.md",
-    "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
-    "index.md",
     "Own Projects/ODE LVQ",
     "Own Projects",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/Terminology.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Terminology.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Eigenvectors and Eigenvalues.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Determinants.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Basics.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Inner Products.md",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
-    "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
-    "PhD Studies/Mathematic Basics/Calculus/Series.md",
-    "PhD Studies/Mathematic Basics/Calculus/Multivariate Calculus.md",
-    "PhD Studies/Mathematic Basics/Calculus/Discontinuities.md",
-    "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
-    "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
-    "PhD Studies/Mathematic Basics/Calculus/Calculus Limits.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",

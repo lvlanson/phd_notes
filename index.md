@@ -3,7 +3,7 @@
 >
 >>[!lemma] I am currently working on
 >> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs|First Order Differential Equations]] ✅
->> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs|Second Order Differential Equations]] 📖
+>> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs|Second Order Differential Equations]] ✅
 >> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations|Systems of Linear  Differential Equations]] ✏️
 >> - [[PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series|Fourier Series]] and [[PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New|Fourier Series(2)]] ✏️
 >

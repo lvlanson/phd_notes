@@ -442,3 +442,35 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >>>x_{1}'' &= -2x_{1}' +  2x_{1} \\
 >>>x_{1}''+2x_{1}'-2x_{1} &= 0 \\
 >>>\end{align}$$
+>>>This is a second order differential equation and can be solved using the [[2 - Second Order ODEs#^9bcb76| characteristic polynomial]] and using the [[2 - Second Order ODEs#^702f6f| appropriate theorem]]. Therefore, we have
+>>>$$\begin{align}
+>>> r^2+2r-2 = 0
+>>>\end{align}$$
+>>>This yields the solutions
+>>>$$\begin{align}
+>>> r_{+} &= -1 + \sqrt{ 3 } \\
+>>> r_{-} &= -1 - \sqrt{ 3 }
+>>>\end{align}$$
+>>>According to the solution theorem, the general solution for $x_1$ can be given as
+>>>$$x_{1}=c_{+}e^{(-1 + \sqrt{ 3 })t}+ c_{-}e^{(-1 - \sqrt{ 3 })t}$$
+>>>Finally, since we are also interested to have solutions for $x_2$, we can use the found solution of $x_1$. Since $x_1$ is the general solution, hence both parts of the solutions are linearly independent, we can choose arbitrary constants $\tilde{c}_{\pm}$ for $x_{2}$, which by design of the system solve the requirements. Finally,
+>>>$$x_{2}=\tilde{c}_{+}e^{(-1 + \sqrt{ 3 })t}+ \tilde{c}_{-}e^{(-1 - \sqrt{ 3 })t}$$
+>
+>>[!example] 
+>> Write the first order initial value problem 
+>> $$\begin{align}
+>> \mathbf{x}' &= A\mathbf{x} \\
+>> A &= \begin{bmatrix}
+>> 1 & 2 \\
+>> 3 & 4
+>>\end{bmatrix} \\
+>> \mathbf{x} &= \begin{bmatrix}
+>> x_{1} \\
+>> x_{2}
+>>\end{bmatrix} \\
+>> \mathbf{x}(0) &= \begin{bmatrix}
+>> 5 \\ 6
+>>\end{bmatrix}
+>>\end{align}$$
+>>as a second order initial value problem for $x_{1}$. Repeat calculations for $x_2$.
+

@@ -1229,6 +1229,8 @@
 >are given by
 >$$p(r)=r^2+a_{1}r+a_{0}, \qquad p(r)=0$$
 
+^9bcb76
+
 >[!theorem] Theorem Solutions for the Characteristic Polynomial with Constant Coefficients ([[../../../PDFs/nagy.pdf#page=111| Source]])
 >If $r_{\pm}$ are the roots of the characteristic polynomial to the second order linear homogeneous equation with constant coefficients
 >$$y''+a_{1}y'+a_{0}y=0 \tag{1}$$
@@ -1428,6 +1430,8 @@
 >>>\end{align}$$
 >>>The theorem includes complex solutions, hence we state the general solution
 >>>$$y_{gen}(t)=c_{+}e^{(1 + i\sqrt{ 5 })t} + c_{-}e^{(1 - i\sqrt{ 5 })t}$$
+
+^702f6f
 
 >[!remark]
 >We now analyze how to extract real valued solutions from complex general solutions.
