@@ -424,7 +424,7 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >>x_{1}' &= -x_{1}+ 3x_{2} \tag{1}\\
 >> x_{2}' &= x_{1}-x_{2}\tag{2}
 >>\end{align}$$
->>>[!example] Solution
+>>>[!example]- Solution
 >>>First we prepare some necessary computations
 >>>$$\begin{alignat}{2}
 >>> x_{1}' &= -x_{1} + 3x_{2} \qquad&&\Big\vert \frac{d}{dt} \\

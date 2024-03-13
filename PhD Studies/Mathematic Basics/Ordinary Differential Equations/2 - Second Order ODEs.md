@@ -1129,6 +1129,8 @@
 >>Hence, the Wronskian can never equal to zero. By [[#^5577c0| Wronskian's second theorem]] we know that the solutions are linearly independent. This concludes the proof.
 >>$$\tag*{$\square$}$$
 >
+>>[!proof] Constructive Proof ([[../../../PDFs/nagy.pdf#page=116| Omitted but given here]])
+>
 >>[!example]
 >>Find a second solution $y_{2}$ linearly independent to the solution $y_{1}(t)=t$ of the differential equation
 >>$$t²y''+2ty'-2y=0$$
@@ -1227,7 +1229,7 @@
 >are given by
 >$$p(r)=r^2+a_{1}r+a_{0}, \qquad p(r)=0$$
 
->[!theorem] Theorem Solutions for the Characteristic Polynomial with Constant Coefficients([[../../../PDFs/nagy.pdf#page=111| Source]])
+>[!theorem] Theorem Solutions for the Characteristic Polynomial with Constant Coefficients ([[../../../PDFs/nagy.pdf#page=111| Source]])
 >If $r_{\pm}$ are the roots of the characteristic polynomial to the second order linear homogeneous equation with constant coefficients
 >$$y''+a_{1}y'+a_{0}y=0 \tag{1}$$
 >and if $c_{+}, c_{-}$ are arbitrary constants, then the following statement holds true
@@ -1236,7 +1238,8 @@
 >2. If $r_{+}=r_{-}=r_{0} \in \mathbb{R}$, then the general solution of equation $(1)$ is given by
 >$$y_{gen}(t)=c_{+}e^{r_{0}t} + c_{-}te^{r_{0}t}$$
 >
->>[!proof]
+>Furthermore, given real constants $t_{0}, y_{0}$ and $y_{1}$, there is a unique solution to the initial value problem given by equation $(1)$ and the initial conditions $y(t_{0})=y_{0}$ and $y'(t_{0})=y_{1}$.
+>>[!proof]-
 >>>[!remark]
 >>>This proof involves guessing that functions $y(t)=e^{rt}$ must be solutions. The next proof will be constructive and won't involve guessing the solutions.
 >>
@@ -1247,7 +1250,7 @@
 >> r^2e^{rt}+a_{1}re^{rt}+a_{0}e^{rt}&=0 \qquad&&\Big\vert : e^{rt} \\ 
 >> r^2+a_{1}r+a_{0}&=0 \tag{2}
 >>\end{align}$$
->>From equation $(2)$ we understand, that we have two cases for the the solutions $r_{+}, r_{-}$ as suggested by the theorem.
+>>From equation $(2)$ we understand, that we have two cases for the solutions $r_{+}, r_{-}$ as suggested by the theorem.
 >>> Case $r_+ \neq r_-$
 >>
 >>We have the solutions
@@ -1258,7 +1261,7 @@
 >>
 >>We now have the single solution
 >>$$y_{+}(t)=e^{r_{0}t}$$
->> To find a second solution not proportional to $y_{+}$, we use the reduction of order method. Therefore we write
+>> To find a second solution not proportional to $y_{+}$, we use the reduction of order method. Therefore, we write
 >> $$\begin{align}
 >> y_{-}(t) &= v(t)y_{+}(t) \\
 >>  &= v(t)e^{r_{0}t}
@@ -1271,6 +1274,193 @@
 >>\end{align}$$
 >>We insert the derivatives into equation $(1)$ and rearrange, such that we make the terms dependent on $v$.
 >>$$\begin{align}
->> y''+a_{1}y'+a_{0}y&=0  \\
->> v''e^{r_{0}t} + 2r_{0}v'e^{r_{0}t} + r_{0}^2ve^{r_{0}t}
+>> y_{-}''+a_{1}y_{-}'+a_{0}y_{-}&=0  \\
+>> v''e^{r_{0}t} + 2r_{0}v'e^{r_{0}t} + r_{0}^2ve^{r_{0}t} + a_{1}(v'e^{r_{0}t} + r_{0}ve^{r_{0}t}) + a_{0}(ve^{r_{0}t}) &= 0 \\
+>> v''e^{r_{0}t} + v'e^{r_{0}t}(2r_{0}+ a_{1}) + ve^{r_{0}t}(r^2_{0}+a_{1}r_{0}+a_{0}) &=0 \qquad&&\Big\vert : e^{r_{0}t} \\
+>> v'' + v'(2r_{0}+ a_{1}) + v(r^2_{0}+a_{1}r_{0}+a_{0}) &=0 \tag{3}
+>>\end{align}$$
+>>Note, by equation $(2)$ we determined $r^2_{0}+a_{1}r_{0}+a_{0} = 0$ and get
+>>$$v'' + v'(2r_{0}+ a_{1}) = 0$$
+>>Further note, we determine the solution $r_0$ by computing
+>>$$r_{0} = -\frac{a_{1}}{2}\pm \frac{1}{2}\sqrt{ a_{1}^2 -4a_{0} }$$
+>>The root must be $0$, because we have a single solution to the characteristic polynomial, hence,
+>>$$r_{0} = -\frac{a_{1}}{2}$$
+>>We rearrange
+>>$$2r_{0}+a_{1}=0$$
+>>The term $v'(2r_{0}+ a_{1})$ in equation $(3)$ therefore vanishes and we have 
+>>$$v'' = 0$$
+>>Integrating two times gives
+>>$$v = c_{1}+c_{2}t$$
+>>Since we require the second solution to be proportional to $y_{1}$, we have to require $c_2 \neq 0$. We are able to choose $c_{1}= 0$ and $c_{2}= 1$ and yield
+>>$$v = t$$
+>>Hence, the fundamental solutions can be given as
+>>$$\begin{align}
+>> y_{+}(t) &= e^{r_{0}t} \\
+>> y_{-}(t) &= te^{r_{0}t}
+>>\end{align}$$
+>>and the general solution can be given as
+>>$$y_{gen}(t) = c_{+}e^{r_{0}t}+ c_{-}te^{r_{0}t}$$
+>>>Unique Solutions of the Initial Value Problems for $r_+ \neq r_-$
+>>
+>>Given are $y(t_{0})=y_{0}$ and $y'(t_{0})=y_{1}$, so we first describe these functions with respect to the general solution
+>>$$\begin{align}
+>> y_{0} &=c_{+}e^{r_{+}t} + c_{-}e^{r_{-}t} \\
+>> y_{1} &= r_{+}c_{+}e^{r_{+}t} + r_{-}c_{-}e^{r_{-}t}
+>>\end{align}$$
+>>which yields a system of equations we want to solve for $c_+$ and $c_{-}$, where we have
+>>$$\begin{align}
+>> c_{+} &= - \frac{r_{-}y_{0}-y_{1}}{(r_{+}-r_{-})e^{r_{+}t_{0}}} \\
+>> c_{-} &= \frac{r_{+}y_{0}-y_{1}}{(r_{+}-r_{-})e^{r_{-}t_{0}}} 
+>>\end{align}$$
+>>>Unique Solutions of the Initial Value Problems for $r_+ = r_- = r_{0}$
+>>
+>>In this case we get the following equations
+>>$$\begin{align}
+>> y_{0} &= (c_{+} + c_{-}t_{0})e^{r_{0}t_{0}} \\
+>> y_{1} &= c_{-}e^{r_{0}t_{0}} + r_{0}(c_{+}+c_{-}t_{0})e^{r_{0}t_{0}}
+>>\end{align}$$
+>>where we yield the following solutions
+>>$$\begin{align}
+>> c_{+} &= \frac{y_{0} +t_{0}(r_{0}y_{0}-y_{1})}{e^{r_{0}t_{0}}} \\
+>> c_{-} &= \frac{r_{0}y_{0}-y_{0}}{e^{r_{0}t_{0}}} 
+>>\end{align}$$
+>>$$\tag*{$\square$}$$
+>
+>>[!example] 
+>>Find the general solution $y_{gen}$ of the differential equation
+>>$$2y''-3y'+y=0$$
+>>>[!example]- Solution
+>>>First, we bring the 2nd order homogeneous differential equation in the standard form, hence
+>>>$$y'' -\frac{3}{2}y' + \frac{1}{2}y$$
+>>>The characteristic polynomial can be given as
+>>>$$\begin{align}
+>>>p(r) &= r^2-\frac{3}{2}r+\frac{1}{2}
+>>>\end{align}$$
+>>>Solving yields
+>>>$$\begin{align}
+>>> r_{\pm} &= \frac{3}{4}\pm \sqrt{ \frac{9}{16}-\frac{1}{2} } \\
+>>>  &= \frac{3}{4}\pm \sqrt{ \frac{1}{16} } \\ 
+>>> r_{+} &= 1 \\
+>> r_{-} &= \frac{1}{2}
+>>>\end{align}$$
+>>>We note having the case $r_{+}\neq r_{-}$, therefore the general solution can be given as
+>>>$$y_{gen}= c_{+}e^{t}+c_{-}e^{(1/2)t}$$
+>
+>>[!example]
+>> Find the solution to the initial value problem
+>> $$9y''+6y'+y=0$$
+>> with
+>> $$y(0)=1 \qquad y'(0)=\frac{5}{3}$$
+>>>[!example]- Solution
+>>> First we represent the differential equation in its normalform
+>>> $$y'' + \frac{2}{3}y' + \frac{1}{9}y = 0$$
+>>> and get the characteristic polynomial
+>>> $$r^2 + \frac{2}{3}r + \frac{1}{9} = 0$$
+>>> Solving for solutions gives
+>>> $$\begin{align}
+>>> r_{0} &= -\frac{1}{3}
+>>>\end{align}$$
+>>>According to the theorem we can give the general solution as
+>>>$$y_{gen}(t) = c_{+}e^{-(1/3)t} + c_{-}te^{-(1/3)t}$$
+>>> Computing the derivative
+>>> $$y'_{gen}(t) = -\frac{1}{3}c_{+}e^{-(1/3)t} + \left(1 -\frac{t}{3} \right)c_{-}e^{-(1/3)t}$$
+>>> Inserting the initial conditions gives
+>>> $$\begin{align}
+>>> 1 &= c_{+}e^{0} + c_{-}te^{0} \tag*{y(0)=1} \\
+>>> 1 &= c_{+} \\ \\
+>>> \frac{5}{3} &= -\frac{1}{3}c_{+}e^{0} +  \left(1 -\frac{0}{3} \right)c_{-}e^{0} \tag*{y'(0)=5/3} \\
+>>> \frac{5}{3} &= -\frac{1}{3}c_{+} + c_{-} 
+>>>\end{align}$$
+>>>We have the first solution of the system of equations and can solve therefore
+>>>$$\begin{align}
+>>> c_{+} &= 1 \tag{1}\\
+>>> \frac{5}{3} &= -\frac{1}{3} + c_{-}  \tag{2} \\
+>>> c_{-} &= 2
+>>>\end{align}$$
+>
+>>[!example]
+>> Find the solution to the initial value problem
+>> $$y''+5y'+6y=0$$
+>> with
+>> $$y(0)=1 \qquad y'(0)=-1$$
+>>>[!example]- Solution
+>>> We determine the characteristic polynomial
+>>> $$r^2+5r+6 = 0$$
+>>> The solutions to this polynom can be given as
+>>> $$\begin{align}
+>>> r_{+} &= -2 \\
+>>> r_{-} &=-3
+>>>\end{align}$$
+>>>We have the case $r_{+} \neq r_{-}$. Using the solution formula given by the theorem we can state the general solution as
+>>>$$y_{gen}(t) = c_{-}e^{-3t}+c_{+}e^{-2t}$$
+>>>Computing the first derivative gives
+>>>$$y_{gen}'(t) = -3c_{-}e^{-3t}-2c_{+}e^{-2t}$$
+>>>Inserting the initial conditions gives
+>>>$$\begin{align}
+>>> 1 &= c_{-}e^{0}+c_{+}e^{0} \tag*{y(0)=1}  \\
+>>> 1 &= c_{-} + c_{+} \\ \\
+>>> -1 &= -3c_{-}e^{0}-2c_{+}e^{0} \tag*{y'(0)=-1} \\
+>>> -1 &= -3c_{-}-2c_{+}
+>>>\end{align}$$
+>>>This yields the system of equations
+>>>$$\begin{align}
+>>> 1 &= c_{-} + c_{+} \tag{1} \\
+>>> 1 &= -3c_{-}-2c_{+} \tag{2}
+>>>\end{align}$$
+>>>which gives the solutions
+>>>$$\begin{align}
+>>> c_{+}&=2 \\
+>>> c_{-}&= -1
+>>>\end{align}$$
+>>>Inserting the solutions for $c_{+}, c_{-}$ gives
+>>>$$y(t) = 2e^{-2t}-e^{-3t}$$
+>
+>>[!example]
+>>Find the general solution $y_{gen}$ of the equation
+>>$$y''-2y'+6y =0 $$
+>>>[!example]- Solution
+>>> The characteristic polynom can be given as
+>>> $$r^2-2r + 6 = 0$$
+>>> Solving gives the following complex solutions
+>>> $$\begin{align}
+>>> r_{+} &= 1 + i\sqrt{ 5 } \\ 
+>>> r_{-} &= 1 - i\sqrt{ 5 } \\ 
+>>>\end{align}$$
+>>>The theorem includes complex solutions, hence we state the general solution
+>>>$$y_{gen}(t)=c_{+}e^{(1 + i\sqrt{ 5 })t} + c_{-}e^{(1 - i\sqrt{ 5 })t}$$
+
+>[!remark]
+>We now analyze how to extract real valued solutions from complex general solutions.
+
+>[!theorem] Theorem Real Valued Fundamental Solutions ([[../../../PDFs/nagy.pdf#page=114| Source]])
+>If the differential equation
+>$$y'' + a_{1}y' + a_{0}y = 0$$
+>where $a_{1}, a_{0}$ are real constants, has a characteristic polynomial with complex roots $r_{\pm}= \alpha \pm i\beta$ and complex valued fundamental solutions
+>$$\begin{align}
+> \tilde{y}_{+}(t) &= e^{(\alpha+i\beta)t}  \\
+> \tilde{y}_{-}(t) &= e^{(\alpha-i\beta)t} 
+>\end{align}$$ 
+>then the equation also has real valued fundamental solutions given by
+>$$\begin{align}
+> y_{+}(t) &= e^{\alpha t}\cos(\beta t)  \\
+> y_{-}(t) &= e^{\alpha t} \sin(\beta t)
+>\end{align}$$
+>>[!proof]-
+>>First, we decompose the complex solutions using the [[../Complex Analysis/Fundamental Properties|properties of complex numbers]]
+>>$$\begin{align}
+>> \tilde{y}_{\pm}(t)&= e^{(\alpha \pm i \beta)t} \\
+>> &= e^{\alpha t}e ^{ \pm i \beta t} \\
+>> &= e^{\alpha t}(\cos \beta t \pm i \sin \beta t)
+>>\end{align}$$
+>>Since we have a **homogeneous differential equation** we can apply the [[#^88d6f3| superposition theorem]], which states we can compose any solution by a linear combination of $\tilde{y}_{+}$ and $\tilde{y}_{-}$ with arbitrary constants $c_1$ and $c_2$. Choosing $c_1=\frac{1}{2}$ and $c_{2}=\frac{1}{2i}$ will yield the desired result. We get
+>>$$\begin{align}
+>> y_{+}(t) &= \frac{1}{2}(\tilde{y}_{+}(t) + \tilde{y}_{-}(t)) \\
+>>  &= \frac{1}{2}\Big(e^{\alpha t}(\cos \beta t + i \sin \beta t) + e^{\alpha t}(\cos \beta t - i \sin \beta t)\Big) \\
+>>  &= \frac{1}{2}\Big(e^{\alpha t}(\cos \beta t \cancel{ + i \sin \beta t } + \cos \beta t \cancel{ - i \sin \beta t })\Big) \\ 
+>> &= e^{\alpha t}\cos \beta t \\
+>> y_{-}(t) &= \frac{1}{2i}(\tilde{y}_{+}(t) - \tilde{y}_{-}(t)) \\
+>>  &= \frac{1}{2i}\Big(e^{\alpha t}(\cos \beta t + i \sin \beta t) - e^{\alpha t}(\cos \beta t - i \sin \beta t)\Big) \\
+>>  &= \frac{1}{2i}\Big(e^{\alpha t}(\cancel{ \cos \beta t  }+ i \sin \beta t \cancel{ - \cos \beta t } + i \sin \beta t)\Big) \\
+>>  &= \frac{1}{2i}\Big(2i e^{\alpha t} \sin \beta t \Big) \\
+>>  &= i e^{\alpha t} \sin \beta t \tag*{$\square$} \\
 >>\end{align}$$
