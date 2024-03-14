@@ -22,9 +22,11 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >
 >>[!remark]
 >>The described system of linear differential equations is called **homogeneous** iff
->>- $\mathbf{b} = 0$ ANDl
+>>- $\mathbf{b} = 0$ AND
 >>- $A$ is constant AND
 >>- $A$ is diagonalizable
+
+^5c0272
 
 >[!remark]
 >1. The derivative of a vector valued function is defined as $$\mathbf{x}(t)' = \begin{bmatrix} x_{1}'(t) \\  \vdots \\ x_{n}'(t) \end{bmatrix} $$
@@ -219,6 +221,8 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >
 >>[!remark]
 >>The transformation given by the theorem can be generalized to $n \times n$ linear differential systems and $n$-th order scalar linear equations for $n \geq 2$
+
+^fb7c74
 
 >[!theorem] Theorem Second Order Reduction ([[../../../PDFs/nagy.pdf#page=244| Source]])
 >Any $2 \times 2$ constant coefficients linear system
@@ -473,4 +477,216 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >>\end{bmatrix}
 >>\end{align}$$
 >>as a second order initial value problem for $x_{1}$. Repeat calculations for $x_2$.
+>>>[!example]- Solution
+>>>We have
+>>>$$\begin{align}
+>>>\begin{bmatrix}
+>>> x_{1}' \\ x_{2}'
+>>>\end{bmatrix} &= \begin{bmatrix}
+>>> 1 & 2 \\
+>>> 3 & 4
+>>>\end{bmatrix} \begin{bmatrix}
+>>> x_{1} \\
+>>> x_{2}
+>>>\end{bmatrix} \\ &\Downarrow \\
+>>> x_{1}' &= x_{1} + 2x_{2} \\
+>>> x_{2}' &= 3x_{1} + 4x_{2}
+>>>\end{align}$$
+>>>The theorem states for initial conditions
+>>>$$\begin{align}
+>>> \mathbf{x}(\mathbf{0}) &= \mathbf{x_{0}} \\
+>>> \mathbf{x}'(\mathbf{0})  &= \mathbf{A}\mathbf{x_{0}}
+>>>\end{align}$$
+>>>Therefore we have
+>>>$$\begin{align}
+>>> \mathbf{x}(\mathbf{0})&=\begin{bmatrix}
+>>> x_{1}(0) \\ x_{2}(0)
+>>>\end{bmatrix} =\begin{bmatrix}
+>>> 5 \\ 6
+>>>\end{bmatrix} \\
+>>> &\Downarrow \\
+>>> x_{1}(0) &= 5 \\
+>>> x_{2}(0) &= 6
+>>>\end{align}$$
+>>>and for $\mathbf{x}'$
+>>>$$\begin{align}
+>>> \mathbf{x}'(\mathbf{0})&=\begin{bmatrix}
+>>> x_{1}'(0) \\ x_{2}'(0)
+>>>\end{bmatrix} =\begin{bmatrix}
+>>> 1 & 2 \\
+>>> 3 & 4
+>>>\end{bmatrix}\begin{bmatrix}
+>>> 5 \\ 6
+>>>\end{bmatrix} = \begin{bmatrix}
+>>> 17 \\ 39
+>>>\end{bmatrix} \\
+>>> &\Downarrow \\
+>>> x_{1}'(0) &= 17 \\
+>>> x_{2}'(0) &= 39 \\
+>>>\end{align}$$
 
+>[!theorem] Theorem Superposition for Homogeneous Systems ([[../../../PDFs/nagy.pdf#page=244| Source]])
+>If the vector functions $\mathbf{x}^{(1)}, \mathbf{x}^{(2)}$ are solutions of 
+>$$\begin{align}
+> \mathbf{x}^{(1)'} &= A\mathbf{x}^{(1)} \\
+> \mathbf{x}^{(2)'} &= A\mathbf{x}^{(2)} 
+>\end{align}$$
+>then the linear combination 
+>$$\begin{align}
+> \mathbf{x} = a \mathbf{x}^{(1)} + b \mathbf{x}^{(2)} \qquad \forall a,b \in \mathbb{R} 
+>\end{align}$$
+>is also solution of 
+>$$\mathbf{x}' = A\mathbf{x}$$
+>>[!remark]
+>>This is an extension of the [[2 - Second Order ODEs#^88d6f3|superposition principle]] of linear homogeneous second order differential equations
+>
+>>[!remark]
+>>There are two cases of interest
+>>1. $a = b= 1$:
+>>$\mathbf{x}^{(1)}, \mathbf{x}^{(2)}$ are solutions $\Longrightarrow$ so is $\mathbf{x}^{(1)}+ \mathbf{x}^{(2)}$
+>>2. $b=0, a$ arbitrary:
+>>$\mathbf{x}^{(1)}$ is solution $\Longrightarrow$ so is $a\mathbf{x}^{(1)}$
+>
+>>[!proof]-
+>>Suppose 
+>>$$\mathbf{x}= a\mathbf{x}^{(1)} + b\mathbf{x}^{(2)}$$
+>>is a solution of the differential equation. We use the [[2 - Second Order ODEs#^dec49d|linearity of the differential operator]]
+>>$$\begin{align}
+>> \mathbf{x}' &= \Big(a\mathbf{x}^{(1)} + b\mathbf{x}^{(2)} \Big)' \\
+>>  &= a\mathbf{x}^{(1)'} + b\mathbf{x}^{(2)'} \tag{1}
+>>\end{align}$$
+>>Note, the solution to any linear homogeneous differential system is given as $$\mathbf{x}' = A\mathbf{x}$$ as stated in the [[#^5c0272| definition of linear systems]] with $\mathbf{b}=\mathbf{0}$.  We substitute accordingly into equation $(1)$
+>>$$\begin{align}
+>> \mathbf{x}' &=  aA\mathbf{x}^{(1)} + bA\mathbf{x}^{(2)} \\
+>>    &= A( a\mathbf{x}^{(1)} + b\mathbf{x}^{(2)}) \\
+>>    &= A\mathbf{x} \tag*{$\square$}
+>>\end{align}$$
+>
+>>[!example]
+>>Verify that 
+>>$$\begin{align}
+>> \mathbf{x}^{(1)} &= \begin{bmatrix}
+>> 1 \\ 1
+>>\end{bmatrix}e^{-2t} \\
+>>\mathbf{x}^{(2)} &= \begin{bmatrix}
+>> -1 \\ 1
+>>\end{bmatrix}e^{4t} \\
+>> \tilde{\mathbf{x}} &= \mathbf{x}^{(1)} + \mathbf{x}^{(2)}
+>>\end{align}$$
+>> are solutions to the homogeneous linear system
+>> $$\begin{align}
+>> \mathbf{x}' &= A\mathbf{x} \\ 
+>> A &= \begin{bmatrix}
+>> 1 & -3 \\ -3 & 1
+>>\end{bmatrix} 
+>>\end{align}$$
+>>>[!example]- Solution
+>>>First, we verify that the fundamental solutions are valid. Computing the derivatives gives
+>>>$$\begin{align}
+>>> \mathbf{x}^{(1)'} &= \begin{bmatrix}
+>> -2 \\ -2
+>>\end{bmatrix}e^{-2t} \\
+>>\mathbf{x}^{(2)'} &= \begin{bmatrix}
+>> -4 \\ 4
+>>\end{bmatrix}e^{4t} \\
+>>>\end{align}$$
+>>>Now, we insert for each fundamental solution into the system and verify
+>>>$$\begin{align}
+>>> \mathbf{x}^{(1)'} &= A\mathbf{x}^{(1)} \\
+>>> \begin{bmatrix}
+>> -2 \\ -2
+>>\end{bmatrix}e^{-2t} &= \begin{bmatrix}
+>> 1 & -3 \\ -3 & 1
+>>\end{bmatrix} \begin{bmatrix}
+>> 1 \\ 1
+>>\end{bmatrix}e^{-2t}  \\
+>> &=\begin{bmatrix}
+>> 1-3 \\ -3+1
+>>\end{bmatrix}e^{-2t} \\
+>> &=\begin{bmatrix}
+>> -2 \\ -2
+>>\end{bmatrix}e^{-2t}
+>>> \end{align}$$
+>>> and
+>>> $$\begin{align}
+>>> \mathbf{x}^{(2)'} &= A\mathbf{x}^{(2)} \\
+>>> \begin{bmatrix}
+>> -4 \\ 4
+>>\end{bmatrix}e^{4t} &= \begin{bmatrix}
+>> 1 & -3 \\ -3 & 1
+>>\end{bmatrix} \begin{bmatrix}
+>> -1 \\ 1
+>>\end{bmatrix}e^{4t}  \\
+>> &=\begin{bmatrix}
+>> -1-3 \\ 3+1
+>>\end{bmatrix}e^{4t} \\
+>> &=\begin{bmatrix}
+>> -4 \\ 4
+>>\end{bmatrix}e^{-2t}
+>>> \end{align}$$
+>>> We now successfully verified that the fundamental solutions solve the system of differential equations. We now verify, that the general solution also solves that system
+>>> $$\begin{align}
+>>>\tilde{\mathbf{x}}' &= A\tilde{\mathbf{x}} \\ 
+>>> \mathbf{x}^{(1)'} + \mathbf{x}^{(2)'} &= A\mathbf{x}^{(1)} + A\mathbf{x}^{(2)}\\
+>>>\begin{bmatrix}
+>> -2 \\ -2
+>>\end{bmatrix}e^{-2t} + \begin{bmatrix}
+>> -4 \\ 4
+>>\end{bmatrix}e^{4t} &= \begin{bmatrix}
+>> 1 & -3 \\ -3 & 1
+>>\end{bmatrix} \begin{bmatrix}
+>> 1 \\ 1
+>>\end{bmatrix}e^{-2t} + \begin{bmatrix}
+>> 1 & -3 \\ -3 & 1
+>>\end{bmatrix} \begin{bmatrix}
+>> -1 \\ 1
+>>\end{bmatrix}e^{4t} \\
+>>&= \begin{bmatrix}
+>> -2 \\ -2
+>>\end{bmatrix}e^{-2t} + \begin{bmatrix}
+>> -4 \\ 4
+>>\end{bmatrix}e^{4t}
+>>>\end{align}$$
+
+^1dd106
+
+>[!def] Definition Linear Independence of Vector Valued Functions ([[../../../PDFs/nagy.pdf#page=247| Source]])
+>A set of $n$ vector valued functions $\{ \mathbf{x}^{(1)},  \dots, \mathbf{x}^{(n)} \}$ is called **linearly dependent** on an interval $I \in \mathbb{R}$ iff for all $t \in I$ there exist constants $c_{1}, \dots, c_{n}$ not all of them zero, such that it holds
+>$$c_{1}\mathbf{x}^{(1)}(t)+ \dots + c_{n}**c_{1}\mathbf{x}^{(n)}(t) = \mathbf{0}$$
+>A set of $n$ vector valued functions is called **linearly independent** on $I$ iff the set is not linearly dependent.
+
+>[!def] Definition ([[../../../PDFs/nagy.pdf#page=248| Source]])
+>1. The set of functions $\{ \mathbf{x}^{(1)}, \dots, \mathbf{x}^{(n)} \}$ is a **fundamental set of solutions** of the equation $\mathbf{x}' = A\mathbf{x}$ iff the set $\{ \mathbf{x}^{(1)}, \dots, \mathbf{x}^{(n)} \}$ is linearly independent and $\mathbf{x}^{(i)'} = A\mathbf{x}^{(i)}$ for every $i = 1,\dots,n$
+>2. The **general solution** of the homogeneous equation $\mathbf{x}' = A\mathbf{x}$ denotes any vector valued function $\mathbf{x}_{gen}$ that can be written as linear combination
+>$$\mathbf{x}_{gen}(t) = c_{1}\mathbf{x}^{(1)}(t)+ \dots + c_{n}\mathbf{x}^{(n)}(t)$$
+>where $\mathbf{x}^{(1)},\dots, \mathbf{x}^{(n)}$ are the functions in any fundamental set of solutions of $\mathbf{x}' = A\mathbf{x}$ while $c_{1},\dots,c_{n}$ are arbitrary constants
+
+>[!theorem] Theorem General Solution ([[../../../PDFs/nagy.pdf#page=248| Source]])
+>If $\{ \mathbf{x}^{(1)},  \dots, \mathbf{x}^{(n)} \}$ is a linearly independent set of solutions to the $n \times n$ system $$\mathbf{x}' =A\mathbf{x}$$ where $A$ is a continuous matrix valued function, then there exist unique constants $c_{1}, \dots, c_{n}$ such that every solution $\mathbf{x}$ of the differential equation $\mathbf{x}' = A\mathbf{x}$ can be written as the linear combination
+>$$\mathbf{x}_{gen}(t)= c_{1}\mathbf{x}^{(1)}(t)+ \dots + c_{n}\mathbf{x}^{(n)}(t)$$
+>>[!remark]
+>> The [[#^1dd106|superposition theorem]] already implies, that given we have fundamental solutions, that these could form a general solution.
+>
+>>[!proof]
+>>First note, the [[#^1dd106| superposition principle]] can easily be extended to $n$ solutions for an $n \times n$ system. Hence, a general solution for an $n \times n$ system, can be given as 
+>>$$\mathbf{x}_{gen}(t)= c_{1}\mathbf{x}^{(1)}(t)+ \dots + c_{n}\mathbf{x}^{(n)}(t)$$
+>>Now, by [[#^2e3cb4|the uniqueness property of solutions]] for initial value problems, we can state, that we can find a single function for the general solution $\mathbf{x}_{gen}$ given some $t_{0}$. Solving means we need to solve for $\mathbf{c}=[c_{1}, \dots, c_{n}]^T$. We make a change of notation
+>>$$\begin{align}
+>> c_{1}\mathbf{x}^{(1)}(t)+ \dots + c_{n}\mathbf{x}^{(n)}(t) =X(t)\mathbf{c}
+>>\end{align}$$
+>>with 
+>>$$\begin{align}
+>> X(t) &= [\mathbf{x}^{(1)}(t), \dots , \mathbf{x}^{(n)}(t)]  \\
+>> \mathbf{c} &= \begin{bmatrix}
+>> c_{1} \\ \vdots \\ c_{n}
+>>\end{bmatrix}
+>>\end{align}$$
+>>Hence, the general solution can be given as
+>>$$\mathbf{x}(t_{0})=X(t_{0})\mathbf{c}$$
+>>Note, solving for $\mathbf{c}$ requires the matrix $X(t)$ to be invertible, i.e. $\det(X) \neq 0$, which means we require the set of fundamental solutions to be linearly independent. 
+>>$$\tag*{$\square$}$$
+>>>[!note]
+>>>Abel's Theorem for systems of equations will validate the concluding claim.
+>
+>>[!example]
+>>Find the general solution to the differential equation
