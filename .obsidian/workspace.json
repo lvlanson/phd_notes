@@ -6,7 +6,7 @@
       {
         "id": "7675683e84a8c351",
         "type": "tabs",
-        "dimension": 45.08272058823529,
+        "dimension": 48.29093799682035,
         "children": [
           {
             "id": "e02a88fd0e5f9dd5",
@@ -24,22 +24,20 @@
             "group": "1d2597f4fa86fdfb"
           },
           {
-            "id": "f4f05c5651e7500e",
+            "id": "292a49727b73487d",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
                 "mode": "source",
                 "source": true
-              },
-              "pinned": true
+              }
             },
-            "group": "0795e44b2f1623c9"
+            "group": "d05361c51622cf84"
           },
           {
-            "id": "988889338f52576b",
+            "id": "c56aa18de3053cb9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -49,20 +47,20 @@
                 "source": true
               }
             },
-            "group": "ff7aa4e2110e2490"
+            "group": "72d478e08108ecc9"
           },
           {
-            "id": "292a49727b73487d",
+            "id": "26b6cb6fb0d06466",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
                 "mode": "preview",
                 "source": true
               }
             },
-            "group": "d05361c51622cf84"
+            "group": "e59e1b40c412b938"
           }
         ],
         "currentTab": 2
@@ -70,7 +68,7 @@
       {
         "id": "d0adceee64becfe7",
         "type": "tabs",
-        "dimension": 54.91727941176471,
+        "dimension": 51.70906200317965,
         "children": [
           {
             "id": "a5609126f72395a1",
@@ -88,20 +86,20 @@
             "group": "1d2597f4fa86fdfb"
           },
           {
-            "id": "233b5035da7f6b4e",
+            "id": "a15485bc6961bcc0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
                 "mode": "preview",
                 "source": true
               }
             },
-            "group": "0795e44b2f1623c9"
+            "group": "d05361c51622cf84"
           },
           {
-            "id": "5323870b380a8f2e",
+            "id": "76e21f7ec80aef17",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -111,20 +109,20 @@
                 "source": true
               }
             },
-            "group": "ff7aa4e2110e2490"
+            "group": "72d478e08108ecc9"
           },
           {
-            "id": "a15485bc6961bcc0",
+            "id": "c042b6963518a5d3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
-                "mode": "preview",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
+                "mode": "source",
                 "source": true
               }
             },
-            "group": "d05361c51622cf84"
+            "group": "e59e1b40c412b938"
           }
         ],
         "currentTab": 2
@@ -177,7 +175,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 339.5
+    "width": 253.5
   },
   "right": {
     "id": "93b677ed21c6c6cb",
@@ -280,15 +278,15 @@
     "type": "floating",
     "children": [
       {
-        "id": "efd4d02e55b46bc1",
+        "id": "ca4e567af9f53544",
         "type": "window",
         "children": [
           {
-            "id": "cf15406b0bc40916",
+            "id": "06585b1fefc7dfe2",
             "type": "tabs",
             "children": [
               {
-                "id": "69a4ef728e6c68a2",
+                "id": "45664eb9b7eb9eab",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -301,52 +299,54 @@
           }
         ],
         "direction": "vertical",
-        "x": 28,
-        "y": 560,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
+        "x": 0,
+        "y": 960,
+        "width": 1080,
+        "height": 960,
+        "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "988889338f52576b",
+  "active": "c56aa18de3053cb9",
   "lastOpenFiles": [
     "PDFs/nagy.pdf",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
-    "References/@lang1999.md",
-    "References/@needham1999.md",
-    "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
+    "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
     "index.md",
     "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
-    "References/@apostol1967.md",
-    "References/@ben-baruch2021.md",
-    "References/@bishop2006.md",
-    "References/@briggs2019.md",
-    "References/@brogan1991.md",
-    "References/@conci2018.md",
-    "References/@devlin2019.md",
-    "References/@folland2009.md",
-    "References/@greene2019.md",
-    "References/@grimmett1986.md",
-    "References/@gu2022.md",
-    "References/@gu2023.md",
-    "References/@guo2015.md",
-    "References/@guo2020.md",
-    "References/@hornrogara.md",
-    "References/@howell2016.md",
-    "References/@kalman1960.md",
+    "References/@zotero-182.md",
+    "References/@zabczyk2008.md",
+    "References/@vaswani2023.md",
+    "References/@vasudeva2017.md",
+    "References/@stanley2012.md",
+    "References/@shifrin2005.md",
+    "References/@shao2003.md",
+    "References/@rudin1976.md",
+    "References/@nelder1972.md",
+    "References/@needham1999.md",
+    "References/@nam2014.md",
+    "References/@nagy.md",
+    "References/@millar2011.md",
+    "References/@lingle2023.md",
+    "References/@lin2018.md",
+    "References/@lang1999.md",
+    "References/@kwak2004.md",
     "References/@kreyszig1978.md",
+    "References/@kalman1960.md",
+    "References/@howell2016.md",
+    "References/@hornrogara.md",
+    "PDFs/howell2016.pdf",
+    "Pasted image 20240315154958.png",
+    "Pasted image 20240315154959.png",
+    "PDFs/hall2015.pdf",
     "PDFs/needham1999.pdf",
-    "Sources/lang1999.pdf",
+    "PDFs/lang1999.pdf",
     "Sources",
     "Own Projects/ODE LVQ",
     "Own Projects",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.pdf",
     "Pasted image 20240304122332.png",
     "PhD Studies/Mathematic Basics/Combinatorics/Figures/ex_puzzle.png",
     "Research Seminar/Figures/rs_1_fig_4.png",
@@ -355,8 +355,6 @@
     "Research Seminar/Figures/rs_1_example_1.png",
     "Research Seminar/Figures/rs_1_fig_1.png",
     "Research Seminar/Figures/rs_1_fig_2.png",
-    "PhD Studies/Mathematic Basics/Calculus/figures/discontinuities.png",
-    "PhD Studies/Mathematic Basics/Metrics/Figures/set_to_set_1.png",
     "Untitled.canvas"
   ]
 }

@@ -4592,7 +4592,7 @@ var require_lodash = __commonJS({
           string = toString(string);
           return string && reHasUnescapedHtml.test(string) ? string.replace(reUnescapedHtml, escapeHtmlChar) : string;
         }
-        function escapeRegExp(string) {
+        function escapeRegExp2(string) {
           string = toString(string);
           return string && reHasRegExpChar.test(string) ? string.replace(reRegExpChar, "\\$&") : string;
         }
@@ -5195,7 +5195,7 @@ var require_lodash = __commonJS({
         lodash.endsWith = endsWith;
         lodash.eq = eq;
         lodash.escape = escape;
-        lodash.escapeRegExp = escapeRegExp;
+        lodash.escapeRegExp = escapeRegExp2;
         lodash.every = every;
         lodash.find = find;
         lodash.findIndex = findIndex;
@@ -6115,12 +6115,12 @@ var getSelectionContent = (ed, selections) => {
   const selection = ed.getSelection();
   let wordRange;
   if (selection) {
-    Console.log("lastSelection", lastSelection);
+    Console.debug("lastSelection", lastSelection);
     wordRange = selectionToRange(lastSelection, true);
   } else {
     wordRange = ed.wordAt(lastSelection.head);
   }
-  Console.log("wordRange", wordRange);
+  Console.debug("wordRange", wordRange);
   if (wordRange != null) {
     const { from, to } = wordRange;
     const word = ed.getRange(from, to);
@@ -6217,6 +6217,7 @@ var addAllOccurrences = (editor) => {
 
 // src/status-bar-occurences.ts
 var import_obsidian5 = require("obsidian");
+var import_lodash2 = __toESM(require_lodash());
 var handleSelectionChange = (plugin) => {
   reset(plugin);
   const debounced = (0, import_obsidian5.debounce)(async () => {
@@ -6264,29 +6265,26 @@ function getOccurrences(plugin) {
   if (!selection)
     return 0;
   if (!plugin.selectionRegex) {
-    Console.log("compile regex 1", selection);
+    Console.debug("compile regex 1", selection);
     compileRegex(plugin, selection);
   }
-  if (!plugin.selectionRegex) {
-    Console.log("selection regex is null");
-  } else if (plugin.selectionRegex.source !== selection) {
-    Console.log("compile regex 2", selection);
+  if (plugin.selectionRegex.source !== selection) {
+    Console.debug("compile regex 2", selection);
     compileRegex(plugin, selection);
   }
   const matches = [...text.matchAll(plugin.selectionRegex)];
-  Console.log("matches length", matches.length);
+  Console.debug("matches length", matches.length);
   return matches.length;
 }
 function compileRegex(plugin, selection) {
   let modifiers = "g";
   if (!plugin.settings.matchCase) {
-    Console.log("yes");
     modifiers += "i";
   }
   try {
-    plugin.selectionRegex = new RegExp(selection, modifiers);
+    plugin.selectionRegex = new RegExp((0, import_lodash2.escapeRegExp)(selection), modifiers);
   } catch (error) {
-    console.error(error);
+    console.warn(error);
   }
 }
 

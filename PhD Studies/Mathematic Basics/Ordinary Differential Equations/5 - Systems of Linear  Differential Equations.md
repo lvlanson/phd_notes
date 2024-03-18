@@ -1,3 +1,14 @@
+>[!terminology]
+>- [[#^1dd106| Superposition Principle]]
+>- [[#^16a38b| Fundamental Set]]
+>- [[#^16a38b| General Solution]]
+>- [[#^c3380b| Solution Matrix | Fundamental Matrix]]
+>- [[#^44918f| Wronskian]]
+
+^7e6f96
+
+## 5.1 General Properties
+### 5.1.1 First Order Linear Systems
 >[!def] $n \times n$ First Order Linear Differential System ([[../../../PDFs/nagy.pdf#page=240| Source]])
 >An $n \times n$ **first order linear differential system** is the equation 
 >$$\mathbf{x}'(t)=A(t)\mathbf{x}(t)+ \mathbf{b}(t)$$
@@ -40,7 +51,7 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >   $$Q^{-1}AQ = D$$
 >   with $D$ containing the eigenvalues of $A$.
 
->[!example] Examples
+>[!example]- Examples
 >>[!example] Example for $n=1$
 >>This is a single differential equation 
 >>$$x_{1}' = a_{11}(t)x_{1}+ b_{1}(t)$$
@@ -140,6 +151,10 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >>[!remark]
 >> The initial condition vector $\mathbf{x}_{0}$ represents $n$ conditions, one for each component of the unknown vector $\mathbf{x}$
 
+### 5.1.2 Existence of Solutions
+
+^c3380b
+
 >[!theorem] Theorem Existence and Uniqueness of Solutions ([[../../../PDFs/nagy.pdf#page=242| Source]])
 >If the function $A$ and $\mathbf{b}$ are continuous on an open interval $I \subset \mathbb{R}$, and if $\mathbf{x}_{0}$ is any constant vector and $t_{0}$ is any constant in $I$, then there exist only one function $\mathbf{x}$, defined an interval $\tilde{I} \subset I$ with $t_{0} \in \tilde{I}$, solution of the initial value problem
 >$$\mathbf{x}' = A(t)\mathbf{x}+\mathbf{b}(t), \qquad \mathbf{x}(t_{0})=\mathbf{x}_{0}$$
@@ -148,6 +163,8 @@ a_{n1}(t) &\dots & a_{nn}(t)
 
 >[!remark]
 >There exists a correspondence between $n \times n$ systems of linear differential equations and $n$-th order differential equations.
+
+### 5.1.3 Order Transformations
 
 >[!theorem] Theorem First Order Reduction ([[../../../PDFs/nagy.pdf#page=243| Source]])
 > A function $y$ solves the second order equation
@@ -525,6 +542,10 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >>> x_{2}'(0) &= 39 \\
 >>>\end{align}$$
 
+^93c797
+
+### 5.1.4 Homogeneous Systems
+
 >[!theorem] Theorem Superposition for Homogeneous Systems ([[../../../PDFs/nagy.pdf#page=244| Source]])
 >If the vector functions $\mathbf{x}^{(1)}, \mathbf{x}^{(2)}$ are solutions of 
 >$$\begin{align}
@@ -655,11 +676,13 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >$$c_{1}\mathbf{x}^{(1)}(t)+ \dots + c_{n}**c_{1}\mathbf{x}^{(n)}(t) = \mathbf{0}$$
 >A set of $n$ vector valued functions is called **linearly independent** on $I$ iff the set is not linearly dependent.
 
->[!def] Definition ([[../../../PDFs/nagy.pdf#page=248| Source]])
+>[!def] Definition Fundamental Set and General Solution ([[../../../PDFs/nagy.pdf#page=248| Source]])
 >1. The set of functions $\{ \mathbf{x}^{(1)}, \dots, \mathbf{x}^{(n)} \}$ is a **fundamental set of solutions** of the equation $\mathbf{x}' = A\mathbf{x}$ iff the set $\{ \mathbf{x}^{(1)}, \dots, \mathbf{x}^{(n)} \}$ is linearly independent and $\mathbf{x}^{(i)'} = A\mathbf{x}^{(i)}$ for every $i = 1,\dots,n$
 >2. The **general solution** of the homogeneous equation $\mathbf{x}' = A\mathbf{x}$ denotes any vector valued function $\mathbf{x}_{gen}$ that can be written as linear combination
 >$$\mathbf{x}_{gen}(t) = c_{1}\mathbf{x}^{(1)}(t)+ \dots + c_{n}\mathbf{x}^{(n)}(t)$$
 >where $\mathbf{x}^{(1)},\dots, \mathbf{x}^{(n)}$ are the functions in any fundamental set of solutions of $\mathbf{x}' = A\mathbf{x}$ while $c_{1},\dots,c_{n}$ are arbitrary constants
+
+^16a38b
 
 >[!theorem] Theorem General Solution ([[../../../PDFs/nagy.pdf#page=248| Source]])
 >If $\{ \mathbf{x}^{(1)},  \dots, \mathbf{x}^{(n)} \}$ is a linearly independent set of solutions to the $n \times n$ system $$\mathbf{x}' =A\mathbf{x}$$ where $A$ is a continuous matrix valued function, then there exist unique constants $c_{1}, \dots, c_{n}$ such that every solution $\mathbf{x}$ of the differential equation $\mathbf{x}' = A\mathbf{x}$ can be written as the linear combination
@@ -667,7 +690,7 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >>[!remark]
 >> The [[#^1dd106|superposition theorem]] already implies, that given we have fundamental solutions, that these could form a general solution.
 >
->>[!proof]
+>>[!proof]-
 >>First note, the [[#^1dd106| superposition principle]] can easily be extended to $n$ solutions for an $n \times n$ system. Hence, a general solution for an $n \times n$ system, can be given as 
 >>$$\mathbf{x}_{gen}(t)= c_{1}\mathbf{x}^{(1)}(t)+ \dots + c_{n}\mathbf{x}^{(n)}(t)$$
 >>Now, by [[#^2e3cb4|the uniqueness property of solutions]] for initial value problems, we can state, that we can find a single function for the general solution $\mathbf{x}_{gen}$ given some $t_{0}$. Solving means we need to solve for $\mathbf{c}=[c_{1}, \dots, c_{n}]^T$. We make a change of notation
@@ -689,4 +712,536 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >>>Abel's Theorem for systems of equations will validate the concluding claim.
 >
 >>[!example]
->>Find the general solution to the differential equation
+>>Find the general solution to the differential equation and use the general solution to find the solution of the initial value problem
+>> $$\begin{align}
+>> \mathbf{x}' &= A\mathbf{x} \\
+>> A &= \begin{bmatrix}
+>> 1 & 2 \\
+>> 3 & 4
+>>\end{bmatrix} \\
+>> \mathbf{x}(0) &= \begin{bmatrix}
+>> 1 \\ 5
+>>\end{bmatrix}
+>>\end{align}$$
+>> with solutions
+>> $$\begin{align}
+>> \mathbf{x}^{(1)} &= \begin{bmatrix}
+>> 2 \\ 1
+>>\end{bmatrix}e^{2t} \\
+>> \mathbf{x}^{(2)} &= \begin{bmatrix}
+>> 1 \\ 2
+>>\end{bmatrix} e^{-t}
+>>\end{align}$$
+>>>[!example]- Solution
+>>>The general solution can be given as
+>>>$$\begin{align}
+>>>\mathbf{x}_{gen} &= c_{1}\begin{bmatrix}
+>>> 2 \\ 1
+>>>\end{bmatrix}e^{2t} + c_{2} \begin{bmatrix}
+>>> 1 \\ 2
+>>>\end{bmatrix} e^{-t} \\ 
+>>> &=\begin{bmatrix}
+>>> 2 e^{2t} & e^{-t} \\
+>>> e^{2t} & 2e^{-t}
+>>>\end{bmatrix} \begin{bmatrix}
+>>> c_{1} \\ c_{2}
+>>>\end{bmatrix}
+>>>\end{align}$$
+>>>The inverse matrix for $t=0$ is given as
+>>>>[!note]- Calculating the Inverse
+>>>>We calculate the inverse of the matrix for $t=0$
+>>>>$$\begin{alignat}{2}
+>>>>\begin{bmatrix}
+>>>> 2 & 1 \\
+>>>> 1 & 2
+>>>>\end{bmatrix}^{-1}  \implies  
+>>>>&\left[\begin{array}{cc|cc}
+>>>> 2 & 1  & 1 & 0 \\
+>>>> 1 & 2 & 0 & 1
+>>>>\end{array}\right] \qquad\qquad&&[\text{1. Line}] \cdot \frac{1}{2}\\
+>>>>\Longleftrightarrow&\left[\begin{array}{cc|cc}
+>>>> 1 & \frac{1}{2}  & \frac{1}{2} & 0 \\
+>>>> 1 & 2 & 0 & 1
+>>>>\end{array}\right] \qquad\qquad&&(2)=(2)-(1)\\
+>>>>\Longleftrightarrow&\left[\begin{array}{cc|cc}
+>>>> 1 & \frac{1}{2}  & \frac{1}{2} & 0 \\
+>>>> 0 & \frac{3}{2} & -\frac{1}{2} & 1
+>>>>\end{array}\right] \qquad\qquad&&[\text{2. Line}] \cdot \frac{1}{3}\\
+>>>>\Longleftrightarrow&\left[\begin{array}{cc|cc}
+>>>> 1 & \frac{1}{2}  & \frac{1}{2} & 0 \\
+>>>> 0 & \frac{1}{2} & -\frac{1}{6} & \frac{1}{3}
+>>>>\end{array}\right] \qquad\qquad&&(1)=(1)-(2)\\
+>>>>\Longleftrightarrow&\left[\begin{array}{cc|cc}
+>>>> 1 & 0  & \frac{2}{3} & -\frac{1}{3} \\
+>>>> 0 & \frac{1}{2} & -\frac{1}{6} & \frac{1}{3}
+>>>>\end{array}\right] \qquad\qquad&&[\text{2. Line}] \cdot 2\\
+>>>>\Longleftrightarrow&\left[\begin{array}{cc|cc}
+>>>> 1 & 0  & \frac{2}{3} & -\frac{1}{3} \\
+>>>> 0 & 1 & -\frac{1}{3} & \frac{2}{3}
+>>>>\end{array}\right] \qquad\qquad&&\\
+>>>>X(0)^{-1}=&\begin{bmatrix} 
+>>>>  \frac{2}{3} & -\frac{1}{3} \\ 
+>>>> -\frac{1}{3} & \frac{2}{3}
+>>>>\end{bmatrix} \\
+>>>> =& \frac{1}{3} \begin{bmatrix} 
+>>>>  2 & -1 \\ 
+>>>> -1 & 2
+>>>>\end{bmatrix} 
+>>>>\end{alignat}$$
+>>>$$\begin{align}
+>>> X(0)^{-1} =& \frac{1}{3} \begin{bmatrix} 
+>>>  2 & -1 \\ 
+>>> -1 & 2
+>>>\end{bmatrix} 
+>>>\end{align}$$
+>>> We get
+>>> $$\begin{alignat}{2}
+>>> \mathbf{x}(0) &= X(0)\mathbf{c} \qquad&&\Big\vert X(0)^{-1}\cdot \\
+>>> X(0)^{-1}\mathbf{x}(0) &= \mathbf{c}  \\
+>>> \frac{1}{3} \begin{bmatrix} 
+>>>  2 & -1 \\ 
+>>> -1 & 2
+>>>\end{bmatrix} \begin{bmatrix}
+>>> 1 \\ 5
+>>>\end{bmatrix} &= \begin{bmatrix}
+>>>c_{1} \\ c_{2}
+>>>\end{bmatrix} \\
+>>> \frac{1}{3} \begin{bmatrix}
+>>> 2-5 \\ -1+10
+>>>\end{bmatrix} &= \begin{bmatrix}
+>>>c_{1} \\ c_{2}
+>>>\end{bmatrix}\\
+>>>\frac{1}{3} \begin{bmatrix}
+>>> -3 \\ 9
+>>>\end{bmatrix} &= \begin{bmatrix}
+>>>c_{1} \\ c_{2} \\
+>>>\end{bmatrix}\\
+>>> \begin{bmatrix}
+>>> -1 \\ 3
+>>>\end{bmatrix} &= \begin{bmatrix}
+>>>c_{1} \\ c_{2} \\
+>>>\end{bmatrix}\\
+>>>\end{alignat}$$
+>>>Now we can state
+>>>$$\begin{align}
+>>>c_{1} &= -1 \\
+>>>c_{2} &= 3
+>>>\end{align}$$
+>>>Then the unique solution to the initial value problem can be given as
+>>>$$\mathbf{x}(t)= -\begin{bmatrix}
+>>> 2 \\ 1
+>>>\end{bmatrix}e^{2t}+3\begin{bmatrix}
+>>> 1 \\ 2
+>>>\end{bmatrix}e^{-t}$$
+>>>
+
+### 5.1.5 Wronskian and Abel's Theorem
+
+>[!def] Definition Solution Matrix and Wronskian ([[../../../PDFs/nagy.pdf#page=250| Source]])
+>1. A **solution matrix** of any set of vector function $\{ \mathbf{x}^{(1)}, \dots, \mathbf{x}^{n} \}$, solutions to a differential equation $\mathbf{x}' = A\mathbf{x}$, is the $n \times n$ matrix valued function
+>$$X(t)= \left[\mathbf{x}^{(1)}(t), \dots, \mathbf{x}^{(n)}(t)\right]$$
+>$X$ is called a **fundamental matrix** iff the set $\{ \mathbf{x}^{(1)},\dots,\mathbf{x}^{(n)} \}$ is a fundamental set.
+>2. The **Wronskian** of the set $\{ \mathbf{x}^{(1)}, \dots, \mathbf{x}^{n} \}$ is the function $$W(t)=\det (X(t))$$
+
+^44918f
+
+>[!theorem] Abel's Theorem  ([[../../../PDFs/nagy.pdf#page=251| Source]])
+>The Wronskian function $W = \det(X(t))$ of a solution matrix $X = \left[\mathbf{x}^{(1)}, \dots, \mathbf{x}^{(n)}\right]$ of the linear system $\mathbf{x}'=A(t)\mathbf{x}$, where $A$ is an $n \times n$ continuous matrix valued function on a domain $I \subset \mathbb{R}$, satisfies the differential equation
+>$$W'(t)= \mathrm{tr}\Big(A(t)\Big)W(t)$$
+>Hence $W$ is given by
+>$$W(t)=W(t_{0})e^{\alpha(t)}$$
+>with
+>$$\alpha(t)=\int _{t_{0}}^t \mathrm{tr}(A(\tau)) \, d\tau $$
+>where $t_{0}$ is any point in $I$
+>>[!proof] Proof ([[../../../PDFs/nagy.pdf#page=252| omitted]])
+
+## 5.2 Solution Formulas
+
+>[!theorem] Theorem Homogeneous Systems ([[../../../PDFs/nagy.pdf#page=255| Source]])
+>If $A$ is an $n \times n$ matrix, $t_{0} \in \mathbb{R}$ is an arbitrary constant and $\mathbf{x}_{0} \in \mathbb{R}^n$ constant, then the initial value problem for the unknown $n$-vector valued function $\mathbf{x}$ given by
+>$$\mathbf{x}'=A\mathbf{x} \qquad \mathbf{x}(t_{0})=\mathbf{x}_{0}$$ 
+>has a unique solution given by the formula
+>$$\mathbf{x}(t)=e^{A(t-t_{0})}\mathbf{x}_{0}$$
+>>[!remark]- Remark Matrix Exponential
+>>Information about the [[A - Matrix Exponential| matrix exponential]] involves
+>>- [[A - Matrix Exponential#^730bfa| the derivative of the matrix exponential]]
+>> $$\frac{d}{dt}e^{At} = Ae^{At}= e^{At}A$$
+>>- [[A - Matrix Exponential#^cd67f1| the inverse of the matrix exponential and its group properties]]
+>>$$e^{As}e^{At} = e^{A(s+t)}$$
+>
+>>[!proof]-
+>>We use the integrating factor method analogous to [[1 - First Order ODEs|first order ODEs]].
+>>$$\begin{alignat}{2}
+>> \mathbf{x}' &= A\mathbf{x} \qquad&&\\ 
+>> \mathbf{x}' -A\mathbf{x} &= 0 \qquad&&\Big\vert\cdot e^{-At}  \\
+>> e^{-At}\mathbf{x}' -e^{-At}A\mathbf{x} &= 0 \tag{3}
+>>\end{alignat}$$
+>>Note, the expression $-e^{-At}A$ can be rearranged because $A$ commutes with itself by [[A - Matrix Exponential#^6ed8d5| the properties of the matrix exponential]].
+>>$$-e^{-At}A = -Ae^{-At}$$
+>>Further note, this is the [[A - Matrix Exponential#^730bfa|derivative]] of $e^{-At}$, i.e.
+>>$$\frac{d}{dt}e^{-At} = (e^{-At})'  = -Ae^{-At}$$
+>>We insert this result into equation $(3)$
+>>$$\begin{align}
+>> e^{-At}\mathbf{x}' -(e^{-At})'\mathbf{x} &= 0
+>>\end{align}$$
+>>Note, that this expression is the result of the product rule, i.e.
+>>$$(e^{-At}\mathbf{x})' = 0$$
+>>We integrate both sides with respect to $t$ and get
+>>$$\begin{align}
+>>e^{-At}\mathbf{x} &= \mathbf{c} \\
+>> \mathbf{x} &= e^{At}\mathbf{c}
+>>\end{align}$$
+>>We now evaluate at $t=t_{0}$ with $\mathbf{x}(t_{0})=\mathbf{x_{0}}$ and get
+>>$$\begin{align}
+>> \mathbf{x}_{0} &= e^{At_{0}}\mathbf{c} \\
+>> e^{-At_{0}}\mathbf{x}_{0} &= \mathbf{c} 
+>>\end{align}$$
+>>which solves the unique value problem.
+>>$$\tag*{$\square$}$$
+>
+>>[!example]
+>>Compute the exponential function $e^{At}$ and use it to express the vector-valued function $\mathbf{x}$ solution to the initial value problem
+>>$$\begin{align}
+>> \mathbf{x}' &= A\mathbf{x} \\
+>> A &= \begin{bmatrix}
+>> 1 & 2  \\
+>> 2 & 1
+>>\end{bmatrix} \\
+>> \mathbf{x}(0) &= \mathbf{x}_{0} =[x_{0_{1}}, x_{0_{2}}]^T 
+>>\end{align}$$
+>>>[!example]- Solution
+>>>First, we need to think about how to solve the matrix exponential into a pure matrix form. Checking the properties of the [[A - Matrix Exponential| matrix exponential]] we find, that the exponential is easy to compute for [[A - Matrix Exponential#^5c6d39| diagonal matrices]]. We also know for full rank matrices, we can [[../Linear Algebra/Eigenvectors and Eigenvalues#^3b9ec0|decompose]] them in a diagonal matrix of eigenvalues and a matrix of corresponding eigenvectors.
+>>>
+>>>Hence, we compute first the eigenvalues of $A$. Therefore, we solve
+>>>$$\begin{align}
+>>> \det(A-\lambda I) &= \begin{vmatrix}
+>>> 1-\lambda & 2 \\ 2 & 1-\lambda \\
+>>>\end{vmatrix} \\
+>>> &= (1-\lambda)^2-4
+>>>\end{align}$$
+>>>This characteristic polynomial can be solved easily with
+>>>$$\begin{align}
+>>> \lambda_{1} &= -1 \\
+>>> \lambda_{2} &= 3
+>>>\end{align}$$
+>>>The eigenvectors can be found solving
+>>>$$\begin{align}
+>>> A\mathbf{x}&=\lambda \mathbf{x} \\
+>>> (A-\lambda I)\mathbf{x} &= 0
+>>>\end{align}$$
+>>>for each $\lambda$
+>>>>[!note]- Calculations
+>>>>First we solve for $\lambda_1=-1$
+>>>>$$\begin{align}
+>>>> \begin{bmatrix}
+>>>> 1 & 2 \\ 2 & 1
+>>>>\end{bmatrix} - \begin{bmatrix}
+>>>> -1 & 0 \\ 0 & -1
+>>>>\end{bmatrix}\begin{bmatrix}
+>>>> x_{1} \\ x_{2}
+>>>>\end{bmatrix} &= 0  \\
+>>>> \begin{bmatrix}
+>>>> 2 & 2 \\ 2 & 2
+>>>>\end{bmatrix}\begin{bmatrix}
+>>>> x_{1} \\ x_{2}
+>>>>\end{bmatrix}&= 0 \\
+>>>> \begin{bmatrix}
+>>>> 1 & 1 \\ 0 & 0
+>>>>\end{bmatrix}\begin{bmatrix}
+>>>> x_{1} \\ x_{2}
+>>>>\end{bmatrix}&= 0 \\[1em]
+>>>> \implies x_{1}+x_{2}&=0 \\
+>>>> x_{1} &= -x_{2}
+>>>>\end{align}$$
+>>>>So we choose
+>>>> $$\mathbf{x}_{1} = \begin{bmatrix}
+>>>> 1 \\ -1
+>>>>\end{bmatrix}$$
+>>>>Now we solve for $\lambda_{2}=3$
+>>>>$$\begin{align} \\
+>>>> \begin{bmatrix}
+>>>> 1 & 2 \\ 2 & 1
+>>>>\end{bmatrix} - \begin{bmatrix}
+>>>> 3 & 0 \\ 0 & 3
+>>>>\end{bmatrix}\begin{bmatrix}
+>>>> x_{1} \\ x_{2}
+>>>>\end{bmatrix} &= 0   \\
+>>>> \begin{bmatrix}
+>>>> -2 & 2 \\ 2 & -2
+>>>>\end{bmatrix}\begin{bmatrix}
+>>>> x_{1} \\ x_{2}
+>>>>\end{bmatrix} &= 0   \\
+>>>> \begin{bmatrix}
+>>>> -2 & 2 \\ 0 & 0
+>>>>\end{bmatrix}\begin{bmatrix}
+>>>> x_{1} \\ x_{2}
+>>>>\end{bmatrix} &= 0  \\
+>>>> \begin{bmatrix}
+>>>> -1 & 1 \\ 0 & 0
+>>>>\end{bmatrix}\begin{bmatrix}
+>>>> x_{1} \\ x_{2}
+>>>>\end{bmatrix} &= 0   \\[1em]
+>>>> \implies x_{1}+x_{2}&=0 \\
+>>>> x_{1} &= x_{2}
+>>>>\end{align}$$
+>>>>So we choose $$\mathbf{x}_{2} = \begin{bmatrix}
+>>>> 1 \\ 1
+>>>>\end{bmatrix}$$
+>>>
+>>>The eigenvectors are
+>>>$$\begin{align}
+>>> \mathbf{x}_{1} &= [1, -1]^T \\
+>>> \mathbf{x}_{2} &= [1,1]^T
+>>>\end{align}$$
+>>>Therefore we can give the diagonal matrix $D$ and the matrix of eigenvectors $P$ as
+>>>$$\begin{align}
+>>> D &= \begin{bmatrix}
+>>>   -1 & 0 \\ 0 & 3
+>>>\end{bmatrix} \\
+>>> P &= \begin{bmatrix}
+>>> 1 & 1 \\ -1 & 1
+>>>\end{bmatrix} \\
+>>>\end{align}$$
+>>>We also need the inverse of $P$ 
+>>>>[!note]- Calculations
+>>>>$$\begin{align}
+>>>>\left[\begin{array}{cc|cc}
+>>>> 1 & 1 & 1& 0 \\
+>>>> -1 & 1 & 0 & 1
+>>>>\end{array}\right]&\Longleftrightarrow \left[\begin{array}{cc|cc}
+>>>> 1 & 1 & 1& 0 \\
+>>>> 0 & 2 & 1 & 1
+>>>>\end{array}\right] \\
+>>>>&\Longleftrightarrow \left[\begin{array}{cc|cc}
+>>>> 1 & 1 & 1& 0 \\
+>>>> 0 & 1 & \frac{1}{2} & \frac{1}{2}
+>>>>\end{array}\right] \\
+>>>>&\Longleftrightarrow \left[\begin{array}{cc|cc}
+>>>> 1 & 0 & \frac{1}{2}& -\frac{1}{2} \\
+>>>> 0 & 1 & \frac{1}{2} & \frac{1}{2}
+>>>>\end{array}\right]
+>>>>\end{align}$$
+>>>>The inverse therefore is
+>>>>$$P^{-1} = \frac{1}{2}\begin{bmatrix}
+>>>>1& -1 \\1 & 1
+>>>>\end{bmatrix}$$
+>>>
+>>>By [[A - Matrix Exponential#^56ae16| the decomposition theorem for matrix exponentials]] we can write
+>>>$$\begin{align}
+>>> e^{At}&=Pe^{Dt}P^{-1} \\
+>>>   &=\begin{bmatrix}
+>>> 1 & 1 \\ -1 & 1
+>>>\end{bmatrix} e^{Dt}\frac{1}{2}\begin{bmatrix}
+>>>1& -1 \\1 & 1
+>>>\end{bmatrix}
+>>>\end{align}$$
+>>>where $e^{Dt}$ can be written in [[A - Matrix Exponential#^5c6d39| diagonal form]]. Therefore, we have
+>>>$$\begin{align}
+>>> e^{At} &=\frac{1}{2}\begin{bmatrix}
+>>> 1 & 1 \\ -1 & 1
+>>>\end{bmatrix} \begin{bmatrix}
+>>>e^{-t} & 0 \\ 0 & e^{3t}
+>>>\end{bmatrix}\begin{bmatrix}
+>>>1& -1 \\1 & 1
+>>>\end{bmatrix} \\
+>>> &= \frac{1}{2}\begin{bmatrix}
+>>> e^{-t} & e^{3t} \\ -e^{-t} & e^{3t}
+>>>\end{bmatrix}\begin{bmatrix}
+>>>1& -1 \\1 & 1
+>>>\end{bmatrix} \\
+>>> &= \frac{1}{2}\begin{bmatrix}
+>>> e^{-t}+e^{3t} & -e^{-t} + e^{3t} \\ -e^{-t}+e^{3t} & e^{-t}+e^{3t}
+>>>\end{bmatrix}
+>>>\end{align}$$
+
+>[!theorem] Theorem Homogeneous Diagonalizable Systems ([[../../../PDFs/nagy.pdf#page=258| Source]])
+>If the $n \times n$ constant matrix $A$ is diagonalizable, with a set of linearly independent eigenvectors $\{ \mathbf{v}^{(1)}, \dots, \mathbf{v}^{(n)} \}$ and corresponding eigenvalues $\{ \lambda_{1}, \dots, \lambda_{n} \}$ then the system
+>$$\mathbf{x}' = A\mathbf{x}$$
+>has a general solution
+>---
+>$$\mathbf{x}_{gen}(t)= c_{1}e^{\lambda_{1}t}\mathbf{v}^{(1)}+\dots+c_{n}e^{\lambda_{n}t}\mathbf{v}^{(n)}$$
+>
+>---
+>Furthermore, every initial value problem 
+>$$\mathbf{x}'(t)=A\mathbf{x}(t)$$
+>with $\mathbf{x}(t_{0})=\mathbf{x}_{0}$ has a unique solution for every initial condition $\mathbf{x}_{0}\in \mathbb{R}^n$, where the constants $c_{1}, \dots, c_{n}$ are solutions of the algebraic linear system
+>$$\mathbf{x}_{0} = c_{1}e^{\lambda_{1}t_{0}}\mathbf{v}^{(1)}+ \dots + c_{n}e^{\lambda_{1}t_{0}}\mathbf{v}^{(n)}$$
+>>[!remark]
+>>This theorem follows the idea of **decoupling equations**.
+>>>[!example]-
+>>>$$\begin{align}
+>>> x_{1}' &= x_{1}-x_{2} \\
+>>> x_{2}' &= -x_{1}+x_{2}
+>>>\end{align}$$
+>>>Adding $(1)$ and subtracting $(2)$ both equations yield
+>>>$$\begin{align}
+>>> (x_{1}+x_{2})' &= 0 \tag{1} \\
+>>> (x_{1}-x_{2})' &= 2(x_{1}-x_{2}) \tag{2}
+>>>\end{align}$$
+>>>Now, lets denote $$\begin{align}
+>>> y_{1}&=x_{1}+x_{2}  \tag{3}\\
+>>> y_{2}&=x_{1}-x_{2} \tag{4}
+>>>\end{align}$$
+>>>and substitute
+>>>$$\begin{align}
+>>>y_{1}' &= 0 \\
+>>> y_{2}' &= 2y_{2}
+>>>\end{align}$$
+>>>This is the **decoupled representation of the original system**. Each equation can now be solved independently.
+>>>$$\begin{align}
+>>> y_{1}&=c_{1} \\
+>>> y_{2}&=c_{2}e^{2t}
+>>>\end{align}$$
+>>>Solving equations $(3)$ and ($4$) for $x_1$ and $x_2$ gives
+>>>$$\begin{align}
+>>> x_{1} &= \frac{1}{2}(y_{1} + y_{2})  \\
+>>> x_{2} &= \frac{1}{2}(y_{1}-y_{2})
+>>>\end{align}$$
+>>>and we get the solutions
+>>>$$\begin{align}
+>>> x_{1}(t) &= \frac{1}{2}(c_{1}+c_{2}e^{2t}) \\
+>>> x_{2}(t) &= \frac{1}{2}(c_{1}-c_{2}e^{2t})
+>>>\end{align}$$
+>
+>>[!proof]- Validation Proof
+>> Note, each function
+>> $$\mathbf{x}^{(i)}= e^{\lambda_{i}t}\mathbf{v}^{(i)} \tag{1}$$
+>> is solution of the system
+>> $$\mathbf{x}^{(i)'}=A\mathbf{x}^{(i)}$$
+>> We first work on equation $(1)$
+>> $$\begin{alignat}{2}
+>> \mathbf{x}^{(i)}&= e^{\lambda_{i}t}\mathbf{v}^{(i)} \qquad&&\Big\vert \frac{d}{dt} \\
+>> \mathbf{x}^{(i)'}&= \lambda_{i}e^{\lambda_{i}t}\mathbf{v}^{(i)} \tag{2} \\
+>>\end{alignat}$$
+>>and
+>>$$\begin{alignat}{2}
+>> \mathbf{x}^{(i)} &= e^{\lambda_{i}t}\mathbf{v}^{(i)} \qquad&&\Big\vert A \cdot \\
+>> A\mathbf{x}^{(i)} &= A(e^{\lambda_{i}t}\mathbf{v}^{(i)}) \\
+>> A\mathbf{x}^{(i)} &= e^{\lambda_{i}t} \underbrace{ A \mathbf{v}^{(i)} }_{ =\lambda_{i}\mathbf{v}^{(i)} } \tag{Eigenvector Def} \\
+>> A\mathbf{x}^{(i)} &=e^{\lambda_{i}t}\lambda_{i}\mathbf{v}^{(i)} \tag{3}
+>>\end{alignat}$$
+>>Note that the expressions $(2)$ and $(3)$ are equal, hence
+>>$$\mathbf{x}^{(i)'}=e^{\lambda_{i}t}\lambda_{i}\mathbf{v}^{(i)}$$
+>> Integrating gives
+>> $$\mathbf{x}^{(i)} = c_{i}e^{\lambda_{i}t}\mathbf{v}^{(i)}$$
+>>
+>>Note, $A$ is a diagonalizable matrix, hence, the solution set can be given as
+>>$$\{ \mathbf{x}¹, \dots, \mathbf{x}^n \} = \{ c_{1}e^{\lambda_{1}t}\mathbf{v}^{(1)}, \dots, c_{n}e^{\lambda_{n}t}\mathbf{v}^{(n)} \}$$
+>>therefore, the general solution can be given the [[#^7e6f96| superposition principle]] as 
+>>$$\mathbf{x}_{gen}(t)  = c_{1}e^{\lambda_{1}t}\mathbf{v}^1+\dots+c_{n}e^{\lambda_{n}t}\mathbf{v}^{(n)}$$
+>>with constants $c_{i}$ being determined by solving the initial value problem at $t_{0}=0$ ($\mathbf{x}(t_{0})=\mathbf{x}_{0})$. $$\tag*{$\square$}$$
+>
+>>[!proof]- Constructive Proof
+>>First we use the property that $A$ is diagonalizable, hence
+>>$$A = PDP^{-1}$$
+>>with $P$ being an invertible matrix. We take the original equation and substitute
+>>$$\begin{alignat}{2}
+>> \mathbf{x}' &= A\mathbf{x}  \\
+>> \mathbf{x}' &= PDP^{-1}\mathbf{x}  \qquad&&\Big\vert P^{-1}\cdot  \\
+>> P^{-1}\mathbf{x}' &= \underbrace{ P^{-1}P }_{ =I }DP^{-1}\mathbf{x}    \\
+>>\end{alignat}$$
+>>Note, A is a constant matrix, therefore, $P, P^{-1}, D$ are constant too. We continue to work the equation
+>>$$\begin{align}
+>> (P^{-1}\mathbf{x})' &= DP^{-1}\mathbf{x}    \\
+>>\end{align}$$
+>>We now define the variable $\mathbf{y} = (P^{-1}\mathbf{x})$ and get
+>>$$\mathbf{y}' = D\mathbf{y}$$
+>>Since the matrix $D$ is diagonal, we notice **the system is decoupled**.
+>>$$\begin{align}
+>> \begin{Bmatrix}
+>> y_{1}' = \lambda_{1}y_{1} \\
+>> \vdots \\
+>> y_{n} =\lambda_{n}y_{n}
+>>\end{Bmatrix} \implies \begin{Bmatrix}
+>> y_{1} = c_{1}e^{\lambda_{1}t} \\
+>> \vdots \\
+>> y_{n} = c_{n}e^{\lambda_{n}t}
+>>\end{Bmatrix} \implies \mathbf{y} = \begin{bmatrix}
+>> c_{1}e^{\lambda_{1}t} \\
+>> \vdots \\
+>> c_{n}e^{\lambda_{n}t}
+>>\end{bmatrix}
+>>\end{align}$$
+>>Having solved for $\mathbf{y}$ we can transform back to the $\mathbf{x}$ representation
+>>$$\begin{align}
+>> \mathbf{x} &= P\mathbf{y} \\
+>>   &= \Big[\mathbf{v}^{(1)}, \dots, \mathbf{v}^{(1)}\Big]\begin{bmatrix}
+>>c_{1}e^{\lambda_{1}t} \\
+>> \vdots \\
+>> c_{n}e^{\lambda_{n}t}
+>>\end{bmatrix} \\
+>> &= c_{1}e^{\lambda_{1}t_{0}}\mathbf{v}^{(1)}+ \dots + c_{n}e^{\lambda_{1}t_{0}}\mathbf{v}^{(n)}
+>>\end{align}$$
+>>Evaluating at $t_0$ automatically yields the IVP formula. $$\tag*{$\square$}$$
+>
+>>[!example]
+>>Find the vector valued function $\mathbf{x}$ solution to the differential system
+>>$$\begin{align}
+>> \mathbf{x}' &= A\mathbf{x} \\
+>> \mathbf{x}(0) &= \begin{bmatrix}
+>> 3 \\ 2
+>>\end{bmatrix} \\
+>> A &= \begin{bmatrix}
+>> 1 & 2 \\ 2 & 1
+>>\end{bmatrix}
+>>\end{align}$$
+>>>[!example] Solution
+>>> We first confirm, that $A$ is diagonalizable by computing the eigenvalues and eigenvectors.
+>>> $$\begin{align}
+>>> \det(A- \lambda I) &= \begin{vmatrix}
+>>> 1- \lambda & 2  \\
+>>> 2 & 1-\lambda
+>>>\end{vmatrix} \\
+>>> &= (1-\lambda)^2 -4
+>>>\end{align}$$
+>>>It can easily be seen that the eigenvalues are
+>>>$$\begin{align}
+>>> \lambda_{1} &= -1 \\
+>>> \lambda_{2} &= 3
+>>>\end{align}$$
+>>>The eigenvectors have already been computed in [[#^abe58b|the example of the previous theorem]]. We state them
+>>>$$\begin{align}
+>>> \mathbf{x}_{1} &= [1, -1]^T \\
+>>> \mathbf{x}_{2} &= [1,1]^T
+>>>\end{align}$$
+>>>Now we can state the general solution
+>>>$$\mathbf{x}_{gen}(t) = c_{1}e^{-t}[1, -1]^T + c_{2}e^{3t}[1,1]^T$$
+>>>Inserting the initial conditions $t=0$ we get
+>>>$$\begin{align}
+>>> c_{1} \begin{bmatrix}
+>>> 1 \\ -1
+>>>\end{bmatrix} + c_{2} \begin{bmatrix}
+>>>  1 \\ 1
+>>>\end{bmatrix} &= \begin{bmatrix}
+>>> 3 \\ 2
+>>>\end{bmatrix}  \\
+>>> \begin{bmatrix}
+>>> 1 & 1 \\ -1 & 1
+>>>\end{bmatrix} \begin{bmatrix}
+>>>  c_{1}  \\ c_{2}
+>>>\end{bmatrix} &= \begin{bmatrix}
+>>> 3 \\ 2
+>>>\end{bmatrix} \\  
+>>> \begin{bmatrix}
+>>>  c_{1}  \\ c_{2}
+>>>\end{bmatrix} &= \frac{1}{2}\begin{bmatrix}
+>>> 3 \\ 2
+>>>\end{bmatrix} \begin{bmatrix}
+>>>1& -1 \\1 & 1 \end{bmatrix} \\
+>>> \begin{bmatrix}
+>>>  c_{1}  \\ c_{2}
+>>>\end{bmatrix} &= \begin{bmatrix}
+>>> \frac{5}{2} \\ -\frac{1}{2}
+>>>\end{bmatrix}
+>>>\end{align}$$
+>>>Inserting this into the _general solution_ we get
+>>>$$\begin{align}
+>>> \mathbf{x}(t) = \frac{1}{2}\begin{bmatrix}
+>>>5e^{3t} + e^{-t} \\ 5e^{3t}-e^{-t} \end{bmatrix}
+>>>\end{align}$$
+
+^abe58b
+
+>[!theorem] Fundamental Matrix Expression
+
+

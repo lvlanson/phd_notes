@@ -1,4 +1,16 @@
+## Terminology
+>[!terminology] 
+> - [[#^88d6f3|Superposition Principle]]
+> - [[#^3df09e|Fundamental Solution]]
+> - [[#^3df09e|General Solution]]
+> - [[#^42635c|Wronskian Function]]
+> - [[#^78710b|Abel's Theorem]]
+> - [[#^7d6c2b|Reduction of Order]]
+> - [[#^9bcb76|Characteristic Polynomial]]
+
 ## 2.1 Variable Coefficients
+
+
 
 >[!def] Definition Second Order Linear Differential Equations ([[../../../PDFs/nagy.pdf#page=86| Source]])
 >A **second order linear differential equation** for the function $y$ is
@@ -229,6 +241,8 @@
 >
 >>[!remark]- Remark Fundamental Solutions not Unique
 >>Note, fundamental solutions are not unique. The preceding example also has solutions $y_1 = \frac{2}{3}e^t + \frac{1}{3}e^{-2t}$ and $y_2 = \frac{1}{3} (e^t - e^{-2t})$
+
+^3df09e
 
 >[!theorem] Theorem General Solution to Second Order ODEs ([[../../../PDFs/nagy.pdf#page=91| Source]])
 >If $y_{1}$ and $y_{2}$ are linearly independent solutions of the equation $L(y)=0$ on an interval $I \subset \mathbb{R}$, where $L(y)=y'' + a_{1}y' + a_{0}y$, and $a_{1},a_{2}$ are continuous functions on $I$, then there are unique constants $c_{1},c_{2}$ such that every solution $y$ of the differential equation $L(y)=0$ on $I$ can be written as a linear combination
@@ -1178,6 +1192,8 @@
 >>>>\end{align}$$
 >>>>Note, linear independence should be validated too using the Wronskian function.
 
+^7d6c2b
+
 >[!example] Exercises
 >>[!example] Task
 >>Consider the differential equation
@@ -1468,3 +1484,5 @@
 >>  &= \frac{1}{2i}\Big(2i e^{\alpha t} \sin \beta t \Big) \\
 >>  &= i e^{\alpha t} \sin \beta t \tag*{$\square$} \\
 >>\end{align}$$
+
+^d60cad

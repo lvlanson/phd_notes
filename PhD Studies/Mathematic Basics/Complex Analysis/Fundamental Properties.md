@@ -1,9 +1,16 @@
+---
+aliases: 
+- Complex Analysis
+- Complex Numbers
+---
+
+
 >[!def] Definition
 >A complex number is of the form
 >$$\alpha = a + bi$$
 > with $a,b \in \mathbb{R}$ and $i=\sqrt{ -1 }$
 
->[!property] Properties ([[../../../Sources/lang1999.pdf#page=16|Source]])
+>[!property] Properties ([[../../../PDFs/lang1999.pdf#page=16|Source]])
 >1. $\mathbb{C}$ is a field, the following properties hold
 >	1. Associativity for $(\mathbb{C},+)$ and $(\mathbb{C},\cdot)$
 >	2. Neutral Element for $(\mathbb{C},+)$ and $(\mathbb{C},\cdot)$
@@ -30,3 +37,5 @@
 > e^{\alpha + \beta} &= e^{\alpha} e^{\beta}
 >\end{align}$$
 >   
+
+^88d84a
