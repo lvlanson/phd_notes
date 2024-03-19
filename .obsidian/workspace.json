@@ -29,7 +29,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
                 "mode": "source",
                 "source": true
               }
@@ -63,7 +63,7 @@
             "group": "e59e1b40c412b938"
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "d0adceee64becfe7",
@@ -91,7 +91,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
                 "mode": "preview",
                 "source": true
               }
@@ -125,7 +125,7 @@
             "group": "e59e1b40c412b938"
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -191,7 +191,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -208,7 +208,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -231,7 +231,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md"
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md"
               }
             }
           },
@@ -278,20 +278,20 @@
     "type": "floating",
     "children": [
       {
-        "id": "ca4e567af9f53544",
+        "id": "164e883703917c42",
         "type": "window",
         "children": [
           {
-            "id": "06585b1fefc7dfe2",
+            "id": "e847300975766004",
             "type": "tabs",
             "children": [
               {
-                "id": "45664eb9b7eb9eab",
+                "id": "e8a6e1eb186d9faa",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
                   "state": {
-                    "file": "PDFs/nagy.pdf"
+                    "file": "PDFs/howell2016.pdf"
                   }
                 }
               }
@@ -299,20 +299,23 @@
           }
         ],
         "direction": "vertical",
-        "x": 0,
-        "y": 960,
-        "width": 1080,
-        "height": 960,
-        "maximize": false,
+        "x": 2952,
+        "y": 0,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
         "zoom": 0
       }
     ]
   },
-  "active": "c56aa18de3053cb9",
+  "active": "292a49727b73487d",
   "lastOpenFiles": [
     "PDFs/nagy.pdf",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
     "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
+    "PDFs/howell2016.pdf",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Basics.md",
     "index.md",
     "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
     "References/@zotero-182.md",
@@ -334,9 +337,6 @@
     "References/@kwak2004.md",
     "References/@kreyszig1978.md",
     "References/@kalman1960.md",
-    "References/@howell2016.md",
-    "References/@hornrogara.md",
-    "PDFs/howell2016.pdf",
     "Pasted image 20240315154958.png",
     "Pasted image 20240315154959.png",
     "PDFs/hall2015.pdf",

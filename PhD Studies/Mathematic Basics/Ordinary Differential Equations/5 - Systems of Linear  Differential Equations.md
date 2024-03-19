@@ -2,17 +2,18 @@
 >- [[#^1dd106| Superposition Principle]]
 >- [[#^16a38b| Fundamental Set]]
 >- [[#^16a38b| General Solution]]
->- [[#^c3380b| Solution Matrix | Fundamental Matrix]]
+>- [[#^44918f| Solution Matrix | Fundamental Matrix]]
 >- [[#^44918f| Wronskian]]
 
 ^7e6f96
 
 ## 5.1 General Properties
 ### 5.1.1 First Order Linear Systems
->[!def] $n \times n$ First Order Linear Differential System ([[../../../PDFs/nagy.pdf#page=240| Source]])
+>[!def] Definition $n \times n$ First Order Linear Differential System ([[../../../PDFs/nagy.pdf#page=240| Source]])
 >An $n \times n$ **first order linear differential system** is the equation 
 >$$\mathbf{x}'(t)=A(t)\mathbf{x}(t)+ \mathbf{b}(t)$$
 >where the $n \times n$ coefficient matrix $A$, the source $n$-vector and the unknown $n$-vector $\mathbf{x}$ are given in components by
+>---
 >$$\begin{align}
 >A(t) &= \begin{bmatrix}
 a_{11}(t) &\dots & a_{1n}(t) \\
@@ -31,6 +32,7 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >\end{bmatrix}  
 >\end{align}$$
 >
+>---
 >>[!remark]
 >>The described system of linear differential equations is called **homogeneous** iff
 >>- $\mathbf{b} = 0$ AND
@@ -147,7 +149,11 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >- $n$-vector $\mathbf{x}_{0}$
 >
 >find an $n$-vector valued function $\mathbf{x}$ solution of
+>
+>---
 >$$\mathbf{x}' = A(t)\mathbf{x} + \mathbf{b}(t) \qquad \mathbf{x}(t_{0})=\mathbf{x}_{0}$$
+>
+>---
 >>[!remark]
 >> The initial condition vector $\mathbf{x}_{0}$ represents $n$ conditions, one for each component of the unknown vector $\mathbf{x}$
 
@@ -157,7 +163,10 @@ a_{n1}(t) &\dots & a_{nn}(t)
 
 >[!theorem] Theorem Existence and Uniqueness of Solutions ([[../../../PDFs/nagy.pdf#page=242| Source]])
 >If the function $A$ and $\mathbf{b}$ are continuous on an open interval $I \subset \mathbb{R}$, and if $\mathbf{x}_{0}$ is any constant vector and $t_{0}$ is any constant in $I$, then there exist only one function $\mathbf{x}$, defined an interval $\tilde{I} \subset I$ with $t_{0} \in \tilde{I}$, solution of the initial value problem
+>---
 >$$\mathbf{x}' = A(t)\mathbf{x}+\mathbf{b}(t), \qquad \mathbf{x}(t_{0})=\mathbf{x}_{0}$$
+>
+>---
 
 ^2e3cb4
 
@@ -247,7 +256,11 @@ a_{n1}(t) &\dots & a_{nn}(t)
 > \mathbf{x}'=A\mathbf{x}
 >\end{align}$$
 >with $\mathbf{x}=\begin{bmatrix} x_1 \\ x_2\end{bmatrix}$ can be written as second order equations for $x_{1}$ and $x_{2}$
+>
+>---
 >$$\mathbf{x}''  - \mathrm{tr}(A)\mathbf{x}' + \det(A)\mathbf{x}=\mathbf{0} \tag{1}$$
+>
+>---
 >Furthermore, the solution to the initial value problem $\mathbf{x}'=A\mathbf{x}$ with $\mathbf{x}(0)=\mathbf{x}_{0}$, also solves the initial value problem given by equation $(1)$ with initial condition
 >$$\mathbf{x}(0) = \mathbf{x}_{0} \qquad \mathbf{x}'(0)=A\mathbf{x}_{0}$$
 >>[!remark]-
@@ -679,14 +692,21 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >[!def] Definition Fundamental Set and General Solution ([[../../../PDFs/nagy.pdf#page=248| Source]])
 >1. The set of functions $\{ \mathbf{x}^{(1)}, \dots, \mathbf{x}^{(n)} \}$ is a **fundamental set of solutions** of the equation $\mathbf{x}' = A\mathbf{x}$ iff the set $\{ \mathbf{x}^{(1)}, \dots, \mathbf{x}^{(n)} \}$ is linearly independent and $\mathbf{x}^{(i)'} = A\mathbf{x}^{(i)}$ for every $i = 1,\dots,n$
 >2. The **general solution** of the homogeneous equation $\mathbf{x}' = A\mathbf{x}$ denotes any vector valued function $\mathbf{x}_{gen}$ that can be written as linear combination
+>---
 >$$\mathbf{x}_{gen}(t) = c_{1}\mathbf{x}^{(1)}(t)+ \dots + c_{n}\mathbf{x}^{(n)}(t)$$
+>
+>---
 >where $\mathbf{x}^{(1)},\dots, \mathbf{x}^{(n)}$ are the functions in any fundamental set of solutions of $\mathbf{x}' = A\mathbf{x}$ while $c_{1},\dots,c_{n}$ are arbitrary constants
 
 ^16a38b
 
 >[!theorem] Theorem General Solution ([[../../../PDFs/nagy.pdf#page=248| Source]])
 >If $\{ \mathbf{x}^{(1)},  \dots, \mathbf{x}^{(n)} \}$ is a linearly independent set of solutions to the $n \times n$ system $$\mathbf{x}' =A\mathbf{x}$$ where $A$ is a continuous matrix valued function, then there exist unique constants $c_{1}, \dots, c_{n}$ such that every solution $\mathbf{x}$ of the differential equation $\mathbf{x}' = A\mathbf{x}$ can be written as the linear combination
+>
+>---
 >$$\mathbf{x}_{gen}(t)= c_{1}\mathbf{x}^{(1)}(t)+ \dots + c_{n}\mathbf{x}^{(n)}(t)$$
+>
+>---
 >>[!remark]
 >> The [[#^1dd106|superposition theorem]] already implies, that given we have fundamental solutions, that these could form a general solution.
 >
@@ -849,9 +869,12 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >The Wronskian function $W = \det(X(t))$ of a solution matrix $X = \left[\mathbf{x}^{(1)}, \dots, \mathbf{x}^{(n)}\right]$ of the linear system $\mathbf{x}'=A(t)\mathbf{x}$, where $A$ is an $n \times n$ continuous matrix valued function on a domain $I \subset \mathbb{R}$, satisfies the differential equation
 >$$W'(t)= \mathrm{tr}\Big(A(t)\Big)W(t)$$
 >Hence $W$ is given by
+>---
 >$$W(t)=W(t_{0})e^{\alpha(t)}$$
 >with
 >$$\alpha(t)=\int _{t_{0}}^t \mathrm{tr}(A(\tau)) \, d\tau $$
+>
+>---
 >where $t_{0}$ is any point in $I$
 >>[!proof] Proof ([[../../../PDFs/nagy.pdf#page=252| omitted]])
 
@@ -861,7 +884,11 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >If $A$ is an $n \times n$ matrix, $t_{0} \in \mathbb{R}$ is an arbitrary constant and $\mathbf{x}_{0} \in \mathbb{R}^n$ constant, then the initial value problem for the unknown $n$-vector valued function $\mathbf{x}$ given by
 >$$\mathbf{x}'=A\mathbf{x} \qquad \mathbf{x}(t_{0})=\mathbf{x}_{0}$$ 
 >has a unique solution given by the formula
+>
+>---
 >$$\mathbf{x}(t)=e^{A(t-t_{0})}\mathbf{x}_{0}$$
+>
+>---
 >>[!remark]- Remark Matrix Exponential
 >>Information about the [[A - Matrix Exponential| matrix exponential]] involves
 >>- [[A - Matrix Exponential#^730bfa| the derivative of the matrix exponential]]
@@ -1185,7 +1212,7 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >> 1 & 2 \\ 2 & 1
 >>\end{bmatrix}
 >>\end{align}$$
->>>[!example] Solution
+>>>[!example]- Solution
 >>> We first confirm, that $A$ is diagonalizable by computing the eigenvalues and eigenvectors.
 >>> $$\begin{align}
 >>> \det(A- \lambda I) &= \begin{vmatrix}
@@ -1242,6 +1269,81 @@ a_{n1}(t) &\dots & a_{nn}(t)
 
 ^abe58b
 
->[!theorem] Fundamental Matrix Expression
+>[!theorem] Theorem Fundamental Matrix Expression ([[../../../PDFs/nagy.pdf#page=261| Source]])
+>If the $n\times n$ constant matrix $A$ is diagonalizable, with a set of linearly independent eigenvectors $\{ \mathbf{v}^{(1)}, \dots ,\mathbf{v}^{(n)} \}$ and corresponding eigenvalues $\{ \lambda_{1}, \dots , \lambda_{n} \}$, then, the initial value problem
+>$$\mathbf{x}' = A\mathbf{x}$$
+>with
+>$$\mathbf{x}(t_{0})=\mathbf{x}_{0}$$
+>has a unique solution given by
+>---
+>$$\mathbf{x}(t)=X(t)X(t_{0})^{-1}\mathbf{x}_{0}$$
+>
+>---
+>where $X(t)= \big[e^{\lambda_{1}t}\mathbf{v}^{(1)},\dots,e^{\lambda_{n}t}\mathbf{v}^{(n)}\big]$ is a fundamental matrix of the system.
+>>[!proof]-
+>> For the system of equations
+>> $$\mathbf{x}' = A\mathbf{x}$$
+>> we have the solution set
+>> $$\left\{\begin{matrix}
+>> \mathbf{x}^{(1)} = e^{\lambda_{1}t}\mathbf{v}^{(1)}&, \\
+>> \vdots&, \\
+>> \mathbf{x}^{(n)} = e^{\lambda_{n}t}\mathbf{v}^{(n)}
+>>\end{matrix}\right\}$$
+>>Therefore the [[#^44918f| fundamental matrix]] can be given as
+>>$$X(t)= \big[e^{\lambda_{1}t}\mathbf{v}^{(1)}, \dots, e^{\lambda_{n}t}\mathbf{v}^{(n)}\big]$$
+>>Hence, the general solution can be given as 
+>>$$\begin{align}
+>> \mathbf{x}_{gen}(t)&= c_{1}e^{\lambda_{1}t}\mathbf{v}^{(1)}+\dots+c_{n}e^{\lambda_{n}t}\mathbf{v}^{(n)} \\
+>> &= X(t)\mathbf{c} \tag{1}
+>>\end{align}$$
+>>We now insert the initial condition $t_{0}$ and solve for $c$
+>>$$\begin{alignat}{2}
+>> \mathbf{x}_{0} &= X(0)\mathbf{c} \qquad&&\Big\vert X^{-1}(0)\cdot \\
+>> X^{-1}(0)\mathbf{x}_{0} &= \mathbf{c}
+>>\end{alignat}$$
+>>Substituting $c$ in equation $(1)$ gives
+>>$$\begin{align}
+>> \mathbf{x}_{0}(t) &=  X(0)X^{-1}(0)\mathbf{x}_{0} \tag*{$\square$}
+>>\end{align}$$
 
+^c0156d
+
+>[!theorem] Theorem Exponential for Diagonalizable Systems ([[../../../PDFs/nagy.pdf#page=263| Source]])
+> If an $n \times n$ matrix $A$ has linearly independent eigenvector $\{ \mathbf{v}_{1}^{(1)}, \dots, \mathbf{v}_{n}^{(n)} \}$ with corresponding eigenvalues $\{ \lambda_{1}, \dots, \lambda_{n} \}$, then
+> ---
+> $$e^{A(t-t_{0})} = X(t)X(t_{0})^{-1}$$
+>
+>---
+>where $X(t)= \big[e^{\lambda_{1}t}\mathbf{v}^{(1)},\dots,e^{\lambda_{n}t}\mathbf{v}^{(n)}\big]$
+>>[!proof]-
+>>We rewrite the [[#^44918f| fundamental matrix]]
+>>$$\begin{align}
+>> X(t) &= \big[e^{\lambda_{1}t}\mathbf{v}^{(1)},\dots,e^{\lambda_{n}t}\mathbf{v}^{(n)}\big] \\
+>> &= [\mathbf{v}^{(1)}, \dots, \mathbf{v}^{(n)}]\begin{bmatrix}
+>> e^{\lambda_{1}t} &\dots& 0 \\ \vdots & \ddots & \vdots \\ 0 & \dots & e^{\lambda_{n}t}
+>>\end{bmatrix} \\
+>> &= [\mathbf{v}^{(1)}, \dots, \mathbf{v}^{(n)}] \mathrm{diag}\left(e^{\lambda_{1}t}, \dots, e^{\lambda_{n}t}\right)
+>>\end{align}$$
+>>By the [[#^740a1c| diagonalization theorem]] we can rewrite the diagonal matrix as
+>>$$\begin{align}
+>>\phantom{X(t)} &= [\mathbf{v}^{(1)}, \dots, \mathbf{v}^{(n)}] e^{Dt} \phantom{aaaaaaaaaaaaa} \\
+>>\end{align}$$
+>>with $Dt= \mathrm{diag}\left(\lambda_{1}t\dots,\lambda_{n}t \right)$. Further, we denote $P=[\mathbf{v}^{(1)}, \dots, \mathbf{v}^{(n)}]$ and get
+>>$$X(t) = P e^{Dt} \phantom{aaaaaaaaaaaaaaaaaaaaaaa,}\tag{1}$$
+>>We now take the inverse on both sides for $t_0$ and use the property of [[../Linear Algebra/Basics#^5457a2|the inverse of matrix products]]
+>>$$\begin{align}
+>> X(t_{0})^{-1} &= \big(Pe^{Dt_{0}}\big)^{-1} \phantom{aaaaaaaaaaaaaaaaaaaaaa} \\ 
+>> X(t_{0})^{-1} &= e^{-Dt_{0}}P^{-1} \tag{2}
+>>\end{align}$$
+>>We now calculate the product $X(t)X(t_0)^{-1}$ and use the results of equation $(1)$ and $(2)$
+>>$$\begin{align}
+>> X(t)X(t_0)^{-1} &= P e^{Dt} e^{-Dt_{0}}P^{-1}  \phantom{aaaaaaaaaaaaaaaaaaaaaaa}\\
+>> &= P e^{D(t-t_{0})} P^{-1} 
+>>\end{align}$$
+>>Since $A$ is diagonalizable we can make use of the [[A - Matrix Exponential#^3c5427|diagonalization property of matrix exponentials]], i.e.
+>>$$\begin{align}
+>> e^{A(t-t_{0})} = P e^{D(t-t_{0})} P^{-1} \phantom{aaaaaaaaaaaaaaaaaaaa} \\
+>>\end{align}$$
+>>We finally get the desired result
+>>$$X(t)X(t_0)^{-1}=e^{A(t-t_{0})} \phantom{aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa}\tag*{$\square$}$$
 

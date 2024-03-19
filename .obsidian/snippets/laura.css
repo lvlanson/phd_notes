@@ -1,9 +1,4 @@
-@media print {
-  body {
-    background-color: #363636
-  }
-},
-
-p{
-    color: red;
-  }
+hr{
+  background-color: #777;
+  height: 3px
+}

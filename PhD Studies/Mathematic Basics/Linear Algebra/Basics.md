@@ -30,3 +30,21 @@
 >>[!example]
 >>![[media/matrix_vector_multiplication.webm|matrix_vector_multiplication]]
 >>[Source](http://matrixmultiplication.xyz)
+
+>[!property] Inverse of Matrix Product
+> Let $A,B$ be invertible, square matrices, then 
+> ---
+> $$(AB)^{-1}= B^{-1}A^{-1}$$
+>
+>---
+>>[!proof]-
+>>Given that $B^{-1}A^{-1}$ is the inverse of $AB$ then the product of those must yield the identity matrix $I$. We have
+>>$$\begin{align}
+>> (AB)(B^{-1}A^{-1}) &= A(BB^{-1})A^{-1} \tag{Associativity} \\
+>> &= AIA^{-1} \tag{Inverse to Neutral} \\
+>> &= AA^{-1} \tag{Neutrality} \\
+>> &= I 
+>>\end{align}$$
+>>$$\tag*{$\square$}$$
+
+^5457a2
