@@ -11,3 +11,5 @@
 
 >[!note] Note 2
 >By construction the equations are [[../../PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations#^abe58b|decoupled]], therefore we can solve the system of equations using the [[../../PhD Studies/Mathematic Basics/Linear Algebra/Eigenvectors and Eigenvalues#^a0a687|diagonalization method ]] by having eigenvalues and eigenvectors.
+
+

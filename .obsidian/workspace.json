@@ -29,8 +29,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
-                "mode": "source",
+                "file": "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+                "mode": "preview",
                 "source": true
               }
             },
@@ -55,15 +55,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
-                "mode": "preview",
+                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
+                "mode": "source",
                 "source": true
               }
             },
             "group": "e59e1b40c412b938"
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       },
       {
         "id": "d0adceee64becfe7",
@@ -91,7 +91,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
+                "file": "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
                 "mode": "preview",
                 "source": true
               }
@@ -117,15 +117,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
-                "mode": "source",
+                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
+                "mode": "preview",
                 "source": true
               }
             },
             "group": "e59e1b40c412b938"
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -191,7 +191,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
+                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -208,7 +208,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
+                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -231,7 +231,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md"
+                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md"
               }
             }
           },
@@ -278,15 +278,15 @@
     "type": "floating",
     "children": [
       {
-        "id": "164e883703917c42",
+        "id": "057a41f51de8e4ee",
         "type": "window",
         "children": [
           {
-            "id": "e847300975766004",
+            "id": "c5cfcd60d2e5c9a6",
             "type": "tabs",
             "children": [
               {
-                "id": "e8a6e1eb186d9faa",
+                "id": "0fe3e297f5cd055a",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -299,25 +299,26 @@
           }
         ],
         "direction": "vertical",
-        "x": 2952,
-        "y": 0,
+        "x": 15,
+        "y": 334,
         "width": 1024,
         "height": 800,
-        "maximize": true,
+        "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "292a49727b73487d",
+  "active": "26b6cb6fb0d06466",
   "lastOpenFiles": [
-    "PDFs/nagy.pdf",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
-    "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
     "PDFs/howell2016.pdf",
+    "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Basics.md",
-    "index.md",
     "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.pdf",
+    "index.md",
+    "PDFs/nagy.pdf",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Basics.md",
     "References/@zotero-182.md",
     "References/@zabczyk2008.md",
     "References/@vaswani2023.md",
@@ -346,7 +347,6 @@
     "Own Projects/ODE LVQ",
     "Own Projects",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
     "Pasted image 20240304122332.png",
     "PhD Studies/Mathematic Basics/Combinatorics/Figures/ex_puzzle.png",
     "Research Seminar/Figures/rs_1_fig_4.png",

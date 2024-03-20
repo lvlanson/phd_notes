@@ -1,7 +1,7 @@
 
 >[!def] Definition Trigonometric Fourier Series ([[../../../PDFs/howell2016.pdf#page=113|Source]])
->Let $f$ be a periodic function with period $p$ where $p$ is some positive number. The (trigonometric) Fourier $FS$ series for $f$ is the infinite series
->$$FS[f]\rvert_{t} = A_{0} + \sum_{k=1}^\infty \Big[ a_{k} \cos\big(2\pi \omega_{k}t\big) + b_{k} \sin\big(2\pi \omega_{k}t\big)\Big]$$
+>Let $f$ be a periodic function with period $p$ where $p$ is some positive number. The (trigonometric) Fourier $\mathcal{F}$ series for $f$ is the infinite series
+>$$\mathcal{F}[f]\rvert_{t} = A_{0} + \sum_{k=1}^\infty \Big[ a_{k} \cos\big(2\pi \omega_{k}t\big) + b_{k} \sin\big(2\pi \omega_{k}t\big)\Big]$$
 >where, for $k = 1,2,3, \dots$
 >$$\begin{align}
 > \omega_{k} &= \frac{k}{p} \tag{Frequency Coefficient}\\
@@ -12,9 +12,9 @@
 
 >[!lemma] 
 >If $f$ is either a constant function, a sine function or a cosine function, then
->$$FS[f]|_{t} = f(t)$$
+>$$\mathcal{F}[f]|_{t} = f(t)$$
 >Especially,
->$$FS[0]|_{t} = 0$$
+>$$\mathcal{F}[0]|_{t} = 0$$
 >>[!proof]- Proof Constant Function $f(t) = c$
 >>$$\begin{align}
 >> A_{0} &= \frac{1}{p}\int_{0}^p f(t) \, dt\\  
@@ -34,7 +34,7 @@
 >>  &= \frac{2c}{p}   \Big( -2\pi \omega_{k}\big(\underbrace{ \cos( 2\pi k) }_{ =1 }-\underbrace{ \cos( 0) }_{ =1 }\big)\Big) \\
 >>  &= \frac{2c}{p}   \Big( -2\pi \omega_{k}\cdot 0 \Big) \\
 >>  &= 0 \\ \\ \\
->>FS[f]|_{t}  &= \underbrace{ A_{0} }_{ =c } + \sum_{k=1}^\infty \Big[ \underbrace{ a_{k} }_{ =0 } \cos\big(2\pi \omega_{k}t\big) + \underbrace{ b_{k} }_{ =0 } \sin\big(2\pi \omega_{k}t\big)\Big] \\
+>>\mathcal{F}[f]|_{t}  &= \underbrace{ A_{0} }_{ =c } + \sum_{k=1}^\infty \Big[ \underbrace{ a_{k} }_{ =0 } \cos\big(2\pi \omega_{k}t\big) + \underbrace{ b_{k} }_{ =0 } \sin\big(2\pi \omega_{k}t\big)\Big] \\
 >> &= c
 >>\end{align}$$
 >

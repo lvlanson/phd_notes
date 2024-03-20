@@ -13,7 +13,6 @@
 >An $n \times n$ **first order linear differential system** is the equation 
 >$$\mathbf{x}'(t)=A(t)\mathbf{x}(t)+ \mathbf{b}(t)$$
 >where the $n \times n$ coefficient matrix $A$, the source $n$-vector and the unknown $n$-vector $\mathbf{x}$ are given in components by
->---
 >$$\begin{align}
 >A(t) &= \begin{bmatrix}
 a_{11}(t) &\dots & a_{1n}(t) \\
@@ -32,7 +31,6 @@ a_{n1}(t) &\dots & a_{nn}(t)
 >\end{bmatrix}  
 >\end{align}$$
 >
->---
 >>[!remark]
 >>The described system of linear differential equations is called **homogeneous** iff
 >>- $\mathbf{b} = 0$ AND
