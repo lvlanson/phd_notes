@@ -61,9 +61,19 @@
               }
             },
             "group": "e59e1b40c412b938"
+          },
+          {
+            "id": "604af30a52896c06",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.11"
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "d0adceee64becfe7",
@@ -308,7 +318,7 @@
       }
     ]
   },
-  "active": "26b6cb6fb0d06466",
+  "active": "604af30a52896c06",
   "lastOpenFiles": [
     "PDFs/howell2016.pdf",
     "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
