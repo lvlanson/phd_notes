@@ -1,5 +1,5 @@
 >[!Example] Aufgabe (1a)
->Wie viele verschiene siebenstellige Zahlen kann man aus den Ziffern $(1,2,2,3,6,6,6)$ bilden?
+>Wieviele verschiene siebenstellige Zahlen kann man aus den Ziffern $(1,2,2,3,6,6,6)$ bilden?
 >>[!example]- Lösung
 >>Wir ordnen 7 Ziffern an, das heißt
 >>$$n=7$$
@@ -57,7 +57,7 @@
 >>$$C^3_{5} \cdot C^{2}_{85} = 10 \cdot 3570 = 35700 \tag*{$\blacktriangleleft$} $$
 
 >[!example] Aufgabe (1d)
-> Wie viele verschiedene Reihenfolgen gibt es für das Aufhängen von 30 Gemälden in einer Ausstellung.
+> Wieviele verschiedene Reihenfolgen gibt es für das Aufhängen von 30 Gemälden in einer Ausstellung.
 >>[!example]- Lösung
 >> Da wir hier 30 Elemente anordnen wollen und dabei alle anordnen, handelt es sich hierbei um eine Permutation. Außerdem können keine Elemente mehrfach auftauchen, daher haben wir eine gewöhnliche Permutation. Die Aufgabe löst sich demnach mti
 >> $$\begin{align}
@@ -77,9 +77,75 @@
 >> &= 53\;130 \tag*{$\blacktriangleleft$}
 >>\end{align}$$
 >2. Wieviele Stichproben vom Umfang 5 gibt es, die genau zwei fehlerhafte Geräte enthalten?
->>[!example] Lösung
+>>[!example]- Lösung
 >>Wir teilen die Menge der Geräte in die Defekten $D$ und Nicht-Defekten $N$ auf, sodass wir festhalten können
 >>$$\begin{align}
 >> \lvert D \rvert &= 4 \\
->> \lvert  \rvert  
+>> \lvert N \rvert &= 21  
 >>\end{align}$$
+>>Nun wählen wir wie in der Aufgabe (1c) aus. Wir wollen 2 Defekte aus der Menge der Defekten ziehen und 3 aus der Menge der Nicht-Defekten und erhalten folgende Möglichkeiten.
+>>$$\begin{align}
+>> C^{2}_{4} &= \binom{4}{2} \\
+>> &= 6 \\
+>> C^{3}_{21} &= \binom{21}{3} \\
+>> &= 1330
+>>\end{align}$$
+>>Nun wenden wir genauso wieder das Multiplikationsprinzip an, um jede Möglichkeit der einen Kombination mit jeder Möglichkeit der anderen Kombination zu verknüpfen.
+>>$$\begin{align}
+>> C^2_{4} \cdot C^3_{21} = 6 \cdot 1330 = 7980 \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+
+>[!example] Aufgabe 2 Situation
+> Es werden zwei Geräte geprüft, die 
+> - ausgefallen (0)
+> - funktionsfähig (L)
+>
+>sein können. Es ergeben sich folgende Elementarereignisse
+>$$\begin{align}
+> \{ \omega_{0} \} &= 00 \\
+> \{ \omega_{1} \} &= 0L \\
+> \{ \omega_{2} \} &= L0 \\
+> \{ \omega_{3} \} &= LL
+>\end{align}$$
+>>[!example] Aufgabe (2a)
+>> Geben Sie die Menge der Elementarereignisse $\Omega$ an.
+>>>[!example]- Lösung 
+>>> Definition 2.2 beschreibt, dass $\Omega$ die Menge der Elementarereignisse ist, also $\omega_{i} \in \Omega, \forall i \in \mathbb{N}_{0}$. Das bedeutet, alle Elementarereignisse müssen in der Elementarereignissmenge zusammgefasst sein.
+>>> $$\Omega = \{ \omega_{0},\omega_{1},\omega_{2},\omega_{3} \} \tag*{$\blacktriangleleft$}$$
+>
+>>[!example] Aufgabe (2b)
+>> Geben Sie den Ereignisraum $\mathbb{E}$ zu diesem Versuch an.
+>>>[!example]- Lösung
+>>> Definition 2.8 beschreibt den Ereignisraum als die Menge aller zufälligen Ereignisse in Abhänigkeit zu $\Omega$. Diese ist angegeben als die Potenzmenge. Wir erinnern uns, die Potenzmenge einer $\Omega$ ist die Menge aller Teilmengen von $\Omega$, also
+>>> $$\begin{align}
+>>> \mathcal{P}(\Omega)= \Big\{& \emptyset, \{ \omega_{0} \}, \{ \omega_{1} \}, \{ \omega_{2} \},\{ \omega_{3} \}, \\ 
+>>> & \{ \omega_{0}, \omega_{1}\}, \{ \omega_{0}, \omega_{2}\}, \{ \omega_{0}, \omega_{3}\}, \\
+>>> &\{ \omega_{1}, \omega_{2}\}, \{ \omega_{1}, \omega_{3}\}, \{ \omega_{2}, \omega_{3}\}, \\
+>>> & \{ \omega_{0}, \omega_{1}, \omega_{2}\},\{ \omega_{0}, \omega_{1}, \omega_{3}\}, \\
+>>> & \{ \omega_{0}, \omega_{2}, \omega_{3}\}, \{ \omega_{1}, \omega_{2}, \omega_{3}\}, \Omega\Big\}
+>>>\end{align}$$
+>>>Um zu überprüfen, ob wir ordentlich alle Elemente erfasst haben, verwenden wir die Eigenschaft, dass die Potenzmenge für $n$ elemente in $\Omega$ genau $2^n$ Elemente enthalten muss. Wir haben genau $16=2^4$ Elemente, demzufolge haben wir alle Elemente erzeugt.
+>>>$$\tag*{$\blacktriangleleft$}$$
+>
+>>[!example] Aufgabe (2c)
+>> Geben Sie alle Ereignisse an, die das Ereignis $\{ \omega_{0},\omega_{1} \}$ nach sich zieht.
+>>>[!example]- Lösung
+>>> Sektion 2.2 Bemerkung (6) beschreibt, was es heißt, dass _"ein Ereignis ein anderes nach sich zieht"_. Wir halten fest für $A,B \subseteq  \Omega$
+>>> $$A \text{ zieht } B \text{ nach sich } \Longleftrightarrow A \subset B$$
+>>> Übertragen wir diese auf die Aussage der Aufgabe, erhalten wir
+>>> $$\{ \omega_{0},\omega_{1} \} \text{ zieht } B \text{ nach sich } \Longleftrightarrow A \subset B$$
+>>> Nun suchen wir die Mengen $B$, die die beschriebene Relation $A \subset B \subseteq \Omega$ erfüllen. Daher wählen wir aus Omega folgende Mengen, die diese Relation erfüllen
+>>> $$\begin{align}
+>>> B_{1} &= \{\omega_{0},\omega_{1}, \omega_{2}\} \\
+>>> B_{2} &= \{ \omega_{0},\omega_{1}, \omega_{3} \} \\
+>>> B_{3} &= \Omega \tag*{$\blacktriangleleft$}
+>>>\end{align}$$
+>
+>>[!example] Aufgabe (2d)
+>> Geben Sie die Komplentärereignisse zu $\{ \omega_{0},\omega_{1} \}$ und $\{ \omega_{3} \}$ an.
+>>>[!example]- Lösung
+>>>Sektion 2.2 Bemerkung (1) beschreibt das Komplementärereignis. Wir bemerken vor allem, dass das Komplementärereignis von der Grundmenge $\Omega$ abhängig ist. Wir nutzen die angegebene Formel
+>>>$$\begin{alignat}{2}
+>>> \overline{\{ \omega_{0},\omega_{1} \}} &= \Omega \setminus \{ \omega_{0},\omega_{1} \} &&= \{ \omega_{2}, \omega_{3} \}\\
+>>> \overline{\{ \omega_{3} \}} &= \Omega \setminus \{ \omega_{3} \} &&= \{ \omega_{0},\omega_{1},\omega_{2} \} \tag*{$\blacktriangleleft$}
+>>>\end{alignat}$$

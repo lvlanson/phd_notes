@@ -42,7 +42,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Own Projects/ODE LVQ/Construction.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
                 "mode": "source",
                 "source": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Own Projects/ODE LVQ/Construction.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
                 "mode": "preview",
                 "source": true
               }
@@ -191,7 +191,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Own Projects/ODE LVQ/Construction.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -208,7 +208,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Own Projects/ODE LVQ/Construction.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -231,7 +231,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Own Projects/ODE LVQ/Construction.md"
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md"
               }
             }
           },
@@ -273,9 +273,48 @@
       "marp-slides:Show Slide Preview": false
     }
   },
+  "floating": {
+    "id": "5d3eec28f3fc5d2e",
+    "type": "floating",
+    "children": [
+      {
+        "id": "1ee661091e6fa375",
+        "type": "window",
+        "children": [
+          {
+            "id": "8c9fed552dc32ce7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "cba3e2bce166bb2b",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 41,
+        "y": 787,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "c56aa18de3053cb9",
   "lastOpenFiles": [
+    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
+    "Untitled.md",
     "Own Projects/ODE LVQ/Construction.md",
     "Pasted image 20240324185307.png",
     "Pasted image 20240324185253.png",
@@ -313,14 +352,9 @@
     "References/@millar2011.md",
     "References/@lingle2023.md",
     "References/@lin2018.md",
-    "References/@lang1999.md",
-    "References/@kwak2004.md",
     "PDFs/hall2015.pdf",
     "PDFs/needham1999.pdf",
     "PDFs/lang1999.pdf",
-    "Sources",
-    "Own Projects/ODE LVQ",
-    "Own Projects",
     "Untitled.canvas"
   ]
 }
