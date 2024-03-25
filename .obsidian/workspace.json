@@ -42,12 +42,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+                "file": "Own Projects/ODE LVQ/Construction.md",
                 "mode": "source",
                 "source": true
               }
             },
-            "group": "72d478e08108ecc9"
+            "group": "f5637a047dab5c8e"
           },
           {
             "id": "26b6cb6fb0d06466",
@@ -61,19 +61,9 @@
               }
             },
             "group": "e59e1b40c412b938"
-          },
-          {
-            "id": "604af30a52896c06",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.11"
-              }
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       },
       {
         "id": "d0adceee64becfe7",
@@ -109,19 +99,6 @@
             "group": "d05361c51622cf84"
           },
           {
-            "id": "76e21f7ec80aef17",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
-                "mode": "preview",
-                "source": true
-              }
-            },
-            "group": "72d478e08108ecc9"
-          },
-          {
             "id": "c042b6963518a5d3",
             "type": "leaf",
             "state": {
@@ -133,6 +110,19 @@
               }
             },
             "group": "e59e1b40c412b938"
+          },
+          {
+            "id": "d33c284e95126018",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Own Projects/ODE LVQ/Construction.md",
+                "mode": "preview",
+                "source": true
+              }
+            },
+            "group": "f5637a047dab5c8e"
           }
         ],
         "currentTab": 3
@@ -201,7 +191,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
+                "file": "Own Projects/ODE LVQ/Construction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -218,7 +208,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
+                "file": "Own Projects/ODE LVQ/Construction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -241,7 +231,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md"
+                "file": "Own Projects/ODE LVQ/Construction.md"
               }
             }
           },
@@ -283,49 +273,28 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "floating": {
-    "id": "6179844a3f69adbd",
-    "type": "floating",
-    "children": [
-      {
-        "id": "057a41f51de8e4ee",
-        "type": "window",
-        "children": [
-          {
-            "id": "c5cfcd60d2e5c9a6",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "0fe3e297f5cd055a",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "PDFs/howell2016.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 15,
-        "y": 334,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "604af30a52896c06",
+  "active": "c56aa18de3053cb9",
   "lastOpenFiles": [
-    "PDFs/howell2016.pdf",
+    "Pasted image 20240324185307.png",
+    "Pasted image 20240324185253.png",
+    "Own Projects/ODE LVQ/Construction.md",
+    "Own Projects/ODE LVQ/Figures/Pasted image 20240324185152.png",
+    "Own Projects/ODE LVQ/Figures/Pasted image 20240324185054.png",
+    "Own Projects/ODE LVQ/Figures/Pasted image 20240324175134.png",
     "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+    "Pasted image 20240324185139.png",
+    "Own Projects/ODE LVQ/Figures/Pasted image 20240324175002.png",
+    "Own Projects/ODE LVQ/Figures/Pasted image 20240324174714.png",
+    "Own Projects/ODE LVQ/Figures/hard_clipped_sine.png",
+    "Own Projects/ODE LVQ/Figures/sine_cosine.png",
+    "Own Projects/ODE LVQ/Figures/step_function.png",
+    "Own Projects/ODE LVQ/Figures",
     "Research Seminar/Research Seminar 1 Proposal ODE LVQ.pdf",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+    "PDFs/howell2016.pdf",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
     "index.md",
     "PDFs/nagy.pdf",
     "PhD Studies/Mathematic Basics/Linear Algebra/Basics.md",
@@ -346,25 +315,12 @@
     "References/@lin2018.md",
     "References/@lang1999.md",
     "References/@kwak2004.md",
-    "References/@kreyszig1978.md",
-    "References/@kalman1960.md",
-    "Pasted image 20240315154958.png",
-    "Pasted image 20240315154959.png",
     "PDFs/hall2015.pdf",
     "PDFs/needham1999.pdf",
     "PDFs/lang1999.pdf",
     "Sources",
     "Own Projects/ODE LVQ",
     "Own Projects",
-    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
-    "Pasted image 20240304122332.png",
-    "PhD Studies/Mathematic Basics/Combinatorics/Figures/ex_puzzle.png",
-    "Research Seminar/Figures/rs_1_fig_4.png",
-    "Research Seminar/Figures/example_1.png",
-    "Research Seminar/Figures/rs_1_fig_3.png",
-    "Research Seminar/Figures/rs_1_example_1.png",
-    "Research Seminar/Figures/rs_1_fig_1.png",
-    "Research Seminar/Figures/rs_1_fig_2.png",
     "Untitled.canvas"
   ]
 }
