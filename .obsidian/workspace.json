@@ -42,7 +42,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+                "file": "Own Projects/ODE LVQ/Construction.md",
                 "mode": "source",
                 "source": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+                "file": "Own Projects/ODE LVQ/Construction.md",
                 "mode": "preview",
                 "source": true
               }
@@ -191,7 +191,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+                "file": "Own Projects/ODE LVQ/Construction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -208,7 +208,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+                "file": "Own Projects/ODE LVQ/Construction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -231,7 +231,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md"
+                "file": "Own Projects/ODE LVQ/Construction.md"
               }
             }
           },
@@ -275,6 +275,7 @@
   },
   "active": "c56aa18de3053cb9",
   "lastOpenFiles": [
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
     "Own Projects/ODE LVQ/Construction.md",
     "Pasted image 20240324185307.png",
     "Pasted image 20240324185253.png",
