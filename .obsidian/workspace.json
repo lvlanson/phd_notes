@@ -60,7 +60,7 @@
                 "source": true
               }
             },
-            "group": "e59e1b40c412b938"
+            "group": "33037cd5f6eff694"
           }
         ],
         "currentTab": 3
@@ -112,7 +112,7 @@
             "group": "72d478e08108ecc9"
           },
           {
-            "id": "c042b6963518a5d3",
+            "id": "21457efbb5c8485c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -122,7 +122,7 @@
                 "source": true
               }
             },
-            "group": "e59e1b40c412b938"
+            "group": "33037cd5f6eff694"
           }
         ],
         "currentTab": 3
@@ -305,11 +305,45 @@
         "height": 800,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "3049878ceb690015",
+        "type": "window",
+        "children": [
+          {
+            "id": "20f112a8515e6b98",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b543b1662b86956b",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 768,
+        "y": 336,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 0
       }
     ]
   },
   "active": "26b6cb6fb0d06466",
   "lastOpenFiles": [
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Vorbereitungsaufgaben.md",
     "PDFs/howell2016.pdf",
     "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
@@ -336,17 +370,12 @@
     "References/@lin2018.md",
     "References/@lang1999.md",
     "References/@kwak2004.md",
-    "References/@kreyszig1978.md",
-    "References/@kalman1960.md",
     "Pasted image 20240315154958.png",
     "Pasted image 20240315154959.png",
     "PDFs/hall2015.pdf",
     "PDFs/needham1999.pdf",
     "PDFs/lang1999.pdf",
     "Sources",
-    "Own Projects/ODE LVQ",
-    "Own Projects",
-    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Pasted image 20240304122332.png",
     "PhD Studies/Mathematic Basics/Combinatorics/Figures/ex_puzzle.png",
     "Research Seminar/Figures/rs_1_fig_4.png",
