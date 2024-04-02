@@ -1,5 +1,5 @@
 >[!Example] Aufgabe (1a)
->Wieviele verschiene siebenstellige Zahlen kann man aus den Ziffern $(1,2,2,3,6,6,6)$ bilden?
+>Wieviele verschiedene siebenstellige Zahlen kann man aus den Ziffern $(1,2,2,3,6,6,6)$ bilden?
 >>[!example]- Lösung
 >>Wir ordnen 7 Ziffern an, das heißt
 >>$$n=7$$

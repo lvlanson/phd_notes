@@ -37,27 +37,12 @@
             "group": "d05361c51622cf84"
           },
           {
-            "id": "c56aa18de3053cb9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
-                "mode": "source",
-                "source": true
-              }
-            },
-            "group": "f5637a047dab5c8e"
-          },
-          {
             "id": "26b6cb6fb0d06466",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
-                "mode": "source",
-                "source": true
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf"
               }
             },
             "group": "e59e1b40c412b938"
@@ -102,30 +87,27 @@
             "id": "c042b6963518a5d3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
-                "mode": "preview",
-                "source": true
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf"
               }
             },
             "group": "e59e1b40c412b938"
           },
           {
-            "id": "d33c284e95126018",
+            "id": "419c54febaea815f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+                "file": "Own Projects/ODE LVQ/Construction.md",
                 "mode": "preview",
                 "source": true
               }
-            },
-            "group": "f5637a047dab5c8e"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -191,7 +173,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+                "file": "PDFs/howell2016.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -208,7 +190,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+                "file": "PDFs/howell2016.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -231,7 +213,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md"
+                "file": "PDFs/howell2016.pdf"
               }
             }
           },
@@ -274,24 +256,66 @@
     }
   },
   "floating": {
-    "id": "5d3eec28f3fc5d2e",
+    "id": "d5db0fd4ca18c945",
     "type": "floating",
     "children": [
       {
-        "id": "1ee661091e6fa375",
+        "id": "d47959a5967aef5b",
         "type": "window",
         "children": [
           {
-            "id": "8c9fed552dc32ce7",
+            "id": "ea5b9520401cac09",
             "type": "tabs",
             "children": [
               {
-                "id": "cba3e2bce166bb2b",
+                "id": "d415a3978cf08e24",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "ML Programming/PyTorch/Basics/PyTorch Layers.md",
+                    "mode": "preview",
+                    "source": true
+                  }
+                }
+              },
+              {
+                "id": "12eb4e830aacdc2d",
+                "type": "leaf",
+                "state": {
+                  "type": "release-notes",
+                  "state": {
+                    "currentVersion": "1.5.12"
+                  }
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "vertical",
+        "x": 1080,
+        "y": 915,
+        "width": 900,
+        "height": 500,
+        "maximize": false,
+        "zoom": 0
+      },
+      {
+        "id": "dd2ddc5cd54f3bcb",
+        "type": "window",
+        "children": [
+          {
+            "id": "2fff03ff83f9b9e7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "359f74bf3af0e1b9",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
                   "state": {
-                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf"
+                    "file": "PDFs/howell2016.pdf"
                   }
                 }
               }
@@ -299,62 +323,91 @@
           }
         ],
         "direction": "vertical",
-        "x": 41,
-        "y": 787,
-        "width": 1024,
+        "x": 0,
+        "y": 960,
+        "width": 1080,
+        "height": 960,
+        "maximize": false,
+        "zoom": 0
+      },
+      {
+        "id": "6e148b51d1e1d315",
+        "type": "window",
+        "children": [
+          {
+            "id": "3dfaef11d0c490a1",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3497e43c628ed044",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "PDFs/howell2016.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1883,
+        "y": 510,
+        "width": 1000,
         "height": 800,
         "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "c56aa18de3053cb9",
+  "active": "359f74bf3af0e1b9",
   "lastOpenFiles": [
-    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
-    "Untitled.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
+    "PDFs/howell2016.pdf",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
+    "ML Programming/PyTorch/Basics/PyTorch Basic Functions.md",
+    "ML Programming/PyTorch/Basics/PyTorch Arithmetics.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Vorbereitung.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/aufgabe_4_4.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/aufgabe_4_3.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Vorbereitung.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.md",
     "Own Projects/ODE LVQ/Construction.md",
-    "Pasted image 20240324185307.png",
-    "Pasted image 20240324185253.png",
+    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+    "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.aux",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.log",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.tex",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Untitled",
+    "Untitled.md",
+    "index.md",
+    "References/@apostol1967.md",
+    "References/@ben-baruch2021.md",
+    "References/@bishop2006.md",
+    "References/@briggs2019.md",
+    "References/@brogan1991.md",
+    "References/@conci2018.md",
+    "References/@devlin2019.md",
+    "References/@folland2009.md",
+    "References/@greene2019.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240329181952.png",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240331183534.png",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240331185525.png",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240331181722.png",
+    "Pasted image 20240331174243.png",
+    "Own Projects/ODE LVQ/Figures/Pasted image 20240324185253.png",
+    "Own Projects/ODE LVQ/Figures/Pasted image 20240324185307.png",
     "Own Projects/ODE LVQ/Figures/Pasted image 20240324185152.png",
     "Own Projects/ODE LVQ/Figures/Pasted image 20240324185054.png",
     "Own Projects/ODE LVQ/Figures/Pasted image 20240324175134.png",
-    "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
-    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
-    "Pasted image 20240324185139.png",
-    "Own Projects/ODE LVQ/Figures/Pasted image 20240324175002.png",
-    "Own Projects/ODE LVQ/Figures/Pasted image 20240324174714.png",
-    "Own Projects/ODE LVQ/Figures/hard_clipped_sine.png",
-    "Own Projects/ODE LVQ/Figures/sine_cosine.png",
-    "Own Projects/ODE LVQ/Figures",
-    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.pdf",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
-    "PDFs/howell2016.pdf",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
-    "index.md",
-    "PDFs/nagy.pdf",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Basics.md",
-    "References/@zotero-182.md",
-    "References/@zabczyk2008.md",
-    "References/@vaswani2023.md",
-    "References/@vasudeva2017.md",
-    "References/@stanley2012.md",
-    "References/@shifrin2005.md",
-    "References/@shao2003.md",
-    "References/@rudin1976.md",
-    "References/@nelder1972.md",
-    "References/@needham1999.md",
-    "References/@nam2014.md",
-    "References/@nagy.md",
-    "References/@millar2011.md",
-    "References/@lingle2023.md",
-    "References/@lin2018.md",
-    "PDFs/hall2015.pdf",
-    "PDFs/needham1999.pdf",
-    "PDFs/lang1999.pdf",
     "Untitled.canvas"
   ]
 }

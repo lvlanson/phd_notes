@@ -21,7 +21,7 @@
   "deleteOldFiles": true,
   "addThemeToggle": true,
   "addOutline": true,
-  "addFileNav": true,
+  "addFileNav": false,
   "addSearchBar": false,
   "addGraphView": false,
   "addTitle": true,
@@ -29,7 +29,7 @@
   "siteURL": "https://www.staff.hs-mittweida.de/~davies/intranet/",
   "authorName": "Thomas Davies",
   "vaultTitle": "PhD Studies",
-  "exportPreset": "documents",
+  "exportPreset": "raw-documents",
   "openAfterExport": true,
   "graphAttractionForce": 1,
   "graphLinkLength": 10,
@@ -46,6 +46,7 @@
   "exportPath": "/home/thomas/Documents/HTML_EXPORT",
   "filesToExport": [
     [
+      "Lehre",
       "ML Programming",
       "PDFs",
       "PhD Studies",

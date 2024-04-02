@@ -1,254 +1,359 @@
-### Klassische Wahrscheinlichkeit
-#### Aufgabe (1a)
-
-> Um diese Aufgabe vernünftig zu lösen bedienen wir uns Definition 3.6 und 3.7. Um Definition 3.6 vernünftig anzuwenden, ist die Anzahl der möglichen Elementarereignisse notwendig. Im letzten Seminar haben wir dazu Übungen bereits durchgeführt.
-> 
-> Wir bemerken, es werden 3 ideale Würfel geworfen. Da die Reihenfolge hierbei keine Rolle spielt, können wir die Elementarereignismenge wie folgt angeben
-> $$\begin{align}
-> \Omega &= \Big\{ \{a, b, c  \} \;\Big|\; 1 \leq a, b,c \leq 6 \Big\} \\
->   &= \Big\{ \{1, 1, 1\}, \{ 1,1,2 \}, \{ 1,2,2 \}, \dots, \{ 6,6,6 \} \}
->\end{align}$$
->, wobei die innere Menge eine **Multimenge** ist (Definition 1.3). Da Mengen (auch Multimengen) keine Reihenfolge besitzen und wir uns überlegen müssen wieviele Elemente in der Elementarereignismenge $\Omega$ vorhanden sind, verwenden wir unsere kombinatorischen Fertigkeiten. 
+>[!example] Aufgabe (1a)
+>Aus einer Sendung von 12 Glühbirnen, von denen 4 defekt sind, werden zufällig zwei ausgewählt. Wie groß ist die Wahrscheinlichkeit, dass...
+>>[!note] Wissen:  3.2 Klassische Definition der Wahrscheinlichkeit
 >
-> Die suchen daher wie wir 3 aus 6 mit Wiederholung wählen können, was die **Kombination mit Wiederholung** ist (Definition 1.18). Wir haben also
-> $$\begin{align}
-> ^wC_{n}^k &= \binom{n+k-1}{k} \\
-> ^wC_{6}^3 &= \binom{6+3-1}{3} \\
->     &= \frac{8!}{3!(8-3)!} \\
->     &= 56
->\end{align}$$
->Laut Definition 3.6 hat jedes einzelne Elementarereignis $\omega_{i}$ nun die Wahrscheinlichkeit
->$$P(\omega_{i}) = \frac{1}{56}$$
->Wir lösen nun die Teilaufgaben mithilfe von Definition 3.7
->1. "Wir würfeln genau eine 6" beschreibt die Ereignismenge $A_{1}$ <br> 
->Hier haben wir in der Ereignismenge alle Ereignisse $A_1$, in der wir genau eine 6 finden. Da die Reihenfolge keine Rolle spielt, suchen wir lediglich alle Kombinationen der anderen zwei Würfel. Daher können wir die 6 als gegeben voraussetzen und suchen für die anderen Würfel die Kombinationen ohne 6. Wir formulieren die Kombination mit Wiederholung 2 aus 5 (ohne die 6), also
->$$\begin{align}
->\lvert A_{1} \rvert &= \,^wC_{n}^k \\
->     &= C_{6}^2 \\
->     &= \binom{5+2-1}{2} \\
->     &= \frac{6!}{2!(6-2)!} \\
->     &= 15
->\end{align}$$
->Nach gegebener Definition errechnet sich die Wahrscheinlichkeit für $P(A_{1})$ nun wie folgt
->$$\begin{align}
-> P(A_{1}) &= \frac{\lvert A_{1} \rvert }{\lvert \Omega \rvert }   \\
->      &= \frac{15}{56} \\
->      &\approx 0.268
->\end{align}$$
->> Bemerkung: Wir verwenden hier die Kardinalität $\lvert \cdot \rvert$ der Menge $A_{1}$, also wir Zählen alle Elemente in der Menge. In Definition 3.7 haben wir $$\begin{align}
->> \lvert A \rvert &= n  \\
->> \lvert \Omega \rvert &= m  
+>>[!note]- Vorbereitung und Überlegungen
+>>Die Elementarereignisse lassen sich als $0$ - defekt, $1$ - funktionstüchtig darstellen. Wir bemerken, dass die Glühbirnen unterscheidbar sind, daher indizieren wir die defekten und funktionstüchtigen Glühbirnen
+>> $$\begin{alignat}{2}
+>> \{ \omega_{k} \} &= \{ 0_{i},0_{j} \} \qquad &&\text{mit } 1 \leq i <j\leq 4 \tag{beide defekt}\\
+>> \{ \omega_{m} \} &= \{ 0_{i}, 1_{j} \} \qquad &&\text{mit } 1 \leq i \leq 4 \text{ und } 1 \leq j \leq 8 \tag{genau eine defekt}\\
+>> \{ \omega_{n} \} &= \{ 1_{i}, 1_{j} \} &&\text{mit } 1 \leq i < j \leq 8 \tag{keine defekt}
+>>\end{alignat}$$
+>>Die folgenden Aufgaben lassen sich mit **Definition 3.6 und 3.7** lösen, daher müssen wir zählen wieviele Elementarereignisse die beschriebene Charakteristik erfüllen. In den Beschreibungen sind die möglichen Belegungen für die Indizes $k,m,n$ im Moment noch unbekannt.
+>>
+>>Wir können allerdings schon jetzt berechnen wieviele Elementareignisse sich in $\Omega$ insgesamt befinden. Dies lässt sich charakterisieren als _"Wieviele Möglichkeiten gibt es 2 aus 12 Glühbirnen zu wählen"_. Dies lässt sich berechnen als
+>>$$\begin{align}
+>> \lvert \Omega \rvert &=C_{12}^2 \\
+>>       &= \binom{12}{2}  \\
+>>       &= \frac{12!}{2!10!} \\
+>>       &= 66
 >>\end{align}$$
-> 1. "Wir würfeln mindestens eine 6" beschreibt die Ereignismenge $A_2$ <br>
-> Wir stehen nun vor derselben Aufgabe die Elemente der Ereignismenge $A_2$ zu zählen. Da wir in jedem Fall eine 6 haben, interessieren uns wieder nur die anderen 2 Würfel und wir einigen uns darauf, einen Würfel mit einer 6 zu fixieren. Jetzt können wir für die 2 verbleibenden würfel alle beliebigen Kombinationen angeben, also wir wählen 2 aus 6 mit Wiederholung
-> $$\begin{align}
-> \lvert A_{2} \rvert &= \;^wC^k_{n}  \\
->        &= \,^wC^2_{6} \\
->        &= \binom{6+2-1}{2} \\
->     &= \frac{7!}{2!(7-2)!} \\
->     &= 21
->\end{align}$$
-> Wie in der Aufgabe zuvor können wir jetzt die Wahrscheinlichkeit berechnen
-> $$\begin{align}
-> P(A_{2}) &= \frac{\lvert A_{2} \rvert}{\lvert \Omega \rvert } \\
->      &= \frac{21}{56}\\
->     &=0.375
->\end{align}$$
-
-#### Aufgabe (1b)
-> WIe in der Aufgabe zuvor sind wir mit dem Zählen der Elementarereignismenge $\Omega$ und der Ereignismenge $A$ konfrontiert. 
-> ###### Elementarereignismenge
-> Da die letzten 3 Ziffern in einer Ordnung stehen und wir aus 10 verschiedenen anordnen können, handelt es sich hierbei eine Variation. Weiterhin wissen wir, dass die Ziffern unterschiedlich sind, deshalb kann es hier keine Wiederholungen geben. Wir erhalten daher
-> $$\begin{align}
-> \lvert \Omega \rvert &= \frac{n!}{(n-k)!} & \\
->       &= \frac{10!}{7!} = 720
->\end{align}$$
-> Da nur eine Telefonnummer die richtige ist, ist für die Ereignismenge die Anzahl gegeben als
-> $$\lvert A \rvert = 1 $$
-> Wir erhalten die Wahrscheinlichkeit
-> $$\begin{align}
-> P(A) &= \frac{\lvert A \rvert}{\lvert \Omega \rvert }  \\
-> &= \frac{1}{720} \\
-> &\approx 0.0014
->\end{align}$$
-
-#### Aufgabe (1c)
-> Die Anzahl der Elementarereignisse lässt sich hier leicht bestimmen, da wir genau eine Karte von 52 ziehen, also haben wir genau 52 verschiedene Elementarereignisse
-> $$\lvert \Omega \rvert = 52 $$
-> Wir beschreiben ab jetzt alle Ereignismengen mit $A_i$
-> 1. "Die gezogene Karte ist eine Karokarte" beschreibt $A_1$ <br>
-> Wir haben genau $$\lvert A_{1} \rvert = \frac{52}{4} = 13$$ Karokarten, also können wir die Wahrscheinlichkeit angeben
-> $$\begin{align}
-> P(A_{1}) &= \frac{13}{52}  \\
-> &= 0.25
->\end{align}$$
->2. "Die gezogene Karte ist Bube, Dame oder König" beschreibt $A_2$ <br>
->Wir haben für jede der 4 Farben für jede dieser 3 Karten, daher können wir die Anzahl der Elementarereignisse angeben als
->$$\lvert A_{2} \rvert  = 12$$
->und die Wahrscheinlichkeit
->$$\begin{align}
-> P(A_{2}) &= \frac{12}{52}  \\
-> &\approx 0.231
-\end{align}$$
->3. "Die gezogene Karte ist eine Karokarte mit Bild (Bube, Dame, König)" beschreibt $A_{3}$ <br>
->Es gibt unter den gegebenen Bedingungen genau 3 Karten, also
->$$\lvert A_{3} \rvert = 3 $$
->Also geben wir die Wahrscheinlichkeit an als
->$$\begin{align}
-> P(A_{3}) &= \frac{3}{52} \\
->      &\approx 0.058
->\end{align}$$
-
-### Unabhängigkeit zufälliger Ereignisse
-#### Aufgabe (2)
-
-> Um festzustellen, ob Ereignisse unabhängig sind, verwenden wir Definition 3.23 und 3.24. Um diese ordentlich zu verwenden ist es notwendig, dass wir die entsprechenden Mengen konstruieren, die wir auf Unabhängigkeit prüfen wollen. Unser Experiment wurd durch den Wurf einer idealen Münze beschrieben. Daher kodieren wir
-> $$\begin{align}
-> K &\;\widehat{=} \text{ Kopf} \\
-> Z &\; \widehat{=} \text{ Zahl}
->\end{align}$$
->Wir bemerken zuvor, dass $$\begin{align}
-> \lvert \Omega \rvert&=P_{3}\\ &= 2^3 =8
->\end{align}$$
-> 1. $A$-“gleiche Seiten bei den beiden letzten Würfen.“
-> $$A = \{ (K,K,K), (Z,K,K), (K,Z,Z), (Z,Z,Z) \}$$
-> 2. $B$-“gleiche Seiten beim 1. und 3. Wurf“
-> $$B= \{ (K,Z,K), (K,K,K), (Z,K,Z), (Z,Z,Z) \}$$
-> 3. $C$-“gleiche Seiten bei den ersten beiden Würfen“
-> $$C= \{ (K,K,Z), (K,K,K), (Z,Z,K), (Z,Z,Z) \}$$
-> Nun können wir die Definition 3.19 anwenden
-> ######
-> 1. Teilaufgabe: Paarweise Lineare Unabhängigkeit (Definition 3.23)
-> $$\begin{align}
-> P(A \cap B) &= P\Big(\{ (K,K,K), (Z,Z,Z) \}\Big) \\
-> &= \frac{2}{8} \\
-> &= 0.25 \\
-> P(A)P(B) &= \frac{4}{8} \cdot \frac{4}{8} \\
-> &=0.25 \\
-> &\Rightarrow A \text{ und } B\text{ Linear Unabhängig} \\
-> P(A \cap C) &= P\Big(\{ (K,K,K), (Z,Z,Z) \}\Big) \\ 
-> &=\frac{2}{8} \\
-> &= 0.25 \\
-> P(A)P(C) &= 0.25 \\
-> &\Rightarrow A \text{ und } C\text{  Unabhängig} \\ 
-> P(A \cap C) &= P\Big(\{ (K,K,K), (Z,Z,Z) \}\Big) \\ 
-> &=\frac{2}{8} \\
-> &= 0.25 \\
-> P(A)P(C) &= 0.25 \\
-> &\Rightarrow B \text{ und } C\text{ Unabhängig} \\
->\end{align}$$
->Demzufolge sind $A,B,C$ paarweise unabhängig
->2. Teilaufgabe:  Vollständige Unabhängigkeit
->Da wir für $i=2$ in der paarweise Unabhängigkeit alle Varianten schon geprüft haben, folgt nun die Unabhängigkeit über alle Mengen
->$$\begin{align}
-> P\left( \bigcap_{k=1}^m A_{k} \right) &= P\Big(\{ (K,K,K), (Z,Z,Z) \}\Big) \\
-> &= 0.25 \\
->\prod_{k=1}^m P(A_{k}) &= \left( \frac{1}{2} \right)^3 \\
->            &= 0.125
->\end{align}$$
->Demzufolge sind $A,B,C$ **in ihrer Gesamtheit nicht unbhängig**
-
-### Bedingte Wahrscheinlichkeit
-#### Aufgabe (3)
-> In dieser Aufgabe werden wir die Erkenntnisse zu bedingter Wahrscheinlichkeit benötigen. Wir strukturieren zunächst die Informationen, die uns in der Aufgabe zur Verfügung stehen.
-> Wir formulieren folgende Szenarien
-> - Eine Person wird zufällig gewählt, handelt es sich dabei um einen Mann oder eine Frau?
-> => Ereignis $F$ kennzeichnet es ist **eine Frau**
-> => Ereignis $\lnot F$ kennzeichnet es ist **ein Mann**
-> - Eine Person wird zufällig gewählt, ist die Person farbenblind?
-> => Ereignis $B$ kennzeichnet die Person ist **farbenblind**
-> => Ereignis $\lnot B$ kennzeichnet die Person ist **nicht farbenblind**
+>>Dies ist $m=66$ für **Definition 3.6**, und wir können die Indizes für $k,m,n$ einschränken mit
+>>$$1 \leq k,m,n \leq 66$$
 >
->Wir haben folgende Wahrscheinlichkeiten gegeben:
->$$\begin{align}
-> P(F) &= 0.5 \\
-> P(M) &= 0.5\\
-> P(B\;|\;F) &= \frac{2}{1000}  \\
->    &= 0.002 \\
-> P(B\;|\;M) &= \frac{5}{100} \\
-> &= 0.05
->\end{align}$$
-> Es ist gefragt unter der Bedingung, dass eine Person farbenblind ist, wie hoch ist die Wahrscheinlichkeit, dass diese ein Mann ist. Wir können dies mathematisch wie folgt darstellen
-> $$P(M\;|\;B)$$
-> Was uns fehlt, um die Aufgabe zu lösen ist die Wahrscheinlichkeit $P(B)$. Diese erhalten wir, indem wir den **Satz von der Totalen Wahrscheinlichkeit (3.28)** anwenden.
-> $$\begin{align}
-> P(B) &= \sum_{i=1}^n P(B\;|\;A_{i})P(A_{i}) \\
-> P(B) &=P(B\;|\;F)\cdot P(F) + P(B\;|\;M) \cdot P(M) \\
->      &= 0.002 \cdot 0.5 + 0.05 \cdot 0.5 \\
->      &= 0.026
->\end{align}$$
-> Jetzt können wir lösen, indem wir uns Satz 3.16 bedienen, der sagt
-> $$\begin{align}
->P(A\;|\;B) &=\frac{P(A)}{P(B)}P(B\;|\;A)
->\end{align}$$
->Wir setzen entsprechend ein und erhalten
->$$\begin{align}
->P(M\;|\;B) &=\frac{P(M)}{P(B)}P(B\;|\;M) \\
->   &= \frac{0.5}{0.026} \cdot 0.05 \\
-> &= 0.962
->\end{align}$$
+>1. ...beide defekt sind?
+>
+>>[!example]- Lösung
+>> Wir definieren das Ereignis _"beide Glühbirnen sind defekt"_ mit
+>> $$A = \{ \omega_{k} \; | \ \omega_{k}  = \{ 0_{i},0_{j} \} \; \text{mit } 1 \leq i <j\leq 4 \}$$
+>> Wir berechnen _"2 aus 4 zu wählen"_, also
+>> $$\begin{align}
+>> \lvert A \rvert &=  C_{4}^2  \\
+>>  &= \binom{4}{2} \\
+>>  &= \frac{4!}{2!2!} \\
+>>  &= 6
+>>\end{align}$$
+>>Die Wahrscheinlichkeit lässt sich nach **Definition 3.7** mit $n=6$ angeben als 
+>>$$\begin{align}
+>> P(A) &= nP(\omega_{i})  \\
+>>      &= \frac{6}{66} \\
+>>      &= \frac{1}{11} \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>>>[!note] Bemerkung
+>>> Genau genommen wählen wir auch 0 von den 8 Defekten, was ergibt
+>>> $$C_{8}^0 = \binom{8}{0}= \frac{8!}{0!8!}=1$$
+>>> Dies beinflusst die Auswahl jedoch nicht.
+>
+>2. ...beide funktionsfähig sind?
+>
+>>[!example]- Lösung
+>> Wir definieren das Ereignis _"beide Glühbirnen sind funktionfähig"_ mit
+>> $$C = \{\omega_{n} \;| \; \omega_{n} \} = \{ 1_{i}, 1_{j} \}  \text{ mit } 1 \leq i < j \leq 8\}$$
+>> Wir berechnen _"2 aus 8 zu wählen"_
+>> $$\begin{align}
+>> \lvert B \rvert &=  C_{8}^2  \\
+>>  &= \binom{8}{2} \\
+>>  &= \frac{8!}{2!6!}  \\
+>>  &= 28
+>>\end{align}$$
+>>Die Wahrscheinlichkeit lässt sich nach **Definition 3.7** mit $n=28$ angeben als 
+>>$$\begin{align}
+>> P(C) &= nP(\omega_{i})  \\
+>>      &= \frac{28}{66} \\
+>>      &= \frac{14}{33} \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>3. ...mindestens eine defekt ist?
+>
+>>[!example]- Lösung
+>> Es gibt für diese, wie auch für jede andere, mehrere Möglichkeiten eine Lösung zu finden. Folgen wir hier das bisherige Muster, berechnen wir die Möglichkeiten für
+>> - genau eine defekt
+>> - genau beide defekt
+>>
+>>was das Ereignis _"mindestens eine ist defekt"_ umfasst.
+>>
+>>Wir ändern für diese Aufgabe unsere Strategie und beschreiben das Komplementärereignis
+>>$$\underbrace{ \text{mindestens eine defekt} }_{ =C } = \underbrace{ \overline{\text{keine defekt}} }_{ =\overline{C} }$$
+>>Wir können kontrollieren ob unsere Überlegung korrekt ist, indem wir prüfen
+>>$$C \cup \overline{C} = \Omega \tag{Übung}$$
+>>Wir verwenden **Definition 3.2 Folgerung (2)**
+>>$$P(C) = 1 - P(\overline{C})$$
+>>Dafür benötigen wir $P(\overline{C})$. Wir geben das Ereignis $\overline{C}$ an als
+>>$$\overline{C} = \{ \omega_{n} \; | \; \omega_{n}  = \{ 1_{i}, 1_{j} \} \text{ mit } 1 \leq i < j \leq 4\}$$
+>>wie zuvor zählen wir alle Möglichkeiten _"2 aus 8 zu wählen"_, also
+>>$$\begin{align}
+>>  \lvert \overline{C} \rvert &= C_{4}^2  \\
+>> &= \binom{8}{2} \\
+>> &= \frac{8!}{2!6!} \\
+>> &=  28
+>>\end{align}$$
+>>Daher haben wir nach **Definition 3.7** mit $n=6$
+>> $$\begin{align}
+>> P(\overline{C})&=nP(\omega_{i}) \\
+>> &=\frac{28}{66} \\
+>>      &= \frac{14}{33}
+>>\end{align}$$
+>>Wir erhalten demnach
+>>$$\begin{align}
+>> P(C) &= 1 - P(\overline{C}) \\
+>>  &= 1 - \frac{14}{33} \\
+>>  &= \frac{19}{33} \tag*{$\blacktriangleleft$} 
+>>\end{align}$$
 
 
-#### Aufgabe (4)
-> Wir verfahren wie in der Aufgabe zuvor und strukturieren zunächst das gegebene Wissen. Wir bezeichnen
-> - $T$ - ist ein Treffer
-> - $\lnot T$ -  Ist kein Treffer
-> - $G_{i}$ - wählt Gewehr $i$ aus
-Wir halten folgende Wahrscheinlichkeiten fest
-> $$\begin{align}
-> P(T\;|\;G_{1})&= 0.5 \\
-> P(T\;|\;G_{2})&= 0.6 \\
-> P(T\;|\;G_{3})&= 0.7 \\
-> P(T\;|\;G_{4})&= 0.8 \\
-> P(T\;|\;G_{5})&= 0.9 \\
-> P(G_{i}) &= \frac{1}{5} =0.2 \qquad 1\leq i \leq 5
->\end{align}$$
-> 1. Teilaufgabe: <br>
->  Wir suchen $$P(T)$$
->  Schauen wir die gegebenen Größen an lässt sich die Aufgabe mit dem **Satz von der Totalen Wahrscheinlichkeit (3.28)** lösen, also
->  $$\begin{align}
-> P(T) &= \sum_{i=1}^5 P(T\;|\;G_{1}) \cdot P(G_{1}) \\
->  &=0.5 \cdot 0.2 + 0.6 \cdot 0.2 + 0.7 \cdot 0.2 + 0.8 \cdot 0.2 +  0.9 \cdot 0.2 \\
-> &= 0.2 \cdot (0.5 + 0.6 + 0.7 + 0.8 + 0.9) \\
-> &= 0.7
->\end{align}$$
->2. Teilaufgabe: <br>
->Wir suchen
->$$P(G_{5}\;|\;T)$$
->Dazu können wir Satz 3.16 verwenden und erhalten
->$$\begin{align}
-> P(G_{5}\;|\;T)&= \frac{P(G_{5})}{P(T)} \cdot P(T\;|\;G_{5})\\
-> &= \frac{0.2}{0.7}\cdot 0.9 \\
-> &\approx 0.257
->\end{align}$$
+>[!example] Aufgabe (1b)
+>6 Ehepaare sind in einem Raum. Es werden 2 Personen zufällig ausgewählt.
+>>[!note] Wissen: 3.2 Klassische Definition der Wahrscheinlichkeit
+>
+>>[!note]- Vorbereitung und Überlegungen
+>>Wir können die Situation formal festhalten als
+>>$$\{ \{ M_{i},F_{i} \}\; | \; 1\leq i\leq 6 \}$$
+>>wobei $M_{i}$ ein Mann und $F_{i}$ eine Frau sind, und bei gleichem $i$ handelt es sich um ein Ehepaar. Die Elementarereignisse können wir formalisieren mit
+>>$$\begin{align}
+>> \{ \omega_{k} \} &= \{ M_{i}, M_{j} \; | \; 1 \leq i < j \leq 6 \} \tag{2 Männer} \\
+>> \{ \omega_{n} \} &= \{ M_{i}, F_{j} \; | 1 \leq i,j \leq 6 \} \tag{1 Mann, 1 Frau} \\
+>> \{ \omega _{m} \} &= \{ F_{i}, F_{j} \; | \; 1 \leq i < j \leq 6 \} \tag{2 Frauen}
+>>\end{align}$$
+>>Wir halten fest wieviele Möglichkeiten es gibt 2 aus den 12 Personen zu wählen mit 
+>>$$\begin{align}
+>> \lvert \Omega \rvert &= C_{12}^2   \\
+>> &= \binom{12}{2} \\
+>> &= \frac{12!}{2!10!} \\
+>> &= 66
+>>\end{align}$$
+>>Dies ist $m=66$ für **Definition 3.6**, und wir können die Indizes für $k,m,n$ einschränken mit
+>>$$1 \leq k,m,n \leq 66$$
+>
+>1. Wie groß ist die Wahrscheinlichkeit dafür, dass sie verheiratet sind?
+>
+>>[!example]- Lösung
+>>Wir suchen alle Paare mit
+>>$$\{ M_{i}, F_{j} \}$$
+>>mit der Eigenschaft $i = j$. Wir definieren das Ereignis
+>>$$A = \{ M_{i}, F_{i} \; | \; 1 \leq i = j \leq 6 \}$$
+>>Informell wissen wir, dass es genau 6 Paare gibt ($i=j$), daher gibt es genau 6 Möglichkeiten, dass ein Ehepaar gezogen werden kann. Also haben wir mit $n=6$
+>>$$\begin{align}
+>> P(A) &= nP(\omega_{i})  \\
+>>      &= \frac{6}{66} \\
+>>      &= \frac{1}{11} \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>2. Wie groß ist die Wahrscheinlichkeit dafür, dass sie gleichen Geschlechts sind?
+>
+>>[!example]- Lösung
+>>Wir definieren das Ereignis
+>>$$B = \{ X_{i}, X_{j} \; | \; X \in \{ F, M \}, \; 1\leq i,j\leq 6 \}$$
+>>Wir wollen nun zählen wieviele Möglichkeiten es gibt, so zu ziehen, dass beide Personen gleichen Geschlechts sind. Zunächst können wir _"2 aus 6 zu wählen"_ für die Männer und _"2 aus 6 zu wählen$_ für die Frauen berechnen
+>>$$\begin{align}
+>> ^{C,F}C_{6}^2 &= \binom{6}{2} \\
+>>       &= \frac{6!}{2!4!} \\
+>>       &= 15
+>>\end{align}$$
+>>Da wir sowohl 2 Frauen als auch 2 Männer ziehen können, beziehungsweise die Kombination **vereinen** wollen, verwenden wir das **Additionsprinzip** und erhalten
+>>$$n = 15 + 15 = 30$$
+>> Damit erhalten wir
+>> $$\begin{align}
+>> P(B) &= nP(\omega_{i})  \\
+>>      &= \frac{30}{66} \\
+>>      &= \frac{5}{11} \tag*{$\blacktriangleleft$}
+>>\end{align}$$
 
-#### Aufgabe (5)
-> Wir folgen derselben Prozedur wie in den 2 vorangegangenen Aufgaben und kennzeichnen
-> - $E$ - Tuberkulose wird erkannt
-> - $\lnot E$ - Tuberkulose wird nicht erkannt
-> - $K$ - ist an Tuberkulose erkrankt
-> - $\lnot K$ - ist nicht an Tuberkulose erkrankt
-> 
-> Wir fassen die gegebenen Wahrscheinlichkeiten zusammen
-> $$\begin{align}
-> P(E\;|\;K) &= 0.9 \\
-> P(E\;|\;\lnot K) &= 0.01  \\
-> P(K) &= 0.001 \\
-> P(\lnot K) &= 0.999
->\end{align}$$
->Gesucht wird
->$$\begin{align}
-> P(K\;|\;E) 
->\end{align}$$
->Um die gesuchte Größe mit **Satz 3.16** zu finden, benötigen wir $P(E)$. Dies können wir mit dem **Satz von der Totalen Wahrscheinlichkeit (3.28)** finden, also
->$$\begin{align}
-> P(E) &= P(E\;|\;K) P(K) + P(E\;|\;\lnot K)P(\lnot K) \\
-> &= 0.9 \cdot 0.001 + 0.01 \cdot 0.999 \\
-> &= 0.01089
->\end{align}$$
->Letztlich lösen wir mit **Satz 3.16**, also
->$$\begin{align}
-> P(K\;|\;E) &= \frac{P(K)}{P(E)} \cdot P(E\;|\;K) \\
-> &= \frac{0.001}{0.01089} \cdot 0.9 \\
-> &= 0.0826
->\end{align}$$
+>[!example] Aufgabe (2)
+>In einer Klasse sind 5% der Schüler und 4% der Schülerinnen älter als 17 Jahre. 40% der Schüler sind weiblich. Mit welcher Wahrscheinlichkeit ist eine zufällig ausgewählte Person weiblich, wenn sie älter als 17 Jahre ist?
+>>[!note] Wissen: 3.5 Definition der bedingten Wahrscheinlichkeit
+>
+>>[!example]- Lösung
+>>Zunächst einigen wir uns auf eine Symbolik
+>>- $A$ - älter
+>>- $\overline{A}$ - nicht älter
+>>- $W$ - weiblich
+>>- $\overline{W}$ -  nicht weiblich
+>>
+>>Wir sammeln nun die gegebenen Informationen aus der Aufgabe
+>>$$\begin{align}
+>> P(A\;|\; \overline{W}) &= \frac{5}{100} = \frac{1}{20} \\
+>> P(A\;|\;W) &= \frac{4}{100} = \frac{1}{25} \\
+>> P(W) &= \frac{4}{100} = \frac{2}{5} \\
+>> P(\overline{W}) &= \frac{3}{5}
+>>\end{align}$$
+>>Wir suchen **eine Person ist weiblich unter der Bedingung, dass sie älter als 17 ist**, also
+>>$$P(W\;|\;A)$$
+>>Wir verwenden **Satz 3.16**, welcher analog zum **Satz von Bayes** unter **Satz 3.29** ist.
+>>>[!note]- Wir haben ein vollständiges System an Ereignissen
+>>>![[figures/Pasted image 20240329181952.png|center]]
+>>>Wir können dies mathematisch prüfen mit **Definition 3.27**
+>>>$$\begin{align}
+>>> W \cup \overline{W} &= \Omega \\ \\
+>>> W \cap \overline{W} &= \emptyset
+>>>\end{align}$$
+>>$$\begin{align}
+>> P(W\;|\;A) &= \frac{P(A\;|\;W)P(W)}{P(A)} \tag{1}
+>>\end{align}$$
+>>Um Gleichung $(1)$ lösen zu können, fehlt uns die Größe $P(A)$. Diese können wir über den **Satz der totalen Wahrscheinlichkeit (Satz 3.28)** erhalten.
+>>$$\begin{align}
+>> P(A) &= P(A\;|\overline{W}\;)P(\overline{W}) + P(A\;|\;W)P(W) \\
+>>      &= \frac{1}{25}\cdot \frac{2}{5} + \frac{1}{20}\cdot \frac{3}{5} \\
+>>      &= \frac{23}{500}
+>>\end{align}$$
+>>Das Ergebnis können wir nun für Gleichung $(1)$ verwenden und erhalten
+>>$$\begin{align}
+>> P(W\;|\;A) &= \frac{\frac{1}{25} \cdot \frac{2}{5}}{\frac{23}{500}} \\
+>>    &= \frac{8}{23} \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>>
+
+
+>[!example] Aufgabe (3)
+>In einer Schule gehören $\frac{2}{3}$ der Schüler zur Sekundarstufe I und $\frac{1}{3}$ der Schüler zur Sekundarstufe II. 20% der Schüler der Stufe I und 30% der Schüler der Stufe II kommen mit dem Bus zur Schule.
+>>[!note] Wissen: 3.5 Definition der bedingten Wahrscheinlichkeit
+>
+>>[!note]- Vorbereitung und Überlegung
+>>Zunächst einigen wir uns wieder auf eine Symbolik. Ein Schüler...
+>>- $S_1$ - gehört zu Sekundarstufe 1
+>>- $\overline{S_{1}}$ - gehört nicht zu Sekundarstufe 1 (gehört zu Sekundarstufe 2)
+>>- $B$ - fährt mit dem Bus
+>>- $\overline{B}$ -  fährt nicht mit dem Bus
+>>
+>>Wir fassen die gegebenen Informationen wie folgt zusammen
+>>$$\begin{align}
+>> P(S_{1}) &= \frac{2}{3} \\ 
+>> P(\overline{S_{1}}) &= \frac{1}{3} \\
+>> P(B\;|\;S_{1})&= \frac{1}{5} \\
+>> P(B\;|\; \overline{S_{1}}) &= \frac{3}{10}
+>>\end{align}$$
+>>>[!note]- Wir haben ein vollständiges System an Ereignissen
+>>>![[figures/Pasted image 20240329181952.png|center]]
+>>>Wir können dies mathematisch prüfen mit **Definition 3.27**
+>>>$$\begin{align}
+>>> S_{1} \cup \overline{S_{1}} &= \Omega \\ \\
+>>> S_{1} \cap \overline{S_{1}} &= \emptyset
+>>>\end{align}$$
+>1. Berechnen Sie den Anteil der Schüler dieser Schule, die mit dem Bus zur Schule kommt.
+>
+>>[!example]- Lösung
+>>Gesucht ist die Wahrscheinlichkeit
+>>$$P(B)$$
+>> Dies lässt sich mit dem **Satz der totalen Wahrscheinlichkeit (Satz 3.28)** lösen. Wir erhalten die Formel
+>> $$\begin{align}
+>> P(B) &= P(B\;|\;S_{1})P(S_{1}) + P(B\;|\;\overline{S_{1}})P(\overline{S_{1}}) \\
+>>      &= \frac{1}{5} \cdot \frac{2}{3} + \frac{3}{10} \cdot \frac{1}{3} \\
+>>      &= \frac{7}{30} \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>2. Ein Schüler, der mit dem Bus zur Schule kommt, wird zufällig ausgewählt. Mit welcher Wahrscheinlichkeit ist er ein Schüler der Sekundarstufe I?
+>
+>>[!example]- Lösung
+>>Gesucht ist die Wahrscheinlichkeit 
+>>$$P(S_{1}\;|\;B)$$
+>>Wir verwenden dazu **Satz 3.16** mit dem Ergebnis aus Teilaufgabe 1 $P(B)=\frac{7}{30}$ und erhalten
+>>$$\begin{align}
+>> P(S_{1}\;|\;B) &= \frac{P(S_{1})}{P(B)}P(B\;|\;\overline{S_{1}}) \\
+>>   &= \frac{\frac{2}{3}}{\frac{7}{30}}\cdot \frac{3}{10} \\
+>>   &=\frac{4}{7} \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+
+>[!example] Aufgabe (4)
+>$\frac{7}{10}$ der Studenten bestehen die Prüfung in Mathematik 1 und $\frac{8}{10}$ der Studenten bestehen die Prüfung in Mathematik 3. Die Wahrscheinlichkeit für das Bestehen beider Klausuren liegt bei $0.6$.
+>>[!note]- Wissen
+>> - (Basis) Mengenlehre
+>> - 3.1 Axiomatische Definition der Wahrscheinlichkeit
+>> - 3.6 Unabhängigkeit zufälliger Ereignisse
+>
+>>[!note]- Vorbereitung und Überlegung
+>>Zunächst einigen wir uns wieder auf eine Symbolik
+>>- $M_{1}$ - Student besteht Prüfung Mathematik 1
+>>- $\overline{M_{1}}$ - Student besteht Prüfung Mathematik 1 nicht
+>>- $M_{3}$ - Student besteht Prüfung Mathematik 3
+>>- $\overline{M_{3}}$ - Student besteht Prüfung Mathematik 3 nicht
+>>
+>>und führen die gegebenen Informationen auf
+>>$$\begin{align}
+>> P(M_{1}) &= \frac{7}{10} \\
+>> P(\overline{M_{1}}) &= \frac{3}{10} \\
+>> P(M_{3}) &= \frac{8}{10} = \frac{4}{5}\\
+>> P(\overline{M_{3}}) &= \frac{2}{10} = \frac{1}{5} \\
+>> P(M_{1} \cap M_{3}) &= \frac{6}{10}= \frac{3}{5}
+>>\end{align}$$
+>
+>1. Sind die Ereignisse "Studierende bestehen die Prüfung in Mathematik 1" und "Studierende bestehen die Prüfung in Mathematik 3" stochastisch unabhängig?
+>
+>>[!example]- Lösung
+>>Wir lösen die Aufgabe mit **Definition 3.19**, sofern die Ereignisse stochastisch unabhängig sind, muss gelten
+>>$$P(M_{1} \cap M_{3}) = P(M_{1})P(M_{3})$$ 
+>>wir müssen lediglich noch die gegebenen Größen einsetzen und prüfen
+>>$$\begin{align}
+>> \frac{3}{5} &\neq \frac{7}{10} \cdot \frac{4}{5} \\
+>>   &\neq \frac{14}{25}
+>>\end{align}$$
+>>Daher sind die Ereignisse **stochastisch abhängig**.
+>>$$\tag*{$\blacktriangleleft$}$$
+>
+>2. Wie ist die Wahrscheinlichkeit in der Prüfung Mathematik 3 durchzufallen, wenn Mathematik 1 bestanden wurde?
+>
+>>[!example]- Lösung
+>> In dieser Aufgabe ist folgender Term gesucht
+>> $$P(\overline{M_{3}}\; | \; M_{1})$$
+>> Wir verwenden dazu **Definition 3.15** und verwenden dazu die gegebenen Größen
+>> $$P(B\;|\;A) = \frac{P(A \cap B)}{P(A)}\quad \Longleftrightarrow \quad P(M_{3}\;|\;M_{1}) = \frac{P(M_{3} \cap M_{1})}{P(M_{1})}$$
+>> Wir berechnen
+>> $$\begin{align}
+>> P(M_{3}\;|\;M_{1}) &= \frac{\frac{6}{10}}{\frac{7}{10}} \\
+>>  &= \frac{6}{7}
+>>\end{align}$$
+>>>[!note]- Bemerkung zum Komplement einer bedingten Wahrscheinlichkeit
+>>> Wie können wir das Komplement in der bedingten Wahrscheinlichkeit erklären? 
+>>> 
+>>> Wir haben gegenwärtig einen Elementarereignisraum, der wie folgt aussieht
+>>> $$\Omega = \{ M_{1}, \overline{M_{1}}, M_{3}, \overline{M_{3}} \}$$
+>>> Wenn wir uns die bedingte Wahrscheinlichkeit ansehen, dann gehen wir davon aus, dass wir ein geordnetes, zweistelliges Ereignis haben, also sehen alle möglichen Ereignisse für eine beliebige bedingte Wahrscheinlichkeit wie folgt aus
+>>> $$\{ (M_{1},M_{3}), (M_{1}, \overline{M_{3}}), (\overline{M_{1}}, M_{3}), (\overline{M_{1}}, \overline{M_{3}}) \}$$
+>>> wobei wir sagen, dass zum Beispiel bei $(M_{1},M_{3})$  das Ereignis $M_1$ vor $M_3$ eingetreten ist. Wenn wir bei einer bedingten Wahrscheinlichkeit die Bedingung beispielsweise mit $M_1$ fixieren (also wir setzen voraus, dass es eingetreten sein muss), verkleinert sich der Elementarereignisraum der zweistelligen Ereignisse demnach auf 
+>>> $$\Omega^B = \{ (M_{1},M_{3}), (M_{1},\overline{M_{3}}) \}$$
+>>> Daher können wir sagen
+>>> $$P(M_{3}\;|\;M_{1}) +P(\overline{M_{3}}\;|\;M_{1}) = 1$$
+>>
+>> Die gesuchte Größe ist die komplementäre Wahrscheinlichkeit von $P(M_{3}\;|\;M_{1})$, also erhalten wir 
+>> $$\begin{align}
+>> P(\overline{M_{3}}\; | \; M_{1}) &= 1 -P(M_{3}\;|\;M_{1}) \\
+>>   &= \frac{1}{7} \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>3. Wie groß ist die Wahrscheinlichkeit, dass eine Prüfung bestanden wird?
+>
+>>[!example]- Lösung 
+>>Dass eine Prüfung bestanden wurde heißt sinngemäß, dass ** mindestens eine Prüfung bestanden wurde**. Wir erwarten also, dass ein Student $s$, der diese Attribute erfüllt, wie folgt charakterisiert werden kann.
+>>$$s \in M_{1} \lor s \in M_{3}$$
+>>Dies entspricht der Definition der Vereinigung von zwei Mengen $M_{1}, M_{2} \subseteq \Omega$, also
+>>$$M_{1} \cup M_{3} := \{ s \in M_{1} \lor s \in M_{3} \; |\; \forall s \in \Omega \}$$
+>>Mengentheoretisch können wir den Sachverhalt wie folgt illustrieren
+>>![[figures/Pasted image 20240331183534.png| center | 400]]
+>>Wir berechnen demnach die Wahrscheinlichkeit, dass beide Ereignisse eintreffen können, also $P(M_{1} \cup M_{3})$.
+>>
+>>Nehmen wir an, dass 
+>>$$P(M_{1} \cup M_{3}) = P(M_{1}) + P(M_{3}) \dots \tag{Unvollständig!}$$
+>>die gesuchte Größe darstellt. Wir bemerken, dass der Schnitt zwischen $M_1$ und $M_3$ doppelt dargestellt wird (rot schraffiert), da er über beide Ereignisse enthalten ist. Daher müssen wir die Wahrscheinlichkeit des Schnitts zwischen den beiden Mengen abziehen, um die Wahrscheinlichkeit der Vereinigung zu erhalten, also
+>>$$P(M_{1} \cup M_{3}) = P(M_{1}) + P(M_{3}) - P(M_{1} \cap M_{3})$$
+>>wir erhalten
+>>$$\begin{align}
+>> P(M_{1} \cup M_{3}) &= \frac{7}{10} + \frac{4}{5} - \frac{3}{5} \\
+>>   &= \frac{9}{10} \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>4. Wie groß ist die Wahrscheinlichkeit, dass keine der beiden Prüfungen bestanden wird?
+>
+>>[!example]- Lösung
+>>Wir wollen nun darstellen, dass ein Student $s$ keine Prüfung bestanden hat. Mengentheoretisch haben wir
+>>$$s \in \overline{M_{1}} \land s \in \overline{M_{3}}$$
+>>Dies entspricht der Definition des Durchschnitts, also für $\overline{M_{1}}, \overline{M_{3}} \subseteq \Omega$
+>>$$\overline{M_{1}} \cap \overline{M_{3}} := \{ s \in \overline{M_{1}} \land s \in \overline{M_{3}} \; | \; s \in \Omega \}$$
+>>Nach den De Morgan'schen Gesetzen haben wir
+>>$$\overline{M_{1}} \cap \overline{M_{3}} = \overline{(M_{1} \cup M_{3})}$$
+>>Daher können wir mathematisch sauber begründen, weshalb wir hier über das Komplementärereignis von Aufgabe 4.3 sprechen. Wir können dies wie folgt illustrieren.
+>>![[figures/Pasted image 20240331185525.png| center | 400]]
+>>Die gelbe Fläche stellt hierbei das gesuchte Ereignis dar, und die blaue Fläche repräsentiert das Ereignis aus Aufgabe 4.3. Daher können wir die gesuchte Wahrscheinlichkeit wie folgt berechnen
+>>$$\begin{align}
+>> P(\overline{M_{1}} \cap \overline{M_{3}}) &= 1 - P(M_{1} \cup M_{3}) \\
+>>  &= 1 - \frac{9}{10} \\
+>>  &= \frac{1}{10} \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+

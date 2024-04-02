@@ -127,6 +127,6 @@
 >>n = 33 (rectangle)
 >>![[Figures/Pasted image 20240324185152.png]]
 >>n = 50 (wave)
->>![[../../Pasted image 20240324185253.png]]
+>>![[Figures/Pasted image 20240324185253.png]]
 >>n = 33 (wave)
->>![[../../Pasted image 20240324185307.png]]
+>>![[Figures/Pasted image 20240324185307.png]]
