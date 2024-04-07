@@ -42,7 +42,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
                 "mode": "source",
                 "source": true
               }
@@ -91,12 +91,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
                 "mode": "preview",
                 "source": true
               }
             },
             "group": "e59e1b40c412b938"
+          },
+          {
+            "id": "22ff275100f151ea",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "PDFs/howell2016.pdf"
+              }
+            }
           },
           {
             "id": "419c54febaea815f",
@@ -161,7 +171,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5
+    "width": 253.5,
+    "collapsed": true
   },
   "right": {
     "id": "93b677ed21c6c6cb",
@@ -177,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -194,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -217,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md"
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md"
               }
             }
           },
@@ -259,10 +270,50 @@
       "marp-slides:Show Slide Preview": false
     }
   },
+  "floating": {
+    "id": "d5db0fd4ca18c945",
+    "type": "floating",
+    "children": [
+      {
+        "id": "2cd398f00c89aca1",
+        "type": "window",
+        "children": [
+          {
+            "id": "8137125b921b5b1e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1c4a2324fd9dbd84",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "PDFs/howell2016.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 960,
+        "width": 1080,
+        "height": 960,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "26b6cb6fb0d06466",
   "lastOpenFiles": [
     "PDFs/howell2016.pdf",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+    "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
+    "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
+    "Pasted image 20240406135610.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "ML Programming/PyTorch/Basics/PyTorch Layers.md",
@@ -292,10 +343,6 @@
     "index.md",
     "References/@apostol1967.md",
     "References/@ben-baruch2021.md",
-    "References/@bishop2006.md",
-    "References/@briggs2019.md",
-    "References/@brogan1991.md",
-    "References/@conci2018.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240329181952.png",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240331183534.png",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240331185525.png",
@@ -305,7 +352,6 @@
     "Own Projects/ODE LVQ/Figures/Pasted image 20240324185307.png",
     "Own Projects/ODE LVQ/Figures/Pasted image 20240324185152.png",
     "Own Projects/ODE LVQ/Figures/Pasted image 20240324185054.png",
-    "Own Projects/ODE LVQ/Figures/Pasted image 20240324175134.png",
     "Untitled.canvas"
   ]
 }

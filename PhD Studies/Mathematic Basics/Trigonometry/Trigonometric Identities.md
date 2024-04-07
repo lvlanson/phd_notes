@@ -45,6 +45,8 @@
 >  \tan^2 x  &= \frac{1 - \cos 2x}{1 + \cos 2x}
 >\end{align*}$$
 
+^82bd09
+
 >[!def] Half Angles
 >$$\begin{align*}
 >  \sin \frac{x}{2}  &= \pm \sqrt{ \frac{1 - \cos x }{2} }\\
