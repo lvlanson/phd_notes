@@ -171,8 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5,
-    "collapsed": true
+    "width": 253.5
   },
   "right": {
     "id": "93b677ed21c6c6cb",
@@ -275,15 +274,15 @@
     "type": "floating",
     "children": [
       {
-        "id": "2cd398f00c89aca1",
+        "id": "7c1777ec409b1d55",
         "type": "window",
         "children": [
           {
-            "id": "8137125b921b5b1e",
+            "id": "7e7f4aafb890eef1",
             "type": "tabs",
             "children": [
               {
-                "id": "1c4a2324fd9dbd84",
+                "id": "775c180c4a182589",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -309,9 +308,9 @@
   "lastOpenFiles": [
     "PDFs/howell2016.pdf",
     "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
-    "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
+    "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
     "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
     "Pasted image 20240406135610.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
