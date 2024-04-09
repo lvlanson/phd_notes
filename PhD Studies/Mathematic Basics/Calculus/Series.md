@@ -1,3 +1,22 @@
+>[!def] Definition Geometric Series ([[../../../PDFs/briggs2019.pdf#page=689|Source]])
+>Let $a,r \in  \mathbb{R}$ with $a \neq 0$. Then the geometric series can be given as
+>$$\sum_{k=0}^\infty ar^k$$
+
+>[!theorem] Theorem Geometric Series Convergence ([[../../../PDFs/briggs2019.pdf#page=689|Source]])
+>Denote $a,r \in  \mathbb{R}$ with $a \neq 0$ and the geometric series
+>$$\sum_{k=0}^\infty ar^k$$
+>then geometric series converges if $\lvert r \rvert < 1$, otherwise if $\lvert r \rvert\geq 1$ diverges.
+
+>[!theorem] Theorem Bounded Partial Sums Test ([[../../../PDFs/howell2016.pdf#page=56|Source]])
+>Let $\sum_{k=M}^\infty c_{k}$ be an infinite series such that, for $B< \infty$ and $\forall N,M \in \mathbb{Z}$ with $N> M$,
+>$$\sum_{k=M}^N \lvert c_{k} \rvert \leq B$$
+>Then $\sum_{k=M}^\infty c_{k}$ converges absolutely and
+>$$\sum_{k=M}^\infty \lvert c_{k} \rvert \leq B$$
+
+^6499f9
+
+## Special Series
+
 >[!def] Definition Power Series ([[../../../PDFs/zotero-182.pdf#page=540| Source 1]], [[../../../PDFs/briggs2019.pdf#page=733| Source 2]], [[../../../PDFs/rudin1976.pdf#page=79| Source 3]])
 >A series of the form
 >$$\sum_{n=0}^\infty c_{n}x^n = c_{0} + c_{1}x + c_{2}x^2+ \dots$$
