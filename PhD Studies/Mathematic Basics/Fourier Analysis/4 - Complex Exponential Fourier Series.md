@@ -1,4 +1,12 @@
->[!remark] Deriving the Exponential Form of the Fourier Series ([[../../../PDFs/howell2016.pdf#page=155|Source]])
+>[!def] Definition Complex Exponential Fourier Series ([[../../../PDFs/howell2016.pdf#page=157|Source]])
+> Let $f$ be a periodic function with period $p$. The _complex exponential Fourier series_ for $f$ denoted by $\mathcal{F}[f]|_{t}$ is the infinite series
+> $$\sum_{k=-\infty}^\infty c_{k}e^{i 2 \pi \omega_{k}t}$$
+> with
+> $$\omega_{k}=\frac{k}{p} \tag{$k=1,2,3,\dots$}$$
+> and
+> $$c_{k}=\frac{1}{p} \int f(t)e^{-i2\pi \omega_{k}t} \, dt $$
+
+>[!remark]- Deriving the Complex Exponential Form of the Fourier Series ([[../../../PDFs/howell2016.pdf#page=155|Source]])
 >Let $f$ be a periodic, piecewise continuous function with period $p$ and the trigonometric Fourier series
 >$$\mathcal{F}[f]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big] \tag{1}$$
 >We use the following identities
@@ -6,7 +14,7 @@
 > \cos(2 \pi \omega_{k}t)  &= \frac{e^{i2\pi \omega_{k}t}+ e^{-i2\pi \omega_{k}t}}{2} \\
 > \sin(2 \pi \omega_{k}t)  &= \frac{e^{i2\pi \omega_{k}t}- e^{-i2\pi \omega_{k}t}}{2i}
 >\end{align}$$
->>[!note]- Deriving the Identities
+>>[!note]- Deriving the Identities ([[../../../PDFs/howell2016.pdf#page=157|Source]])
 >>We use the [[../Complex Analysis/Fundamental Properties|Euler form]] definition of the complex number $\cos \theta + i \sin \theta$ 
 >>$$\begin{alignat}{2}
 >>  e^{i\theta} &= \cos (\theta) + i \sin (\theta) \tag{1}\\
@@ -68,6 +76,13 @@
 >>  &= \sum_{k=-\infty}^\infty c_{k}e^{2i\pi \omega_{k}t}
 >>\end{align}$$
 
+>[!remark] Deriving the Coefficients $c_k$ of the Complex Exponential Form ([[../../../PDFs/howell2016.pdf#page=157|Source]])
+>According to the [[3 - Inner Products, Norms and Orthogonality#^3f9bbe| theorem on orthogonal expansions]], we can define the coefficients of the expansion by using 
+>$\phi_{k} = \,e^{i 2\pi \omega_{k}t}$
+>$$\begin{align}
+> c_{k} &= \frac{\left\langle f\,,\,e^{i 2\pi \omega_{k}t} \right\rangle}{\lvert\lvert e^{i 2\pi \omega_{k}t} \rvert\rvert^2 }  \\
+> &= \frac{1}{p} \int _{0}^p f(t)e^{-i 2\pi \omega_{k}t} \, dt 
+>\end{align}$$
 
 >[!property] Property Inner Product with Exponential Representation  ([[../../../PDFs/howell2016.pdf#page=157|Source]])
 >Let $g$ be any periodic, piecewise continuous function with period $p$ with $n \in \mathbb{Z}$, then
@@ -91,9 +106,3 @@
 >> &= 0 \\
 >>\end{align}$$
 >>where we used for $e^{i2\pi(k-n)}$ the [[../Complex Analysis/Fundamental Properties#^45ef91|special identity]] of Euler's formula.
-
->[!property] Property Orthogonal Function Expansion ([[../../../PDFs/howell2016.pdf#page=157|Source]])
->$$\begin{align}
-> c_{k} &= \frac{\left\langle f\,,\,e^{i 2\pi \omega_{k}t} \right\rangle}{\lvert\lvert e^{i 2\pi \omega_{k}t} \rvert\rvert^2 }  \\
-> &= \frac{1}{p} \int _{0}^p f(t)e^{-i 2\pi \omega_{k}t} \, dt 
->\end{align}$$

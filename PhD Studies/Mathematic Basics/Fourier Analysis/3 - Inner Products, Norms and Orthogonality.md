@@ -138,6 +138,8 @@
 >then, for each $k$,
 >$$c_{k} = \frac{\left\langle f\,,\,\phi_{k} \right\rangle}{\lvert\lvert \phi_{k} \rvert\rvert^2 } $$
 
+^3f9bbe
+
 >[!theorem] Theorem Cauchy-Schwarz Inequality for Inner Products ([[../../../PDFs/howell2016.pdf#page=147|Source]])
 >Let $f$ and $g$ be two piecewise continuous functions on the finite interval $(\alpha, \beta)$. Then
 >$$\lvert \langle f\,,\,g \rangle \rvert \leq \lvert\lvert f \rvert\rvert \; \lvert\lvert g \rvert\rvert $$

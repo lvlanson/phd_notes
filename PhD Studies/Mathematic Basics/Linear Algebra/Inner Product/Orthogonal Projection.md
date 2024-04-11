@@ -4,7 +4,7 @@ aliases:
   - orthogonal projection
   - orthogonal decomposition
 ---
-Let $\mathbf{x}, \mathbf{u} \in H$ denote vectors equipped with an [[Inner Products|inner product]] $\langle . \, , \, . \rangle$.
+Let $\mathbf{x}, \mathbf{u} \in H$ denote vectors equipped with an [[Inner Products|inner product]] $\langle . \, , \, . \rangle$. ^564c77
 
 >[!def] Parallelity
 > Two vectors $\mathbf{x}, \hat{\mathbf{x}} \in H$ are parallel if
