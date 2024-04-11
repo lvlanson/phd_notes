@@ -67,3 +67,33 @@
 >> \mathcal{F}[f]|_{t} &= c_{0} + \sum_{k=-1}^{-\infty}c_{k}e^{2i\pi \omega_{k}t} + \sum_{k=1}^{\infty}c_{k}e^{2i\pi \omega_{k}t} +  \sum_{k=1}^\infty c_{k}e^{2i\pi \omega_{k}t} \\
 >>  &= \sum_{k=-\infty}^\infty c_{k}e^{2i\pi \omega_{k}t}
 >>\end{align}$$
+
+
+>[!property] Property Inner Product with Exponential Representation  ([[../../../PDFs/howell2016.pdf#page=157|Source]])
+>Let $g$ be any periodic, piecewise continuous function with period $p$ with $n \in \mathbb{Z}$, then
+>$$\begin{align}
+> \left\langle g(t)\,,\,e^{i_{2}\pi \omega_{n}t} \right\rangle &= \int _{0}^p g(t)\left(e^{i_{2}\pi \omega_{n}t}\right)^* \, dt   \\
+> &= \int _{0}^p g(t)e^{-i_{2}\pi \omega_{n}t} \, dt
+>\end{align}$$
+
+>[!property] Property Exponential Representations form an Orthogonal Set ([[../../../PDFs/howell2016.pdf#page=157|Source]])
+>Let $k,n \in \mathbb{Z}$ with $k\neq n$ then 
+>$$e^{i2\pi \omega_{k}t} \text{ and } e^{i2\pi \omega_{n}t} $$
+>are orthogonal
+>>[!proof]-
+>>$$\begin{align}
+>> \left\langle e^{i2\pi \omega_{k}t}\,,\,e^{i2\pi \omega_{n}t} \right\rangle &= \int _{0}^p e^{i2\pi \omega_{k}t}e^{i2\pi \omega_{n}t} \, dt \\
+>> &= \int _{0}^p \exp\left( \frac{i 2\pi(k-n)}{p}t \right)  \, dt \tag*{$\left(\omega_{k} = \frac{k}{p}\right)$} \\
+>> &= \left[ \frac{p}{i2\pi(k-n)} \exp\left( \frac{i 2\pi(k-n)}{p}t \right)  \right]_{0}^p \tag{Solving Integral} \\
+>> &= \frac{p}{i2\pi(k-n)} \left[ \exp\left( \frac{i 2\pi(k-n)}{p}t \right)  \right]_{0}^p \\
+>> &= \frac{p}{i2\pi(k-n)} \left( \underbrace{ e^{i2\pi(k-n)} }_{ =1 } - e^0  \right) \\
+>> &= \frac{p}{i2\pi(k-n)} \left(1-1 \right) \\
+>> &= 0 \\
+>>\end{align}$$
+>>where we used for $e^{i2\pi(k-n)}$ the [[../Complex Analysis/Fundamental Properties#^45ef91|special identity]] of Euler's formula.
+
+>[!property] Property Orthogonal Function Expansion ([[../../../PDFs/howell2016.pdf#page=157|Source]])
+>$$\begin{align}
+> c_{k} &= \frac{\left\langle f\,,\,e^{i 2\pi \omega_{k}t} \right\rangle}{\lvert\lvert e^{i 2\pi \omega_{k}t} \rvert\rvert^2 }  \\
+> &= \frac{1}{p} \int _{0}^p f(t)e^{-i 2\pi \omega_{k}t} \, dt 
+>\end{align}$$
