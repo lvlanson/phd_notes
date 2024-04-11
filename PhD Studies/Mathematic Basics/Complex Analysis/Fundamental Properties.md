@@ -39,3 +39,11 @@ aliases:
 >   
 
 ^88d84a
+
+>[!property] Property Special Case $\theta=2\pi$
+>$$\begin{align}
+> e^{i 2\pi} &= \underbrace{ \cos(2\pi) }_{ =1 } + i \underbrace{ \sin(2\pi) }_{ =0 } \\
+> &=1
+>\end{align}$$
+
+^45ef91

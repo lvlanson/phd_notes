@@ -42,7 +42,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
                 "mode": "source",
                 "source": true
               }
@@ -91,7 +91,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
                 "mode": "preview",
                 "source": true
               }
@@ -187,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+                "file": "PDFs/rudin1976.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -204,7 +204,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+                "file": "PDFs/rudin1976.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -227,7 +227,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md"
+                "file": "PDFs/rudin1976.pdf"
               }
             }
           },
@@ -274,15 +274,15 @@
     "type": "floating",
     "children": [
       {
-        "id": "7c1777ec409b1d55",
+        "id": "b838c66de302911c",
         "type": "window",
         "children": [
           {
-            "id": "7e7f4aafb890eef1",
+            "id": "ac034331212a5cec",
             "type": "tabs",
             "children": [
               {
-                "id": "775c180c4a182589",
+                "id": "83b5546b7cc67c6e",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -301,36 +301,97 @@
         "height": 960,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "4c9a5b9661e55431",
+        "type": "window",
+        "children": [
+          {
+            "id": "b803a8bb1bdf6cc9",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "15d5adfd2333b21f",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 28,
+        "y": 560,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 0
+      },
+      {
+        "id": "07801d5220c8979a",
+        "type": "window",
+        "children": [
+          {
+            "id": "ab4d7aebfb6fcfbb",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "60ef0f42a992e24d",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "PDFs/rudin1976.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 28,
+        "y": 560,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
       }
     ]
   },
-  "active": "26b6cb6fb0d06466",
+  "active": "60ef0f42a992e24d",
   "lastOpenFiles": [
     "PDFs/howell2016.pdf",
+    "PDFs/rudin1976.pdf",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
     "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
+    "ML Programming/PyTorch/Lightning/Lightning Setup.md",
+    "ML Programming/PyTorch/Lightning/Lightning Module.md",
     "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
     "Pasted image 20240406135610.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "ML Programming/PyTorch/Basics/PyTorch Layers.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
     "ML Programming/PyTorch/Basics/PyTorch Basic Functions.md",
     "ML Programming/PyTorch/Basics/PyTorch Arithmetics.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Vorbereitung.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/aufgabe_4_4.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/aufgabe_4_3.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Vorbereitung.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.md",
     "Own Projects/ODE LVQ/Construction.md",
-    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
     "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.pdf",
@@ -340,8 +401,6 @@
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Untitled",
     "Untitled.md",
     "index.md",
-    "References/@apostol1967.md",
-    "References/@ben-baruch2021.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240329181952.png",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240331183534.png",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240331185525.png",

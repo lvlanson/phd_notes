@@ -162,7 +162,7 @@
 >In einer Klasse sind 5% der Schüler und 4% der Schülerinnen älter als 17 Jahre. 40% der Schüler sind weiblich. Mit welcher Wahrscheinlichkeit ist eine zufällig ausgewählte Person weiblich, wenn sie älter als 17 Jahre ist?
 >>[!note] Wissen: 3.5 Definition der bedingten Wahrscheinlichkeit
 >
->>[!example]- Lösung
+>>[!example] Lösung
 >>Zunächst einigen wir uns auf eine Symbolik
 >>- $A$ - älter
 >>- $\overline{A}$ - nicht älter
@@ -173,7 +173,7 @@
 >>$$\begin{align}
 >> P(A\;|\; \overline{W}) &= \frac{5}{100} = \frac{1}{20} \\
 >> P(A\;|\;W) &= \frac{4}{100} = \frac{1}{25} \\
->> P(W) &= \frac{4}{100} = \frac{2}{5} \\
+>> P(W) &= \frac{40}{100} = \frac{2}{5} \\
 >> P(\overline{W}) &= \frac{3}{5}
 >>\end{align}$$
 >>Wir suchen **eine Person ist weiblich unter der Bedingung, dass sie älter als 17 ist**, also
@@ -247,7 +247,7 @@
 >>$$P(S_{1}\;|\;B)$$
 >>Wir verwenden dazu **Satz 3.16** mit dem Ergebnis aus Teilaufgabe 1 $P(B)=\frac{7}{30}$ und erhalten
 >>$$\begin{align}
->> P(S_{1}\;|\;B) &= \frac{P(S_{1})}{P(B)}P(B\;|\;\overline{S_{1}}) \\
+>> P(S_{1}\;|\;B) &= \frac{P(S_{1})}{P(B)}P(B\;|\;S_{1}) \\
 >>   &= \frac{\frac{2}{3}}{\frac{7}{30}}\cdot \frac{3}{10} \\
 >>   &=\frac{4}{7} \tag*{$\blacktriangleleft$}
 >>\end{align}$$

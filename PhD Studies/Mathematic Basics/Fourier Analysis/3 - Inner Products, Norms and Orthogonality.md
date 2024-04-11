@@ -132,6 +132,12 @@
 
 ## Orthogonal Function Expansions
 
+>[!theorem] Theorem on Orthogonal Expansions 
+>Let $\{ \phi_{k} \}_{k=1}^\infty$ be an orthogonal set of functions on an interval $(\alpha, \beta)$, and let $f$ be a function on $(\alpha,\beta)$. If $f$ can be represented as a (possibly infinite) linear combination of $\phi_{k}$'s, i.e. there are constants $c_{1}, c_{2}, c_{3}, \dots$ such that
+>$$f(t)= \sum_{k}c_{k}\phi_{k}(t) \quad \text{ on } (\alpha,\beta)$$
+>then, for each $k$,
+>$$c_{k} = \frac{\left\langle f\,,\,\phi_{k} \right\rangle}{\lvert\lvert \phi_{k} \rvert\rvert^2 } $$
+
 >[!theorem] Theorem Cauchy-Schwarz Inequality for Inner Products ([[../../../PDFs/howell2016.pdf#page=147|Source]])
 >Let $f$ and $g$ be two piecewise continuous functions on the finite interval $(\alpha, \beta)$. Then
 >$$\lvert \langle f\,,\,g \rangle \rvert \leq \lvert\lvert f \rvert\rvert \; \lvert\lvert g \rvert\rvert $$
