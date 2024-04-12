@@ -30,7 +30,7 @@
 
 ^3fd445
 
->[!property] Property Parallelogramequation
+>[!property] Property Parallelogramequation / Polarization Identity
 >Let $\mathcal{H}$ be a normed vector space with $\lvert\lvert \,. \rvert\rvert$, then $\mathcal{H}$ is a **pre-Hilbert space** if and only if the **parallelogramequation** holds: $\forall x,y \in \mathcal{H}$
 >$$\lvert\lvert x+y \rvert\rvert^2 + \lvert\lvert x-y \rvert\rvert^2 = 2\big(\lvert\lvert x \rvert\rvert^2 + \lvert\lvert y \rvert\rvert^2  \big)  $$
 >with the corresponding scalar product being defined as
@@ -148,7 +148,7 @@
 >>\, \tag*{$\checkmark$}
 >>\end{align}$$
 >>Now we show that $U^\perp \subseteq  (\overline{U})^\perp$. Let 
->>$$v \in U^\perp, u \in\overline{U} \; \implies \; \exists \{ u_{j} \}_{j} \in U \text{ with } \lim_{ j \to \infty } u_{j} = u$$
+>>$$v \in U^\perp, u \in\overline{U} \; \implies \; \exists \{ u_{j} \}_{j=1}^\infty \in U \text{ with } \lim_{ j \to \infty } u_{j} = u$$
 >>This result is justified by the density of $U \in \overline{U}$. We continue
 >>$$\begin{align}
 >> \left\langle v\,,\,u \right\rangle &=\left\langle v\,,\,\lim_{ j \to \infty } u_{j} \right\rangle \\

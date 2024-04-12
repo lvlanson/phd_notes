@@ -293,37 +293,6 @@
         "zoom": 0
       },
       {
-        "id": "0e1bea4d4720a3d3",
-        "type": "window",
-        "children": [
-          {
-            "id": "c09ceb0f157ede7a",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "693b7058f7833147",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
-                    "mode": "preview",
-                    "source": true
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 3840,
-        "y": 0,
-        "width": 1280,
-        "height": 1440,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
         "id": "1e3c4954f99cefd3",
         "type": "window",
         "children": [
@@ -351,20 +320,56 @@
         "height": 800,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "85e03b7120c7fbda",
+        "type": "window",
+        "children": [
+          {
+            "id": "ea4e2a12988b90b9",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "70e84c1312bd7625",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
+                    "mode": "preview",
+                    "source": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1306,
+        "y": 570,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
       }
     ]
   },
   "active": "26b6cb6fb0d06466",
   "lastOpenFiles": [
-    "PDFs/kreyszig1978.pdf",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Ax Continuity.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/uniform_continuity.png",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
+    "Pasted image 20240412132533.png",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/continuity.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
+    "Excalidraw/Drawing 2024-04-12 12.55.15.excalidraw.md",
+    "PDFs/kreyszig1978.pdf",
+    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection.md",
     "PDFs/howell2016.pdf",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Approximation_Motivation.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures",
     "Pasted image 20240406135610.png",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
     "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures",
@@ -388,8 +393,6 @@
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/aufgabe_4_3.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Vorbereitung.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.md",
-    "Own Projects/ODE LVQ/Construction.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.aux",
@@ -398,9 +401,6 @@
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240331185525.png",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240331181722.png",
     "Pasted image 20240331174243.png",
-    "Own Projects/ODE LVQ/Figures/Pasted image 20240324185253.png",
-    "Own Projects/ODE LVQ/Figures/Pasted image 20240324185307.png",
-    "Own Projects/ODE LVQ/Figures/Pasted image 20240324185152.png",
     "Untitled.canvas"
   ]
 }
