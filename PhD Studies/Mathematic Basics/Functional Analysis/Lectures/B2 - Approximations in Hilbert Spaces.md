@@ -29,7 +29,7 @@
 > P:&f \mapsto g_{0}
 >\end{align}$$
 >is continuous
->>[!proof]
+>>[!proof]-
 >>1. Uniqueness
 >>
 >>>The strategy for this proof is to construct a contradiction. We assume to have 2 best approximations, and construct by our convexity property another best approximation. We will enforce a contradiction and show, that the constructed best approximation is less than the best approximation by definition. Therefore, there only can be one single best approximation. 
@@ -111,15 +111,6 @@
 >>
 >>3. Show $P:H \to U$ is continuous
 >>
->>>Denote $f_{0} \in \mathcal{H}$ and
->>>$$P(f_{0}) = g_{0} \iff \lvert\lvert f_{0}-g_{0} \rvert\rvert_{H}=\delta(f_{0},U) $$
->>>To show continuity we use the [[Ax Continuity#^dbc5ec| definition of continuity]], i.e.
->>>$$\forall \varepsilon > 0 : \exists \phi_{\varepsilon}>0: \forall f_{1} \in \mathcal{H} \text{ such that } \lvert\lvert f_{1}-f_{0}  \rvert\rvert< \phi_{\varepsilon} \implies \lvert\lvert \underbrace{ P(f_{1}) }_{ =: g_{1} }-\underbrace{ P(f_{0}) }_{ =: g_{0} } \rvert\rvert < \varepsilon  $$
->>>and will use the property of Cauchy sequences as in the previous part. Therefore, denote
->>>$$\begin{align}
->>> \varepsilon &> 0 \\
->>> \mu&\leq \delta(f_{0}, U) \\
->>> \varepsilon' &= \frac{\varepsilon}{1+\mu}  
->>>\end{align}$$
->>>By assumption we have
->>>$$\lvert\lvert f_{0}-g_{0} \rvert\rvert_{\mathcal{H}} $$
+>>>Omitted for now
+>>
+>>$$\tag*{$\square$}$$

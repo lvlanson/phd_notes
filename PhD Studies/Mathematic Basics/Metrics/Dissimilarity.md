@@ -8,3 +8,5 @@
 >(iii)& \quad &&d(x,y)=0 \Rightarrow x=y \tag{positiveness} \\ 
 >(iv)& \quad &&d(x,y) \leq d(x,z) + d(z,y) \tag{triangle inequality}
 >\end{alignat}$$
+
+^bc8dd8

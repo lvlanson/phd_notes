@@ -29,28 +29,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
-                "mode": "source",
-                "source": true
-              }
-            },
-            "group": "d05361c51622cf84"
-          },
-          {
-            "id": "26b6cb6fb0d06466",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
                 "mode": "source",
                 "source": true
               }
             },
-            "group": "bdf73af81f5bdd12"
+            "group": "d05361c51622cf84"
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "d0adceee64becfe7",
@@ -78,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
+                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
                 "mode": "preview",
                 "source": true
               }
@@ -89,14 +76,11 @@
             "id": "22ff275100f151ea",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
-                "mode": "preview",
-                "source": true
+                "file": "PDFs/howell2016.pdf"
               }
-            },
-            "group": "bdf73af81f5bdd12"
+            }
           },
           {
             "id": "419c54febaea815f",
@@ -111,7 +95,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -260,24 +244,24 @@
     }
   },
   "floating": {
-    "id": "074dcb03b322e52d",
+    "id": "43831ee31c81ffd2",
     "type": "floating",
     "children": [
       {
-        "id": "4ed523200269789d",
+        "id": "333f9e14f6e2474c",
         "type": "window",
         "children": [
           {
-            "id": "73adb456791760c1",
+            "id": "690891869f2029f9",
             "type": "tabs",
             "children": [
               {
-                "id": "cfe655da44799405",
+                "id": "5c8d4d5f2b277f1f",
                 "type": "leaf",
                 "state": {
-                  "type": "pdf",
+                  "type": "excalidraw",
                   "state": {
-                    "file": "PDFs/howell2016.pdf"
+                    "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.md"
                   }
                 }
               }
@@ -285,122 +269,62 @@
           }
         ],
         "direction": "vertical",
-        "x": 2560,
-        "y": 0,
-        "width": 1280,
-        "height": 1440,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
-        "id": "1e3c4954f99cefd3",
-        "type": "window",
-        "children": [
-          {
-            "id": "f03560ab824eee90",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "9a4363369cd087c6",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "PDFs/kreyszig1978.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 768,
-        "y": 336,
+        "x": 2520,
+        "y": 548,
         "width": 1024,
         "height": 800,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
-        "id": "85e03b7120c7fbda",
-        "type": "window",
-        "children": [
-          {
-            "id": "ea4e2a12988b90b9",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "70e84c1312bd7625",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
-                    "mode": "preview",
-                    "source": true
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 1306,
-        "y": 570,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
+        "maximize": true,
         "zoom": 0
       }
     ]
   },
-  "active": "26b6cb6fb0d06466",
+  "active": "292a49727b73487d",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Ax Continuity.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/uniform_continuity.png",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
-    "Pasted image 20240412132533.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/continuity.png",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
-    "Excalidraw/Drawing 2024-04-12 12.55.15.excalidraw.md",
-    "PDFs/kreyszig1978.pdf",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Inner Product/Orthogonal Projection.md",
-    "PDFs/howell2016.pdf",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Approximation_Motivation.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures",
-    "Pasted image 20240406135610.png",
-    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Ax Continuity.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures",
-    "PhD Studies/Mathematic Basics/Calculus/Series.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+    "Excalidraw/Drawing 2024-04-12 12.55.15.excalidraw.md",
+    "Pasted image 20240406135610.png",
+    "Untitled.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/periodic_odd_extension.png",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/periodic_even_function.png",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/basic_periodic_extension.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
-    "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
-    "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
-    "ML Programming/PyTorch/Basics/PyTorch Layers.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
-    "ML Programming/PyTorch/Basics/PyTorch Basic Functions.md",
-    "ML Programming/PyTorch/Basics/PyTorch Arithmetics.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Vorbereitung.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series (OLD).md",
+    "Own Projects/ODE LVQ/Figures/Pasted image 20240324185307.png",
+    "Own Projects/ODE LVQ/Figures/Pasted image 20240324185253.png",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/aufgabe_4_4.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/aufgabe_4_3.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Vorbereitung.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Vorbereitung.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.aux",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240329181952.png",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240331183534.png",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240331185525.png",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/Pasted image 20240331181722.png",
-    "Pasted image 20240331174243.png",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.tex",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.pdf",
+    "PDFs/howell2016.pdf",
+    "PDFs/rudin1976.pdf",
+    "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
+    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
+    "ML Programming/PyTorch/Lightning/Lightning Setup.md",
+    "ML Programming/PyTorch/Lightning/Lightning Module.md",
+    "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
     "Untitled.canvas"
   ]
 }
