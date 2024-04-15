@@ -27,11 +27,9 @@
             "id": "292a49727b73487d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
-                "mode": "source",
-                "source": true
+                "file": "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md"
               }
             },
             "group": "d05361c51622cf84"
@@ -63,11 +61,9 @@
             "id": "a15485bc6961bcc0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
-                "mode": "preview",
-                "source": true
+                "file": "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md"
               }
             },
             "group": "d05361c51622cf84"
@@ -161,7 +157,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
+                "file": "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,7 +174,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
+                "file": "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -201,7 +197,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md"
+                "file": "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md"
               }
             }
           },
@@ -248,20 +244,20 @@
     "type": "floating",
     "children": [
       {
-        "id": "333f9e14f6e2474c",
+        "id": "b901820fae07f7ef",
         "type": "window",
         "children": [
           {
-            "id": "690891869f2029f9",
+            "id": "e78eac395dfc37e6",
             "type": "tabs",
             "children": [
               {
-                "id": "5c8d4d5f2b277f1f",
+                "id": "c164d14ba832c847",
                 "type": "leaf",
                 "state": {
-                  "type": "excalidraw",
+                  "type": "pdf",
                   "state": {
-                    "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.md"
+                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
                   }
                 }
               }
@@ -269,21 +265,29 @@
           }
         ],
         "direction": "vertical",
-        "x": 2520,
-        "y": 548,
+        "x": 28,
+        "y": 560,
         "width": 1024,
         "height": 800,
-        "maximize": true,
+        "maximize": false,
         "zoom": 0
       }
     ]
   },
   "active": "292a49727b73487d",
   "lastOpenFiles": [
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+    "Excalidraw/Drawing 2024-01-17 18.47.08.excalidraw.md",
+    "Excalidraw/Drawing 2024-04-12 12.55.15.excalidraw.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/Seminar 4.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/4) Stetige_Zufallsgrößen.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4",
+    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/3) Diskrete Zufallsgrößen.pdf",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.png",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/uniform_continuity.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/continuity.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Approximation_Motivation.png",
@@ -291,7 +295,6 @@
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Ax Continuity.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures",
-    "Excalidraw/Drawing 2024-04-12 12.55.15.excalidraw.md",
     "Pasted image 20240406135610.png",
     "Untitled.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/periodic_odd_extension.png",
@@ -315,16 +318,10 @@
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.tex",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.pdf",
-    "PDFs/howell2016.pdf",
-    "PDFs/rudin1976.pdf",
     "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
     "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
     "ML Programming/PyTorch/Lightning/Lightning Setup.md",
-    "ML Programming/PyTorch/Lightning/Lightning Module.md",
-    "PhD Studies/Mathematic Basics/Trigonometry/Trigonometric Identities.md",
     "Untitled.canvas"
   ]
 }
