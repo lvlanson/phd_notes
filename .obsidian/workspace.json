@@ -27,12 +27,29 @@
             "id": "292a49727b73487d",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md"
+                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
+                "mode": "source",
+                "source": true
               }
             },
             "group": "d05361c51622cf84"
+          },
+          {
+            "id": "49c20ff9ded5e11b",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
+                "mode": "source",
+                "source": true
+              },
+              "pinned": true
+            },
+            "group": "c52c8a18d0b967ab"
           }
         ],
         "currentTab": 1
@@ -61,34 +78,29 @@
             "id": "a15485bc6961bcc0",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md"
+                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
+                "mode": "preview",
+                "source": true
               }
             },
             "group": "d05361c51622cf84"
           },
           {
-            "id": "22ff275100f151ea",
+            "id": "7009acf792cc87fd",
             "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "PDFs/howell2016.pdf"
-              }
-            }
-          },
-          {
-            "id": "419c54febaea815f",
-            "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Own Projects/ODE LVQ/Construction.md",
+                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
                 "mode": "preview",
                 "source": true
-              }
-            }
+              },
+              "pinned": true
+            },
+            "group": "c52c8a18d0b967ab"
           }
         ],
         "currentTab": 1
@@ -157,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md",
+                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,7 +186,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md",
+                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -197,7 +209,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md"
+                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md"
               }
             }
           },
@@ -240,24 +252,26 @@
     }
   },
   "floating": {
-    "id": "43831ee31c81ffd2",
+    "id": "e68b039b6a6043cd",
     "type": "floating",
     "children": [
       {
-        "id": "b901820fae07f7ef",
+        "id": "660274803c2f7fb0",
         "type": "window",
         "children": [
           {
-            "id": "e78eac395dfc37e6",
+            "id": "e331a280ca46541b",
             "type": "tabs",
             "children": [
               {
-                "id": "c164d14ba832c847",
+                "id": "73ddf204747deb66",
                 "type": "leaf",
                 "state": {
-                  "type": "pdf",
+                  "type": "markdown",
                   "state": {
-                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
+                    "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
+                    "mode": "preview",
+                    "source": true
                   }
                 }
               }
@@ -265,34 +279,35 @@
           }
         ],
         "direction": "vertical",
-        "x": 28,
-        "y": 560,
-        "width": 1024,
-        "height": 800,
+        "x": 0,
+        "y": 0,
+        "width": 1080,
+        "height": 960,
         "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "292a49727b73487d",
+  "active": "73ddf204747deb66",
   "lastOpenFiles": [
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+    "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
     "Excalidraw/Drawing 2024-01-17 18.47.08.excalidraw.md",
     "Excalidraw/Drawing 2024-04-12 12.55.15.excalidraw.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/Seminar 4.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/4) Stetige_Zufallsgrößen.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4",
-    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/3) Diskrete Zufallsgrößen.pdf",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/uniform_continuity.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/continuity.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Approximation_Motivation.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Ax Continuity.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures",
     "Pasted image 20240406135610.png",
@@ -320,8 +335,6 @@
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.pdf",
     "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
     "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
-    "ML Programming/PyTorch/Lightning/Lightning Setup.md",
     "Untitled.canvas"
   ]
 }

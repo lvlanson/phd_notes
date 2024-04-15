@@ -41,7 +41,7 @@
 
 ^d69824
 
->[!property] Corollary
+>[!lemma] Corollary
 >Let $\mathcal{H}$ be a **pre-Hilbert** space. Then we have the following assertions
 >1. Let $\{ x_{j} \}_{j}, \{ y_{j} \}_{j} \subset H$ with $x,y \in \mathcal{H}$ and
 >$$\begin{align}
@@ -105,6 +105,8 @@
 >>$$x \in (U \cap U^\perp) \implies \left\langle x\,,\,x \right\rangle = 0 = \lvert\lvert x \rvert\rvert _{\mathcal{H}}^2 \iff x = 0$$
 >
 
+^2f6a37
+
 >[!property] Properties on Orthogonality 
 >1. $x,y \in \mathcal{H}$ with $x \perp y \; \implies \; \lvert\lvert x+y \rvert\rvert^2_{\mathcal{H}} = \lvert\lvert x \rvert\rvert_{\mathcal{H}}^2 + \lvert\lvert y \rvert\rvert^2_{\mathcal{H}}$
 >
@@ -160,7 +162,7 @@
 >> Hence,
 >> $$\implies (\overline{U})^\perp \subseteq U^\perp \land U^\perp \subseteq(\overline{U})^\perp \implies (\overline{U})^\perp = U^\perp$$
 >
->3. In general it golds $U \subset \left(U^\perp\right)^\perp$
+>3. In general it holds $U \subset \left(U^\perp\right)^\perp$
 >
 >>[!proof]-
 >>$$\begin{align}
@@ -168,3 +170,5 @@
 >>\end{align}$$
 >>>[!note]
 >>>Since $v \in U^\perp$ and $u \perp v \implies u \in (U^\perp)^\perp$  
+
+^4c0a6a

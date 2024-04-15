@@ -114,3 +114,101 @@
 >>>Omitted for now
 >>
 >>$$\tag*{$\square$}$$
+
+>[!theorem] Projection Theorem
+>Let $\mathcal{H}$ be a Hilbert space and $U \subset \mathcal{H}$ a closed subspace.
+>1. Let $f \in \mathcal{H}$ and $g_{0}=P(f)$ be the best approximation of $f$ in $U$, i.e.
+>$$\lvert\lvert f - g_{0} \rvert\rvert_{\mathcal{H}} = \delta(f,U)$$
+>Then it holds $f-g_{0} \in U^\perp$, i.e.
+>$$f-g_{0} \perp U: \left\langle f-g_{0}\,,\,u \right\rangle=0 \;\; \forall u\in U $$
+>
+>>[!proof]- Proof (Indirect)
+>> Assume $$f - \underbrace{ P(f) }_{ =g_{0} } \not\in U^\perp$$
+>> Then there exists some $u \in U$ which is not orthogonal to $f-P(f)$
+>> $$\exists u \in U: u \neq 0: \left\langle u\,,\,f-P(f) \right\rangle \neq 0 $$
+>> We denote
+>> $$\begin{align} 
+>> h:&= f - P(f) \\
+>> \alpha:&= \left\langle u\,,\,h \right\rangle \neq 0  \\
+>> \lambda &\in \mathbb{K}
+>>\end{align}$$
+>>We do the following calculation with $(\underbrace{ P(f) }_{ \in U }+ \underbrace{ \lambda u }_{ \in U }) \in U$
+>>$$\begin{align}
+>> \lvert\lvert f - \big(P(f)+\lambda u\big) \rvert\rvert_{\mathcal{H}}^2 &= \lvert\lvert \underbrace{ \big(f - P(f)\big) }_{ =h } - \lambda u \rvert\rvert \\
+>> &= \left\langle h-\lambda u\,,\, h - \lambda u \right\rangle     \\
+>> &= \left\langle h\,,\,h \right\rangle - \lambda \left\langle u\,,\,h \right\rangle + \left\langle  h\,,\,-\lambda u \right\rangle + \left\langle -\lambda u\,,\,-\lambda u \right\rangle \\
+>> &= \lvert\lvert h \rvert\rvert_{\mathcal{H}}^2 - \lambda \left\langle u\,,\,h \right\rangle - \overline{\lambda}\left\langle h\,,\,u \right\rangle + \underbrace{ \lvert \lambda \rvert^2 }_{ =\lambda \cdot \overline{\lambda} } \lvert\lvert u \rvert\rvert_{\mathcal{H}}^2  \\
+>> &= \lvert\lvert h \rvert\rvert_{\mathcal{H}}^2 - 2\mathrm{Re}(\lambda \underbrace{ \left\langle u\,,\,h \right\rangle }_{ =\alpha } ) + \lvert \lambda \rvert ^2 \lvert\lvert u \rvert\rvert _{\mathcal{H}}^2
+>>\end{align}$$
+>>We choose $\lambda= \dfrac{\overline{\alpha}}{\lvert\lvert u \rvert\rvert^2_{\mathcal{H}}}$
+>>$$\begin{align}
+>> \phantom{\lvert\lvert f - \;\;\;\;\;} &= \lvert\lvert h \rvert\rvert _{\mathcal{H}}^2 - 2\mathrm{Re}\left( \frac{\overline{\alpha}\cdot\alpha}{\lvert\lvert u \rvert\rvert^2_{\mathcal{H}}} \right) + \frac{\lvert \alpha \rvert^2 }{\lvert\lvert u \rvert\rvert_{\mathcal{H}}^2 } \\
+>> &= \lvert\lvert h \rvert\rvert ^2_{\mathcal{H}} - \frac{2\lvert \alpha \rvert^2 }{\lvert\lvert u \rvert\rvert ^2_{\mathcal{H}}} + \frac{\lvert \lambda \rvert^2 }{\lvert\lvert u \rvert\rvert^2_{\mathcal{H}} } \\
+>> &= \lvert\lvert h \rvert\rvert ^2_{\mathcal{H}} - \frac{\lvert \alpha \rvert^2 }{\lvert\lvert u \rvert\rvert ^2_{\mathcal{H}}} \\
+>> &= \lvert\lvert f -P(f) \rvert\rvert _{\mathcal{H}}^2 - \underbrace{ \frac{\lvert \alpha \rvert^2 }{\lvert\lvert u \rvert\rvert ^2_{\mathcal{H}}} }_{ >0 }  \\
+>> &< \lvert\lvert f - P(f) \rvert\rvert ^2_{\mathcal{H}} 
+>>\end{align}$$
+>>Since this is a contradiction and $P(f)$ is best approximation of $f$ in $U$, we have
+>>$$f-P(f) \in U^\perp \tag*{$\square$}$$
+>
+>2. For any $f \in \mathcal{H}$ there exists a unique representation
+>$$f = u + v$$
+>where $u \in U, v \in U^\perp$, hence
+>$$H = U \oplus U^\perp \tag{Orthogonal Sum}$$
+>
+>>[!proof]-
+>>1. Existence
+>>
+>>>Let $f \in \mathcal{H}$, then we know by 1) 
+>>>- $\exists u \in U$ with $u = P(f)$
+>>>- $v:= f-P(f) \in U^\perp$
+>>>
+>>>Inserting into $v$ our definition of $P(f)$ we get
+>>>$$v = f - u \iff f = v + u$$
+>>
+>>2. Uniqueness
+>>
+>>> Assume there exist two different representations $u_{1},u_{2} \in U$ and $v_{1},v_{2} \in U^\perp$ with
+>>> $$f = u_{1}+v_{1} = u_{2} + v_{2}$$
+>>> Rearranging the decompositions gives
+>>> $$u_{1}-u_{2} = v_{1} - v_{2}$$
+>>> We know $u_{1}-u_{2} \in U$ and $v_{1} - v_{2} \in U^\perp$. Note, since both are equal and both are from different spaces, we can conclude $$(v_{1}-v_{2}),(u_{1}-u_{2}) \in U \cap U^\perp = \{ 0 \}$$
+>>>>[!recall] [[B1 - Hilbert Spaces#^2f6a37|Recall Remark in Definition of Orthogonality]]
+>>>
+>>>Hence, 
+>>>$$\begin{align}
+>>>u_{1}-u_{2} &= 0 \implies u_{1} = u_{2} \\
+>>>v_{1}-v_{2} &= 0 \implies v_{1}=v_{2}  
+>>>\end{align}$$
+>>> Therefore, the orthogonal decomposition is unique $$\tag*{$\square$}$$
+
+^312b54
+
+>[!lemma] Corollary
+>Let $\mathcal{H}$ be an Hilber Space and $U \subset H$ a subspace of $\mathcal{H}$. Then it holds
+>$$(U^\perp)^\perp = \overline{U}$$
+>In particular, if $U^\perp = \{ 0 \}$ then $U$ is dense in $\mathcal{H}$, i.e. $\overline{U}= \mathcal{H}$
+>>[!proof]-
+>>Note, $\overline{U} \subset \mathcal{H}$ is a closed subspace of $\mathcal{H}$. We know by the [[#^312b54| Projection Theorem (ii)]] 
+>>$$H = \overline{U} \oplus (\overline{U})^\perp$$
+>>By [[B1 - Hilbert Spaces#^4c0a6a| properties of orthogonality (ii)]] we know $(\overline{U})^\perp = U^\perp$, therefore
+>>$$H = \overline{U} \oplus U^\perp$$
+>>Lets redefine $\overline{U}=:V$ to make clear we want to rethink the nature of $V$
+>>$$H = V \oplus U^\perp$$
+>>We know by [[B1 - Hilbert Spaces#^4c0a6a| properties of orthogonality (ii)]] that $U^\perp$ is closed, and the $V = (U^\perp)^\perp$, which establishes the identity
+>>$$(U^\perp)^\perp = \overline{U} \tag*{$\square$}$$
+
+>[!def] Definition Orthogonal Projection
+>Let $\mathcal{H}$ be a Hilbert space and $U \subset H$ a closed subspace. Then we call
+>$$\begin{align}
+> P_{h}:& H \to U \\
+> P_{h}:& f \mapsto P_{h}f = g \in U
+>\end{align}$$
+>with $f - P_{h}f \in U^\perp$ being the **orthogonal projection** of $\mathcal{H}$ onto $U$.
+
+>[!property] Properties of the Orthogonal Projection
+>- $P_{h}$ is continuous
+>- $P_{h}$ is linear
+>- $P_{h}^2 = P_{h}$
+>- $\lvert\lvert P_{h} \rvert\rvert_{\mathcal{L}(\mathcal{H})}=1$
+>- $N(P_{h})= U^\perp$ with $N$ being the Nullspace and $N(P_{h})=\{ g \in \mathcal{H} \; | \; P_{h}g=0 \}$
