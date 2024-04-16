@@ -29,7 +29,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
                 "mode": "source",
                 "source": true
               }
@@ -50,6 +50,18 @@
               "pinned": true
             },
             "group": "c52c8a18d0b967ab"
+          },
+          {
+            "id": "285390de6d4626fb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
         ],
         "currentTab": 1
@@ -80,7 +92,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
                 "mode": "preview",
                 "source": true
               }
@@ -101,6 +113,18 @@
               "pinned": true
             },
             "group": "c52c8a18d0b967ab"
+          },
+          {
+            "id": "338b8a9b22df77f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
           }
         ],
         "currentTab": 1
@@ -169,7 +193,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,7 +210,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -209,7 +233,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md"
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md"
               }
             }
           },
@@ -279,23 +303,62 @@
           }
         ],
         "direction": "vertical",
-        "x": 0,
+        "x": 2560,
         "y": 0,
-        "width": 1080,
-        "height": 960,
+        "width": 1280,
+        "height": 1440,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "cf5e6f0c5a028490",
+        "type": "window",
+        "children": [
+          {
+            "id": "394622e68fde42f6",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "fc4244cdb0c07302",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "PDFs/howell2016.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 2560,
+        "y": 0,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": -2
       }
     ]
   },
-  "active": "73ddf204747deb66",
+  "active": "292a49727b73487d",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximations in Hilbert Spaces.md",
+    "PDFs/howell2016.pdf",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "index.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximation in Hilbert Spaces.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/orthogonal_plane.excalidraw.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/orthogonal_plane.excalidraw.png",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/1 - Maximum Inner Product Search.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
+    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
     "Excalidraw/Drawing 2024-01-17 18.47.08.excalidraw.md",
     "Excalidraw/Drawing 2024-04-12 12.55.15.excalidraw.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/Seminar 4.md",
@@ -315,26 +378,16 @@
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/periodic_odd_extension.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/periodic_even_function.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/basic_periodic_extension.png",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series (OLD).md",
     "Own Projects/ODE LVQ/Figures/Pasted image 20240324185307.png",
-    "Own Projects/ODE LVQ/Figures/Pasted image 20240324185253.png",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/aufgabe_4_4.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/aufgabe_4_3.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Vorbereitung.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series New.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.tex",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.pdf",
-    "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
-    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
     "Untitled.canvas"
   ]
 }

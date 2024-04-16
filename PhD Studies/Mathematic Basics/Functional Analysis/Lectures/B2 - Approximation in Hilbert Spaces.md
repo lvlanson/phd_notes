@@ -212,3 +212,11 @@
 >- $P_{h}^2 = P_{h}$
 >- $\lvert\lvert P_{h} \rvert\rvert_{\mathcal{L}(\mathcal{H})}=1$
 >- $N(P_{h})= U^\perp$ with $N$ being the Nullspace and $N(P_{h})=\{ g \in \mathcal{H} \; | \; P_{h}g=0 \}$
+>>[!pic] Illustration of the Orthogonal Projection
+>><br>
+>> ![[Figures/orthogonal_plane.excalidraw.png|center|500]]
+>> The orthogonal decomposition 
+>> $$\begin{align}
+>> \mathbb{R}^3 &= U \oplus U^\perp \\
+>> &= [x_{i}, y_{i}, 0]_{i=-\infty}^\infty \oplus [0,0,z_{i}]_{i=-\infty}^\infty
+>>\end{align}$$

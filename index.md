@@ -2,11 +2,23 @@
 >>[!attention] Here you can find my work and knowledge
 >
 >>[!lemma] I am currently working on
->> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs|First Order Differential Equations]] ✅
->> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs|Second Order Differential Equations]] ✅
->> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations|Systems of Linear  Differential Equations]] ✅
->> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/A - Matrix Exponential|Matrix Exponential]] ✅
->> - [[PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series (OLD)|Fourier Series]] and [[PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series|Fourier Series(2)]] ✏️
+>>>[!abstract] Ordinary Differential Equations ✅
+>>> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs|First Order Differential Equations]] ✅
+>>> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs|Second Order Differential Equations]] ✅
+>>> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations|Systems of Linear  Differential Equations]] ✅
+>>> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/A - Matrix Exponential|Matrix Exponential]] ✅
+>>
+>>>[!abstract] Fourier Series 
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series (OLD)|Fourier Series (Old Notes)]] ❌
+>>> -  [[PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series|Classical Fourier Series (Trigonometric)]]  ✅
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals|Fourier Series over Finite Intervals]]  ✅ 
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality|Fourier Series and Inner Products, Norms and Orthogonality]] ✅ 
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series|Complex Exponential Fourier Series]]  ✅
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence|Fourier Convergence]] ✏️
+>>
+>>>[!abstract] Functional Analysis
+>>> -  [[PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces|Hilbert Spaces]] ✅ 
+>>> - [[PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximation in Hilbert Spaces|Approximation in Hilbert Spaces (Orthogonal Projection)]] ✏️
 >
 >>[!lemma] I have finished or stopped...
 >> - [[PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric|Hausdorff Metric Analysis for Hyperbox LVQ]] ✅
