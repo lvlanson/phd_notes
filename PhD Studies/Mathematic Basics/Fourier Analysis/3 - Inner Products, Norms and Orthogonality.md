@@ -3,6 +3,8 @@
 >$$\langle f,g \rangle = \int _{\alpha}^\beta f(t)g^*(t) \, dt $$
 > where $g^*(t)$ denotes the [[../Complex Analysis/Fundamental Properties|complex conjugate]] of $g(t)$. If $g$ is real-valued, then $g^*=g$
 
+^e3ca10
+
 >[!theorem] Theorem Properties of the Inner Product ([[../../../PDFs/howell2016.pdf#page=142|Source]])
 > Suppose $a,b \in \mathbb{K}$ and $f,g,h$ are piecewise continuous functions on the finite interval $(\alpha,\beta)$, then
 > $$\begin{alignat}{2}
@@ -17,6 +19,8 @@
 >$$\lvert\lvert f \rvert\rvert = \sqrt{ \langle f\,,\,f \rangle } $$
 >>[!note]
 >>This norm is equivalent to the $L^2[\alpha,\beta]$ norm, which can also be found in [[../../../PDFs/olson2017.pdf#page=45|Olson (2017)]]
+
+^7c5e1e
 
 >[!def] Definition Orthogonality ([[../../../PDFs/olson2017.pdf#page=46|Source 1]], [[../../../PDFs/howell2016.pdf#page=143|Source 2]])
 >1. The functions $f,g \in L^2[a,b]$ are orthogonal if
@@ -196,6 +200,8 @@
 >>
 >>$$\tag*{$\square$}$$
 
+^e14b2d
+
 >[!lemma] Lemma Bessel's Inequality (Part 1) ([[../../../PDFs/howell2016.pdf#page=149|Source]])
 > Assume $\{ \phi_{1},\dots,\phi_{N} \}$ is a finite orthogonal set of piecewise continuous functions on a finite interval $(\alpha, \beta)$, and let $f$ be any piecewise continuous function on $(\alpha, \beta)$. For $k=1,2,\dots , N$, let $c_{k}$ be the corresponding generalized Fourier coefficient,
 > $$c_{k} = \frac{\langle f\,,\,\phi_{k} \rangle}{\lvert\lvert \phi_{k} \rvert\rvert^2 }$$
@@ -255,8 +261,8 @@
 >>[!proof]-
 >> Let $N$ be any positive integer. We use the identity given by [[#^a7eff2| Bessel's inequality (Part 1)]], i.e.
 >> $$\begin{alignat}{2}
->> 0 &\leq \left\lvert \left\lvert  f - \sum_{k=1}^N c_{k}\phi_{k}  \right\rvert \right\rvert^2 = \lvert\lvert f \rvert\rvert^2 + \sum_{k=1}^N \lvert c_{k} \rvert^2  \lvert\lvert \phi_{k} \rvert\rvert^2   \qquad&&\\
->> 0 &\leq \lvert\lvert f \rvert\rvert^2 + \sum_{k=1}^N \lvert c_{k} \rvert^2\lvert\lvert \phi_{k} \rvert\rvert^2 \qquad&&\Big\vert -\sum_{k=1}^N \lvert c_{k} \rvert^2\lvert\lvert \phi_{k} \rvert\rvert^2 \\
+>> 0 &\leq \left\lvert \left\lvert  f - \sum_{k=1}^N c_{k}\phi_{k}  \right\rvert \right\rvert^2 = \lvert\lvert f \rvert\rvert^2 - \sum_{k=1}^N \lvert c_{k} \rvert^2  \lvert\lvert \phi_{k} \rvert\rvert^2   \qquad&&\\
+>> 0 &\leq \lvert\lvert f \rvert\rvert^2 - \sum_{k=1}^N \lvert c_{k} \rvert^2\lvert\lvert \phi_{k} \rvert\rvert^2 \qquad&&\Big\vert +\sum_{k=1}^N \lvert c_{k} \rvert^2\lvert\lvert \phi_{k} \rvert\rvert^2 \\
 >> \sum_{k=1}^N \lvert c_{k} \rvert^2\lvert\lvert \phi_{k} \rvert\rvert^2 &\leq \lvert\lvert f \rvert\rvert ^2 \tag*{$\checkmark$}
 >>\end{alignat}$$
 >>This proves the first part of the theorem. For the second part we need to use the [[../Calculus/Series#^6499f9|bounded partial sums theorem]], such that we can state
@@ -264,7 +270,7 @@
 
 ^5b7f44
 
->[!example]- Example Fourier Series and Bessel's Inequality ([[../../../PDFs/howell2016.pdf#page=151|Source]])
+>[!example] Example Fourier Series and Bessel's Inequality ([[../../../PDFs/howell2016.pdf#page=151|Source]])
 >Let $f$ be any periodic, piecewise continuous function with period $p$, then we have the Fourier series
 >$$\mathcal{F}[f]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big]$$
 >with $\omega_{k}=\frac{k}{p}$
@@ -287,7 +293,7 @@
 >>   &= \int _{0}^p \cos^2(2\pi \omega_{k}t) \, dt \\
 >>   &= \int _{0}^p \frac{1+\cos(4\pi \omega_{k}t)}{2} \, dt \\
 >>   &= \int _{0}^p  \frac{1}{2} \, dt + \frac{1}{2}\int _{0}^p \cos(4\pi \omega_{k}t) \, dt \\ 
->>   &= \left[\frac{1}{2}t\right]_{0}^p + \frac{1}{2}\Big\left[ \frac{1}{4\pi \omega_{k}}\sin(4\pi \omega_{k}t)\Big \right]_{0}^p  \tag*{$\left(\omega_{k}= \frac{k}{p}\right)$} \\
+>>   &= \left[\frac{1}{2}t\right]_{0}^p + \frac{1}{2}\left[ \frac{1}{4\pi \omega_{k}}\sin(4\pi \omega_{k}t)\right]_{0}^p  \tag*{$\left(\omega_{k}= \frac{k}{p}\right)$} \\
 >>   &= \left[\frac{1}{2}t\right]_{0}^p + \frac{1}{2}\left[\frac{p}{4\pi k}\sin\left( \frac{4\pi k}{p}t\right)\right]_{0}^p \tag{$k>0$}\\
 >>   &= \frac{1}{2}p + \frac{1}{2}\left(\frac{p}{4\pi k}\underbrace{ \sin(4\pi k) }_{ =0 } - \frac{p}{4\pi k}\underbrace{ \sin(0) }_{ =0 }\right) \\
 >>   &= \frac{1}{2}p 

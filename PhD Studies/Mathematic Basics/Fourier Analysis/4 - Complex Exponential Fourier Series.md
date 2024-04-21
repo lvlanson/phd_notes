@@ -84,6 +84,8 @@
 > &= \frac{1}{p} \int _{0}^p f(t)e^{-i 2\pi \omega_{k}t} \, dt 
 >\end{align}$$
 
+^aaa10f
+
 >[!property] Property Inner Product with Exponential Representation  ([[../../../PDFs/howell2016.pdf#page=157|Source]])
 >Let $g$ be any periodic, piecewise continuous function with period $p$ with $n \in \mathbb{Z}$, then
 >$$\begin{align}

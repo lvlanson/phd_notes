@@ -26,15 +26,17 @@
           {
             "id": "292a49727b73487d",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
                 "mode": "source",
                 "source": true
-              }
+              },
+              "pinned": true
             },
-            "group": "d05361c51622cf84"
+            "group": "e779095316c0fb2d"
           },
           {
             "id": "49c20ff9ded5e11b",
@@ -62,6 +64,14 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "b68f0bd71f864390",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ],
         "currentTab": 1
@@ -85,19 +95,6 @@
               "pinned": true
             },
             "group": "1d2597f4fa86fdfb"
-          },
-          {
-            "id": "a15485bc6961bcc0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
-                "mode": "preview",
-                "source": true
-              }
-            },
-            "group": "d05361c51622cf84"
           },
           {
             "id": "7009acf792cc87fd",
@@ -125,9 +122,22 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "7e6d20d0b4018cb0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+                "mode": "preview",
+                "source": true
+              }
+            },
+            "group": "e779095316c0fb2d"
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -193,7 +203,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -210,7 +220,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -233,7 +243,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md"
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md"
               }
             }
           },
@@ -276,50 +286,19 @@
     }
   },
   "floating": {
-    "id": "e68b039b6a6043cd",
+    "id": "4b9e1bc340571d3d",
     "type": "floating",
     "children": [
       {
-        "id": "660274803c2f7fb0",
+        "id": "e7efe71e3287873e",
         "type": "window",
         "children": [
           {
-            "id": "e331a280ca46541b",
+            "id": "0adcd49e97239ea7",
             "type": "tabs",
             "children": [
               {
-                "id": "73ddf204747deb66",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
-                    "mode": "preview",
-                    "source": true
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2560,
-        "y": 0,
-        "width": 1280,
-        "height": 1440,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
-        "id": "cf5e6f0c5a028490",
-        "type": "window",
-        "children": [
-          {
-            "id": "394622e68fde42f6",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "fc4244cdb0c07302",
+                "id": "741970206c230401",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -332,22 +311,35 @@
           }
         ],
         "direction": "vertical",
-        "x": 2560,
-        "y": 0,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": -2
+        "x": 0,
+        "y": 960,
+        "width": 1080,
+        "height": 960,
+        "maximize": false,
+        "zoom": 0
       }
     ]
   },
   "active": "292a49727b73487d",
   "lastOpenFiles": [
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/3) Diskrete Zufallsgrößen.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
     "PDFs/howell2016.pdf",
+    "PDFs/liu2024.pdf",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
+    "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+    "Own Projects/ODE LVQ/Construction.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/Gibbs_Phenomenon.png",
+    "Pasted image 20240414215551.png",
     "index.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximation in Hilbert Spaces.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/orthogonal_plane.excalidraw.md",
@@ -356,7 +348,6 @@
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md",
     "Excalidraw/Drawing 2024-01-17 18.47.08.excalidraw.md",
@@ -364,30 +355,18 @@
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/Seminar 4.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/4) Stetige_Zufallsgrößen.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/3) Diskrete Zufallsgrößen.pdf",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/uniform_continuity.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/continuity.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Approximation_Motivation.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Ax Continuity.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures",
     "Pasted image 20240406135610.png",
-    "Untitled.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/periodic_odd_extension.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/periodic_even_function.png",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/basic_periodic_extension.png",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series (OLD).md",
-    "Own Projects/ODE LVQ/Figures/Pasted image 20240324185307.png",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/aufgabe_4_4.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures/aufgabe_4_3.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.tex",
     "Untitled.canvas"
   ]
 }

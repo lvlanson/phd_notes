@@ -1,10 +1,3 @@
->[!question]
-> 1. Definitionen Verteilungen: $p_{i} = p_{k}$?
-> 2. Defintion 4.13 $i \in \mathbb{N}_{0}$? Wir verwenden manchmal $i <0$
-> 3. Aufgabe 2 Lösung leichte Abweichung
-> 4. Aufgabe 3b Lösung leichte Abweichung
-> 5. Aufgabe 5 Lösung große Abweichung
-
 >[!def]- Definitionen Zufallsgrößen
 >>[!def] Definition Zufallsvariable $X$ (4.3)
 >> Eine Zufallsgröße $X$ mit $X: \Omega \to \mathbb{R}$ ist eine Abbildung, die jedem Elementarereignis $\omega \in \Omega$ eine reelle Zahl $x = X(\omega )$ zuordnet.
@@ -68,11 +61,17 @@
 >
 >>[!def] Definition Poissonverteilung (4.38)
 >>Die Zufallsgröße $X$ heißt poissonverteilt mit dem Parameter 
->>- $\lambda$ - Anzahl an zu erwartenden Ereignissen mit $\lambda = n\cdot p$
+>>- $\lambda$ - Anzahl an zu erwartenden Ereignissen mit $\lambda = n\cdot p$ (Erwartungswert)
 >>- $k$ - das Ereignis $A$ tritt $k$ mal ein in unabhängig wiederkehrenden Intervallen
 >> 
 >> wenn für die Einzelwahrscheinlichkeiten gilt
 >>$$p_{k}= P(X=k) = \frac{\lambda^k}{k!}e^{-\lambda}$$
+>>>[!remark]
+>>> Wir verwenden die Poissonverteilung wenn die Wahrscheinlichkeit der Versuche klein und die Anzahl der Versuche recht groß ist. Als Richtgröße nehmen wir
+>>> $$\begin{align}
+>>> p &<< 0.05 \\
+>>> n &>> 10
+>>>\end{align}$$
 >
 >>[!def] Definition Hypergeometrische Verteilung (4.45)
 >>Die Zufallsgröße $X$ heißt hypergeometrisch verteilt mit den Parametern 
@@ -156,52 +155,72 @@
 
 
 >[!example] Aufgabe (3)
->Die Wahrscheinlichkeit, dass ein Brennelement in einem Kernreaktor den Bedingungen einer Qualitätsprüfung nicht genügt, beträgt $0,0002$. Man ermittle die Wahrscheinlichkeit, dass...
->>[!note]- Wir erkennen die Binomialverteilung
->> und erfassen
->> - $A$ - genügt Qualitätsprüfung
->> - $\overline{A}$ - genügt Qualitätsprüfung nicht
->> - $P(A) = 0.0002$
->> - $P(\overline{A}) = 0.9998$
+>Die Wahrscheinlichkeit, dass ein Brennelement in einem Kernreaktor den Bedingungen einer Qualitätsprüfung nicht genügt, beträgt $0.0002$. Man ermittle die Wahrscheinlichkeit, dass...
 >
->>[!note] Alternativ geht auch Poissonverteilung mit $n \cdot p = \lambda$
+>>[!note] WIr erkennen die Poissonverteilung
+>> Wir sehen, dass die Wahrscheinlichkeit unsere Bedingung für die Poissonverteilung erfüllt
+>> $$0 < p < 0.5$$
+>> und in den Teilaufgaben ist die Anzahl der Versuche sehr hoch. Wir erfassen daher
+>> $$p = 0.0002$$
 >
 >1. höchstens 2 von 5000 dieser Brennelemente die Qualitätsbedingungen nicht erfüllt.
 >
->>[!example]- Lösung 
->>Wir haben $n=5000$ und $0 \leq k \leq 2$
+>>[!example] Lösung 
+>>Wir haben $n=5000$ und $0 \leq k \leq 2$. Wir berechnen
+>>$$\begin{align}
+>> \lambda &= n \cdot p \\
+>> &= 5000 \cdot 0.0002 \\
+>> &= 1
+>>\end{align}$$ 
+>>Somit können wir die Poissonverteilung nun einsetzen,
 >> $$\begin{align}
->> p_{[0,2]} &= P(X \leq 2) \\
->> &= \sum_{k=0}^2 \binom{5000}{k}\cdot 0.0002^k \cdot 0.9998^{5000-k} \\
->> &= 0.919717000274 \tag*{$\blacktriangleleft$}
+>>P(X \leq 2) &= \sum_{k=0}^2 \frac{\lambda^{k}}{k!} e^{-\lambda}\\
+>> &= \sum_{k=0}^2 \frac{1}{k!} e^{-1}\\
+>> &= 0.9196986029 \tag*{$\blacktriangleleft$}
 >>\end{align}$$
 >
 >2. genau 1 von 1000 dieser Brennelemente die Qualitätsbedingungen nicht erfüllt.
 >
->>[!example]- Lösung 
->>Wir haben $n=1000$ und $k=1$
+>>[!example] Lösung 
+>>Wir haben $n=1000$ und $k=1$. Wir berechnen
 >>$$\begin{align}
->> p_{1} &= P(X = 1) \\
->>  &= \binom{1000}{1} \cdot 0.0002^1 \cdot 0.9998^{999} \\
->>  &= 0.163775630415 \tag*{$\blacktriangleleft$}
+>> \lambda &= n \cdot p \\
+>> &= 1000 \cdot 0.0002 \\
+>> &= \frac{1}{5}
+>>\end{align}$$
+>>Somit können wir die Poissonverteilung nun einsetzen,
+>>$$\begin{align}
+>> P(X = 1) &= \frac{\lambda^{k}}{k!} e^{-\lambda} \\
+>>  &= \frac{1}{5}e^{-1/5} \\
+>>  &= 0.1637461506 \tag*{$\blacktriangleleft$}
 >>\end{align}$$ 
 >
 >3. keines von 100 dieser Brennelemente die Qualitätsbedingungen nicht erfüllt.
 >
->>[!example]- Lösung
->>Wir haben $n=100$ und $k=0$
+>>[!example] Lösung
+>>Wir haben $n=100$ und $k=0$. Wir berechnen
 >>$$\begin{align}
->> p_{0} &= \binom{100}{0}0.0002^0 \cdot 0.9998^{100} \\
->> &= 0.98019671265 \tag*{$\blacktriangleleft$}
+>> \lambda &= n \cdot p \\
+>> &= 100 \cdot 0.0002 \\
+>> &= \frac{1}{50}
+>>\end{align}$$
+>>Somit können wir die Poissonverteilung nun einsetzen,
+>>$$\begin{align}
+>>P(X = 0) &= \frac{\lambda^{k}}{k!} e^{-\lambda}  \\
+>> &= \frac{\frac{1}{50}^{0}}{0!} e^{-1/50} \\
+>> &= e^{-1/50} \\
+>> &= 0.9801986733\tag*{$\blacktriangleleft$}
 >>\end{align}$$
 
 >[!example] Aufgabe (4)
 >An einer Tankstelle kommen zwischen 16:00 und 18:00 Uhr durchschnittlich 4 Fahrzeuge pro Minute an. Die Anzahl der in einer Minute ankommenden Fahrzeuge sei poissonverteilt. Bestimmen Sie die Wahrscheinlichkeit, dass
 >
->>[!note] Gegeben ist die Poissonverteilung
+>>[!note]- Gegeben ist die Poissonverteilung
 >>Wir erfassen die Größen
 >>- $A$ - Fahrzeug erscheint zwischen 16:00 und 18:00 Uhr
 >>- $\lambda = 4$
+>>
+>>Wir bemerken, dass $n$ sehr hoch sein muss, wenn 4 Fahrzeuge pro Minute kommen.
 >
 >1. kein Fahrzeug ankommt.
 >
@@ -252,10 +271,10 @@
 
 >[!example] Aufgabe
 >Von 100 Losen gewinnt jedes fünfte Los. Es werden 3 Lose gezogen. Wie groß ist dieWahrscheinlichkeit,t mindestens einen Gewinn zu erhalten? Verwenden Sie die hypergeometrische Verteilung und die Binomialverteilung.
->>[!example]- Lösung Hypergeometrische Verteilung ????
+>>[!example]- Lösung Hypergeometrische Verteilung 
 >>Wir erfassen die Parameter
 >> - $N = 100$ Lose insgesamt
->> - $M=5$ Gewinnlose von $100$
+>> - $M=20$ Gewinnlose von $100$
 >> - $n=3$ Lose werden gezogen 
 >> - $k \in[1,3]$ Gewinnlose werden gesucht
 >>
@@ -270,17 +289,18 @@
 >> P(1 \leq X) &= 1 - P(\overline{1 \leq X}) \\
 >> &= 1 - P(X < 1)  \\
 >> &= 1 - P(X = 0) \tag{k=0}\\
->> &= 1 - \frac{\binom{5}{0}\binom{85}{3}}{\binom{90}{3}} \\
->> &= 0.159261150834 \tag*{$\blacktriangleleft$}
+>> &= 1 - \frac{\binom{20}{0}\binom{80}{3}}{\binom{90}{3}} \\
+>> &= \frac{3977}{8085} \\
+>> &\approx 0.49\tag*{$\blacktriangleleft$}
 >>\end{align}$$
 >
->>[!example]- Lösung Binomialverteilung ???
+>>[!example]- Lösung Binomialverteilung
 >>Wir erfassen die Parameter
 >> - $A$ -  Ereignis ein Gewinn zu ziehen
 >> - $\overline{A}$ - Ereignis keinen Gewinn zu ziehen
 >> - $n=3$ Lose werden gezogen
 >> - $k \in [1,3]$ Gewinne werden gesucht
->> - $p = P(A) =\frac{5}{100}= \frac{1}{20}$
+>> - $p = P(A) =\frac{1}{5}$
 >>
 >>Wir verwenden die Binomialdistribution und das Gegenereignis
 >>$$\begin{align}
@@ -288,8 +308,9 @@
 >> &= 1 -P(\overline{1 \leq X}) \\
 >> &= 1 - P(X < 1) \\
 >> &= 1 - P(X = 0) \\
->> &= 1 - \left( \binom{3}{0} \left( \frac{1}{20} \right)^0 \left( \frac{19}{20} \right)^3 \right) \\
->> &= 0.142625 \tag*{$\blacktriangleleft$}
+>> &= 1 - \left( \binom{3}{0} \left( \frac{1}{5} \right)^0 \left( \frac{4}{5} \right)^3 \right) \\
+>> &= \frac{61}{125} \\
+>> &\approx 0.49\tag*{$\blacktriangleleft$}
 >>\end{align}$$
 
 >[!example] Aufgabe 
