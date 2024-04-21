@@ -157,7 +157,7 @@
 >[!example] Aufgabe (3)
 >Die Wahrscheinlichkeit, dass ein Brennelement in einem Kernreaktor den Bedingungen einer Qualitätsprüfung nicht genügt, beträgt $0.0002$. Man ermittle die Wahrscheinlichkeit, dass...
 >
->>[!note] WIr erkennen die Poissonverteilung
+>>[!note]- WIr erkennen die Poissonverteilung
 >> Wir sehen, dass die Wahrscheinlichkeit unsere Bedingung für die Poissonverteilung erfüllt
 >> $$0 < p < 0.5$$
 >> und in den Teilaufgaben ist die Anzahl der Versuche sehr hoch. Wir erfassen daher
@@ -165,7 +165,7 @@
 >
 >1. höchstens 2 von 5000 dieser Brennelemente die Qualitätsbedingungen nicht erfüllt.
 >
->>[!example] Lösung 
+>>[!example]- Lösung 
 >>Wir haben $n=5000$ und $0 \leq k \leq 2$. Wir berechnen
 >>$$\begin{align}
 >> \lambda &= n \cdot p \\
@@ -181,7 +181,7 @@
 >
 >2. genau 1 von 1000 dieser Brennelemente die Qualitätsbedingungen nicht erfüllt.
 >
->>[!example] Lösung 
+>>[!example]- Lösung 
 >>Wir haben $n=1000$ und $k=1$. Wir berechnen
 >>$$\begin{align}
 >> \lambda &= n \cdot p \\
@@ -197,7 +197,7 @@
 >
 >3. keines von 100 dieser Brennelemente die Qualitätsbedingungen nicht erfüllt.
 >
->>[!example] Lösung
+>>[!example]- Lösung
 >>Wir haben $n=100$ und $k=0$. Wir berechnen
 >>$$\begin{align}
 >> \lambda &= n \cdot p \\
