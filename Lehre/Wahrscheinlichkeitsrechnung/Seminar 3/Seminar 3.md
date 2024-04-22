@@ -269,7 +269,7 @@
 >> &= 0.761896694446 \tag*{$\blacktriangleleft$}
 >>\end{align}$$
 
->[!example] Aufgabe
+>[!example] Aufgabe (5)
 >Von 100 Losen gewinnt jedes fünfte Los. Es werden 3 Lose gezogen. Wie groß ist dieWahrscheinlichkeit,t mindestens einen Gewinn zu erhalten? Verwenden Sie die hypergeometrische Verteilung und die Binomialverteilung.
 >>[!example]- Lösung Hypergeometrische Verteilung 
 >>Wir erfassen die Parameter
@@ -296,7 +296,7 @@
 >
 >>[!example]- Lösung Binomialverteilung
 >>Wir erfassen die Parameter
->> - $A$ -  Ereignis ein Gewinn zu ziehen
+>> - $A$ - Ereignis ein Gewinn zu ziehen
 >> - $\overline{A}$ - Ereignis keinen Gewinn zu ziehen
 >> - $n=3$ Lose werden gezogen
 >> - $k \in [1,3]$ Gewinne werden gesucht
@@ -313,7 +313,7 @@
 >> &\approx 0.49\tag*{$\blacktriangleleft$}
 >>\end{align}$$
 
->[!example] Aufgabe 
+>[!example] Aufgabe (6)
 >Gegeben seien die Einzelwahrscheinlichkeiten einer Zufallsgröße $X$.
 >
 >| $i$   | $-3$   | $-2$  | $-1$  | $1$   | $2$   | $4$   | $5$   |
