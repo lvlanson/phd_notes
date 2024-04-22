@@ -6,6 +6,8 @@
 > and
 > $$c_{k}=\frac{1}{p} \int f(t)e^{-i2\pi \omega_{k}t} \, dt $$
 
+^cc2d06
+
 >[!remark]- Deriving the Complex Exponential Form of the Fourier Series ([[../../../PDFs/howell2016.pdf#page=155|Source]])
 >Let $f$ be a periodic, piecewise continuous function with period $p$ and the trigonometric Fourier series
 >$$\mathcal{F}[f]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big] \tag{1}$$
@@ -89,8 +91,8 @@
 >[!property] Property Inner Product with Exponential Representation  ([[../../../PDFs/howell2016.pdf#page=157|Source]])
 >Let $g$ be any periodic, piecewise continuous function with period $p$ with $n \in \mathbb{Z}$, then
 >$$\begin{align}
-> \left\langle g(t)\,,\,e^{i_{2}\pi \omega_{n}t} \right\rangle &= \int _{0}^p g(t)\left(e^{i_{2}\pi \omega_{n}t}\right)^* \, dt   \\
-> &= \int _{0}^p g(t)e^{-i_{2}\pi \omega_{n}t} \, dt
+> \left\langle g(t)\,,\,e^{i 2\pi \omega_{n}t} \right\rangle &= \int _{0}^p g(t)\left(e^{i_{2}\pi \omega_{n}t}\right)^* \, dt   \\
+> &= \int _{0}^p g(t)e^{-i 2\pi \omega_{n}t} \, dt
 >\end{align}$$
 
 >[!property] Property Exponential Representations form an Orthogonal Set ([[../../../PDFs/howell2016.pdf#page=157|Source]])

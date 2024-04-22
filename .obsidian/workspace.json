@@ -24,21 +24,6 @@
             "group": "1d2597f4fa86fdfb"
           },
           {
-            "id": "292a49727b73487d",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
-                "mode": "source",
-                "source": true
-              },
-              "pinned": true
-            },
-            "group": "e779095316c0fb2d"
-          },
-          {
             "id": "49c20ff9ded5e11b",
             "type": "leaf",
             "pinned": true,
@@ -54,12 +39,27 @@
             "group": "c52c8a18d0b967ab"
           },
           {
+            "id": "292a49727b73487d",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
+                "mode": "source",
+                "source": true
+              },
+              "pinned": true
+            },
+            "group": "e779095316c0fb2d"
+          },
+          {
             "id": "285390de6d4626fb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
                 "mode": "source",
                 "source": true
               }
@@ -74,7 +74,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "d0adceee64becfe7",
@@ -112,32 +112,34 @@
             "group": "c52c8a18d0b967ab"
           },
           {
+            "id": "7e6d20d0b4018cb0",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
+                "mode": "preview",
+                "source": true
+              },
+              "pinned": true
+            },
+            "group": "e779095316c0fb2d"
+          },
+          {
             "id": "338b8a9b22df77f3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
                 "mode": "preview",
                 "source": true
               }
             }
-          },
-          {
-            "id": "7e6d20d0b4018cb0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
-                "mode": "preview",
-                "source": true
-              }
-            },
-            "group": "e779095316c0fb2d"
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -203,7 +205,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+                "file": "PDFs/howell2016.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -220,7 +222,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+                "file": "PDFs/howell2016.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -243,7 +245,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md"
+                "file": "PDFs/howell2016.pdf"
               }
             }
           },
@@ -312,30 +314,92 @@
         ],
         "direction": "vertical",
         "x": 0,
-        "y": 960,
+        "y": 480,
         "width": 1080,
         "height": 960,
+        "maximize": false,
+        "zoom": 0
+      },
+      {
+        "id": "d15252ce644b0355",
+        "type": "window",
+        "children": [
+          {
+            "id": "af6e569b5037a336",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "52f5ac9d18857fda",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "PDFs/howell2016.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 2560,
+        "y": 0,
+        "width": 1280,
+        "height": 1440,
+        "maximize": false,
+        "zoom": 0
+      },
+      {
+        "id": "1aae9f13fcfe934b",
+        "type": "window",
+        "children": [
+          {
+            "id": "6ca20c55dbad2420",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3b2eaba23545d4d1",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+                    "mode": "preview",
+                    "source": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 768,
+        "y": 336,
+        "width": 1024,
+        "height": 800,
         "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "292a49727b73487d",
+  "active": "52f5ac9d18857fda",
   "lastOpenFiles": [
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/3) Diskrete Zufallsgrößen.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
-    "PDFs/howell2016.pdf",
-    "PDFs/liu2024.pdf",
     "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/5_1_proof_prelim.png",
+    "PDFs/howell2016.pdf",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
+    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/3) Diskrete Zufallsgrößen.pdf",
+    "PDFs/liu2024.pdf",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
     "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
     "Own Projects/ODE LVQ/Construction.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/Gibbs_Phenomenon.png",
@@ -355,7 +419,6 @@
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/Seminar 4.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/4) Stetige_Zufallsgrößen.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/uniform_continuity.png",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/continuity.png",
@@ -364,7 +427,6 @@
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures",
     "Pasted image 20240406135610.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/periodic_odd_extension.png",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/periodic_even_function.png",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.pdf",
     "Untitled.canvas"
