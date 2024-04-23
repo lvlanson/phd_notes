@@ -1,126 +1,35 @@
 {
   "main": {
-    "id": "e15b9eba47756e47",
+    "id": "7d58eae3b9b19381",
     "type": "split",
     "children": [
       {
-        "id": "7675683e84a8c351",
+        "id": "7bd61af7779458fb",
         "type": "tabs",
-        "dimension": 48.29093799682035,
         "children": [
           {
-            "id": "e02a88fd0e5f9dd5",
+            "id": "95ed2ce24e0ddbdb",
             "type": "leaf",
             "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
-                "mode": "source",
-                "source": true
-              },
-              "pinned": true
-            },
-            "group": "1d2597f4fa86fdfb"
-          },
-          {
-            "id": "49c20ff9ded5e11b",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
-                "mode": "source",
-                "source": true
-              },
-              "pinned": true
-            },
-            "group": "c52c8a18d0b967ab"
-          },
-          {
-            "id": "292a49727b73487d",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
-                "mode": "source",
-                "source": true
-              },
-              "pinned": true
-            },
-            "group": "e779095316c0fb2d"
-          },
-          {
-            "id": "285390de6d4626fb",
-            "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
                 "mode": "source",
                 "source": true
-              }
+              },
+              "pinned": true
             },
-            "group": "5d48850d421f8278"
+            "group": "cd0810d201c81b09"
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
-        "id": "d0adceee64becfe7",
+        "id": "b01cc174f1cfc738",
         "type": "tabs",
-        "dimension": 51.70906200317965,
         "children": [
           {
-            "id": "a5609126f72395a1",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
-                "mode": "preview",
-                "source": true
-              },
-              "pinned": true
-            },
-            "group": "1d2597f4fa86fdfb"
-          },
-          {
-            "id": "7009acf792cc87fd",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
-                "mode": "preview",
-                "source": true
-              },
-              "pinned": true
-            },
-            "group": "c52c8a18d0b967ab"
-          },
-          {
-            "id": "7e6d20d0b4018cb0",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
-                "mode": "preview",
-                "source": true
-              },
-              "pinned": true
-            },
-            "group": "e779095316c0fb2d"
-          },
-          {
-            "id": "338b8a9b22df77f3",
+            "id": "db50a6b3bd9b6162",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -130,32 +39,23 @@
                 "source": true
               }
             },
-            "group": "5d48850d421f8278"
-          },
-          {
-            "id": "ec52f8b0c201b9e4",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
+            "group": "cd0810d201c81b09"
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "221ec14e4da3355e",
+    "id": "fb0df03cbaed5ba2",
     "type": "split",
     "children": [
       {
-        "id": "c427b75a3f281f63",
+        "id": "a468923a9216eb4d",
         "type": "tabs",
         "children": [
           {
-            "id": "1f85b19b667b36e1",
+            "id": "9bee9af6a562af96",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -165,7 +65,7 @@
             }
           },
           {
-            "id": "207eb5e776d0b4f3",
+            "id": "d9405ac162a385da",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -180,7 +80,7 @@
             }
           },
           {
-            "id": "728450d3835b876f",
+            "id": "6ad8b9b50be3f1b6",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -191,47 +91,47 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5
+    "width": 300
   },
   "right": {
-    "id": "93b677ed21c6c6cb",
+    "id": "61443583267748fc",
     "type": "split",
     "children": [
       {
-        "id": "d5bc62d1d73105da",
+        "id": "3485a94701a9a891",
         "type": "tabs",
         "children": [
           {
-            "id": "8c5134ddf958aa4b",
+            "id": "73e4e16de9af5220",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
-                "unlinkedCollapsed": false
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "ca8496424fa2bf5a",
+            "id": "7f45c41bea430021",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "ef66846122e108b4",
+            "id": "fba2d8ec6aecc679",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -242,33 +142,16 @@
             }
           },
           {
-            "id": "945b80da5a035a1a",
+            "id": "3201a299bcc6970a",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md"
+                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md"
               }
             }
-          },
-          {
-            "id": "ddfdce66340201fb",
-            "type": "leaf",
-            "state": {
-              "type": "Saved Queries View",
-              "state": {}
-            }
-          },
-          {
-            "id": "553010a0485c6a1a",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -277,32 +160,92 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "marp-slides:Show Slide Preview": false,
       "webpage-html-export:Export Vault to HTML": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "marp-slides:Show Slide Preview": false
+      "command-palette:Open command palette": false
     }
   },
   "floating": {
-    "id": "0febc463639cd110",
+    "id": "9a9c4302925637bf",
     "type": "floating",
     "children": [
       {
-        "id": "a5c2a76c71146e87",
+        "id": "114e303b3b057275",
         "type": "window",
         "children": [
           {
-            "id": "9a454feb2317df63",
+            "id": "43c9073b97317763",
             "type": "tabs",
             "children": [
               {
-                "id": "d2932573ebd42d7c",
+                "id": "4224f94e64436331",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 2560,
+        "y": 0,
+        "width": 1280,
+        "height": 1440,
+        "maximize": false,
+        "zoom": 0
+      },
+      {
+        "id": "c107d4ab6cd0a1c4",
+        "type": "window",
+        "children": [
+          {
+            "id": "fb43e674f72dcc6e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "9d0fef7d443ae7e0",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
+                    "mode": "preview",
+                    "source": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 2560,
+        "y": 0,
+        "width": 1280,
+        "height": 1440,
+        "maximize": false,
+        "zoom": 0
+      },
+      {
+        "id": "17ae7c39ce3c5be3",
+        "type": "window",
+        "children": [
+          {
+            "id": "f2d7c4f14b594de0",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "6fd4b9937e690ff5",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -315,93 +258,22 @@
           }
         ],
         "direction": "vertical",
-        "x": 0,
+        "x": 3840,
         "y": 0,
-        "width": 1080,
-        "height": 960,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
-        "id": "31810a07881f86b4",
-        "type": "window",
-        "children": [
-          {
-            "id": "fdd0e297b3036549",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "451a9c0729db3032",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
-                    "mode": "source",
-                    "source": true
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 4319,
-        "y": 5,
-        "width": 960,
-        "height": 1080,
+        "width": 1280,
+        "height": 1440,
         "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "285390de6d4626fb",
+  "active": "9d0fef7d443ae7e0",
   "lastOpenFiles": [
-    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
-    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.pdf",
-    "Dokumentation.md",
-    "Sachbericht Promotion.md",
-    "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
-    "PhD Studies/Machine Learning/Activation Functions/Softmax.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
-    "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
-    "PhD Studies/Machine Learning/Activation Functions/Logistic Sigmoid.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/3) Diskrete Zufallsgrößen.pdf",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
     "PDFs/howell2016.pdf",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/5_1_proof_prelim.png",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
-    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
-    "PDFs/liu2024.pdf",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
-    "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
-    "Own Projects/ODE LVQ/Construction.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/Gibbs_Phenomenon.png",
-    "Pasted image 20240414215551.png",
-    "index.md",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximation in Hilbert Spaces.md",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/orthogonal_plane.excalidraw.md",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/orthogonal_plane.excalidraw.png",
-    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/1 - Maximum Inner Product Search.md",
-    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/4) Stetige_Zufallsgrößen.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.png",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/uniform_continuity.png",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/continuity.png",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Approximation_Motivation.png",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures",
-    "Pasted image 20240406135610.png",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/figures/periodic_odd_extension.png",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures",
-    "Untitled.canvas"
+    "Empty File"
   ]
 }

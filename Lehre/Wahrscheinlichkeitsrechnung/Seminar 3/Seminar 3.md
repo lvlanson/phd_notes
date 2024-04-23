@@ -42,7 +42,7 @@
 >> D^2(X) = E(X^2)- E(X)^2
 >>\end{align}$$
 
->[!def]- Definitionen Verteilungsfunktionen
+>[!def] Definitionen Verteilungsfunktionen
 >>[!def] Definition Binomialverteilung (4.34)
 >> Die Zufallsgröße $X$ heißt binomialverteilt mit den Parametern
 >> - $n$ - Gesamtanzahl an Versuchen mit $n \in \mathbb{N}_{0}$
@@ -67,11 +67,17 @@
 >> wenn für die Einzelwahrscheinlichkeiten gilt
 >>$$p_{k}= P(X=k) = \frac{\lambda^k}{k!}e^{-\lambda}$$
 >>>[!remark]
->>> Wir verwenden die Poissonverteilung wenn die Wahrscheinlichkeit der Versuche klein und die Anzahl der Versuche recht groß ist. Als Richtgröße nehmen wir
->>> $$\begin{align}
->>> p &<< 0.05 \\
->>> n &>> 10
->>>\end{align}$$
+>>>> Faustregel aus Skript S.53
+>>>> $$\begin{align}
+>>>> np &<10 \\
+>>>> n &>1500 \cdot p
+>>>>\end{align}$$
+>>>
+>>>> Faustregel aus Uniskript online
+>>>> $$\begin{align}
+>>>> p &<< 0.05 \\
+>>>> n &>> 10
+>>>>\end{align}$$
 >
 >>[!def] Definition Hypergeometrische Verteilung (4.45)
 >>Die Zufallsgröße $X$ heißt hypergeometrisch verteilt mit den Parametern 

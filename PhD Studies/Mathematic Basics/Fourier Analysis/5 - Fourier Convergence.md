@@ -35,7 +35,24 @@
 >> \sum_{k=M}^N c_{k}e^{i 2 \pi \omega_{k}t_{0}}&= \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)D_{M,N}(x)\, dx +f(t_{0}) \tag{Lemma 5.1.3} \\
 >>\sum_{k=M}^N c_{k}e^{i 2 \pi \omega_{k}t_{0}}&= \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f_{0}(x)\Big)D_{-N,N}(x)\, dx + \frac{1}{2}(f_{0}^- + f_{0}^+) \tag{Lemma 5.1.4}
 >>\end{align}$$
->>where [[5.1 Proof Preliminaries#^fa5a3e|lemma 5.1.4]] is the result for the case that $t_0$ is located at a discontinuity.
+>>where [[5.1 Proof Preliminaries#^fa5a3e|lemma 5.1.4]] is the result for the case that $t_0$ is located at a discontinuity. We now prove the claim from (1)
+>>$$\begin{align}
+>> \lim_{ \substack{N \to \infty \\ M \to -\infty }} \sum_{k=M}^N c_{k}e^{i 2\pi \omega_{k} t_{0}} &= \lim_{ \substack{N \to \infty \\ M \to -\infty }} \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)D_{M,N}(x)\, dx +f(t_{0})  = f(t_{0})
+>>\end{align}$$
+>>Or equivalently when we remove $f(t_0)$ from both sides.
+>>$$\lim_{ \substack{N \to \infty \\ M \to -\infty }} \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)D_{M,N}(x)\, dx = 0$$
+>>Note [[5.1 Proof Preliminaries#^bb8104|lemma 5.1.1]] allows us to [[5.1 Proof Preliminaries#^303c05|reformulate the Dirichlet kernel]], hence we get
+>>$$\begin{align}
+>> \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)D_{M,N}(x)\, dx &=  \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)\left(\frac{e^{-iM \lambda x}-e^{-i(N+1)\gamma x}}{p(1-e^{-i \gamma x})}\right)\, dx  \\
+>>  &=  \frac{1}{p}\int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)\left(\frac{e^{-iM \lambda x}-e^{-i(N+1)\gamma x}}{1-e^{-i \gamma x}}\right)\, dx
+>>\end{align}$$
+>>We denote $g(x) = \dfrac{f(t_{0}+x)-f_{0}(x)}{1-e^{i\gamma x}}$ and can reformulate
+>>$$\begin{align}
+>> &= \frac{1}{p} \int _{-p/2}^{p/2}g(x)e^{-iM\gamma x} \, dx - \frac{1}{p} \int _{-p/2}^{p/2} g(x)e^{i(N+1)\gamma x} \, dx 
+>>\end{align}$$
+>>where $\gamma=\frac{2\pi}{p}$. If we can show that 
+>>$$\lim_{ \substack{K \to \pm\infty }}  \int _{-p/2}^{p/2}g(x)e^{-iK\gamma x} = 0$$
+>> then the statement $(1)$ holds for the case that our function is continuous at $t_{0}$
 
 >[!theorem] Theorem Pointwise Convergence for Trigonometric Series ([[../../../PDFs/howell2016.pdf#page=166|Source]])
 >Let $f$ be a periodic, piecewise continuous function with period $p$ and $\omega_{k}= \frac{k}{p}$. Further assume, that $f$ is piecewise smooth on an interval $(a,b)$, and let $t_{0}$ be any point in that interval. Then the trigonometric Fourier series for $f$ (see [[1 - Classical Fourier Series#^046566|definition trigonometric Fourier series]])
