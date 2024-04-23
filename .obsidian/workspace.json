@@ -63,7 +63,8 @@
                 "mode": "source",
                 "source": true
               }
-            }
+            },
+            "group": "5d48850d421f8278"
           }
         ],
         "currentTab": 3
@@ -128,6 +129,15 @@
                 "mode": "preview",
                 "source": true
               }
+            },
+            "group": "5d48850d421f8278"
+          },
+          {
+            "id": "ec52f8b0c201b9e4",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
             }
           }
         ],
@@ -279,25 +289,98 @@
       "marp-slides:Show Slide Preview": false
     }
   },
+  "floating": {
+    "id": "0febc463639cd110",
+    "type": "floating",
+    "children": [
+      {
+        "id": "a5c2a76c71146e87",
+        "type": "window",
+        "children": [
+          {
+            "id": "9a454feb2317df63",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "d2932573ebd42d7c",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "PDFs/howell2016.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 1080,
+        "height": 960,
+        "maximize": false,
+        "zoom": 0
+      },
+      {
+        "id": "31810a07881f86b4",
+        "type": "window",
+        "children": [
+          {
+            "id": "fdd0e297b3036549",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "451a9c0729db3032",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
+                    "mode": "source",
+                    "source": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 4319,
+        "y": 5,
+        "width": 960,
+        "height": 1080,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "285390de6d4626fb",
   "lastOpenFiles": [
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/3) Diskrete Zufallsgrößen.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.pdf",
+    "Dokumentation.md",
+    "Sachbericht Promotion.md",
+    "Own Projects/ODE LVQ/Notes On ODE LVQ.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
+    "PhD Studies/Machine Learning/Activation Functions/Softmax.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "PhD Studies/Machine Learning/Loss Functions/Binary Cross Entropy.md",
+    "PhD Studies/Machine Learning/Activation Functions/Logistic Sigmoid.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/3) Diskrete Zufallsgrößen.pdf",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
     "PDFs/howell2016.pdf",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/5_1_proof_prelim.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
     "PhD Studies/Mathematic Basics/Calculus/Integration.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
     "PDFs/liu2024.pdf",
     "PhD Studies/Mathematic Basics/Functional Analysis/Functional Analysis Basics.md",
     "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
-    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
     "Own Projects/ODE LVQ/Construction.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/Gibbs_Phenomenon.png",
     "Pasted image 20240414215551.png",
@@ -307,13 +390,7 @@
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/orthogonal_plane.excalidraw.png",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/1 - Maximum Inner Product Search.md",
     "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search.md",
-    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 - Anisotropic MIPS Vector Quantization.md",
-    "PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/3 a - Anisotropic QUIPS Analysis.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
-    "Excalidraw/(REVIEW) Stance Classification Model with Knowledge-aware Multi-feature Attention Network 2023-12-04 16.29.58.excalidraw.md",
-    "Excalidraw/Drawing 2024-01-17 18.47.08.excalidraw.md",
-    "Excalidraw/Drawing 2024-04-12 12.55.15.excalidraw.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/Seminar 4.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/4) Stetige_Zufallsgrößen.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/Figures/Hilbert_Projection_Theorem.excalidraw.png",
@@ -325,7 +402,6 @@
     "Pasted image 20240406135610.png",
     "PhD Studies/Mathematic Basics/Fourier Analysis/figures/periodic_odd_extension.png",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/figures",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Lösungen Zusatz.pdf",
     "Untitled.canvas"
   ]
 }

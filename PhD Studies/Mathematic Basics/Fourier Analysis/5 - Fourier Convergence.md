@@ -16,6 +16,26 @@
 >period $p$ and $\omega_{k}= \frac{k}{p}$. Further assume, that $f$ is piecewise smooth on an interval $(a,b)$, and let $t_{0}$ be any point in that interval. Then
 >1. If $f(t)$ is continuous at $t=t_{0}$, then $\mathcal{F}[f]|_{t_{0}}$ converges pointwise, i.e. $$\sum_{k=-\infty}^\infty c_{k}e^{i 2 \pi \omega_{k}t_{0}}=f(t_{0})$$
 >2. If $f(t)$ has a jump discontinuity at $t=t_{0}$, then $$\lim_{ N \to \infty } \sum_{k=-N}^N c_{k}e^{i 2 \pi \omega_{k}t_{0}} = \frac{1}{2}\Bigg[\lim_{ \tau \to t_{0}^-}f(\tau) + \lim_{ \tau \to \tau_{0}^+ }f(\tau)  \Bigg]$$
+>
+>>[!proof]
+>>This proof makes use of [[5.1 Proof Preliminaries| a collection of results]] tailored for the upcoming assertions. Denote
+>>$$\begin{align}
+>> f_{0}^- &= \lim_{ x \to 0^- } f(t_{0}+x) \\ 
+>> f_{0}^+ &= \lim_{ x \to 0^+ } f(t_{0}+x)  
+>>\end{align}$$
+>>and
+>>$$f_{0}(x) = \begin{cases}
+>> f_{0}^- &  \text{ if } x < 0 \\
+>> f_{0}^+ & \text{ if } > 0 
+>>\end{cases}$$
+>>We first note the [[5.1 Proof Preliminaries#^8c3eb2| representation of the Fourier coefficients with Dirichlet kernels]]
+>>$$\sum_{k=M}^N c_{k}e^{i 2\pi \omega_{k} t_{0}}= \int _{-p/2}^{p/2} f(t_{0}+x)D_{M,N}(x) \, dx $$
+>>Then we state [[5.1 Proof Preliminaries#^ce82c1|lemma 5.1.3]] and [[5.1 Proof Preliminaries#^fa5a3e|lemma 5.1.4]] as results from [[5.1 Proof Preliminaries#^8c3eb2| Dirichlet kernel representation]].
+>> $$\begin{align}
+>> \sum_{k=M}^N c_{k}e^{i 2 \pi \omega_{k}t_{0}}&= \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)D_{M,N}(x)\, dx +f(t_{0}) \tag{Lemma 5.1.3} \\
+>>\sum_{k=M}^N c_{k}e^{i 2 \pi \omega_{k}t_{0}}&= \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f_{0}(x)\Big)D_{-N,N}(x)\, dx + \frac{1}{2}(f_{0}^- + f_{0}^+) \tag{Lemma 5.1.4}
+>>\end{align}$$
+>>where [[5.1 Proof Preliminaries#^fa5a3e|lemma 5.1.4]] is the result for the case that $t_0$ is located at a discontinuity.
 
 >[!theorem] Theorem Pointwise Convergence for Trigonometric Series ([[../../../PDFs/howell2016.pdf#page=166|Source]])
 >Let $f$ be a periodic, piecewise continuous function with period $p$ and $\omega_{k}= \frac{k}{p}$. Further assume, that $f$ is piecewise smooth on an interval $(a,b)$, and let $t_{0}$ be any point in that interval. Then the trigonometric Fourier series for $f$ (see [[1 - Classical Fourier Series#^046566|definition trigonometric Fourier series]])
