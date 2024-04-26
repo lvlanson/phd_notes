@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
                 "mode": "source",
                 "source": true
               },
@@ -34,7 +34,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
                 "mode": "preview",
                 "source": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md"
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md"
               }
             }
           }
@@ -199,7 +199,7 @@
         ],
         "direction": "vertical",
         "x": 2560,
-        "y": 0,
+        "y": 32,
         "width": 1280,
         "height": 1440,
         "maximize": false,
@@ -230,7 +230,7 @@
         ],
         "direction": "vertical",
         "x": 2560,
-        "y": 0,
+        "y": 32,
         "width": 1280,
         "height": 1440,
         "maximize": false,
@@ -262,16 +262,16 @@
         "y": 0,
         "width": 1280,
         "height": 1440,
-        "maximize": false,
+        "maximize": true,
         "zoom": 0
       }
     ]
   },
-  "active": "9d0fef7d443ae7e0",
+  "active": "db50a6b3bd9b6162",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
     "PDFs/howell2016.pdf",
     "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Empty File"
