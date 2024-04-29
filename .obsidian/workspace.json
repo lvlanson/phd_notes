@@ -201,7 +201,7 @@
         ],
         "direction": "vertical",
         "x": 2560,
-        "y": 0,
+        "y": 32,
         "width": 1280,
         "height": 1440,
         "maximize": false,
@@ -233,7 +233,7 @@
         "y": 0,
         "width": 1280,
         "height": 1440,
-        "maximize": false,
+        "maximize": true,
         "zoom": 0
       }
     ]

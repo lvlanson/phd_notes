@@ -2,6 +2,33 @@
 >Let $a,r \in  \mathbb{R}$ with $a \neq 0$. Then the geometric series can be given as
 >$$\sum_{k=0}^\infty ar^k$$
 
+>[!theorem] Theorem Partial Geometric Series Convergence
+>Let $a,r \in \mathbb{K}$ with $a \neq 0$. Then the partial geometric series
+>$$\begin{align}
+>S_{n}=\sum_{k=0}^{n} ar^{k}&= \frac{a(r^{n+1}-1)}{r-1} \\
+>&= \frac{a(1-r^{n+1})}{1-r}
+>\end{align}$$
+>>[!proof]-
+>>First observe that
+>> $$\begin{align}
+>>rS_{n} - S_{n}
+>>&= r\sum_{j=0}^{n} ar^j - \sum_{j=0}^{n} ar^j \\
+>>&= \sum_{j=0}^{n} ar^{j+1} - \sum_{j=0}^{n} ar^j \\
+>>&= \sum_{k=1}^{n+1} ar^{k} - \sum_{j=0}^{n} ar^j \\
+>>&= \left[ \sum_{k=1}^{n} ar^k + ar^{n+1}\right] - \left[a + \sum_{j=1}^{n} ar^j \right]  \\
+>>&= ar^{n+1} \underbrace{ + \sum_{k=1}^{n} ar^k - \sum_{j=1}^{n} ar^j }_{ =0 } - a   \\
+>>&= ar^{n+1} - a
+>>\end{align}$$
+>>We rearrange the result
+>>$$\begin{align}
+>> rS_{n} - S_{n} &= ar^{n+1} - a \\
+>> (r-1)S_{n} &=ar^{n+1} - a \\
+>> S_{n} &= \frac{ar^{n+1} - a}{r-1} \\
+>> &= \frac{a(r^{n+1}-1)}{r-1} \tag*{$\square$}
+>>\end{align}$$
+
+^ef860a
+
 >[!theorem] Theorem Geometric Series Convergence ([[../../../PDFs/briggs2019.pdf#page=689|Source]])
 >Denote $a,r \in  \mathbb{R}$ with $a \neq 0$ and the geometric series
 >$$\sum_{k=0}^\infty ar^k$$
