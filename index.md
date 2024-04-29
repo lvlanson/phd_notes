@@ -15,6 +15,7 @@
 >>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality|Fourier Series and Inner Products, Norms and Orthogonality]] ✅ 
 >>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series|Complex Exponential Fourier Series]]  ✅
 >>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence|Fourier Convergence]] ✏️
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries|Important Properties for Convergence Proofs]]  ✅
 >>
 >>>[!abstract] Functional Analysis
 >>> -  [[PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces|Hilbert Spaces]] ✅ 
