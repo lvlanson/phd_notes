@@ -17,8 +17,8 @@
 >1. If $f(t)$ is continuous at $t=t_{0}$, then $\mathcal{F}[f]|_{t_{0}}$ converges pointwise, i.e. $$\sum_{k=-\infty}^\infty c_{k}e^{i 2 \pi \omega_{k}t_{0}}=f(t_{0})$$
 >2. If $f(t)$ has a jump discontinuity at $t=t_{0}$, then $$\lim_{ N \to \infty } \sum_{k=-N}^N c_{k}e^{i 2 \pi \omega_{k}t_{0}} = \frac{1}{2}\Bigg[\lim_{ \tau \to t_{0}^-}f(\tau) + \lim_{ \tau \to \tau_{0}^+ }f(\tau)  \Bigg]$$
 >
->>[!proof]
->>This proof makes use of [[5.1 Proof Preliminaries| a collection of results]] tailored for the upcoming assertions. Denote
+>>[!proof]-
+>>This proof makes use of [[5.1 - Proof Preliminaries| a collection of results]] tailored for the upcoming assertions. Denote
 >>$$\begin{align}
 >> f_{0}^- &= \lim_{ x \to 0^- } f(t_{0}+x) \\ 
 >> f_{0}^+ &= \lim_{ x \to 0^+ } f(t_{0}+x)  
@@ -28,37 +28,70 @@
 >> f_{0}^- &  \text{ if } x < 0 \\
 >> f_{0}^+ & \text{ if } > 0 
 >>\end{cases}$$
->>We first note the [[5.1 Proof Preliminaries#^8c3eb2| representation of the Fourier coefficients with Dirichlet kernels]]
+>>We first note the [[5.1 - Proof Preliminaries#^8c3eb2| representation of the Fourier coefficients with Dirichlet kernels]]
 >>$$\sum_{k=M}^N c_{k}e^{i 2\pi \omega_{k} t_{0}}= \int _{-p/2}^{p/2} f(t_{0}+x)D_{M,N}(x) \, dx $$
->>Then we state [[5.1 Proof Preliminaries#^ce82c1|lemma 5.1.3]] and [[5.1 Proof Preliminaries#^fa5a3e|lemma 5.1.4]] as results from [[5.1 Proof Preliminaries#^8c3eb2| Dirichlet kernel representation]].
+>>Then we state [[5.1 - Proof Preliminaries#^ce82c1|lemma 5.1.3]] and [[5.1 - Proof Preliminaries#^fa5a3e|lemma 5.1.4]] as results from [[5.1 - Proof Preliminaries#^8c3eb2| Dirichlet kernel representation]].
 >> $$\begin{align}
 >> \sum_{k=M}^N c_{k}e^{i 2 \pi \omega_{k}t_{0}}&= \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)D_{M,N}(x)\, dx +f(t_{0}) \tag{Lemma 5.1.3} \\
 >>\sum_{k=M}^N c_{k}e^{i 2 \pi \omega_{k}t_{0}}&= \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f_{0}(x)\Big)D_{-N,N}(x)\, dx + \frac{1}{2}(f_{0}^- + f_{0}^+) \tag{Lemma 5.1.4}
 >>\end{align}$$
->>where [[5.1 Proof Preliminaries#^fa5a3e|lemma 5.1.4]] is the result for the case that $t_0$ is located at a discontinuity. We now prove the claim from (1)
+>>where [[5.1 - Proof Preliminaries#^fa5a3e|lemma 5.1.4]] is the result for the case that $t_0$ is located at a discontinuity. We now prove the claim from (1)
 >>$$\begin{align}
 >> \lim_{ \substack{N \to \infty \\ M \to -\infty }} \sum_{k=M}^N c_{k}e^{i 2\pi \omega_{k} t_{0}} &= \lim_{ \substack{N \to \infty \\ M \to -\infty }} \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)D_{M,N}(x)\, dx +f(t_{0})  = f(t_{0})
 >>\end{align}$$
 >>Or equivalently when we remove $f(t_0)$ from both sides.
 >>$$\lim_{ \substack{N \to \infty \\ M \to -\infty }} \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)D_{M,N}(x)\, dx = 0$$
->>Note [[5.1 Proof Preliminaries#^bb8104|lemma 5.1.1]] allows us to [[5.1 Proof Preliminaries#^303c05|reformulate the Dirichlet kernel]], hence we get
+>>Note [[5.1 - Proof Preliminaries#^bb8104|lemma 5.1.1]] allows us to [[5.1 - Proof Preliminaries#^303c05|reformulate the Dirichlet kernel]], hence we get
 >>$$\begin{align}
->> \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)D_{M,N}(x)\, dx &=  \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)\left(\frac{e^{-iM \lambda x}-e^{-i(N+1)\gamma x}}{p(1-e^{-i \gamma x})}\right)\, dx  \\
->>  &=  \frac{1}{p}\int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)\left(\frac{e^{-iM \lambda x}-e^{-i(N+1)\gamma x}}{1-e^{-i \gamma x}}\right)\, dx
+>> \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)D_{M,N}(x)\, dx &=  \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)\left(\frac{e^{-iM \gamma x}-e^{-i(N+1)\gamma x}}{p(1-e^{-i \gamma x})}\right)\, dx  \\
+>>  &=  \frac{1}{p}\int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)\left(\frac{e^{-iM \gamma x}-e^{-i(N+1)\gamma x}}{1-e^{-i \gamma x}}\right)\, dx
 >>\end{align}$$
->>We denote $g(x) = \dfrac{f(t_{0}+x)-f_{0}(x)}{1-e^{i\gamma x}}$ and can reformulate
+>>We denote $$g(x) = \dfrac{f(t_{0}+x)-f_{0}(x)}{1-e^{i\gamma x}} \tag{1}$$ and can reformulate
 >>$$\begin{align}
 >> &= \frac{1}{p} \int _{-p/2}^{p/2}g(x)e^{-iM\gamma x} \, dx - \frac{1}{p} \int _{-p/2}^{p/2} g(x)e^{i(N+1)\gamma x} \, dx 
 >>\end{align}$$
 >>where $\gamma=\frac{2\pi}{p}$. If we can show that 
->>$$\lim_{ \substack{K \to \pm\infty }}  \int _{-p/2}^{p/2}g(x)e^{-iK\gamma x} = 0$$
->> then the statement $(1)$ holds for the case that our function is continuous at $t_{0}$
+>>$$\lim_{ \substack{K \to \pm\infty }}  \int _{-p/2}^{p/2}g(x)e^{-iK\gamma x} = 0\tag{2}$$
+>> then the statement $(1)$ holds for the case that our function is continuous at $t_{0}$. Using the [[5.1 - Proof Preliminaries#^e3e352|Riemann-Lebesgue lemma]]. Note $g(x)$ is continuous using the series notation, hence we can make use of the respective lemma, which confirms the identity in equation $(2)$.
+>> ---
+>> We continue to show the theorem holds also for a function being discontinuous at $t_{0}$, i.e. statement $(2)$. Effectively, we will show similarly we did before, that
+>> $$\lim_{ N \to \infty } \sum_{k=-N}^N c_{k}e^{i 2 \pi \omega_{k}t_{0}} = \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f_{0}(x)\Big)D_{-N,N}(x)\, dx + \frac{1}{2}(f_{0}^- + f_{0}^+) = \frac{1}{2}(f_{0}^- + f_{0}^+)$$
+>> holds using [[5.1 - Proof Preliminaries#^fa5a3e|lemma 5.1.4]], which reduces to
+>> $$\int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f_{0}(x)\Big)D_{-N,N}(x)\, dx=0$$
+>> We again insert the definition of the [[5.1 - Proof Preliminaries#^303c05|Dirichlet kernel]] and use the definition of $g(x) = \frac{f(t_{0}+x)-f_{0}(x)}{1-e^{i\gamma x}}$ from equation $(1)$
+>> $$\begin{align}
+>> &\int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f_{0}(x)\Big)\left(\frac{e^{-iN \gamma x}-e^{-i(N+1)\gamma x}}{p(1-e^{-i \gamma x})}\right) \, dx \\
+>> =&\frac{1}{p}\int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f_{0}(x)\Big)\left(\frac{e^{-iN \gamma x}-e^{-i(N+1)\gamma x}}{1-e^{-i \gamma x}}\right) \, dx  \\
+>> =& \frac{1}{p}\int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f_{0}(x)\Big)g(x) \, dx  \\
+>> =& \frac{1}{p}\int _{-p / 2}^{p / 2}e^{-iN \gamma x}g(x) \, dx - \frac{1}{p}\int _{-p / 2}^{p / 2} e^{-i(N+1)\gamma x}g(x)\, dx
+>>\end{align}$$
+>>such that we again only need to show that the [[5.1 - Proof Preliminaries#^e3e352|Riemann-Lebesgue lemma]] holds. Therefore, we must show that $g(x)$ is piecewise continuous on $\left( -\frac{p}{2}, \frac{p}{2} \right)$. We first analyze the denominator and find by [[../Complex Analysis/Fundamental Properties#^88d84a|Euler's representation of complex numbers (4)]]
+>>$$1-e^{-i\gamma x}= 1 - \cos(\gamma x) -i\sin(\gamma x)$$
+>>which is always non-zero and continuous on $\left( -\frac{p}{2}, \frac{p}{2} \right)\setminus \{ 0 \}$, which allows us to assert that the following limits exists and are finite
+>>$$\lim_{ x \to -\frac{p}{2}^+ }g(x) \text{ and } \lim_{ x \to \frac{p}{2}^- }g(x)  $$
+>>Hence, $g(x)$ can only be discontinuous at $x=0$ or at any other point where $f$ could have additional (but finitely many) jump discontinuities, i.e. at $f(t_{0}+x)$. Now, we need to show that the limits at $x=0$ exist such that we can confirm they are piecewise continuous. We start first with $x\to 0^+$ which can be used also for $x\to 0^-$.
+>>
+>>Note, 
+>>$$\lim_{ x \to 0^+ }g(x) = \lim_{ x \to 0^+ } \frac{f(t_{0}+x)-f_{0}^+}{1-e^{-i\gamma x}} = \frac{f_{0}^+-f_{0}^+}{e-e^0} $$
+>>where the numerator and denominator equal to $0$. This allows us to use [[../Calculus/Differentiation#^eec6b8|L'Hospitals rule]]. Hence, we get
+>> $$\begin{align}
+>> \lim_{ x \to 0^+ } g(x) &=  \lim_{ x \to 0^+ } \frac{f(t_{0}+x)-f_{0}^+}{1-e^{-i\gamma x}} \\
+>> &= \lim_{ x \to 0^+ } \frac{\frac{d}{dx}(f(t_{0}+x)-f_{0}^+)}{\frac{d}{dx}1-e^{-i\gamma x}} \\
+>> &= \lim_{ x \to 0^+ } \frac{f'(t_{0}+x)}{i\gamma e^{-i\gamma x}} \\
+>> &= \frac{1}{i\gamma}\lim_{ x \to 0^+ } \frac{f'(t_{0}+x)}{ e^{-i\gamma x}} \\
+>> &= \frac{1}{i\gamma} \frac{\lim\limits_{ x \to 0^+ }f'(t_{0}+x)}{\lim\limits_{ x \to 0^+ } e^{-i\gamma x}} \\ 
+>> &= \frac{1}{i\gamma} \lim_{ x \to 0^+ } f'(t_{0}+x)
+>>\end{align}$$
+>>Since we required for the theorem of $f$ to be piecewise smooth, the limit must exist for $x\to_{0}^+$ and $x\to 0^-$. Therefore, the [[5.1 - Proof Preliminaries#^e3e352|Riemann-Lebesgue lemma]] holds, which concludes the proof. $$\tag*{$\square$}$$
+
 
 >[!theorem] Theorem Pointwise Convergence for Trigonometric Series ([[../../../PDFs/howell2016.pdf#page=166|Source]])
 >Let $f$ be a periodic, piecewise continuous function with period $p$ and $\omega_{k}= \frac{k}{p}$. Further assume, that $f$ is piecewise smooth on an interval $(a,b)$, and let $t_{0}$ be any point in that interval. Then the trigonometric Fourier series for $f$ (see [[1 - Classical Fourier Series#^046566|definition trigonometric Fourier series]])
 >$$A_{0} + \sum_{k=1}a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)$$
 >1. If $f(t)$ is continuous at $t=t_{0}$, then  $$A_{0} + \sum_{k=1}a_{k} \cos(2\pi \omega_{k}t_{0}) + b_{k}\sin(2\pi \omega_{k}t_{0}) = f(t_{0})$$
 >2. If $f(t)$ has a jump discontinuity at $t=t_{0}$, then $$A_{0} + \sum_{k=1}a_{k} \cos(2\pi \omega_{k}t_{0}) + b_{k}\sin(2\pi \omega_{k}t_{0}) = \frac{1}{2}\Bigg[\lim_{ \tau \to t_{0}^-}f(\tau) + \lim_{ \tau \to \tau_{0}^+ }f(\tau)  \Bigg]$$
+>
+>>[!proof] Proof Follows from the Exponential Form
 
 >[!theorem] Fourier's Theorem (Part 1) ([[../../../PDFs/howell2016.pdf#page=166|Source]])
 >Let $f$ be a periodic, piecewise smooth function on $\mathbb{R}$ and let $\mathcal{F}[f]$ be either the trigonometric or complex exponential Fourier series for $f$. Then $\mathcal{F}[f]$ converges at every point where $f$ is continuous, and
@@ -67,6 +100,7 @@
 
 >[!theorem] Fourier's Theorem (Part 2) ([[../../../PDFs/howell2016.pdf#page=169|Source]])
 >Let $f$ be a piecewise continuous, periodic function on $\mathbb{R}$, and let $\mathcal{F}[f]$ be either the trigonometric or complex exponential Fourier series for $f$. Assume further that, on each finite interval, $f$ is smooth at all but a finite number (possibly zero) of points. Then, on each finite interval, $\mathcal{F}[f]|_{t}$ converges to $f(t)$ at all but a finite number of points, and so, $f= \mathcal{F}[f]$ as piecewise continuous functions on $\mathbb{R}$.
+>>
 
 ## Uniform and Nonuniform Approximations
 

@@ -5,7 +5,7 @@
 >at its discontinuous point.
 >>[!example]
 >>$$\text{sinc}(x) = \frac{\sin(x)}{x} $$
->>is not defined for $x=0$, but its limit exist using L'Hospitals rule
+>>is not defined for $x=0$, but its limit exist using [[Differentiation#^eec6b8|L'Hospitals rule]]
 >>$$\begin{align}
 >> \lim_{ x \to 0 } \frac{\sin(x)}{x} &= \lim_{ x \to 0 } \frac{\frac{d}{dx} \sin(x)}{\frac{d}{dx}x} \\
 >> &= \lim_{ x \to 0 } \frac{\cos(x)}{1} = 1 
@@ -15,7 +15,7 @@
 >> We redefine the function, such that $\lim_{ x \to x_{0} }f(x)=f(x_{0})$. For our example we get
 >> $$\text{sinc}(x) = \begin{cases}
 >> \dfrac{\sin(x)}{x} &\text{ if } x \neq 0 \\
->> 1 & \text{ if } x = 0
+>> \quad\;1 & \text{ if } x = 0
 >>\end{cases}$$
 
 >[!def] Jump Discontinuities ([[../../../PDFs/howell2016.pdf#page=30|Source]])

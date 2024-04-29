@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": true
               },
@@ -34,7 +34,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+                "file": "index.md",
                 "mode": "preview",
                 "source": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md"
+                "file": "index.md"
               }
             }
           }
@@ -177,35 +177,6 @@
     "type": "floating",
     "children": [
       {
-        "id": "114e303b3b057275",
-        "type": "window",
-        "children": [
-          {
-            "id": "43c9073b97317763",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "4224f94e64436331",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2560,
-        "y": 32,
-        "width": 1280,
-        "height": 1440,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
         "id": "c107d4ab6cd0a1c4",
         "type": "window",
         "children": [
@@ -219,7 +190,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
+                    "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 - Proof Preliminaries.md",
                     "mode": "preview",
                     "source": true
                   }
@@ -230,22 +201,22 @@
         ],
         "direction": "vertical",
         "x": 2560,
-        "y": 32,
+        "y": 0,
         "width": 1280,
         "height": 1440,
         "maximize": false,
         "zoom": 0
       },
       {
-        "id": "17ae7c39ce3c5be3",
+        "id": "5dfb27a5b2236c4a",
         "type": "window",
         "children": [
           {
-            "id": "f2d7c4f14b594de0",
+            "id": "73f1d94b0625535f",
             "type": "tabs",
             "children": [
               {
-                "id": "6fd4b9937e690ff5",
+                "id": "cf37bd641f79bc59",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -262,18 +233,27 @@
         "y": 0,
         "width": 1280,
         "height": 1440,
-        "maximize": true,
+        "maximize": false,
         "zoom": 0
       }
     ]
   },
   "active": "db50a6b3bd9b6162",
   "lastOpenFiles": [
-    "PDFs/howell2016.pdf",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 - Proof Preliminaries.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+    "PDFs/howell2016.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/Discontinuities.md",
+    "PDFs/briggs2019.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
+    "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
     "Empty File"
   ]
 }

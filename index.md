@@ -14,8 +14,11 @@
 >>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals|Fourier Series over Finite Intervals]]  ✅ 
 >>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality|Fourier Series and Inner Products, Norms and Orthogonality]] ✅ 
 >>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series|Complex Exponential Fourier Series]]  ✅
->>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence|Fourier Convergence]] ✏️
->>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/5.1 Proof Preliminaries|Important Properties for Convergence Proofs]]  ✅
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence|Fourier Convergence]] ✅
+>>> 	- error estimation proofs can still be analyzed
+>>> 	- gibbs phenomenon proofs can still be analyzed
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/5.1 - Proof Preliminaries|Important Properties for Convergence Proofs]]  ✅
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series|Derivatives and Integrals of Fourier Series]] ✏️
 >>
 >>>[!abstract] Functional Analysis
 >>> -  [[PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces|Hilbert Spaces]] ✅ 
