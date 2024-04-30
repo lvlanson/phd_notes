@@ -25,6 +25,25 @@
 >> &= f(a) \tag*{$\square$}
 >>\end{align}$$
 
+^35aeb2
+
+>[!def] Definition Smooth Functions ([[../../../PDFs/howell2016.pdf#page=37| Source]])
+>For a function $f$ to be smooth over an interval $(\alpha, \beta)$ it must satisfy two conditions:
+>1. $f$ must be differentiable (and therefore continuous) everywhere on $(\alpha, \beta)$
+>2. $f'$ must also be a continuous function on $(\alpha, \beta)$
+
+>[!def] Definition Uniform Smooth Functions ([[../../../PDFs/howell2016.pdf#page=37| Source]])
+>Let $(\alpha, \beta)$ be a finite interval. A function is uniformly smooth on $(\alpha, \beta)$ if and only if
+>1. $f$ is smooth on $(\alpha, \beta)$ 
+>2. both $f$ and $f'$ are uniformly continuous on $(\alpha, \beta)$
+
+>[!def] Definition Piecewise Smooth Functions ([[../../../PDFs/howell2016.pdf#page=38| Source]])
+>A function is said to be piecewise smooth over a finite interval $(\alpha, \beta)$ if and only if $(\alpha, \beta)$ can be partitioned into a finite number of subintervals over which the function is uniformly smooth.
+>
+>If $(\alpha, \beta)$ is an infinite interval, then a function is piecewise smooth over $(\alpha, \beta)$ if and only if it is piecewise smooth over every finite subinterval of $(\alpha, \beta)$
+
+^680da2
+
 >[!theorem] Rolle's Theorem ([[../../../PDFs/briggs2019.pdf#page=276| Source]])
 >Let $f$ be continuous on a closed interval $[a,b]$ and differentiable on $(a,b)$ with $f(a) = f(b)$. There is at least one point $c$ in $(a,b)$ such that $f'(c) = 0$.
 >

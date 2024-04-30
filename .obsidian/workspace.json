@@ -201,7 +201,7 @@
         ],
         "direction": "vertical",
         "x": 2560,
-        "y": 32,
+        "y": 0,
         "width": 1280,
         "height": 1440,
         "maximize": false,

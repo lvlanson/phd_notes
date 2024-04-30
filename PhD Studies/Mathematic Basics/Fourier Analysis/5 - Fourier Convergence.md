@@ -35,7 +35,11 @@
 >> \sum_{k=M}^N c_{k}e^{i 2 \pi \omega_{k}t_{0}}&= \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)D_{M,N}(x)\, dx +f(t_{0}) \tag{Lemma 5.1.3} \\
 >>\sum_{k=M}^N c_{k}e^{i 2 \pi \omega_{k}t_{0}}&= \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f_{0}(x)\Big)D_{-N,N}(x)\, dx + \frac{1}{2}(f_{0}^- + f_{0}^+) \tag{Lemma 5.1.4}
 >>\end{align}$$
->>where [[5.1 - Proof Preliminaries#^fa5a3e|lemma 5.1.4]] is the result for the case that $t_0$ is located at a discontinuity. We now prove the claim from (1)
+>>where [[5.1 - Proof Preliminaries#^fa5a3e|lemma 5.1.4]] is the result for the case that $t_0$ is located at a discontinuity. 
+>>
+>>---
+>>
+>>We now prove the claim from (1)
 >>$$\begin{align}
 >> \lim_{ \substack{N \to \infty \\ M \to -\infty }} \sum_{k=M}^N c_{k}e^{i 2\pi \omega_{k} t_{0}} &= \lim_{ \substack{N \to \infty \\ M \to -\infty }} \int _{-p / 2}^{p / 2}  \Big(f(t_{0}+x)-f(t_{0})\Big)D_{M,N}(x)\, dx +f(t_{0})  = f(t_{0})
 >>\end{align}$$
@@ -83,6 +87,8 @@
 >> &= \frac{1}{i\gamma} \lim_{ x \to 0^+ } f'(t_{0}+x)
 >>\end{align}$$
 >>Since we required for the theorem of $f$ to be piecewise smooth, the limit must exist for $x\to_{0}^+$ and $x\to 0^-$. Therefore, the [[5.1 - Proof Preliminaries#^e3e352|Riemann-Lebesgue lemma]] holds, which concludes the proof. $$\tag*{$\square$}$$
+
+^e8a98c
 
 
 >[!theorem] Theorem Pointwise Convergence for Trigonometric Series ([[../../../PDFs/howell2016.pdf#page=166|Source]])
