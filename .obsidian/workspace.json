@@ -14,13 +14,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
                 "mode": "source",
                 "source": true
               },
               "pinned": true
             },
             "group": "cd0810d201c81b09"
+          },
+          {
+            "id": "717d5ba147a26a7b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Calculus/Series.md",
+                "mode": "source",
+                "source": true
+              }
+            },
+            "group": "8405bc44d8bdb32a"
           }
         ]
       },
@@ -34,12 +47,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
                 "mode": "preview",
                 "source": true
               }
             },
             "group": "cd0810d201c81b09"
+          },
+          {
+            "id": "59b08c51005d2f20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Mathematic Basics/Calculus/Series.md",
+                "mode": "preview",
+                "source": true
+              }
+            },
+            "group": "8405bc44d8bdb32a"
           }
         ]
       }
@@ -107,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md"
               }
             }
           }
@@ -177,46 +203,15 @@
     "type": "floating",
     "children": [
       {
-        "id": "c107d4ab6cd0a1c4",
+        "id": "044664f095a81fb0",
         "type": "window",
         "children": [
           {
-            "id": "fb43e674f72dcc6e",
+            "id": "84d52f902b87d2f3",
             "type": "tabs",
             "children": [
               {
-                "id": "9d0fef7d443ae7e0",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 - Proof Preliminaries.md",
-                    "mode": "preview",
-                    "source": true
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2560,
-        "y": 0,
-        "width": 1280,
-        "height": 1440,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
-        "id": "5dfb27a5b2236c4a",
-        "type": "window",
-        "children": [
-          {
-            "id": "73f1d94b0625535f",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "cf37bd641f79bc59",
+                "id": "06da7efad3d8f8d6",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -229,27 +224,33 @@
           }
         ],
         "direction": "vertical",
-        "x": 3840,
-        "y": 0,
-        "width": 1280,
-        "height": 1440,
-        "maximize": true,
+        "x": 0,
+        "y": 408,
+        "width": 1080,
+        "height": 552,
+        "maximize": false,
         "zoom": 0
       }
     ]
   },
   "active": "db50a6b3bd9b6162",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 - Proof Preliminaries.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
+    "PDFs/howell2016.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/Series.md",
+    "PDFs/briggs2019.pdf",
+    "PhD Studies/Mathematic Basics/Calculus/figures/integral_test.png",
+    "PDFs/zotero-182.pdf",
     "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
+    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 - Proof Preliminaries.md",
+    "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
+    "index.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
-    "PDFs/howell2016.pdf",
     "PhD Studies/Mathematic Basics/Calculus/Discontinuities.md",
-    "PDFs/briggs2019.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",

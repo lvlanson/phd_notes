@@ -128,3 +128,22 @@
 
 ^9251bc
 
+## Tests
+>[!theorem] Theorem Integral Test ([[../../../PDFs/zotero-182.pdf#page=483| Source 1]], [[../../../PDFs/briggs2019.pdf#page=674| Source 2]])
+>Suppose $\sum_{n=1}^\infty a_{n}$ is a series with positive terms $a_{n}$. Suppose there exists a function $f$ and a positive integer $N$ such that the following three conditions are satisfied:
+>1. $f$ is continuous
+>2. $f$ is decreasing
+>3. $f(n)=a_{n}$ for all integers $n \geq N$
+>
+>Then
+>$$\sum_{n=1}^\infty a_{n} \;\;\text{ and }\;\; \int _{N}^\infty f(x) \, dx $$
+>both converge or both diverge.
+>>[!pic]
+>>![[figures/integral_test.png]]
+>
+>>[!remark]
+>>We have the relation
+>>$$\sum_{k+1}^\infty a_{k} < \int _{k}^\infty f(x) \, dx < \sum_{k}^\infty a_{k}$$
+
+^c7f7dd
+
