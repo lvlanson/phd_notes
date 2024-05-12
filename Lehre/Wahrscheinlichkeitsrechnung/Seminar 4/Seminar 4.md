@@ -114,7 +114,7 @@
 >>$$\begin{align}
 >> P(X \leq t) &= P\left( \frac{X-\mu}{\sigma}\leq \frac{t-\mu}{\sigma} \right) \\
 >> &= P\left( Z \leq \frac{t-\mu}{\sigma} \right)\\
->> &= \sigma\left( \frac{t-\mu}{\sigma} \right)
+>> &= \phi\left( \frac{t-\mu}{\sigma} \right)
 >>\end{align}$$
 >>2.$P(a \leq X \leq b)$
 >>$$\begin{align}
@@ -389,10 +389,17 @@
 >> P\left( Z\leq \frac{x-\mu}{\sigma} \right) &= 0.1 \\
 >> \phi\left( \frac{x-60}{10} \right) &= 0.1 \\
 >> \phi^{-1}(0.1) &= \frac{x-60}{10} \\
->> -\phi(-1)(1-0.1) &= \frac{x-60}{10} \tag{Symmetrie Eigenschaft} \\
->> -\phi(-1)(0.9) &= \frac{x-60}{10} \\
->> -\phi(-1)(0.9) &= \frac{x-60}{10} \\
+>> -\phi^{-1}(1-0.1) &= \frac{x-60}{10} \tag{Symmetrie Eigenschaft} \\
+>> -\phi^{-1}(0.9) &= \frac{x-60}{10} \\
+>> -\phi^{-1}(0.9) &= \frac{x-60}{10} \\
 >> -1.28 &= \frac{x-60}{10} \qquad&&\Big\vert \cdot 10 \\
 >> -12.8 &= x-60 \qquad&&\Big\vert +60 \\
 >> 47.2 &= x-60 \tag*{$\blacktriangleleft$}\\
+>>\end{align}$$
+>
+>>[!note]
+>>$$\begin{align}
+>> \phi(a) &= 1-\phi(-a) \qquad&&\Big\vert \phi^{-1}(\,.) \\
+>> \phi^{-1}(\phi(a)) &= \phi^{-1}( 1-\phi(-a)) \tag{$\phi$ odd function}\\
+>> a &=-\phi^{-1}
 >>\end{align}$$

@@ -96,7 +96,7 @@
 >Assume, further, that $f$ is piecewise smooth and continuous, and for convenience, let
 >$$B= \frac{1}{2\pi}\left( p \int _{\text{ period}}\lvert f'(t) \rvert^2  \, dt  \right)^{1/2}$$
 >Then
->1. The series $\sum_{k=-\infty}^\infty$ converges absolutely with
+>1. The series $\sum_{k=-\infty}^\infty c_{k}$ converges absolutely with
 >$$\begin{align}
 > \sum_{k=-\infty}^{-N-1}\lvert c_{k} \rvert \leq \frac{B}{\sqrt{ N }} \tag{1}\\
 > \sum_{k=N+1}^{\infty}\lvert c_{k} \rvert \leq \frac{B}{\sqrt{ N }}
@@ -182,6 +182,8 @@
 >> &= \left[ \frac{1}{\sqrt{ M }} + \frac{1}{\sqrt{ N }} \right]B \tag*{$\square$}
 >>\end{align}$$
 
+^79a237
+
 >[!theorem] Theorem Estimation Bounds: Smoothness and Uniform Convergence for Exponential Series ([[../../../PDFs/howell2016.pdf#page=212|Source]])
 >Let $f$ be a periodic function with period $p$ and
 >$$\mathcal{F}[f]|_{t}=\sum_{k=-\infty}^\infty k^m c_{k}e^{i2\pi \omega_{k}t}$$
@@ -266,3 +268,69 @@
 >> $$\begin{align}
 >> \left\lvert  f(t)- \sum_{k=-M}^N c_{k}e^{i 2\pi \omega_{k}t}  \right\rvert \leq \left[\frac{1}{\sqrt{ M^{2m-1} }} + \frac{1}{\sqrt{ N^{2m-1} }}\right]B \tag*{$\square$}
 >>\end{align}$$
+
+>[!theorem] Theorem Uniform Convergence for Trigonometric Series ([[../../../PDFs/howell2016.pdf#page=213|Source]])
+>Let $f$ be a periodic function with period $p$ and
+>$$\mathcal{F}[f]|_{t}= A_{0} + \sum_{k=1}^\infty a_{k} \cos(2 \pi \omega_{k}t) + b_{k}\sin(2 \pi \omega_{k}t)$$
+>Let $m$ be a positive integer, and assume $f$ is $m$-times differentiable and $f^{(m)}$ is piecewise continuous. Let
+>$$B=\left( \frac{p}{2\pi} \right)^m \left( \frac{1}{p(2m-1)} \int _{\text{period}} \Big\lvert f^{(m)}(t) \Big\rvert^2 \, dt  \right)$$
+>Then:
+>1. The series $\sum_{k=1}^\infty a_{k}$ and $\sum_{k=1}^\infty b_{k}$ both converge absolutely for $N \in \mathbb{Z}$ with
+> $$\begin{align}
+> \sum_{k=N+1}^\infty \lvert a_{k} \rvert &\leq \frac{2B}{\sqrt{ N^{2m-1} }}  \\
+> \sum_{k=N+1}^\infty \lvert b_{k} \rvert &\leq \frac{2B}{\sqrt{ N^{2m-1} }}  \\
+>\end{align}$$
+>2. The Fourier series for $f$ converges uniformly to $f$. Moreover, for any real value $t$ and any positive integer $N$,
+>$$\left\lvert  f(t)- A_{0} - \sum_{k=1}^\infty a_{k} \cos(2 \pi \omega_{k}t) + b_{k}\sin(2 \pi \omega_{k}t)  \right\rvert \leq \left[ \frac{1}{\sqrt{ M^{2m-1} }}+\frac{1}{\sqrt{ N^{2m-1} }} \right]B $$
+>
+>>[!proof] Proof omitted
+>>
+
+>[!theorem] Reverse Theorem: Uniqueness and Necessity of Fourier Coefficients ([[../../../PDFs/howell2016.pdf#page=213|Source]])
+>Assume $\sum_{k=-\infty}^\infty c_{k}$ is an absolutely convergent infinite series of complex numbers, and, for each real value $t$, let
+>$$f(t) = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}$$
+>where $\omega_{k}=\frac{k}{p}$ and $p$ is some fixed positive number. Then $f$ is a continuous and periodic function with period $p$ whose complex exponential Fourier series is given by the above series. That is, for each integer $k$,
+>$$c_{k} = \frac{1}{p}\int _{\text{period}} f(t)e^{-2 \pi \omega_{k}t} \, dt $$
+>Moreover, if
+>$$\sum_{k=-\infty}^\infty \lvert k^n c_{k} \rvert < \infty $$
+>for some positive integer $n$, then $f$ is $n$-times differentiable, $f^{(n)}$ is continuous, and
+>$$f^{(m)}(t)=\sum_{k=-\infty}^\infty c_{k}(i2\pi \omega_{k})^m e^{i 2 \pi \omega_{k}t}$$
+>for $m=1,2,\dots ,n$
+
+## Integrating Periodic Functions and Fourier Series
+
+>[!theorem] Theorem Integration of Fourier Series ([[../../../PDFs/howell2016.pdf#page=215|Source]])
+>Assume $f$ is a periodic, piecewise continuous function with period $p$ and
+>$$\mathcal{F}[f]|_{t}= \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}$$
+>Then, $\forall \tau \in\mathbb{R}$
+>$$\sum_{\substack{k=-\infty\\k \neq 0}}^\infty \frac{c_{k}p}{i 2\pi k}e^{i2\pi \omega_{k}t}$$
+>converges absolutely, and, for each pair of real numbers $a$ and $t$,
+>$$\begin{align}
+> \int _{a}^t f(\tau) \, d\tau &= \sum_{k=-\infty}^\infty \int _{a}^t c_{k}e^{i 2 \pi \omega_{k}\tau} \, d\tau  \\
+> &= c_{0}[t-a] + \sum_{k=-\infty}^\infty \Gamma_{k}e^{i_{2} \pi \omega_{k}t}
+>\end{align}$$
+>where for $k \in \mathbb{Z}$
+>$$\begin{align}
+> \Gamma_{0}&= - \sum_{\substack{k=-\infty \\ k \neq 0}}^\infty  \frac{c_{k}p}{i 2\pi k}e^{i2\pi \omega_{k}ta} \\
+> \Gamma_{k} &= \frac{c_{k}p}{i 2 \pi k}
+>\end{align}$$
+>
+>Furthermore,
+>$$\int _{a}^t f(\tau)\, d\tau - c_{0}[t-a] $$
+>is a continuous, piecewise smooth, periodic function of $t$ with Fourier series
+>$$\sum_{k=-\infty}^\infty \Gamma_{k}e^{i 2 \pi \omega_{k}t}$$
+>>[!proof]
+>>First, we proof absolute convergence
+>>$$\begin{align}
+>> \left\lvert  \frac{c_{k}p}{i 2\pi k}e^{i2\pi \omega_{k}t}  \right\rvert  &= \left\lvert  \frac{c_{k}}{k}  \right\rvert \frac{p}{2\pi}  \\
+>>\end{align}$$
+>>We estimate $\lvert c_{k} \rvert$ using [[#^79a237|estimation bounds for the coefficients]]
+>>$$\begin{align}
+>>\lvert c_{k} \rvert &= \left\lvert\frac{1}{p} \int _{\text{period}}  f(t)e^{-i 2\pi\omega_{k}t}   \, dt \right\rvert \\
+>> &\leq \frac{1}{p}\int _{\text{period}} \lvert f(t) \rvert \, dt
+>>\end{align}$$
+>> Inserting this result gives 
+>> $$\begin{align}
+>>  \left\lvert  \frac{c_{k}p}{i 2\pi k}e^{i2\pi \omega_{k}t}  \right\rvert &\leq \frac{1}{\lvert k \rvert 2\pi }\int _{\text{period}} \lvert f(t) \rvert \, dt
+>>\end{align}$$
+>>
