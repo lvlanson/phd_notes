@@ -205,7 +205,7 @@ Daher berechnen wir für $N(\tilde{\mu}, \tilde{\sigma})$
 >>Wir arbeiten jetzt mit der geschätzten Normalverteilung für die Zufallsvariable $Y \sim N(20, 4.42719)$. Wir standardisieren über $Z$ dementsprechend
 >>$$\begin{align}
 >> P(X>30) &= 1 - P(X\leq 30)  \\
->> &= 1 - P(Y \leq 30) \\ \\
+>> &= 1 - P(Y \leq 30) \\ 
 >> \end{align}
 >> $$
 >> **Ohne Stetigkeitskorrektur**

@@ -18,7 +18,9 @@
 >>> 	- error estimation proofs can still be analyzed
 >>> 	- gibbs phenomenon proofs can still be analyzed
 >>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/5.1 - Proof Preliminaries|Important Properties for Convergence Proofs]]  ✅
->>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series|Derivatives and Integrals of Fourier Series]] ✏️
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series|Derivatives and Integrals of Fourier Series]] ✅
+>>> 	- last proof is missing
+>>> - 
 >>
 >>>[!abstract] Functional Analysis
 >>> -  [[PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces|Hilbert Spaces]] ✅ 

@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/Seminar 5.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
                 "mode": "source",
                 "source": true
               },
@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/Seminar 5.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
                 "mode": "preview",
                 "source": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/Seminar 5.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/Seminar 5.md",
+                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/Seminar 5.md"
+                "file": "PhD Studies/Mathematic Basics/Calculus/Differentiation.md"
               }
             }
           }
@@ -198,173 +198,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "floating": {
-    "id": "9a9c4302925637bf",
-    "type": "floating",
-    "children": [
-      {
-        "id": "2dc76077f239769e",
-        "type": "window",
-        "children": [
-          {
-            "id": "da8115e0e191693f",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "f407df1188879b59",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/5) Tschebyscheff Ungleichung Grenzwertsätz.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 960,
-        "width": 1080,
-        "height": 960,
-        "maximize": false,
-        "zoom": 0.5
-      },
-      {
-        "id": "f98e31867ad7e224",
-        "type": "window",
-        "children": [
-          {
-            "id": "7e7e364c8f6ca476",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "54be45fdf93d5b3b",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 1080,
-        "height": 960,
-        "maximize": false,
-        "zoom": 0.5
-      },
-      {
-        "id": "991d7b469d8f7230",
-        "type": "window",
-        "children": [
-          {
-            "id": "853fb3eb1c8f2aa5",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "553e50a3da55d8c6",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "PDFs/grimmett1986.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 28,
-        "y": 560,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0.5
-      },
-      {
-        "id": "8dd488067da03a2f",
-        "type": "window",
-        "children": [
-          {
-            "id": "166eecf399326db1",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "afac15a0a46f68e9",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "PDFs/grimmett1986.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 654,
-        "y": 496,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0.5
-      },
-      {
-        "id": "f021a7651aa1353f",
-        "type": "window",
-        "children": [
-          {
-            "id": "66af73619416e9fa",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "84d7afed92e0b083",
-                "type": "leaf",
-                "state": {
-                  "type": "image",
-                  "state": {
-                    "file": "Lehre/Wahrscheinlichkeitsrechnung/Tabelle_Standardnormalverteilung.jpg"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 28,
-        "y": 560,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0.5
-      }
-    ]
-  },
-  "active": "95ed2ce24e0ddbdb",
+  "active": "db50a6b3bd9b6162",
   "lastOpenFiles": [
-    "Lehre/Wahrscheinlichkeitsrechnung/Tabelle_Standardnormalverteilung.jpg",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series.md",
+    "PDFs/howell2016.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/Seminar 5.md",
+    "index.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/5) Tschebyscheff Ungleichung Grenzwertsätz.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+    "PDFs/grimmett1986.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Tabelle_Standardnormalverteilung.jpg",
     "Lehre/Wahrscheinlichkeitsrechnung/Tabelle_Standardnormalverteilung.jpg.crdownload",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
     "PhD Studies/Mathematic Basics/Calculus/Series.md",
-    "PDFs/grimmett1986.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/Seminar 4.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series.md",
     "References/@ibe2014.md",
-    "PDFs/howell2016.pdf",
     "PDFs/ibe2014.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5",
     "PhD Studies/Mathematic Basics/Fourier Analysis/5.1 - Proof Preliminaries.md",
@@ -379,7 +229,6 @@
     "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
     "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
     "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
-    "index.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
