@@ -12,9 +12,9 @@
 
 >[!theorem] Theorem Basic Theorem on Pointwise Convergence ([[../../../PDFs/howell2016.pdf#page=165|Source]])
 >Let $f$ be a periodic, piecewise continuous function with
->$$\mathcal{F}[f]|_{t}= \sum_{k=-\infty}^\infty c_{k}e^{i_{2}\pi \omega_{k}t}$$
+>$$\mathcal{FS}[f]|_{t}= \sum_{k=-\infty}^\infty c_{k}e^{i_{2}\pi \omega_{k}t}$$
 >period $p$ and $\omega_{k}= \frac{k}{p}$. Further assume, that $f$ is piecewise smooth on an interval $(a,b)$, and let $t_{0}$ be any point in that interval. Then
->1. If $f(t)$ is continuous at $t=t_{0}$, then $\mathcal{F}[f]|_{t_{0}}$ converges pointwise, i.e. $$\sum_{k=-\infty}^\infty c_{k}e^{i 2 \pi \omega_{k}t_{0}}=f(t_{0})$$
+>1. If $f(t)$ is continuous at $t=t_{0}$, then $\mathcal{FS}[f]|_{t_{0}}$ converges pointwise, i.e. $$\sum_{k=-\infty}^\infty c_{k}e^{i 2 \pi \omega_{k}t_{0}}=f(t_{0})$$
 >2. If $f(t)$ has a jump discontinuity at $t=t_{0}$, then $$\lim_{ N \to \infty } \sum_{k=-N}^N c_{k}e^{i 2 \pi \omega_{k}t_{0}} = \frac{1}{2}\Bigg[\lim_{ \tau \to t_{0}^-}f(\tau) + \lim_{ \tau \to \tau_{0}^+ }f(\tau)  \Bigg]$$
 >
 >>[!proof]-
@@ -100,12 +100,12 @@
 >>[!proof] Proof Follows from the Exponential Form
 
 >[!theorem] Fourier's Theorem (Part 1) ([[../../../PDFs/howell2016.pdf#page=166|Source]])
->Let $f$ be a periodic, piecewise smooth function on $\mathbb{R}$ and let $\mathcal{F}[f]$ be either the trigonometric or complex exponential Fourier series for $f$. Then $\mathcal{F}[f]$ converges at every point where $f$ is continuous, and
->$$f = \mathcal{F}[f]$$
+>Let $f$ be a periodic, piecewise smooth function on $\mathbb{R}$ and let $\mathcal{FS}[f]$ be either the trigonometric or complex exponential Fourier series for $f$. Then $\mathcal{FS}[f]$ converges at every point where $f$ is continuous, and
+>$$f = \mathcal{FS}[f]$$
 >as piecewise continuous functions.
 
 >[!theorem] Fourier's Theorem (Part 2) ([[../../../PDFs/howell2016.pdf#page=169|Source]])
->Let $f$ be a piecewise continuous, periodic function on $\mathbb{R}$, and let $\mathcal{F}[f]$ be either the trigonometric or complex exponential Fourier series for $f$. Assume further that, on each finite interval, $f$ is smooth at all but a finite number (possibly zero) of points. Then, on each finite interval, $\mathcal{F}[f]|_{t}$ converges to $f(t)$ at all but a finite number of points, and so, $f= \mathcal{F}[f]$ as piecewise continuous functions on $\mathbb{R}$.
+>Let $f$ be a piecewise continuous, periodic function on $\mathbb{R}$, and let $\mathcal{FS}[f]$ be either the trigonometric or complex exponential Fourier series for $f$. Assume further that, on each finite interval, $f$ is smooth at all but a finite number (possibly zero) of points. Then, on each finite interval, $\mathcal{FS}[f]|_{t}$ converges to $f(t)$ at all but a finite number of points, and so, $f= \mathcal{FS}[f]$ as piecewise continuous functions on $\mathbb{R}$.
 >>
 
 ## Uniform and Nonuniform Approximations
@@ -116,12 +116,12 @@
 >2. $\lvert f(t)-S(t) \rvert> \frac{1}{4}\lvert j_{0} \rvert$ for every $t$ in $(a,b)$
 
 >[!theorem] Theorem Discontinuity Errors Implications ([[../../../PDFs/howell2016.pdf#page=172|Source]])
->Let $f$ be a periodic, piecewise continuous function. If the Fourier series $\mathcal{F}[f]$ over $\sum_{k=M}^N$, denoted as $\mathcal{F}_{M,N}[f]|_{t}$, with $M < N$ is uniformly approximate $f$, then $f$ must be a continuous function on the entire real line
+>Let $f$ be a periodic, piecewise continuous function. If the Fourier series $\mathcal{FS}[f]$ over $\sum_{k=M}^N$, denoted as $\mathcal{FS}_{M,N}[f]|_{t}$, with $M < N$ is uniformly approximate $f$, then $f$ must be a continuous function on the entire real line
 >
->Conversely, if $f$ is not a continuous function on the entire real line, then the Fourier series $\mathcal{F}_{M,N}[f]|_{t}$ do not uniformly approximate $f$. 
+>Conversely, if $f$ is not a continuous function on the entire real line, then the Fourier series $\mathcal{FS}_{M,N}[f]|_{t}$ do not uniformly approximate $f$. 
 >
 >Moreover, if $f$ has a jump of $j_{0}$ at $t_{0}$, then, for each pair of integers $M$ and $N$ with $M < N$, there is an interval containing $t_{0}$ or with $t_{0}$ as an endpoint over which
->$$\lvert f(t) - \mathcal{F}_{M,N}[f]|_{t} \rvert > \frac{1}{4} \lvert j_{0} \rvert  $$
+>$$\lvert f(t) - \mathcal{FS}_{M,N}[f]|_{t} \rvert > \frac{1}{4} \lvert j_{0} \rvert  $$
 
 >[!theorem] Theorem Continuity and Uniform Convergence for Exponential Series ([[../../../PDFs/howell2016.pdf#page=173|Source]])
 >
@@ -167,7 +167,7 @@
 
 >[!theorem] Theorem Gibbs Deviation Factor ([[../../../PDFs/howell2016.pdf#page=176|Source]])
 >Let $f$ be a periodic, piecewise smooth function with period $p$ and
->$$\mathcal{F}[f]|_{t} = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}$$
+>$$\mathcal{FS}[f]|_{t} = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}$$
 >If $f$ has a jump of $j_{0}$ at $t_{0}$, then
 >$$\lim_{ N \to \infty } \left[ \sum_{k=-N}^N c_{k}e^{i 2 \pi \omega_{k}(t_{0}+t_{{N,m}})}-f(t_{0}+t_{N,m}) \right] = \begin{cases}
 > - \gamma_{m} j_{0} & \text{ if } m <0 \\
@@ -219,7 +219,7 @@
 
 >[!def] Definition Convergence in Norm ([[../../../PDFs/howell2016.pdf#page=178|Source]])
 >Let $f$ be a periodic, piecewise continuous function with period $p$ and Fourier series
->$$\mathcal{F}[f]|_{t} = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}$$
+>$$\mathcal{FS}[f]|_{t} = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}$$
 >we say a Fourier series **converges in norm** (or in energy) to $f$ if and only if 
 >$$\lim_{ \substack{N \to \infty \\ M \to \infty} } \left\lvert \left\lvert  f(t)-\sum_{k=M}^N c_{k}e^{i 2 \pi \omega_{k}t}  \right\rvert \right\rvert=0$$
 >>[!note]
@@ -231,7 +231,7 @@
 
 >[!lemma] Lemma Convergence in Norm of Fourier Series ([[../../../PDFs/howell2016.pdf#page=180|Source]])
 >Let $f$ be a periodic, piecewise continuous function with
->$$\mathcal{F}[f]|_{t} = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}$$
+>$$\mathcal{FS}[f]|_{t} = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}$$
 >Then the Fourier series for $f$ converges in norm to $f$ if and only if
 >$$p \sum_{k=-\infty}^\infty \lvert c_{k} \rvert^2 = \lvert\lvert f \rvert\rvert^2 \tag{Bessel's Equality}$$
 
@@ -240,8 +240,8 @@
 >[!lemma] Lemma Parseval's Equality ([[../../../PDFs/howell2016.pdf#page=180|Source]])
 >Let $f$ and $g$ be two piecewise continuous, periodic functions with the same period $p$ and with Fourier series
 >$$\begin{align}
-> \mathcal{F}[f]|_{t} = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t} \\
-> \mathcal{F}[g]|_{t} = \sum_{k=-\infty}^\infty \tilde{c}_{k}e^{i 2\pi \omega_{k}t} \\
+> \mathcal{FS}[f]|_{t} = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t} \\
+> \mathcal{FS}[g]|_{t} = \sum_{k=-\infty}^\infty \tilde{c}_{k}e^{i 2\pi \omega_{k}t} \\
 >\end{align}$$
 >Assume, in addition, that $g$ is continuous and piecewise smooth, then
 >1. $\sum\limits_{k=-\infty}^\infty c_{k}\tilde{c}^*_{k}$ converges absolutely
@@ -314,8 +314,8 @@
 >[!Theorem] Theorem Parseval's Equality ([[../../../PDFs/howell2016.pdf#page=180|Source]])
 >Let $f$ and $g$ be two piecewise continuous, periodic functions with the same period $p$ and with Fourier series
 >$$\begin{align}
-> \mathcal{F}[f]|_{t} = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t} \\
-> \mathcal{F}[g]|_{t} = \sum_{k=-\infty}^\infty \tilde{c}_{k}e^{i 2\pi \omega_{k}t} \\
+> \mathcal{FS}[f]|_{t} = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t} \\
+> \mathcal{FS}[g]|_{t} = \sum_{k=-\infty}^\infty \tilde{c}_{k}e^{i 2\pi \omega_{k}t} \\
 >\end{align}$$
 >1. $\sum\limits_{k=-\infty}^\infty c_{k}\tilde{c}^*_{k}$ converges absolutely
 >2. $\left\langle f\,,\,g \right\rangle= p\sum_{k=-\infty}^\infty c_{k}\tilde{c}^*_{k}$ (Parseval's Equality for Fourier Series)
@@ -323,7 +323,7 @@
 
 >[!lemma] Corollary Bessel's Equality ([[../../../PDFs/howell2016.pdf#page=182|Source]])
 >Let $f$ be a piecewise continuous, periodic function with Fourier series
->$$\mathcal{F}[f]|_{t} = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t} $$
+>$$\mathcal{FS}[f]|_{t} = \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t} $$
 >then
 >$$\lvert\lvert f \rvert\rvert^2 = p \sum_{k=-\infty}^\infty \lvert c_{k} \rvert^2 $$
 

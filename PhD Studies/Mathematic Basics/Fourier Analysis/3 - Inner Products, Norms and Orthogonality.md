@@ -272,7 +272,7 @@
 
 >[!example] Example Fourier Series and Bessel's Inequality ([[../../../PDFs/howell2016.pdf#page=151|Source]])
 >Let $f$ be any periodic, piecewise continuous function with period $p$, then we have the Fourier series
->$$\mathcal{F}[f]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big]$$
+>$$\mathcal{FS}[f]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big]$$
 >with $\omega_{k}=\frac{k}{p}$
 >>[!note] Note Orthogonal Set
 >>The set of trigonometric Fourier coefficients is an orthogonal set by the [[#^31a727| sine and cosine orthogonality theorem]] over the interval of length $p$

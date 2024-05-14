@@ -28,7 +28,7 @@ f(t) & \text{ if } 0 < t < L \\
 
 >[!Lemma] Lemma Sine Fourier Series ([[../../../PDFs/howell2016.pdf#page=135|Source]])
 >Let $\widehat{f}$ be an odd periodic extension of $f$ with period length $p=2L$. Then the Fourier series of $\widehat{f}$ is called the **sine Fourier series** and can be given as
->$$\mathcal{F}[\widehat{f}]|_{t} = \sum_{k=1}^\infty \sin(2\pi \omega_{k}t)$$
+>$$\mathcal{FS}[\widehat{f}]|_{t} = \sum_{k=1}^\infty \sin(2\pi \omega_{k}t)$$
 >with 
 >$$b_{k}=\frac{2}{L}\int _{0}^{L} \widehat{f}_{0}(t) \sin\left( \frac{\pi k}{L}t \right) \, dt $$
 >>[!proof]-
@@ -53,7 +53,7 @@ f(t) & \text{ if } 0 < t < L \\
 
 >[!lemma] Lemma Cosine Fourier Series ([[../../../PDFs/howell2016.pdf#page=137|Source]])
 >Let $\widehat{f}$ be an even periodic extension of $f$ with period length $p=2L$. Then the Fourier series of $\widehat{f}$ is called the **cosine Fourier series** and can be given as
->$$\mathcal{F}[\widehat{f}]|_{t} = A_{0} + \sum_{k=1}^\infty a_{k} \cos\left( \frac{k\pi}{L}t \right)$$
+>$$\mathcal{FS}[\widehat{f}]|_{t} = A_{0} + \sum_{k=1}^\infty a_{k} \cos\left( \frac{k\pi}{L}t \right)$$
 >with
 >$$\begin{align}
 > A_{0}&= \frac{1}{L} \int_{0}^L f(t) \, dt \\

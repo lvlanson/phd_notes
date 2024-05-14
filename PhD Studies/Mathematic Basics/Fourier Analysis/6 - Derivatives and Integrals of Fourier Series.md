@@ -2,17 +2,17 @@
 
 >[!lemma] Lemma Fourier Series of a Derivative ([[../../../PDFs/howell2016.pdf#page=207|Source]])
 >Assume $f$ is a periodic, continuous, [[../Calculus/Differentiation#^680da2|piecewise smooth]] function with period $p$ and 
->$$\mathcal{F}[f]|_{t}= \sum_{k=-\infty}^\infty c_{k}e^{i2\pi \omega_{k}t}$$
+>$$\mathcal{FS}[f]|_{t}= \sum_{k=-\infty}^\infty c_{k}e^{i2\pi \omega_{k}t}$$
 >then
 >$$\begin{align}
-> \mathcal{F}[f']|_t &= \sum_{k=-\infty}^\infty i2\pi \omega_{k}c_{k}e^{i2\pi \omega_{k}t} \\
+> \mathcal{FS}[f']|_t &= \sum_{k=-\infty}^\infty i2\pi \omega_{k}c_{k}e^{i2\pi \omega_{k}t} \\
 > &= \frac{i 2\pi}{p}\sum_{k=-\infty}^\infty kc_{k}e^{i2\pi \omega_{k}t}
 >\end{align}$$
 >>[!proof]-
 >>Let 
 >>$$\begin{align}
->> \mathcal{F}[f]|_{t} &= \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}\\
->> \mathcal{F}[f']|_{t} &= \sum_{k=-\infty}^\infty d_{k}e^{i 2\pi \omega_{k}t}\\
+>> \mathcal{FS}[f]|_{t} &= \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}\\
+>> \mathcal{FS}[f']|_{t} &= \sum_{k=-\infty}^\infty d_{k}e^{i 2\pi \omega_{k}t}\\
 >>\end{align}$$
 >>with
 >>$$\begin{align}
@@ -34,12 +34,12 @@
 >> =& i2\pi \omega_{k}c_{k}
 >>\end{align}$$
 >>Therefore, we can conclude $$d_{k}= i2\pi \omega_{k}c_{k}$$ and finally 
->>$$\mathcal{F}[f']|_{t} = \sum_{k=-\infty}^\infty \underbrace{ i2\pi \omega_{k}c_{k} }_{ =d_{k} }e^{i 2\pi \omega_{k}t} \tag*{$\square$}$$
+>>$$\mathcal{FS}[f']|_{t} = \sum_{k=-\infty}^\infty \underbrace{ i2\pi \omega_{k}c_{k} }_{ =d_{k} }e^{i 2\pi \omega_{k}t} \tag*{$\square$}$$
 >
 
 >[!theorem] Theorem Differentiation of Fourier Series ([[../../../PDFs/howell2016.pdf#page=207|Source]])
 >Let $f$ be a periodic, continuous, [[../Calculus/Differentiation#^680da2|piecewise smooth]] function with period $p$ and
->$$\mathcal{F}[f]|_{t}= \sum_{k=-\infty}^\infty c_{k}e^{i2\pi \omega_{k}t}$$
+>$$\mathcal{FS}[f]|_{t}= \sum_{k=-\infty}^\infty c_{k}e^{i2\pi \omega_{k}t}$$
 >If $f'$ is also piecewise smooth, then
 >$$\sum_{k=-\infty}^\infty kc_{k}e^{i2\pi \omega_{k}t}$$
 >converges for each $t$ at which $f'$ is continuous, and, as piecewise continuous functions
@@ -55,17 +55,17 @@
 
 >[!lemma] Lemma Trigonometric Fourier Series of a Derivative ([[../../../PDFs/howell2016.pdf#page=208|Source]])
 > Assume $f$ is a periodic, continuous, [[../Calculus/Differentiation#^680da2|piecewise smooth]] smooth function with period $p$ and
-> $$\mathcal{F}[f]|_{t}= A_{0}+ \sum_{k=1}^\infty a_{k}\cos(2 \pi \omega_{k}t) + b_{k}\sin(2 \pi \omega_{k}t)$$
+> $$\mathcal{FS}[f]|_{t}= A_{0}+ \sum_{k=1}^\infty a_{k}\cos(2 \pi \omega_{k}t) + b_{k}\sin(2 \pi \omega_{k}t)$$
 > Then
 > $$\begin{align}
-> \mathcal{F}[f']|_{t} &= \sum_{k=1}^\infty -2\pi \omega_{k}a_{k}\cos(2 \pi \omega_{k}t) + 2\pi \omega_{k}b_{k}\sin(2 \pi \omega_{k}t)\\
+> \mathcal{FS}[f']|_{t} &= \sum_{k=1}^\infty -2\pi \omega_{k}a_{k}\cos(2 \pi \omega_{k}t) + 2\pi \omega_{k}b_{k}\sin(2 \pi \omega_{k}t)\\
 > &= \frac{2\pi}{p}\sum_{k=1}^\infty - ka_{k}\cos(2 \pi \omega_{k}t) + kb_{k}\sin(2 \pi \omega_{k}t)
 >\end{align}$$
 >>[!proof] Proof Omitted -> Follows from the Exponential Fourier Series
 
 >[!theorem] Theorem Differentiation of Trigonometric Fourier Series ([[../../../PDFs/howell2016.pdf#page=209|Source]])
 >Let $f$ be a periodic, continuous, [[../Calculus/Differentiation#^680da2|piecewise smooth]] function with period $p$ and 
-> $$\mathcal{F}[f]|_{t}= A_{0}+ \sum_{k=1}^\infty a_{k}\cos(2 \pi \omega_{k}t) + b_{k}\sin(2 \pi \omega_{k}t)$$
+> $$\mathcal{FS}[f]|_{t}= A_{0}+ \sum_{k=1}^\infty a_{k}\cos(2 \pi \omega_{k}t) + b_{k}\sin(2 \pi \omega_{k}t)$$
 > converges for each $t$ at which $f'$ is continuous, and, as piecewise continuous functions
 >$$\begin{align}
 > f'(t)&=\sum_{k=1}^\infty -2\pi \omega_{k}a_{k}\cos(2 \pi \omega_{k}t) + 2\pi \omega_{k}b_{k}\sin(2 \pi \omega_{k}t)\\
@@ -92,7 +92,7 @@
 
 >[!theorem] Theorem - Estimation Bounds: Continuity and Uniform Convergence for Exponential Series ([[../../../PDFs/howell2016.pdf#page=210|Source]])
 >Let $f$ be a periodic function with period $p$ and
->$$\mathcal{F}[f]|_{t}=\sum_{k=-\infty}^\infty k^m c_{k}e^{i2\pi \omega_{k}t}$$
+>$$\mathcal{FS}[f]|_{t}=\sum_{k=-\infty}^\infty k^m c_{k}e^{i2\pi \omega_{k}t}$$
 >Assume, further, that $f$ is piecewise smooth and continuous, and for convenience, let
 >$$B= \frac{1}{2\pi}\left( p \int _{\text{ period}}\lvert f'(t) \rvert^2  \, dt  \right)^{1/2}$$
 >Then
@@ -110,8 +110,8 @@
 >>---
 >>Let 
 >>$$\begin{align}
->> \mathcal{F}[f]|_{t} &= \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}\\
->> \mathcal{F}[f']|_{t} &= \sum_{k=-\infty}^\infty d_{k}e^{i 2\pi \omega_{k}t}\\
+>> \mathcal{FS}[f]|_{t} &= \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}\\
+>> \mathcal{FS}[f']|_{t} &= \sum_{k=-\infty}^\infty d_{k}e^{i 2\pi \omega_{k}t}\\
 >>\end{align}$$
 >>with
 >>$$\begin{align}
@@ -186,7 +186,7 @@
 
 >[!theorem] Theorem Estimation Bounds: Smoothness and Uniform Convergence for Exponential Series ([[../../../PDFs/howell2016.pdf#page=212|Source]])
 >Let $f$ be a periodic function with period $p$ and
->$$\mathcal{F}[f]|_{t}=\sum_{k=-\infty}^\infty k^m c_{k}e^{i2\pi \omega_{k}t}$$
+>$$\mathcal{FS}[f]|_{t}=\sum_{k=-\infty}^\infty k^m c_{k}e^{i2\pi \omega_{k}t}$$
 >Let $m$ be a positive integer, and assume $f$ is $m$-times differentiable and $f^{(m)}$ is piecewise continuous. Let
 >$$B=\left( \frac{p}{2\pi} \right)^m \left( \frac{1}{p(2m-1)} \int _{\text{period}} \Big\lvert f^{(m)}(t) \Big\rvert^2 \, dt  \right)$$
 >Then
@@ -204,7 +204,7 @@
 >>We use the results of the previous proof. First note, that by [[#^ef6e98| higher order differentiations of exponential series]] we have the relation
 >>$$f^{(m)}= \left( \frac{i 2\pi}{p} \right)^m \sum_{k=-\infty}^\infty k^mc_{k}e^{i2\pi \omega_{k}t}$$
 >>For the Fourier series of the $m$-th derivative we have
->>$$\mathcal{F}[f^{(m)}]|_{t}=\sum_{k=-\infty}^\infty d_{k}e^{i 2\pi \omega_{k}t}$$
+>>$$\mathcal{FS}[f^{(m)}]|_{t}=\sum_{k=-\infty}^\infty d_{k}e^{i 2\pi \omega_{k}t}$$
 >>with 
 >>$$d_{k}=\left( \frac{i 2\pi k}{p} \right)^m c_{k}$$
 >>We are interested in confirming absolute convergence, therefore, we analyze the norm of the given expression, hence
@@ -271,7 +271,7 @@
 
 >[!theorem] Theorem Uniform Convergence for Trigonometric Series ([[../../../PDFs/howell2016.pdf#page=213|Source]])
 >Let $f$ be a periodic function with period $p$ and
->$$\mathcal{F}[f]|_{t}= A_{0} + \sum_{k=1}^\infty a_{k} \cos(2 \pi \omega_{k}t) + b_{k}\sin(2 \pi \omega_{k}t)$$
+>$$\mathcal{FS}[f]|_{t}= A_{0} + \sum_{k=1}^\infty a_{k} \cos(2 \pi \omega_{k}t) + b_{k}\sin(2 \pi \omega_{k}t)$$
 >Let $m$ be a positive integer, and assume $f$ is $m$-times differentiable and $f^{(m)}$ is piecewise continuous. Let
 >$$B=\left( \frac{p}{2\pi} \right)^m \left( \frac{1}{p(2m-1)} \int _{\text{period}} \Big\lvert f^{(m)}(t) \Big\rvert^2 \, dt  \right)$$
 >Then:
@@ -301,7 +301,7 @@
 
 >[!theorem] Theorem Integration of Fourier Series ([[../../../PDFs/howell2016.pdf#page=215|Source]])
 >Assume $f$ is a periodic, piecewise continuous function with period $p$ and
->$$\mathcal{F}[f]|_{t}= \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}$$
+>$$\mathcal{FS}[f]|_{t}= \sum_{k=-\infty}^\infty c_{k}e^{i 2\pi \omega_{k}t}$$
 >Then, $\forall \tau \in\mathbb{R}$
 >$$\sum_{\substack{k=-\infty\\k \neq 0}}^\infty \frac{c_{k}p}{i 2\pi k}e^{i2\pi \omega_{k}t}$$
 >converges absolutely, and, for each pair of real numbers $a$ and $t$,

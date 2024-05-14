@@ -1,5 +1,5 @@
 >[!def] Definition Complex Exponential Fourier Series ([[../../../PDFs/howell2016.pdf#page=157|Source]])
-> Let $f$ be a periodic function with period $p$. The _complex exponential Fourier series_ for $f$ denoted by $\mathcal{F}[f]|_{t}$ is the infinite series
+> Let $f$ be a periodic function with period $p$. The _complex exponential Fourier series_ for $f$ denoted by $\mathcal{FS}[f]|_{t}$ is the infinite series
 > $$\sum_{k=-\infty}^\infty c_{k}e^{i 2 \pi \omega_{k}t}$$
 > with
 > $$\omega_{k}=\frac{k}{p} \tag{$k=1,2,3,\dots$}$$
@@ -10,7 +10,7 @@
 
 >[!remark]- Deriving the Complex Exponential Form of the Fourier Series ([[../../../PDFs/howell2016.pdf#page=155|Source]])
 >Let $f$ be a periodic, piecewise continuous function with period $p$ and the trigonometric Fourier series
->$$\mathcal{F}[f]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big] \tag{1}$$
+>$$\mathcal{FS}[f]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big] \tag{1}$$
 >We use the following identities
 >$$\begin{align}
 > \cos(2 \pi \omega_{k}t)  &= \frac{e^{i2\pi \omega_{k}t}+ e^{-i2\pi \omega_{k}t}}{2} \\
@@ -33,7 +33,7 @@
 >
 >Having determined these identities, we can insert these into equation $(1)$ 
 >$$\begin{align}
-> \mathcal{F}[f]|_{t} &= A_{0} + \sum_{k=1}^\infty\left[a_{k}  \frac{e^{i2\pi \omega_{k}t}+ e^{-i2\pi \omega_{k}t}}{2} + b_{k} \frac{e^{i2\pi \omega_{k}t}- e^{-i2\pi \omega_{k}t}}{2i}\right] \\ 
+> \mathcal{FS}[f]|_{t} &= A_{0} + \sum_{k=1}^\infty\left[a_{k}  \frac{e^{i2\pi \omega_{k}t}+ e^{-i2\pi \omega_{k}t}}{2} + b_{k} \frac{e^{i2\pi \omega_{k}t}- e^{-i2\pi \omega_{k}t}}{2i}\right] \\ 
 > &= A_{0} + \sum_{k=1}^\infty\left[  \frac{a_{k}e^{i2\pi \omega_{k}t}+ a_{k}e^{-i2\pi \omega_{k}t}}{2} + \underbrace{ \frac{b_{k} e^{i2\pi \omega_{k}t}- b_{k} e^{-i2\pi \omega_{k}t}}{2i} }_{ \text{expand with } i^3} \right]  \\[1em]
 > &= A_{0} + \sum_{k=1}^\infty\left[  \frac{a_{k}e^{i2\pi \omega_{k}t}+ a_{k}e^{-i2\pi \omega_{k}t}}{2} +\frac{-ib_{k} e^{i2\pi \omega_{k}t}+i b_{k} e^{-i2\pi \omega_{k}t}}{2} \right]  \\ 
 > &= A_{0} + \sum_{k=1}^\infty\left[  \frac{a_{k}e^{i2\pi \omega_{k}t}-ib_{k} e^{i2\pi \omega_{k}t} + a_{k}e^{-i2\pi \omega_{k}t} +i b_{k} e^{-i2\pi \omega_{k}t}}{2} \right]\\
@@ -74,7 +74,7 @@
 >>
 >>Hence, piecing the results together
 >>$$\begin{align}
->> \mathcal{F}[f]|_{t} &= c_{0} + \sum_{k=-1}^{-\infty}c_{k}e^{2i\pi \omega_{k}t} + \sum_{k=1}^{\infty}c_{k}e^{2i\pi \omega_{k}t} +  \sum_{k=1}^\infty c_{k}e^{2i\pi \omega_{k}t} \\
+>> \mathcal{FS}[f]|_{t} &= c_{0} + \sum_{k=-1}^{-\infty}c_{k}e^{2i\pi \omega_{k}t} + \sum_{k=1}^{\infty}c_{k}e^{2i\pi \omega_{k}t} +  \sum_{k=1}^\infty c_{k}e^{2i\pi \omega_{k}t} \\
 >>  &= \sum_{k=-\infty}^\infty c_{k}e^{2i\pi \omega_{k}t}
 >>\end{align}$$
 

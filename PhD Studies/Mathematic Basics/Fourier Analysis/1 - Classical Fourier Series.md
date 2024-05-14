@@ -1,8 +1,8 @@
 ## Fundamentals
 
 >[!def] Definition Trigonometric Fourier Series ([[../../../PDFs/howell2016.pdf#page=113|Source]])
->Let $f$ be a periodic function with period $p$ where $p$ is some positive number. The (trigonometric) Fourier $\mathcal{F}$ series for $f$ is the infinite series
->$$\mathcal{F}[f]\rvert_{t} = A_{0} + \sum_{k=1}^\infty \Big[ a_{k} \cos\big(2\pi \omega_{k}t\big) + b_{k} \sin\big(2\pi \omega_{k}t\big)\Big]$$
+>Let $f$ be a periodic function with period $p$ where $p$ is some positive number. The (trigonometric) Fourier series $\mathcal{FS}$ for $f$ is the infinite series
+>$$\mathcal{FS}[f]\rvert_{t} = A_{0} + \sum_{k=1}^\infty \Big[ a_{k} \cos\big(2\pi \omega_{k}t\big) + b_{k} \sin\big(2\pi \omega_{k}t\big)\Big]$$
 >where, for $k = 1,2,3, \dots$
 >$$\begin{align}
 > \omega_{k} &= \frac{k}{p} \tag{Frequency Coefficient}\\
@@ -15,9 +15,9 @@
 
 >[!lemma] 
 >If $f$ is either a constant function, a sine function or a cosine function, then
->$$\mathcal{F}[f]|_{t} = f(t)$$
+>$$\mathcal{FS}[f]|_{t} = f(t)$$
 >Especially,
->$$\mathcal{F}[0]|_{t} = 0$$
+>$$\mathcal{FS}[0]|_{t} = 0$$
 >>[!proof]- Proof Constant Function $f(t) = c$
 >>$$\begin{align}
 >> A_{0} &= \frac{1}{p}\int_{0}^p f(t) \, dt\\  
@@ -37,7 +37,7 @@
 >>  &= \frac{2c}{p}   \Big( -2\pi \omega_{k}\big(\underbrace{ \cos( 2\pi k) }_{ =1 }-\underbrace{ \cos( 0) }_{ =1 }\big)\Big) \\
 >>  &= \frac{2c}{p}   \Big( -2\pi \omega_{k}\cdot 0 \Big) \\
 >>  &= 0 \\ \\ \\
->>\mathcal{F}[f]|_{t}  &= \underbrace{ A_{0} }_{ =c } + \sum_{k=1}^\infty \Big[ \underbrace{ a_{k} }_{ =0 } \cos\big(2\pi \omega_{k}t\big) + \underbrace{ b_{k} }_{ =0 } \sin\big(2\pi \omega_{k}t\big)\Big] \\
+>>\mathcal{FS}[f]|_{t}  &= \underbrace{ A_{0} }_{ =c } + \sum_{k=1}^\infty \Big[ \underbrace{ a_{k} }_{ =0 } \cos\big(2\pi \omega_{k}t\big) + \underbrace{ b_{k} }_{ =0 } \sin\big(2\pi \omega_{k}t\big)\Big] \\
 >> &= c
 >>\end{align}$$
 >
@@ -140,7 +140,7 @@
 
 >[!theorem] Theorem Fourier Series for Odd Functions ([[../../../PDFs/howell2016.pdf#page=122|Source]])
 >Let $f$ be a periodic, piecewise continuous function with period $p$. If $f$ is an **odd** function on $\mathbb{R}$, then its trigonometric Fourier series is given by
->$$\mathcal{F}[f]|_{f}= \sum_{k=1}^\infty b_{k} \sin(2\pi \omega_{k}t)$$
+>$$\mathcal{FS}[f]|_{f}= \sum_{k=1}^\infty b_{k} \sin(2\pi \omega_{k}t)$$
 >where for $k=1,2,3,\dots$
 >$$\begin{align}
 > \omega_{k} &= \frac{k}{p} \\
@@ -180,7 +180,7 @@
 
 >[!Theorem] Fourier Series for Even Functions ([[../../../PDFs/howell2016.pdf#page=122|Source]])
 >Let $f$ be a periodic, piecewise continuous function with period $p$. If $f$ is an **even** function on $\mathbb{R}$, then its trigonometric Fourier series is given by
->$$\mathcal{F}[f]|_{t} = A_{0} + \sum_{i=1}^\infty a_{k} \cos(2\pi \omega_{k}t)$$
+>$$\mathcal{FS}[f]|_{t} = A_{0} + \sum_{i=1}^\infty a_{k} \cos(2\pi \omega_{k}t)$$
 >where 
 >$$A_{0} = \frac{2}{p}\int_{0}^{p/2} f(t)\, dt $$
 >where for $k=1,2,3,\dots$
@@ -235,21 +235,21 @@
 >[!theorem] Theorem Linearity of Fourier Transformation ([[../../../PDFs/howell2016.pdf#page=123|Source]])
 >Let $N$ be a finite positive integer; let $f_{1},f_{2},\dots,f_{N}$ all be periodic, piecewise continuous functions with common period, and let $\alpha_{1},\alpha_{2}, \alpha_{3}, \dots, \alpha_{N}$ all be constants, then
 >$$\begin{align}
-> \mathcal{F}\left[\sum^N_{n=1}\alpha_{n}f_{n}\right]\Bigg|_{t} = \sum_{n=1}^N \alpha_{n}\mathcal{F}[f_{n}]|_{t}
+> \mathcal{FS}\left[\sum^N_{n=1}\alpha_{n}f_{n}\right]\Bigg|_{t} = \sum_{n=1}^N \alpha_{n}\mathcal{FS}[f_{n}]|_{t}
 >\end{align}$$
 >>[!proof] Proof Omitted
 
 >[!Corollary] Corollary ([[../../../PDFs/howell2016.pdf#page=125|Source]])
 >If $f$ can be expressed as a finite linear combination of a **constant function with sine and cosine functions** (with common period), then that linear combination is the trigonometric Fourier series for $f$, i.e.
->$$\mathcal{F}[f]|_{t} = f(t)$$
+>$$\mathcal{FS}[f]|_{t} = f(t)$$
 
 ## Scaling and Shifting
 
 >[!theorem] Theorem Scaling of Fourier Series ([[../../../PDFs/howell2016.pdf#page=125|Source]])
 > Let $f$ be a periodic, piecewise continuous function with period $p$ and Fourier series
-> $$\mathcal{F}[f]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big]$$
+> $$\mathcal{FS}[f]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big]$$
 > If $g(t) = f(\alpha t)$ for some $\alpha > 0$, then $g$ is a periodic, piecewise continuous function with period $\widehat{p} = \frac{p}{\alpha}$. Moreover, letting $\widehat{\omega }_{k}= \frac{k}{\widehat{p}}= \alpha \omega_{k}$,
-> $$\mathcal{F}[g]|_{t}= A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \widehat{\omega }_{k}t) + b_{k}\sin(2\pi \widehat{\omega }_{k}t)\Big]$$
+> $$\mathcal{FS}[g]|_{t}= A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \widehat{\omega }_{k}t) + b_{k}\sin(2\pi \widehat{\omega }_{k}t)\Big]$$
 >>[!proof]-
 >>Note $f$ is a periodic function with period $p$, then by definition of periodic functions we have
 >>$$f(x-p) = f(p)$$
@@ -267,22 +267,22 @@
 
 >[!theorem] Theorem Negative Input of Fourier Series ([[../../../PDFs/howell2016.pdf#page=125|Source]])
 >Let $f$ be a periodic, piecewise continuous function with period $p$ and Fourier series
->$$\mathcal{F}[f]|_{f} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big]$$
+>$$\mathcal{FS}[f]|_{f} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big]$$
 >If $g(t)=f(-t)$, then $g$ is a periodic, piecewise continuous function with period $p$ and trigonometric Fourier series
->$$\mathcal{F}[g]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) - b_{k}\sin(2\pi \omega_{k}t)\Big]$$
+>$$\mathcal{FS}[g]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) - b_{k}\sin(2\pi \omega_{k}t)\Big]$$
 >>[!proof]
 
 >[!theorem] Theorem Half Period Shift ([[../../../PDFs/howell2016.pdf#page=125|Source]])
 >Let $f$ be a periodic, piecewise continuous function with period $p$ and Fourier series
->$$\mathcal{F}[f]|_{f} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big]$$
+>$$\mathcal{FS}[f]|_{f} = A_{0} + \sum_{k=1}^\infty \Big[a_{k} \cos(2\pi \omega_{k}t) + b_{k}\sin(2\pi \omega_{k}t)\Big]$$
 >If $g(t) = f\left( t- \frac{p}{2} \right)$, then $g$ is periodic, piecewise continuous function with period $p$ and 
->$$\mathcal{F}[g]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[(-1)^k a_{k} \cos(2\pi \omega_{k}t) + (-1)^k b_{k}\sin(2\pi \omega_{k}t)\Big]$$
+>$$\mathcal{FS}[g]|_{t} = A_{0} + \sum_{k=1}^\infty \Big[(-1)^k a_{k} \cos(2\pi \omega_{k}t) + (-1)^k b_{k}\sin(2\pi \omega_{k}t)\Big]$$
 >>[!proof]
 
 ## Partial Sums
 
 >[!def] Definition Partial Sum Approximation ([[../../../PDFs/howell2016.pdf#page=127|Source]])
 >Let $f$ be a periodic, piecewise continuous function with trigonometric Fourier series
-> $$\mathcal{F}[f]\rvert_{t} = A_{0} + \sum_{k=1}^\infty \Big[ a_{k} \cos\big(2\pi \omega_{k}t\big) + b_{k} \sin\big(2\pi \omega_{k}t\big)\Big]$$
+> $$\mathcal{FS}[f]\rvert_{t} = A_{0} + \sum_{k=1}^\infty \Big[ a_{k} \cos\big(2\pi \omega_{k}t\big) + b_{k} \sin\big(2\pi \omega_{k}t\big)\Big]$$
 >The partial sum approximation is given as a Fourier series with $N$ as its upper limit
->$$\mathcal{F}_{N}[f]\rvert_{t} = A_{0} + \sum_{k=1}^N \Big[ a_{k} \cos\big(2\pi \omega_{k}t\big) + b_{k} \sin\big(2\pi \omega_{k}t\big)\Big]$$
+>$$\mathcal{FS}_{N}[f]\rvert_{t} = A_{0} + \sum_{k=1}^N \Big[ a_{k} \cos\big(2\pi \omega_{k}t\big) + b_{k} \sin\big(2\pi \omega_{k}t\big)\Big]$$
