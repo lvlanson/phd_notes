@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/7 - Fourier Transform.md",
+                "file": "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md",
                 "mode": "source",
                 "source": true
               },
@@ -60,7 +60,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Mathematic Basics/Fourier Analysis/7 - Fourier Transform.md",
+                "file": "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md",
                 "mode": "preview",
                 "source": true
               }
@@ -159,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PDFs/howell2016.pdf",
+                "file": "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +176,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PDFs/howell2016.pdf",
+                "file": "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,7 +199,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PDFs/howell2016.pdf"
+                "file": "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md"
               }
             }
           }
@@ -224,105 +224,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "floating": {
-    "id": "639bd8eafc2b10e6",
-    "type": "floating",
-    "children": [
-      {
-        "id": "0caaa034dfd4a491",
-        "type": "window",
-        "children": [
-          {
-            "id": "695a4daa45daeea1",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "28eca1e92c8ce3fc",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "PDFs/howell2016.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 28,
-        "y": 560,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0.5
-      },
-      {
-        "id": "59819e99ed98f4b8",
-        "type": "window",
-        "children": [
-          {
-            "id": "3def4f33a476a10d",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "5fe710d698950eba",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "PDFs/howell2016.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 26,
-        "y": 560,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0.5
-      },
-      {
-        "id": "1e877ab73f771e0e",
-        "type": "window",
-        "children": [
-          {
-            "id": "3d0977344a69a333",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "fb59bf2e4f8b2249",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "PDFs/howell2016.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 176,
-        "y": 290,
-        "width": 1080,
-        "height": 960,
-        "maximize": true,
-        "zoom": 0.5
-      }
-    ]
-  },
-  "active": "fb59bf2e4f8b2249",
+  "active": "95ed2ce24e0ddbdb",
   "lastOpenFiles": [
-    "PhD Studies/Mathematic Basics/Fourier Analysis/7 - Fourier Transform.md",
-    "PDFs/howell2016.pdf",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series.md",
+    "PhD Studies/Cryptology/Papers/Crypto-Nets.md",
+    "PDFs/yi2014.pdf",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series.md",
+    "PDFs/xie2014.pdf",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md",
+    "PDFs/howell2016.pdf",
+    "References/@nita2023.md",
+    "PDFs/nita2023.pdf",
+    "PDFs/nita2023.pdf.crdownload",
+    "PhD Studies/Cryptology/Papers",
+    "References/@rivest1978.md",
+    "PDFs/rivest1978.pdf",
+    "PDFs/rivest1978.pdf.crdownload",
+    "References/@xie2014.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/7 - Fourier Transform.md",
+    "PhD Studies/Cryptology/Homomorphic Encryption",
+    "PhD Studies/Cryptology",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series (OLD).md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
@@ -334,27 +255,13 @@
     "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/Seminar 5.md",
     "index.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/5) Tschebyscheff Ungleichung Grenzwertsätz.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
-    "PDFs/grimmett1986.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Tabelle_Standardnormalverteilung.jpg",
-    "Lehre/Wahrscheinlichkeitsrechnung/Tabelle_Standardnormalverteilung.jpg.crdownload",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/2) Wahrscheinlichkeitsbegriff .pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/Seminar 4.md",
     "References/@ibe2014.md",
-    "PDFs/ibe2014.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Eigenvectors and Eigenvalues.md",
-    "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
-    "PDFs/briggs2019.pdf",
-    "PhD Studies/Mathematic Basics/Calculus/figures/integral_test.png",
-    "PDFs/zotero-182.pdf",
-    "PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces.md",
-    "PhD Studies/Mathematic Basics/Complex Analysis/Fundamental Properties.md",
-    "PhD Studies/Mathematic Basics/Calculus/Discontinuities.md"
+    "PhD Studies/Mathematic Basics/Calculus/figures/integral_test.png"
   ]
 }
