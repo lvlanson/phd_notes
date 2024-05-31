@@ -106,15 +106,15 @@
 >>[!example]- Lösung
 >>Nach der Tschebyscheff'schen Ungleichung können wir die Wahrscheinlichkeit anhand der gegebenen Parameter einschränken, da wir im gegebenen Ereignis um $3$ vom Erwarungswert $\mu=10$ abweichen, also haben wir für $\varepsilon=3$
 >>$$\begin{align}
->> P(\lvert X-10 \rvert < 3 ) &= 1 - \frac{2^2}{3^2}  \\
->> &= 1- \frac{4}{9} \\
->> &= \frac{5}{9} \tag*{$\blacktriangleleft$}
+>> P(\lvert X-10 \rvert < 3 ) &\geq 1 - \frac{2^2}{3^2}  \\
+>> &\geq 1- \frac{4}{9} \\
+>> &\geq \frac{5}{9} \tag*{$\blacktriangleleft$}
 >>\end{align}$$
 >
 >2. Welche Aussage kann über die Wahrscheinlichkeit des Ereignisses $(7 < X < 13)$ gemacht werden, wenn $X$ normalverteilt ist.
 >
 >>[!example]- Lösung
->> $X \sim N(10,4)$
+>> $X \sim N(10,2)$
 >> $Z \sim N(0,1)$
 >> $$\begin{align}
 >> P(7 < X < 13) &= P(X\leq 13)-P(X\leq 7) \\
@@ -176,12 +176,12 @@
 >>$$P(X > 30)$$
 >>Wir erkennen, dass $X$ **diskret** verteilt ist. Außerdem überlegen wir welche Verteilungsfunktion am ehesten geeignet ist, um diese Aufgabe zu lösen. Naheliegend sind **die Binomial- und Poissonverteilung**. Um uns entsprechend zu entscheiden, prüfen wir nach unserer **Faustregel**. Wir verwenden die Poissonverteilung, wenn die folgende Relation wahr ist
 >>$$\begin{align}
->> n \cdot p < 10 \implies \underbrace{ 1000 \cdot 0.2 }_{ =20 } \not<10
+>> n \cdot p < 10 \implies \underbrace{ 1000 \cdot 0.02 }_{ =20 } \not<10
 >>\end{align}$$
 >>Also verwenden wir die Binomialverteilung und erhalten
 >>$$\begin{align}
 >> P(X>30)&= 1-P(X \leq 30) \\
->> &= 1 - \sum_{k=0}^{30}\binom{1000}{k}0.2^{k}0.8^{1000-k}
+>> &= 1 - \sum_{k=0}^{30}\binom{1000}{k}0.02^{k}0.8^{1000-k}
 >>\end{align}$$
 >>Wir stellen fest, dass die Werte für unsere Methoden zu groß werden. Zunächst prüfen wir die Faustregel
 >>$$\begin{align}

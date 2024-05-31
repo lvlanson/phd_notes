@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/Seminar 6.md",
                 "mode": "source",
                 "source": true
               },
@@ -60,12 +60,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/Seminar 6.md",
                 "mode": "preview",
                 "source": true
               }
             },
             "group": "cd0810d201c81b09"
+          },
+          {
+            "id": "e6fb21423f9a2547",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
+              }
+            }
           },
           {
             "id": "6d27878bfbcc3726",
@@ -92,8 +102,19 @@
               }
             },
             "group": "8405bc44d8bdb32a"
+          },
+          {
+            "id": "4f7ef957d69c5dd9",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/6) Beschreibende Statistik.pdf"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -143,7 +164,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "61443583267748fc",
@@ -159,7 +181,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +198,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,7 +221,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md"
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
               }
             }
           }
@@ -224,14 +246,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "95ed2ce24e0ddbdb",
+  "active": "e6fb21423f9a2547",
   "lastOpenFiles": [
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/Seminar 6.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/6) Beschreibende Statistik.pdf",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/Seminar 5.md",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6",
     "PhD Studies/Cryptology/Papers/Crypto-Nets.md",
     "PDFs/yi2014.pdf",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series.md",
     "PDFs/xie2014.pdf",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md",
     "PDFs/howell2016.pdf",
     "References/@nita2023.md",
     "PDFs/nita2023.pdf",
@@ -239,11 +266,8 @@
     "PhD Studies/Cryptology/Papers",
     "References/@rivest1978.md",
     "PDFs/rivest1978.pdf",
-    "PDFs/rivest1978.pdf.crdownload",
     "References/@xie2014.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/7 - Fourier Transform.md",
-    "PhD Studies/Cryptology/Homomorphic Encryption",
-    "PhD Studies/Cryptology",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series (OLD).md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
@@ -253,7 +277,6 @@
     "PhD Studies/Mathematic Basics/Fourier Analysis/7.1 Analytical Preliminaries.md",
     "PhD Studies/Mathematic Basics/Calculus/Series.md",
     "PhD Studies/Mathematic Basics/Calculus/Differentiation.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/Seminar 5.md",
     "index.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Tabelle_Standardnormalverteilung.jpg",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
@@ -261,7 +284,6 @@
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/Seminar 4.md",
     "References/@ibe2014.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Calculus/figures/integral_test.png"
   ]
 }
