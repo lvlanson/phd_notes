@@ -54,9 +54,9 @@
 >>>[!remark] Bemerkung
 >>>Die empirische Verteilung einer Zufallsgröße gibt für eine reelle Zahl $x$ die entsprechende relative Summenhäufigkeit des nächsten $x_{i}^*$ zurück.
 >
->>[!def] Definition Klassenmitte
+>>[!def] Definition Klassenmitte (Definition [[../Vorlesungsskript_Mathematik3.pdf#page=92|6.14]])
 >>Die **Klassenmitte** ist definiert als
->>$$\overline{x}_{i}= \frac{x_{ir}+x_{il}}{2} \tag*{i=1,\dots ,k}$$
+>>$$\overline{x}_{i}= \frac{x_{ir}+x_{il}}{2} \tag*{$i=1,\dots ,k$}$$
 >>wobei $x_{il}$ der linke und $x_{ir}$ der rechte Klassenrand ist mit $k$ Klassen.
 >
 >>[!def] Definition Arithmetisches Mittel (Definition [[../Vorlesungsskript_Mathematik3.pdf#page=94|6.20]])
@@ -122,8 +122,8 @@
 >>\end{align}$$
 >>wobei $s_{X}$ Standardabweichung für $X$ und $s_{Y}$ die Standardabweichung für $Y$ ist.
 >
->>[!theorem] Satz Unabhängigkeit von $X$ und $Y$
->Für zwei unabhängige Merkamle $X$ und $Y$ gilt $r=0$. Allerdings folgt aus $r=0$ nicht die Unabhängigkeit von $X$ und $Y$.
+>>[!theorem] Satz Unabhängigkeit von $X$ und $Y$ (Satz [[../Vorlesungsskript_Mathematik3.pdf#page=98|6.38]])
+>Für zwei unabhängige Merkmale $X$ und $Y$ gilt $r=0$. Allerdings folgt aus $r=0$ nicht die Unabhängigkeit von $X$ und $Y$.
 
 
 
@@ -227,4 +227,57 @@
 >1. den empirischen Korrelationskoeffizienten
 >
 >>[!example] Lösung
->>  Für den Korrelations
+>>  Für den Korrelationskoeffizienten berechnen wir
+>>  $$r_{XY} = \frac{s_{XY}}{s_{X}s_{Y}} = \frac{\sum_{i=1}^nx_{i}y_{i}-n \overline{xy}}{\left( \sum_{i=1}^n x^2_{i}-n\overline{x}^2 \right)\left( \sum_{i=1}^n y^2_{i}-n\overline{y}^2 \right)}$$
+>>  Dafür berechnen wir
+>>  $$\begin{align}
+>>  s_{XY} &= \frac{1}{n-1}\sum_{i=1}^n (x_{i} - \overline{x})(y_{i}-\overline{y}) \\
+>>\end{align}$$
+>>mit $$\begin{align}
+>> \overline{x} &= 7 \\
+>> \overline{y} &= 2500
+>>\end{align}$$
+>>erhalten wir
+>>$$s_{XY} = -680$$
+>>Wir berechnen noch
+>>$$\begin{align}
+>> s_{X} &= 1.4142135623730951 \\
+>> s_{Y} &= 505.9644256269407
+>>\end{align}$$
+>>Wir erhalten also
+>>$$\begin{align}
+>> r_{XY} &= -\frac{680}{1.4142 \cdot 505.9644} \\
+>> &= -0.95032
+>>\end{align}$$
+>>>[!code]
+>>>```python
+>>> X = [6,5,7,7,8,9]
+>>> Y = [3000,3200,2500,2300,2000,2000]
+>>>
+>>> oX = sum(X)/len(X) # arithmetisches Mittel von X
+>>> oY = sum(Y)/len(Y) # arithmetisches Mittel von Y
+>>>
+>>> print("arithmetisches Mittel X = ", oX)
+>>> print("arithmetisches Mittel X = ", oY)
+>>> 
+>>> steps = [(x_i - oX)*(y_i - oY) for x_i, y_i in zip(X,Y)] # innere Summenteil von s_XY
+>>> s_XY = 1/(len(X)-1) * sum(steps)
+>>>
+>>>print("s_XY =",s_XY)
+>>>
+>>>def s_sq(V, oV):
+>>>    # s^2 des Merkmalsträgers V mit arithmetischem Mittel oV
+>>>    return 1/(len(V)-1) * sum([(v_i - oV)**2 for v_i in V])
+>>>
+>>>s_sq_X = s_sq(X, oX)
+>>>s_sq_Y = s_sq(Y, oY)
+>>>
+>>>s_X = s_sq_X**(1/2)
+>>>s_Y = s_sq_Y**(1/2)
+>>>
+>>>print("s_X =",s_X,"s_Y =", s_Y)
+>>>
+>>>r_XY = s_XY/(s_X*s_Y)
+>>>
+>>>print("r_XY =", r_XY)
+>>>```
