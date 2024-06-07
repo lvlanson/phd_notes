@@ -43,8 +43,8 @@
 >>\end{align}$$
 >>Nun wollen wir die Mengen konstruieren, die unsere Ziehungen repräsentieren. Wir definieren die Menge "k aus n" ziehen mit
 >>$$\begin{align}
->> T^3 &= \{ (t_{1}, t_2, t_{3}) \; | \; t_{i} \in T \} \\
->> N^2 &= \{ (n_{1}, n_{2}) \; | \; n_{i} \in N\}
+>> T^3 &= \{ \{t_{1}, t_2, t_{3}\} \; | \; t_{i} \in T \} \\
+>> N^2 &= \{ \{n_{1}, n_{2}\} \; | \; n_{i} \in N\}
 >>\end{align}$$
 >>Damit ergeben sich folgende Kombination
 >>$$\begin{align}

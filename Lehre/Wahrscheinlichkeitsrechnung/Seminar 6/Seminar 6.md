@@ -219,15 +219,18 @@
 >
 >>[!example]- Lösung
 >> $$\begin{align}
->> x_{0.5} &= \frac{1}{2}\left( x_{\frac{n}{2}}+x_{\frac{n}{2}+1} \right) \\
+>> \tilde{x}_{0.5} &= \frac{1}{2}\left( x_{\frac{n}{2}}+x_{\frac{n}{2}+1} \right) \\
 >> &= \frac{1}{2}(175+176) \\
->> &= 175.5 \tag*{$\blacktriangleleft$}
+>> &= 175.5 
 >>\end{align}$$
+>>Wir schauen nun in welcher Klasse der gefundene diskrete Median zugehörig ist und geben den Mittelwert an. Dieser repräsentiert den Median für klassierte Daten.
+>>$$x_{0.5} = 177.5 \tag*{$\blacktriangleleft$}$$
 >
 >6. Empirischer Modalwert
 >
 >>[!example]- Lösung
->> $$x_{M}=4$$
+>>Wir schauen in der Tabelle welche Klasse am häufigsten Vertreten ist und geben dessen Klassenmitte als Lösung 
+>> $$x_{M}=177.5$$
 >
 >7. Empirische Streuung
 >
@@ -265,9 +268,9 @@
 >1. den empirischen Korrelationskoeffizienten
 >
 >>[!example]- Lösung
->>  Für den Korrelationskoeffizienten berechnen wir
+>> Für den Korrelationskoeffizienten berechnen wir
 >>  $$r_{XY} = \frac{s_{XY}}{s_{X}s_{Y}} = \frac{\sum_{i=1}^nx_{i}y_{i}-n \overline{xy}}{\left( \sum_{i=1}^n x^2_{i}-n\overline{x}^2 \right)\left( \sum_{i=1}^n y^2_{i}-n\overline{y}^2 \right)}$$
->>  Dafür berechnen wir
+>> Dafür berechnen wir
 >>  $$\begin{align}
 >>  s_{XY} &= \frac{1}{n-1}\sum_{i=1}^n (x_{i} - \overline{x})(y_{i}-\overline{y}) \\
 >>\end{align}$$
@@ -300,7 +303,7 @@
 >> \widehat{b_{1}} &= \frac{s_{XY}}{s^2_{X}} \\
 >> &= r \frac{s_{Y}}{s_{X}}
 >>\end{align}$$
->> Wir entnehmen aus der vorangegangen Aufgabe
+>> Wir entnehmen aus der vorangegangenen Aufgabe
 >> $$\begin{align}
 >> \overline{y} &= 2500  \\
 >> \overline{x} &= 7 \\
@@ -313,7 +316,7 @@
 >> &= -\frac{680}{2} \\
 >> &= -340 \\
 >> \widehat{b_{0}} &= 2500 + 340\cdot 7 \\
->> &= 120
+>> &= 4880
 >>\end{align}$$
 >>Damit ist die empirische Regressionsgerade beschrieben als
 >>$$\begin{align}
@@ -330,7 +333,7 @@
 >> &= 0.903108102 \tag*{$\blacktriangleleft$}
 >>\end{align}$$
 >
->4. die Prognosewerte für den Auftragseingang, der bei einem Hypothekensins von $4$\% und $7.5$\%
+>4. die Prognosewerte für den Auftragseingang, der bei einem Hypothekenzins von $4$\% und $7.5$\%
 >
 >>[!example]- Lösung
 >>Wir haben die Regressionsgerade gegeben als 
@@ -350,6 +353,16 @@
 >>```
 >>$$\tag*{$\blacktriangleleft$}$$
 
+
+>[!code] Code Aufgabe (1.5)
+>```python
+>X = [180, 176, 167, 180, 177, 166, 160, 176, 176, 164, 182, 165, 175, 172, 172, 173, 179, 166, 162, 168, 170, 177, 183, 179, 172, 166, 163, 176, 177, 181]
+>
+>X.sort()
+>mid = int(len(X)/2)
+>
+>print(X[mid], X[mid+1]) 
+>```
 
 >[!code] Code Aufgabe (2.1)
 >```python
