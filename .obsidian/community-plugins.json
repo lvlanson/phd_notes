@@ -19,5 +19,6 @@
   "obsidian-desmos",
   "obsidian-pandoc",
   "marp-slides",
-  "webpage-html-export"
+  "webpage-html-export",
+  "drawio-obsidian"
 ]
