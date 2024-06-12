@@ -7,7 +7,7 @@ DOI:
 
 >[!Links]-
 >URL: https://www.cambridge.org/de/universitypress/subjects/mathematics/algebra/matrix-analysis-2nd-edition?format=PB&isbn=9780521548236
->PDF: [PDF](hornrogara..pdf)
+>PDF: [PDF](hornrogara.pdf)
 >Zotero: [Zotero-Link](zotero://select/items/@hornrogara.)
 
 >[!ABSTRACT]-
