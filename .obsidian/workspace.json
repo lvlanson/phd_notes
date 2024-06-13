@@ -6,6 +6,7 @@
       {
         "id": "7bd61af7779458fb",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "95ed2ce24e0ddbdb",
@@ -14,7 +15,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/Seminar 6.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 7/Seminar 7.md",
                 "mode": "source",
                 "source": true
               },
@@ -53,6 +54,7 @@
       {
         "id": "b01cc174f1cfc738",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "db50a6b3bd9b6162",
@@ -60,22 +62,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/Seminar 6.md",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 7/Seminar 7.md",
                 "mode": "preview",
                 "source": true
               }
             },
             "group": "cd0810d201c81b09"
-          },
-          {
-            "id": "e6fb21423f9a2547",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
-              }
-            }
           },
           {
             "id": "6d27878bfbcc3726",
@@ -109,12 +101,11 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/6) Beschreibende Statistik.pdf"
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 7/7) Konfidenzintervalle.pdf"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -181,7 +172,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 7/Seminar 7.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -198,7 +189,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 7/Seminar 7.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -221,7 +212,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 7/Seminar 7.md"
               }
             }
           }
@@ -246,11 +237,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e6fb21423f9a2547",
+  "active": "db50a6b3bd9b6162",
   "lastOpenFiles": [
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/Seminar 6.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 7/7) Konfidenzintervalle.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 7/Seminar 7.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/6) Beschreibende Statistik.pdf",
+    "PDFs/greene2019.pdf",
+    "PDFs/grimmett1986.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/Seminar 6.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 7",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 7/Untitled",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/Seminar 5.md",
     "PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption.md",
@@ -259,13 +258,8 @@
     "PDFs/yi2014.pdf",
     "PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series.md",
     "PDFs/xie2014.pdf",
-    "PDFs/howell2016.pdf",
     "References/@nita2023.md",
-    "PDFs/nita2023.pdf",
-    "PDFs/nita2023.pdf.crdownload",
-    "PhD Studies/Cryptology/Papers",
     "References/@rivest1978.md",
-    "PDFs/rivest1978.pdf",
     "References/@xie2014.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/7 - Fourier Transform.md",
     "PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series (OLD).md",
@@ -280,10 +274,7 @@
     "index.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Tabelle_Standardnormalverteilung.jpg",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/Seminar 4.md",
-    "References/@ibe2014.md",
-    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
     "PhD Studies/Mathematic Basics/Calculus/figures/integral_test.png"
   ]
 }
