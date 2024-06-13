@@ -54,9 +54,9 @@
 >>>[!remark] Bemerkung
 >>>Die empirische Verteilung einer Zufallsgröße gibt für eine reelle Zahl $x$ die entsprechende relative Summenhäufigkeit des nächsten $x_{i}^*$ zurück.
 >
->>[!def] Definition Klassenmitte
+>>[!def] Definition Klassenmitte (Definition [[../Vorlesungsskript_Mathematik3.pdf#page=92|6.14]])
 >>Die **Klassenmitte** ist definiert als
->>$$\overline{x}_{i}= \frac{x_{ir}+x_{il}}{2} \tag*{i=1,\dots ,k}$$
+>>$$\overline{x}_{i}= \frac{x_{ir}+x_{il}}{2} \tag*{$i=1,\dots ,k$}$$
 >>wobei $x_{il}$ der linke und $x_{ir}$ der rechte Klassenrand ist mit $k$ Klassen.
 >
 >>[!def] Definition Arithmetisches Mittel (Definition [[../Vorlesungsskript_Mathematik3.pdf#page=94|6.20]])
@@ -107,7 +107,7 @@
 >>Die **Spannweite** ist definiert mit
 >>$$s_{w}=\underset{i}{\text{max}} \{ x_{i} \} - \underset{i}{\text{min}}\{ x_{i} \}\;\;$$
 
->[!def] Definitionen Deskriptive Statistik für zweidimensionale Daten
+>[!def]- Definitionen Deskriptive Statistik für zweidimensionale Daten
 >
 >>[!def] Defintion Empirische Kovarianz (Definition [[../Vorlesungsskript_Mathematik3.pdf#page=97|6.33]])
 >>$$\begin{align}
@@ -122,9 +122,47 @@
 >>\end{align}$$
 >>wobei $s_{X}$ Standardabweichung für $X$ und $s_{Y}$ die Standardabweichung für $Y$ ist.
 >
->>[!theorem] Satz Unabhängigkeit von $X$ und $Y$
->Für zwei unabhängige Merkamle $X$ und $Y$ gilt $r=0$. Allerdings folgt aus $r=0$ nicht die Unabhängigkeit von $X$ und $Y$.
+>>[!theorem] Satz Unabhängigkeit von $X$ und $Y$ (Satz [[../Vorlesungsskript_Mathematik3.pdf#page=98|6.38]])
+>Für zwei unabhängige Merkmale $X$ und $Y$ gilt $r=0$. Allerdings folgt aus $r=0$ nicht die Unabhängigkeit von $X$ und $Y$.
 
+>[!def]- Definitionen Regressionsanalyse
+>
+>>[!def] "Definition" Einfache Lineare Regression ([[../Vorlesungsskript_Mathematik3.pdf#page=101|Seite 101]])
+>> Die Gerade ist definiert als
+>> $$\begin{align}
+>> \widehat{y} &= \widehat{b_{0}} + \widehat{b_{1}}x
+>>\end{align}$$
+>>mit
+>>$$\begin{align}
+>> \widehat{b_{0}} &= \overline{y} - \widehat{b_{1}}\overline{x} \\
+>> \widehat{b_{1}} &= \frac{s_{XY}}{s^2_{X}} \\
+>>\end{align}$$
+>
+>>[!def] Definition Gesamtstreuung/Gesamtvarianz (Definition [[../Vorlesungsskript_Mathematik3.pdf#page=102|6.42]])
+>> Die Streuung der $y_{i}$-Werte, die zur Zielvariablen $Y$ gehören ist definiert als
+>> $$s^2_{Y} = \frac{1}{n-1}\sum_{i=1}^n (y_{i}- \overline{y})^2$$
+>
+>>[!def] Definition Durch Regressionsgerade Erklärte Streuung/Regressionsvarianz (Definition [[../Vorlesungsskript_Mathematik3.pdf#page=103|6.43]])
+>>... ist die Streuung der geschätzten $\widehat{y_{i}}$ Wert, ist definiert als
+>> $$s^2_{\widehat{y}} = \frac{1}{n-1}\sum_{i=1}^n (\widehat{y_{i}}- \overline{y})^2$$
+>
+>>[!def] Definition Reststreuung/Fehlervarianz (Definition [[../Vorlesungsskript_Mathematik3.pdf#page=103|6.44]])
+>>... ist definiert als
+>> $$s^2_{u} = \frac{1}{n-2}\sum_{i=1}^n (y_{i}- \widehat{y_{i}})^2$$
+>
+>>[!def] Definition Empirisches Bestimmtsheitsmaß (Definition [[../Vorlesungsskript_Mathematik3.pdf#page=103|6.46]])
+>>... ist definiert als
+>>$$\begin{align}
+>> b&= \frac{s^2_{\widehat{y}}}{s^2_{Y}}  \\
+>>  &= \frac{\sum_{i=1}^n (\widehat{y_{i}}-\overline{y})^2}{\sum_{i=1}^n (y_{i}-\overline{y})^2}
+>>\end{align}$$
+>>
+>>>[!remark] Bemerkung
+>>> - $b$ nahe $1$: Die Regressionsfunktion $g$ beschreibt den Zusammenhang zwischen zwi- schen der abhängigen Variablen $Y$ und der unabhängigen Variablen $X$ sehr gut.
+>>> - $b$ nahe $0$: Die Regressionsfunktion $g$ ist ungeeignet. Der Trend der Messwertpaare wird von $g$ nicht erfasst. -> Wahl einer anderen Funktionsklasse für die Regressionsfunktion
+>
+>>[!theorem] Satz Empirisches Bestimmtheitsmaß der linearen Regression (Satz [[../Vorlesungsskript_Mathematik3.pdf#page=103|6.47]])
+>>$$b=r_{XY}^2$$
 
 
 
@@ -181,15 +219,18 @@
 >
 >>[!example]- Lösung
 >> $$\begin{align}
->> x_{0.5} &= \frac{1}{2}\left( x_{\frac{n}{2}}+x_{\frac{n}{2}+1} \right) \\
+>> \tilde{x}_{0.5} &= \frac{1}{2}\left( x_{\frac{n}{2}}+x_{\frac{n}{2}+1} \right) \\
 >> &= \frac{1}{2}(175+176) \\
->> &= 175.5 \tag*{$\blacktriangleleft$}
+>> &= 175.5 
 >>\end{align}$$
+>>Wir schauen nun in welcher Klasse der gefundene diskrete Median zugehörig ist und geben den Mittelwert an. Dieser repräsentiert den Median für klassierte Daten.
+>>$$x_{0.5} = 177.5 \tag*{$\blacktriangleleft$}$$
 >
 >6. Empirischer Modalwert
 >
 >>[!example]- Lösung
->> $$x_{M}=4$$
+>>Wir schauen in der Tabelle welche Klasse am häufigsten Vertreten ist und geben dessen Klassenmitte als Lösung 
+>> $$x_{M}=177.5$$
 >
 >7. Empirische Streuung
 >
@@ -226,5 +267,148 @@
 >Bestimmen Sie
 >1. den empirischen Korrelationskoeffizienten
 >
->>[!example] Lösung
->>  Für den Korrelations
+>>[!example]- Lösung
+>> Für den Korrelationskoeffizienten berechnen wir
+>>  $$r_{XY} = \frac{s_{XY}}{s_{X}s_{Y}} = \frac{\sum_{i=1}^nx_{i}y_{i}-n \overline{xy}}{\left( \sum_{i=1}^n x^2_{i}-n\overline{x}^2 \right)\left( \sum_{i=1}^n y^2_{i}-n\overline{y}^2 \right)}$$
+>> Dafür berechnen wir
+>>  $$\begin{align}
+>>  s_{XY} &= \frac{1}{n-1}\sum_{i=1}^n (x_{i} - \overline{x})(y_{i}-\overline{y}) \\
+>>\end{align}$$
+>>mit $$\begin{align}
+>> \overline{x} &= 7 \\
+>> \overline{y} &= 2500
+>>\end{align}$$
+>>erhalten wir
+>>$$s_{XY} = -680$$
+>>Wir berechnen noch
+>>$$\begin{align}
+>> s_{X} &= 1.4142135623730951 \\
+>> s_{Y} &= 505.9644256269407
+>>\end{align}$$
+>>Wir erhalten also
+>>$$\begin{align}
+>> r_{XY} &= -\frac{680}{1.4142 \cdot 505.9644} \\
+>> &= -0.95032 \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>> [[#^2714df| Berechnungscode zur Aufgabe]]
+>
+>2. die empirische Regressionsgerade
+>
+>>[!example]- Lösung
+>> Wir verwenden dazu [[../Vorlesungsskript_Mathematik3.pdf#page=100|6.2.2 Einfache lineare Regression]], insbesondere die Gleichung
+>> $$\widehat{y}=\widehat{b_{0}}+\widehat{b_{1}}x$$
+>> mit
+>> $$\begin{align}
+>> \widehat{b_{0}} &= \overline{y}-\widehat{b_{1}}\overline{x} \\
+>> \widehat{b_{1}} &= \frac{s_{XY}}{s^2_{X}} \\
+>> &= r \frac{s_{Y}}{s_{X}}
+>>\end{align}$$
+>> Wir entnehmen aus der vorangegangenen Aufgabe
+>> $$\begin{align}
+>> \overline{y} &= 2500  \\
+>> \overline{x} &= 7 \\
+>> s_{XY} &= -680 \\
+>> s_{X} &= 1.4142135623730951 \approx \sqrt{ 2 }
+>>\end{align}$$
+>>Wir erhalten
+>>$$\begin{align}
+>>\widehat{b_{1}} &= \frac{s_{XY}}{s^2_{X}} \\
+>> &= -\frac{680}{2} \\
+>> &= -340 \\
+>> \widehat{b_{0}} &= 2500 + 340\cdot 7 \\
+>> &= 4880
+>>\end{align}$$
+>>Damit ist die empirische Regressionsgerade beschrieben als
+>>$$\begin{align}
+>> \widehat{y} = 4880 -340x \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>3. das Bestimmtheitsmaß
+>
+>>[!example]- Lösung
+>> Wir berechnen
+>> $$\begin{align}
+>> b&= r_{XY}^2 \tag{Satz 6.47}  \\
+>> &= (-0.95032)^2 \\
+>> &= 0.903108102 \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>4. die Prognosewerte für den Auftragseingang, der bei einem Hypothekenzins von $4$\% und $7.5$\%
+>
+>>[!example]- Lösung
+>>Wir haben die Regressionsgerade gegeben als 
+>>$$\widehat{y} = g(x) = 4880 -340x$$
+>>Wir setzen die entsprechenden $x \in \{ 4, 7.5 \}$ ein und erhalten
+>>$$\begin{align}
+>> g(4)&= 3520 \\
+>> g(7.5) &= 2330 \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>5.  die geschätzten Werte mittels der empirischen Regressionsgerade für die gegebenen Werte für $X$
+>
+>>[!example]- Lösung
+>>```
+>>Die Ergebnisse gegeben als (x, y_hat)
+ [(5, 3180), (6, 2840), (7, 2500), (8, 2160), (9, 1820)]
+>>```
+>>$$\tag*{$\blacktriangleleft$}$$
+
+
+>[!code] Code Aufgabe (1.5)
+>```python
+>X = [180, 176, 167, 180, 177, 166, 160, 176, 176, 164, 182, 165, 175, 172, 172, 173, 179, 166, 162, 168, 170, 177, 183, 179, 172, 166, 163, 176, 177, 181]
+>
+>X.sort()
+>mid = int(len(X)/2)-1
+>
+>print(X[mid], X[mid+1]) 
+>```
+
+>[!code] Code Aufgabe (2.1)
+>```python
+> X = [6,5,7,7,8,9]
+> Y = [3000,3200,2500,2300,2000,2000]
+>
+> oX = sum(X)/len(X) # arithmetisches Mittel von X
+> oY = sum(Y)/len(Y) # arithmetisches Mittel von Y
+>
+> print("arithmetisches Mittel X = ", oX)
+> print("arithmetisches Mittel X = ", oY)
+> 
+> steps = [(x_i - oX)*(y_i - oY) for x_i, y_i in zip(X,Y)] # innere Summenteil von s_XY
+> s_XY = 1/(len(X)-1) * sum(steps)
+>
+>print("s_XY =",s_XY)
+>
+>def s_sq(V, oV):
+>    # s^2 des Merkmalsträgers V mit arithmetischem Mittel oV
+>    return 1/(len(V)-1) * sum([(v_i - oV)**2 for v_i in V])
+>
+>s_sq_X = s_sq(X, oX)
+>s_sq_Y = s_sq(Y, oY)
+>
+>s_X = s_sq_X**(1/2)
+>s_Y = s_sq_Y**(1/2)
+>
+>print("s_X =",s_X,"\ns_Y =", s_Y)
+>
+>r_XY = s_XY/(s_X*s_Y)
+>
+>print("r_XY =", r_XY)
+>```
+
+^2714df
+
+>[!code] Code zur Aufgabe (2.4)
+>``` python
+>X = set([6,5,7,7,8,9])
+>
+>print("Gefilterte X Werte (ohne Duplikate):\n", X)
+>
+>def g(x):
+>    return -340 * x + 4880
+>
+>y_hat = [g(x) for x in X]
+>
+>print("Die Ergebnisse gegeben als (x, y_hat)\n", [(x,y_i_hat) for x, y_i_hat in zip(X, y_hat)])
+>```
