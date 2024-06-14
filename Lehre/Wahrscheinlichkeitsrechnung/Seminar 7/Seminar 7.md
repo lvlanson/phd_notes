@@ -78,8 +78,72 @@
 >
 >1. zum Konfidenzniveau $0.95$ für das durchschnittliche Gewicht der Packungen in der Lieferung.
 >
->>[!example] Lösung
->>Wir haben die Situation, dass $X \sim N(\mu,\sigma)$ und $\sigma^2$ ist unbekannt. Wir bestimmen zunächst den Mittelwert mit
->>$$\overline{x}= \frac{1}{n}\sum_{i=1}^n x_{i}$$
+>>[!example]- Lösung
+>>Wir haben die Situation, dass $X \sim N(\mu,\sigma)$ und $\sigma^2$ unbekannt ist. Demnach verwenden wir Verfahren $(2)$. Aus der Stichprobe stellen wir fest
+>>$$n=10$$
+>>Wir bestimmen zunächst den Mittelwert mit
+>>$$\overline{X}= \frac{1}{n}\sum_{i=1}^n x_{i}$$
 >> Wir erhalten
->> $$\overline{x} = 10.0$$
+>> $$\overline{X} = 10.0$$
+>> Dann bestimmen wir die Standardabweichung
+>> $$\begin{align}
+>> S &= \sqrt{ S^2 } \\
+>> &= \sqrt{ \frac{1}{n-1} \sum_{i=1}^n (X_{i}-\overline{X}) } \\
+>> &= 0.3162
+>>\end{align}$$
+>> Wir verwenden den erarbeiteten Ansatz
+>> $$P\left( -c_{t(n-1), 1-\frac{\alpha}{2}} \cdot \frac{s}{\sqrt{ n }} + \overline{x} \leq \mu \leq c_{t(n-1), 1- \frac{\alpha}{2}} \cdot \frac{s}{\sqrt{ n }} + \overline{x}\right) = 1-\alpha $$
+>> wobei wir den Fehler $\alpha=0.05$ haben, demnach haben wir
+>> $$\begin{align}
+>>P\left( -2.262  \cdot \frac{0.3162}{\sqrt{ 10 }} + 10.0 \leq \mu \leq 2.262 \cdot \frac{0.3162}{\sqrt{ 10 }} + 10.0\right) &= 0.95 \\
+>> P(9.7738 \leq \mu \leq 10.2262) &= 0.95 \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>2. zum Konfidenzniveau $0.99$ für das durchschnittliche Gewicht der Packungen in der Lieferung.
+>
+>>[!example]- Lösung
+>>Wir verwenden die Ergebnisse der Aufgabe zuvor und setzen an der Stelle
+>>$$P\left( -c_{t(n-1), 1-\frac{\alpha}{2}} \cdot \frac{s}{\sqrt{ n }} + \overline{x} \leq \mu \leq c_{t(n-1), 1- \frac{\alpha}{2}} \cdot \frac{s}{\sqrt{ n }} + \overline{x}\right) = 1-\alpha $$
+>>mit $\alpha=0.01$ ein, sodass wir erhalten
+>>$$\begin{align}
+>> P\left( -3.250  \cdot \frac{0.3162}{\sqrt{ 10 }} + 10.0 \leq \mu \leq 3.250 \cdot \frac{0.3162}{\sqrt{ 10 }} + 10.0\right) &= 0.95 \\
+>> P(9.675 \leq \mu \leq 10.325) &= 0.95
+>>\end{align}$$
+>
+>3. Welche Auswirkung hat die Änderung des Konfidenzintervals
+>
+>>[!example]- Lösung
+>>Je geringer die Irrtumswahrscheinlichkeit $\alpha$ desto größer das Konfidenzinterval. Das heißt, dass wir sicherer sein wollen, dass das wahre Mittel innerhalb des Intervalls liegt.
+
+>[!example] Aufgabe (2)
+>
+>$20$ Messungen der Schaftlänge von Zylinderschrauben ergaben eine mittlere Länge von $18 \text{mm}$ und eine Standardabweichung von $28 \mu \text{m}$. Gesucht sind die Konfidenzgrenzen für die Streubreite mit $\sigma$ mit einer Irrtumswahrscheinlichkeit von $5\%$, wenn die Schaftlänge als normalverteilt angenommen werden kann.
+>
+>Hinweis: Gesucht ist hier ein KI für $\sigma$ (in $\mu \text{m}$) anstatt für $\sigma^2$.
+>>[!example] Lösung
+>>Wir erfassen folgende Parameter
+>>$$\begin{align}
+>> n&=20 \\
+>> \overline{x}&=18\,000 \\
+>> \sigma &= 28
+>>\end{align}$$
+>>Wir stellen außerdem fest, dass wir Verfahren $(2)$ anwenden, da 
+
+
+>[!algo]- Code Aufgabe 1.1
+>```python
+># Daten als Fließkommazahlen erzeugen
+>X = [float(_x) for _x in "9.5 10.5 10.0 10.0 10.2 10.0 10.4 9.6 9.8 10.0".split(" ")]
+>
+># Erwartungswert berechnen
+>o_X = sum(X)/len(X) # = 10.0
+>
+># Standardabweichung berechnen
+>s_X = sum([(_x - o_X)**2 for _x in X])/(len(X)-1) # = 0.1
+>
+>print(f"n={len(X)}\no_X={o_X}\ns_X={s_X}")
+>
+>#n=10
+>#o_X=10.0
+>#s_X=0.1
+>```
