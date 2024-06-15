@@ -1,4 +1,4 @@
->[!def] Definition Asymmetric Encryption Scheme $\mathcal{E}$ ([[../../../PDFs/gentry2009.pdf#page=37|Source]])
+>[!def] Definition Asymmetric Encryption Scheme $\mathcal{E}$ ([[../../../../PDFs/gentry2009.pdf#page=37|Source]])
 >An asymmetric encryption scheme $\mathcal{E}$ consists of three functions
 >- $\text{Keygen}_{\mathcal{E}}: \lambda \mapsto (s_{k}, p_{k})$ with
 >	- $p_{k}$ - public
@@ -11,7 +11,7 @@
 >The complexity of these algorithms must be polynomial in $\lambda$
 
 
->[!def] Definition Correctness ([[../../../PDFs/gentry2009.pdf#page=37|Source]])
+>[!def] Definition Correctness ([[../../../../PDFs/gentry2009.pdf#page=37|Source]])
 >The following statement must hold true. 
 >
 >>If $(p_{k}, s_{k}) \leftarrow\text{KeyGen}_{\mathcal{E}}$ and $\psi \leftarrow \text{Encrypt}_{\mathcal{E}}(p_k, \psi)$ with $\pi \in \mathcal{P}$ then $\text{Decrypt}_{\mathcal{E}}(s_k,\psi)\to \pi$
@@ -19,7 +19,7 @@
 >>[!remark]-
 >>If we generate a keypair with the encryption scheme $\mathcal{E}$ and generate the cipher $\psi$, then if we decrypt the cipher we must yield back the plaintext $\pi$.
 
->[!def] Definition Homomorphic Encryption Scheme $\mathcal{E}$ ([[../../../PDFs/gentry2009.pdf#page=37|Source]])
+>[!def] Definition Homomorphic Encryption Scheme $\mathcal{E}$ ([[../../../../PDFs/gentry2009.pdf#page=37|Source]])
 > A **Homomorphic Encryption Scheme** $\mathcal{E}$ is an encryption scheme with an $\text{Evaluate}_{\mathcal{E}}$ algorithm
 > $$\text{Evaluate}_{\mathcal{E}}: (p_{k}, C, \mathbf{\Psi}) \mapsto \psi$$
 >>[!note]- Parameter Descriptions
@@ -34,7 +34,7 @@
 >such that if $\mathbf{\Pi}$ is the result of performing the same operations of the circuit $C$ on the plaintexts $(\pi_{1}, \dots, \pi_{n})$, it must hold
 >$$\text{Decrypt}_{\mathcal{E}}\Big(\text{Evaluate}_{\mathcal{E}}(p_{k}, C, \mathbb{\Psi})\Big) = \mathbf{\Pi} \tag{Homomorphism}$$
 
->[!def] Definition Correctness of Homomorphic Encryption ([[../../../PDFs/gentry2009.pdf#page=37|Source]])
+>[!def] Definition Correctness of Homomorphic Encryption ([[../../../../PDFs/gentry2009.pdf#page=37|Source]])
 >
 >An _homomorphic encryption scheme_ $\mathcal{E}$ _is correct for circuits in_ $\mathcal{C}_{\mathcal{E}}$ if, for any key-pair $(s_{k}, p_{k})$ output by $\text{KeyGen}_{\mathcal{E}}(\lambda)$, any circuit $C \in \mathcal{C}_{\mathcal{E}}$, any plaintexts $\pi_{1},\dots,\pi_{t}$ and any ciphertexts $\mathbf{\Psi}=(\psi_{1},\dots, \psi_{t})$ with $\psi_{i} \leftarrow \text{Encrypt}_{\mathcal{E}}(p_{k}, \pi_{i})$, it is the case that:
 >$$\psi \leftarrow \text{Evaluate}_{\mathcal{E}}(p_{k}, C, \pi_{i}) \implies \text{Decrypt}_{\mathcal{E}}(s_{k}, \psi) \to C(\pi_{1}, \dots, \pi_{t}) $$
