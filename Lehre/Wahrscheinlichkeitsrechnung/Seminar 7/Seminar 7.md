@@ -158,7 +158,7 @@
 >> P(9.675 \leq \mu \leq 10.325) &= 0.95 \tag*{$\blacktriangleleft$}
 >>\end{align}$$
 >
->3. Welche Auswirkung hat die Änderung des Konfidenzintervals
+>3. Welche Auswirkung hat die Änderung des Konfidenzintervals?
 >
 >>[!example]- Lösung
 >>Je geringer die Irrtumswahrscheinlichkeit $\alpha$ desto größer das Konfidenzinterval. Das heißt, dass wir sicherer sein wollen, dass das wahre Mittel innerhalb des Intervalls liegt. $$\tag*{$\blacktriangleleft$}$$
