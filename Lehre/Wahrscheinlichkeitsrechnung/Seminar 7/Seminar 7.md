@@ -136,7 +136,7 @@
 >> Dann bestimmen wir die Standardabweichung
 >> $$\begin{align}
 >> S &= \sqrt{ S^2 } \\
->> &= \sqrt{ \frac{1}{n-1} \sum_{i=1}^n (X_{i}-\overline{X}) } \\
+>> &= \sqrt{ \frac{1}{n-1} \sum_{i=1}^n (X_{i}-\overline{X})^2 } \\
 >> &= 0.3162
 >>\end{align}$$
 >> Wir verwenden den erarbeiteten Ansatz
@@ -154,8 +154,8 @@
 >>$$P\left( -c_{t(n-1), 1-\frac{\alpha}{2}} \cdot \frac{s}{\sqrt{ n }} + \overline{x} \leq \mu \leq c_{t(n-1), 1- \frac{\alpha}{2}} \cdot \frac{s}{\sqrt{ n }} + \overline{x}\right) = 1-\alpha $$
 >>mit $\alpha=0.01$ ein, sodass wir erhalten
 >>$$\begin{align}
->> P\left( -3.250  \cdot \frac{0.3162}{\sqrt{ 10 }} + 10.0 \leq \mu \leq 3.250 \cdot \frac{0.3162}{\sqrt{ 10 }} + 10.0\right) &= 0.95 \\
->> P(9.675 \leq \mu \leq 10.325) &= 0.95 \tag*{$\blacktriangleleft$}
+>> P\left( -3.250  \cdot \frac{0.3162}{\sqrt{ 10 }} + 10.0 \leq \mu \leq 3.250 \cdot \frac{0.3162}{\sqrt{ 10 }} + 10.0\right) &= 0.99 \\
+>> P(9.675 \leq \mu \leq 10.325) &= 0.99 \tag*{$\blacktriangleleft$}
 >>\end{align}$$
 >
 >3. Welche Auswirkung hat die Änderung des Konfidenzintervals?
@@ -215,7 +215,7 @@
 >>also berechnen wir
 >>$$\begin{align}
 >> G_{o}-G_{u} &= 0.05 \\
->> \cancel{ 0.115 } + 1.96 \cdot \sqrt{ \frac{0.115\cdot0.885}{n}} - (\cancel{ 0.115 } - 1.96 \cdot \sqrt{ \frac{0.115\cdot0.885}{n}}) &= 0.05\\
+>> \cancel{ 0.115 } + 1.96 \cdot \sqrt{ \frac{0.115\cdot0.885}{n}} - \left(\cancel{ 0.115 } - 1.96 \cdot \sqrt{ \frac{0.115\cdot0.885}{n}}\right) &= 0.05\\
 >> 2 \cdot 1.96 \cdot \frac{0.319}{\sqrt{  n}} &= 0.05 \\
 >> 1.2505 &= 0.05 \cdot \sqrt{ n } \\
 >> 25.01 &= \sqrt{ n } \\
