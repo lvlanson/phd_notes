@@ -39,8 +39,14 @@
 >>Similarly to the [[#^08199f| closest vector problem]] we are looking for a vector which is approximately close up to a factor of $\gamma(n)$.
 
 
->[!observation] Conjecture ([[../../../../../PDFs/sabani2024.pdf#page=10|Source]])
+>[!observation] Conjecture Quantum-Security ([[../../../../../PDFs/sabani2024.pdf#page=10|Source]])
 >---
 >**There is no polynomial time quantum algorithm that approximates lattice problems within polynomial factors.**
 >
 >---
+
+>[!remark] Remark on Lattice-Based Cryptography ([[../../../../../PDFs/sabani2024.pdf#page=11|Source]])
+>Lattice-based cryptographic offer many advantages over **factorization** and **discrete logarithm** problems (which both can be solved in polynomial time with quantum computing, i.e. Shore's algorithm)
+>- efficient and parallelizable
+>- operations are simple, i.e. linear vector and matrix operations with small moduli
+>- fully homomorphic encryption can be achieved

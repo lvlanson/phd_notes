@@ -80,6 +80,38 @@
 ---
 ### Preliminaries
 
+>[!def] Definition Learning from Parity with Error 
+>Let $n \geq 1$ and $0<\varepsilon< \frac{1}{2}$, find an unknown $\mathbf{s} \in \mathbb{Z}_{2}^n$ such that the list of equations with errors
+>$$\begin{align}
+> \left\langle \mathbf{s}\,,\,\mathbf{a}_{1} \right\rangle &\approx_{\varepsilon} b_{1} \;\;(\text{mod } 2) \\
+> \left\langle \mathbf{s}\,,\,\mathbf{a}_{2} \right\rangle &\approx_{\varepsilon} b_{2} \;\;(\text{mod } 2) \\
+> &\vdots
+>\end{align}$$
+>where the $\mathbf{a}_{i}$s are chosen independently from the uniform distribution on $\mathbb{Z}_{2}^n$ and each equation is correct independently with probability $1-\varepsilon$
+>
+>>[!remark]- Remark on the Term Parity
+>>Parity is a function on the bitstream of a string $s = (0+1)^n$ of the following form
+>>$$\text{parity}(s)=\begin{cases}
+>>0 & \text{ if number of } 1\text{'s is even} \\
+>>1 & \text{ if number of }1\text{'s is odd}
+>>\end{cases}$$
+>
+>>[!remark]- Remark on Hardness of the Problem
+>>There is no algorithm which solves this problem in $\text{poly}(n)$ time even for small $\varepsilon$.
+>
+>>[!example]- Algorithmic Example (Useful)
+>>1. Let $\mathbf{s} \in \mathbb{Z}_{2}^n$ be a randomly chosen secret by Alice. 
+>>2. A request algorithm is introduced:
+>>	1. Alice chooses some $\mathbf{a} \in \mathbb{Z}_{2}^n$
+>>	2. Alice generates a noisy parity response $$b=\left\langle \mathbf{s}\,,\, \mathbf{a} \right\rangle + \begin{cases}
+>> 0 &\text{with probability } 1-\varepsilon \\
+>> 1 &\text{with probability } \varepsilon
+>> \end{cases}$$
+>> 	where $\varepsilon$ represents the noise or error
+>> 	1. Alice sends $\mathbf{a}$ and $b$ to Bob
+>>3. Bob's goal is to determine the secret vector $\mathbf{s}$ by querying Alice multiple times using the request algorithm. Each query provides a new pair $(\mathbf{a},b)$.
+
+
 >[!def] Definition Learning with Errors (LWE) ([[../../../../../../PDFs/gentry2013.pdf#page=8|Source]])
 >For security parameter $\lambda$, let 
 >- $n=n(\lambda)$ be an integer dimension
@@ -106,6 +138,11 @@
 >
 >>[!remark]- Remark on Security of LWE ([[../../../../../../PDFs/sabani2024.pdf#page=14|Source]])
 >>The security of LWE is based on the hardness of **shortest integer problem (SIP)** for [[../Lattice Based/Lattice Cryptography/Elementary Definitions|lattices]].
+>
+>>[!remark]- Remark on Error $\mathbf{e}=\mathbf{0}$ ([[../../../../../../PDFs/regev2024.pdf#page=2|Source]])
+>>If we consider $\mathbf{e}=\mathbf{0}$, then the problem collapses to the simple linear equation which can be solved by Gaussian elimination and can be solved for $\mathcal{O}(n)$ equations in $\text{poly}(n)$ time.
+>>
+>>Given $\mathbf{e}\neq \mathbf{0}$ the problem becomes untractable
 
 >[!def] Definition Real Modulus ([[../../../../../../PDFs/regev2024.pdf#page=12|Source]])
 >Let $x,y \in \mathbb{R}^+$
@@ -131,6 +168,8 @@
 >>The normal distribution with mean $\mu=0$ and variance $\sigma^2$ as distribution on $\mathbb{R}$ is given by the density function
 >>$$\frac{1}{\sqrt{ 2\pi }\sigma}\exp\left( -\frac{1}{2}\left( \frac{x}{\sigma} \right)^2 \right)$$ 
 
+^cd948a
+
 >[!def] Definition Probability Density Function based on the Gaussian Function ([[../../../../../../PDFs/regev2024.pdf#page=13|Source]])
 >Note
 >$$\int _{\mathbf{x}\in\mathbb{R}^n}\rho_{s}(\mathbf{x}) \, dx = s^n$$
@@ -148,9 +187,10 @@
 >> \lim_{ s \to \infty } \rho_{1/s}(L^*\setminus \{ \mathbf{0} \})  &= 0\\
 >>\end{align}$$
 
->[!def] Definition Discrete Gaussian Probability Distribution
+>[!def] Definition Discrete Gaussian Probability Distribution ([[../../../../../../PDFs/regev2024.pdf#page=14|Source]])
 >Let $A$ be a countable set and $s>0$. The discrete Gaussian probability distribution $D_{A,s}$ is defined as
 >$$\forall \mathbf{x} \in A, D_{A,s}(\mathbf{x}):= \frac{\rho_{s}(\mathbf{x})}{\rho_{s}(A)}$$
+>where $\rho_{s}$ is the [[#^cd948a|Gaussian function]]
 >>[!pic] Illustration ([[../../../../../../PDFs/regev2024.pdf#page=7|Source]])
 >> ![[../../Figures/discrete_gaussian.png]]
 ---
