@@ -161,6 +161,7 @@ a_{n1}(t) &\dots & a_{nn}(t)
 
 >[!theorem] Theorem Existence and Uniqueness of Solutions ([[../../../PDFs/nagy.pdf#page=242| Source]])
 >If the function $A$ and $\mathbf{b}$ are continuous on an open interval $I \subset \mathbb{R}$, and if $\mathbf{x}_{0}$ is any constant vector and $t_{0}$ is any constant in $I$, then there exist only one function $\mathbf{x}$, defined an interval $\tilde{I} \subset I$ with $t_{0} \in \tilde{I}$, solution of the initial value problem
+>
 >---
 >$$\mathbf{x}' = A(t)\mathbf{x}+\mathbf{b}(t), \qquad \mathbf{x}(t_{0})=\mathbf{x}_{0}$$
 >
@@ -1308,10 +1309,12 @@ a_{n1}(t) &\dots & a_{nn}(t)
 
 >[!theorem] Theorem Exponential for Diagonalizable Systems ([[../../../PDFs/nagy.pdf#page=263| Source]])
 > If an $n \times n$ matrix $A$ has linearly independent eigenvector $\{ \mathbf{v}_{1}^{(1)}, \dots, \mathbf{v}_{n}^{(n)} \}$ with corresponding eigenvalues $\{ \lambda_{1}, \dots, \lambda_{n} \}$, then
+> 
 > ---
 > $$e^{A(t-t_{0})} = X(t)X(t_{0})^{-1}$$
 >
 >---
+>
 >where $X(t)= \big[e^{\lambda_{1}t}\mathbf{v}^{(1)},\dots,e^{\lambda_{n}t}\mathbf{v}^{(n)}\big]$
 >>[!proof]-
 >>We rewrite the [[#^44918f| fundamental matrix]]

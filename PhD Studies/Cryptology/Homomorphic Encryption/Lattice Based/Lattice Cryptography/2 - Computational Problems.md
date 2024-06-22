@@ -22,6 +22,8 @@
 >>![[../Figures/gapsvp.png|center|300]]
 >>The gap is given by the area between the two circle. Given some $d$ outside the outer circle, NO is given by the instance, given some $d$ inside the inner circle, YES is given by the instance. The area inbetween won't give a response.
 
+^02fc56
+
 >[!def] Definition Closest Vector Problem (SVP) ([[../../../../../PDFs/sabani2024.pdf#page=7|Source]])
 > Given a basis $\mathbf{B}=\{ \mathbf{b}_{1}, \mathbf{b}_{2}, \dots, \mathbf{b}_{n} \}$ of a lattice $\mathcal{L}(\mathbf{B})$ and a target vector $t$, not necessarily in the lattice, find the lattice point $\mathbf{v} \in \mathcal{L}(\mathbf{B})$ closest to $\mathbf{t}$, i.e.
 > $$d(t,\mathcal{L}): \min_{\mathbf{x} \in \mathcal{L}} \lvert\lvert \mathbf{x}-\mathbf{t} \rvert\rvert $$
@@ -32,7 +34,7 @@
 
 ^08199f
 
->[!def] $\gamma$-Approximate Closest Vector Problem ([[../../../../../PDFs/sabani2024.pdf#page=8|Source]])
+>[!def] $\gamma$-Approximate Closest Vector Problem (CVP) ([[../../../../../PDFs/sabani2024.pdf#page=8|Source]])
 > Given a basis $\mathbf{B}=\{ \mathbf{b}_{1}, \mathbf{b}_{2}, \dots, \mathbf{b}_{n} \}$ of a lattice $\mathcal{L}(\mathbf{B}) \subset \mathbb{R}^n$ and a point $\mathbf{t} \in \mathbb{R}^n$, find a lattice point $\mathbf{v}\in \mathcal{L}$ such that $$\lvert\lvert \mathbf{t}-\mathbf{v} \rvert\rvert \leq \gamma(n) \cdot d(t, \mathcal{L})$$
 >
 >>[!remark]
