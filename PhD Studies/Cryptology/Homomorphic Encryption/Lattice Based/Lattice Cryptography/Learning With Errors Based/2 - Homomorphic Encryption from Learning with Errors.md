@@ -14,7 +14,7 @@
 >[!def] Definition Plaintext ([[../../../../../../PDFs/gentry2013.pdf#page=4|Source]])
 >The plaintext is the scalar $\mu \in \mathbb{Z}_{q}$ which should be a "small" integer
 
->[!def] Defintion Encryption ([[../../../../../../PDFs/gentry2013.pdf#page=4|Source]])
+>[!def] Definition Encryption ([[../../../../../../PDFs/gentry2013.pdf#page=4|Source]])
 >The encryption is a function for some plaintext $\mu$ which solves the following expression
 >$$\text{Enc}(\mu): \mathbf{C}\cdot \mathbf{v} = \mu \cdot \mathbf{v}  +\mathbf{e}$$
 >where $\mathbf{e} \in \mathbb{Z}^N_{q}$ being a "small" error vector
@@ -91,16 +91,33 @@
 
 >[!algo] Algorithm Key Generation $\text{KeyGen}$ ([[../../../../../../PDFs/gentry2013.pdf#page=10|Source]])
 >Let $\lambda, L \in \mathbb{Z}$ with $\lambda$ being the security parameter and $L$ being the circuit complexity parameter.
->1. $\text{Setup}(\lambda, L)$:
+>1. $\text{Setup}(\lambda, L)$: 
 >	- lattice dimension parameter $n=n(\lambda,L)$
 >	- choose a prime number $q \in \mathbb{Z}$ with $n^2\leq q\leq 2n^2$
 >	- error distribution $\chi=\Psi_{\alpha(n)}$
->	- number of equations $m=(1+\epsilon)(n+1) \log q$ where $\epsilon>0$ is a smoothing parameter related to the Gaussian distribution and the dual lattice
+>	- number of equations $m=(1+\epsilon)(n+1) \log q$ where $\epsilon>0$ is a smoothing parameter related to the Gaussian distribution and the dual lattice, where $m$ is rounded to the next integer
 >
+>		-> $\text{params} = (n,q,\chi,m)$
+>		
+>1. $\text{SecretKeyGen}(\text{params})$:
+> 	- sample uniformly: $\mathbf{t} \leftarrow \mathbb{Z}_{q}^n$
+> 	- output secret key $\text{sk}$: $\mathbf{s} \leftarrow (1,-t_{1},\dots,t_{n})$
+> 
+>3. $\text{PublicKeyGen}(\text{params,sk})$:
+>	- sample uniformly: $\mathbf{B} \leftarrow \mathbb{Z}_{q}^{m \times n}$
+>	- sample: $\mathbf{e} \leftarrow \chi^m$
+>	- set: $\mathbf{b}=\mathbf{B}\cdot \mathbf{t}+\mathbf{e}$
+>	- set: $A=\text{concatenate}(\mathbf{b}, \mathbf{B}) \in \mathbb{Z}^{m+1\times n}$
 >
 >
 >>[!remark] Remark on Notation
->> 1. Setup
->> 	- $q$ is chosen in a magnitude with respect to its binary representation, such that it complies with the predefined security $\lambda$ and circuit complexity $L$ constraints. The same can be said similarly for other parameters.
+>> 1. $\text{Setup}$
+>> 	- the parameters are chosen in their binary representation, such that they comply with the predefined security $\lambda$ and circuit complexity $L$ constraints. 
 >> 	- the error distribution $\chi$ is usually chosen as some fitting discrete Gaussian ([[../../../../../../PDFs/sabani2024.pdf#page=3|Source 1 - Definition 3-6]], [[../../../../../../PDFs/sabani2024.pdf#page=14|Source 2 - Theorem 4]], [[../../../../../../PDFs/regev2024.pdf#page=6|Source 3]])
->> 	- security 
+>> 2. $\text{PublicKeyGen}$
+>> 	- $\text{concatenate}(\mathbf{A},\mathbf{B})$ for matrices (vectors) $\mathbf{A} \in \mathbb{Z}^{k \times \alpha }$ and $\mathbf{B} \in \mathbb{Z}^{k \times \beta}$ creates a matrix $\mathbf{C} \in \mathbb{Z}^{k \times a+b}$ such that for entries $\mathbf{a}_{i} \in \mathbf{A}$ and $\mathbf{b}_{i} \in \mathbf{B}$ we get $\mathbf{C} = [\mathbf{a}_{1}, \dots, \mathbf{a}_{\alpha}, \mathbf{b}_{1}, \dots, \mathbf{b}_{\beta}]$
+>> 	
+>> 	-Note that $\mathbf{A} \cdot \mathbf{s} + \mathbf{e} = \mathbf{b}$ because  $\mathbf{A} \cdot \mathbf{s} = (1 \cdot )$
+>
+>>[!remark] Remark on Plaintext Space
+>>This setup is given under the assumption that each message $\mu_{i} \in \{ 0,1 \}$. The author gives additional procedural steps to consider messages with a wider range of values
