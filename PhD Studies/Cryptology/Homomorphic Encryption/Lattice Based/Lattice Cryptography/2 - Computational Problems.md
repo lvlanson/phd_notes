@@ -18,7 +18,7 @@
 >>[!Note]- Note on the Gap
 >> There is a **gap** in the range $$\Big(d, \gamma(n)\cdot d \Big]$$ where no decision is made. One could say, this range is not part of domain of the $\text{GAPSVP}_{\gamma}$ instance.
 >
->>[!pic]- Illustration
+>>[!pic] Illustration
 >>![[../Figures/gapsvp.png|center|300]]
 >>The gap is given by the area between the two circle. Given some $d$ outside the outer circle, NO is given by the instance, given some $d$ inside the inner circle, YES is given by the instance. The area inbetween won't give a response.
 
