@@ -63,7 +63,10 @@
 >
 >>[!algo]- Einseitiger Einstichproben-Gauß-Test (Varianz Bekannt, normalverteilt) ([[../Vorlesungsskript_Mathematik3.pdf#page=124|Quelle]])
 >><u> Behauptung:</u> $\mu \geq\mu_{0}$ linksseitig, bzw. $\mu \leq_{0}$ rechtsseitig
->>1. **Hypothesen:** $$H_{0}: \mu=\mu_{0} \text{ und } H_{1}: \mu \neq \mu_{0}$$
+>>1. **Hypothesen:** $$\begin{align}
+>> H_{0}: \mu \geq \mu_{0} &\text{ und } H_{1}: \mu < \mu_{0} \tag{linksseitig} \\
+>> H_{0}: \mu \leq \mu_{0} &\text{ und } H_{1}: \mu > \mu_{0} \tag{rechtsseitig}
+>>\end{align}$$
 >>2. **Signifikanzniveau:** $$\alpha  \tag{links oder rechts}$$
 >>3. **Testfunktion:** $$\begin{align} \\
 >> &T=\overline{X}=\frac{1}{n}\sum_{i=1}^n X_{i} \sim N\left( \mu_{0}, \frac{\sigma}{\sqrt{ n }} \right) \tag{Normalverteilt}\\
@@ -72,8 +75,8 @@
 >>mit Realisierung $t=\frac{\overline{t}-\mu_{0}}{\sigma}\sqrt{ n }$
 >>4. **Kritischer Bereich:**
 >>$$\begin{align}
->> H_{0}: \mu \geq \mu_{0} \text{ und } H_{1}: \mu < \mu_{0} &\implies K=(-\infty, c_{N(0,1), \alpha}) \tag{Linksseitig} \\
->> H_{0}: \mu \leq \mu_{0} \text{ und } H_{1}: \mu > \mu_{0} &\implies K=(c_{N(0,1),1- \alpha}, \infty) \tag{Rechtsseitig} \\
+>>  K&=\Big(-\infty, c_{N(0,1), \alpha}\Big) \tag{Linksseitig} \\
+>>  K&=\Big(c_{N(0,1),1- \alpha}, \infty\Big) \tag{Rechtsseitig} \\
 >> \end{align}$$
 >>5. **Testentscheidung**
 >> - $t\in K \implies$ Ablehnung von $H_{0}$ und Annahme von $H_{1}$ mit Irrtumswahrscheinlichkeit $\alpha$ 
@@ -100,9 +103,17 @@
 
 
 
->[!algo]- Verfahren Zweiseitiger/Einseitiger $\chi^2$-Streuungstests ([[../Vorlesungsskript_Mathematik3.pdf#page=126|Quelle]])
-><u> Behauptung:</u> $\sigma^2=\sigma_{0}^2$
->1. **Hypothesen:** $$H_{0}:\sigma^2=\sigma_{0}^2 \text{ und } H_{1}: \sigma^2\neq\sigma_{0}^2$$
+>[!algo]- Verfahren Zweiseitiger/Einseitiger $\chi^2$-Streuungstest([[../Vorlesungsskript_Mathematik3.pdf#page=126|Quelle]])
+><u> Behauptung:</u> $$\begin{align}
+> \sigma^2&=\sigma_{0}^2$ \tag{zweiseitig} \\
+> \sigma^2 &\geq \sigma_{0}^2 \tag{linksseitig} \\
+> \sigma^2 &\leq \sigma_{0}^2 \tag{rechtsseitig}
+>\end{align}$$
+>1. **Hypothesen:** $$\begin{align}
+> H_{0}:\sigma^2=\sigma_{0}^2 &\text{ und } H_{1}: \sigma^2\neq\sigma_{0}^2 \tag{zweiseitig} \\
+> H_{0}: \sigma^2 \geq \sigma^2_{0} &\text{ und } H_{1}: \sigma^2 < \sigma^2_{0} \tag{linksseitig} \\
+> H_{0}: \sigma^2 \leq \sigma^2_{0} &\text{ und } H_{1}: \sigma^2 > \sigma^2_{0}  \tag{rechtsseitig}
+>\end{align}$$
 >2. **Signifikanzniveau:** $$\begin{align}
 > \alpha &\to \frac{\alpha}{2} \tag{links und rechts} \\
 > &\;\;\alpha \tag{ links oder rechts}
@@ -113,17 +124,42 @@
 >mit Realisierung $t=\frac{(n-1)s^2}{\sigma^2_{0}}$
 >1. **Kritischer Bereich:**
 >$$\begin{align}
-> K &= \Big( 0, c_{\chi^2(n-1), \frac{\alpha}{2}} \Big) \cup \Big(c_{\chi^2(n-1), 1-\frac{\alpha}{2}}, \infty\Big) tag{Beidseitig} 
->\end{align}$$
-> $$\begin{align}
-> H_{0}: \sigma^2 \geq \sigma^2_{0} \text{ und } H_{1}: \sigma^2 < \sigma^2_{0} \implies K&=\Big(0, c_{\chi^2(n-1), \alpha}\Big)\tag{linksseitig}\\
-> H_{0}: \sigma^2 \leq \sigma^2_{0} \text{ und } H_{1}: \sigma^2 > \sigma^2_{0} \implies K&=\Big(c_{\chi^2(n-1),1- \alpha}, \infty\Big)\tag{rechtsseitig}
+> K &= \Big( 0, c_{\chi^2(n-1), \frac{\alpha}{2}} \Big) \cup \Big(c_{\chi^2(n-1), 1-\frac{\alpha}{2}}, \infty\Big) \tag{Beidseitig} \\
+> K&=\Big(0, c_{\chi^2(n-1), \alpha}\Big)\tag{linksseitig}\\
+>  K&=\Big(c_{\chi^2(n-1),1- \alpha}, \infty\Big)\tag{rechtsseitig}
 >\end{align}$$
 >5. **Testentscheidung**
 > - $t\in K \implies$ Ablehnung von $H_{0}$ und Annahme von $H_{1}$ mit Irrtumswahrscheinlichkeit $\alpha$ 
 > - $t \not\in K \implies$ keine Ablehnung von $H_{0}$
 
->[!algo] Verfahren 
+>[!algo]- Verfahren Zweiseitiger/Einseitiger Einstichproben-Gaußtest für den Anteilswert ([[../Vorlesungsskript_Mathematik3.pdf#page=126|Quelle]])
+><u> Behauptung:</u> $$\begin{align}
+> p&=p_{0} \tag{zweiseitig} \\
+> p &\geq p_{0} \tag{linksseitig} \\
+> p &\leq p_{0} \tag{rechtsseitig}
+>\end{align}$$
+>1. **Hypothesen:** $$\begin{align}
+> H_{0}:p=p_{0} \text{ und } H_{1}: p\neq p_{0} \tag{zweiseitig} \\
+> H_{0}:p\geq p_{0} \text{ und } H_{1}: p< p_{0} \tag{linksseitig} \\
+> H_{0}:p\leq p_{0} \text{ und } H_{1}: p> p_{0} \tag{rechtsseitig} \\
+>\end{align}$$
+>2. **Signifikanzniveau:** $$\begin{align}
+> \alpha &\to \frac{\alpha}{2} \tag{links und rechts} \\
+> &\;\;\alpha \tag{ links oder rechts}
+>\end{align}$$
+>3. **Testfunktion:** Über die Null-Eins Verteilung$$\begin{align} \\
+> &T=\frac{\widehat{P}-p_{0}}{\sqrt{ p_{0}(1-p_{0}) }}\sqrt{ n } \;\;\overset{n\to \infty}\sim \;\;N(0,1)\tag{asympt. normal verteilt}\\
+>\end{align}$$
+>mit Realisierung $t=\frac{\widehat{p}-p_{0}}{\sqrt{ p_{0}(1-p_{0}) }}\sqrt{ n }$
+>1. **Kritischer Bereich:**
+>$$\begin{align}
+> K &= \Big( -\infty, c_{N(0,1), \frac{\alpha}{2}}\Big) \cup \Big( c_{N(0,1), -\frac{\alpha}{2}}, \infty\Big) \tag{Beidseitig} \\
+>  K&=\Big(-\infty, c_{N(0,1), \alpha}\Big) \tag{Linksseitig} \\
+>  K&=\Big(c_{N(0,1),1- \alpha}, \infty\Big) \tag{Rechtsseitig}
+>\end{align}$$
+>5. **Testentscheidung**
+> - $t\in K \implies$ Ablehnung von $H_{0}$ und Annahme von $H_{1}$ mit Irrtumswahrscheinlichkeit $\alpha$ 
+> - $t \not\in K \implies$ keine Ablehnung von $H_{0}$
 
 
 >[!example] Aufgabe (1)
