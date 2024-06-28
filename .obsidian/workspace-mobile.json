@@ -8,11 +8,45 @@
         "type": "tabs",
         "children": [
           {
-            "id": "18c1454e435917e5",
+            "id": "5c36a3b0dd22d5ec",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "9f2a2dcab09f5659",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "PDFs/peikert2015.pdf"
+              }
+            }
+          },
+          {
+            "id": "6a350814dfa26c9f",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/tabelle_t_verteilung.pdf"
+              }
+            }
+          },
+          {
+            "id": "a7bb173310ee4e96",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf"
+              }
             }
           }
         ]
@@ -81,6 +115,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "index.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -97,6 +132,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "index.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -107,7 +143,9 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {}
+          "state": {
+            "file": "index.md"
+          }
         }
       }
     ],
@@ -115,6 +153,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -123,8 +163,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "18c1454e435917e5",
+  "active": "f5c66e8d47d72a05",
   "lastOpenFiles": [
-    "Untitled.md"
+    "Untitled",
+    "PDFs/brakerski2012.pdf",
+    "Berichte/Sachbericht Promotion 1.md",
+    "Sachbericht Promotion.md",
+    "/Lehre/Wahrscheinlichkeitsrechnung/Seminar 4/4) Stetige_Zufallsgrößen.pdf",
+    "/Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/3) Diskrete Zufallsgrößen.pdf",
+    "/Sachbericht Promotion.md",
+    "/Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/5) Tschebyscheff Ungleichung Grenzwertsätz.pdf",
+    "index.md",
+    "PDFs/gentry2013.pdf",
+    "Berichte",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/Learning With Errors Based/2 - Homomorphic Encryption from Learning with Errors.md",
+    "PDFs/regev2024.pdf",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/Learning With Errors Based/1 - Learning With Errors Introduction.md",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/2 - Computational Problems.md",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/1 - Elementary Definitions.md",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Gentry Thesis.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/Seminar 6.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
+    "PDFs/nagy.pdf",
+    "PDFs/jammalamadaka2001.pdf",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Figures/gapsvp.png",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Figures/periodic_normal_distribution.png",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Figures/shortest_vector_problem.png",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Figures/closest_vector_problem.png",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 7/Seminar 7.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Tabelle_Standardnormalverteilung.jpg",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
+    "PhD Studies/Mathematic Basics/Calculus/Integration.md",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/Learning With Errors Based/Homomorphic Encryption from Learning with Errors.md",
+    "PhD Studies/Mathematic Basics/Calculus/Differentiation Statements.md",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/Homomorphic Encryption from Learning with Errors.md",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Figures/parallelepiped.png",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/Elementary Definitions.md",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Figures/parallelepiped.png",
+    "Lehre/Kryptologie/Figures/surjektivität.png",
+    "Lehre/Kryptologie/Figures/bijektivität.png",
+    "Lehre/Kryptologie/Figures/pawls.png"
   ]
 }
