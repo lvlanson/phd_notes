@@ -89,35 +89,88 @@
 
 ### Encryption Scheme
 
+>[!def] Definition Algorithm Functions ([[../../../../../../PDFs/gentry2013.pdf|Source 1]], [[../../../../../../PDFs/brakerski2012.pdf#page=10|Source 2]])
+>Let $l = \lfloor \log_{2} q \rfloor +1$
+>1. **PowersOfTwo** 
+>Let $\mathbf{b} \in \mathbb{Z}_{q}^n$ and $l \in \mathbb{Z}$, then $$\text{PowersOfTwo}(\mathbf{b}):=\Big(\mathbf{b}, 2 \cdot \mathbf{b}, \dots, 2^{l-1}\cdot \mathbf{b}\Big)$$
+>
+>2. **BitDecomp**
+> For $\mathbf{a} \in \mathbb{Z}^n$ let $\mathbf{w}_{i}\in\{ 0,1 \}^n$ such that $$\mathbf{x}= \sum_{i=0}^{l-1} 2^i \cdot \mathbf{w}_{i} \;\;(\text{mod } q)$$
+>and outputting the determined coefficients $\mathbf{w}_{i}$ with $0 \leq i \leq l-1$
+>$$\text{BitDecomp}(\mathbf{a}) := (\mathbf{w}_{0}, \dots, \mathbf{w}_{l-1})$$
+>
+>
+>1. **Flatten**  
+> Let $\mathbf{b} \in \mathbb{Z}^n$, then $$\text{Flatten}(\mathbf{b}):= \text{BitDecomp}\Big(\text{BitDecomp}^{-1}(\mathbf{b})\Big)$$
+>>[!lemma]
+>>Let $q \in \mathbb{Z}$ and $\mathbf{x}, \mathbf{y} \in \mathbb{Z}^n$, it holds that
+>>$$\left\langle \mathbf{x}\,,\,\mathbf{y} \right\rangle = \left\langle \text{BitDecomp}(\mathbf{x})\,,\, \text{PowersOfTwo}(\mathbf{y}) \right\rangle \;\;(\text{mod } q)  $$
+>>>[!proof]
+>>>$$\begin{alignat}{2}
+>>> \left\langle \mathbf{x}\,,\,\mathbf{y} \right\rangle &= \sum_{i=0}^n x_{i}y_{i} &&\;\;(\text{mod } q) \\
+>>> &= \sum_{i=0}^n \sum_{j=0}^l (w_{j,i} \cdot 2^j) y_{i} &&\;\;(\text{mod } q) \\
+>>> &=\sum_{i=0}^n \sum_{j=0}^l w_{j,i} (2^j \cdot y_{i}) &&\;\;(\text{mod } q) \\
+>>> &=\sum_{j=0}^l \underbrace{ \mathbf{w}_{j} }_{ \in \mathbb{Z}^n } (2^j \underbrace{ \mathbf{y} }_{  \in \mathbb{Z}^n }) &&\;\;(\text{mod } q) \\
+>>> &=\sum_{j=0}^l \text{BitDecomp}(\mathbf{x}^T[j]) \cdot \text{PowersOfTwo}(\mathbf{y}_{j}) &&\;\;(\text{mod } q) \\
+>>> &= \left\langle \text{BitDecomp}(\mathbf{x})\,,\, \text{PowersOfTwo}(\mathbf{y}) \right\rangle &&\;\;(\text{mod } q)
+>>>\end{alignat}$$
+
+
 >[!algo] Algorithm Key Generation $\text{KeyGen}$ ([[../../../../../../PDFs/gentry2013.pdf#page=10|Source]])
 >Let $\lambda, L \in \mathbb{Z}$ with $\lambda$ being the security parameter and $L$ being the circuit complexity parameter.
 >1. $\text{Setup}(\lambda, L)$: 
->	- lattice dimension parameter $n=n(\lambda,L)$
->	- choose a prime number $q \in \mathbb{Z}$ with $n^2\leq q\leq 2n^2$
->	- error distribution $\chi=\Psi_{\alpha(n)}$
+>	- lattice dimension parameter: $n=n(\lambda,L)$
+>	- choose a prime number: $q \in \mathbb{Z}$ with $n^2\leq q\leq 2n^2$
+>	- error distribution:  $\chi=\Psi_{\alpha(n)}$
 >	- number of equations $m=(1+\epsilon)(n+1) \log q$ where $\epsilon>0$ is a smoothing parameter related to the Gaussian distribution and the dual lattice, where $m$ is rounded to the next integer
 >
->		-> $\text{params} = (n,q,\chi,m)$
->		
+>		-> output paramaters $\text{params} = (n,q,\chi,m)$
+>	- denote $l = \lfloor \log q \rfloor + 1$
+>	- denote $N = (n+1) \cdot l$
+>
 >1. $\text{SecretKeyGen}(\text{params})$:
 > 	- sample uniformly: $\mathbf{t} \leftarrow \mathbb{Z}_{q}^n$
-> 	- output secret key $\text{sk}$: $\mathbf{s} \leftarrow (1,-t_{1},\dots,t_{n})$
+> 	
+> 		-> output secret key $\text{sk} = \mathbf{s} \leftarrow (1,-t_{1},\dots,t_{n})$
 > 
 >3. $\text{PublicKeyGen}(\text{params,sk})$:
 >	- sample uniformly: $\mathbf{B} \leftarrow \mathbb{Z}_{q}^{m \times n}$
 >	- sample: $\mathbf{e} \leftarrow \chi^m$
 >	- set: $\mathbf{b}=\mathbf{B}\cdot \mathbf{t}+\mathbf{e}$
 >	- set: $A=\text{concatenate}(\mathbf{b}, \mathbf{B}) \in \mathbb{Z}^{m+1\times n}$
+>	- note: $\mathbf{A} \cdot \mathbf{s}  = \mathbf{e}$
 >
+>		-> output public key $\text{pk} = \mathbf{A}$
 >
->>[!remark] Remark on Notation
+>Output: $\text{KeyGen} \to (\text{pk}=\mathbf{A}, \text{sk} = \mathbf{s})$
+>>[!proof]- Proof $\mathbf{A} \cdot \mathbf{s} = \mathbf{e}$
+>>$$\begin{align}
+>> \mathbf{A} \cdot \mathbf{s} &= \underbrace{ [\mathbf{b}, \mathbf{B}] }_{ =\mathbf{A} } \cdot (1, -t_{1}, \dots, t_{n}) \\
+>> &= [\underbrace{ (\mathbf{B}\cdot \mathbf{t}+\mathbf{e}) }_{ =\mathbf{b} }, \mathbf{B}] \cdot (1, -t_{1}, \dots, t_{n})  \\
+>> &= (\mathbf{B} \cdot \mathbf{t} +\mathbf{e}) \cdot 1 - \mathbf{B}[1]t_{1} -\ldots- \mathbf{B}[n]t_{n} \\
+>> &= \mathbf{B} \cdot \mathbf{t}  + \Big(- \mathbf{B}[1]t_{1} -\ldots- \mathbf{B}[n]t_{n}\Big) +\mathbf{e} \\
+>> &= \Big(\mathbf{B[1]} t_{1} +\ldots+\mathbf{B}[n]t_{n}\Big)+\Big(-\mathbf{B}[1]t_{1} -\ldots- \mathbf{B}[n]t_{n}\Big) +\mathbf{e}  \\
+>> &= \mathbf{e} 
+>>\end{align}$$
+>>where $\mathbf{D}[k]$ is the $k$-th column vector of matrix $\mathbf{D}$ and $[\mathbf{b},\mathbf{B}]$ is the concatenation of vector $\mathbf{b} \in \mathbb{Z}_{q}^n$ and matrix $\mathbf{B} \in \mathbb{Z}_{q}^{m \times n}$
+>
+>>[!remark]- Remark on Notation
 >> 1. $\text{Setup}$
 >> 	- the parameters are chosen in their binary representation, such that they comply with the predefined security $\lambda$ and circuit complexity $L$ constraints. 
->> 	- the error distribution $\chi$ is usually chosen as some fitting discrete Gaussian ([[../../../../../../PDFs/sabani2024.pdf#page=3|Source 1 - Definition 3-6]], [[../../../../../../PDFs/sabani2024.pdf#page=14|Source 2 - Theorem 4]], [[../../../../../../PDFs/regev2024.pdf#page=6|Source 3]])
->> 2. $\text{PublicKeyGen}$
->> 	- $\text{concatenate}(\mathbf{A},\mathbf{B})$ for matrices (vectors) $\mathbf{A} \in \mathbb{Z}^{k \times \alpha }$ and $\mathbf{B} \in \mathbb{Z}^{k \times \beta}$ creates a matrix $\mathbf{C} \in \mathbb{Z}^{k \times a+b}$ such that for entries $\mathbf{a}_{i} \in \mathbf{A}$ and $\mathbf{b}_{i} \in \mathbf{B}$ we get $\mathbf{C} = [\mathbf{a}_{1}, \dots, \mathbf{a}_{\alpha}, \mathbf{b}_{1}, \dots, \mathbf{b}_{\beta}]$
+>> 	- the error distribution $\chi$ is usually chosen as some fitted discrete Gaussian ([[../../../../../../PDFs/sabani2024.pdf#page=3|Source 1 - Definition 3-6]], [[../../../../../../PDFs/sabani2024.pdf#page=14|Source 2 - Theorem 4]], [[../../../../../../PDFs/regev2024.pdf#page=6|Source 3]])
+>> 
+>> <div> </div>
+>> 
+>> 3. $\text{PublicKeyGen}$
+>> 	- $\text{concatenate}(\mathbf{A},\mathbf{B})$ for matrices (vectors) $\mathbf{A} \in \mathbb{Z}^{\alpha \times k  }$ and $\mathbf{B} \in \mathbb{Z}^{\beta \times k}$ creates a matrix $\mathbf{C} \in \mathbb{Z}^{ \alpha+\beta \times k}$ such that for entries $\mathbf{a}_{i} \in \mathbf{A}$ and $\mathbf{b}_{i} \in \mathbf{B}$ we get $\mathbf{C} = [\mathbf{a}_{1}, \dots, \mathbf{a}_{\alpha}, \mathbf{b}_{1}, \dots, \mathbf{b}_{\beta}]$ 
 >> 	
->> 	-Note that $\mathbf{A} \cdot \mathbf{s} + \mathbf{e} = \mathbf{b}$ because  $\mathbf{A} \cdot \mathbf{s} = (1 \cdot )$
 >
->>[!remark] Remark on Plaintext Space
+>>[!remark]- Remark on Plaintext Space
 >>This setup is given under the assumption that each message $\mu_{i} \in \{ 0,1 \}$. The author gives additional procedural steps to consider messages with a wider range of values
+
+>[!algo] Algorithm Encryption and Decryption ([[../../../../../../PDFs/gentry2013.pdf#page=10|Source]])
+>4. $\text{Enc}(\text{params, pk})$:
+>	- $\mu \in \mathbb{Z}_{q}$ denotes the plaintext
+>	- sample uniformly $\mathbf{R} \leftarrow \{ 0,1 \}^{N \times m}$
+>	- output:
+>	$$C = \text{Flatten}\Big(\mu \cdot \mathbf{I}_{N} + \text{BitDecomp}(\mathbf{R}\cdot \mathbf{A})\Big) \in \mathbb{Z}_{q}^{N \times N}$$
