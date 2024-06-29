@@ -153,7 +153,7 @@
 >mit Realisierung $t=\frac{\widehat{p}-p_{0}}{\sqrt{ p_{0}(1-p_{0}) }}\sqrt{ n }$
 >1. **Kritischer Bereich:**
 >$$\begin{align}
-> K &= \Big( -\infty, c_{N(0,1), \frac{\alpha}{2}}\Big) \cup \Big( c_{N(0,1), -\frac{\alpha}{2}}, \infty\Big) \tag{Beidseitig} \\
+> K &= \Big( -\infty, c_{N(0,1), \frac{\alpha}{2}}\Big) \cup \Big( c_{N(0,1), 1-\frac{\alpha}{2}}, \infty\Big) \tag{Beidseitig} \\
 >  K&=\Big(-\infty, c_{N(0,1), \alpha}\Big) \tag{Linksseitig} \\
 >  K&=\Big(c_{N(0,1),1- \alpha}, \infty\Big) \tag{Rechtsseitig}
 >\end{align}$$
@@ -243,8 +243,62 @@
 >>5. $t \neq K \implies$ die Hypothese wird angenommen
 
 >[!example] Aufgabe (4)
->Bei einem Würfel erhielt man $k$-mal die Augenzahl $6$. Prüfen Sie mit dem Signifikanzniveau $\alpha=0.05$, ob es sich dabei um einen "unverfälschten" Würfel handelt, wenn
+>Bei $200$ Würfen mit einem Würfel erhielt man $k$-mal die Augenzahl $6$. Prüfen Sie mit dem Signifikanzniveau $\alpha=0.05$, ob es sich dabei um einen "unverfälschten" Würfel handelt, wenn
 >1. $k=30$ ist.
+>
+>>[!example]- Lösung
+>> Gegen sind
+>> $$\begin{align}
+>> n &= 200 \tag{Stichprobenumfang} \\
+>> \widehat{p} &= \frac{30}{200} = 0.15 \tag{Empirische Wahrscheinlichkeit} \\
+>> p_{0} &= \frac{1}{6} = 0.1666 \tag{Null Hypothese}
+>>\end{align}$$
+>>
+>> Wir verwenden den zweiseitigen Einstichproben-Gaußtest für den Antweilswert
+>> 1.  Hypothesen $$H_{0}:\widehat{p}=p_{0} \text{ und } H_{1}: \widehat{p}\neq p_{0}$$
+>> 2. $\alpha\to \frac{\alpha}{2}=0.025$
+>> 3. $T \overset{n \to \infty}\sim N(0,1)$ with
+>>  $$\begin{align}
+>> t&=\frac{\widehat{p}-p_{0}}{\sqrt{ p_{0}(1-p_{0}) }}\sqrt{ n } \\
+>> &=\frac{0.15-0.1666}{\sqrt{ 0.1666\cdot 0.8334 }}\sqrt{ 200 } \\
+>> &=-0.60725
+>>\end{align}$$
+>> 4. $\,$ $$\begin{align}
+>> K &= \Big( -\infty, c_{N(0,1), \frac{\alpha}{2}}\Big) \cup \Big( c_{N(0,1), 1-\frac{\alpha}{2}}, \infty\Big)  \\
+>>  &= \Big( -\infty, c_{N(0,1), 0.025}\Big) \cup \Big( c_{N(0,1), 1-0.025}, \infty\Big)  \\
+>>  &= \Big( -\infty, -c_{N(0,1), 1-0.025}\Big) \cup \Big( c_{N(0,1), 1-0.025}, \infty\Big)  \\
+>>  &= \Big( -\infty, -c_{N(0,1), 0.975}\Big) \cup \Big( c_{N(0,1), 0.975}, \infty\Big)  \\ 
+>>  &= \Big( -\infty, -1.96\Big) \cup \Big( 1.96, \infty\Big)  \\ 
+>> \end{align}$$
+>>
+>>5. $t \not\in K \implies$ Der Würfel wird als unverfälscht angenommen $$\tag*{$\blacktriangleleft$}$$
+>
+>
 >2. $k=22$ ist.
 >
->>[!note] Hinweis: Bei einem unverfälschten Würfel tritt die Augenzahl $6$ mit $p_{0}=\frac{1}{6}$ auf
+>>[!example]- Lösung
+>> Gegen sind
+>> $$\begin{align}
+>> n &= 200 \tag{Stichprobenumfang} \\
+>> \widehat{p} &= \frac{22}{200} = 0.11 \tag{Empirische Wahrscheinlichkeit} \\
+>> p_{0} &= \frac{1}{6} = 0.1666 \tag{Null Hypothese}
+>>\end{align}$$
+>>
+>> Wir verwenden den zweiseitigen Einstichproben-Gaußtest für den Antweilswert
+>> 1.  Hypothesen $$H_{0}:\widehat{p}=p_{0} \text{ und } H_{1}: \widehat{p}\neq p_{0}$$
+>> 2. $\alpha\to \frac{\alpha}{2}=0.025$
+>> 3. $T \overset{n \to \infty}\sim N(0,1)$ with
+>>  $$\begin{align}
+>> t&=\frac{\widehat{p}-p_{0}}{\sqrt{ p_{0}(1-p_{0}) }}\sqrt{ n } \\
+>> &=\frac{0.11-0.1666}{\sqrt{ 0.1666\cdot 0.8334 }}\sqrt{ 200 } \\
+>> &=-2.14816
+>>\end{align}$$
+>> 4. Wie in Teilaufgabe (1) $$\begin{align}
+>> K &= \Big( -\infty, c_{N(0,1), \frac{\alpha}{2}}\Big) \cup \Big( c_{N(0,1), 1-\frac{\alpha}{2}}, \infty\Big)  \\
+>>  &= \Big( -\infty, -c_{N(0,1), 0.975}\Big) \cup \Big( c_{N(0,1), 0.975}, \infty\Big)  \\ 
+>>  &= \Big( -\infty, -1.96\Big) \cup \Big( 1.96, \infty\Big)  \\ 
+>> \end{align}$$
+>>
+>>5. $t \in K \implies$ Der Würfel wird als verfälscht angenommen $$\tag*{$\blacktriangleleft$}$$
+>
+>>[!note] Hinweis: Bei einem unverfälschten Würfel tritt die Augenzahl $6$ mit $p_{0}=\frac{1}{6}$ auf.
