@@ -201,19 +201,19 @@
 >> \mu_{0} &= 42.5 \tag{Hypothese}
 >>\end{align}$$
 >>**Wir testen den Erwartungswert einseitig über eine einzelne Stichprobe mit unbekannter Varianz**. Wir testen rechtsseitig.
->> 1. $H_{0}: \mu=42.5$ und $H_{1}: \mu \neq 42.5$
->> 2. $\alpha=0.1$
+>> 1. $H_{0}: \mu \leq42.5$ und $H_{1}: \mu > 42.5$
+>> 2. $\alpha=0.05$
 >> 3. $T\sim t(99)$ $$\begin{align}
 >> t &= \frac{44-42.5}{12}\sqrt{ 100 } \\
 >> &=1.25
 >>\end{align}$$
 >>4. $\,$
 >>$$\begin{align}
->> K &= \Big( - c_{t(n-1), \alpha}, \infty\Big) \\
->> &= \Big(-c_{t(99), 0.9} ,\infty\Big) \\
->> &= \Big( -1.984, \infty\Big) 
+>> K &= \Big(  c_{t(n-1), \alpha}, \infty\Big) \\
+>> &= \Big(c_{t(99), 0.95} ,\infty\Big) \\
+>> &= \Big( 1.66, \infty\Big) 
 >>\end{align}$$
->>5. $t \not\in K \implies$ $H_{0}$ wird abgelehnt. $$\tag*{$\blacktriangleleft$}$$
+>>5. $t \not\in K \implies$ $H_{0}$ wird nicht abgelehnt. $$\tag*{$\blacktriangleleft$}$$
 
 >[!example] Aufgabe (3)
 >Es wird behauptet, dass die Streuung der deutschen Einkommen mit einer Standardabweichung von $440€$ bemessen werden kann. In einer Zufallsstichprobe vom Umfang $n=200$ ergibt sich eine empirische Standardabweichung von $500€$. Wie lautet bei einem einseitigen Signifikanzniveau von $5$% die Testentscheidung?
@@ -221,37 +221,38 @@
 >>[!example]- Lösung
 >>Gegeben ist
 >>$$\begin{align}
->> \sigma_{0}^2 &= 440 \tag{Hypothese}\\
+>> \sigma_{0}^2 &= 440^2 \tag{Hypothese}\\
 >> n &= 200 \tag{Stichprobenumfang} \\
->> s^2 &= 500 \tag{Empirische Standardabweichung} \\
+>> s &= 500 \tag{Empirische Standardabweichung} \\
 >> \alpha &= 0.05 \tag{Einseitiges Signifikanzniveau}
 >>\end{align}$$
 >>
 >> **Wir testen die Varianz einseitig über eine einzelne Stichprobe**. Wir testen rechtsseitig
->> 1. $H_{0}: \sigma_{0}^2 = 440$ und $H_{1}: \sigma_{0}^2 \neq 440$
+>> 1. $H_{0}: \sigma_{0}^2 \leq 440^2$ und $H_{1}: \sigma_{0}^2 > 440^2$
 >> 2. $\alpha = 0.05$
 >> 3. $T \sim \chi^2(199)$ $$\begin{align}
 >> t&=\frac{(n-1)s^2}{\sigma^2_{0}} \\
->> &=\frac{199\cdot500}{440} \\
->> &= 226.136
+>> &=\frac{199\cdot500^2}{440^2} \\
+>> &= 256.97
 >>\end{align}$$
 >>4. $\,$ $$\begin{align}
 >>K&=\Big(c_{\chi^2(n-1),1- \alpha}, \infty\Big)\\
 >>&=\Big(c_{\chi^2(199),0.95}, \infty\Big) \\
 >>&=\Big(232.912, \infty\Big) \\
 >>\end{align}$$
->>5. $t \neq K \implies$ die Hypothese wird angenommen
+>>5. $t \in K \implies$ die Hypothese wird abgelehnt.
 
 >[!example] Aufgabe (4)
 >Bei $200$ Würfen mit einem Würfel erhielt man $k$-mal die Augenzahl $6$. Prüfen Sie mit dem Signifikanzniveau $\alpha=0.05$, ob es sich dabei um einen "unverfälschten" Würfel handelt, wenn
 >1. $k=30$ ist.
 >
 >>[!example]- Lösung
->> Gegen sind
+>> Gegeben sind
 >> $$\begin{align}
 >> n &= 200 \tag{Stichprobenumfang} \\
 >> \widehat{p} &= \frac{30}{200} = 0.15 \tag{Empirische Wahrscheinlichkeit} \\
->> p_{0} &= \frac{1}{6} = 0.1666 \tag{Null Hypothese}
+>> p_{0} &= \frac{1}{6} = 0.1666 \tag{Null Hypothese} \\
+>> \alpha &= 0.05 \tag{Fehler}
 >>\end{align}$$
 >>
 >> Wir verwenden den zweiseitigen Einstichproben-Gaußtest für den Antweilswert
@@ -277,11 +278,12 @@
 >2. $k=22$ ist.
 >
 >>[!example]- Lösung
->> Gegen sind
+>> Gegeben sind
 >> $$\begin{align}
 >> n &= 200 \tag{Stichprobenumfang} \\
 >> \widehat{p} &= \frac{22}{200} = 0.11 \tag{Empirische Wahrscheinlichkeit} \\
->> p_{0} &= \frac{1}{6} = 0.1666 \tag{Null Hypothese}
+>> p_{0} &= \frac{1}{6} = 0.1666 \tag{Null Hypothese} \\
+>> \alpha &= 0.05 \tag{Fehler}
 >>\end{align}$$
 >>
 >> Wir verwenden den zweiseitigen Einstichproben-Gaußtest für den Antweilswert
