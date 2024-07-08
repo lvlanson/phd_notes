@@ -99,6 +99,9 @@
 >>5. **Testentscheidung**
 >> - $t\in K \implies$ Ablehnung von $H_{0}$ und Annahme von $H_{1}$ mit Irrtumswahrscheinlichkeit $\alpha$ 
 >> - $t \not\in K \implies$ keine Ablehnung von $H_{0}$
+>
+>>[!algo]- Wenn $X$ beliebig verteilt ist
+>> Wenn $X$ beliebig verteilt ist, nehmen wir die Normalverteilung, wobei sich die Berechnung für das $t$ nicht ändert. Lediglich das Intervall $K$ wird immer über die Normalverteilung gebildet.
 
 
 
@@ -187,7 +190,7 @@
 >> &= \Big( -\infty, - 1.646\Big) \cup \Big(  1.646, \infty\Big)
 >>\end{align}$$
 >>
->>5. $t \in K$ => Ablehnung $H_{0}$, Annahme $H_{1}$ mit $\alpha=0.01$ Irrtumswahrscheinlichkeit $$\tag*{$\blacktriangleleft$}$$
+>>5. $t \in K$ => Ablehnung $H_{0}$, Annahme $H_{1}$ mit $\alpha=0.1$ Irrtumswahrscheinlichkeit $$\tag*{$\blacktriangleleft$}$$
 
 >[!example] Aufgabe (2)
 >In einer Zufallsstichprobe vom Umfang $n=100$ ergibt sich ein durchschnittliches Alter von $44$ Jahren, bei einer empirischen Standardabweichung von $s=12$ Jahren. Kann mit diesem Befund bei einem einseitigen Signifikanzniveau von $5$% die Hypothese bestätigt werden, dass das Durchschnittsalter in der Grundgesamtheit bei $42.5$ Jahren liegt?
@@ -240,7 +243,7 @@
 >>&=\Big(c_{\chi^2(199),0.95}, \infty\Big) \\
 >>&=\Big(232.912, \infty\Big) \\
 >>\end{align}$$
->>5. $t \in K \implies$ die Hypothese wird abgelehnt.
+>>5. $t \in K \implies$ die Hypothese $H_0$ wird abgelehnt.
 
 >[!example] Aufgabe (4)
 >Bei $200$ Würfen mit einem Würfel erhielt man $k$-mal die Augenzahl $6$. Prüfen Sie mit dem Signifikanzniveau $\alpha=0.05$, ob es sich dabei um einen "unverfälschten" Würfel handelt, wenn
@@ -304,3 +307,4 @@
 >>5. $t \in K \implies$ Der Würfel wird als verfälscht angenommen $$\tag*{$\blacktriangleleft$}$$
 >
 >>[!note] Hinweis: Bei einem unverfälschten Würfel tritt die Augenzahl $6$ mit $p_{0}=\frac{1}{6}$ auf.
+>

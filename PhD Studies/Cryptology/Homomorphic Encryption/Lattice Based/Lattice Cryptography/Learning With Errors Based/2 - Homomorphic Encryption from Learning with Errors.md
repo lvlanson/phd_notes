@@ -90,30 +90,110 @@
 ### Encryption Scheme
 
 >[!def] Definition Algorithm Functions ([[../../../../../../PDFs/gentry2013.pdf|Source 1]], [[../../../../../../PDFs/brakerski2012.pdf#page=10|Source 2]])
->Let $l = \lfloor \log_{2} q \rfloor +1$
+>Let $l =  \lceil \log_{2} q\rceil -1$
 >1. **PowersOfTwo** 
 >Let $\mathbf{b} \in \mathbb{Z}_{q}^n$ and $l \in \mathbb{Z}$, then $$\text{PowersOfTwo}(\mathbf{b}):=\Big(\mathbf{b}, 2 \cdot \mathbf{b}, \dots, 2^{l-1}\cdot \mathbf{b}\Big)$$
 >
 >2. **BitDecomp**
-> For $\mathbf{a} \in \mathbb{Z}^n$ let $\mathbf{w}_{i}\in\{ 0,1 \}^n$ such that $$\mathbf{x}= \sum_{i=0}^{l-1} 2^i \cdot \mathbf{w}_{i} \;\;(\text{mod } q)$$
+> For $\mathbf{a} \in \mathbb{Z}^n$ let $\mathbf{w}_{i}\in\{ 0,1 \}^n$ such that $$\mathbf{a}= \sum_{i=0}^{l-1} 2^i \cdot \mathbf{w}_{i} \;\;(\text{mod } q)$$
 >and outputting the determined coefficients $\mathbf{w}_{i}$ with $0 \leq i \leq l-1$
 >$$\text{BitDecomp}(\mathbf{a}) := (\mathbf{w}_{0}, \dots, \mathbf{w}_{l-1})$$
 >
 >
 >1. **Flatten**  
 > Let $\mathbf{b} \in \mathbb{Z}^n$, then $$\text{Flatten}(\mathbf{b}):= \text{BitDecomp}\Big(\text{BitDecomp}^{-1}(\mathbf{b})\Big)$$
->>[!lemma]
->>Let $q \in \mathbb{Z}$ and $\mathbf{x}, \mathbf{y} \in \mathbb{Z}^n$, it holds that
->>$$\left\langle \mathbf{x}\,,\,\mathbf{y} \right\rangle = \left\langle \text{BitDecomp}(\mathbf{x})\,,\, \text{PowersOfTwo}(\mathbf{y}) \right\rangle \;\;(\text{mod } q)  $$
->>>[!proof]
->>>$$\begin{alignat}{2}
->>> \left\langle \mathbf{x}\,,\,\mathbf{y} \right\rangle &= \sum_{i=0}^n x_{i}y_{i} &&\;\;(\text{mod } q) \\
->>> &= \sum_{i=0}^n \sum_{j=0}^l (w_{j,i} \cdot 2^j) y_{i} &&\;\;(\text{mod } q) \\
->>> &=\sum_{i=0}^n \sum_{j=0}^l w_{j,i} (2^j \cdot y_{i}) &&\;\;(\text{mod } q) \\
->>> &=\sum_{j=0}^l \underbrace{ \mathbf{w}_{j} }_{ \in \mathbb{Z}^n } (2^j \underbrace{ \mathbf{y} }_{  \in \mathbb{Z}^n }) &&\;\;(\text{mod } q) \\
->>> &=\sum_{j=0}^l \text{BitDecomp}(\mathbf{x}^T[j]) \cdot \text{PowersOfTwo}(\mathbf{y}_{j}) &&\;\;(\text{mod } q) \\
->>> &= \left\langle \text{BitDecomp}(\mathbf{x})\,,\, \text{PowersOfTwo}(\mathbf{y}) \right\rangle &&\;\;(\text{mod } q)
+> 
+> >[!remark]- Remark on $\text{Flatten}$ on Matrices
+> >If $\text{Flatten}$ receives a matrix $\mathbf{C} \in \mathbb{Z}^{m \times n}$ we get
+> >$$\text{Flatten}(\mathbf{C}) = \text{Concat}(\text{Flatten}(\mathbf{c}_{1}), \dots, \text{Flatten}(\mathbf{c}_{m}))$$ where $\mathbf{c}_{i} \in \mathbb{Z}^n$ are the column vectors of $\mathbf{C}$.
+> 
+>>[!remark]- Remark on the meaning of $\text{Flatten}$
+>>Note, that if we have some **binary depth** $l$ and some modulus $q$, then for some $\mathbf{b} \in \mathbb{Z}^n$ with at least one coefficient $b_{i}\geq q$
+>>$$\text{Flatten}(\mathbf{b}) \neq \mathbf{b}$$
+>>Flatten **normalizes the binary representation** given we consider $\mathbf{b}$ as a binary representation with coefficients from $\mathbb{Z}$ over modulus $q$.
+>>
+>>>[!example]- Example for Binary Normalization of $\text{Flatten}$
+>>>Let $$\mathbf{a} = \begin{pmatrix}
+>>> 1  \\ 2 \\ 3 \\ 4 \\ 5 \\ 6
+>>>\end{pmatrix} \in \mathbb{Z}^6_{8}$$
+>>>with $$\begin{align}
+>>> l&=\lceil \log_{2}8 \rceil -1 =3 \\
+>>> q &= 8 \\
+>>> n &= 6 \\
+>>> k &= 2
+>>>\end{align}$$
+>>> For easier comprehensibility we rewrite $\mathbf{a} \in \mathbb{Z}^n$ as the matrix $\mathbf{a} \in \mathbb{Z}^{l \times k}$, i.e.
+>>> $$\mathbf{a} = \begin{pmatrix}
+ 1 & 2 & 3  \\
+>>> 4 & 5 & 6
+>>>\end{pmatrix}$$
+>>> Applying $\text{BitDecomp}^{-1}$ on $\mathbf{a}$ gives
+>>> $$\begin{alignat}{2}
+>>> \text{BitDecomp}^{-1}(\mathbf{a}) &= \begin{pmatrix}
+>>>1 \cdot 2^0 &+& 2 \cdot 2^1 &+& 3 \cdot 2^2 \\
+>>>4 \cdot 2^0 &+& 5 \cdot 2^1 &+& 6 \cdot 2^2 
+>>>\end{pmatrix} \;\;&&(\text{mod } 8) \\
+>>> &= \begin{pmatrix}
+>>> 7  \\
+>>> 38
+>>>\end{pmatrix} \;\;&&(\text{mod } 8) \\
+>>> &= \begin{pmatrix}
+>>> 7  \\
+>>> 6
+>>>\end{pmatrix} = \mathbf{a}' \;\;&&(\text{mod } 8)
 >>>\end{alignat}$$
+>>> Passing the resulting vector to $\text{BitDecomp}$ gives the binary representation of the coefficients of the given vector
+>>> $$\begin{align}
+>>> \text{BitDecomp}(\mathbf{a}') &= \begin{pmatrix}
+>>> 1 & 1 & 1 \\
+>>> 1 & 1 & 0
+>>>\end{pmatrix}
+>>>\end{align}$$
+>>>We can rearrange this vector back from $l \times k$ to $n$ dimensionality, and have
+>>>$$\text{Flatten}(\mathbf{a}) = \begin{pmatrix}
+>>> 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 0
+>>>\end{pmatrix}$$
+
+>[!lemma]
+>Let $q \in \mathbb{Z}$ and $\mathbf{x}, \mathbf{y} \in \mathbb{Z}^n$, it holds that
+>$$\left\langle \mathbf{x}\,,\,\mathbf{y} \right\rangle = \left\langle \text{BitDecomp}(\mathbf{x})\,,\, \text{PowersOfTwo}(\mathbf{y}) \right\rangle \;\;(\text{mod } q)  $$
+>>[!proof]-
+>>$$\begin{alignat}{2}
+>> \left\langle \mathbf{x}\,,\,\mathbf{y} \right\rangle &= \sum_{i=0}^n x_{i}y_{i} &&\;\;(\text{mod } q) \\
+>> &= \sum_{i=0}^n \sum_{j=0}^l (w_{j,i} \cdot 2^j) y_{i} &&\;\;(\text{mod } q) \\
+>> &=\sum_{i=0}^n \sum_{j=0}^l w_{j,i} (2^j \cdot y_{i}) &&\;\;(\text{mod } q) \\
+>> &=\sum_{j=0}^l \underbrace{ \mathbf{w}_{j} }_{ \in \mathbb{Z}^n } (2^j \underbrace{ \mathbf{y} }_{  \in \mathbb{Z}^n }) &&\;\;(\text{mod } q) \\
+>> &=\sum_{j=0}^l \text{BitDecomp}(\mathbf{x}^T[j]) \cdot \text{PowersOfTwo}(\mathbf{y}_{j}) &&\;\;(\text{mod } q) \\
+>> &= \left\langle \text{BitDecomp}(\mathbf{x})\,,\, \text{PowersOfTwo}(\mathbf{y}) \right\rangle &&\;\;(\text{mod } q)\\ 
+>>\end{alignat}$$
+>>$$\tag*{$\square$}$$
+
+>[!lemma]
+>Let $\mathbf{a} \in \mathbb{Z}^n, \mathbf{b} \in \mathbb{Z}_{q}^n$ and $l=\lfloor \log q \rfloor +1$
+>$$\begin{align}
+> \left\langle \mathbf{a}\,,\, \text{PowersOfTwo}(\mathbf{b})\right\rangle &= \left\langle \text{BitDecomp}^{-1}(\mathbf{a})\,,\, \mathbf{b} \right\rangle \tag{1} \\
+> &=\left\langle \text{Flatten}(\mathbf{a})\,,\, \text{PowersOfTwo}(\mathbf{b})\right\rangle   \tag{2}
+>\end{align}$$
+>>[!proof]-
+>>We first show the identity $(1)$. Note that $\text{BitDecomp}^{-1}$ does not necessarily only accept  $\{ 0,1 \}^n$ as domain, but rather $\mathbb{Z}^n$ as a whole. We get
+>>$$\begin{alignat}{2}
+>> \left\langle \mathbf{a}\,,\, \text{PowersOfTwo}(\mathbf{b})\right\rangle &= \sum_{i=0}^{n-1} a_{i}2^i\mathbf{b} \;\;&&(\text{mod } q) \\
+>> &= \mathbf{b}\sum_{i=0}^{n-1}2^ia_{i} \;\;&&(\text{mod } q) \tag{3}\\
+>> &= \left\langle \text{BitDecomp}^{-1}(\mathbf{a})\,,\, \mathbf{b} \right\rangle \;\;&&(\text{mod } q) 
+>>\end{alignat}$$
+>>which shows the first identity. Before continuing the proof for the last part of the identity, we want to note what $\text{BitDecomp}^{-1}$ does on $\mathbb{Z}^n$. 
+>>
+>>Naturally, $\text{BitDecomp}^{-1}$ acts on the binary numbers whose alphabet is $\{ 0,1 \}$ such that a set of $a_{i} \in \{ 0,1 \}$, with $0 \leq i \leq l-1$ being the bit-depth, composes a positive integer with $\sum_{i=0}^{l-1} 2^ia_{i} = b$. The ordered $a_{i}$ are therefore the binary representation of $b$.
+>>
+>>Now consider we extend the alphabet of the binary numbers to $\mathbb{Z}$, then each $a_{i} \in \mathbb{Z}$ represents the magnitude of $2^i$ at the $i$-th position. If we pass this back to $\text{BitDecomp}$ we yield a **normalized binary representation** of $a$ which is stable in the dot-product of the given identity. See the example of $\text{Flatten}$ on the **binary normalization** above.
+>>
+>>We will now continue on equation $(3)$, now consider the coefficients $\widehat{a}_{i} \in \{ 0,1 \}$ to be the **binary normalized** coefficients over modulus $q$, so we get
+>>$$\begin{alignat}{2}
+>>\mathbf{b} \sum_{i=0}^{n-1}2^ia_{i}&= \mathbf{b} \sum_{i=0}^{n-1}2^i\widehat{a}_{i} \;\;&&(\text{mod } q) \\
+>> &=  \sum_{i=0}^{n-1}\widehat{a}_{i}2^i\mathbf{b} \;\;&&(\text{mod } q) \\ 
+>> &= \left\langle \text{Flatten}(\mathbf{a})\,,\, \text{PowersOfTwo}(\mathbf{b})\right\rangle  \;\;&&(\text{mod } q)
+>>\end{alignat}$$
+>>which establishes the identity. $$\tag*{$\square$}$$
 
 
 >[!algo] Algorithm Key Generation $\text{KeyGen}$ ([[../../../../../../PDFs/gentry2013.pdf#page=10|Source]])
