@@ -26,6 +26,23 @@
   keywords = {calculus textbook}
 }
 
+@online{beck2024,
+  title = {{{xLSTM}}: {{Extended Long Short-Term Memory}}},
+  shorttitle = {{{xLSTM}}},
+  author = {Beck, Maximilian and Pöppel, Korbinian and Spanring, Markus and Auer, Andreas and Prudnikova, Oleksandra and Kopp, Michael and Klambauer, Günter and Brandstetter, Johannes and Hochreiter, Sepp},
+  date = {2024-05-07},
+  eprint = {2405.04517},
+  eprinttype = {arXiv},
+  eprintclass = {cs, stat},
+  doi = {10.48550/arXiv.2405.04517},
+  url = {http://arxiv.org/abs/2405.04517},
+  urldate = {2024-07-15},
+  abstract = {In the 1990s, the constant error carousel and gating were introduced as the central ideas of the Long Short-Term Memory (LSTM). Since then, LSTMs have stood the test of time and contributed to numerous deep learning success stories, in particular they constituted the first Large Language Models (LLMs). However, the advent of the Transformer technology with parallelizable self-attention at its core marked the dawn of a new era, outpacing LSTMs at scale. We now raise a simple question: How far do we get in language modeling when scaling LSTMs to billions of parameters, leveraging the latest techniques from modern LLMs, but mitigating known limitations of LSTMs? Firstly, we introduce exponential gating with appropriate normalization and stabilization techniques. Secondly, we modify the LSTM memory structure, obtaining: (i) sLSTM with a scalar memory, a scalar update, and new memory mixing, (ii) mLSTM that is fully parallelizable with a matrix memory and a covariance update rule. Integrating these LSTM extensions into residual block backbones yields xLSTM blocks that are then residually stacked into xLSTM architectures. Exponential gating and modified memory structures boost xLSTM capabilities to perform favorably when compared to state-of-the-art Transformers and State Space Models, both in performance and scaling.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/beck2024.pdf;/home/thomas/Zotero/storage/PNS37KYI/2405.html}
+}
+
 @online{ben-baruch2021,
   title = {Asymmetric {{Loss For Multi-Label Classification}}},
   author = {Ben-Baruch, Emanuel and Ridnik, Tal and Zamir, Nadav and Noy, Asaf and Friedman, Itamar and Protter, Matan and Zelnik-Manor, Lihi},
