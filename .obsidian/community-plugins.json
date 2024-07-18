@@ -20,5 +20,6 @@
   "obsidian-pandoc",
   "marp-slides",
   "webpage-html-export",
-  "drawio-obsidian"
+  "drawio-obsidian",
+  "text-snippets-obsidian"
 ]

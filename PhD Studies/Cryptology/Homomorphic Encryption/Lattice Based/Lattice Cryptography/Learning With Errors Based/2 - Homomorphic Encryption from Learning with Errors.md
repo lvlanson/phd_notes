@@ -183,9 +183,9 @@
 >>\end{alignat}$$
 >>which shows the first identity. Before continuing the proof for the last part of the identity, we want to note what $\text{BitDecomp}^{-1}$ does on $\mathbb{Z}^n$. 
 >>
->>Naturally, $\text{BitDecomp}^{-1}$ acts on the binary numbers whose alphabet is $\{ 0,1 \}$ such that a set of $a_{i} \in \{ 0,1 \}$, with $0 \leq i \leq l-1$ being the bit-depth, composes a positive integer with $\sum_{i=0}^{l-1} 2^ia_{i} = b$. The ordered $a_{i}$ are therefore the binary representation of $b$.
+>>Naturally, $\text{BitDecomp}^{-1}$ acts on the binary numbers whose alphabet is $\{ 0,1 \}$ such that a set of $a_{i} \in \{ 0,1 \}$, with $0 \leq i \leq l-1$ being the bit-depth, composes a positive integer with $\sum_{i=0}^{l-1} 2^ia_{i} = b$. The ordered $a_{i}$ are therefore the binary representation of $b$. Now consider we extend the alphabet of the binary numbers to $\mathbb{Z}$, then each $a_{i} \in \mathbb{Z}$ represents the magnitude of $2^i$ at the $i$-th position. $\text{BitDecomp}^{-1}$ therefore returns the decimal representation of given the coefficients $a_{i}$ over each $2^i$ 
 >>
->>Now consider we extend the alphabet of the binary numbers to $\mathbb{Z}$, then each $a_{i} \in \mathbb{Z}$ represents the magnitude of $2^i$ at the $i$-th position. If we pass this back to $\text{BitDecomp}$ we yield a **normalized binary representation** of $a$ which is stable in the dot-product of the given identity. See the example of $\text{Flatten}$ on the **binary normalization** above.
+>>If we pass this back to $\text{BitDecomp}$ we yield a **normalized binary representation** of $a$ which is stable in the dot-product of the given identity. See the example of $\text{Flatten}$ on the **binary normalization** above.
 >>
 >>We will now continue on equation $(3)$, now consider the coefficients $\widehat{a}_{i} \in \{ 0,1 \}$ to be the **binary normalized** coefficients over modulus $q$, so we get
 >>$$\begin{alignat}{2}

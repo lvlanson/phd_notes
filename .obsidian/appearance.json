@@ -1,10 +1,11 @@
 {
   "accentColor": "",
-  "baseFontSize": 20,
+  "baseFontSize": 16,
   "cssTheme": "",
   "enabledCssSnippets": [
     "laura",
     "images"
   ],
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "baseFontSizeAction": true
 }

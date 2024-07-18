@@ -8,16 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5c36a3b0dd22d5ec",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf"
-              }
-            }
-          },
-          {
             "id": "e57702c625f3279e",
             "type": "leaf",
             "pinned": true,
@@ -25,22 +15,56 @@
               "type": "markdown",
               "state": {
                 "file": "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/Learning With Errors Based/2 - Homomorphic Encryption from Learning with Errors.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               },
               "pinned": true
             }
           },
           {
-            "id": "655e1d5b68e9addd",
+            "id": "a33a04bd08933e06",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Machine Learning/Network Architectures/LSTMs/xLSTM.md",
+                "mode": "source",
+                "source": true
+              }
+            },
+            "group": "1f5386f4c442c925"
+          },
+          {
+            "id": "32d8ba0bdd5a023b",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "PDFs/beck2024.pdf"
+              }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
+      },
+      {
+        "id": "a5d41561b284af12",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7b3bf734e4c05ac9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PhD Studies/Machine Learning/Network Architectures/LSTMs/xLSTM.md",
+                "mode": "preview",
+                "source": true
+              }
+            },
+            "group": "1f5386f4c442c925"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,6 +130,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "PhD Studies/Machine Learning/Network Architectures/LSTMs/xLSTM.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -122,6 +147,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "PhD Studies/Machine Learning/Network Architectures/LSTMs/xLSTM.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -132,7 +158,9 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {}
+          "state": {
+            "file": "PhD Studies/Machine Learning/Network Architectures/LSTMs/xLSTM.md"
+          }
         }
       }
     ],
@@ -150,53 +178,52 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "655e1d5b68e9addd",
+  "active": "a33a04bd08933e06",
   "lastOpenFiles": [
+    "PhD Studies/Machine Learning/Network Architectures/LSTMs/Figures/sLSTM_memory_mixing_heads.png",
+    "PhD Studies/Machine Learning/Network Architectures/LSTMs/xLSTM.md",
+    "Pasted image 20240718121107 1.png",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/Learning With Errors Based/2 - Homomorphic Encryption from Learning with Errors.md",
+    "PhD Studies/Machine Learning/Network Architectures/Attention/Sparse Attention.md",
+    "Excalidraw/Drawing 2024-07-18 11.08.40.excalidraw.md",
+    "PhD Studies/Machine Learning/Network Architectures/Attention/Figures/attention_sparse_block_local.png",
+    "PhD Studies/Machine Learning/Network Architectures/Attention/Figures/attention_sparse_random.png",
+    "PDFs/beck2024.pdf",
+    "PhD Studies/Machine Learning/Network Architectures/Attention/Figures/attention_sparse_dilated.png",
+    "PhD Studies/Machine Learning/Network Architectures/Attention/Figures/attention_sparse_band.png",
+    "PhD Studies/Machine Learning/Network Architectures/Attention/Figures",
+    "PhD Studies/Machine Learning/Network Architectures/Attention/Figures/attention_sparse_global.png",
+    "PhD Studies/Machine Learning/Network Architectures/Attention",
+    "PhD Studies/Mathematic Basics/Statistics/Mathematical Statistics Book/Chapter 1 (Probability Theory)/Figure1_1.md",
+    "PhD Studies/Machine Learning/Network Architectures/LSTMs/Figures/xLSTM_stacked_blocks.png",
+    "PhD Studies/Machine Learning/Network Architectures/LSTMs/Figures/sLSTM_exponential_vs_sigmoid.png",
+    "PhD Studies/Machine Learning/Network Architectures/LSTMs/LSTM.pdf",
+    "PhD Studies/Machine Learning/Loss Functions/Focal Loss.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
+    "PDFs/bishop2006.pdf",
+    "PDFs/shao2003.pdf",
+    "PhD Studies/Mathematic Basics/Statistics/Mathematical Statistics Book/Chapter 1 (Probability Theory)/Chapter 1 Probability Theory Notes.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Vorbereitung.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/Seminar 6.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/Seminar 5.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/5) Tschebyscheff Ungleichung Grenzwertsätz.pdf",
+    "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
+    "PDFs/brualdi2004.pdf",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Seminar 1.md",
+    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/Vorbereitung.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs.md",
     "Lehre/Kryptologie/2 - Algebraische und Zahlentheoretische Grundlagen.md",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/Learning With Errors Based/2 - Homomorphic Encryption from Learning with Errors.md",
     "PDFs/gentry2013.pdf",
     "Lehre/Kryptologie/1 -  Einführung.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Vorlesungsskript_Mathematik3.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 5/Seminar 5.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/3) Diskrete Zufallsgrößen.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 8/Seminar 8.md",
     "Lehre/Wahrscheinlichkeitsrechnung/Tabelle_Standardnormalverteilung.jpg",
-    "Lehre/Wahrscheinlichkeitsrechnung/chi_2.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/t-table.pdf",
-    "PDFs/brakerski2012.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 1/1) Kombinatorik_Elementarereignisse.pdf",
     "Lehre/Wahrscheinlichkeitsrechnung/Seminar 7/Seminar 7.md",
-    "PDFs/peikert2015.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/tabelle_t_verteilung.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 8/8) Parametertests.pdf",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 2/Seminar 2.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 3/Seminar 3.md",
     "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/Learning With Errors Based/1 - Learning With Errors Introduction.md",
-    "PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques.md",
-    "Lehre/Wahrscheinlichkeitsrechnung/Seminar 6/Seminar 6.md",
     "Berichte/Sachbericht Promotion.md",
     "index.md",
-    "Berichte/Sachbericht Promotion 1.md",
-    "/Sachbericht Promotion.md",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/2 - Computational Problems.md",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/1 - Elementary Definitions.md",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Gentry Thesis.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series.md",
-    "PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals.md",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Figures/gapsvp.png",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Figures/periodic_normal_distribution.png",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Figures/shortest_vector_problem.png",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Figures/closest_vector_problem.png",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Figures/parallelepiped.png",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Figures/parallelepiped.png",
-    "Lehre/Kryptologie/Figures/surjektivität.png",
-    "Lehre/Kryptologie/Figures/bijektivität.png",
-    "Lehre/Kryptologie/Figures/pawls.png"
+    "Berichte/Sachbericht Promotion 1.md"
   ]
 }
