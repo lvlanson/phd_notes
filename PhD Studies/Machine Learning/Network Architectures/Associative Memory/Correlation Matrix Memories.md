@@ -1,7 +1,8 @@
-Source: https://ieeexplore.ieee.org/document/5008975
-Source: https://www.semanticscholar.org/paper/Distinctive-features%2C-categorical-perception%2C-and-a-Anderson-Silverstein/00c6914dab0fb75c0fe5c8d8ad57d726223b7d9b
+>[!source]
+>Source 1: [[../../../../PDFs/kohonen1972.pdf|kohonen1972]]
+>Source 2: [[../../../../PDFs/anderson1977.pdf|anderson1977]]
 
->[!def] Definition Correlation Matrix $\mathbf{M}$
+>[!def] Definition Correlation Matrix $\mathbf{A}$
 >Let $\mathbf{f}_{i},\mathbf{g}_{i}\in\mathbb{R}^n$ denote two patterns and give the $i$-th association $(\mathbf{f}_{i}, \mathbf{g}_{i})$. Further, assume $\lvert\lvert f \rvert\rvert = 1.$ Then the correlation matrix over the two patterns can be given as
 >$$\begin{align}
 > \mathbf{A}_{1} &= \mathbf{f}_{1}\mathbf{g}_{1}^T \\

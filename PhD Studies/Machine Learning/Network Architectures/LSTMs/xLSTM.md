@@ -1,3 +1,6 @@
+>[!source]
+>Source: [[../../../../PDFs/beck2024.pdf|beck2024]]
+
 >[!important] xLSTM Objectives
 > 1. LSTM **<u>struggle to revise</u>** stored information
 > 2. Cell states are of the form of scalars which <u>**limits memory**</u> of cells greatly
@@ -9,7 +12,8 @@
 >- mLSTM blocks
 >
 >with skip connections
->![[Figures/xLSTM_stacked_blocks.png]]
+>![[Figures/xLSTM_stacked_blocks.png|center|400]]
+><center>Figure: Stacked xLSTM network consisting of sLSTM and mLSTM blocks </center>
 
 
 ## sLSTM (scalar LSTM)
@@ -109,3 +113,84 @@
 > f_{t} &= \sigma(\widetilde{f}_{t}) \text{ OR } \exp(\widetilde{f}_{t}) &\widetilde{f}_{t}&=\mathbf{w}_{f}^T \mathbf{x}_{t}+b_{f} \tag{forget gate}\\
 > \mathbf{o}_{t} &= \sigma(\widetilde{\mathbf{o}}_{t}) &\widetilde{\mathbf{o}}_{t} &= \mathbf{W}_{\mathbf{o}}\mathbf{x}_{t} +\mathbf{b}_{\mathbf{o}} \tag{output gate}
 >\end{alignat}$$
+
+>[!remark] Remark on the Cell States
+><u>Correlation Matrix and Memory</u>
+>
+> The cell state resembles a correlation matrix and is of the form of an [[../Associative Memory/Associative Memory Terminology|associative memory]], especially [[../Associative Memory/Correlation Matrix Memories|correlation matrix memories (CMM)]]. The correlation matrix is an extension of the scalar memory and upgraded to an associative memory.
+> 
+> According to [[../../../../PDFs/anderson1977.pdf|anderson1977]] the correlation matrix is of the form
+>>[!def]- Definition Correlation Matrix $\mathbf{A}$ according to Anderson 1977
+>>Let $\mathbf{f}_{i},\mathbf{g}_{i}\in\mathbb{R}^n$ denote two patterns and give the $i$-th association $(\mathbf{f}_{i}, \mathbf{g}_{i})$. Further, assume $\lvert\lvert f \rvert\rvert = 1.$ Then the correlation matrix over the two patterns can be given as
+>>$$\begin{align}
+>> \mathbf{A}_{1} &= \mathbf{f}_{1}\mathbf{g}_{1}^T \\
+>> \mathbf{A}_{i} &= \mathbf{A}_{i-1} + \mathbf{f}_{i}\mathbf{g}_{i}^T
+>>\end{align}$$
+>>where a pattern can be retrieved for a query $\mathbf{g}_{i}$
+>>$$\mathbf{A}\mathbf{f}_{i} =\mathbf{g}_{i}$$
+>
+><u>Memory Creation </u>
+>
+>The memory $\mathbf{C}_{t}$ at time step $t$ is the sum of the by the forget gate scaled previous memory $\mathbf{C}_{t-1}$ and the input scaled new correlation $\mathbf{v}_{t}\mathbf{k}_{t}^T$ created by some value and key vectors $\mathbf{v}, \mathbf{k} \in \mathbb{R}^n$. Value and key vectors are learned over the input sequence by weight matrices $\mathbf{W}_{q},\mathbf{W}_{k}$.
+>
+><u>Output Creation</u>
+>
+>For generating the output a query retrieves over time stored information from the correlation matrix by calculating
+>$$\mathbf{C}_{t}\mathbf{q}_{t}$$
+>expecting a similar output as designed by [[../../../../PDFs/anderson1977.pdf|anderson1977]] and [[../../../../PDFs/kohonen1972.pdf|kohonen1972]] (see above). The retrieved information is inversely scaled by the dotproduct of the query and normalizer vectors $\mathbf{n}_{t}^T\mathbf{q}_{t}$ but at most $1$, i.e.
+>$$\widetilde{\mathbf{h}}_{t} = \frac{\mathbf{C}_{t}\mathbf{q}_{t}}{\underset{}{\text{max}}\Big(\Big\vert \mathbf{n}_{t}^T\mathbf{q}_{t}\Big\vert, 1\Big)\;}$$
+> This dot-product is a cumulative, scaled dot-product of key and query vectors $\mathbf{k}$ and $\mathbf{q}$ scaled by the input and forget gate, i.e.
+>$$\mathbf{n}_{t} = f_{t}\mathbf{n}_{t-1} + i_{t}\mathbf{k}_{t}$$
+>The output is a element-wise product with the output-gate and the hidden state
+>$$\mathbf{h}_{t} = \mathbf{o}_{t} \odot \widetilde{\mathbf{h}}_{t}$$
+
+>[!remark] Remark on Recursion and Parallel Computation
+> The algorithm can be run in full parallel. Note, that **the input and forget gate** can be computed without recursive information $\mathbf{h}_{t-1}$ contrary to sLSTM and vanilla LSTM.
+> $$\begin{align}
+> i_{t} &= \exp(\widetilde{i}_{t}) & \widetilde{i} &= \mathbf{w}_{i}^T \mathbf{x}_{t} + b_{i} \tag{input gate}\\
+> f_{t} &= \sigma(\widetilde{f}_{t}) \text{ OR } \exp(\widetilde{f}_{t}) &\widetilde{f}_{t}&=\mathbf{w}_{f}^T \mathbf{x}_{t}+b_{f} \tag{forget gate}\\
+>\end{align}$$
+>All input and forget gates can therefore be computed immediately
+>$$\begin{align} \\
+> \mathbf{F}_{ij} &= \begin{cases}
+> 0 & \text{ for } j > i \\
+> 1 & \text{ for } j = i  \\
+> \prod_{k=j+1}^i \sigma(\widetilde{f}_{k}) & \text{ for } j \leq i
+>\end{cases} \\[1em]
+> \mathbf{F} &= \begin{pmatrix}
+> 1 & 0 & 0 & 0 & \dots & 0 & 0 \\
+> \sigma(\widetilde{f}_{2}) & 1 & 0 & 0 & \dots & 0 & 0 \\
+> \sum_{k=2}^3\sigma(\widetilde{f}_{i}) & \sigma(\widetilde{f}_{3}) & 1 & 0 & \dots & 0 & 0 \\
+> \sum_{k=2}^4\sigma(\widetilde{f}_{i}) & \sum_{k=3}^4\sigma(\widetilde{f}_{i}) & \sigma(\widetilde{f}_{4}) & 1 & \dots & 0 & 0 \\
+> \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+> \sum_{k=2}^{T-1}\sigma(\widetilde{f}_{i}) & \sum_{k=3}^{T-1}\sigma(\widetilde{f}_{i}) & \sum_{k=4}^{T-1}\sigma(\widetilde{f}_{i}) & \sum_{k=5}^{T-1}\sigma(\widetilde{f}_{i}) & \dots & 1 & 0 \\
+> \sum_{k=2}^{T}\sigma(\widetilde{f}_{i}) & \sum_{k=3}^{T}\sigma(\widetilde{f}_{i}) & \sum_{k=4}^{T}\sigma(\widetilde{f}_{i}) & \sum_{k=5}^{T}\sigma(\widetilde{f}_{i}) & \dots & \sigma(\widetilde{f}_{T}) & 1 \\
+>\end{pmatrix} \\[1em]
+> \mathbf{\widetilde{I}}_{ij} &= \begin{cases}
+> 0 & \text{ for } j > i \\
+> i_{j} & \text{ for } j \leq i
+>\end{cases}  \tag{error in paper?}\\[1em]
+>\mathbf{\widetilde{I}} &= \begin{pmatrix}
+> \widetilde{i}_{1} & 0 & 0 & \dots & 0 \\
+> \widetilde{i}_{1} & \widetilde{i}_{2} &0& \dots & 0 \\
+> \widetilde{i}_{1} & \widetilde{i}_{2} & \widetilde{i}_{3}& \dots & 0 \\
+>\vdots & \vdots & \vdots & \ddots & \vdots \\
+>\widetilde{i}_{1} & \widetilde{i}_{2} & \widetilde{i}_{3}& \dots & \widetilde{i}_{T}
+>\end{pmatrix}
+>\end{align}$$
+>
+>The unstabilized gate activation can be calculated as
+>$$\begin{align}
+> \mathbf{D} &= \mathbf{F} \odot \exp(\mathbf{\widetilde{I}})
+>\end{align}$$
+>and the stabilized gate activation (overflow protection)
+>$$\begin{align}
+> \mathbf{D} &= \log(\mathbf{F}) \odot \mathbf{\widetilde{I}}
+>\end{align}$$
+>where the logarithm and exponential are performed element-wise. 
+>
+>---
+>Unclear paper description of $\underset{}{\text{max}}(\mathbf{C})\;$, if this operation yields a matrix, then what does $\exp(-\underset{}{\text{max}}\;\mathbf{\widetilde{D}})$ yield?
+>$$\mathbf{C} = \frac{\mathbf{\widetilde{C}}'}{\underset{}{\text{max}}\left( \left\lvert  \sum_{j=1}^T \mathbf{\widetilde{C}}_{ij}  \right\rvert, \exp(-\underset{}{\text{max}}\;\mathbf{\widetilde{D}})  \right)\;}$$
+>
+>---

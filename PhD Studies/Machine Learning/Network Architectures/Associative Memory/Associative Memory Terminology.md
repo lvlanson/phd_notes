@@ -1,5 +1,7 @@
-Source: https://arxiv.org/pdf/1709.00848
-Source: https://thesai.org/Downloads/Volume1No6/Paper_19_A_Study_on_Associative_Neural_Memories.pdf
+>[!source]
+>Source: [[../../../../PDFs/gritsenko2017.pdf|gritsenko2017]]
+>Source: [[../../../../PDFs/prasad2012.pdf|prasad2012]]
+
 >[!observation] Observation: Hebb's Learning
 >---
 ><center>Neurons that fire together, wire together.</center>
