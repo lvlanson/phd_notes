@@ -16,7 +16,7 @@
 ><center>Figure: Stacked xLSTM network consisting of sLSTM and mLSTM blocks </center>
 
 
-## sLSTM (scalar LSTM)
+## sLSTM (Scalar LSTM)
 
 >[!algo] Architecture sLSTM ([[../../../../PDFs/beck2024.pdf|Source]])
 > Denote at time $t$ for input $\mathbf{x} \in \mathbf{R}^n$ with LSTM hidden dimensionality $1$
@@ -99,7 +99,7 @@
 >[!remark] Remark on Computation
 >Since sLSTM still uses recurrency, it lacks the ability to be parallized.
 
-## mLSTM
+## mLSTM (Memory LSTM)
 
 >[!algo] Architecture
 >$$\begin{alignat}{2}
@@ -194,3 +194,21 @@
 >$$\mathbf{C} = \frac{\mathbf{\widetilde{C}}'}{\underset{}{\text{max}}\left( \left\lvert  \sum_{j=1}^T \mathbf{\widetilde{C}}_{ij}  \right\rvert, \exp(-\underset{}{\text{max}}\;\mathbf{\widetilde{D}})  \right)\;}$$
 >
 >---
+
+>[!tip] Experiments
+><center> xLSTM[a:b] <=> <b>a</b> layers of mLSTM and <b>b</b> layers of sLSTM blocks </center>
+>
+>>[!tip] Experiment Language Task with State Tracking
+>> ![[Figures/experiment_1.png]]
+>
+>>[!tip] Experiment Associative Recall
+>>
+>>>[!example] Task Associative Recall
+>>>In an *Associative Recall* experiment a model receives a corrupted pattern and is expected to return the fully recovered pattern. 
+>>
+>>![[Figures/experiment_2.png]]
+>>
+>>The *KV Pair* distinction is concerned with different *Key-Value pairs* where key is a corrupted pattern and value the expected recovered pattern.  
+>
+>>[!tip] Experiment Next Token Prediction
+>>![[Figures/experiment_4.png]]
