@@ -2,6 +2,14 @@
 >>[!attention] Here you can find my work and knowledge
 >
 >>[!lemma] I am currently working on
+>>
+>>>[!abstract] Homomorphic Encryption
+>>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Basics on Homomorphic Encryption|Basics on Homomorphic Encryption]] ✅
+>>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/1 - Elementary Lattice Definitions|Elementary Lattice Definitions]] ✅
+>>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/2 - Computational Problems on Lattices|Computational Problems on Lattices]] ✅
+>>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/Learning With Errors Based/1 - Learning With Errors Introduction|Learning With Errors Introduction]] ✅
+>>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/Learning With Errors Based/2 - Homomorphic Encryption from Learning with Errors| Gentry's LWE Homomorphic Encryption Scheme]] ✅
+>>
 >>>[!abstract] Ordinary Differential Equations ✅
 >>> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs|First Order Differential Equations]] ✅
 >>> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/2 - Second Order ODEs|Second Order Differential Equations]] ✅
@@ -27,6 +35,7 @@
 >>> - [[PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B2 - Approximation in Hilbert Spaces|Approximation in Hilbert Spaces (Orthogonal Projection)]] ✏️
 >
 >>[!lemma] I have finished or stopped...
+>> - [[PhD Studies/Machine Learning/Network Architectures/LSTMs/xLSTM|xLSTM Recurrent Networks]] ✅
 >> - [[PhD Studies/Mathematic Basics/Metrics/Hausdorff Metric|Hausdorff Metric Analysis for Hyperbox LVQ]] ✅
 >> - [[PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/1 - Maximum Inner Product Search|Maximum Inner Product Search]] ✅
 >> - [[PhD Studies/Machine Learning/Network Architectures/Transformer Vector Quantization/2 - Quantized Maximum Inner Product Search|Quantized Maximum Inner Product Search]] ✅

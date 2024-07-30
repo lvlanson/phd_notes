@@ -1,7 +1,7 @@
 {
   "settingsVersion": "1.8.01",
   "makeOfflineCompatible": false,
-  "inlineAssets": true,
+  "inlineAssets": false,
   "includePluginCSS": "",
   "includeSvelteCSS": true,
   "titleProperty": "PhD Studies Thomas Davies",
@@ -16,20 +16,20 @@
   "allowResizingSidebars": true,
   "logLevel": "warning",
   "minifyHTML": true,
-  "makeNamesWebStyle": false,
+  "makeNamesWebStyle": true,
   "onlyExportModified": true,
   "deleteOldFiles": true,
   "addThemeToggle": true,
   "addOutline": true,
   "addFileNav": true,
-  "addSearchBar": false,
-  "addGraphView": false,
+  "addSearchBar": true,
+  "addGraphView": true,
   "addTitle": true,
   "addRSSFeed": true,
   "siteURL": "https://www.staff.hs-mittweida.de/~davies/intranet/",
   "authorName": "Thomas Davies",
   "vaultTitle": "PhD Studies",
-  "exportPreset": "documents",
+  "exportPreset": "website",
   "openAfterExport": true,
   "graphAttractionForce": 1,
   "graphLinkLength": 10,
@@ -46,7 +46,11 @@
   "exportPath": "/home/thomas/Documents/HTML_EXPORT",
   "filesToExport": [
     [
-      "Lehre/Kryptologie/1 -  Einführung.md"
+      "ML Programming",
+      "PDFs",
+      "PhD Studies",
+      "References",
+      "index.md"
     ]
   ]
 }

@@ -3,8 +3,9 @@
   "baseFontSize": 16,
   "cssTheme": "",
   "enabledCssSnippets": [
+    "images",
     "laura",
-    "images"
+    "text"
   ],
   "theme": "obsidian",
   "baseFontSizeAction": true

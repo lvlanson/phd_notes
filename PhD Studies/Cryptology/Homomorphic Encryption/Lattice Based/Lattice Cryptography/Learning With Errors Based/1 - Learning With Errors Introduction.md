@@ -158,6 +158,8 @@
 >>
 >>---
 
+^ab0e75
+
 >[!lemma] Lemma Bootstrapping ([[../../../../../../PDFs/regev2024.pdf#page=19|Source]])
 >There exists an efficient algorithm that, given any $n$-dimensional lattice $L$ and $r > 2^{2n}\lambda_{n}(L)$, outputs a sample from a distribution that is within statistical distance $2^{-\Omega(n)}$ of $D_{L,r}$.
 >

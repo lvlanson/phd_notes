@@ -92,7 +92,10 @@
 >[!def] Definition Algorithm Functions ([[../../../../../../PDFs/gentry2013.pdf|Source 1]], [[../../../../../../PDFs/brakerski2012.pdf#page=10|Source 2]])
 >Let $l =  \lceil \log_{2} q\rceil -1$
 >1. **PowersOfTwo** 
->Let $\mathbf{b} \in \mathbb{Z}_{q}^n$ and $l \in \mathbb{Z}$, then $$\text{PowersOfTwo}(\mathbf{b}):=\Big(\mathbf{b}, 2 \cdot \mathbf{b}, \dots, 2^{l-1}\cdot \mathbf{b}\Big)$$
+>Let $\mathbf{b} \in \mathbb{Z}_{q}^n$ and $l \in \mathbb{Z}$, then $$\begin{align}
+> \text{PowersOfTwo}(\mathbf{b}):&=\Big(\mathbf{b}, 2 \cdot \mathbf{b}, \dots, 2^{l-1}\cdot \mathbf{b}\Big) \in \mathbb{Z}_{q}^{l\times n} \tag{Matrix Notation} \\
+> \text{PowersOfTwo}(\mathbf{b}):&=\Big(b_{1},2b_{1}, \dots 2^{l-1}b_{1},\dots, b_{k},2b_{k},\dots 2^{l-1}b_{k}, \dots, 2^{l-1}b_{n}\Big) \in \mathbb{Z}_{q}^{l \cdot n} \tag{Vector Notation}
+>\end{align}$$ 
 >
 >2. **BitDecomp**
 > For $\mathbf{a} \in \mathbb{Z}^n$ let $\mathbf{w}_{i}\in\{ 0,1 \}^n$ such that $$\mathbf{a}= \sum_{i=0}^{l-1} 2^i \cdot \mathbf{w}_{i} \;\;(\text{mod } q)$$
@@ -153,6 +156,8 @@
 >>>$$\text{Flatten}(\mathbf{a}) = \begin{pmatrix}
 >>> 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 0
 >>>\end{pmatrix}$$
+>>
+>>**Flatten helps to bound homomorphic multiplication results**
 
 >[!lemma]
 >Let $q \in \mathbb{Z}$ and $\mathbf{x}, \mathbf{y} \in \mathbb{Z}^n$, it holds that
@@ -167,6 +172,8 @@
 >> &= \left\langle \text{BitDecomp}(\mathbf{x})\,,\, \text{PowersOfTwo}(\mathbf{y}) \right\rangle &&\;\;(\text{mod } q)\\ 
 >>\end{alignat}$$
 >>$$\tag*{$\square$}$$
+
+^b9de48
 
 >[!lemma]
 >Let $\mathbf{a} \in \mathbb{Z}^n, \mathbf{b} \in \mathbb{Z}_{q}^n$ and $l=\lfloor \log q \rfloor +1$
@@ -195,41 +202,51 @@
 >>\end{alignat}$$
 >>which establishes the identity. $$\tag*{$\square$}$$
 
+^2b31c8
+
 
 >[!algo] Algorithm Key Generation $\text{KeyGen}$ ([[../../../../../../PDFs/gentry2013.pdf#page=10|Source]])
 >Let $\lambda, L \in \mathbb{Z}$ with $\lambda$ being the security parameter and $L$ being the circuit complexity parameter.
 >1. $\text{Setup}(\lambda, L)$: 
->	- lattice dimension parameter: $n=n(\lambda,L)$
->	- choose a prime number: $q \in \mathbb{Z}$ with $n^2\leq q\leq 2n^2$
->	- error distribution:  $\chi=\Psi_{\alpha(n)}$
->	- number of equations $m=(1+\epsilon)(n+1) \log q$ where $\epsilon>0$ is a smoothing parameter related to the Gaussian distribution and the dual lattice, where $m$ is rounded to the next integer
+>	- set: $n=n(\lambda,L)$  <span class="right-float"> (lattice dimension parameter)</span>
+>	- choose: prime number: $q \in \mathbb{Z}$ 
+>		- with $n^2\leq q\leq 2n^2$
+>	- choose:  $\chi=\Psi_{\alpha(n)}$ <span class="right-float"> (error distribution)</span>
+>	- set $m=(1+\epsilon)(n+1) \log q$ <span class="right-float">(number of equations)</span>
+>		- where $\epsilon>0$ is a smoothing parameter related to the Gaussian distribution and the dual lattice
+>		- where $m$ is rounded to the next integer
+>	- denote: $l = \lfloor \log q \rfloor + 1$ <span class="right-float">(bit-depth)</span>
+>	- denote: $N = (n+1) \cdot l$ <span class="right-float">(???)</span>
 >
->		-> output paramaters $\text{params} = (n,q,\chi,m)$
->	- denote $l = \lfloor \log q \rfloor + 1$
->	- denote $N = (n+1) \cdot l$
->
+>	 -> **output** parameters: 
+>	 $$\text{params} = (n,q,\chi,m)$$
 >1. $\text{SecretKeyGen}(\text{params})$:
 > 	- sample uniformly: $\mathbf{t} \leftarrow \mathbb{Z}_{q}^n$
+> 	- set: $\mathbf{s} \leftarrow (1,-t_{1},\dots,t_{n}) \in \mathbb{Z}_{q}^{n+1}$
+> 	- set: $\mathbf{v} \leftarrow \text{PowersOfTwo}(\mathbf{s}) \in \mathbb{Z}_{q}^{(n+1)\cdot l} = \mathbb{Z}_{q}^{N}$
 > 	
-> 		-> output secret key $\text{sk} = \mathbf{s} \leftarrow (1,-t_{1},\dots,t_{n})$
-> 
->3. $\text{PublicKeyGen}(\text{params,sk})$:
+> 		-> **output** secret key: 
+> 		$$\text{sk} =  \mathbf{s} $$
+> 	
+>1. $\text{PublicKeyGen}(\text{params, sk}, \mathbf{t})$:
 >	- sample uniformly: $\mathbf{B} \leftarrow \mathbb{Z}_{q}^{m \times n}$
 >	- sample: $\mathbf{e} \leftarrow \chi^m$
 >	- set: $\mathbf{b}=\mathbf{B}\cdot \mathbf{t}+\mathbf{e}$
->	- set: $A=\text{concatenate}(\mathbf{b}, \mathbf{B}) \in \mathbb{Z}^{m+1\times n}$
->	- note: $\mathbf{A} \cdot \mathbf{s}  = \mathbf{e}$
+>	- set: $\mathbf{A}=\text{concatenate}(\mathbf{b}, \mathbf{B}) \in \mathbb{Z}^{m\times n+1}$
+>	- note: $\mathbf{A} \cdot \mathbf{s}  = \mathbf{e}$  <span class="right-float">(secret denoising)</span>
 >
->		-> output public key $\text{pk} = \mathbf{A}$
+>		-> **output** public key: 
+>		$$\text{pk} =  \mathbf{A} $$
 >
->Output: $\text{KeyGen} \to (\text{pk}=\mathbf{A}, \text{sk} = \mathbf{s})$
+>
+><u>Output:</u> $$\text{KeyGen} \to (\text{pk}= \mathbf{A} , \text{sk} = \mathbf{s})$$
 >>[!proof]- Proof $\mathbf{A} \cdot \mathbf{s} = \mathbf{e}$
 >>$$\begin{align}
 >> \mathbf{A} \cdot \mathbf{s} &= \underbrace{ [\mathbf{b}, \mathbf{B}] }_{ =\mathbf{A} } \cdot (1, -t_{1}, \dots, t_{n}) \\
 >> &= [\underbrace{ (\mathbf{B}\cdot \mathbf{t}+\mathbf{e}) }_{ =\mathbf{b} }, \mathbf{B}] \cdot (1, -t_{1}, \dots, t_{n})  \\
 >> &= (\mathbf{B} \cdot \mathbf{t} +\mathbf{e}) \cdot 1 - \mathbf{B}[1]t_{1} -\ldots- \mathbf{B}[n]t_{n} \\
 >> &= \mathbf{B} \cdot \mathbf{t}  + \Big(- \mathbf{B}[1]t_{1} -\ldots- \mathbf{B}[n]t_{n}\Big) +\mathbf{e} \\
->> &= \Big(\mathbf{B[1]} t_{1} +\ldots+\mathbf{B}[n]t_{n}\Big)+\Big(-\mathbf{B}[1]t_{1} -\ldots- \mathbf{B}[n]t_{n}\Big) +\mathbf{e}  \\
+>> &= \underbrace{ \Big(\mathbf{B[1]} t_{1} +\ldots+\mathbf{B}[n]t_{n}\Big)+\Big(-\mathbf{B}[1]t_{1} -\ldots- \mathbf{B}[n]t_{n}\Big) }_{ =0 } +\mathbf{e}  \\
 >> &= \mathbf{e} 
 >>\end{align}$$
 >>where $\mathbf{D}[k]$ is the $k$-th column vector of matrix $\mathbf{D}$ and $[\mathbf{b},\mathbf{B}]$ is the concatenation of vector $\mathbf{b} \in \mathbb{Z}_{q}^n$ and matrix $\mathbf{B} \in \mathbb{Z}_{q}^{m \times n}$
@@ -248,9 +265,47 @@
 >>[!remark]- Remark on Plaintext Space
 >>This setup is given under the assumption that each message $\mu_{i} \in \{ 0,1 \}$. The author gives additional procedural steps to consider messages with a wider range of values
 
+^12d9e0
+
 >[!algo] Algorithm Encryption and Decryption ([[../../../../../../PDFs/gentry2013.pdf#page=10|Source]])
 >4. $\text{Enc}(\text{params, pk})$:
 >	- $\mu \in \mathbb{Z}_{q}$ denotes the plaintext
 >	- sample uniformly $\mathbf{R} \leftarrow \{ 0,1 \}^{N \times m}$
 >	- output:
->	$$C = \text{Flatten}\Big(\mu \cdot \mathbf{I}_{N} + \text{BitDecomp}(\mathbf{R}\cdot \mathbf{A})\Big) \in \mathbb{Z}_{q}^{N \times N}$$
+>	$$\mathbf{C} = \text{Flatten}\Big(\mu \cdot \mathbf{I}_{N} + \text{BitDecomp}(\mathbf{R}\cdot \mathbf{A})\Big) \in \mathbb{Z}_{q}^{N \times N}$$
+>5. $\text{Dec}(\text{params, sk}, \mathbf{C})$:
+> 	- denote: $\mathbf{c}_{i} \in \mathbb{Z}_{q}^N$ - $i$-th row of $\mathbf{C}$
+> 	- recall: $\mathbf{v}= \text{PowersOfTwo}(\mathbf{s}) \in \mathbb{Z}_{q}^{N}$
+> 	- compute: $x_{i} = \left\langle \mathbf{c}_{i}\,,\, \mathbf{v}\right\rangle$
+> 	- output:
+> $$\mu' = \left\lfloor \frac{x_{i}}{vi} \right\rceil  $$
+
+
+>[!proof] Proof of Correctness (Short)
+> Denote $\mathbf{C}$ the cipher computed by 
+> $$\mathbf{C} = \text{Flatten}\Big(\mu \cdot \mathbf{I}_{N} + \text{BitDecomp}(\mathbf{R}\cdot \mathbf{A})\Big) \in \mathbb{Z}_{q}^{N \times N}$$
+> Note that a flattened vector is stable under the dot-product seen in [[#^2b31c8|this lemma]] and matrix multiplication with a vector is simply having multiple dot-products. Hence we can drop the flatten operation when computing the scalar product and get for some $\mathbf{c}_{i}$.
+> $$\begin{align}
+> \mathbf{C}\cdot \mathbf{v}&= \Big(\mu \cdot \mathbf{I}_{N} + \text{BitDecomp}(\mathbf{R}\cdot \mathbf{A})\Big)\mathbf{v} \\
+> &= \mu \cdot \underbrace{ \mathbf{I}_{N} \cdot \mathbf{v} }_{ =\mathbf{v} } + \text{BitDecomp}(\mathbf{R}\cdot \mathbf{A})\cdot \text{PowersOfTwo}(\mathbf{s})
+>\end{align}$$
+>Now applying the [[#^b9de48 | other lemma]] with the fact that $\mathbf{A}\cdot \mathbf{s} = \mathbf{e}$ (see proof [[#^12d9e0|algorithm key generation]])
+>$$\begin{align}
+> \mathbf{C}\cdot \mathbf{v} &= \mu \cdot \mathbf{v} + \mathbf{R}\cdot \underbrace{ \mathbf{A} \cdot \mathbf{s} }_{ =\mathbf{e} } \\
+> &= \mu \cdot \mathbf{v} + \mathbf{R} \cdot \mathbf{e}
+>\end{align}$$
+>Further note, that the matrix $\mathbf{R}$ consists of zeros and ones, such that $\mathbf{e}$ is bounded by the error distribution, which is small ($<\frac{1}{2})$, and rounding will result into
+>$$\mathbf{C}\cdot \mathbf{v} \approx \mu \cdot \mathbf{v}$$
+>which establishes the correct encryption $$\tag*{$\square$}$$
+
+>[!question] Open Questions
+> - how does the [[1 - Learning With Errors Introduction#^ab0e75|periodic normal distribution]] $\chi$ work exactly? 
+> - Gentry specifically highlights on [[../../../../../../PDFs/gentry2013.pdf#page=5| page 5]]
+>> The secret key vis a $N$-dimensional vector over $\mathbb{Z}_{q}$ with at least one "big" coefficient $v_{i}$.
+>   
+>    ongoing he describes [[../../../../../../PDFs/gentry2013.pdf#page=10| page 10]] that the $v_i \in (q/4, q/2]$ this ensures that the error does not grow outside of $q/2$ such that the plaintext $\mu'$ can be recovered.
+>	- is the $i$ fixed from here on?
+>	-  is the $i$ chosen such that $v_i \in (q/4, q/2]$?
+>- how to choose security parameter $\lambda$ correctly and how many operations does it guarantee?
+>- how is leveled homomorphism achieved, bootstrapping?
+
