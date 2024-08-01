@@ -1,7 +1,7 @@
 >[!note] Was ist Kryptologie?
 >**Kryptologie** ist ein Oberbegriff, welcher die **Theorie (Mathematik)** und **Praxis (Umsetzung)** rund um das Thema Verschlüsselung betrachtet. Kryptologie lässt sich dabei in zwei Hauptstränge unterteilen
 >
->![[Figures/diagram_kryptologie.png|center]]
+>![[Figures/krypto_ubersicht.png|center|400]]
 > Die oben genannten Oberbegriffe sind Disziplinen, die folgende Themen beinhalten
 > - Krypographie:
 > 	- Verschlüsselungsalgorithmen (häufig mithilfe von mathematisch ungelösten bzw. schwer lösbaren Problemen)
@@ -28,7 +28,7 @@
 >>><u>Injektivität:</u>
 >>>Sei $f: U\to V$ eine Abbildung, die von der Menge $U$ zu der Menge $V$ abbildet. Die Abbildung $f$ heißt **injektiv**, wenn wir zwei beliebige $u_{1}, u_{2} \in U$ abbilden und deren Abbildung gleich ist, so müssen auch $u_{1}, u_{2}$ gleich sein. Die Definition ist gegeben als
 >>>$$\forall u_{1}, u_{2} \in U: f(u_{1})= f(u_{2}) \implies u_{1}=u_{2}$$
->>>Wenn wir es uns graphisch veranschaulichen, können wir sinngemäß sagen, unsere Abbildung "schießt" jedes Element in der Zielmenge höchstens einmal ab.
+>>>Wenn wir es uns grafisch veranschaulichen, können wir sinngemäß sagen, unsere Abbildung "schießt" jedes Element in der Zielmenge höchstens einmal ab.
 >>>
 >>>![[Figures/injektivität.png|center|550]]
 >>>
@@ -75,7 +75,15 @@
 >>Die Chiffre lautet demnach
 >>$$c = \text{RNWRILEKTEPNRYOXOELGI}$$
 >>
->>>[!danger] Auch Transpositionsverfahren können mittels Frequenzanalyse und weiterer Verfahren gebrochen werden.
+>>>[!danger] Transpositionsverfahren können mittels anderer Verfahren recht leicht gebrochen werden. (Siehe weiter unten)
+>>
+>>>[!example] Beispiel
+>>>![[Figures/skytale.png|center|200]]
+>>><center>Abbildung: Skytale - Antike Transpositionsverschlüsselung </center>
+>>>Hier wird ein Lederband über einen Zylinder eines konkreten Durchmessers bespannt. Hierbei ist der Durchmesser des Zylinders der Schlüssel des Verfahrens. Ist das Lederband aufgespannt, so kann ein Text entlang des Zylinders auf das Lederband geschrieben werden. 
+>>>
+>>>Zieht man das Lederband ab, so hat man eine willkürlich anmutende Sammlung an Buchstaben. Nur der korrekte Durchmesser des Zylinders ermöglicht es das Lederband wieder korrekt aufzuziehen.
+>>>
 >
 >>[!algo]- Rotationsmaschinen (Informativ)
 >>Rotationsmaschinen sind nach dem ersten Weltkrieg in Erscheinung getreten und fanden ihre höchste Prominenz während des zweiten Weltkriegs mit dem wohl berühmtesten Vertreter der **Enigma**.
@@ -118,18 +126,34 @@
 >> - Diskretes Logarithmus Problem
 >> - Diskretes Logarithmusproblem auf Elliptischen Kurven
 >> - Gitterbasierte diskrete Vektorprobleme
+>
+>>[!remark]- Bemerkung zu Frequenzanalyse ([[../../PDFs/stallings1999.pdf#page=96|Quelle]])
+>> Wenn die Sprache einer Klartextnachricht bekannt ist und es sich bei dem Verschlüsselungsverfahren um eine einfache Permutation handelt, kann die Verteilung der Buchstaben analysiert werden und mit der bekannten Zielsprache verglichen werden. Somit ist es relativ einfach durch Zurücktauschen der Buchstaben anhand der Verteilung sich sukzessive dem Klartext anzunähern.
+>> 
+>> ![[Figures/frequenz_analyse.png|center|500]]
+>> <center> Abbildung: Verteilung der Buchstaben in der englischen Sprache
+
+>[!Theorem] Kerckhoffs' Prinzip
+> Kerckhoffs' Prinzip besagt, dass die Sicherheit eines kryptologischen Verfahrens nicht von der Geheimhaltung des Verfahrens abhängig ist. Nach diesem Prinzip muss die Geheimhaltung des Schlüssels ausreichend sein.
+>
+>>[!remark] Bemerkung zu Folgerung aus Kerckhoffs' Prinizp
+>>- es ist aufwändiger ein neues Verfahren zu entwickeln als einen neuen Schlüssel zu erzeugen
+>>- wenn Algorithmen öffentlich zugänglich sind, können Fehler im Algorithmus durch andere Fachleute aufgezeigt werden
+>
+>>[!remark]- Bemerkung zu Kerckhoff und seinen Prinzipien
+>>Auguste Kerckhoffs war ein niederländisch geborener, französischer Professor. Mit dem Aufkommen der telegraphischen Kommunikation hat 1883 Kerckhoff Prinzipien für das Militär formuliert, sodass für die Kommunikation sicherheitsrelevante Aspekte erfüllt. Dazu gehörte auch die Praktikabilität und Effizienz der Ver- und Entschlüsselung.
 
 
 >[!terminology] Terminologie
 >Die mathematische Symbolik wird nachgehend genauer eingeführt. Diese Sektion soll als Nachschlagewerk für die grundlegende Fachsprache dienen.
 >
-| Begriff                                         | Bedeutung                                                                                                                                                                                                                          |
-| ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Klartextnachricht $m \in \mathbb{Z}_{n}$        | die unverschlüsselte, für jedermann lesbare Nachricht                                                                                                                                                                              |
-| Verschlüsselte Nachricht $c \in \mathbb{Z}_{n}$ | die verschlüsselte Nachricht, die nur mittels eines Schlüssels in einen lesbare Klartextnachricht wieder überführt werden kann. Die Symbolik entspringt aus der englischen Sprache, wo der Begriff unter _Ciphertext_ bekannt ist. |
-| Verschlüsselung $\text{Enc}(m)=c$               | der Algorithmus, der aus einer Klartextnachricht eine verschlüsselte Nachricht erstellt.                                                                                                                                           |
-| Entschlüsselung $\text{Dec}(c)=m$               | der Algorithmus, der aus einer verschlüsselten Nachricht die originale Klartextnachricht mithilfe eines Schlüssels wieder herstellen kann                                                                                          |
-| Kryptographischer Algorithmus (Cipher)          | mathematische Funktion, welche für Ver- und Entschlüsselung verwendet wird. In der Regel gibt es jeweils eine Funktion für Ver- und Entschlüsselung.                                                                               |
-| Kryptographisches Protokoll                     | Anweisungsabfolge, der für zwei oder mehrere Teilnehmer den Zweck eines geheimen Austauschs von Informationen dient                                                                                                                |
-| Angriff                                         | der Versuch eine verborgene Informationen herzustellen oder auch Nachrichten zu fälschen                                                                                                                                           |
-| Brute Force Angriff                             | es wird versucht die Schlüsselraum durch systematisches Raten zu erschöpfen und eine semantisch plausible Nachricht zu finden                                                                                                                                                                                                                                   |
+| Begriff                                                          | Bedeutung                                                                                                                                                                                                                          |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Klartextnachricht $m \in \mathbb{Z}_{n}$ <br>$m$ für **m**essage | die unverschlüsselte, für jedermann lesbare Nachricht                                                                                                                                                                              |
+| Verschlüsselte Nachricht $c \in \mathbb{Z}_{n}$ <br>$c$ für **c**hiphre                 | die verschlüsselte Nachricht, die nur mittels eines Schlüssels in einen lesbare Klartextnachricht wieder überführt werden kann. Die Symbolik entspringt aus der englischen Sprache, wo der Begriff unter _Ciphertext_ bekannt ist. |
+| Verschlüsselung $\text{Enc}(m)=c$                                | der Algorithmus, der aus einer Klartextnachricht eine verschlüsselte Nachricht erstellt.                                                                                                                                           |
+| Entschlüsselung $\text{Dec}(c)=m$                                | der Algorithmus, der aus einer verschlüsselten Nachricht die originale Klartextnachricht mithilfe eines Schlüssels wieder herstellen kann                                                                                          |
+| Kryptographischer Algorithmus (Cipher)                           | mathematische Funktion, welche für Ver- und Entschlüsselung verwendet wird. In der Regel gibt es jeweils eine Funktion für Ver- und Entschlüsselung.                                                                               |
+| Kryptographisches Protokoll                                      | Anweisungsabfolge, der für zwei oder mehrere Teilnehmer den Zweck eines geheimen Austauschs von Informationen dient                                                                                                                |
+| Angriff                                                          | der Versuch eine verborgene Informationen herzustellen oder auch Nachrichten zu fälschen                                                                                                                                           |
+| Brute Force Angriff                                              | es wird versucht die Schlüsselraum durch systematisches Raten zu erschöpfen und eine semantisch plausible Nachricht zu finden                                                                                                      |
