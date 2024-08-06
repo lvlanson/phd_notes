@@ -186,11 +186,11 @@
 >>weil
 >>$$\frac{10}{3} = 3 \;(\text{Rest }1)$$
 >>da
->>$$3 \cdot 3 + 1 = 10$$
+>>$$3 \cdot 3 + 1 = 10 \tag*{$\blacktriangleleft$}$$
 
 ^9cd06c
 
->[!theorem] Satz Existenz und Eindeutigkeit des Quotienten und Rests
+>[!theorem] Satz Existenz und Eindeutigkeit des Quotienten und Rests ([[../../PDFs/judson2022.pdf#page=32|Quelle]])
 >Seien $a,b \in \mathbb{Z}$ mit $b \neq 0$. Dann gibt es eindeutig bestimmte Zahlen $q,r \in \mathbb{Z}$ mit
 >$$\begin{align}
 > a &= qb + r \\
@@ -265,10 +265,15 @@
 >>$$\lvert r-r' \rvert \leq \underset{}{\text{max}}(r,r') < \lvert b \rvert \; $$
 >>Da die Differenz von $r,r'$ in ihrem Betrag kleiner als der Betrag von $b$ ist, kann unmöglich das Produkt $(q'-q)b$ diese Differenz ergeben, außer $r=r'=0$. Da außerdem $b\neq 0$ gilt, muss demzufolge $q'-q=0 \Leftrightarrow q'=q$ ergeben, sodass es keine zwei Elemente $q',r' \in \mathbb{Z}$ geben kann. $$\tag*{$\square$}$$
 
+^30b120
+
 
 >[!def] Definition Kongruenz-Äquivalenzrelation über den ganzen Zahlen
->Wir definieren die **Kongruenz-Äquivalenzrelation** über den ganzen Zahlen $a,b \in \mathbb{Z}$  kongruent zum **Modul** $n$ mit
->$$a \equiv b \;\;(\text{mod }n) \iff n \;|\; (a-b)$$
+>Wir definieren die **Kongruenz-Äquivalenzrelation** über den ganzen Zahlen $a,b \in \mathbb{Z}$  kongruent zum **Modul** $n \in \mathbb{Z}$ mit
+>$$\begin{align}
+> a \equiv b \;\;(\text{mod }n) &\iff a \text{ mod } n = b \text{ mod } n \\
+> a \equiv b \;\;(\text{mod }n) &\iff n \;|\; (a-b) \\
+>\end{align}$$
 >und $0\leq r< \lvert n \rvert$
 >
 >
@@ -289,6 +294,19 @@
 >> \frac{a-b}{n} &= q_{1}-q_{2}
 >>\end{alignat}$$
 >>Da $q_{1},q_{2}$ beides ganze Zahlen sind, muss demnach der Quotient $\frac{a-b}{n}$ auch eine ganze Zahl sein. Daher muss, wenn $a \equiv b \;\;(\text{mod } n)$ gilt, auch $n \; |\; a-b$ gelten.
+>
+>>[!remark]- Bemerkung zur Verbindung zur binären Modulo Operation
+>>Wir können die Kongruenz auch über den binären Modulo Operator ausdrücken, also
+>>$$a \equiv b \;\;(\text{mod } n) \iff a \text{ mod } n = b \text{ mod } n$$ 
+>
+>>[!remark]- Bemerkung zur verkürzten Notation
+>>Fortan ist zu
+>>$$a \equiv b \;\;(\text{mod } n)$$
+>>eine gültige alternative Notation
+>>$$a = b \;\;(\text{mod } n)$$
+>>wobei die zuerst eingeführte Notation die präzise Notation ist.
+>>
+>>>[!failure] Achtung $a = b \;\;(\text{mod } n)$ ist nicht dasselbe wie $a = b \;\;\text{mod } n$ !
 >
 >>[!example]- Beispiel
 >>Wir wählen das Modul $n=10$ und die ganzen Zahlen $a=8$ und $b=78$. Wir können sagen
@@ -336,13 +354,8 @@
 >
 >In Worten ausgedrückt können wir sagen, dass wir mit den Resten über Summen und Produkten bei gleichem Modul $n$ rechnen dürfen. Die Summe zweier Rester über $a,b$ ist demnach kongruent zu dem Rest der Summe $a+b$. Analog gilt selbiges für das Produkt. Dies wird auch **Restklassenarithmetik**  genannt.
 >
-> ***Diese Eigenschaft ist fundamental für die Verschlüsselungsalgorithmen und der Funktionsweisen, die über Restklassenringe bzw. Restklassenkörper aufgebaut werden.***
->>[!remark] Bemerkung zur Notation
->>Fortan ist zu
->>$$a \equiv b \;\;(\text{mod } n)$$
->>eine gültige alternative Notation
->>$$a = b \;\;(\text{mod } n)$$
->>wobei die zuerst eingeführte Notation die präzise Notation ist.
+> ***Diese Eigenschaft ist fundamental für die Verschlüsselungsalgorithmen und deren Funktionsweisen, die über Restklassenringe bzw. Restklassenkörper aufgebaut werden.***
+
 
 >[!property] Eigenschaften der Operationen of $\mathbb{Z}_{n}$
 >1. Die [[#^c5cc22|Operation]] $+ : \mathbb{Z}_{n} \times \mathbb{Z}_{n} \to \mathbb{Z}_{n}$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}$ gilt:
@@ -357,41 +370,16 @@
  $\cdot$ bildet eine [[#^afad91|kommutative Gruppe]] $(\mathbb{Z}_{n}\setminus \{ 0 \})$, wenn $n$ eine Primzahl ist
 >	- ... das heißt das inverse Element existiert hier für jedes beliebige Element in $\mathbb{Z}_{n}$
 
-## 2.3 Zahlentheoretische Grundlagen
-
->[!def] Definition Primzahl ([[../../PDFs/judson2022.pdf#page=22|Quelle]])
->Sei $p \in \mathbb{Z}^+$ (positive Ganzzahl). Wir nennen $p$ eine **Primzahl**, wenn die einzigen Zahlen, die $p$ ganzzahlig teilen, $p$ selbst und $1$ sind. 
-
->[!theorem] Satz Die Existenz von Unendlich vielen Primzahlen (Euklid) ([[../../PDFs/judson2022.pdf#page=22|Quelle]])
->Es existieren unendlich viel Primzahlen
->>[!proof]- Beweis
->> Wir nutzen für den Beweis das **Widerspruchsverfahren**. Dazu nehmen wir an, dass es nur endlich viele Primzahlen gibt, also die Menge der Primzahlen kann angegeben werden mit
->> $$\mathbb{P} = \{ p_{1}, p_{2}, \dots, p_{n} \}$$
->> Wir geben nun die Zahl $P$ an mit
->> $$P = p_{1} \cdot p_{2} \cdot \dots \cdot p_{n} + 1$$
->> Es gibt nun zwei Möglichkeiten über die Beschaffenheit von $P$. Zum einen kann $P$ selbst eine Primzahl sein, was allerdings ein Widerspruch zu unserer Annahme wäre, dass $\mathbb{P}$ eine vollständige Liste aller Primzahlen wäre.
->> 
->> Die andere Möglichkeit ist, dass $P$ eine durch Primzahlen faktorisierte Zahl ist. Also muss es eine Primzahl $p_{i} \in \mathbb{P}$ geben, die $P$ teilt. Wir nehmen an, $p_{i}$ teilt ganzzahlig $P$, also
->> $$\begin{align}
->> \frac{P}{p_{i}} &= \frac{p_{1} \cdot p_{2} \cdot \dots \cdot p_{n} + 1}{p_{i}} \\
->> &= \frac{P}{p_{i}} = \underbrace{ \frac{p_{1} \cdot p_{2} \cdot \dots \cdot p_{n} }{p_{i}} }_{ \in \mathbb{Z}^+} + \underbrace{ \frac{1}{p_{i}} }_{ \not\in\mathbb{Z} }
->>\end{align}$$
->>Da $\frac{1}{p_{i}}$ keine ganze Zahl sein kann, haben wir auch für diesen Fall einen Widerspruch. Somit muss es unendlich viele Primzahlen geben, da es nicht endlich viele geben kann
->>$$\tag*{$\square$}$$
-
->[!theorem] Satz Fundamentalsatz der Arithmetik ([[../../PDFs/judson2022.pdf#page=22|Quelle]])
->Sei $n \in \mathbb{Z}$ mit $n>1$. Dann lässt sich $n$ _eindeutig_ in seine Primfaktoren
->$$n = p_{1} \cdot p_{2} \dots p_{k}$$
->zerlegen, wobei die $p_{i}$ mit $1\leq i\leq k$ nicht notwendigerweise unterschiedlich sein müssen.
->>[!proof] Beweis wird ausgelassen. Kann in der genannten Quelle nachgeschlagen werden.
+---
 
 >[!example] Übungen
 >>[!example] Übung (1)
->> Gegeben ist die Gruppe für $\mathbb{Z}_{8}$. Bestimmen Sie folgende Ausdrücke
+>> Gegeben ist die Gruppe $\mathbb{Z}_{8}$. Bestimmen Sie folgende Ausdrücke
 >> $$\begin{align}
 >> &(a)\; 6+7 \\
 >> &(b) \; 2^{-1}
 >>\end{align}$$
+>>in $\mathbb{Z}_{8}$.
 >
 >>[!example] Übung (2)
 >>Finden Sie alle $x \in \mathbb{Z}$, sodass
@@ -424,3 +412,247 @@
 >
 >>[!example] Übung (3)
 >>Zeigen Sie die Gültigkeit (Beweis) für die [[#^6a2086|Eigenschaften ganzzahliger Teilung]] (1) und (3) basierend auf der [[#^9380e8|Definition ganzzahliger Teilung]].
+
+---
+### Wichtiger Einschub: Beweisverfahren
+>[!def] Prinzip Vollständige Induktion ([[../../PDFs/judson2022.pdf#page=29|Quelle]])
+>Sei $S(n)$ eine Aussage über den ganzen Zahlen symbolisiert mit $n \in \mathbb{N}$ und angenommen $S(n_{0})$ ist wahr für eine kleinstes $n_{0} \in \mathbb{N}$. Wenn für alle Zahlen $k \in \mathbb{N}$ mit $k\geq n_{0}$ folgt
+>$$S(k)\implies S(k+1)$$ 
+>dann ist $S(n)$ wahr für alle $n \in \mathbb{N}$ mit $n \geq n_{0}$.
+>
+>>[!example]- Beispiel Beweisen Sie folgende Identität: $\sum_{k=1}^n k = \frac{n(n+1)}{2}\;:\forall n\in\mathbb{N}$ (Gauß'sche Summenformel)
+>>>[!info]- Info: Einordnung und Einleitung
+>>> Dieses Beispiel soll möglichst umfangreich sein, um die grundlegende Logik hinter dieser Art Beweis zu demonstrieren. Zunächst erkennen wir, dass unsere Aussage besagt, dass wenn wir alle Zahlen beginnend von $1$ bis $n$ aufsummieren, dass dies gleich $\frac{n(n+1)}{2}$ sein soll. Dies soll laut der Aussage für jede beliebige [[#^f52c1d|natürliche Zahl]] gelten. Daher bietet sich hier das Beweisschema der **vollständigen Induktion** an. 
+>>> 
+>>> Gemäß der Beschreibung oben beginnt der Beweis mit dem Induktionsanfang. Wir müssen zunächst ein korrektes $n_{0}$ festlegen, welches die kleinst-mögliche natürliche Zahl ist, die uns durch die Behauptung angeboten wird. Da die Aussage für alle $n \in \mathbb{N}$ gilt, ist es gemäß unserer [[#^f52c1d|Definition der natürlichen Zahlen]] $$n=1$$ 
+>>> 
+>>> Daher prüfen wir im **Induktionsanfang**, welcher **immer** durchgeführt werden muss, ob die Behauptung überhaupt Stand hält. Wenn dies nicht der Fall ist, so ist an dieser Stelle bereits der Beweis abgeschlossen und ein Widerspruch konnte festgestellt werden.
+>>> 
+>>> Für eine Identitätsaussage prüfen wir ob die linke Seite (left-hand side LHS) dasselbe Ergebnis erzeugt wie die rechte Seite (right-hand side RHS)
+>>
+>><u> Induktionsanfang</u>:
+>>$$n_{0}=1$$
+>>
+>>LHS:
+>>$$\begin{align}
+>>\sum_{k=1}^n \overset{n=1}{=}\sum_{k=1}^1 = 1
+>>\end{align}$$
+>>RHS:
+>>$$\begin{align}
+>> \frac{n(n+1)}{2}\overset{n=1}{=} \frac{1(1+1)}{2} = \frac{2}{2}=1
+>>\end{align}$$
+>> Demzufolge LHS = RHS $$\tag*{$\checkmark$}$$
+>> 
+>> ---
+>> 
+>>>[!info]- Info: Weiterführende Logik
+>>> Häufig wird der kommende Teil weggelassen. Zum Zweck des besseren Verständnisses wird die **Induktionsbehauptung** trotzdem hier eingeführt. Die Induktionsbehauptung ist die **Prämisse** für unseren **Induktionsschluss**. Das Prinzip besagt
+>>> $$\underbrace{ \underbrace{ S(k) }_{ \text{Prämisse} } \implies \underbrace{ S(k+1) }_{ \text{Implikation} } }_{ \text{Induktionsschluss} }$$
+>>> Demnach tut es keinen Schaden formal vollständig die Prämisse nochmal aufzuführen, um strategisch die Verbindung von der Prämisse zur Implikation darzustellen. In der Literatur findet man auch, dass an dieser Stelle die Laufvariable für eine bessere Separation von Behauptung zu Beweis ausgetauscht wird. Wir verzichten auf diese Praxis.
+>>
+>> <u> Induktionsbehauptung</u>: $S(n)$
+>> $\forall n \in \mathbb{N}$:
+>> $$\sum_{k=1}^n k = \frac{n(n+1)}{2}$$
+>> 
+>> ---
+>> 
+>>> [!info]- Info: Beweisvorbereitung
+>>> Nun kommt der wohl wichtigste Teil der vollständigen Induktion. Wir versuchen nun die Brücke zwischen einem willkürlichen $n>n_{0}$ und einem direkten Nachfolger $n+1$ zu knüpfen. Wir wollen zeigen, dass wenn die Aussage für $n$ gilt, was wir zuvor auch behauptet haben, folgen muss, dass die Aussage auch für $n+1$ gilt. 
+>>> 
+>>> Häufig ist der Trick die $n+1$-Aussage so umzuformen, dass man einen Teil von unserer **Induktionsbehauptung** wieder findet, sodass wir die Aussage vollständig beweisen können. Für diesen Beweis setzen wir einfach für jedes $n$ ein $n+1$ ein.
+>> 
+>><u> Induktionsschritt</u>: $S(n+1)$
+>>$n \mapsto n+1:\forall n \in \mathbb{N}$:
+>> $$\sum_{k=1}^{n+1} k = \frac{(n+1)(n+2)}{2}$$
+>>  ---
+>> 
+>>>[!info]-
+>>>Wie bereits angekündigt versuchen wir jetzt die Brücke zwischen der **Induktionsbehauptung** und dem **Induktionsschritt** zu schlagen. Erinnert euch, eine Implikation hat folgende Wahrheitstafel <center>(0 - falsch, 1 - wahr)</center>
+>>>$$\begin{align}
+>>> \begin{matrix}
+>>> A & B & A\implies B \\
+>>> 0 & 0 & 1 \\
+>>> 0 & 1 & 1 \\
+>>> 1 & 0 & 0 \\
+>>> 1 & 1 & 1
+>>>\end{matrix}
+>>>\end{align}$$
+>>>Zur Erinnerung, wir wollen zeigen $$S(n) \implies S(n+1)$$
+>>>Das heißt, wenn wir davon ausgehen, dass $S(n)$ wahr ist, und die Aussage dafür verwenden zu zeigen, dass $S(n+1)$ schlüssig ist, dann ist die Aussage wahr. Denn die einzige Möglichkeit, dass die Aussage falsch wird, ist wenn wir $S(n)$ wahr annehmen und daraus die Gültigkeit von $S(n+1)$ nicht darlegbar ist.
+>>>
+>>>Wir formen nun $S(n+1)$ so um, dass wir $S(n)$ verwenden können. 
+>>
+>> <u>Induktionsschluss</u>:
+>> $$\begin{align}
+>> \underbrace{ \sum_{k=1}^{n+1} k }_{ S(n+1) } &= \underbrace{ \sum_{k=1}^{n} k }_{  S(n)} + (n+1)
+>>\end{align}$$
+>>Wir setzen die entsprechende Identität von der Induktionsbehauptung $S(n)$ ein
+>>$$\begin{align}
+>> \phantom{\sum_{k=1}^{n+1} k }\quad\;\;\;\;&= \underbrace{ \frac{n(n+1)}{2} }_{ S(n) } + (n+1)
+>>\end{align}$$
+>>Mit algebraischen Umformungen erhalten wir
+>>$$\begin{align}
+>>\phantom{\sum_{k=1}^{n+1} k }\quad\;\;\;\; &= \frac{n(n+1)}{2} + \frac{2(n+1)}{2} \\
+>> &=\frac{n(n+1) + 2(n+1)}{2} \tag{Ausklammern}\\
+>> &= \frac{(n+2)(n+1)}{2}
+>>\end{align}$$
+>>Nun haben wir gezeigt, dass wir von der linken Seite unseres Induktionsschrittes über die Induktionsbehauptung auf die rechte Seite schließen können und somit ist die Identität bewiesen.
+>>$$\tag*{$\square$}$$
+>
+>>[!example]- Beispiel Beweisen Sie folgende Aussage: $9\;|\;(10^{n+1}+3 \cdot 10^n +5) \; : \;\forall n \in \mathbb{N}$
+>>Wir werden diese Aussage ebenfalls mit vollständiger Induktion beweisen, allerdings verzichten wir hier auf den Umfang wie im vorangegangen Beispiel. Die Aussage besagt, dass jede Zahl $10^{n+1}+3 \cdot 10^n +5$ durch $9$ teilbar ist für jedes beliebige $n \in \mathbb{N}$. Der Induktionsanfang ist somit
+>>$$n_{0}=1: \quad 10^2+3\cdot 10^1 + 5 = 135 = 9 \cdot 15 \implies 9  \;|\;135 \tag*{$\checkmark$}$$
+>>Wir gehen nun davon aus, dass unsere Hauptaussage (**Induktionsbehauptung**) wahr ist und formulieren den **Induktionsschritt** mit $n \mapsto n+1$
+>>$$10^{(n+1)+1}+3 \cdot 10^{n+1}+5 = 10^{n+2}+3 \cdot 10^{n+1}+5$$
+>>Wie im Beispiel zuvor versuchen wir im **Induktionsschritt** über die **Induktionsbehauptung** die Aussage zu beweisen.
+>>$$\begin{align}
+>> 10^{n+2}+3 \cdot 10^{n+1}+5 &= 10^{n+2}+3 \cdot 10^{n+1}+ \underbrace{ 50-45 }_{ =5 } \\
+>> &= 10 \underbrace{ (10^{n+1}+3\cdot 10^{n}+5) }_{ \text{durch } 9 \text{ teilbar} } -45
+>>\end{align}$$
+>>Nach der dritten [[#^6a2086|Eigenschaft der ganzzahligen Teilung]] gilt $9 \;|\; S(n) \implies 9 \;|\; 10 \cdot S(n)$. Offensichtlich ist $9 \;|\; 45$. Nach dem [[#^a40b0b| Satz der Teilbarkeit von Differenzen und Summen]] muss demzufolge $$9 \;|\;10(10^{n+1}+3\cdot 10^{n}+5) - 45$$
+>>was die behauptete Aussage beweist. $$\tag*{$\square$}$$
+>
+>>[!example]- Beispiel Zeigen Sie, dass folgende Relation gilt: $2^n > n+4$ für $n \geq 3$
+>> Der **Induktionsanfang** gilt für das kleinst mögliche Element, also $n_{0}=3$. Wir haben
+>> $$\underbrace{ 2^3 = 8 }_{ \text{LHS} } > \underbrace{ 7 = 3+4 }_{ \text{RHS} } \tag*{$\checkmark$}$$
+>> Der **Induktionsschritt** lautet mit $n \mapsto n+1$
+>> $$2^{n+1}>n+5$$
+>> Wir verwenden dazu die **Induktionsbehauptung**
+>> $$\begin{align}
+>> \underbrace{ 2^{n+1} }_{ S(n+1) } &=2 \cdot \underbrace{ 2^n }_{ S(n) } > 2\cdot\underbrace{ (n+4) }_{ S(n) } =2n+8>\underbrace{ n+5 }_{ S(n+1) }
+>>\end{align}$$
+>>Wichtig ist in dieser Kette von Aussagen zu erkennen, dass
+>>$$2n+8>n+5$$
+>>für jedes $n \in \mathbb{N}$ wahr ist, und somit die Relation bewiesen ist. $$\tag*{$\square$}$$
+>
+>>[!example] Übungen
+>>**Teilbarkeitsaussagen**
+>>>[!example] Übung: Zeigen Sie, dass $6 \;|\; 3^n-3 \;:\; \forall n \in \mathbb{N}$
+>>
+>>>[!example] Übung: Zeigen Sie, dass $3\;|\;4n^3 - n\;:\; \forall n \in \mathbb{N}$
+>>
+>>>[!example] Übung: Zeigen Sie, dass $6 \;|\; n^3+5n \;:\; \forall n \in \mathbb{N}$
+>>
+>>**Summenaussagen**
+>>>[!example] Übung: Zeigen Sie, dass $\sum_{k=1}^n k^2 = \frac{n \cdot(n+1) \cdot(2n+1)}{6} \;:\; \forall n \in \mathbb{N}$
+>>
+>>>[!example] Übung: Zeigen Sie, dass $\sum_{k=1}^n (2k-1) =n^2 \; :\; \forall n\in\mathbb{N}$
+>>
+>>>[!example] Übung: Zeigen Sie, dass $\sum_{k=0}^n 2^k = 2^{n+1}-1\;:\; \forall n\in\mathbb{N}$
+
+---
+
+## 2.3 Zahlentheoretische Grundlagen
+
+>[!def] Definition Größter Gemeinsamer Teiler ($\text{ggT}$)
+>Seien $a,b \in \mathbb{Z}$ mit $a$ oder $b$ ungleich $0$, dann ist der **größte gemeinsame Teiler** von $a,b$ definiert mit
+>$$\text{ggT}(a,b):=\underset{}{\text{max}}\;\{ n \in \mathbb{N} \; | \; n \text{ ist Teiler von } a \text{ und } b\}$$
+>Die Zahlen $a,b$ heißen **teilerfremd**, falls
+>$$\text{ggT}(a,b)=1$$
+>
+>>[!example] Beispiele
+>>1. $\text{ggT}(6,9)=\text{ggT}(-6,9)=\text{ggT}(6,-9)=\text{ggT}(-6,-9)=3$
+>>2. Seien $a,b \in \mathbb{Z}$ mit $a \;|\; b$, dann ist $\text{ggT}(a,b)=\lvert a \rvert$
+>>3. Für alle $a \in \mathbb{Z}$ gilt $\text{ggT}(a,0)=\text{ggT}(0,a)=\lvert a \rvert$
+
+^2a19a0
+
+>[!theorem] Satz Euklidischer Algorithmus
+>Seien $a,b \in \mathbb{Z}$ mit $b \neq 0$, dann gilt
+>$$\text{ggT}(a,b) = \text{ggT}(b, a \text{ mod }b)$$
+>>[!example]- Beispiel $\text{ggT}(75,70)$
+>>$$\begin{align}
+>> \text{ggT}(75, 70)&= \text{ggT}(70, 75 \text{ mod } 70) \\
+>> &= \text{ggT}(70, 5) \\
+>> &= \text{ggT}(5, 70 \text{ mod } 5) \\
+>> &= \text{ggT}(5, 0) \\
+>> &= 5 \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>>[!example]- Beispiel $\text{ggT}(111,43)$
+>>$$\begin{align}
+>> \text{ggT}(111,43) &= \text{ggT}(43, 111 \text{ mod } 43) \\
+>> &= \text{ggT}(43, 25) \\
+>> &= \text{ggT}(25, 43 \text{ mod } 25) \\
+>> &= \text{ggT}(25, 18) \\
+>> &= \text{ggT}(18, 25 \text{ mod } 18) \\
+>> &= \text{ggT}(18, 7) \\
+>> &= \text{ggT}(7, 18 \text{ mod } 7) \\
+>> &= \text{ggT}(7, 3) \\
+>> &= \text{ggT}(3, 7 \text{ mod } 3) \\
+>> &= \text{ggT}(3, 1) \\
+>> &= \text{ggT}(1, 3 \text{ mod } 1) \\
+>> &= \text{ggT}(1, 0) \\
+>> &= 1 \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>>[!proof]- Beweis
+>> Nach dem [[#^30b120| Satz der Existenz des Quotienten und Rests]] wissen wir $\exists q \in \mathbb{Z}:$
+>> $$a = qb+r \text{ mit } 0 \leq r < \lvert b \rvert $$
+>> Daher lässt sich der Rest $r$ ausdrücken mit
+>> $$r=a-qb$$
+>> oder auch
+>> $$r=a \text{ mod } b$$
+>> daher
+>> $$a \text{ mod } b = a -qb$$
+>> Damit lässt sich die rechte Seite der Identität ausdrücken mit
+>> $$\text{ggT}(b, a \text{ mod } b) = \text{ggT}(b, a-qb)$$
+>> Daher können wir die Behauptung umformulieren als
+>> $$\text{ggT}(a,b)= \text{ggT}(b, \underbrace{ a-qb }_{ =a \text{ mod }b })$$
+>> Für $\text{ggT}(a,b)$ erwarten wir den größten Teiler $n \in \mathbb{N}$ zu finden, sodass $n \;|\; a$ und $n \;|\; b$ ([[#^2a19a0|Definition ggT]]). Nach unserer Umformulierung der Identität muss auch $n \;|\; a-qb$ gelten. Wir können aus der linken Seite der Identität $\text{ggT}(a,b)$ folgern 
+>> $$n \;|\; a \land n \;|\; b \underbrace{ \implies }_{ (1) } n \;|\; qb \underbrace{ \implies }_{ (2) } n \;|\; a-qb$$
+>> Die Folgerung $(1)$ entspringt der [[#^6a2086|dritten Eigenschaft der Teilung ganzer Zahlen]]. Die Folgerung $(2)$ basiert auf dem [[#^a40b0b| Satz über der Teilbarkeit von Summen und Differenzen]]. Aus diesen Folgerungen können wir zeigen, dass die Identität herstellbar ist
+>> $$\begin{align}
+>> &n \;|\; b \land n \;|\;a- qb \implies n \;|\; qb \\
+>> \implies&(a-qb)+qb = a \tag*{$\square$}
+>>\end{align}$$
+>
+>>[!algo]- Implementation in Python
+>>```python
+>>def ggT(a,b):
+>>	if b==0:
+>>		return abs(a)
+>>	else:
+>>		return ggT(b, a%b)
+>>```
+
+
+>[!theorem] Satz Lemma von Bezout ([[../../PDFs/judson2022.pdf#page=32|Quelle]])
+>Seien $a,b \in \mathbb{Z}$ mit $a,b \neq 0$, dann existieren $a',b' \in \mathbb{Z}$, sodass
+>$$\text{ggT}(a,b)=aa'+bb'$$
+>
+>>[!example] Beispiel $a=8, b=5$
+>>Schauen wir auf das Beispiel, so suchen wir für $a=8$ und $b=5$ zwei ganze Zahlen $a',b' \in \mathbb{Z}$, sodass
+>>$$\text{ggT}(8,5)=8a'+5b'$$
+>>Wir haben $$\text{ggT}(8,5)=1$$
+>>also suchen wir  $a',b' \in \mathbb{Z}$, sodass
+>>$$1 = 8a'+5b'$$
+>>Durch Probieren lässt sich dieser Fall noch lösen, was aber keine zuverlässige Methode ist. Wir finden $a'=2$ und $b'=-3$ und erhalten
+>>$$8 \cdot 2+5 \cdot (-3)=1 \tag*{$\blacktriangleleft$}$$
+
+>[!def] Definition Primzahl ([[../../PDFs/judson2022.pdf#page=22|Quelle]])
+>Sei $p \in \mathbb{N}$ mit $p > 1$. Wir nennen $p$ eine **Primzahl**, wenn die einzigen Zahlen, die $p$ ganzzahlig teilen, $p$ selbst und $1$ sind. 
+
+>[!theorem] Satz Die Existenz von Unendlich vielen Primzahlen (Euklid) ([[../../PDFs/judson2022.pdf#page=22|Quelle]])
+>Es existieren unendlich viel Primzahlen
+>>[!proof]- Beweis
+>> Wir nutzen für den Beweis das **Widerspruchsverfahren**. Dazu nehmen wir an, dass es nur endlich viele Primzahlen gibt, also die Menge der endlich vielen Primzahlen kann angegeben werden mit
+>> $$\mathbb{P} = \{ p_{1}, p_{2}, \ldots, p_{n} \}$$
+>> Wir geben nun die Zahl $P$ an mit
+>> $$P = p_{1} \cdot p_{2} \cdot \ldots \cdot p_{n} + 1$$
+>> Es gibt nun zwei Möglichkeiten über die Beschaffenheit von $P$. Zum einen kann $P$ selbst eine Primzahl sein, was allerdings ein Widerspruch zu unserer Annahme wäre, dass $\mathbb{P}$ eine vollständige Liste aller Primzahlen wäre.
+>> 
+>> Die andere Möglichkeit ist, dass $P$ eine durch Primzahlen faktorisierte Zahl ist. Also muss es eine Primzahl $p_{i} \in \mathbb{P}$ geben, die $P$ teilt. Wir nehmen an, $p_{i}$ teilt ganzzahlig $P$, also
+>> $$\begin{align}
+>> \frac{P}{p_{i}} &= \frac{p_{1} \cdot p_{2} \cdot \dots \cdot p_{n} + 1}{p_{i}} \\
+>> &= \frac{P}{p_{i}} = \underbrace{ \frac{p_{1} \cdot p_{2} \cdot \ldots \cdot p_{n} }{p_{i}} }_{ \in \mathbb{Z}^+} + \underbrace{ \frac{1}{p_{i}} }_{ \not\in\mathbb{Z} }
+>>\end{align}$$
+>>Da $\frac{1}{p_{i}}$ keine ganze Zahl sein kann, haben wir auch für diesen Fall einen Widerspruch. Somit muss es unendlich viele Primzahlen geben, da es nicht endlich viele geben kann
+>>$$\tag*{$\square$}$$
+
+>[!theorem] Satz Fundamentalsatz der Arithmetik ([[../../PDFs/judson2022.pdf#page=22|Quelle]])
+>Sei $n \in \mathbb{Z}$ mit $n>1$. Dann lässt sich $n$ _eindeutig_ in seine Primfaktoren
+>$$n = p_{1} \cdot p_{2} \cdot \ldots \cdot p_{k}$$
+>zerlegen, wobei die $p_{i}$ mit $1\leq i\leq k$ nicht notwendigerweise unterschiedlich sein müssen.
+>>[!proof] Beweis wird ausgelassen. Kann in der genannten Quelle nachgeschlagen werden.
+
