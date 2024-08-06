@@ -422,13 +422,13 @@
 >
 >>[!example]- Beispiel Beweisen Sie folgende Identität: $\sum_{k=1}^n k = \frac{n(n+1)}{2}\;:\forall n\in\mathbb{N}$ (Gauß'sche Summenformel)
 >>>[!info]- Info: Einordnung und Einleitung
->>> Dieses Beispiel soll möglichst umfangreich sein, um die grundlegende Logik hinter dieser Art Beweis zu demonstrieren. Zunächst erkennen wir, dass unsere Aussage besagt, dass wenn wir alle Zahlen beginnend von $1$ bis $n$ aufsummieren, dass dies gleich $\frac{n(n+1)}{2}$ sein soll. Dies soll laut der Aussage für jede beliebige [[#^f52c1d|natürliche Zahl]] gelten. Daher bietet sich hier das Beweisschema der **vollständigen Induktion** an. 
+>>> Dieses Beispiel soll möglichst umfangreich sein, um die grundlegende Logik hinter dieser Art Beweis zu demonstrieren. Zunächst erkennen wir, dass unsere Aussage besagt, dass wenn wir alle Zahlen beginnend von $1$ bis $n$ aufsummieren, dass dies gleich $\frac{n(n+1)}{2}$ sein soll. Dies soll laut der Aussage für jede beliebige [[#^f52c1d|natürliche Zahl]] $n$ gelten. Daher bietet sich hier das Beweisschema der **vollständigen Induktion** an. 
 >>> 
->>> Gemäß der Beschreibung oben beginnt der Beweis mit dem Induktionsanfang. Wir müssen zunächst ein korrektes $n_{0}$ festlegen, welches die kleinst-mögliche natürliche Zahl ist, die uns durch die Behauptung angeboten wird. Da die Aussage für alle $n \in \mathbb{N}$ gilt, ist es gemäß unserer [[#^f52c1d|Definition der natürlichen Zahlen]] $$n=1$$ 
+>>> Gemäß der Beschreibung oben beginnt der Beweis mit dem Induktionsanfang. Wir müssen zunächst ein korrektes $n_{0}$ festlegen, welches die kleinst-mögliche natürliche Zahl ist, die uns durch die Behauptung angeboten wird. Da die Aussage für alle $n \in \mathbb{N}$ gilt, ist es gemäß unserer [[#^f52c1d|Definition der natürlichen Zahlen]] $$n_{0}=1$$ 
 >>> 
->>> Daher prüfen wir im **Induktionsanfang**, welcher **immer** durchgeführt werden muss, ob die Behauptung überhaupt Stand hält. Wenn dies nicht der Fall ist, so ist an dieser Stelle bereits der Beweis abgeschlossen und ein Widerspruch konnte festgestellt werden.
+>>> Daher prüfen wir im **Induktionsanfang**, welcher **immer** durchgeführt werden muss, ob die Behauptung für das kleinste Element $n_{0}$ überhaupt Stand hält. Wenn dies nicht der Fall ist, so ist an dieser Stelle bereits der Beweis abgeschlossen und ein Widerspruch konnte festgestellt werden.
 >>> 
->>> Für eine Identitätsaussage prüfen wir ob die linke Seite (left-hand side LHS) dasselbe Ergebnis erzeugt wie die rechte Seite (right-hand side RHS)
+>>> Für eine Identitätsaussage prüfen wir ob die linke Seite (left-hand side *LHS*) dasselbe Ergebnis erzeugt wie die rechte Seite (right-hand side *RHS*)
 >>
 >><u> Induktionsanfang</u>:
 >>$$n_{0}=1$$
@@ -448,7 +448,7 @@
 >>>[!info]- Info: Weiterführende Logik
 >>> Häufig wird der kommende Teil weggelassen. Zum Zweck des besseren Verständnisses wird die **Induktionsbehauptung** trotzdem hier eingeführt. Die Induktionsbehauptung ist die **Prämisse** für unseren **Induktionsschluss**. Das Prinzip besagt
 >>> $$\underbrace{ \underbrace{ S(k) }_{ \text{Prämisse} } \implies \underbrace{ S(k+1) }_{ \text{Implikation} } }_{ \text{Induktionsschluss} }$$
->>> Demnach tut es keinen Schaden formal vollständig die Prämisse nochmal aufzuführen, um strategisch die Verbindung von der Prämisse zur Implikation darzustellen. In der Literatur findet man auch, dass an dieser Stelle die Laufvariable für eine bessere Separation von Behauptung zu Beweis ausgetauscht wird. Wir verzichten auf diese Praxis.
+>>> Demnach tut es keinen Schaden formal vollständig die Prämisse nochmal aufzuführen, um strategisch die Verbindung von der Prämisse zur Implikation darzustellen. In der Literatur findet man auch, dass an dieser Stelle die Laufvariable $n$ für eine bessere Separation von Behauptung zu Beweis ausgetauscht wird. Wir verzichten auf diese Praxis.
 >>
 >> <u> Induktionsbehauptung</u>: $S(n)$
 >> $\forall n \in \mathbb{N}$:
@@ -457,9 +457,9 @@
 >> ---
 >> 
 >>> [!info]- Info: Beweisvorbereitung
->>> Nun kommt der wohl wichtigste Teil der vollständigen Induktion. Wir versuchen nun die Brücke zwischen einem willkürlichen $n>n_{0}$ und einem direkten Nachfolger $n+1$ zu knüpfen. Wir wollen zeigen, dass wenn die Aussage für $n$ gilt, was wir zuvor auch behauptet haben, folgen muss, dass die Aussage auch für $n+1$ gilt. 
+>>> Nun bereiten wir den Abschluss des Beweises vor, indem wir unsere Aussage für $S(n)$ so umformulieren, dass diese nun für das Folgeglied unserer Aussage $S(n+1)$ gelten muss. Dafür setzen wir weitesgehend nur an den Stellen, wo $n$ steht ein $n+1$ ein. **Achtung**, es ist besser pauschalt $(n+1)$ immer in Klammern einzusetzen, um Fehler zu vermeiden.
 >>> 
->>> Häufig ist der Trick die $n+1$-Aussage so umzuformen, dass man einen Teil von unserer **Induktionsbehauptung** wieder findet, sodass wir die Aussage vollständig beweisen können. Für diesen Beweis setzen wir einfach für jedes $n$ ein $n+1$ ein.
+>>> Dieser Teil wird der **Induktionsschritt** genannt, weil wir einen Schritt von unserer **Induktionsbehauptung** weiter gehen, also $n \mapsto n+1$.
 >> 
 >><u> Induktionsschritt</u>: $S(n+1)$
 >>$n \mapsto n+1:\forall n \in \mathbb{N}$:
@@ -467,7 +467,11 @@
 >>  ---
 >> 
 >>>[!info]-
->>>Wie bereits angekündigt versuchen wir jetzt die Brücke zwischen der **Induktionsbehauptung** und dem **Induktionsschritt** zu schlagen. Erinnert euch, eine Implikation hat folgende Wahrheitstafel <center>(0 - falsch, 1 - wahr)</center>
+>>> Nun kommt der wohl wichtigste Teil der vollständigen Induktion. Wir versuchen nun die Brücke zwischen einem willkürlichen $n>n_{0}$ und einem direkten Nachfolger $n+1$ zu knüpfen. Wir wollen zeigen, dass wenn die Aussage für $n$ gilt (**Induktionsbehauptung**) folgen muss, dass die Aussage auch für $n+1$ gilt (**Induktionsschritt**). 
+>>> 
+>>> Häufig ist der Trick die $n+1$-Aussage so umzuformen, dass man einen Teil von unserer **Induktionsbehauptung** wieder findet und diese in Verbindung mit dem **Induktionsschritt verwenden**, sodass wir die Aussage vollständig beweisen können. Insgesamt handelt es sich hier um eine Implikations, also
+>>> $$S(n) \implies S(n+1)$$ 
+>>>Erinnert euch, eine Implikation hat folgende Wahrheitstafel <center>(0 - falsch, 1 - wahr)</center>
 >>>$$\begin{align}
 >>> \begin{matrix}
 >>> A & B & A\implies B \\
@@ -477,7 +481,6 @@
 >>> 1 & 1 & 1
 >>>\end{matrix}
 >>>\end{align}$$
->>>Zur Erinnerung, wir wollen zeigen $$S(n) \implies S(n+1)$$
 >>>Das heißt, wenn wir davon ausgehen, dass $S(n)$ wahr ist, und die Aussage dafür verwenden zu zeigen, dass $S(n+1)$ schlüssig ist, dann ist die Aussage wahr. Denn die einzige Möglichkeit, dass die Aussage falsch wird, ist wenn wir $S(n)$ wahr annehmen und daraus die Gültigkeit von $S(n+1)$ nicht darlegbar ist.
 >>>
 >>>Wir formen nun $S(n+1)$ so um, dass wir $S(n)$ verwenden können. 
@@ -539,6 +542,8 @@
 >>>[!example] Übung: Zeigen Sie, dass $\sum_{k=1}^n (2k-1) =n^2 \; :\; \forall n\in\mathbb{N}$
 >>
 >>>[!example] Übung: Zeigen Sie, dass $\sum_{k=0}^n 2^k = 2^{n+1}-1\;:\; \forall n\in\mathbb{N}$
+
+^f974a9
 
 ---
 
@@ -616,12 +621,14 @@
 >>		return ggT(b, a%b)
 >>```
 
+^e21725
+
 
 >[!theorem] Satz Lemma von Bezout ([[../../PDFs/judson2022.pdf#page=32|Quelle]])
 >Seien $a,b \in \mathbb{Z}$ mit $a,b \neq 0$, dann existieren $a',b' \in \mathbb{Z}$, sodass
 >$$\text{ggT}(a,b)=aa'+bb'$$
 >
->>[!example] Beispiel $a=8, b=5$
+>>[!example]- Beispiel $a=8, b=5$
 >>Schauen wir auf das Beispiel, so suchen wir für $a=8$ und $b=5$ zwei ganze Zahlen $a',b' \in \mathbb{Z}$, sodass
 >>$$\text{ggT}(8,5)=8a'+5b'$$
 >>Wir haben $$\text{ggT}(8,5)=1$$
@@ -629,6 +636,38 @@
 >>$$1 = 8a'+5b'$$
 >>Durch Probieren lässt sich dieser Fall noch lösen, was aber keine zuverlässige Methode ist. Wir finden $a'=2$ und $b'=-3$ und erhalten
 >>$$8 \cdot 2+5 \cdot (-3)=1 \tag*{$\blacktriangleleft$}$$
+>>>[!remark] Bemerkung: $8$ und $5$ sind teilerfremd, da $\text{ggT}(8,5)=1$
+>
+>>[!proof] Beweis
+>>Für diesen Beweis verwenden wir das [[#^f974a9| Prinzip der vollständigen Induktion]]. Wir führen die vollständige Induktion für die Variable $b \in \mathbb{Z}$ aus (in den [[#^f974a9| Beispielen]] war $n$ die Laufvariable zum Beweis). Wir zeigen also für $b$, dass es zu je zwei Zahlen $a,b \in \mathbb{Z}$ ganze Zahlen $a',b'\in \mathbb{Z}$ existieren, sodass
+>>$$\text{ggT}(a,b)=aa'+bb'$$
+>>Damit wir das [[#^f974a9| Prinzip der vollständigen Induktion]] verwenden können, beschränken wir **ohne Beschränkung der Allgemeinheit (o.B.d.A.)** $b \geq 0$, sodass wir ein kleinstes Element für den Induktionsanfang wählen können. Das Vorzeichen zu beschränken, ändert nichts am Gehalt der Aussage.
+>>
+>><u>Induktionsanfang</u>:
+>>$$\begin{align}
+>> b=0\implies \text{ggT}(a,0)&= aa'+b'0 \\
+>>   \lvert a \rvert &= aa' + 0 \tag{$b \in \mathbb{Z}$}  \\
+>>   \frac{\lvert a \rvert}{a}&=a' \\
+>>   \text{sgn}(a) &= a' 
+>>\end{align}$$
+>>So erhalten wir für $a',b' \in \mathbb{Z}$ die Belegung
+>>$$\begin{align}
+>> a' &= \text{sgn}(a) \\
+>> b' &\in \mathbb{Z} \tag{$b'$ ist beliebig}
+>>\end{align}$$
+>>$$\tag*{$\checkmark$}$$
+>>
+>><u> Induktionsschritt</u>:
+>>Für den **Induktionsschritt** verwenden wir die rekursive Eigenschaft des $\text{ggT}$, also dass über die Definition fallende Werte zu erwarten sind, sodass $b=0$ erreicht ist den Algorithmus terminiert. Wir verwenden kurz die übliche Denkweise, wie als hätten wir eine konkrete Zählvariable $n$. Wir gehen nicht von $n+1$ wie üblich, sondern von $n-1$ aus, und zeigen, dass sich $a',b' \in \mathbb{Z}$ schlüssig über den Rekursionsschritt $n-1$ und unserer (**Induktions-**)**Behauptung** finden lassen. 
+>>
+>>Den Schritt rückwärts erzeugen wir über den [[#^e21725| Satz des Euklidischen Algorithmus]] dadurch, dass wir $a$ durch $a \text{ mod } b$ reduzieren, also
+>>$$\text{ggT}(a,b)= \text{ggT}(b, a\text{ mod }b)$$
+>>Wir wissen, dass $a \text{ mod } b$ den Rest $r$ darstellt, also
+>>$$r = a \text{ mod } b$$
+>>Diese Eigenschaften können wir verwenden, um die Grundaussage in unserem Rekursionsschritt auszudrücken, also von der **Induktionsbehauptung** auf unseren **Induktionsschritt** zu schließen.
+>>$$\begin{align}
+>>
+>>\end{align}$$
 
 >[!def] Definition Primzahl ([[../../PDFs/judson2022.pdf#page=22|Quelle]])
 >Sei $p \in \mathbb{N}$ mit $p > 1$. Wir nennen $p$ eine **Primzahl**, wenn die einzigen Zahlen, die $p$ ganzzahlig teilen, $p$ selbst und $1$ sind. 
