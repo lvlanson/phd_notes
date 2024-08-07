@@ -340,22 +340,35 @@
 >
 >>[!remark] Bemerkung zur Notation
 >> Statt 
->> $$\mathbb{Z}_{n} = \{ [0]_{3}, [1]_{3}, \dots, [n-1]_{3} \}$$
+>> $$\mathbb{Z}_{n} = \{ [0]_{n}, [1]_{n}, \dots, [n-1]_{n} \}$$
 >> schreiben wir fortan
 >> $$\mathbb{Z}_{n} = \{ 0,1,\dots,n-1 \}$$
  
 >[!remark] Bemerkung zur "Restklassenarithmetik"
-> Wir haben nun erfolgreich die [[#^360a7d| Kongruenz Äquivalenzrelation]] als eine [[#^afad91|algebraische Struktur]] eingeführt. Über die [[#^6a2086|Eigenschaften der ganzzahligen Teilung]] und dem [[#^a40b0b| Satz der Teilbarkeit von Summen und Differenzen]] können wir zusammenfassend sagen, dass
+> Wir haben nun erfolgreich die [[#^360a7d| Kongruenz Äquivalenzrelation]] als eine [[#^afad91|algebraische Struktur]] eingeführt. Über die [[#^6a2086|Eigenschaften der ganzzahligen Teilung]] und dem [[#^a40b0b| Satz der Teilbarkeit von Summen und Differenzen]] können wir zusammenfassend sagen, dass für $a,b \in \mathbb{Z}$
 > $$\begin{align}
-> (a \text{ mod } n) \pm (b \text{ mod } n) &\equiv (a\pm b) \text{ mod } n \;\;(\text{mod } n) \tag{1} \\
-> (a \text{ mod } n) \cdot (b \text{ mod } n) &\equiv (a\cdot b) \text{ mod } n \;\;(\text{mod } n) \tag{2}
+> \Big((a \text{ mod } n) \pm (b \text{ mod } n)\Big) \;\text{mod } n&= (a\pm b) \text{ mod } n  \tag{1} \\
+> \Big((a \text{ mod } n) \cdot (b \text{ mod } n)\Big) \;\text{mod } n&= (a\cdot b) \text{ mod } n  \tag{2}
 >\end{align}$$
->gilt. Gleichung $(1)$ entsteht aus der [[#^a40b0b| der Teilbarkeit von Summen und Differenzen]] und Gleichung $(2)$ aus der Eigenschaft $3$ in den [[#^6a2086|Eigenschaften der ganzzahligen Teilung]]. 
+>gilt. Gleichung $(1)$ entsteht aus der [[#^a40b0b| der Teilbarkeit von Summen und Differenzen]] und Gleichung $(2)$ aus der Eigenschaft $3$ in den [[#^6a2086|Eigenschaften der ganzzahligen Teilung]]. Wir können somit auch einfach mit den Restklassen rechnen. Angenommen wir haben das Modul $n$, also demnach die Gruppe $\mathbb{Z}_{n}$, dann können wir analog für Gleichung $(1)$ und $(2)$ schreiben
+>$$\begin{align}
+> [a] \oplus [b] &:= [a+ b] \tag{1} \\
+> [a] \ominus [b] &:= [a- b] \tag{1} \\
+> [a] \odot [b] &:= [a \cdot b] \tag{2}
+>\end{align}$$
 >
->In Worten ausgedrückt können wir sagen, dass wir mit den Resten über Summen und Produkten bei gleichem Modul $n$ rechnen dürfen. Die Summe zweier Rester über $a,b$ ist demnach kongruent zu dem Rest der Summe $a+b$. Analog gilt selbiges für das Produkt. Dies wird auch **Restklassenarithmetik**  genannt.
+>In Worten ausgedrückt können wir sagen, dass wir mit den Resten über Summen und Produkten bei gleichem Modul $n$ rechnen dürfen. Die Summe zweier Rester über $a,b$ ist demnach [[#^360a7d|kongruent]] zu dem Rest der Summe $a+b$. Analog gilt selbiges für das Produkt. Dies wird auch **Restklassenarithmetik**  genannt.
 >
 > ***Diese Eigenschaft ist fundamental für die Verschlüsselungsalgorithmen und deren Funktionsweisen, die über Restklassenringe bzw. Restklassenkörper aufgebaut werden.***
 
+>[!note] Werkzeug: Verknüpfungstafeln (Caley-Tables)
+> Addition und Multiplikation in $\mathbb{Z}_{5}$
+> 
+> ![[Figures/caley_tables.png|center|700]]
+>
+> Addition und Multiplikation in $\mathbb{Z}_{5}$ (vereinfachte Darstellung)
+> 
+> ![[Figures/caley_tables_easy.png|center|650]]
 
 >[!property] Eigenschaften der Operationen of $\mathbb{Z}_{n}$
 >1. Die [[#^c5cc22|Operation]] $+ : \mathbb{Z}_{n} \times \mathbb{Z}_{n} \to \mathbb{Z}_{n}$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}$ gilt:
@@ -549,6 +562,8 @@
 
 ## 2.3 Zahlentheoretische Grundlagen
 
+### 2.3.1 Größter Gemeinsamer Teiler
+
 >[!def] Definition Größter Gemeinsamer Teiler ($\text{ggT}$)
 >Seien $a,b \in \mathbb{Z}$ mit $a$ oder $b$ ungleich $0$, dann ist der **größte gemeinsame Teiler** von $a,b$ definiert mit
 >$$\text{ggT}(a,b):=\underset{}{\text{max}}\;\{ n \in \mathbb{N} \; | \; n \text{ ist Teiler von } a \text{ und } b\}$$
@@ -612,7 +627,7 @@
 >> \implies&(a-qb)+qb = a \tag*{$\square$}
 >>\end{align}$$
 >
->>[!algo]- Implementation in Python
+>>[!algo] Implementation in Python $\text{gcd}=\text{ggT}$
 >>```python
 >>def ggT(a,b):
 >>	if b==0:
@@ -638,7 +653,7 @@
 >>$$8 \cdot 2+5 \cdot (-3)=1 \tag*{$\blacktriangleleft$}$$
 >>>[!remark] Bemerkung: $8$ und $5$ sind teilerfremd, da $\text{ggT}(8,5)=1$
 >
->>[!proof] Beweis
+>>[!proof]- Beweis
 >>Für diesen Beweis verwenden wir das [[#^f974a9| Prinzip der vollständigen Induktion]]. Wir führen die vollständige Induktion für die Variable $b \in \mathbb{Z}$ aus (in den [[#^f974a9| Beispielen]] war $n$ die Laufvariable zum Beweis). Wir zeigen also für $b$, dass es zu je zwei Zahlen $a,b \in \mathbb{Z}$ ganze Zahlen $a',b'\in \mathbb{Z}$ existieren, sodass
 >>$$\text{ggT}(a,b)=aa'+bb'$$
 >>Damit wir das [[#^f974a9| Prinzip der vollständigen Induktion]] verwenden können, beschränken wir **ohne Beschränkung der Allgemeinheit (o.B.d.A.)** $b \geq 0$, sodass wir ein kleinstes Element für den Induktionsanfang wählen können. Das Vorzeichen zu beschränken, ändert nichts am Gehalt der Aussage.
@@ -658,6 +673,7 @@
 >>$$\tag*{$\checkmark$}$$
 >>
 >><u> Induktionsschritt</u>:
+>>
 >>Für den **Induktionsschritt** verwenden wir die rekursive Eigenschaft des $\text{ggT}$, also dass über die Definition fallende Werte zu erwarten sind, sodass $b=0$ erreicht ist den Algorithmus terminiert. Wir verwenden kurz die übliche Denkweise, wie als hätten wir eine konkrete Zählvariable $n$. Wir gehen nicht von $n+1$ wie üblich, sondern von $n-1$ aus, und zeigen, dass sich $a',b' \in \mathbb{Z}$ schlüssig über den Rekursionsschritt $n-1$ und unserer (**Induktions-**)**Behauptung** finden lassen. 
 >>
 >>Den Schritt rückwärts erzeugen wir über den [[#^e21725| Satz des Euklidischen Algorithmus]] dadurch, dass wir $a$ durch $a \text{ mod } b$ reduzieren, also
@@ -666,9 +682,52 @@
 >>$$r = a \text{ mod } b$$
 >>Diese Eigenschaften können wir verwenden, um die Grundaussage in unserem Rekursionsschritt auszudrücken, also von der **Induktionsbehauptung** auf unseren **Induktionsschritt** zu schließen.
 >>$$\begin{align}
->>
+>> \text{ggT}(a,b)=\text{ggT}(b, \underbrace{ a \text{ mod } b }_{ \substack{\text{Schritt}\\\text{Rückwärts}} }) = \text{ggT}(b,r)
 >>\end{align}$$
+>>Nach unserer **Induktionsbehauptung** existieren für $b,r \in \mathbb{Z}$ zwei Zahlen $b*,r* \in \mathbb{Z}$, sodass 
+>>$$\text{ggT}(b,r)= b \cdot b^* + r \cdot r^* \tag{1}$$
+>> Nach dem [[#^30b120| Satz der Existenz und Eindeutigkeit des Quotienten und Rests]] können wir $a \text{ mod } b = r$ darstellen mit
+>> $$r = a\text{ mod }b= a-qb$$
+>> Diese Erkenntnis setzen wir in Gleichung $(1)$ ein und erhalten
+>> $$\begin{align}
+>> \text{ggT}(b,r)&=b \cdot b^* + (a-qb) \cdot r^* \\
+>> &= b b^*  - qbr^*+ ar^* \\
+>> &= b\underbrace{ (b^* - qr^*) }_{ =b' } + a\underbrace{ r^* }_{ =a' }
+>>\end{align}$$
+>>Durch den Rekursionsschritt rückwärts (**Induktionsschritt**) finden wir also Lösungen für unsere **Induktionsbehauptung**, und zwar
+>>$$\begin{align}
+>> b' &= b^* - qr^* \\
+>> a' &= r^*
+>>\end{align}$$
+>>Da wir gezeigt haben, dass der [[#^e21725|Euklidische Algorithmus]] terminiert, wird demzufolge auch der induktive Prozess terminieren und die beschriebenen Lösungen produzieren.
+>>$$\tag*{$\square$}$$
+>
+>>[!algo] Implementation in Python: Erweiterter Euklidischer Algorithmus $\text{xgcd}=\text{xggT}$
+>> Der erweiterte Euklidische Algorithmus ist ein Lösungsalgorithmus für das Lemma von Bezout. Es folgt der Logik des Beweises.
+>> 
+>> ```python
+>> def sgn(x): 
+>> 	if x>0: return 1
+>> 	if x < 0: return -1
+>> 	return 0
+>> 
+>> def xggT(a,b):
+>> 	if b == 0:
+>> 		return abs(a), sgn(a), 0
+>> 	q = a//b
+>> 	r=a%b
+>> 	d, bb, rr = xggT(b,r)
+>> 	return d, rr, bb-q*rr
+>> ```
+>
+>>[!example] Beispiel $a=40902$, $b= 24140$
+>>In Sage erhalten wir
+>> $$\text{xgcd}(40902, 24140) = (\underbrace{ 34 }_{ =\text{ggT} }, \underbrace{ 337 }_{ =a' }, \underbrace{ 24140 }_{ =b' })$$
 
+^42f9e5
+
+
+## 2.3.2 Primzahlen
 >[!def] Definition Primzahl ([[../../PDFs/judson2022.pdf#page=22|Quelle]])
 >Sei $p \in \mathbb{N}$ mit $p > 1$. Wir nennen $p$ eine **Primzahl**, wenn die einzigen Zahlen, die $p$ ganzzahlig teilen, $p$ selbst und $1$ sind. 
 
@@ -677,21 +736,149 @@
 >>[!proof]- Beweis
 >> Wir nutzen für den Beweis das **Widerspruchsverfahren**. Dazu nehmen wir an, dass es nur endlich viele Primzahlen gibt, also die Menge der endlich vielen Primzahlen kann angegeben werden mit
 >> $$\mathbb{P} = \{ p_{1}, p_{2}, \ldots, p_{n} \}$$
->> Wir geben nun die Zahl $P$ an mit
->> $$P = p_{1} \cdot p_{2} \cdot \ldots \cdot p_{n} + 1$$
->> Es gibt nun zwei Möglichkeiten über die Beschaffenheit von $P$. Zum einen kann $P$ selbst eine Primzahl sein, was allerdings ein Widerspruch zu unserer Annahme wäre, dass $\mathbb{P}$ eine vollständige Liste aller Primzahlen wäre.
+>> Wir geben nun die Zahl $N$ an mit
+>> $$N = p_{1} \cdot p_{2} \cdot \ldots \cdot p_{n} + 1$$
+>> Es gibt nun zwei Möglichkeiten über die Beschaffenheit von $N$. Zum einen kann $N$ selbst eine Primzahl sein, was allerdings ein Widerspruch zu unserer Annahme wäre, dass $\mathbb{P}$ eine vollständige Liste aller Primzahlen wäre.
 >> 
->> Die andere Möglichkeit ist, dass $P$ eine durch Primzahlen faktorisierte Zahl ist. Also muss es eine Primzahl $p_{i} \in \mathbb{P}$ geben, die $P$ teilt. Wir nehmen an, $p_{i}$ teilt ganzzahlig $P$, also
+>> Die andere Möglichkeit ist, dass $N$ eine durch Primzahlen faktorisierte Zahl ist. Also muss es eine Primzahl $p_{i} \in \mathbb{P}$ geben, die $N$ teilt. Wir nehmen an, $p_{i}$ teilt ganzzahlig $P$, also
 >> $$\begin{align}
->> \frac{P}{p_{i}} &= \frac{p_{1} \cdot p_{2} \cdot \dots \cdot p_{n} + 1}{p_{i}} \\
->> &= \frac{P}{p_{i}} = \underbrace{ \frac{p_{1} \cdot p_{2} \cdot \ldots \cdot p_{n} }{p_{i}} }_{ \in \mathbb{Z}^+} + \underbrace{ \frac{1}{p_{i}} }_{ \not\in\mathbb{Z} }
+>> \frac{N}{p_{i}} &= \frac{p_{1} \cdot p_{2} \cdot \dots \cdot p_{n} + 1}{p_{i}} \\
+>> &= \frac{N}{p_{i}} = \underbrace{ \frac{p_{1} \cdot p_{2} \cdot \ldots \cdot p_{n} }{p_{i}} }_{ \in \mathbb{Z}^+} + \underbrace{ \frac{1}{p_{i}} }_{ \not\in\mathbb{Z} }
 >>\end{align}$$
 >>Da $\frac{1}{p_{i}}$ keine ganze Zahl sein kann, haben wir auch für diesen Fall einen Widerspruch. Somit muss es unendlich viele Primzahlen geben, da es nicht endlich viele geben kann
 >>$$\tag*{$\square$}$$
 
 >[!theorem] Satz Fundamentalsatz der Arithmetik ([[../../PDFs/judson2022.pdf#page=22|Quelle]])
 >Sei $n \in \mathbb{Z}$ mit $n>1$. Dann lässt sich $n$ _eindeutig_ in seine Primfaktoren
->$$n = p_{1} \cdot p_{2} \cdot \ldots \cdot p_{k}$$
->zerlegen, wobei die $p_{i}$ mit $1\leq i\leq k$ nicht notwendigerweise unterschiedlich sein müssen.
->>[!proof] Beweis wird ausgelassen. Kann in der genannten Quelle nachgeschlagen werden.
+>$$n = p_{1}^{e_{1}} \cdot p_{2}^{e_{2}} \cdot \ldots \cdot p_{k}^{e_{k}}$$
+>zerlegen, wobei $p_{i} \neq p_{j}$ mit $i \neq j$ und $e_{i}\in \mathbb{N}$.
+>>[!proof]- Beweis 
+>><u> Existenz</u>:
+>>
+>> Die Existenz der Primfaktoren für $n$ zeigen wir mit dem [[#^f974a9| Prinzip der vollständigen Induktion]]. Im **Induktionsanfang** ist das kleinst-mögliche $n=2$, also
+>> $$n_{0}=2=\underbrace{ 2^1 }_{ p_{1}=2 } \tag*{$\checkmark$}$$
+>> Für den **Induktionsschluss** nehmen wir zunächst an, dass $n$ bereits eine Primzahl ist, so hat die Behauptung bereits bestand, also
+>> $$n = \underbrace{ n^1 }_{ =p_{1} }$$
+>> Angenommen es existiert eine Primzahl $p$, sodass $p \;|\; n$, dann erhalten wir eine ganze Zahl $n'$, sodass
+>> $$n' = \frac{n}{p} \tag{Induktionsschritt}$$
+>> Durch simples Umstellen erhalten wir
+>> $$n=n'p$$
+>> was zeigt, dass $n$ sich in Primfaktoren zerlegen lässt, was zu zeigen war. $$\tag*{$\square$}$$
+>> 
+>><u> Eindeutigkeit</u>:
+>>
+>> Wir nehmen nun an, dass es zwei verschiedene Faktorisierungen für $n \in \mathbb{Z}^+$ gibt mit Primzahlen $p_{a}, q_{b}$ 
+>> $$n=p_{1}^{s_{1}}\cdot \ldots \cdot p_{j}^{s_{j}} = q_{1}^{r_{1}}\cdot \ldots \cdot q_{k}^{r_{k}}\tag{1}$$
+>> mit Exponenten $s_{a},r_{b} \in \mathbb{N}$. Wir nehmen dabei an, dass die $p,q$ verschieden sind und dass $s,r\geq 1$. Wir wollen nun zeigen, dass $j=k$ und für zwei Primzahlen $p_{a} = q_{b}$ und dann auch für die Exponenten $s_{a}=r_{b}$ gilt.
+>> 
+>> Nach der [[#^8daf7c|Symmetrie der Äquivalenzrelation]] gilt, wenn wir die linke Faktorisierung von Gleichung $(1)$ durch $p_1$ teilen können, so muss das auch für die rechte Seite möglich sein. Also
+>> $$\underbrace{ p_{1}\;|\;p_{1}^{s_{1}}\cdot \ldots \cdot p_{j}^{s_{j}} }_{ \text{ wenn } p_{1} \text{ teilt...} } \implies \underbrace{ p_{1} \;|\; q_{1}^{r_{1}}\cdot \ldots \cdot q_{k}^{r_{k}} }_{ \text{dann teilt }p_{1} \text{ auch...} } \implies \underbrace{ \exists q_{b} \in \{ q_{1}, \dots,q_{k} \} \text{, sodass } p_{1}=q_{b} }_{ \text{ also existiert ein } q_{b} \text{ was gleich } p_{1} \text{ sein muss} }$$
+>>  Wir werden von hieran $q_{b}$ als $q_1$ bezeichnen, um den Beweis übersichtlich zu halten. Also tauschen wir $q_{1}=p_{1}$ aus. Wir erhalten für den **ersten Fall** $s_{1}>r_{1}$
+>>  $$\begin{alignat}{2}
+>> p_{1}^{s_{1}}\cdot \ldots \cdot p_{j}^{s_{j}} &= p_{1}^{r_{1}}\cdot \ldots \cdot q_{k}^{r_{k}} \qquad&&\Big\vert :p_{1}^{r_{1}} \\
+>> p_{1}^{s_{1}-r_{1}}\cdot \ldots \cdot p_{j}^{s_{j}} &= q_{2}\cdot \ldots \cdot q_{k}^{r_{k}} \tag{2}
+>>\end{alignat}$$
+>> Gleichung $(3)$ ist allerdings unmöglich, da mindestens ein $p_{1}$ übrig bleibt, die auch die rechte Seite teilt. Die [[#^8daf7c|Symmetrie der Äquivalenzrelation]] erwartet aber, dass wenn die linke Seite durch $p_{1}$ teilbar ist, so muss es die rechte Seite sein. Somit erhalten wir für den Fall $s_{1}>r_{1}$ einen Widerspruch.
+>> 
+>> Der **zweite Fall** für $s_{1}<r_{1}$ ist ebenfalls unmöglich, da $s_{1}-r_{1}<0$ und somit wäre $p_{1}^{s_{1}-r_{1}} \not\in \mathbb{Z}$ und somit wäre dies keine Primzahl mehr.
+>> 
+>> Daher verbleibt nur Fall, dass $s_{1}=r_{1}$. Dieser Prozess kann iterativ für alle $p_{a}$ und $q_{b}$ wiederholt werden, wodurch die Eindeutigkeit gezeigt ist. $$\tag*{$\square$}$$
+
+---
+
+>[!warning] Achtung!
+> Es ist kein effizientes Verfahren bekannt, um eine beliebige Zahl $n \in \mathbb{N}$ in seine Primfaktoren zu zerlegen. 
+><center> <h3> Das bezeichnen wir als <u>Faktorisierungsproblem</u> </h3></center>
+>
+>>[!remark]- Bemerkung
+>>Im späteren Verlauf der Veranstaltung werden wir Faktorisierungsverfahren kennenlernen, die Faktoren ermitteln können, aber nicht effizient sind.
+
+---
+
+>[!def] Definition Verteilung der Primzahlen
+>Sei $\pi: \mathbb{R}^+ \to \mathbb{N}$ definiert mit
+>$$\pi (x):= \#\{ p \; |\; p \text{ ist eine Primzahl und } p\leq x \}$$
+>
+>>[!remark] Bemerkung
+>>Diese Funktion zählt alle Primzahlen, die kleiner als $x \in \mathbb{R}^+$ sind. Eine Funktion, die dies bewiesen exakt bestimmt, ist nicht bekannt.
+
+>[!theorem] Der Primzahlsatz nach Gauß und Hadamard
+> $\forall x \in \mathbb{R}^+:$
+> $$\pi(x)\approx \frac{x}{\ln(x)}$$
+>>[!remark]- Bemerkung zur Bedeutung des Satzes
+>>Der Primzahlsatz ist eine Schätzung für die Verteilung der Primzahlen. Man sagt, dass $\dfrac{x}{\ln(x)}$ **asymptotisch zu** $\pi(x)$ **konvergiert**, also
+>>$$\lim_{ x \to \infty } \frac{\pi(x)}{\frac{x}{\ln(x)}} = 1 $$
+>>Das heißt der Zähler und der Nenner nähern sich an je größer das $x \in \mathbb{R}^+$ wird.
+>
+>>[!remark]- Bemerkung zur Geschichte (Informativ)
+>>Der deutsche Mathematiker Carl Friedrich Gauß (1777-1855) hat diesen Satz 1793 im Alter von 16 Jahren vermutet und wurde erst im Jahr 1896 über die **asymptotische Konvergenz**  von Jacques Salomon Hadamard und Charles-Jean de La Vallée Poussin bewiesen.
+>>
+>>![[Figures/gauss_brief.png| center | 600]]
+>><center>Abbildung: Brief von Gauß an seinen Freund Johann Franz Encke</center>
+>>
+>>Die tatsächliche Abschätzung von Gauß war sogar etwas genauer und wird angegeben mit dem Integrallogarithmus
+>>$$\text{Li}(x)=\int _{2}^x \frac{1}{\log t} \, dt $$
+>>[Quelle für den Brief](https://gauss.adw-goe.de/handle/gauss/199?locale-attribute=de)
+>
+>>[!example]- Beispiel: Wieviele Primzahlen sind bis $x=9\,999\,999\,999$ zu erwarten?
+>>$$\begin{align}
+>> \pi(9\,999\,999\,999)&\approx \frac{9\,999\,999\,999}{\ln(9\,999\,999\,999)}  \\
+>>&\approx\frac{9\,999\,999\,999}{23.02585093} \\
+>>&\approx434\;294\;481.86 \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>>[!example]-  Beispiel: Wieviele Primzahlen sind zwischen $999\,999\,999$ und $9\,999\,999\,999$ zu erwarten?
+>>$$\begin{align}
+>> \pi(9\,999\,999\,999) -\pi(999\,999\,999) &\approx 434\;294\;481.86 - 48\,254\,942.39 \\
+>> &\approx 386\,039\,539.47 \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+
+>[!property] Eigenschaft des Primzahlsatzes
+>Sei $n \in \mathbb{N}$. Wird eine Zahl $k$ zufällig zwischen $1$ und $n$ gezogen, so ist die Wahrscheinlichkeit eine Primzahl zu ziehen
+>$$P(k \in \mathbb{P})=\frac{1}{\log n}$$
+>
+
+>[!remark]- Bemerkung: Informative Ergänzung zu der Verteilung der Primzahlen (Video)
+>
+>Dieses Video ist recht kurz und sehr empfehlenswert.
+>
+>![](https://youtu.be/qeCqjJpqbls?si=S3OSxGvHqvQLTFxK)
+>
+>Wer viel Zeit und viel Interesse hat, kann sich auch eine schöne Weihnachtsvorlesung ansehen.
+>
+>![](https://www.youtube.com/watch?v=sZhl6PyTflw)
+
+>[!theorem] Satz Primzahlquotienten
+>
+>Seien $p$ eine Primzahl und $a,b \in \mathbb{Z}$, dann gilt
+>$$p \;|\; ab \implies p \;|\; a \text{ oder } p \;|\; b$$
+>>[!proof]- Beweis
+>>Angenommen
+>>$$p \;\nmid\; a \text{ und } p\;\nmid\;b$$
+>>so wären $p,a$ und $p,b$ teilerfremd, also
+>>$$\begin{align}
+>> \text{ggT}(p,a) &= 1 \\
+>> \text{ggT}(p,b) &= 1
+>>\end{align}$$
+>>Mit dem [[#^42f9e5|Lemma von Bezout]] können wir sagen
+>>$$\begin{align}
+>> \text{ggT}(p,a) &= 1 = pp_{1}+aa' \tag{1}\\
+>> \text{ggT}(p,b) &= 1 = pp_{2}+bb' \tag{2}
+>>\end{align}$$
+>>mit $p_{1},p_{2},a',b' \in \mathbb{Z}$. Wir stellen nun die Gleichungen $(1)$ und $(2)$ geschickt um und erhalten
+>>$$\begin{align}
+>>  aa' = pp_{1}-1 \tag{3}\\
+>> bb' = pp_{2}-1 \tag{4}
+>>\end{align}$$
+>>Multiplizieren wir gleichung $(3)$ und $(4)$ erhalten wir
+>>$$(aa')(bb')=(1-pp_{1})(1-pp_{2})\tag{5}$$
+>>Wir bemerken, dass die linke Seite durch Umstellung $(ab)(a'b')$ enthält. Aus unserer Beweis Prämisse schließen wir
+>>$$p \;|\; ab \implies p \;|\; (ab)(a'b')$$
+>>nach der [[#^6a2086|der dritten Eigenschaft der ganzzahligen Teilung]]. Also muss demnach $p$ auch den rechten Teil der Gleichung $(5)$ teilen, was wir nun prüfen werden.
+>>$$\begin{align}
+>>(1-pp_{1})(1-pp_{2}) &= 1-pp_{1}-pp_{2}-p^2p_{1}p_{2} \\
+>> &= p(p_{1}-p_{2}-pp_{1}p_{2})+1
+>>\end{align}$$
+>>Damit die Behauptung stand hält, muss $p\;|\;1$ wegen des [[#^a40b0b| Satzes der Teilbarkeit von Summen und Differenzen]], was aber ein Widerspruch ist, daher muss gelten, dass
+>>$$p \;|\; ab \implies p \;|\; a \text{ oder } p \;|\; b \tag*{$\square$}$$
 
