@@ -55,7 +55,7 @@
   url = {http://arxiv.org/abs/2405.04517},
   urldate = {2024-07-15},
   abstract = {In the 1990s, the constant error carousel and gating were introduced as the central ideas of the Long Short-Term Memory (LSTM). Since then, LSTMs have stood the test of time and contributed to numerous deep learning success stories, in particular they constituted the first Large Language Models (LLMs). However, the advent of the Transformer technology with parallelizable self-attention at its core marked the dawn of a new era, outpacing LSTMs at scale. We now raise a simple question: How far do we get in language modeling when scaling LSTMs to billions of parameters, leveraging the latest techniques from modern LLMs, but mitigating known limitations of LSTMs? Firstly, we introduce exponential gating with appropriate normalization and stabilization techniques. Secondly, we modify the LSTM memory structure, obtaining: (i) sLSTM with a scalar memory, a scalar update, and new memory mixing, (ii) mLSTM that is fully parallelizable with a matrix memory and a covariance update rule. Integrating these LSTM extensions into residual block backbones yields xLSTM blocks that are then residually stacked into xLSTM architectures. Exponential gating and modified memory structures boost xLSTM capabilities to perform favorably when compared to state-of-the-art Transformers and State Space Models, both in performance and scaling.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {/home/thomas/Documents/Obsidian Vault/PDFs/beck2024.pdf;/home/thomas/Zotero/storage/PNS37KYI/2405.html}
 }
@@ -71,7 +71,7 @@
   url = {http://arxiv.org/abs/2009.14119},
   urldate = {2023-12-27},
   abstract = {In a typical multi-label setting, a picture contains on average few positive labels, and many negative ones. This positive-negative imbalance dominates the optimization process, and can lead to under-emphasizing gradients from positive labels during training, resulting in poor accuracy. In this paper, we introduce a novel asymmetric loss ("ASL"), which operates differently on positive and negative samples. The loss enables to dynamically down-weights and hard-thresholds easy negative samples, while also discarding possibly mislabeled samples. We demonstrate how ASL can balance the probabilities of different samples, and how this balancing is translated to better mAP scores. With ASL, we reach state-of-the-art results on multiple popular multi-label datasets: MS-COCO, Pascal-VOC, NUS-WIDE and Open Images. We also demonstrate ASL applicability for other tasks, such as single-label classification and object detection. ASL is effective, easy to implement, and does not increase the training time or complexity. Implementation is available at: https://github.com/Alibaba-MIIL/ASL.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,I.0,I.2.10,I.2.6,I.4.0},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/ben-baruch2021.pdf;/home/thomas/Zotero/storage/QGNK38MC/2009.html}
 }
@@ -155,7 +155,7 @@
   url = {http://arxiv.org/abs/1808.02574},
   urldate = {2024-02-21},
   abstract = {The purpose of this paper is to give a survey on the notions of distance between subsets either of a metric space or of a measure space, including definitions, a classification, and a discussion of the best-known distance functions, which is followed by a review on applications used in many areas of knowledge, ranging from theoretical to practical applications.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {28A78 54E35,Mathematics - Functional Analysis},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/conci2018.pdf;/home/thomas/Zotero/storage/TTV8T363/1808.html}
 }
@@ -172,7 +172,7 @@
   url = {http://arxiv.org/abs/1810.04805},
   urldate = {2023-12-05},
   abstract = {We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5\% (7.7\% point absolute improvement), MultiNLI accuracy to 86.7\% (4.6\% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   version = {2},
   keywords = {Computer Science - Computation and Language},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/devlin2019.pdf;/home/thomas/Zotero/storage/KEMTIW53/1810.html}
@@ -291,7 +291,7 @@
   url = {http://arxiv.org/abs/2111.00396},
   urldate = {2024-01-01},
   abstract = {A central goal of sequence modeling is designing a single principled model that can address sequence data across a range of modalities and tasks, particularly on long-range dependencies. Although conventional models including RNNs, CNNs, and Transformers have specialized variants for capturing long dependencies, they still struggle to scale to very long sequences of \$10000\$ or more steps. A promising recent approach proposed modeling sequences by simulating the fundamental state space model (SSM) \textbackslash ( x'(t) = Ax(t) + Bu(t), y(t) = Cx(t) + Du(t) \textbackslash ), and showed that for appropriate choices of the state matrix \textbackslash ( A \textbackslash ), this system could handle long-range dependencies mathematically and empirically. However, this method has prohibitive computation and memory requirements, rendering it infeasible as a general sequence modeling solution. We propose the Structured State Space sequence model (S4) based on a new parameterization for the SSM, and show that it can be computed much more efficiently than prior approaches while preserving their theoretical strengths. Our technique involves conditioning \textbackslash ( A \textbackslash ) with a low-rank correction, allowing it to be diagonalized stably and reducing the SSM to the well-studied computation of a Cauchy kernel. S4 achieves strong empirical results across a diverse range of established benchmarks, including (i) 91\textbackslash\% accuracy on sequential CIFAR-10 with no data augmentation or auxiliary losses, on par with a larger 2-D ResNet, (ii) substantially closing the gap to Transformers on image and language modeling tasks, while performing generation \$60\textbackslash times\$ faster (iii) SoTA on every task from the Long Range Arena benchmark, including solving the challenging Path-X task of length 16k that all prior work fails on, while being as efficient as all competitors.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/gu2022.pdf;/home/thomas/Zotero/storage/LGUIB4RK/2111.html}
 }
@@ -308,7 +308,7 @@
   url = {http://arxiv.org/abs/2312.00752},
   urldate = {2023-12-31},
   abstract = {Foundation models, now powering most of the exciting applications in deep learning, are almost universally based on the Transformer architecture and its core attention module. Many subquadratic-time architectures such as linear attention, gated convolution and recurrent models, and structured state space models (SSMs) have been developed to address Transformers' computational inefficiency on long sequences, but they have not performed as well as attention on important modalities such as language. We identify that a key weakness of such models is their inability to perform content-based reasoning, and make several improvements. First, simply letting the SSM parameters be functions of the input addresses their weakness with discrete modalities, allowing the model to selectively propagate or forget information along the sequence length dimension depending on the current token. Second, even though this change prevents the use of efficient convolutions, we design a hardware-aware parallel algorithm in recurrent mode. We integrate these selective SSMs into a simplified end-to-end neural network architecture without attention or even MLP blocks (Mamba). Mamba enjoys fast inference (5\$\textbackslash times\$ higher throughput than Transformers) and linear scaling in sequence length, and its performance improves on real data up to million-length sequences. As a general sequence model backbone, Mamba achieves state-of-the-art performance across several modalities such as language, audio, and genomics. On language modeling, our Mamba-3B model outperforms Transformers of the same size and matches Transformers twice its size, both in pretraining and downstream evaluation.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/gu2023.pdf;/home/thomas/Zotero/storage/3SUGQ2QC/2312.html}
 }
@@ -324,7 +324,7 @@
   url = {http://arxiv.org/abs/1509.01469},
   urldate = {2023-11-13},
   abstract = {We propose a quantization based approach for fast approximate Maximum Inner Product Search (MIPS). Each database vector is quantized in multiple subspaces via a set of codebooks, learned directly by minimizing the inner product quantization error. Then, the inner product of a query to a database vector is approximated as the sum of inner products with the subspace quantizers. Different from recently proposed LSH approaches to MIPS, the database vectors and queries do not need to be augmented in a higher dimensional feature space. We also provide a theoretical analysis of the proposed approach, consisting of the concentration results under mild assumptions. Furthermore, if a small sample of example queries is given at the training time, we propose a modified codebook learning procedure which further improves the accuracy. Experimental results on a variety of datasets including those arising from deep neural networks show that the proposed approach significantly outperforms the existing state-of-the-art.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/guo2015.pdf;/home/thomas/Zotero/storage/PUC7YB59/1509.html}
 }
@@ -340,7 +340,7 @@
   url = {http://arxiv.org/abs/1908.10396},
   urldate = {2023-11-13},
   abstract = {Quantization based techniques are the current state-of-the-art for scaling maximum inner product search to massive databases. Traditional approaches to quantization aim to minimize the reconstruction error of the database points. Based on the observation that for a given query, the database points that have the largest inner products are more relevant, we develop a family of anisotropic quantization loss functions. Under natural statistical assumptions, we show that quantization with these loss functions leads to a new variant of vector quantization that more greatly penalizes the parallel component of a datapoint's residual relative to its orthogonal component. The proposed approach achieves state-of-the-art results on the public benchmarks available at \textbackslash url\{ann-benchmarks.com\}.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/guo2020.pdf;/home/thomas/Zotero/storage/E6AVEC3F/1908.html}
 }
@@ -577,7 +577,7 @@
   url = {http://arxiv.org/abs/1708.02002},
   urldate = {2023-12-16},
   abstract = {The highest accuracy object detectors to date are based on a two-stage approach popularized by R-CNN, where a classifier is applied to a sparse set of candidate object locations. In contrast, one-stage detectors that are applied over a regular, dense sampling of possible object locations have the potential to be faster and simpler, but have trailed the accuracy of two-stage detectors thus far. In this paper, we investigate why this is the case. We discover that the extreme foreground-background class imbalance encountered during training of dense detectors is the central cause. We propose to address this class imbalance by reshaping the standard cross entropy loss such that it down-weights the loss assigned to well-classified examples. Our novel Focal Loss focuses training on a sparse set of hard examples and prevents the vast number of easy negatives from overwhelming the detector during training. To evaluate the effectiveness of our loss, we design and train a simple dense detector we call RetinaNet. Our results show that when trained with the focal loss, RetinaNet is able to match the speed of previous one-stage detectors while surpassing the accuracy of all existing state-of-the-art two-stage detectors. Code is at: https://github.com/facebookresearch/Detectron.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computer Vision and Pattern Recognition},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/lin2018.pdf;/home/thomas/Zotero/storage/4YJ9LBZT/1708.html}
 }
@@ -594,7 +594,7 @@
   url = {http://arxiv.org/abs/2309.16354},
   urldate = {2023-11-13},
   abstract = {We introduce Transformer-VQ, a decoder-only transformer computing softmax-based dense self-attention in linear time. Transformer-VQ's efficient attention is enabled by vector-quantized keys and a novel caching mechanism. In large-scale experiments, Transformer-VQ is shown highly competitive in quality, with strong results on Enwik8 (0.99 bpb), PG-19 (26.6 ppl), and ImageNet64 (3.16 bpb). Code: https://github.com/transformer-vq/transformer\_vq},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/lingle2023.pdf;/home/thomas/Zotero/storage/AMZDGPVR/2309.html}
 }
@@ -611,7 +611,7 @@
   url = {http://arxiv.org/abs/2404.11163},
   urldate = {2024-04-21},
   abstract = {Transformer models have been successful in various sequence processing tasks, but the self-attention mechanism's computational cost limits its practicality for long sequences. Although there are existing attention variants that improve computational efficiency, they have a limited ability to abstract global information effectively based on their hand-crafted mixing strategies. On the other hand, state-space models (SSMs) are tailored for long sequences but cannot capture complicated local information. Therefore, the combination of them as a unified token mixer is a trend in recent long-sequence models. However, the linearized attention degrades performance significantly even when equipped with SSMs. To address the issue, we propose a new method called LongVQ. LongVQ uses the vector quantization (VQ) technique to compress the global abstraction as a length-fixed codebook, enabling the linear-time computation of the attention matrix. This technique effectively maintains dynamic global and local patterns, which helps to complement the lack of long-range dependency issues. Our experiments on the Long Range Arena benchmark, autoregressive language modeling, and image and speech classification demonstrate the effectiveness of LongVQ. Our model achieves significant improvements over other sequence models, including variants of Transformers, Convolutions, and recent State Space Models.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning},
   file = {/home/thomas/Documents/Obsidian Vault/PDFs/liu2024.pdf;/home/thomas/Zotero/storage/GL4588R4/2404.html}
 }
@@ -759,7 +759,7 @@
   url = {https://eprint.iacr.org/2015/939},
   urldate = {2024-06-11},
   abstract = {\textbackslash emph\{Lattice-based cryptography\} is the use of conjectured hard problems on point lattices in\textasciitilde\$\textbackslash R\textasciicircum\{n\}\$ as the foundation for secure cryptographic systems. Attractive features of lattice cryptography include apparent resistance to \textbackslash emph\{quantum\} attacks (in contrast with most number-theoretic cryptography), high asymptotic efficiency and parallelism, security under \textbackslash emph\{worst-case\} intractability assumptions, and solutions to long-standing open problems in cryptography. This work surveys most of the major developments in lattice cryptography over the past ten years. The main focus is on the foundational \textbackslash emph\{short integer solution\}\textasciitilde (SIS) and \textbackslash emph\{learning with errors\}\textasciitilde (LWE) problems (and their more efficient ring-based variants), their provable hardness assuming the worst-case intractability of standard lattice problems, and their many cryptographic applications.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {lattices,learning with errors,short integer solution,survey},
   annotation = {Publication info: Preprint. MINOR revision.},
   file = {/home/thomas/Documents/Obsidian Vault/PDFs/peikert2015.pdf}
@@ -781,6 +781,25 @@
   issue = {6},
   langid = {english},
   file = {/home/thomas/Documents/Obsidian Vault/PDFs/prasad2012.pdf}
+}
+
+@report{rabin1979,
+  type = {Technical Report},
+  title = {{{DIGITALIZED SIGNATURES AND PUBLIC-KEY FUNCTIONS AS INTRACTABLE AS FACTORIZATION}}},
+  author = {Rabin, M. O.},
+  date = {1979},
+  institution = {Massachusetts Institute of Technology},
+  location = {USA},
+  abstract = {We introduce a new class of public-key functions involving a number n = pq having two large prime factors. As usual, the key n is public, while p and q are the private key used by the issuer for production of signatures and function inversion. These functions can be used for all the applications involving public-key functions proposed by Diffie and Hellman, including digitalized signatures. We prove that for any given n, if we can invert the function y = E (x1) for even a small percentage of the values y then we can factor n. Thus, as long as factorization of large numbers remains practically intractable, for appropriate chosen keys not even a small percentage of signatures are forgeable. Breaking the RSA function is at most hard as factorization, but is not known to be equivalent to factorization even in the weak sense that ability to invert all function values entails ability to factor the key. Computation time for these functions, i.e. signature verification, is several hundred times faster than for the RSA scheme. Inversion time, using the private key, is comparable. The almost-everywhere intractability of signature-forgery for our functions (on the assumption that factoring is intractable) is of great practical significance and seems to be the first proved result of this kind.}
+}
+
+@inproceedings{rabin1979a,
+  title = {{{DIGITALIZED SIGNATURES AND PUBLIC-KEY FUNCTIONS AS INTRACTABLE AS FACTORIZATION}}},
+  author = {Rabin, M.},
+  date = {1979},
+  url = {https://www.semanticscholar.org/paper/DIGITALIZED-SIGNATURES-AND-PUBLIC-KEY-FUNCTIONS-AS-Rabin/468600c74bf5e30f206c997c0f9f09561ceae7d2},
+  urldate = {2024-08-08},
+  abstract = {We introduce a new class of public-key functions involving a number n = pq having two large prime factors. As usual, the key n is public, while p and q are the private key used by the issuer for production of signatures and function inversion. These functions can be used for all the applications involving public-key functions proposed by Diffie and Hellman, including digitalized signatures. We prove that for any given n, if we can invert the function y = E (x1) for even a small percentage of the values y then we can factor n. Thus, as long as factorization of large numbers remains practically intractable, for appropriate chosen keys not even a small percentage of signatures are forgeable. Breaking the RSA function is at most hard as factorization, but is not known to be equivalent to factorization even in the weak sense that ability to invert all function values entails ability to factor the key. Computation time for these functions, i.e. signature verification, is several hundred times faster than for the RSA scheme. Inversion time, using the private key, is comparable. The almost-everywhere intractability of signature-forgery for our functions (on the assumption that factoring is intractable) is of great practical significance and seems to be the first proved result of this kind.}
 }
 
 @article{ramos2018,
@@ -814,7 +833,7 @@
   url = {http://arxiv.org/abs/1810.07076},
   urldate = {2023-11-13},
   abstract = {We consider the problem of retrieving the most relevant labels for a given input when the size of the output space is very large. Retrieval methods are modeled as set-valued classifiers which output a small set of classes for each input, and a mistake is made if the label is not in the output set. Despite its practical importance, a statistically principled, yet practical solution to this problem is largely missing. To this end, we first define a family of surrogate losses and show that they are calibrated and convex under certain conditions on the loss parameters and data distribution, thereby establishing a statistical and analytical basis for using these losses. Furthermore, we identify a particularly intuitive class of loss functions in the aforementioned family and show that they are amenable to practical implementation in the large output space setting (i.e. computation is possible without evaluating scores of all labels) by developing a technique called Stochastic Negative Mining. We also provide generalization error bounds for the losses in the family. Finally, we conduct experiments which demonstrate that Stochastic Negative Mining yields benefits over commonly used negative sampling approaches.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/reddi2018.pdf;/home/thomas/Zotero/storage/W6JVNWF3/1810.html}
 }
@@ -830,7 +849,7 @@
   url = {http://arxiv.org/abs/2401.03703},
   urldate = {2024-06-17},
   abstract = {Our main result is a reduction from worst-case lattice problems such as GapSVP and SIVP to a certain learning problem. This learning problem is a natural extension of the `learning from parity with error' problem to higher moduli. It can also be viewed as the problem of decoding from a random linear code. This, we believe, gives a strong indication that these problems are hard. Our reduction, however, is quantum. Hence, an efficient solution to the learning problem implies a quantum algorithm for GapSVP and SIVP. A main open question is whether this reduction can be made classical (i.e., non-quantum). We also present a (classical) public-key cryptosystem whose security is based on the hardness of the learning problem. By the main result, its security is also based on the worst-case quantum hardness of GapSVP and SIVP. The new cryptosystem is much more efficient than previous lattice-based cryptosystems: the public key is of size \$\textbackslash tilde\{O\}(n\textasciicircum 2)\$ and encrypting a message increases its size by a factor of \$\textbackslash tilde\{O\}(n)\$ (in previous cryptosystems these values are \$\textbackslash tilde\{O\}(n\textasciicircum 4)\$ and \$\textbackslash tilde\{O\}(n\textasciicircum 2)\$, respectively). In fact, under the assumption that all parties share a random bit string of length \$\textbackslash tilde\{O\}(n\textasciicircum 2)\$, the size of the public key can be reduced to \$\textbackslash tilde\{O\}(n)\$.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computational Complexity,Computer Science - Cryptography and Security,Quantum Physics},
   file = {/home/thomas/Documents/Obsidian Vault/PDFs/regev2024.pdf;/home/thomas/Zotero/storage/J2S97PSF/2401.html}
 }
@@ -842,6 +861,22 @@
   url = {https://www.semanticscholar.org/paper/ON-DATA-BANKS-AND-PRIVACY-HOMOMORPHISMS-Rivest-Dertouzos/c365f01d330b2211e74069120e88cff37eacbcf5},
   urldate = {2024-05-21},
   abstract = {Encryption is a well—known technique for preserving the privacy of sensitive information. One of the basic, apparently inherent, limitations of this technique is that an information system working with encrypted data can at most store or retrieve the data for the user; any more complicated operations seem to require that the data be decrypted before being operated on. This limitation follows from the choice of encryption functions used, however, and although there are some truly inherent limitations on what can be accomplished, we shall see that it appears likely that there exist encryption functions which permit encrypted data to be operated on without preliminary decryption of the operands, for many sets of interesting operations. These special encryption functions we call “privacy homomorphisms”; they form an interesting subset of arbitrary encryption schemes (called “privacy transformations”).}
+}
+
+@article{rivest1978a,
+  title = {A Method for Obtaining Digital Signatures and Public-Key Cryptosystems},
+  author = {Rivest, R. L. and Shamir, A. and Adleman, L.},
+  date = {1978-02-01},
+  journaltitle = {Commun. ACM},
+  volume = {21},
+  number = {2},
+  pages = {120--126},
+  issn = {0001-0782},
+  doi = {10.1145/359340.359342},
+  url = {https://dl.acm.org/doi/10.1145/359340.359342},
+  urldate = {2024-08-08},
+  abstract = {An encryption method is presented with the novel property that publicly revealing an encryption key does not thereby reveal the corresponding decryption key. This has two important consequences: (1) Couriers or other secure means are not needed to transmit keys, since a message can be enciphered using an encryption key publicly revealed by the intented recipient. Only he can decipher the message, since only he knows the corresponding decryption key. (2) A message can be “signed” using a privately held decryption key. Anyone can verify this signature using the corresponding publicly revealed encryption key. Signatures cannot be forged, and a signer cannot later deny the validity of his signature. This has obvious applications in “electronic mail” and “electronic funds transfer” systems. A message is encrypted by representing it as a number M, raising M to a publicly specified power e, and then taking the remainder when the result is divided by the publicly specified product, n, of two large secret primer numbers p and q. Decryption is similar; only a different, secret, power d is used, where e * d ≡ 1(mod (p - 1) * (q - 1)). The security of the system rests in part on the difficulty of factoring the published divisor, n.},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/rivest1978a.pdf}
 }
 
 @book{rudin1976,
@@ -976,7 +1011,7 @@
   url = {http://arxiv.org/abs/1706.03762},
   urldate = {2023-11-17},
   abstract = {The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/vaswani2023.pdf;/home/thomas/Zotero/storage/SCJWFGAA/1706.html}
 }
@@ -993,7 +1028,7 @@
   url = {http://arxiv.org/abs/1412.6181},
   urldate = {2024-05-21},
   abstract = {The problem we address is the following: how can a user employ a predictive model that is held by a third party, without compromising private information. For example, a hospital may wish to use a cloud service to predict the readmission risk of a patient. However, due to regulations, the patient's medical files cannot be revealed. The goal is to make an inference using the model, without jeopardizing the accuracy of the prediction or the privacy of the data. To achieve high accuracy, we use neural networks, which have been shown to outperform other learning models for many tasks. To achieve the privacy requirements, we use homomorphic encryption in the following protocol: the data owner encrypts the data and sends the ciphertexts to the third party to obtain a prediction from a trained model. The model operates on these ciphertexts and sends back the encrypted prediction. In this protocol, not only the data remains private, even the values predicted are available only to the data owner. Using homomorphic encryption and modifications to the activation functions and training algorithms of neural networks, we show that it is protocol is possible and may be feasible. This method paves the way to build a secure cloud-based neural network prediction services without invading users' privacy.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Cryptography and Security,Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing},
   file = {/home/thomas/Documents/Obsidian Vault/PDFs/xie2014.pdf;/home/thomas/Zotero/storage/NE4WJDV2/1412.html}
 }
@@ -1090,4 +1125,11 @@
   abstract = {This research monograph on circular data analysis covers some recent advances in the field, besides providing a brief introduction to, and a review of, existing methods and models. The primary focu...},
   langid = {english},
   file = {/home/thomas/Zotero/storage/PZCI3EKY/4031.html}
+}
+
+@online{zotero-316,
+  title = {Digitalized {{Signatures}} and {{Public-Key Functions}} as {{Intractable}} as {{Factorization}},},
+  url = {https://apps.dtic.mil/sti/citations/ADA078415},
+  urldate = {2024-08-08},
+  file = {/home/thomas/Zotero/storage/2PWTU4R5/ADA078415.html}
 }

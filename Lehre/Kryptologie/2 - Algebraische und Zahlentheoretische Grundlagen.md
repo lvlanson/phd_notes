@@ -269,7 +269,7 @@
 
 
 >[!def] Definition Kongruenz-Äquivalenzrelation über den ganzen Zahlen
->Wir definieren die **Kongruenz-Äquivalenzrelation** über den ganzen Zahlen $a,b \in \mathbb{Z}$  kongruent zum **Modul** $n \in \mathbb{Z}$ mit
+>Wir definieren die **Kongruenz-Äquivalenzrelation** über den ganzen Zahlen $a,b \in \mathbb{Z}$  kongruent zum **Modul** $n \in \mathbb{N}$ mit
 >$$\begin{align}
 > a \equiv b \;\;(\text{mod }n) &\iff a \text{ mod } n = b \text{ mod } n \\
 > a \equiv b \;\;(\text{mod }n) &\iff n \;|\; (a-b) \\
@@ -320,7 +320,7 @@
 ^360a7d
 
 >[!def] Definition Äquivalenzklassen bezüglich der Modulus Äquivalenzrelation
-> Wir definieren eine [[#^8daf7c|Äquivalenzklasse]] für $a\in \mathbb{Z}$ bezüglich des **Moduls** $n$ als
+> Wir definieren eine [[#^8daf7c|Äquivalenzklasse]] für $a\in \mathbb{Z}$ bezüglich des **Moduls** $n \in \mathbb{N}$ als
 > $$[a]_{n} = \{ b \in \mathbb{Z} \; | \; a \equiv b \;\;(\text{mod } n) \}$$
 > Diese Form der [[#^8daf7c|Äquivalenzklasse]] werden wir fortan 
 > <center><b>Restklasse</b></center>
@@ -350,7 +350,7 @@
 >> $$\mathbb{Z}_{n} = \{ 0,1,\dots,n-1 \}$$
  
 >[!remark] Bemerkung zur "Restklassenarithmetik"
-> Wir haben nun erfolgreich die [[#^360a7d| Kongruenz Äquivalenzrelation]] als eine [[#^afad91|algebraische Struktur]] eingeführt. Über die [[#^6a2086|Eigenschaften der ganzzahligen Teilung]] und dem [[#^a40b0b| Satz der Teilbarkeit von Summen und Differenzen]] können wir zusammenfassend sagen, dass für $a,b \in \mathbb{Z}$
+> Wir haben nun erfolgreich die [[#^360a7d| Kongruenz Äquivalenzrelation]] als eine [[#^afad91|algebraische Struktur]] eingeführt. Über die [[#^6a2086|Eigenschaften der ganzzahligen Teilung]] und dem [[#^a40b0b| Satz der Teilbarkeit von Summen und Differenzen]] können wir zusammenfassend sagen, dass für $a,b \in \mathbb{Z}$ und dem [[#^638cd1|Modul]] $n \in \mathbb{N}$
 > $$\begin{align}
 > \Big((a \text{ mod } n) \pm (b \text{ mod } n)\Big) \;\text{mod } n&= (a\pm b) \text{ mod } n  \tag{1} \\
 > \Big((a \text{ mod } n) \cdot (b \text{ mod } n)\Big) \;\text{mod } n&= (a\cdot b) \text{ mod } n  \tag{2}
@@ -362,9 +362,11 @@
 > [a] \odot [b] &:= [a \cdot b] \tag{2}
 >\end{align}$$
 >
->In Worten ausgedrückt können wir sagen, dass wir mit den Resten über Summen und Produkten bei gleichem Modul $n$ rechnen dürfen. Die Summe zweier Rester über $a,b$ ist demnach [[#^360a7d|kongruent]] zu dem Rest der Summe $a+b$. Analog gilt selbiges für das Produkt. Dies wird auch **Restklassenarithmetik**  genannt.
+>In Worten ausgedrückt können wir sagen, dass wir mit den Resten über Summen und Produkten bei gleichem Modul $n$ rechnen dürfen. Die Summe zweier Reste über $a,b$ ist demnach [[#^360a7d|kongruent]] zu dem Rest der Summe $a+b$. Analog gilt selbiges für das Produkt. Dies wird auch **Restklassenarithmetik**  genannt.
 >
 > ***Diese Eigenschaft ist fundamental für die Verschlüsselungsalgorithmen und deren Funktionsweisen, die über Restklassenringe bzw. Restklassenkörper aufgebaut werden.***
+
+^e40f84
 
 >[!note] Werkzeug: Verknüpfungstafeln (Caley-Tables)
 > Addition und Multiplikation in $\mathbb{Z}_{5}$
@@ -889,9 +891,12 @@
 >>\end{align}$$
 >>Damit die Behauptung stand hält, muss $p\;|\;1$ wegen des [[#^a40b0b| Satzes der Teilbarkeit von Summen und Differenzen]], was aber ein Widerspruch ist, daher muss gelten, dass
 >>$$p \;|\; ab \implies p \;|\; a \text{ oder } p \;|\; b \tag*{$\square$}$$
+>
+>>[!example]- Beispiel $5 \;|\; (4 \cdot 5)$
+>> $$\underbrace{ \underbrace{ 5 \;|\; (4 \cdot 5) }_{ \text{ wahr} } \implies \underbrace{ \underbrace{ 5 \;|\; 4 }_{ \text{falsch} } \; \lor \; \underbrace{ 5 \;|\;5 }_{ \text{wahr} } }_{ \text{wahr} } }_{ \text{wahr} }$$
 
 >[!def] Definition Modulare Inverse
->Es seien $n \in \mathbb{N}$ und $a \in \mathbb{Z}$. Eine Zahl $b \in \mathbb{Z}$ mit 
+>Es seien $n \in \mathbb{N}$ und $a \in \mathbb{Z} \setminus \{ 0 \}$. Eine Zahl $b \in \mathbb{Z}$ mit 
 >$$a \cdot b \equiv 1 \;\;(\text{mod } n)$$
 >wird **modulares Inverses** von $a$ bezüglich $n$ genannt. Wir kennzeichnen das **modulare Inverse** von $a$ als
 >$$a^{-1}\equiv b \;\;(\text{mod } n)$$
@@ -923,5 +928,49 @@
 >>$$\tag*{$\blacktriangleleft$}$$
 >
 >>[!remark] Bemerkung: Das modulare Inverse existiert nicht immer, es existiert nur, wenn $a$ und $n$ teilerfremd sind.
+>
+>>[!example] Beispiel: $2 \cdot b \equiv 1 \;\;(\text{mod } 4)$, es existiert kein $b$, dass diese Kongruenz erfüllt.
+
+^6f68c0
 
 >[!theorem] Satz Existenz zum Modularen Inversen
+>
+>$$\forall a\in \mathbb{Z}\setminus\{ 0 \}, \forall n \in \mathbb{N}: \exists a^{-1} \in \mathbb{Z}\setminus\{ 0 \}: aa^{-1} \equiv 1 \;\;(\text{mod } n) \iff \text{ggT}(a,n)=1$$
+>
+>In Worten:
+>
+> Es seien $a \in \mathbb{Z}\setminus\{ 0 \}$ und $n \in \mathbb{N}$. Das [[#^6f68c0| modulare Inverse]] von $a$ bezüglich $n$ existiert genau dann, wenn $a$ und $n$ teilerfremd sind.
+> 
+>>[!proof]- Beweis
+>> Wenn $a$ und $n$ teilerfremd sind, so wissen wir durch die [[#^2a19a0|Definition des größten gemeinsamen Teilers]], dass
+>> $$\text{ggT}(a,n)= 1$$
+>> Daher gibt es nach dem [[#^42f9e5|Lemma von Bezout]] zwei Zahlen $a',n' \in \mathbb{Z}$, sodass
+>> $$\text{ggT}(a,n)=1=aa'+nn'$$
+>> Da wir beim [[#^6f68c0|modularen Inversen]] modulo $n$ rechnen, haben wir
+>> $$1 = aa'+\underbrace{ nn' }_{ \equiv 0  } \;\;(\text{mod } n)$$
+>> Durch [[#^e40f84|die Restklassenarithmetik]] und die [[#^6a2086|dritte Eigenschaft der ganzzahligen Teilung]] wissen wir, dass $nn' \text{ mod } n = 0$, also verbleibt
+>> $$1 = aa'  \;\;(\text{mod } n)$$
+>> Laut dem [[#^42f9e5|Lemma von Bezout]] muss ein $a' \in \mathbb{Z}\setminus\{ 0 \}$ existiert, die diese Gleichung löst.
+>> $$\tag*{$\square$}$$
+>>>[!remark] Bemerkung: Wären $a,n$ nicht teilerfremd, so würde auf der linken Seite der Gleichung die $1$ nicht erscheinen.
+>
+>>[!algo] Implementation in Sage
+>>```python
+>>def modinv(a,n):
+>>	g,aa,nn = xgcd(a,n)
+>>	if g == 1:
+>>		return aa % n
+>>	else:
+>>		return None
+>>```
+>>>[!remark] Bemerkung zu Sage
+>>>Sage ist eine mathematische Programmierumgebung in der Programmiersprache **Python** eingebettet. In *SageMath* werden diverse bekannte mathematische Open-Source Bibliotheken integriert wie 
+>>>- NumPy
+>>>- SciPy
+>>>- matplotlib
+>>>- Sympy
+>>>- Maxima
+>>>- FLINT,
+>>>- R usw.
+>>>
+>>>In den Praktika werden wir in erster Linie in Sage programmieren, dazu ist Grundlagenwissen zur Python Syntax nötig und Funktionen aus der Sage Bibliothek wie beispielsweise der [erweiterte Euklidische Algorithmus - xgcd (Link zur Dokumentation)](https://doc.sagemath.org/html/en/reference/rings_standard/sage/arith/misc.html).
