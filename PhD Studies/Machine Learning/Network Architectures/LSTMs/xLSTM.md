@@ -28,7 +28,7 @@
 >| $n_{t}\in \mathbb{R}$ - normalizer state | $i_{t}\in \mathbb{R}$ - input gate  |  $b_{z,i,f,o}\in \mathbb{R}$ - biases for respective gates       |
 >| $m_{t}\in \mathbb{R}$ - stabilizer state | $o_{t}\in \mathbb{R}$ - output gate |  $\phi$ - activation function, usually $\tanh$       |
 > 
-> ![[Figures/sLSTM_raw.png|center|700]]
+> ![[Figures/sLSTM_raw.png|center]]
 > <center> Figure: sLSTM without stabilization but with introduced exponential "activation functions" </center>
 >
 ><u>Scalar Version</u>
@@ -95,6 +95,8 @@
 > 
 > ![[Figures/sLSTM_memory_mixing_heads.png|center|400]]
 > <center> Figure: Recurrent matrix weight for standard LSTM on the <b>left</b> and blockdiagonal recurrent matrix for sLSTM on the <b>right</b> </center>
+> 
+> **The new memory mixing saves memory consumption by optimizing the learning strategy.**
 
 >[!remark] Remark on Computation
 >Since sLSTM still uses recurrency, it lacks the ability to be parallized.
@@ -199,16 +201,16 @@
 ><center> xLSTM[a:b] <=> <b>a</b> layers of mLSTM and <b>b</b> layers of sLSTM blocks </center>
 >
 >>[!tip] Experiment Language Task with State Tracking
->> ![[Figures/experiment_1.png]]
+>> ![[Figures/experiment_1.png|center]]
 >
 >>[!tip] Experiment Associative Recall
 >>
 >>>[!example] Task Associative Recall
 >>>In an *Associative Recall* experiment a model receives a corrupted pattern and is expected to return the fully recovered pattern. 
 >>
->>![[Figures/experiment_2.png]]
+>>![[Figures/experiment_2.png|center]]
 >>
 >>The *KV Pair* distinction is concerned with different *Key-Value pairs* where key is a corrupted pattern and value the expected recovered pattern.  
 >
 >>[!tip] Experiment Next Token Prediction
->>![[Figures/experiment_4.png]]
+>>![[Figures/experiment_4.png|center]]

@@ -1,4 +1,4 @@
->[!remark] Bemerkung
+ü>[!remark] Bemerkung
 > Damit eine analytische Auseinandersetzung mit asymmetrischen Verschlüsselungsverfahren möglich ist, führen wir zunächst gruppen- (Abstrakte Algebra) und zahlentheoretische Grundlagen ein
 
 ## 2.1 Algebraische Grundlagen
@@ -322,6 +322,11 @@
 >[!def] Definition Äquivalenzklassen bezüglich der Modulus Äquivalenzrelation
 > Wir definieren eine [[#^8daf7c|Äquivalenzklasse]] für $a\in \mathbb{Z}$ bezüglich des **Moduls** $n$ als
 > $$[a]_{n} = \{ b \in \mathbb{Z} \; | \; a \equiv b \;\;(\text{mod } n) \}$$
+> Diese Form der [[#^8daf7c|Äquivalenzklasse]] werden wir fortan 
+> <center><b>Restklasse</b></center>
+> nennen.
+
+^638cd1
 
 >[!lemma]
 >Die [[#^8daf7c|Äquivalenzklassen]] partitionieren $\mathbb{Z}$ vollständig bezüglich des Moduls $n$ in $n$ disjunkte Partitionen.
@@ -373,16 +378,19 @@
 >[!property] Eigenschaften der Operationen of $\mathbb{Z}_{n}$
 >1. Die [[#^c5cc22|Operation]] $+ : \mathbb{Z}_{n} \times \mathbb{Z}_{n} \to \mathbb{Z}_{n}$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}$ gilt:
  $+$ bildet eine [[#^afad91|kommutative Gruppe]]  $(\mathbb{Z}_{n},+)$
->2. Die [[#^c5cc22|Operation]] $+ : \mathbb{Z}_{n} \times \mathbb{Z}_{n} \to \mathbb{Z}_{n}$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}$ gilt:
- $\cdot$ bildet eine [[#^afad91|kommutative Halbgruppe]]  $(\mathbb{Z}_{n}\setminus\{0\}, \cdot)$
+ > 	- ... ist assoziativ
+>	- ... es existiert das neutrale Element $e=0$
+>	- ... das inverse Element für $a=-a$
+>	- ... ist kommutativ
+>1. Die [[#^c5cc22|Operation]] $\cdot : \mathbb{Z}_{n}^* \times \mathbb{Z}_{n}^* \to \mathbb{Z}_{n}^*$ ein, wobei $\mathbb{Z}_{n}^*=\mathbb{Z}_{n}\setminus \{ 0 \}$ und für $\forall a,b \in \mathbb{Z}_{n}$ gilt:
+ $\cdot$ bildet eine [[#^afad91|kommutative Halbgruppe]]  $(\mathbb{Z}_{n}^*, \;\cdot\;)$
 >	- ... ist assoziativ
 >	- ... es existiert das neutrale Element $e=1$
 >	- ... das inverse Element für $a$ existiert nicht, wenn $a$ und $n$ gemeinsame Teiler haben
 >	- ... ist kommutativ
->3. Die [[#^c5cc22|Operation]] $+ : \mathbb{Z}_{n} \times \mathbb{Z}_{n} \to \mathbb{Z}_{n}$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}$ gilt:
- $\cdot$ bildet eine [[#^afad91|kommutative Gruppe]] $(\mathbb{Z}_{n}\setminus \{ 0 \})$, wenn $n$ eine Primzahl ist
->	- ... das heißt das inverse Element existiert hier für jedes beliebige Element in $\mathbb{Z}_{n}$
-
+>3. Die [[#^c5cc22|Operation]] $\cdot : \mathbb{Z}_{n}^* \times \mathbb{Z}_{n}^* \to \mathbb{Z}_{n}^*$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}^*$ gilt:
+ $\cdot$ bildet eine [[#^afad91|kommutative Gruppe]] $(\mathbb{Z}_{n}^*, \;\cdot\;)$, wenn $n$ eine Primzahl ist
+>	- ... das heißt das inverse Element existiert hier für jedes beliebige Element in $\mathbb{Z}_{n}^*$
 ---
 
 >[!example] Übungen
@@ -786,7 +794,7 @@
 
 ---
 
->[!warning] Achtung!
+>[!warning] Achtung, Wichtig!
 > Es ist kein effizientes Verfahren bekannt, um eine beliebige Zahl $n \in \mathbb{N}$ in seine Primfaktoren zu zerlegen. 
 ><center> <h3> Das bezeichnen wir als <u>Faktorisierungsproblem</u> </h3></center>
 >
@@ -811,7 +819,7 @@
 >>Das heißt der Zähler und der Nenner nähern sich an je größer das $x \in \mathbb{R}^+$ wird.
 >
 >>[!remark]- Bemerkung zur Geschichte (Informativ)
->>Der deutsche Mathematiker Carl Friedrich Gauß (1777-1855) hat diesen Satz 1793 im Alter von 16 Jahren vermutet und wurde erst im Jahr 1896 über die **asymptotische Konvergenz**  von Jacques Salomon Hadamard und Charles-Jean de La Vallée Poussin bewiesen.
+>>Der deutsche Mathematiker Carl Friedrich Gauß (1777-1855) hat diesen Satz 1793 im Alter von 16 Jahren vermutet und der Satz wurde erst im Jahr 1896 über die **asymptotische Konvergenz**  von Jacques Salomon Hadamard und Charles-Jean de La Vallée Poussin bewiesen.
 >>
 >>![[Figures/gauss_brief.png| center | 600]]
 >><center>Abbildung: Brief von Gauß an seinen Freund Johann Franz Encke</center>
@@ -882,3 +890,38 @@
 >>Damit die Behauptung stand hält, muss $p\;|\;1$ wegen des [[#^a40b0b| Satzes der Teilbarkeit von Summen und Differenzen]], was aber ein Widerspruch ist, daher muss gelten, dass
 >>$$p \;|\; ab \implies p \;|\; a \text{ oder } p \;|\; b \tag*{$\square$}$$
 
+>[!def] Definition Modulare Inverse
+>Es seien $n \in \mathbb{N}$ und $a \in \mathbb{Z}$. Eine Zahl $b \in \mathbb{Z}$ mit 
+>$$a \cdot b \equiv 1 \;\;(\text{mod } n)$$
+>wird **modulares Inverses** von $a$ bezüglich $n$ genannt. Wir kennzeichnen das **modulare Inverse** von $a$ als
+>$$a^{-1}\equiv b \;\;(\text{mod } n)$$
+>
+>>[!warning]- Achtung, Wichtig! Rückblick zu den Algebraischen Strukturen
+>> Das modulare Inverse bezieht sich auf die [[#^f42169| algebraischen Grundlagen]], genau genommen die [[#^afad91|algebraische Strukturen]]. Dort haben wir den Term des [[#^afad91|inversen Elements]] definiert, welches uns zu einem $a \in G$ ein Element liefert, sodass $$a \odot a^{-1} = e$$ liefert, wobei $e$ das neutrale Element in der algebraischen Struktur $(G, \odot)$ ist. 
+>> 
+>> Üblicherweise für die gewöhnliche Multiplikation in $(\mathbb{Q}\setminus \{ 0 \},\cdot)$ verstehen wir für jedes beliebige $a \in \mathbb{Q}$ das **inverse Element** als
+>> $$a^{-1}= \frac{1}{a}$$
+>> Das heißt, nehmen wir Beispielsweise eine ganze Zahl $a=5$, so wäre das **inverse Element** dazu $a^{-1}= \frac{1}{5}$, weil
+>> $$a \cdot a^{-1}= 5 \cdot \frac{1}{5}=1$$
+>> wobei $1$ das **neutrale Element** in $(\mathbb{Q}\setminus \{ 0 \}, \cdot)$ ist. <b><span style="color:#FF8888">Aber</span></b> würden wir dieselbe Logik für $(\mathbb{Z}_{n}, \cdot)$ anwenden, würden wir ein Problem erhalten. Für $a=5$ würde $a^{-1}\neq \frac{1}{5}$ sein, <b><span style="color:#FF8888">weil es in</span></b> $\mathbb{Z}_{n}\setminus \{ 0 \}$<b><span style="color:#FF8888"> keine gebrochenen Zahlen gibt!</span></b>. Wir arbeiten in diesem Modul mit diskreten Werten, vielmehr mit den [[#^f52c1d|ganzen Zahlen]]. Daher suchen wir eine Zahl $a^{-1}$ die unter dem Modul $n$ sich invers zu $a$ verhält.
+>
+>>[!example]- Beispiel: $5^{-1}\equiv 4 \;\;(\text{mod } 19)$, weil...
+>>$$\begin{alignat}{2}
+>> 5^{-1}&\equiv 4 &&\;\;(\text{mod } 19) \qquad&&\Big\vert \cdot 5 \\
+>> 1&\equiv 20 &&\;\;(\text{mod } 19)  \\
+>> 1&\equiv 1 &&\;\;(\text{mod } 19)  \tag*{$\blacktriangleleft$}
+>>\end{alignat}$$ 
+>
+>>[!example]- Beispiel: $5^{-1} \equiv 23 \;\;(\text{mod } 19)$, weil...
+>>Wir bemerken, dass in $\mathbb{Z}_{19}$ $$[23]=[4]$$
+>>gilt, daher können wir dank der [[#^638cd1|Restklassen]] schreiben
+>>$$\begin{align}
+>> 5^{-1} &\equiv 23 &&\;\;(\text{mod } 19) \\
+>> 5^{-1} &\equiv 4 &&\;\;(\text{mod } 19)
+>>\end{align}$$
+>>was wir in der vorangegangen Aufgabe bereits gezeigt haben.
+>>$$\tag*{$\blacktriangleleft$}$$
+>
+>>[!remark] Bemerkung: Das modulare Inverse existiert nicht immer, es existiert nur, wenn $a$ und $n$ teilerfremd sind.
+
+>[!theorem] Satz Existenz zum Modularen Inversen

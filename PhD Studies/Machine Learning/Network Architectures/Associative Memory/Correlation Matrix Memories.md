@@ -16,7 +16,7 @@
 >$$\mathbf{A}\mathbf{f}_{i} =\mathbf{g}_{i}$$
 >>[!proof]-
 >>$$\begin{align}
->>\mathbf{A}\mathbf{f}_{i}&=\mathbf{A}_{i}\mathbf{f}_{i} + \mathbf{A}_{j}\mathbf{f}_{i} \\
+>>\mathbf{A}\mathbf{f}_{i}&=\mathbf{A}_{i}\mathbf{f}_{i} + \mathbf{A}_{j}\mathbf{f}_{i} \tag{$\mathbf{A}_i + \mathbf{A}_j = \mathbf{A}$}\\
 >> &= \underbrace{ (\mathbf{f}_{i}\mathbf{g}_{i}^T) }_{ =\mathbf{A_{i}} }\mathbf{f}_{i} + \underbrace{ \left( \sum_{j \neq i} \mathbf{f}_{j}\mathbf{g}_{j}^T \right) }_{ =\mathbf{A}_{j} } \mathbf{f}_{i} \\
 >> &= \mathbf{g}_{i}\underbrace{ (\mathbf{f}_{i}^T\mathbf{f}_{i}) }_{ = \lvert\lvert \mathbf{f}_{i} \rvert\rvert = 1  } + \sum_{j \neq i} \mathbf{g}_{j}\underbrace{ (\mathbf{f}_{j}^T\mathbf{f}_{i}) }_{ =0 } \\
 >> &= \mathbf{g}_{i}
