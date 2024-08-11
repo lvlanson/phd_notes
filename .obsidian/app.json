@@ -38,5 +38,6 @@
     "downscalePercent": 60
   },
   "livePreview": false,
-  "defaultViewMode": "preview"
+  "defaultViewMode": "preview",
+  "showLineNumber": true
 }

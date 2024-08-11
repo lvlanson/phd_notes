@@ -133,6 +133,8 @@
 >> ![[Figures/frequenz_analyse.png|center|500]]
 >> <center> Abbildung: Verteilung der Buchstaben in der englischen Sprache
 
+^36fe79
+
 >[!Theorem] Kerckhoffs' Prinzip
 > Kerckhoffs' Prinzip besagt, dass die Sicherheit eines kryptologischen Verfahrens nicht von der Geheimhaltung des Verfahrens abhängig ist. Nach diesem Prinzip muss die Geheimhaltung des Schlüssels ausreichend sein.
 >

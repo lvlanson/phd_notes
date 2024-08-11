@@ -1,4 +1,4 @@
-ü>[!remark] Bemerkung
+>[!remark] Bemerkung
 > Damit eine analytische Auseinandersetzung mit asymmetrischen Verschlüsselungsverfahren möglich ist, führen wir zunächst gruppen- (Abstrakte Algebra) und zahlentheoretische Grundlagen ein
 
 ## 2.1 Algebraische Grundlagen
@@ -80,7 +80,7 @@
 ^afad91
 
 >[!def] Definition Äquivalenrelation
->Eine Relation $\sim$ auf einer Menge $G$ heißt Äquivalenzrelation, wenn folgende Eigenschaften auf der Relationsmenge $R \subseteq G \times G$ erfüllt sind
+>Eine Relation $\sim$ auf einer Menge $G$ heißt **Äquivalenzrelation**, wenn folgende Eigenschaften auf der Relationsmenge $R \subseteq G \times G$ erfüllt sind
 >1. Reflexitivität: $\forall x_{1} \in G: (x_{1},x_{1}) \in R$
 >2. Symmetrie: $\forall x_{1}, x_{2} \in G: (x_{1},x_{2}) \in R \implies (x_{2},x_{1}) \in R$
 >3. Transitivität: $\forall x_{1},x_{2},x_{3} \in G: (x_{1},x_{2}) \in R \; \land (x_{2}, x_{3}) \in R \implies (x_{1},x_{3}) \in R$
@@ -153,7 +153,7 @@
 ^6a2086
 
 >[!theorem] Satz Teibarkeit von Summen und Differenzen
->Seien $a,b,n \in \mathbb{Z}$ mit $n\;|\;a$ und $n\;|\;b$, dann gilt auch
+>Seien $a,b,n \in \mathbb{Z}, n \neq 0$ mit $n\;|\;a$ und $n\;|\;b$, dann gilt auch
 >$$n\;|\;a+b \text{ und } n\;|\;a-b$$
 >
 >>[!proof]- Beweis
@@ -331,7 +331,7 @@
 >[!lemma]
 >Die [[#^8daf7c|Äquivalenzklassen]] partitionieren $\mathbb{Z}$ vollständig bezüglich des Moduls $n$ in $n$ disjunkte Partitionen.
 >
->Wir bezeichnen fortan $\mathbb{Z}_{n}=\{ [0]_{n}, [1]_{n}, \dots, [n-1]_{n} \}$ als die Menge aller [[#^8daf7c|Äquivalenzklassen]] bezüglich der Kongruenz-Äquivalenzrelation modulo $n$.
+>Wir bezeichnen fortan $\mathbb{Z}_{n}=\{ [0], [1], \dots, [n-1] \}$ als die Menge aller [[#^8daf7c|Äquivalenzklassen]] bezüglich der Kongruenz-Äquivalenzrelation modulo $n$.
 >
 >>[!example]- Beispiel $\mathbb{Z}_{3}$
 >>Für $\mathbb{Z}_{3}$ haben wir 3 Äquivalenzklassen
@@ -345,9 +345,21 @@
 >
 >>[!remark] Bemerkung zur Notation
 >> Statt 
->> $$\mathbb{Z}_{n} = \{ [0]_{n}, [1]_{n}, \dots, [n-1]_{n} \}$$
+>> $$\mathbb{Z}_{n} = \{ [0], [1], \dots, [n-1] \}$$
 >> schreiben wir fortan
 >> $$\mathbb{Z}_{n} = \{ 0,1,\dots,n-1 \}$$
+>
+>>[!remark]- Bemerkung zur Partitionierung durch Äquivalenzklassen
+>>Da die Äquivalenzklassen disjunkt sind, kann ein Element nur einer einzigen Äquivalenzklasse angehören. Seien $a,b \in G$ und es sei eine Äquivalenzrelation $~$ auf $G$ definiert. Dann gilt
+>>$$[a] \cap [b] = \emptyset \text{ oder } [a] = [b]$$
+>>Außerdem gilt, dass die Äquivalenzklassen die komplette Menge partitionieren. Das bedeutet, seien $[a]_{i}$ alle $n$ Äquivalenzklassen der Menge $G$, dann muss gelten
+>>$$\bigcup_{i=1}^n [a]_{i} = G$$
+>
+>>[!remark]- Bemerkung zur Bezeichnung Restklassen
+>>Wir nennen Äquivalenzklassen unter der Modulus Kongruenzrelation auch **Restklassen**.
+
+^91d168
+
  
 >[!remark] Bemerkung zur "Restklassenarithmetik"
 > Wir haben nun erfolgreich die [[#^360a7d| Kongruenz Äquivalenzrelation]] als eine [[#^afad91|algebraische Struktur]] eingeführt. Über die [[#^6a2086|Eigenschaften der ganzzahligen Teilung]] und dem [[#^a40b0b| Satz der Teilbarkeit von Summen und Differenzen]] können wir zusammenfassend sagen, dass für $a,b \in \mathbb{Z}$ und dem [[#^638cd1|Modul]] $n \in \mathbb{N}$
@@ -355,7 +367,7 @@
 > \Big((a \text{ mod } n) \pm (b \text{ mod } n)\Big) \;\text{mod } n&= (a\pm b) \text{ mod } n  \tag{1} \\
 > \Big((a \text{ mod } n) \cdot (b \text{ mod } n)\Big) \;\text{mod } n&= (a\cdot b) \text{ mod } n  \tag{2}
 >\end{align}$$
->gilt. Gleichung $(1)$ entsteht aus der [[#^a40b0b| der Teilbarkeit von Summen und Differenzen]] und Gleichung $(2)$ aus der Eigenschaft $3$ in den [[#^6a2086|Eigenschaften der ganzzahligen Teilung]]. Wir können somit auch einfach mit den Restklassen rechnen. Angenommen wir haben das Modul $n$, also demnach die Gruppe $\mathbb{Z}_{n}$, dann können wir analog für Gleichung $(1)$ und $(2)$ schreiben
+>gilt. Gleichung $(1)$ entsteht aus der [[#^a40b0b| der Teilbarkeit von Summen und Differenzen]] und Gleichung $(2)$ aus der Eigenschaft $3$ in den [[#^6a2086|Eigenschaften der ganzzahligen Teilung]]. Wir können somit auch einfach mit den Restklassen rechnen. Angenommen wir haben das Modul $n$, also demnach die Gruppe $\mathbb{Z}_{n}$, dann können wir analog für Gleichung $(1)$ und $(2)$ in der Form von [[#^91d168|Restklassen]] schreiben
 >$$\begin{align}
 > [a] \oplus [b] &:= [a+ b] \tag{1} \\
 > [a] \ominus [b] &:= [a- b] \tag{1} \\
@@ -393,6 +405,9 @@
 >3. Die [[#^c5cc22|Operation]] $\cdot : \mathbb{Z}_{n}^* \times \mathbb{Z}_{n}^* \to \mathbb{Z}_{n}^*$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}^*$ gilt:
  $\cdot$ bildet eine [[#^afad91|kommutative Gruppe]] $(\mathbb{Z}_{n}^*, \;\cdot\;)$, wenn $n$ eine Primzahl ist
 >	- ... das heißt das inverse Element existiert hier für jedes beliebige Element in $\mathbb{Z}_{n}^*$
+
+^916051
+
 ---
 
 >[!example] Übungen
@@ -741,6 +756,8 @@
 >[!def] Definition Primzahl ([[../../PDFs/judson2022.pdf#page=22|Quelle]])
 >Sei $p \in \mathbb{N}$ mit $p > 1$. Wir nennen $p$ eine **Primzahl**, wenn die einzigen Zahlen, die $p$ ganzzahlig teilen, $p$ selbst und $1$ sind. 
 
+^966cde
+
 >[!theorem] Satz Die Existenz von Unendlich vielen Primzahlen (Euklid) ([[../../PDFs/judson2022.pdf#page=22|Quelle]])
 >Es existieren unendlich viel Primzahlen
 >>[!proof]- Beweis
@@ -848,6 +865,8 @@
 >$$P(k \in \mathbb{P})=\frac{1}{\log n}$$
 >
 
+^7e3f5c
+
 >[!remark]- Bemerkung: Informative Ergänzung zu der Verteilung der Primzahlen (Video)
 >
 >Dieses Video ist recht kurz und sehr empfehlenswert.
@@ -894,6 +913,8 @@
 >
 >>[!example]- Beispiel $5 \;|\; (4 \cdot 5)$
 >> $$\underbrace{ \underbrace{ 5 \;|\; (4 \cdot 5) }_{ \text{ wahr} } \implies \underbrace{ \underbrace{ 5 \;|\; 4 }_{ \text{falsch} } \; \lor \; \underbrace{ 5 \;|\;5 }_{ \text{wahr} } }_{ \text{wahr} } }_{ \text{wahr} }$$
+
+^f65359
 
 >[!def] Definition Modulare Inverse
 >Es seien $n \in \mathbb{N}$ und $a \in \mathbb{Z} \setminus \{ 0 \}$. Eine Zahl $b \in \mathbb{Z}$ mit 
@@ -954,7 +975,7 @@
 >> $$\tag*{$\square$}$$
 >>>[!remark] Bemerkung: Wären $a,n$ nicht teilerfremd, so würde auf der linken Seite der Gleichung die $1$ nicht erscheinen.
 >
->>[!algo] Implementation in Sage
+>>[!algo]- Implementation in Sage
 >>```python
 >>def modinv(a,n):
 >>	g,aa,nn = xgcd(a,n)
@@ -963,8 +984,8 @@
 >>	else:
 >>		return None
 >>```
->>>[!remark] Bemerkung zu Sage
->>>Sage ist eine mathematische Programmierumgebung in der Programmiersprache **Python** eingebettet. In *SageMath* werden diverse bekannte mathematische Open-Source Bibliotheken integriert wie 
+>>>[!remark]- Bemerkung zu Sage
+>>>Sage ist eine mathematische Programmierumgebung, die in der Programmiersprache **Python** eingebette istt. In *SageMath* werden diverse bekannte mathematische Open-Source Bibliotheken integriert wie 
 >>>- NumPy
 >>>- SciPy
 >>>- matplotlib
@@ -974,3 +995,5 @@
 >>>- R usw.
 >>>
 >>>In den Praktika werden wir in erster Linie in Sage programmieren, dazu ist Grundlagenwissen zur Python Syntax nötig und Funktionen aus der Sage Bibliothek wie beispielsweise der [erweiterte Euklidische Algorithmus - xgcd (Link zur Dokumentation)](https://doc.sagemath.org/html/en/reference/rings_standard/sage/arith/misc.html).
+
+^c7c061
