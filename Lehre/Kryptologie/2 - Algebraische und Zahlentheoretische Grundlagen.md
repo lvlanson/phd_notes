@@ -811,6 +811,8 @@
 >> 
 >> Daher verbleibt nur Fall, dass $s_{1}=r_{1}$. Dieser Prozess kann iterativ für alle $p_{a}$ und $q_{b}$ wiederholt werden, wodurch die Eindeutigkeit gezeigt ist. $$\tag*{$\square$}$$
 
+^50378b
+
 ---
 
 >[!warning] Achtung, Wichtig!
@@ -821,6 +823,29 @@
 >>Im späteren Verlauf der Veranstaltung werden wir Faktorisierungsverfahren kennenlernen, die Faktoren ermitteln können, aber nicht effizient sind.
 
 ---
+
+>[!lemma] Lemma Teilbarkeit über Primzahlfaktoren 
+>Sei $n \in \mathbb{N}$ mit $n=p_{1} \cdot \ldots \cdot p_{k}$ und $a \in \mathbb{Z}$, dann gilt
+>$$n \;|\; a \iff p_{1} \;|\; a \land \ldots \land p_{k} \;|\; a$$
+>
+>>[!proof]- Beweis
+>> Wir zeigen zunächst ($\implies$).
+>> 
+>> Wenn $n \;|\; a$, dann existiert ein $q \in \mathbb{Z}$, sodass
+>> $$\begin{align}
+>> q \cdot n &= a \\
+>> q \cdot (p_{1} \cdot \ldots \cdot p_{i} \cdot \ldots \cdot p_{k}) &= a \qquad&&\Big\vert :p_{i}  \\
+>> q \cdot \underbrace{ \left( p_{1} \cdot \ldots \cdot \frac{p_{i}}{p_{i}} \cdot \ldots \cdot p_{k} \right) }_{ =n' } &= \frac{a}{p_{i}} \\
+>> q \cdot n' &= \frac{a}{p_{i}}
+>>\end{align}$$
+>>Wir bezeichnen $n'=\dfrac{n}{p_{i}}$ für ein beliebigen Primfaktor $p_{i}$ von $n$. Es ist leicht ersichtlich, dass $q \cdot n'$ eine ganze Zahl sein muss, da beide Faktoren ganze Zahlen sind. Daher muss $\dfrac{p_{i}}{a}$ eine ganze Zahl sein und demzufolge $p_{i}\;|\;a$  für jedes beliebige $p_{i}$ gelten. $$\tag*{$\checkmark$}$$
+>>Wir zeigen nun die andere Richtung ($\Longleftarrow$)
+>>
+>>Wenn $p_{1} \;|\; a \land \ldots \land p_{k} \;|\; a$ gilt, dann muss laut dem [[#^50378b|Fundamentalsatz der Arithmetik]] $a$ die Primfaktoren $p_{1}, \dots, p_{k}$ enthalten. Das heißt, es gibt eine Zahl $n=p_{1} \cdot \ldots \cdot p_{k}$ die als Faktor in $a$ enthalten ist. Also muss $n \;|\; a$ gelten
+>>$$\tag*{$\square$}$$
+>
+
+^3dda16
 
 >[!def] Definition Verteilung der Primzahlen
 >Sei $\pi: \mathbb{R}^+ \to \mathbb{N}$ definiert mit

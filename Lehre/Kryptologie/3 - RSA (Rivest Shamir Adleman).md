@@ -35,9 +35,9 @@
 
 ## 3.1 Mathematische Grundlagen
 
->[!theorem] Kleiner Satz von Fermat (Sylvia Forman, Agnes M. Rash (auth.) - The Whole Truth About Whole Numbers_ An Elementary Introduction to Number Theory (2015, Springer))
+>[!theorem] Kleiner Satz von Fermat ([[../../PDFs/forman2015.pdf#page=223|Quelle]])
 >
-> Für jede Primzahl $p$ und jede Zahl $a \in \mathbb{Z}$ mit $\text{ggT}(a,p)=1$ gilt
+> Für jede Primzahl $p$ und jede Zahl $a \in \mathbb{Z}$ mit $a \neq 0$ und $\text{ggT}(a,p)=1$ gilt
 > $$a^{p-1} \equiv 1 \;\;(\text{mod } p)$$
 > oder äquivalent dazu
 > $$a^{p} \equiv a \;\;(\text{mod } p)$$
@@ -220,3 +220,223 @@
 >>Fermat war und anderem mit *Blaise Pascal* Mitbegründer der Wahrscheinlichkeitsrechnung.
 >>
 >>- Literaturempfehlung: Fermat's Letzter Satz von Simon Singh
+
+^5e7c61
+
+## 3.2 Das RSA Verfahren
+
+>[!remark] Bemerkung: Struktur der Verfahren
+>Wir werden die Verfahren einteilen in
+> - Schlüsselerzeugung
+> - Verschlüsselung/Entschlüsselung/Signatur
+> - Korrektheitsnachweis
+
+>[!algo] Kryptografisches Verfahren: RSA
+>
+>>[!schlüsselerzeugung]
+>>
+>>1. Bob wählt zwei große Primzahlen $p$ und $q$
+>>2. Bob berechnet $$\begin{align}
+>> n &=pq \tag{Modul}\\
+>> \phi(n)&=(p-1)(q-1) \tag{Phi-Funktion}
+>>\end{align}$$
+>>3. Bob löscht $p$ und $q$
+>>4. Bob wählt $$e \in \mathbb{N} \tag{Encryption-Key}$$ mit den Bedingungen $$\begin{align}
+>>&(1)&&1 < e < \phi(n)  \\
+>>&(2)&&\text{ggT}\big(e, \phi(n)\big) = 1
+>>\end{align}$$
+>>5. Bob teilt seinen **öffentlichen Schlüssel** $(n,e)$ mit
+>>6. Bob berechnet $$d \in \mathbb{N} \tag{Decryption-Key}$$ mit $$\begin{align}
+>> &(1) &&1<d<\phi(n) \\
+>> &(2) && ed \equiv 1 \;\;(\text{mod } \phi(n)) \tag{Modulares Inverses}
+>>\end{align}$$
+>>7. Bob löscht $\phi(n)$ und hält $(n,d)$ geheim
+>
+>>[!verschlüsselung] 
+>> Sei 
+>> - $m \in \mathbb{Z}_{n}$ - zu verschlüsselnde Nachricht
+>> - $(n,e)$ - öffentlicher Schlüssel
+>> - $(n,d)$ - privater/geheimer Schlüssel
+>>
+>> **<u>Verschlüsselung</u>**:
+>> $$c = m^e \text{ mod }n$$
+>> Wir nennen $c \in \mathbb{Z}_{n}$ die Chiffre.
+>> 
+>> **<u>Entschlüsselung</u>**:
+>> $$m = c^{d} \text{ mod }n$$
+>
+>>[!korrektheitsnachweis]
+>>
+>>Wir wollen zeigen, dass wenn wir eine Nachricht $0  \leq m <n$ ver- und entschlüsseln, dass wir dann dieselbe Nachricht wieder erhalten. Dies ist der Ausgangspunkt für Korrektheitsnachweise von Verschlüsselungsverfahren.
+>>
+>>Wir wissen, wenn wir eine Nachricht ver- und entschlüsseln, haben wir
+>>$$\begin{align}
+>> c &= m^e \text{ mod }n \tag{}\\
+>> m &= c^{d} \text{ mod }n 
+>>\end{align}$$
+>>kombiniert ergibt das
+>>$$\begin{align}
+>> m &= (m^e)^d \text{ mod } n \\
+>> m &= m^{ed} \text{ mod } n
+>>\end{align}$$
+>>Wir wechseln an dieser Stelle die Schreibweise von dem [[2 - Algebraische und Zahlentheoretische Grundlagen#^9cd06c| binären Modulus]] zur [[2 - Algebraische und Zahlentheoretische Grundlagen#^360a7d|Kongruenz]], da ohnehin verlangt ist, dass $m \in \mathbb{Z}_{n}$ liegen muss, also
+>>$$m \equiv m^{ed} \;\;(\text{mod } n)$$
+>>Wir beginnen damit zu argumentieren, weshalb es genügt die Kongruenz bezüglich einer der beiden Primzahlen $p,q$ statt für $n$ zu zeigen. Zunächst zum Zweck des einfacheren Verständnisses formulieren wir die Kongruenz um, indem wir alle Argumente auf eine Seite ziehen, also
+>>$$m - m^{ed} \equiv 0\;\;(\text{mod } n)$$
+>>Wir wissen, dass wenn der [[2 - Algebraische und Zahlentheoretische Grundlagen#^9cd06c|Rest]] $0$ ist bezüglich $n$, dass die Teilung aufgeht, also
+>>$$n \;|\; m-m^{ed}$$
+>>Aus der Verfahrensbeschreibung wissen wir, dass $n=p\cdot q$ ist. Wegen des [[2 - Algebraische und Zahlentheoretische Grundlagen#^3dda16|Lemmas der Teilbarkeit über Primfaktoren]] können wir schließen
+>>$$\begin{align}
+>> n \;|\; m-m^{ed} &\iff p \cdot q \;|\; m-m^{ed}  \\
+>> &\iff p \;|\; m-m^{ed} \land q \;|\; m-m^{ed}
+>>\end{align}$$
+>>Für $p$ können wir daher sagen
+>>$$\begin{align}
+>> m - m^{ed} &\equiv 0 &&\;\;(\text{mod } p) \\
+>> m &\equiv m^{ed} &&\;\;(\text{mod } p) \tag{1}
+>>\end{align}$$
+>>
+>> Es genügt die Aussage für $p$ zu zeigen, da diese auch für $q$ gilt, da beides Primzahlen sind und die Eigenschaften der Primzahlen hier maßgeblich für den Nachweis entscheidend sind. 
+>> 
+>> Zunächst prüfen wir den Sonderfall $m=0$.
+>> $$0 \equiv 0^{ed} \;\;(\text{mod } p)$$
+>> Dies scheint auf den ersten Blick offensichtlich wahr. Wir sollten aber bedenken, dass für den Fall $ed = 0$ die Aussage falsch wäre, da $0^0 = 1$. Jedoch sind $e,d>1$, daher kann der Fall nicht eintreten. Wir prüfen den Fall $m=0$ an dieser Stelle, da wir im verbleibenden Beweis den [[#^5e7c61|kleinen Satz von Fermat]] verwenden werden und dafür $m \neq 0$ gelten muss.
+>> 
+>> Wir setzen als den Beweis fort für $1 \leq m < n$. In Kongruenz $(1)$ wollen wir den Term $ed$ im Exponenten auflösen. Wir erinnern uns an die Schlüsselerzeugung unter 6.2, wo $ed$ beschrieben ist als
+>> $$\begin{align}
+>> ed &\equiv 1 &&\;\;(\text{mod } \phi(n)) \qquad&&\Big\vert -1 \\ 
+>> ed -1 &\equiv 0 &&\;\;(\text{mod } \phi(n))
+>>\end{align}$$
+>>Da der Rest $0$ ist wissen wir wieder
+>>$$\phi(n) \;|\; ed-1$$
+>>Daher [[2 - Algebraische und Zahlentheoretische Grundlagen#^9380e8|existiert nach der ganzzahligen Teilung]] eine ganze Zahl $k \in \mathbb{Z}$, sodass
+>>$$\begin{align}
+>>  ed - 1&= k \cdot \phi (n) \qquad&&\Big\vert +1 \\
+>>  ed &=k \cdot \phi (n)+1 
+>>\end{align}$$
+>>Wir setzen nun den gefundenen Ausdruck in Kongruenz $(1)$ ein und erhalten
+>>$$\begin{align}
+>> m &\equiv m^{ed} &&\;\;(\text{mod } p) \\
+>> m &\equiv m^{k \cdot \phi(n) + 1} &&\;\;(\text{mod } p) \\
+>> m &\equiv m^{k \cdot \phi(n)} \cdot m^1 &&\;\;(\text{mod } p) \\
+>>\end{align}$$
+>>Wir erinnern uns, dass $\phi(n)=(p-1)(q-1)$ unter 2. in der Schlüsselerzeugung definiert wurde. Daher setzen wir ein
+>>$$\begin{align}
+>> m &\equiv m^{k (p-1)(q-1)} \cdot m &&\;\;(\text{mod } p) \\
+>>\end{align}$$ 
+>>Da ein Produkt im Exponenten steht, dürfen wir laut den Potenzgesetzten das umschreiben, also $a^{b \cdot c} = \left(a^b\right)^c$. Wir erhalten also
+>>
+>>$$\begin{align}
+>> m &\equiv \left(m^{k (q-1)}\right)^{(p-1)} \cdot m &&\;\;(\text{mod } p)
+>>\end{align}$$
+>> Weil $m,k,q$ alles ganze Zahlen sind, muss auch $m^{k(q-1)}$ eine ganze Zahl $a \in \mathbb{Z}$ sein. Laut dem [[#^5e7c61|kleinen Satz von Fermat]] erhalten wir
+>> $$\begin{align}
+>> m &\equiv \left(\underbrace{ m^{k (q-1)} }_{ =a \in \mathbb{Z} }\right)^{(p-1)} \cdot m &&\;\;(\text{mod } p) \\
+>> m &\equiv \underbrace{ a^{(p-1)} }_{ \equiv 1 \,(\text{mod }p) } \cdot m &&\;\;(\text{mod } p) \\
+>> m &\equiv 1 \cdot m &&\;\;(\text{mod } p) \\
+>> m &\equiv m &&\;\;(\text{mod } p) \\
+>>\end{align}$$
+>>was zu zeigen war.
+>>$$\tag*{$\square$}$$
+>
+>>[!remark] Diskussion: Warum löscht Bob $p,q$ und $\phi(n)$ während der Schlüsselerzeugung?
+>
+>>[!remark] Kontrollfrage: Warum müssen wir den Gültigkeitsnachweis aufteilen in $m = 0$ und $1 \leq m < n$?
+>
+>>[!remark] Kontrollfrage: Was würde passieren, wenn $m \geq n$?
+>
+>>[!remark] Kontrollfrage: Warum ist es wichtig, dass wir in der Schlüsselerzeugung unter 6.2 das modulare Inverse fordern?
+>
+>>[!remark] Kontrollfrage: Warum ist es wichtig, dass wir in der Schlüsselerzeugung unter 4.2 fordern, dass $\phi(n)$ und $e$ teilerfremd sind?
+
+## 3.3 Laufzeitoptimierungen
+
+>[!attention] Laufzeit der Ver- und Entschlüsselung
+>Wenn wir $m^e \text{ mod } n$ oder $c^d \text{ mod }n$ rechnen, erwarten wir enorm viele Multiplikationen durchzuführen, da das Modul $n$ sehr groß gewählt wird und somit $e,d$ ebenfalls enorm groß sein können. Diese Operation wird **modulare Exponentiation** genannt. Um diese Operation in der Berechnung zu optimieren, gibt es verschiedene Algorithmen, die die Laufzeit drastisch senken können. Wir schauen uns dazu die **Repeated Squaring Method** an
+
+>[!algo] Algorithmus: Schnelle Modulare Exponentiation: Repeated Squaring Method 
+>>[!def] Definition Repeated Squaring Method ([[../../PDFs/cormen2022.pdf#page=956|Quelle]])
+>>Seien $a,b \in \mathbb{Z}^+$. Wir definieren die Auflösung von $a^b$ über die wiederholte Quadratur (**Repeated Squaring**) über die Rekursion
+>>$$\begin{align}
+>> a^b = \begin{cases}
+>> 1 & \text{ wenn } b=0 \\
+>> (a^{b/2})^2 & \text{ wenn } b > 0 \text{ und } b \text{ ist gerade} \\
+>> a \cdot a^{b-1} &\text{ wenn } b>0 \text{ und } b \text{ ist ungerade}
+>>\end{cases}
+>>\end{align}$$
+>
+>>[!example]- Beispiel $b=23$ Rekursive Aufschlüsselung
+>>$$\begin{align}
+>> a^{23} &= \color{Lavender}a \cdot a^{22} \tag*{$b=23$ ungerade} \\
+>>  &= a \cdot \color{Lavender}\left(a^{11} \right)^2 \tag*{$b=22$ gerade} \\
+>>  &= a \cdot \left(\color{Lavender}a \cdot a^{10}\color{}\right)^2 \tag*{$b=11$ ungerade} \\
+>>  &= a \cdot \left(a \cdot \color{Lavender}\left(a^{5}\right)^2\color{}\right)^2 \tag*{$b=10$ gerade} \\
+>>  &= a \cdot \left(a \cdot \left(\color{Lavender}a \cdot a^{4}\color{}\right)^2\right)^2 \tag*{$b=5$ ungerade} \\
+>>  &= a \cdot \left(a \cdot \left(a \cdot \color{Lavender}\left(a^{2}\right)^2\color{}\right)^2\right)^2 \tag*{$b=4$ gerade} \\
+>>  &= a \cdot \left(a \cdot \left(a \cdot \left(\color{Lavender}(a\color{})^{2}\right)^2\right)^2\right)^2 \tag*{$b=2$ gerade} \\
+>>  &= a \cdot \left(a \cdot \left(a \cdot \left((\color{Lavender}a \cdot a^0\color{white})^{2}\right)^2\right)^2\right)^2 \tag*{$b=1$ ungerade} \\
+>>  &= a \cdot \left(a \cdot \left(a \cdot \left((a)^{2}\right)^2\right)^2\right)^2 \tag*{$b=0$ terminiert} \\
+>>  \;\tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>>[!lemma]- Schlussfolgerung zur Laufzeitoptimierung
+>>Aufgrund der [[2 - Algebraische und Zahlentheoretische Grundlagen#^6a2086|dritten Eigenschaft der ganzzahligen Teilung]] können wir jeden Rekursionsschritt $\text{ mod }n$ rechnen, wodurch die Laufzeit für $a^b$ von $\mathcal{O}(b)$ auf $\mathcal{O}(2\cdot \lfloor \log_{2}(b) \rfloor)$ bezüglich der Multiplikationsschritte reduziert wird.
+>>
+>>Der Algorithmus zerlegt $b$ quasi in seine binäre Repräsentation, daher schließen wir auf den Logarithmus zur Basis $2$. Im schlimmsten Fall haben wir jeweils $\log_{2}(b)$ Quadraturen und Multiplikationen
+>
+>>[!example]- Beispiel $b=23, a=5, n=7$ (Fortsetzung)
+>>Wir übernehmen unseren gefundenen Ausdruck vom letzten Beispiel
+>>$$\begin{align}
+>> a^{23} &\equiv  a \cdot \left(a \cdot \left(a \cdot \left((a)^{2}\right)^2\right)^2\right)^2 &&\;\;(\text{mod } n) \\
+>>  &\equiv  5 \cdot \left(5 \cdot \left(5 \cdot \left(\underbrace{ (5 \cdot 1)^{2} }_{ =25 }\right)^2\right)^2\right)^2 &&\;\;(\text{mod } 7) \\
+>>  &\equiv  5 \cdot \left(5 \cdot \left(5 \cdot \left(\underbrace{ 25 }_{ \equiv 4 }\right)^2\right)^2\right)^2 &&\;\;(\text{mod } 7) \\
+>>  &\equiv  5 \cdot \left(5 \cdot \left(5 \cdot \underbrace{ 16 }_{ \equiv 2 }\right)^2\right)^2 &&\;\;(\text{mod } 7) \\
+>>  &\equiv  5 \cdot \left(5 \cdot \left(\underbrace{ 10 }_{ \equiv 3 }\right)^2\right)^2 &&\;\;(\text{mod } 7) \\
+>>  &\equiv  5 \cdot \left(5 \cdot \underbrace{ 9 }_{ \equiv_{2} }\right)^2 &&\;\;(\text{mod } 7) \\
+>>  &\equiv  5 \cdot \left(\underbrace{ 10 }_{ \equiv 3 }\right)^2 &&\;\;(\text{mod } 7) \\
+>>  &\equiv  5 \cdot \underbrace{ 9 }_{ =2 } &&\;\;(\text{mod } 7) \\
+>>  &\equiv  10  &&\;\;(\text{mod } 7) \\
+>>  &\equiv  3  &&\;\;(\text{mod } 7) \\ \\
+>> \; \tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>>[!lemma]- Beobachtung zur Rekursiven Zerlegung
+>> Wenn wir $b$ in $a^b$ in seine binäre Repräsentation zerlegen, erhalten wir die Bildungsvorschrift, welche Operationen in unserer Zerlegung wie erfolgen, wobei
+>> - $0 \implies$ Quadrieren 
+>> - $1 \implies$ Quadrieren und mit $a$ multiplizieren
+>
+>>[!example]- Beispiel $b=23$ Binäre Interpretation (Fortsetzung)
+>> $b=23$ lässt sich binär darstellen als
+>> $$10111_{2} =23_{10}$$
+>> Wir starten mit $a^0$ und leiten ab
+>> $$\begin{align}
+>> &a \cdot (a^0)^2 = a\tag{1} \\ 
+>> &a^2 \tag{0} \\
+>> &a \cdot \left(a^2\right)^2 \tag{1}\\
+>> &a \cdot \left(a \cdot \left(a^2\right)^2\right)^2 \tag{1}\\
+>> &a \cdot \left(a \cdot \left(a \cdot \left(a^2\right)^2\right)^2\right)^2 \tag{1}\\ \\
+>> \,\tag*{$\blacktriangleleft$}
+>>\end{align}$$
+>
+>>[!algo] Implementation in Sage
+>>```python
+>># Rekursive Berechnungsvorschrift
+>> def pot_recursive(a,n):
+>> 	if n==0: return 1
+>> 	elif n%2 == 1: return a * pot_recursive(a, n//2) **2
+>> 	else: return pot_recursive(a,n//2)**2 
+>> 	
+>> # Binäre Berechnungsvorschrift
+>> def pot_binary(a,n):
+>>	if n==0: return 1 
+>>	n = bin(n)[2:] # die ersten 2 Zeichen (Indikatoren) weglassen z.B. 0b100101
+>>				   #                                                   ^^	
+>>	result = 1 # Startwert
+>>	for i,n_i in enumerate(n):
+>>		result *= result
+>>		if n_i == '1': 
+>>			result *= a
+>>	return result 
+>>```
+>
+>>[!example] Übung: Implementieren Sie, dass die schnelle Exponentiation zur schnellen modularen Exponentiation wird. Es soll als drittes Argument den Modulus erhalten.

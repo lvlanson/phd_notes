@@ -208,6 +208,43 @@
       "injectColor": true,
       "noTitle": false,
       "copy": false
+    },
+    "schlüsselerzeugung": {
+      "type": "schlüsselerzeugung",
+      "color": "200, 200, 200",
+      "icon": {
+        "name": "key",
+        "type": "font-awesome"
+      },
+      "command": true,
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "verschlüsselung": {
+      "type": "verschlüsselung",
+      "color": "200, 200, 200",
+      "icon": {
+        "name": "lock",
+        "type": "font-awesome"
+      },
+      "command": true,
+      "title": "Ver- und Entschlüsselung",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "Korrektheitsnachweis": {
+      "type": "Korrektheitsnachweis",
+      "color": "200, 200, 200",
+      "icon": {
+        "name": "map-pin",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
     }
   },
   "syntaxHighlight": false,

@@ -1,6 +1,9 @@
 >[!Theorem] Welcome to my Research Page
 >>[!attention] Here you can find my work and knowledge
 >
+>>[!observation] Lehrveranstaltungen
+>>- zu Kryptologie geht es [[Lehre/Kryptologie/0 - Inhaltsverzeichnis|hier entlang]]
+>
 >>[!lemma] I am currently working on
 >>
 >>>[!abstract] Homomorphic Encryption
