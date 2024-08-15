@@ -341,7 +341,7 @@
 >> &(1) &&1<d<\phi(n) \\
 >> &(2) && ed \equiv 1 \;\;(\text{mod } \phi(n)) \tag{Modulares Inverses}
 >>\end{align}$$
->>7. Bob löscht $\phi(n)$ und hält $(n,d)$ geheim
+>>7. Bob löscht $\phi(n)$ und hält seinen **privaten Schlüssel** $(n,d)$ geheim
 >
 >>[!verschlüsselung] 
 >> Sei 
