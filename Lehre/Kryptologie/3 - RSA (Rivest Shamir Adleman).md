@@ -6,7 +6,7 @@
 >[!remark]- Bemerkung Geschichte zu RSA (Informativ)
 > Das [[../../PDFs/rivest1978a.pdf|RSA]] Verschlüsselungsverfahren wurde 1978 von den drei Mathematikern **Rivest, Shamir** und **Adleman** veröffentlicht. Diese Veröffentlichung markierte einen Meilenstein in der Kryptologie. Mit der Veröffentlichung von RSA wurde das erste **asymmetrische Verschlüsselungsverfahren veröffentlicht**. In der [[1 -  Einführung#^36fe79|Klassifizierung der kryptografischen Verfahren]] haben wir RSA als eine der großen kryptografischen Klassen gekennzeichnet.
 > 
-> 1976 haben die Mathematiker Diffie und Hellmann ein Paper (quelle: https://ee.stanford.edu/~hellman/publications/24.pdf) veröffentlicht, indem diese den Bedarf für neue kryptografische Ansätze formuliert haben. Es heißt übersetzt
+> 1976 haben die Mathematiker Diffie und Hellmann ein Paper ([[../../PDFs/diffie1976.pdf|Quelle]]) veröffentlicht, indem diese den Bedarf für neue kryptografische Ansätze formuliert haben. Es heißt übersetzt
 > 
 > ---
 > 
@@ -213,7 +213,7 @@
 >>
 >>Der wohl berühmteste Satz ist Fermat's letzter Satz, welcher die Mathematik ca. 350 Jahre in Rätsel stürzte. Er ist simpel auszudrücken. Für ganze positive Zahlen $a,b,c,n$ 
 >>$$a^n+b^n = c^n$$
->>gibt es keine Lösung, wenn $n>2$. Fermat behauptete, dass er einen *wahrhaft wunderbaren* Beweis wisse. Diese Hinweis hat man als Randnotiz in seiner Ausgabe der Arithmetica gefunden. Fermat hatte seiner Zeit viele Behauptungen aufgestellt und kein Interesse gehabt nachhaltig die Erkenntnisse für die Nachwelt festzuhalten. Nach seinem Tod haben Mathematiker seine Behauptungen gesammelt und sukzessive nachgewiesen oder auch widerlegt. Fermat's letztes Satz hat sich jedoch als die härteste aller Aussagen gezeigt und hat Größen wie beispielsweise Euler verzweifeln lassen.
+>>gibt es keine Lösung, wenn $n>2$. Fermat behauptete, dass er einen *wahrhaft wunderbaren* Beweis wisse. Diese Hinweise hat man als Randnotiz in seiner Ausgabe der Arithmetica gefunden. Fermat hatte seiner Zeit viele Behauptungen aufgestellt und kein Interesse gehabt nachhaltig die Erkenntnisse für die Nachwelt festzuhalten. Nach seinem Tod haben Mathematiker seine Behauptungen gesammelt und sukzessive nachgewiesen oder auch widerlegt. Fermat's letztes Satz hat sich jedoch als die härteste aller Aussagen gezeigt und hat Größen wie beispielsweise Euler verzweifeln lassen.
 >>
 >>Andrew Wiles hat 1993 diesen Satz in einem 200 seitigen Beweis nachgewiesen. Dieser Beweis beinhaltete Erkenntnisse und Methoden, die der Mathematikwelt bis zu dem Zeitpunkt völlig unbekannt waren und hat Gebiete der Mathematik verbunden, deren Verbindung nicht vorstellbar war. Neckisch seiner Natur hat er 350 Jahre noch professionelle Mathematiker nach seinem Tod mit seinen Satz geplagt.
 >>
@@ -222,6 +222,97 @@
 >>- Literaturempfehlung: Fermat's Letzter Satz von Simon Singh
 
 ^5e7c61
+
+>[!def] Definition Euler'sche Phi-Funktion ([[../../PDFs/forman2015.pdf#page=229|Quelle]])
+> Sei $n \in \mathbb{N}$
+> $$\phi(n):= \# \{ k \in \mathbb{N} \;|\; k \leq n \text{ und } \text{ggT}(k,n)=1\}$$
+>>[!remark]- Bedeutung
+>>Die Euler'sche Phi-Funktion zählt alle zu $n$ teilerfremden Zahlen, die inklusiv zwischen $1$ und $n$ liegen.
+>
+>>[!example]- Beispiel $\phi(4)$
+>>$$\begin{align}
+>> \phi(4)&=\#\{ 1,3 \} \\
+>> &= 2
+>>\end{align}$$
+>
+>>[!example]- Beispiel $\phi(11)$
+>>$$\begin{align}
+>> \phi(11) &= \# \{ 1,2,3,4,5,6,7,8,9,10 \} \\
+>> &= 10
+>>\end{align}$$
+>
+>>[!remark]- Bemerkung zur Person Leonhard Euler (Informativ)
+>>Leonhard Euler ist ein in der Schweiz geborener Mathematiker, der von 1707-1783 lebte. In seinen ersten zwanzig Lebensjahren bildete er sich in den Bereichen der Theologie, Medizin, Astronomie, Physik, orientalische Sprachen und auch Mathematik in Basel. Er schloss sein Universitätsstudium mit einem Masterabschluss im Alter von 17 Jahren. Zu damaligen Zeiten war *Mathematiker* kein sicheres Berufsfeld, vor allem nicht die theoretische Mathematik. Daher gestaltete sich seine Berufswahl als schwierig. 
+>>
+>>![[../../Pasted image 20240815134001.png|center|500]]
+>><center>Abbildung: Porträt von Euler (1753)</center>
+>>
+>>Während seine damaligen Lehrer und Freunde als Mathematiker nach St. Petersburg in Russland zogen, wurde Euler als Mitglied der medizinischen und physiologischen Teilen der Akademie aufgenommen. Seine Freunde die *Bernoullis* haben ihn vor Ort empfohlen, weshalb er dort seine Position antreten konnte. Am Tag seiner Ankunft wurde der Tod der damaligen Zarin und Stifterin der Akademie Katharina I. bekannt gegeben, weshalb viel Unruhe in der Stadt St. Petersburg war. Euler wurde daraufhin nicht wie geplant in die medizinische Fakultät, sondern in die mathematische Fakultät gesetzt.
+>>
+>>Nach kurzen Exkursen in die Naturphilosophie wurde Euler mit 26 Jahren höchstrangige Mathematiker an der Akademie in S.t Petersburg. Spätere politische Unruhen und das Abwerben des damaligen Königs Friedrich II. brachten ihn an die königlich preußische Akademie der Wissenschaften zu Berlin. Euler war zu dem Zeitpunkt 33 Jahre alt. Unstimmigkeiten an der Berliner Akademie und Krieg sorgten dafür, dass es Katharina der Großen gelang Euler zurück nach St. Petersburg zurück zu werben. Er wurde dort zum Hofmathematiker ernannt. Zu dem Zeitpunkt war er 59 Jahre alt. Er forschte und lebte dort bis zu seinem Tod 1783 im Alter von 76 Jahren.
+>>
+>>![[../../Pasted image 20240815134628.png|center|500]]
+>><center>Abbildung: Porträt Euler von Joseph Frédéric Auguste Darbès (1778)</center>
+>>
+>>Euler hatte recht früh mit Problemen seiner Sehkraft zu kämpfen. 1766 war er nahezu erblindet. Damit er weiter Bücher und Artikel schreiben konnte, hatte er die Hilfe eines Assistenten, sodass er noch 1770 eines seiner bedeutendsten Werke zur Lehre veröffentlichte: *Vollständige Anleitung zur Algebra*.
+>>
+>>Ein akademischer Kollege schrieb zu Euler,
+>>
+>>---
+>>
+>> <center>So wie Menschen atmen, so wie Adler sich in der Luft halten, so rechnet Euler ohne ersichtliche Mühe.</center>
+>> 
+>>---
+>><p align="right" style="font-family:cursive"><i>François Arago</i></p>
+>>
+>>Euler hat zeit seines Lebens über 500 Bücher und Veröffentlichungen geschrieben. Selbst 50 Jahre nach seinem Tod sind noch sukzessive Artikel von ihm erschienen, sodass die Liste an Veröffentlichungen auf 886 angestiegen ist. Er hat jedes Jahr im Schnitt 800 Seiten geschrieben. Kein anderer Mathematiker hat jemals vergleichbar viel, und zudem auch noch bedeutende Veröffentlichungen geleistet.
+
+>[!theorem] Satz Euler'sche Phi-Funktion von Primzahlen
+>Sei $p$ eine Primzahl, dann gilt
+>$$\phi(p)=p-1$$
+>
+>>[!example] Übung: Beweisen Sie die Aussage.
+>
+
+^481d74
+
+<!--
+>[!theorem] Satz Euler'sche Phi-Funktion von Primzahlpotenzen
+>Sei $p$ eine Primzahl und $a \in \mathbb{N}$, dann gilt
+>$$\phi(p^a)= p^a-p^{a-1}$$
+>
+>>[!proof]- Beweis
+>>Wir bezeichnen $n=p^a$. Laut dem [[2 - Algebraische und Zahlentheoretische Grundlagen|Fundamentalsatz der Algebra]] wissen wir, dass die einzigen Faktoren in $n$ die Primzahl $p$ ist. Daher können nur Vielfache von $p$ einen gemeinsamen Teiler haben, also
+>>$$\text{ggT}(p^a, k \cdot p) = p$$
+>>für $k \in \mathbb{N}$. Genau genommen existieren maximal $a-1$ verschiedene Zahlen, die sich mit $p$ zusammensetzen lassen sodass $k \cdot p \leq p^a$ ist, also
+>>$$1 \cdot p, \;2\cdot p,\;3 \cdot p,\; 4 \cdot p,\; \dots\;,\; \underbrace{ p^{a-1}\cdot p }_{ =p^a }$$
+>>Alle anderen müssen teilerfremd zu $p^a$ sein, daher ziehen wir die $p^{a-1}$ gefundenen Zahlen ab, also
+>>$$\phi(p^a)=p^a-p^{a-1}$$
+-->
+
+>[!theorem] Satz Euler'sche Phi-Funktion des Produkts von zwei Primzahlen
+>Seien $p,q \in \mathbb{Z}$  Primzahlen, dann gilt
+>$$\phi(p \cdot q)= \phi(p)\cdot \phi(q)=(p-1)(q-1)$$
+>>[!proof]- Beweis
+>>Wir wissen, dass es maximal $n=p\cdot q$ Zahlen gibt, die zwischen $1$ und $p \cdot q$ liegen. Daher ist unsere Strategie die Zahlen zu zählen, die $p \cdot q$ teilen und diese Anzahl von $n$ abzuziehen.
+>>
+>>Da sowohl $p$ und $q$ Primzahlen sind, kann $n$ nur mit Vielfachen von jeweils $p$ und $q$ gemeinsame Teiler haben. Die Zahl $n=p \cdot q$ muss gemeinsame Teiler mit folgenden Zahlen haben
+>>$$\begin{align}
+>> 1p,\;2p\;,\;3p\;,\;\dots\;,\;q\cdot p \tag{$p$ verschiedene}\\
+>> 1q,\;2q\;,\;3q\;,\;\dots\;,\;p\cdot q \tag{$q$ verschiedene}\\
+>>\end{align}$$
+>>Wir bemerken, dass $q \cdot p$ zwei mal gezählt wird. Daher sind das 
+>>$$q + p - 1$$
+>>verschiedene Zahlen, wenn wir das doppelte Element $q \cdot p$ einmal abziehen. Diese Anzahl ziehen wir nun von der Gesamtmöglichen Anzahl $n=p \cdot q$ ab, also
+>>$$\begin{align}
+>> \phi(p \cdot q) &= pq - (q+p-1) \\
+>>  &= pq - q-p+1 \\ 
+>> &= (p-1)(q-1)
+>>\end{align}$$
+>>Laut dem [[#^481d74|Satz der Euler'schen Phi-Funktion von Primzahlen]] können wir das darstellen als
+>>$$\phi(p \cdot q) = \phi(p) \cdot \phi(q)$$
+>>was es zu zeigen galt. $$\tag*{$\square$}$$
+
 
 ## 3.2 Das RSA Verfahren
 
@@ -439,4 +530,4 @@
 >>	return result 
 >>```
 >
->>[!example] Übung: Implementieren Sie, dass die schnelle Exponentiation zur schnellen modularen Exponentiation wird. Es soll als drittes Argument den Modulus erhalten.
+>>[!example] Übung: Implementieren Sie, dass die schnelle Exponentiation zur schnellen modularen Exponentiation wird. Es soll als drittes Argument den Modulus $n$ erhalten.

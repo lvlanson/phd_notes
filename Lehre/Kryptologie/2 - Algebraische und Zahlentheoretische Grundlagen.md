@@ -36,7 +36,7 @@
 > $$(x_{1} \circ x_{2})\circ x_{3} = x_{1}\circ (x_{2} \circ x_{3})$$
 > 2. $G$ besitzt genau ein **neutrales Element**, das heißt $\exists! e \in G$, sodass $\forall x \in G:$
 >  $$x \circ e = e \circ x = x$$
->  3. $G$ besitzt **inverse Elemente**, das heißt $\forall x \in G: \exists! x^{-1} \in G$, sodass
+>  3. $G$ besitzt jeweils genau ein **inverse Elemente**, das heißt $\forall x \in G: \exists! x^{-1} \in G$, sodass
 >   $$x \circ x^{-1} = x^{-1} \circ x = e$$
 > ---
 >Wenn zusätzlich gilt
@@ -820,7 +820,10 @@
 ><center> <h3> Das bezeichnen wir als <u>Faktorisierungsproblem</u> </h3></center>
 >
 >>[!remark]- Bemerkung
->>Im späteren Verlauf der Veranstaltung werden wir Faktorisierungsverfahren kennenlernen, die Faktoren ermitteln können, aber nicht effizient sind.
+>>Es gibt nicht-effiziente Faktorisierungsverfahren wie beispielsweise
+>>- Pollard'sche Rho-Methode
+>>- Pollard'sche $p-1$-Methode
+>>- Fermat-Methode
 
 ---
 
@@ -1022,3 +1025,53 @@
 >>>In den Praktika werden wir in erster Linie in Sage programmieren, dazu ist Grundlagenwissen zur Python Syntax nötig und Funktionen aus der Sage Bibliothek wie beispielsweise der [erweiterte Euklidische Algorithmus - xgcd (Link zur Dokumentation)](https://doc.sagemath.org/html/en/reference/rings_standard/sage/arith/misc.html).
 
 ^c7c061
+
+>[!lemma] Lemma Teilbarkeit von Teilerfremden Produkten
+>Seien $a,b,c \in \mathbb{Z}$ mit $a,b \neq 0$ und $\text{ggT}(a,b)=1$, dann gilt
+>$$a \;|\; c \land b \;|\; c \implies ab \;|\; c$$
+>>[!proof]- Beweis
+>>Unter Verwendung [[#^42f9e5|Bezouts Lemma]] können wir die Aussage $\text{ggT}(a,b)=1$ mit $a',b' \in \mathbb{Z}$ ausdrücken als
+>>$$aa'+bb'=1$$
+>>Diese Gleichung können wir auf beiden Seiten mit $c$ multiplizieren und erhalten
+>>$$aa'c+bb'c=c \tag{1}$$
+>>Der Prämisse können wir nach der [[#^9380e8|ganzzahligen Teilung]] entnehmen
+>>$$\begin{align}
+>> a \;|\; c &\implies \exists k_{a}\in \mathbb{Z}: a k_{a}=c\\
+>> b \;|\; c &\implies \exists k_{b}\in \mathbb{Z}: b k_{b}=c
+>>\end{align}$$
+>>Da beide Formulierungen Ausdrücke für $c$ sind können wir diese auf der linken Seite von Gleichung $(1)$ einsetzen
+>>$$\begin{align}
+>> aa'\underbrace{ bk_{b} }_{ =c } + bb'\underbrace{ ak_{a} }_{ =c } &= c \\
+>> ab(a'k_{b}+b'k_{a}) &= c
+>>\end{align}$$
+>>Da die linke Seite offensichtlich durch $ab$ teilbar ist, muss demnach $c$ auch durch $ab$ teilbar sein, was es zu zeigen galt.
+>>$$\tag*{$\square$}$$
+
+^251edf
+
+>[!lemma] Lemma Teilerfremde über Teilerfremde Produkte
+>Seien $a,b,c \in \mathbb{Z}\setminus\{ 0 \}$, dann gilt
+>$$\Big(\text{ggT}(a,b)=1\Big) \land \Big(\text{ggT}(a,c)=1\Big)\implies \Big(\text{ggT}(a,bc)=1\Big)$$
+>>[!proof]- Beweis
+>>Nach [[#^42f9e5|Bezouts Lemma]] können wir sagen für $a',a'', b',c' \in \mathbb{Z}$
+>>$$\begin{align}
+>> \text{ggT}(a,b) &\implies 1 =aa'+bb' \\
+>> \text{ggT}(a,c) &\implies 1 =aa''+cc' \\
+>>\end{align}$$
+>>Wir stellen beide Gleichungen um
+>>$$\begin{align}
+>> bb' &= 1-aa'  \\
+>> cc' &= 1-aa''
+>>\end{align}$$
+>>Jetzt werden beide Gleichungen miteinander multipliziert
+>>$$\begin{align}
+>> bb'cc' &= (1-aa')(1-aa'') \\
+>> bb'cc' &= 1-aa'-aa''-aa'aa'' \\
+>> bb'cc' &= 1- a(a'-a''-a'a'') \\
+>>  a(a'-a''-a'a'')+ bc(b'c')  &= 1\\
+>>\end{align}$$
+>>Was die Aussage [[#^42f9e5|Bezouts Lemma]] für $\text{ggT}(a,bc)=1$ ist, also
+>>$$ a(a'-a''-a'a'') + bc(b'c')  = 1 \implies \text{ggT}(a,bc)=1$$
+>>$$\tag*{$\square$}$$
+
+^2548b2
