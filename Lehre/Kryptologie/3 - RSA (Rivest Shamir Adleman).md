@@ -440,6 +440,8 @@
 >
 >>[!remark] Kontrollfrage: Warum ist es wichtig, dass wir in der Schlüsselerzeugung unter 4.2 fordern, dass $\phi(n)$ und $e$ teilerfremd sind?
 
+^7c14da
+
 ## 3.3 Laufzeitoptimierungen
 
 >[!attention] Laufzeit der Ver- und Entschlüsselung

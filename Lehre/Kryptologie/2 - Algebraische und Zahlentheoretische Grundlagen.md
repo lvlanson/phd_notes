@@ -30,6 +30,8 @@
 >> Die zweistellige Abbildung $-$ auf $\mathbb{N} = \{ 1,2,3\dots \}$, welche uns als die alltägliche Subtraktion bekannt ist, bildet keine zweistellige Operation, weil für $n_{1}=4$ und $n_{2}=5$ erhalten wir
 >> $$n_{1} - n_{2} = 4-5= -1 \not\in \mathbb{N}$$
 
+^ef0786
+
 >[!def] Definition Gruppe (Algebraische Struktur) ([[../../PDFs/judson2022.pdf#page=33|Quelle]])
 >Sei $\circ$ eine beliebige Operation auf der Menge $G$. Wir bezeichnen $(G, \circ)$ als **<u>Gruppe</u>**, wenn die Menge $G$ die folgenden Eigenschaften erfüllt
 >1. $G$ ist **assoziativ**, das heißt $\forall x_{1},x_{2},x_{3} \in G$:

@@ -216,6 +216,8 @@
 >
 >>[!remark] Diskussion: Warum muss $e$ klein sein?
 
+^a904cc
+
 >[!theorem] Common Modulus Attack ([[../../PDFs/schneier1996.pdf#page=394|Quelle]])
 >
 >>[!warning] Voraussetzung
