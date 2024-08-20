@@ -42,7 +42,7 @@
 > oder äquivalent dazu
 > $$a^{p} \equiv a \;\;(\text{mod } p)$$
 >>[!proof]- Beweis mit vollständiger Induktion
->> Ohne Beschränkung der Allgemeinheit schränken wir ein $a>0$, damit wir den Grundsatz des [[2 - Algebraische und Zahlentheoretische Grundlagen#^f974a9|Prinzips der Vollständigen Induktion]] verwenden können.
+>> Ohne Beschränkung der Allgemeinheit schränken wir ein $a>0$, damit wir den Grundsatz des [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^f974a9|Prinzips der Vollständigen Induktion]] verwenden können.
 >> 
 >> Wir verwenden für den Beweis die zweite Kongruenz $a^p \equiv a \;\;(\text{mod } p)$. Für den **Induktionsanfang** haben wir $a_{0}=1$
 >> $$1^{p} \equiv 1 \;\;(\text{mod } p) \tag*{$\checkmark$}$$
@@ -64,7 +64,7 @@
 >> &\equiv 1 + \underbrace{ \frac{p!}{1!(p-1)!} }_{ =p } a+ \underbrace{ \frac{p!}{2!(p-2)!} }_{ =\frac{p(p-1)}{2} }a^2 + \dots. +a^p &&(\text{mod } p) \\
 >> &\equiv 1+pa+ \frac{p(p-1)}{2}a^2+\dots+a^p &&(\text{mod } p)
 >>\end{align}$$
->>Da alle Binomialkoeffizienten zwischen $1$ und $a^p$ den Faktor $p$ enthalten sind diese nach [[2 - Algebraische und Zahlentheoretische Grundlagen#^e40f84|Restklassenarithmetik]] kongruent $0$, also
+>>Da alle Binomialkoeffizienten zwischen $1$ und $a^p$ den Faktor $p$ enthalten sind diese nach [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^e40f84|Restklassenarithmetik]] kongruent $0$, also
 >>$$\begin{align}
 >> &\equiv 1 + 0 + 0 +\dots + a^p &&\;\;(\text{mod } p) \\
 >> &\equiv 1 + a^p &&\;\;(\text{mod } p) \tag{1}
@@ -82,7 +82,7 @@
 >> $$1 \cdot a, 2 \cdot a, 3 \cdot a, \dots (p-1)\cdot a \tag{1}$$
 >> Wir planen nun jede Zahl dieser Liste $\text{ mod } p$ zu rechnen. Wir überlegen wie die Liste sich nach dieser Operation verändern muss.
 >> 
->> Unserer Voraussetzung können wir entnehmen, dass $\text{ggT}(a,p)=1$ gilt. Weiterhin wissen wir, dass alle Zahlen kleiner als $p$ per Definition der [[2 - Algebraische und Zahlentheoretische Grundlagen#^966cde|Primzahlen]] zur Primzahl teilerfremd sein müssen. Daher können wir feststellen, dass $p$ keine der obenen genannten ganzzahlig teilt. 
+>> Unserer Voraussetzung können wir entnehmen, dass $\text{ggT}(a,p)=1$ gilt. Weiterhin wissen wir, dass alle Zahlen kleiner als $p$ per Definition der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^966cde|Primzahlen]] zur Primzahl teilerfremd sein müssen. Daher können wir feststellen, dass $p$ keine der obenen genannten ganzzahlig teilt. 
 >> 
 >> Wir nehmen nun an, dass alle Elemente nach der Operation $\text{ mod }p$ in der Liste verschiene Elemente erzeugt, da wir $p-1$ Elemente haben und alle teilerfremd zu $p$ sind erwarten wir 
 >> $$1,2,3,\dots,(p-1) \tag{2}$$
@@ -90,20 +90,20 @@
 >> $$k \neq m \tag{3}$$
 >> und wir behaupten, es gäbe demzufolge
 >> $$k\cdot a \equiv m \cdot a \;\;(\text{mod } p)$$ 
->> Laut der [[2 - Algebraische und Zahlentheoretische Grundlagen#^360a7d|Kongruenz Äquivalenzrelation]] können wir diese Kongruenz ausdrücken als
+>> Laut der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^360a7d|Kongruenz Äquivalenzrelation]] können wir diese Kongruenz ausdrücken als
 >> $$\begin{align}
 >> k\cdot a\equiv m\cdot a \;\;(\text{mod } p) &\iff p\;|\; k\cdot a - m\cdot a \\
 >> &\iff p \;|\; a \cdot(k-m)
 >>\end{align}$$
->>Nach dem [[2 - Algebraische und Zahlentheoretische Grundlagen#^f65359|Satz der Primzahlquotienten]] muss einer der Faktoren von $p$ teilbar sein. Da unserer Voraussetzungen nach $\text{ggT}(a,p)=1$, also $p\nmid a$, muss demzufolge $p \;|\; (k-m)$ dann gelten, wenn es angenommen zwei gleiche Zahlen gäbe. Von $p \;|\; (k-m)$ können wir über die [[2 - Algebraische und Zahlentheoretische Grundlagen#^360a7d|Kongruenz Äquivalenzrelation]] rückschließen, dass
+>>Nach dem [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^f65359|Satz der Primzahlquotienten]] muss einer der Faktoren von $p$ teilbar sein. Da unserer Voraussetzungen nach $\text{ggT}(a,p)=1$, also $p\nmid a$, muss demzufolge $p \;|\; (k-m)$ dann gelten, wenn es angenommen zwei gleiche Zahlen gäbe. Von $p \;|\; (k-m)$ können wir über die [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^360a7d|Kongruenz Äquivalenzrelation]] rückschließen, dass
 >>$$k \equiv m \;\;(\text{mod } p)$$
 >> was ein Widerspruch zu unserer Behauptung $(3)$ ist. Daher muss die Liste $(2)$ entstehen, wenn wir Liste $(1)$ $\text{ mod } p$ rechnen. Daher können wir behaupten, wenn wir jeweils die Elemente der Listen miteinander multiplizieren
 >> $$(1 \cdot a)(2 \cdot a)(3 \cdot a)\dots((p-1)\cdot a) \equiv 1 \cdot 2 \cdot 3 \dots (p-1) \;\;(\text{mod } p)$$
 >> Wenn wir auf der linken Seite alle $a$ aufmultiplizieren und dazu bemerken, dass diese Produkte die Fakultäten $(p-1)!$ sind, erhalten wir
 >> $$a^{p-1}(p-1)! \equiv (p-1)! \;\;(\text{mod }  p) \tag{4}$$
->> Da $p$ eine Primzahl ist und alle Faktoren $b$ in $(p-1)!$ kleiner als $p$ sind mit $\text{ggT}(p,b)=1$, wissen wir, dass das modulare Inverse für jeden Faktor $b$ laut [[2 - Algebraische und Zahlentheoretische Grundlagen#^c7c061| dem Satz der Existenz des modularen Inversen]] existieren muss.
+>> Da $p$ eine Primzahl ist und alle Faktoren $b$ in $(p-1)!$ kleiner als $p$ sind mit $\text{ggT}(p,b)=1$, wissen wir, dass das modulare Inverse für jeden Faktor $b$ laut [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^c7c061| dem Satz der Existenz des modularen Inversen]] existieren muss.
 >> 
->> Tatsächlich ist jedes $b \in \{ 1,2,3,\dots,p-1 \}$ sein eigenes [[2 - Algebraische und Zahlentheoretische Grundlagen#^6f68c0|modulares Inverses]] bezüglich Modulo $p$, was wir schnell zeigen werden.
+>> Tatsächlich ist jedes $b \in \{ 1,2,3,\dots,p-1 \}$ sein eigenes [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^6f68c0|modulares Inverses]] bezüglich Modulo $p$, was wir schnell zeigen werden.
 >>>[!proof]- Zwischenbeweis 
 >>>Wir zeigen für eine Primzahl $p$
 >>>$$ b \text{ ist sein eigenes modulares Inverses,}$$
@@ -124,7 +124,7 @@
 >>> b^2 -1 &\equiv 0 &&\;\;(\text{mod } p) \\
 >>> (b+1)(b-1) &\equiv 0 &&\;\;(\text{mod } p) \\
 >>>\end{align}$$
->>>Da der Rest $0$ ist, ist das äquivalent zur Aussage $p \;|\;(b+1)(b-1)$. Damit diese wahr ist, muss laut [[2 - Algebraische und Zahlentheoretische Grundlagen#^f65359|dem Satz des Primzahlquotienten]] 
+>>>Da der Rest $0$ ist, ist das äquivalent zur Aussage $p \;|\;(b+1)(b-1)$. Damit diese wahr ist, muss laut [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^f65359|dem Satz des Primzahlquotienten]] 
 >>>$$p \;|\; (b+1)(b-1) \implies \underbrace{ p\;|\;(b+1) }_{ (1) } \lor \underbrace{ p \;|\;(b-1) }_{ (2) }$$
 >>>Das heißt, eine der beiden Teilungen muss wahr sein, demzufolge für den Fall $(2)$, also $p \;|\;(b-1)$ haben wir
 >>>$$\begin{align}
@@ -166,7 +166,7 @@
 >>> b^2 &\equiv 1 &&\;\;(\text{mod } p)
 >>>\end{align}$$
 >>>
->>>Zeile $(3)$ kommt daher zustande, da durch [[2 - Algebraische und Zahlentheoretische Grundlagen#^a40b0b| den Satz der Teilbarkeit von Summen und Differenzen]] wieder $p \equiv 0 \;\;(\text{mod } p)$ gilt.
+>>>Zeile $(3)$ kommt daher zustande, da durch [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^a40b0b| den Satz der Teilbarkeit von Summen und Differenzen]] wieder $p \equiv 0 \;\;(\text{mod } p)$ gilt.
 >>>
 >>>---
 >>>
@@ -244,14 +244,14 @@
 >>[!remark]- Bemerkung zur Person Leonhard Euler (Informativ)
 >>Leonhard Euler ist ein in der Schweiz geborener Mathematiker, der von 1707-1783 lebte. In seinen ersten zwanzig Lebensjahren bildete er sich in den Bereichen der Theologie, Medizin, Astronomie, Physik, orientalische Sprachen und auch Mathematik in Basel. Er schloss sein Universitätsstudium mit einem Masterabschluss im Alter von 17 Jahren. Zu damaligen Zeiten war *Mathematiker* kein sicheres Berufsfeld, vor allem nicht die theoretische Mathematik. Daher gestaltete sich seine Berufswahl als schwierig. 
 >>
->>![[../../Pasted image 20240815134001.png|center|500]]
+>>![[Figures/euler_1.png|center|500]]
 >><center>Abbildung: Porträt von Euler (1753)</center>
 >>
 >>Während seine damaligen Lehrer und Freunde als Mathematiker nach St. Petersburg in Russland zogen, wurde Euler als Mitglied der medizinischen und physiologischen Teilen der Akademie aufgenommen. Seine Freunde die *Bernoullis* haben ihn vor Ort empfohlen, weshalb er dort seine Position antreten konnte. Am Tag seiner Ankunft wurde der Tod der damaligen Zarin und Stifterin der Akademie Katharina I. bekannt gegeben, weshalb viel Unruhe in der Stadt St. Petersburg war. Euler wurde daraufhin nicht wie geplant in die medizinische Fakultät, sondern in die mathematische Fakultät gesetzt.
 >>
 >>Nach kurzen Exkursen in die Naturphilosophie wurde Euler mit 26 Jahren höchstrangige Mathematiker an der Akademie in S.t Petersburg. Spätere politische Unruhen und das Abwerben des damaligen Königs Friedrich II. brachten ihn an die königlich preußische Akademie der Wissenschaften zu Berlin. Euler war zu dem Zeitpunkt 33 Jahre alt. Unstimmigkeiten an der Berliner Akademie und Krieg sorgten dafür, dass es Katharina der Großen gelang Euler zurück nach St. Petersburg zurück zu werben. Er wurde dort zum Hofmathematiker ernannt. Zu dem Zeitpunkt war er 59 Jahre alt. Er forschte und lebte dort bis zu seinem Tod 1783 im Alter von 76 Jahren.
 >>
->>![[../../Pasted image 20240815134628.png|center|500]]
+>>![[Figures/euler_2.png|center|500]]
 >><center>Abbildung: Porträt Euler von Joseph Frédéric Auguste Darbès (1778)</center>
 >>
 >>Euler hatte recht früh mit Problemen seiner Sehkraft zu kämpfen. 1766 war er nahezu erblindet. Damit er weiter Bücher und Artikel schreiben konnte, hatte er die Hilfe eines Assistenten, sodass er noch 1770 eines seiner bedeutendsten Werke zur Lehre veröffentlichte: *Vollständige Anleitung zur Algebra*.
@@ -370,13 +370,13 @@
 >> m &= (m^e)^d \text{ mod } n \\
 >> m &= m^{ed} \text{ mod } n
 >>\end{align}$$
->>Wir wechseln an dieser Stelle die Schreibweise von dem [[2 - Algebraische und Zahlentheoretische Grundlagen#^9cd06c| binären Modulus]] zur [[2 - Algebraische und Zahlentheoretische Grundlagen#^360a7d|Kongruenz]], da ohnehin verlangt ist, dass $m \in \mathbb{Z}_{n}$ liegen muss, also
+>>Wir wechseln an dieser Stelle die Schreibweise von dem [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^9cd06c| binären Modulus]] zur [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^360a7d|Kongruenz]], da ohnehin verlangt ist, dass $m \in \mathbb{Z}_{n}$ liegen muss, also
 >>$$m \equiv m^{ed} \;\;(\text{mod } n)$$
 >>Wir beginnen damit zu argumentieren, weshalb es genügt die Kongruenz bezüglich einer der beiden Primzahlen $p,q$ statt für $n$ zu zeigen. Zunächst zum Zweck des einfacheren Verständnisses formulieren wir die Kongruenz um, indem wir alle Argumente auf eine Seite ziehen, also
 >>$$m - m^{ed} \equiv 0\;\;(\text{mod } n)$$
->>Wir wissen, dass wenn der [[2 - Algebraische und Zahlentheoretische Grundlagen#^9cd06c|Rest]] $0$ ist bezüglich $n$, dass die Teilung aufgeht, also
+>>Wir wissen, dass wenn der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^9cd06c|Rest]] $0$ ist bezüglich $n$, dass die Teilung aufgeht, also
 >>$$n \;|\; m-m^{ed}$$
->>Aus der Verfahrensbeschreibung wissen wir, dass $n=p\cdot q$ ist. Wegen des [[2 - Algebraische und Zahlentheoretische Grundlagen#^3dda16|Lemmas der Teilbarkeit über Primfaktoren]] können wir schließen
+>>Aus der Verfahrensbeschreibung wissen wir, dass $n=p\cdot q$ ist. Wegen des [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^3dda16|Lemmas der Teilbarkeit über Primfaktoren]] können wir schließen
 >>$$\begin{align}
 >> n \;|\; m-m^{ed} &\iff p \cdot q \;|\; m-m^{ed}  \\
 >> &\iff p \;|\; m-m^{ed} \land q \;|\; m-m^{ed}
@@ -400,7 +400,7 @@
 >>\end{align}$$
 >>Da der Rest $0$ ist wissen wir wieder
 >>$$\phi(n) \;|\; ed-1$$
->>Daher [[2 - Algebraische und Zahlentheoretische Grundlagen#^9380e8|existiert nach der ganzzahligen Teilung]] eine ganze Zahl $k \in \mathbb{Z}$, sodass
+>>Daher [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^9380e8|existiert nach der ganzzahligen Teilung]] eine ganze Zahl $k \in \mathbb{Z}$, sodass
 >>$$\begin{align}
 >>  ed - 1&= k \cdot \phi (n) \qquad&&\Big\vert +1 \\
 >>  ed &=k \cdot \phi (n)+1 
@@ -473,7 +473,7 @@
 >>\end{align}$$
 >
 >>[!lemma]- Schlussfolgerung zur Laufzeitoptimierung
->>Aufgrund der [[2 - Algebraische und Zahlentheoretische Grundlagen#^6a2086|dritten Eigenschaft der ganzzahligen Teilung]] können wir jeden Rekursionsschritt $\text{ mod }n$ rechnen, wodurch die Laufzeit für $a^b$ von $\mathcal{O}(b)$ auf $\mathcal{O}(2\cdot \lfloor \log_{2}(b) \rfloor)$ bezüglich der Multiplikationsschritte reduziert wird.
+>>Aufgrund der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^6a2086|dritten Eigenschaft der ganzzahligen Teilung]] können wir jeden Rekursionsschritt $\text{ mod }n$ rechnen, wodurch die Laufzeit für $a^b$ von $\mathcal{O}(b)$ auf $\mathcal{O}(2\cdot \lfloor \log_{2}(b) \rfloor)$ bezüglich der Multiplikationsschritte reduziert wird.
 >>
 >>Der Algorithmus zerlegt $b$ quasi in seine binäre Repräsentation, daher schließen wir auf den Logarithmus zur Basis $2$. Im schlimmsten Fall haben wir jeweils $\log_{2}(b)$ Quadraturen und Multiplikationen
 >

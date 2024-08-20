@@ -1,7 +1,7 @@
 >[!theorem] Gleiche Nachricht und Unterschiedliche Moduli Angriff
 >
 >>[!warning] Voraussetzung
->>Eine Nachricht $m$ wird an zwei Empfänger verschlüsselt mit zwei verschiedenen, teilerfremden öffentlichen Schlüsseln $n_{1},n_{2}$.
+>>Eine Nachricht $m$ wird mit zwei verschiedenen, teilerfremden öffentlichen Schlüsseln $n_{1},n_{2}$ verschlüsselt und an zwei Empfänger versendet.
 >
 >>[!algo] Verfahren
 >>Wir haben die Chiffren
@@ -15,7 +15,7 @@
 >>$$m<n_{1} \land m < n_{2} \implies m^2 < n_{1}n_{2}$$
 >>können wir einfach die gewöhnliche Quadratwurzel ziehen, um $m$ zu erhalten
 >
->>[!remark] Diskussion: Warum würde es nicht genügen die einfache Quadratwurzel zu ziehen, wenn die Prämisse nicht wahr wäre?
+>>[!remark] Diskussion: Warum würde es nicht genügen die einfache Quadratwurzel zu ziehen, wenn die Prämisse $m<n_{1} \land m<n_{2}$ nicht wahr wäre?
 >
 >>[!remark] Kontrollfrage: Warum müssen $n_{1}, n_{2}$ teilerfremd sein?
 

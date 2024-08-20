@@ -19,9 +19,9 @@
 >>\end{align}$$
 >
 >>[!remark]- Bemerkung zu der Forderung $p \equiv 3 \;\;(\text{mod } 4)$
->>Aufgrund dieser Forderung wissen wir aufgrund der [[2 - Algebraische und Zahlentheoretische Grundlagen#^638cd1|Restklassen]], dass
+>>Aufgrund dieser Forderung wissen wir aufgrund der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^638cd1|Restklassen]], dass
 >>$$\exists k \in \mathbb{Z}: p=\underbrace{ 4k +3 }_{ \equiv 3 \;\;(\text{mod } 4) }$$
->>Damit garantieren wir, dass der Exponent in $b^{\frac{p+1}{4}}$ eine ganze Zahl bleibt, da das stets eine Forderung ist bei den [[2 - Algebraische und Zahlentheoretische Grundlagen#^ef0786|Operationen]] auf $\mathbb{Z}$. Wir sehen das an
+>>Damit garantieren wir, dass der Exponent in $b^{\frac{p+1}{4}}$ eine ganze Zahl bleibt, da das stets eine Forderung ist bei den [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^ef0786|Operationen]] auf $\mathbb{Z}$. Wir sehen das an
 >>$$\begin{align}
 >> b^{\frac{p+1}{4}} = b^{\frac{4k+3+1}{4}} = b^{\frac{4(k+1)}{4}} = b^{k+1}
 >>\end{align}$$
@@ -47,7 +47,7 @@
 >> nach $m$
 >> 
 >>>[!verschlüsselung] Nach $m$ lösen
->>>Die Lösung nach $m$ ist nicht so offensichtlich, wie es auf den ersten Blick scheinen mag. Die Nachricht $m$ setzt sich anteilig aus einer Wurzel bezüglich modulo $p$ und $q$ zusammen ([[2 - Algebraische und Zahlentheoretische Grundlagen#^3dda16|Teilbarkeit über Primzahlfaktoren]]), wovon jeweils jedes positiv oder negativ bedingt durch die Quadratwurzel sein kann, also
+>>>Die Lösung nach $m$ ist nicht so offensichtlich, wie es auf den ersten Blick scheinen mag. Die Nachricht $m$ setzt sich anteilig aus einer Wurzel bezüglich modulo $p$ und $q$ zusammen ([[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^3dda16|Teilbarkeit über Primzahlfaktoren]]), wovon jeweils jedes positiv oder negativ bedingt durch die Quadratwurzel sein kann, also
 >>>$$\begin{align}
 >>> m^2 &\equiv c &&\;\;(\text{mod } p) \\
 >>> m^2 &\equiv c &&\;\;(\text{mod } q) \\

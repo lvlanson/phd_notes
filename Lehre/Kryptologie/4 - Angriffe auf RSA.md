@@ -47,13 +47,13 @@
 >>>[!remark]- Zwischenbemerkung zur Logik
 >>>Würden wir unser aktuelles $x$ Modulo $n_{1}$ rechnen, würden zumindest schonmal alle Summanden bis auf den ersten zu $0$ werden
 >>> $$x=\underbrace{ a_{1}\cdot \frac{N}{n_{1}}U \underline{\qquad\quad} }_{ \equiv? \;\;(\text{mod } n_{1}) } + \underbrace{ a_{2}\cdot \frac{N}{n_{2}} \underline{\qquad\quad} }_{ \equiv 0 \;\;(\text{mod } n_{1}) }+\ldots+\underbrace{ a_{k}\cdot \frac{N}{n_{k}}U\underline{\quad\qquad} }_{ \equiv0 \;\;(\text{mod } n_{1}) }$$
->>> Da $N$ den Faktor $n_{1}$ enthält, muss die Teilung laut [[2 - Algebraische und Zahlentheoretische Grundlagen#^6a2086|dritten Eigenschaft der ganzzahligen Teilung]] aufgehen und somit den Rest $0$ enthalten. Im ersten Summanden haben wir aber $n_{1}$ zuvor durch $\frac{N}{n_{1}}$ rausgerechnet, weshalb der Ausgang der Rechnung an der Stelle ungewiss ist.
+>>> Da $N$ den Faktor $n_{1}$ enthält, muss die Teilung laut [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^6a2086|dritten Eigenschaft der ganzzahligen Teilung]] aufgehen und somit den Rest $0$ enthalten. Im ersten Summanden haben wir aber $n_{1}$ zuvor durch $\frac{N}{n_{1}}$ rausgerechnet, weshalb der Ausgang der Rechnung an der Stelle ungewiss ist.
 >>
 >> Wir können nun garantieren, dass wenn wir modulo $n_{i}$ rechnen, dass alle Summanden wegfallen außer $a_{i}\cdot \dfrac{N}{n_{i}}$. Jedoch können wir keine Aussagen darüber treffen, welcher Wert entsteht, wenn wir
 >> $$a_{i}\cdot \dfrac{N}{n_{i}} \text{ mod } n_{i}$$
 >> Wir erwarten jedoch, dass das Ergebnis am Ende $a_{i}$ ist, wenn wir diesen Summanden $\text{ mod } n_{i}$ rechnen. Damit wir das erreichen, müssen wir eine Zahl $q$ finden, sodass
 >> $$\frac{N}{n_{i}} \cdot q \equiv 1 \;\;(\text{mod } n_{i})$$
->> Da alle $n_{i}$ paarweise teilerfremd sind, wissen wir, dass $q=\left[ \dfrac{N}{n_{i}} \right]^{-1}_{n_{i}}$ das [[2 - Algebraische und Zahlentheoretische Grundlagen#^c7c061|modulare Inverse]] bezüglich des Moduls $n_{i}$ ist. Das bedeutet, wenn wir noch das modulare Inverse als Faktor bezüglich des spezifischen $n_{i}$ hinzufügen, dass dann garantiert $a_{i}$ als Ergebnis entsteht. Also
+>> Da alle $n_{i}$ paarweise teilerfremd sind, wissen wir, dass $q=\left[ \dfrac{N}{n_{i}} \right]^{-1}_{n_{i}}$ das [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^c7c061|modulare Inverse]] bezüglich des Moduls $n_{i}$ ist. Das bedeutet, wenn wir noch das modulare Inverse als Faktor bezüglich des spezifischen $n_{i}$ hinzufügen, dass dann garantiert $a_{i}$ als Ergebnis entsteht. Also
 >> $$\begin{align}
 >> x&=a_{1}\cdot \frac{N}{n_{1}} \cdot \left[ \dfrac{N}{n_{1}} \right]^{-1}_{n_{1}} + a_{2}\cdot \frac{N}{n_{2}} \cdot \left[ \dfrac{N}{n_{2}} \right]^{-1}_{n_{2}}+\ldots+a_{k}\cdot \frac{N}{n_{k}}\cdot \left[ \dfrac{N}{n_{k}} \right]^{-1}_{n_{k}} \\
 >> &= \sum_{i=1}^k a_{i} \frac{N}{n_{i}}\left[ \frac{N}{n_{i}} \right]_{n_{i}}^{-1}
@@ -74,20 +74,20 @@
 >>$$\begin{align}
 >> x &\equiv x' &&\;\;(\text{mod } n_{i}) \\
 >>\end{align}$$
->>Aufgrund der Definition der [[2 - Algebraische und Zahlentheoretische Grundlagen#^360a7d|Kongruenz]] können wir sagen
+>>Aufgrund der Definition der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^360a7d|Kongruenz]] können wir sagen
 >>$$n_{i} \;|\; (x-x')$$
 >>für $1 \leq i \leq k$. Da alle $n_{i}$ paarweise teilerfremd sind, haben wir
 >>$$n_{i}\;|\;(x-x') \land n_{j}\;|\;(x-x') \implies n_{i} \cdot n_{j} \;|\; (x-x')$$
->>laut der [[2 - Algebraische und Zahlentheoretische Grundlagen#^251edf|Teilbarkeit von teilerfremden Produkten]]. Durch das [[2 - Algebraische und Zahlentheoretische Grundlagen#^2548b2|Lemma zu Teilerfremde über Teilerfremde Produkte]] wissen wir, dass für ein weiteres $n_{l}$ gilt
+>>laut der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^251edf|Teilbarkeit von teilerfremden Produkten]]. Durch das [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^2548b2|Lemma zu Teilerfremde über Teilerfremde Produkte]] wissen wir, dass für ein weiteres $n_{l}$ gilt
 >>$$\text{ggT}(n_{i}, n_{l})=1 \land \text{ggT}(n_{j}, n_{l}) = 1 \implies \text{ggT}(n_{i}\cdot n_{j}, n_{l})=1$$
 >>Daher lässt sich die eben präsentierte Logik über alle Module anwenden, das heißt 
 >>$$\begin{align}
 >> n_{1}n_{2}\dots n_{k} &\;|\;(x-x') \\
 >> N &\;|\;(x-x') \tag{$N=n_{1}n_{2}\dots n_{k}$}\\
 >>\end{align}$$
->>Nach der [[2 - Algebraische und Zahlentheoretische Grundlagen#^360a7d|Kongruenz Definition]] können wir wieder rückschließen
+>>Nach der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^360a7d|Kongruenz Definition]] können wir wieder rückschließen
 >>$$x \equiv x' \;\;(\text{mod } N) $$ 
->>Laut der Definition der [[2 - Algebraische und Zahlentheoretische Grundlagen#^30b120|der Eindeutigkeit und Einschränkung des Rests]], muss gelten
+>>Laut der Definition der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^30b120|der Eindeutigkeit und Einschränkung des Rests]], muss gelten
 >>$$x = x'$$
 >>was ein Widerspruch dazu ist, dass es zwei verschiedene geben kann.
 >>$$\tag*{$\square$}$$
@@ -230,7 +230,7 @@
 >
 >>[!algo] Verfahren
 >> Da $$\text{ggT}(e_{1},e_{2})=1$$
->> können wir das [[2 - Algebraische und Zahlentheoretische Grundlagen#^42f9e5|Lemma von Bezout]] anwenden. Also es muss zwei Zahlen existieren $s,t \in \mathbb{Z}$, sodass
+>> können wir das [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^42f9e5|Lemma von Bezout]] anwenden. Also es muss zwei Zahlen existieren $s,t \in \mathbb{Z}$, sodass
 >> $$se_{1}+te_{2} = 1$$
 >> Die Nachricht $m$ können wir einfach herleiten über
 >> $$m\equiv m^1 \equiv m^{se_{1}+te_{2}}\equiv (m^{e_{1}})^s(m^{e_{2}})^t \equiv c_{1}^s c_{2}^t \;\;(\text{mod } n)$$
