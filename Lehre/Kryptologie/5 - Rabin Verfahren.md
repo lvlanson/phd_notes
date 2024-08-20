@@ -30,7 +30,7 @@
 
 ## 5.2 Rabin Verschlüsselungsverfahren
 
->[!algo] Kryptografisches Verfahren: Rabin
+>[!algo] Kryptografisches Verfahren: Rabin Verfahren (1979)
 >>[!schlüsselerzeugung] 
 >> Wähle zwei große Primzahlen $p,q$ mit
 >> $$p,q \equiv 3 \;\;(\text{mod } 4)$$
@@ -63,7 +63,7 @@
 >>> m^2 &\equiv c_{q}^2 &&\;\;(\text{mod } q) \\
 >>>\end{align}$$
 >>>Wenn wir jeweils [[#^d2662c| "die modulare Wurzeln ziehen"]], erhalten wie verschiedene Lösungskombinationen für $m$.
->>>>[!warning] Achtung: Die Quadratwurzel bezüglich modulo $p$, wobei $p$ eine Primzahl ist, muss besonders bestimmt werden.
+>>>>[!warning] Achtung: Die Quadratwurzel bezüglich modulo $p$, wobei $p$ eine Primzahl ist, muss besonders bestimmt werden. Siehe [[#^d2662c| Modulare Quadratwurzel]]
 >>>$$\begin{align}
 >>>m_{1} &= c_{p} &&\;\;(\text{mod } p) &\land&&m_{1}=c_{q} &&\;\;(\text{mod } q) \tag{M-GLS 1}\\  
 >>>m_{2} &= c_{p} &&\;\;(\text{mod } p) &\land&&m_{2}=-c_{q} &&\;\;(\text{mod } q) \tag{M-GLS 2}\\  
@@ -75,14 +75,19 @@
 >>>wobei durch Lesen der Nachrichten $m_{i}$ mit $(i=1,2,3,4)$ die richtige Nachricht $m$ gewählt wird.
 >
 >>[!korrektheitsnachweis]
->>Aus gleichen Gründen wie beim Korrektheitsnachweis für [[3 - RSA (Rivest Shamir Adleman)#^7c14da|RSA]] genügt es zu zeigen, dass das Verfahren für $p$ gültig ist, da es umgekehrt für $q$ dann ebenfalls gilt und rückschließend für $n$.
+>>Aus gleichen Gründen wie beim Korrektheitsnachweis für [[3 - RSA (Rivest Shamir Adleman)#^7c14da|RSA]] genügt es zu zeigen, dass das Verfahren für $p$ gültig ist, da es umgekehrt für $q$ dann ebenfalls gilt und rückschließend für $n$. 
 >>
->>Wir haben
+>>Wenn wir das Lösungsverfahren zur Entschlüsselung auf die Chiffre $c=m^2 \text{ mod }n$ anwenden, erhalten wir
 >>$$(m^{2})^{\frac{p+1}{4}} \equiv m^{\frac{p-1}{2}}m^1 \equiv \underbrace{ \left( m^{\frac{1}{2}} \right)^{p-1} }_{ \equiv 1 \;\;(\text{mod } p) }m \equiv \pm m \;\;(\text{mod } p) \tag*{$\square$}$$
 >
->>[!remark] Kontrollfrage: In der [[4 - Angriffe auf RSA#^a904cc|Low Encryption Attack]] ziehen wir auch die $e$-te Wurzel, warum können wir das ohne besondere Lösungsformel machen?
+>>[!warning] Achtung: Die verbleibenden Klartextkandidaten $m_{i}$ müssen gelöscht werden, da sonst ein [[6 - Angriffe auf das Rabin-Verfahren#^a8d780|Angriff]] möglich ist.
+>
+>>[!remark] Kontrollfrage: In der [[4 - Angriffe auf RSA#^a904cc|Low Encryption Attack]] ziehen wir auch die $e$-te Wurzel, warum können wir das dort ohne besondere Lösungsformel machen?
 >
 >>[!remark] Kontrollfrage: Warum fordern wir für $p,q \equiv 3 \;\;(\text{mod } 4)$?
 >
 >>[!remark] Kontrollfrage: Welcher mathematische Hintergrund sorgt dafür, dass wir $4$ Kandidaten $m_{i}$ einer Klartextnachricht erhalten?
 >
+
+^eb3c6e
+
