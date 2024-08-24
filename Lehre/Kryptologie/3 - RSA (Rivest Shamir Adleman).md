@@ -90,12 +90,12 @@
 >> $$k \neq m \tag{3}$$
 >> und wir behaupten, es gäbe demzufolge
 >> $$k\cdot a \equiv m \cdot a \;\;(\text{mod } p)$$ 
->> Laut der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^360a7d|Kongruenz Äquivalenzrelation]] können wir diese Kongruenz ausdrücken als
+>> Laut dem Satz der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Kongruenzen]] können wir diese Kongruenz ausdrücken als
 >> $$\begin{align}
 >> k\cdot a\equiv m\cdot a \;\;(\text{mod } p) &\iff p\;|\; k\cdot a - m\cdot a \\
 >> &\iff p \;|\; a \cdot(k-m)
 >>\end{align}$$
->>Nach dem [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^f65359|Satz der Primzahlquotienten]] muss einer der Faktoren von $p$ teilbar sein. Da unserer Voraussetzungen nach $\text{ggT}(a,p)=1$, also $p\nmid a$, muss demzufolge $p \;|\; (k-m)$ dann gelten, wenn es angenommen zwei gleiche Zahlen gäbe. Von $p \;|\; (k-m)$ können wir über die [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^360a7d|Kongruenz Äquivalenzrelation]] rückschließen, dass
+>>Nach dem [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^f65359|Satz der Primzahlquotienten]] muss einer der Faktoren von $p$ teilbar sein. Da unserer Voraussetzungen nach $\text{ggT}(a,p)=1$, also $p\nmid a$, muss demzufolge $p \;|\; (k-m)$ dann gelten, wenn es angenommen zwei gleiche Zahlen gäbe. Von $p \;|\; (k-m)$ können wir über den Satz der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Kongruenzen]] rückschließen, dass
 >>$$k \equiv m \;\;(\text{mod } p)$$
 >> was ein Widerspruch zu unserer Behauptung $(3)$ ist. Daher muss die Liste $(2)$ entstehen, wenn wir Liste $(1)$ $\text{ mod } p$ rechnen. Daher können wir behaupten, wenn wir jeweils die Elemente der Listen miteinander multiplizieren
 >> $$(1 \cdot a)(2 \cdot a)(3 \cdot a)\dots((p-1)\cdot a) \equiv 1 \cdot 2 \cdot 3 \dots (p-1) \;\;(\text{mod } p)$$
@@ -266,6 +266,8 @@
 >><p align="right" style="font-family:cursive"><i>François Arago</i></p>
 >>
 >>Euler hat zeit seines Lebens über 500 Bücher und Veröffentlichungen geschrieben. Selbst 50 Jahre nach seinem Tod sind noch sukzessive Artikel von ihm erschienen, sodass die Liste an Veröffentlichungen auf 886 angestiegen ist. Er hat jedes Jahr im Schnitt 800 Seiten geschrieben. Kein anderer Mathematiker hat jemals vergleichbar viel, und zudem auch noch bedeutende Veröffentlichungen geleistet.
+
+^f287d3
 
 >[!theorem] Satz Euler'sche Phi-Funktion von Primzahlen
 >Sei $p$ eine Primzahl, dann gilt

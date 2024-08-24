@@ -74,7 +74,7 @@
 >>$$\begin{align}
 >> x &\equiv x' &&\;\;(\text{mod } n_{i}) \\
 >>\end{align}$$
->>Aufgrund der Definition der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^360a7d|Kongruenz]] können wir sagen
+>>Aufgrund des Satzes der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Kongruenzen]] können wir sagen
 >>$$n_{i} \;|\; (x-x')$$
 >>für $1 \leq i \leq k$. Da alle $n_{i}$ paarweise teilerfremd sind, haben wir
 >>$$n_{i}\;|\;(x-x') \land n_{j}\;|\;(x-x') \implies n_{i} \cdot n_{j} \;|\; (x-x')$$
@@ -85,7 +85,7 @@
 >> n_{1}n_{2}\dots n_{k} &\;|\;(x-x') \\
 >> N &\;|\;(x-x') \tag{$N=n_{1}n_{2}\dots n_{k}$}\\
 >>\end{align}$$
->>Nach der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^360a7d|Kongruenz Definition]] können wir wieder rückschließen
+>>Nach dem Satz der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Kongruenzen]] können wir wieder rückschließen
 >>$$x \equiv x' \;\;(\text{mod } N) $$ 
 >>Laut der Definition der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^30b120|der Eindeutigkeit und Einschränkung des Rests]], muss gelten
 >>$$x = x'$$

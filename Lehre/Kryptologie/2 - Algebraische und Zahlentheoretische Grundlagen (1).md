@@ -269,33 +269,13 @@
 
 ^30b120
 
-
 >[!def] Definition Kongruenz-Äquivalenzrelation über den ganzen Zahlen
 >Wir definieren die **Kongruenz-Äquivalenzrelation** über den ganzen Zahlen $a,b \in \mathbb{Z}$  kongruent zum **Modul** $n \in \mathbb{N}$ mit
 >$$\begin{align}
 > a \equiv b \;\;(\text{mod }n) &\iff a \text{ mod } n = b \text{ mod } n \\
-> a \equiv b \;\;(\text{mod }n) &\iff n \;|\; (a-b) \\
 >\end{align}$$
 >und $0\leq r< \lvert n \rvert$
 >
->
->>[!remark]- Bemerkung zur Bedeutung
->>Alternativ können wir sagen $$\exists q_{1},q_{2} \in \mathbb{Z}: \begin{matrix}
->> a = q_{1}n + r \\
->> b=q_{2}n + r\end{matrix}$$
->> Also, wir können $q_{1},q_{2} \in \mathbb{Z}$ so wählen, dass der Rest $r$ für $a$ und $b$ gleich ist. Dies ist äquivalent zur Definition da, wenn wir nach $r$ umstellen, erhalten wir
->> $$\begin{align}
->> a -q_{1}n &= r \\
->> b - q_{2}n & = r
->>\end{align}$$
->>Daraus folgt
->>$$\begin{alignat}{2}
->> a- q_{1}n &= b -q_{2}n \qquad&&\Big\vert -b +q_{1}n\\ 
->> a-b &= q_{1}n - q_{2}n \\
->> a-b &= n(q_{1}-q_{2}) \qquad&&\Big\vert :n \\
->> \frac{a-b}{n} &= q_{1}-q_{2}
->>\end{alignat}$$
->>Da $q_{1},q_{2}$ beides ganze Zahlen sind, muss demnach der Quotient $\frac{a-b}{n}$ auch eine ganze Zahl sein. Daher muss, wenn $a \equiv b \;\;(\text{mod } n)$ gilt, auch $n \; |\; a-b$ gelten.
 >
 >>[!remark]- Bemerkung zur Verbindung zur binären Modulo Operation
 >>Wir können die Kongruenz auch über den binären Modulo Operator ausdrücken, also
@@ -321,9 +301,34 @@
 
 ^360a7d
 
+>[!theorem] Satz Teilbarkeit von Äquivalenzen
+> Für $a,b,n \in \mathbb{Z}$ mit $n \neq 0$ gilt
+> $$
+> a \equiv b \;\;(\text{mod }n) \iff n \;|\; (a-b) $$
+>>[!proof]- Beweis
+>>Alternativ können wir sagen $$\exists q_{1},q_{2} \in \mathbb{Z}: \begin{matrix}
+>> a = q_{1}n + r \\
+>> b=q_{2}n + r\end{matrix}$$
+>> Also, wir können $q_{1},q_{2} \in \mathbb{Z}$ so wählen, dass der Rest $r$ für $a$ und $b$ gleich ist. Dies ist äquivalent zur Definition da, wenn wir nach $r$ umstellen, erhalten wir
+>> $$\begin{align}
+>> a -q_{1}n &= r \\
+>> b - q_{2}n & = r
+>>\end{align}$$
+>>Daraus folgt
+>>$$\begin{alignat}{2}
+>> a- q_{1}n &= b -q_{2}n \qquad&&\Big\vert -b +q_{1}n\\ 
+>> a-b &= q_{1}n - q_{2}n \\
+>> a-b &= n(q_{1}-q_{2}) \qquad&&\Big\vert :n \\
+>> \frac{a-b}{n} &= q_{1}-q_{2}
+>>\end{alignat}$$
+>>Da $q_{1},q_{2}$ beides ganze Zahlen sind, muss demnach der Quotient $\frac{a-b}{n}$ auch eine ganze Zahl sein. Daher muss, wenn $a \equiv b \;\;(\text{mod } n)$ gilt, auch $n \; |\; a-b$ gelten.
+>>$$\tag*{$\square$}$$
+
+^291942
+
 >[!def] Definition Äquivalenzklassen bezüglich der Modulus Äquivalenzrelation
 > Wir definieren eine [[#^8daf7c|Äquivalenzklasse]] für $a\in \mathbb{Z}$ bezüglich des **Moduls** $n \in \mathbb{N}$ als
-> $$[a]_{n} = \{ b \in \mathbb{Z} \; | \; a \equiv b \;\;(\text{mod } n) \}$$
+> $$[a] = \{ b \in \mathbb{Z} \; | \; a \equiv b \;\;(\text{mod } n) \}$$
 > Diese Form der [[#^8daf7c|Äquivalenzklasse]] werden wir fortan 
 > <center><b>Restklasse</b></center>
 > nennen.
@@ -431,7 +436,7 @@
 >>6. $3x \equiv 1 \;\;(\text{mod } 6)$
 >>
 >>>[!example]- Beispiel (1)
->>> Laut [[#^360a7d| Definition der Kongruen-Äquivalenzrelation]] wissen wir
+>>> Laut dem [[#^291942| Satz der Teilbarkeit von Kongruenzen]] wissen wir
 >>> $$3x \equiv 2 \;\;(\text{mod } 7) \iff 7 \; | \; (3x-2)$$
 >>> Das heißt es existiert ein $k \in \mathbb{Z}$, sodass
 >>> $$\begin{align}
@@ -821,7 +826,7 @@
 > Es ist kein effizientes Verfahren bekannt, um eine beliebige Zahl $n \in \mathbb{N}$ in seine Primfaktoren zu zerlegen. 
 ><center> <h3> Das bezeichnen wir als <u>Faktorisierungsproblem</u> </h3></center>
 >
->>[!remark]- Bemerkung
+>>[!remark]- Bemerkung bekannte Faktorisierungsverfahren
 >>Es gibt nicht-effiziente Faktorisierungsverfahren wie beispielsweise
 >>- Pollard'sche Rho-Methode
 >>- Pollard'sche $p-1$-Methode
@@ -1053,8 +1058,10 @@
 
 >[!lemma] Lemma Teilerfremde über Teilerfremde Produkte
 >Seien $a,b,c \in \mathbb{Z}\setminus\{ 0 \}$, dann gilt
->$$\Big(\text{ggT}(a,b)=1\Big) \land \Big(\text{ggT}(a,c)=1\Big)\implies \Big(\text{ggT}(a,bc)=1\Big)$$
+>$$\Big(\text{ggT}(a,b)=1\Big) \land \Big(\text{ggT}(a,c)=1\Big) \iff \Big(\text{ggT}(a,bc)=1\Big)$$
 >>[!proof]- Beweis
+>>Für $(\implies)$
+>>
 >>Nach [[#^42f9e5|Bezouts Lemma]] können wir sagen für $a',a'', b',c' \in \mathbb{Z}$
 >>$$\begin{align}
 >> \text{ggT}(a,b) &\implies 1 =aa'+bb' \\
@@ -1074,6 +1081,10 @@
 >>\end{align}$$
 >>Was die Aussage [[#^42f9e5|Bezouts Lemma]] für $\text{ggT}(a,bc)=1$ ist, also
 >>$$ a(a'-a''-a'a'') + bc(b'c')  = 1 \implies \text{ggT}(a,bc)=1$$
+>>Für $(\Longleftarrow)$ konstruieren wir für $a$ über [[#^42f9e5|Bezouts Lemma]]
+>>$$\text{ggT}(a,bc)\implies a(a'-a''-a'a'') + bc(b'c')  = 1$$
+>>und lösen die vorangegangene Implikation rückwärts auf und erhalten die gesuchte Aussage.
+>>
 >>$$\tag*{$\square$}$$
 
 ^2548b2
