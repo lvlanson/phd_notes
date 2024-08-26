@@ -33,6 +33,8 @@
 > 
 > Mithilfe und unter Berufung auf die Veröffentlichung von Diffie-Hellman haben **Rivest, Shamir und Adleman** das RSA System entwickelt. 
 
+^7402b5
+
 ## 3.1 Mathematische Grundlagen
 
 >[!theorem] Kleiner Satz von Fermat ([[../../PDFs/forman2015.pdf#page=223|Quelle]])
