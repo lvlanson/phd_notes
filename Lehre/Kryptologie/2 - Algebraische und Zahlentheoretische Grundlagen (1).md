@@ -274,7 +274,6 @@
 >$$\begin{align}
 > a \equiv b \;\;(\text{mod }n) &\iff a \text{ mod } n = b \text{ mod } n \\
 >\end{align}$$
->und $0\leq r< \lvert n \rvert$
 >
 >
 >>[!remark]- Bemerkung zur Verbindung zur binären Modulo Operation
@@ -612,7 +611,7 @@
 >[!theorem] Satz Euklidischer Algorithmus
 >Seien $a,b \in \mathbb{Z}$ mit $b \neq 0$, dann gilt
 >$$\text{ggT}(a,b) = \text{ggT}(b, a \text{ mod }b)$$
->>[!example]- Beispiel $\text{ggT}(75,70)$
+>>[!example]- Beispiel per Rekursion $\text{ggT}(75,70)$
 >>$$\begin{align}
 >> \text{ggT}(75, 70)&= \text{ggT}(70, 75 \text{ mod } 70) \\
 >> &= \text{ggT}(70, 5) \\
@@ -621,7 +620,7 @@
 >> &= 5 \tag*{$\blacktriangleleft$}
 >>\end{align}$$
 >
->>[!example]- Beispiel $\text{ggT}(111,43)$
+>>[!example]- Beispiel per Rekursion $\text{ggT}(111,43)$
 >>$$\begin{align}
 >> \text{ggT}(111,43) &= \text{ggT}(43, 111 \text{ mod } 43) \\
 >> &= \text{ggT}(43, 25) \\
@@ -637,6 +636,23 @@
 >> &= \text{ggT}(1, 0) \\
 >> &= 1 \tag*{$\blacktriangleleft$}
 >>\end{align}$$
+> 
+>>[!example]- Beispiel per Hand berechnet $a=129,b=231$
+>>Hier ist eine Variante, die für die Berechnung des [[#^42f9e5|erweiterten euklidischen Algorithmus]] praktisch ist.
+>>$$\begin{align}
+>> 231 &= \color{lime}129 \color{white}\cdot 1 +\color{\yellow} 102 \\
+>> \color{lime}129 &= \color{\yellow} 102 \color{white}\cdot \_\_ + \_\_ \\
+>> 129 &= \color{lime}102 \color{white}\cdot 1 +\color{\yellow} 27 \\
+>> \color{lime}102 &= \color{\yellow} 27 \color{white}\cdot \_\_ + \_\_ \\
+>>102 &= \color{lime}27 \color{white}\cdot 3 +\color{\yellow} 21 \\
+>> \color{lime}27 &= \color{\yellow} 21 \color{white}\cdot \_\_ + \_\_ \\
+>>27 &= \color{lime}21 \color{white}\cdot 1 +\color{\yellow} 6 \\
+>> \color{lime}21 &= \color{\yellow} 6 \color{white}\cdot \_\_ + \_\_ \\
+>>21 &= \color{lime}6 \color{white}\cdot 3 +\color{\yellow} 3 \\
+>> \color{lime}6 &= \color{\yellow} 3 \color{white}\cdot \_\_ + \_\_ \\
+>>6 &= \underbrace{ \color{lime}3 }_{ \text{ggT} } \color{white}\cdot 2 +\color{\yellow} 0 \\
+>>\end{align}$$
+>>
 >
 >>[!proof]- Beweis
 >> Nach dem [[#^30b120| Satz der Existenz des Quotienten und Rests]] wissen wir $\exists q \in \mathbb{Z}:$
@@ -667,6 +683,23 @@
 >>	else:
 >>		return ggT(b, a%b)
 >>```
+>
+>>[!remark]- Bemerkung: Geschichte zu Euklid (Informativ)
+>> 322 v. Chr. hat der griechische Herrscher Alexander der Große eine Hauptstadt errichtet. Alexander der Große war Schüler des bekannten Philosophen Aristoteles. Mit dem beinahe simultanen Tod der geschichtlichen Persönlichkeiten wurde Alexendria von dem ägyptischen Herrscher Ptolemy $I$ beherrscht. Dieser hat dort das Museum und die große Bibliothek von Alexendria dort errichtet. Diese Einrichtungen wurden zum Epizentrum der Gelehrten und somit auch der Mathematik. Die Gelehrten zogen durch die damals bekannte Welt und sammelten das Wissen verschiedener Kulturregionen und sammelten diese in Alexandria, sodass es erstmalig in der Menschheitsgeschichte eine universelle Wissensbibliothek der damaligen Erkenntnisse gab.
+>> 
+>>  Ptolemy $I$ und sein Sohn Ptolemy $II$ unterstützten Gelehrte, sodass diese frei forschen konnten. Einer dieser Gelehrten war **Euklid** gewesen, welcher Autor eines der erfolgreichsten Mathebücher überhaupt war:
+>>  
+>>  <center> Euklid - Die Elemente (Stoichia)</center>
+>> 
+>> Es wird behauptet, dass dieses Buch für die Mathematik das sei, was das Alphabet zur Sprache ist. Dort wurden neben der Geometrie auch grundlegende Ideen der Zahlentheorie eingeführt. Buch VII enthielt den Algorithmus zum **größten gemeinsamen Teiler**. Buch IX enthält den noch später in unserer Veranstaltung disktuierten [[#^128d63| Satz zu unendlich vielen Primzahlen]].
+>> 
+>>  Es wird vermutet, dass Euklid gemeinsam mit Studenten des Platon's studiert haben soll. Euklid hat als Gelehrter damals auch Mathematik unterrichtet. Es gibt eine bekannte Sage zu Euklid. Als ein Student ihn fragte,
+>>  
+>><center>"welcher Nutze die Mathematik doch haben soll?"</center> 
+>>
+>>hat Euklid angeblich geantwortet, 
+>>
+>><center>"man solle dem Student drei Pfennig geben und dies soll sein Nutzen sein".</center>
 
 ^e21725
 
@@ -734,6 +767,8 @@
 >>Da wir gezeigt haben, dass der [[#^e21725|Euklidische Algorithmus]] terminiert, wird demzufolge auch der induktive Prozess terminieren und die beschriebenen Lösungen produzieren.
 >>$$\tag*{$\square$}$$
 >
+>>[!remark] Bemerkung: Der erweiterte euklidische Algorithmus liefert die entsprechenden Lösungen.
+>
 >>[!algo] Implementation in Python: Erweiterter Euklidischer Algorithmus $\text{xgcd}=\text{xggT}$
 >> Der erweiterte Euklidische Algorithmus ist ein Lösungsalgorithmus für das Lemma von Bezout. Es folgt der Logik des Beweises.
 >> 
@@ -752,10 +787,58 @@
 >> 	return d, rr, bb-q*rr
 >> ```
 >
->>[!example] Beispiel $a=40902$, $b= 24140$
+>>[!example]- Beispiel $a=40902$, $b= 24140$
 >>In Sage erhalten wir
 >> $$\text{xgcd}(40902, 24140) = (\underbrace{ 34 }_{ =\text{ggT} }, \underbrace{ 337 }_{ =a' }, \underbrace{ 24140 }_{ =b' })$$
-
+>> $$\tag*{$\blacktriangleleft$}$$
+> 
+>>[!example]- Beispiel per Hand berechnet $a=129,b=231$
+>>Um den erweiterten euklidischen Algorithmus einfach zu berechnen, berechnen wir ebenfalls den euklidischen Algorithmus per Hand
+>>$$\begin{align}
+>> 231 &= \color{lime}129 \color{white}\cdot 1 +\color{\yellow} 102 \tag{1}\\
+>> \color{lime}129 &= \color{\yellow} 102 \color{white}\cdot \_\_ + \_\_ \\
+>> 129 &= \color{lime}102 \color{white}\cdot 1 +\color{\yellow} 27 \tag{2}\\
+>> \color{lime}102 &= \color{\yellow} 27 \color{white}\cdot \_\_ + \_\_ \\
+>>102 &= \color{lime}27 \color{white}\cdot 3 +\color{\yellow} 21 \tag{3}\\
+>> \color{lime}27 &= \color{\yellow} 21 \color{white}\cdot \_\_ + \_\_ \\
+>>27 &= \color{lime}21 \color{white}\cdot 1 +\color{\yellow} 6 \tag{4}\\
+>> \color{lime}21 &= \color{\yellow} 6 \color{white}\cdot \_\_ + \_\_ \\
+>>21 &= \color{lime}6 \color{white}\cdot 3 +\color{\yellow} 3 \tag{5}\\
+>> \color{lime}6 &= \color{\yellow} 3 \color{white}\cdot \_\_ + \_\_ \\
+>>6 &= \underbrace{ \color{lime}3 }_{ \text{ggT} } \color{white}\cdot 2 +\color{\yellow} 0 \\
+>>\end{align}$$
+>>Wir formulieren nun für jede markierte Zeile den Rest (gelb) über den Rest der Gleichung, also
+>>$$\begin{align}
+>> \color{yellow} 3 &= 21 + \color{lime}6 \color{white}\cdot(-3) \tag{5} \\
+>> \color{yellow} 6 &= 27 + \color{lime}21 \color{white}\cdot (-1) \tag{4} \\
+>> \color{yellow} 21 &= 102 + \color{lime}27 \color{white}\cdot (-3) \tag{3} \\
+>> \color{yellow} 27 &= 129 + \color{lime}102 \color{white}\cdot (-1) \tag{2} \\
+>> \color{yellow} 102 &= 231 + \color{lime}129 \color{white}\cdot (-1) \tag{1} \\
+>>\end{align}$$
+>>Wir stellen fest, dass in Zeile $(5)$ eine $\color{lime}6$ auftaucht und in Zeile $(4)$ ebenfalls eine $\color{yellow}6$ zu sehen ist. Wir setzen den Ausdruck für $\color{yellow}6$ in Zeile $(4)$ in $(5)$ ein und erhalten.
+>>$$\begin{align}
+>> \color{yellow}3 &= 21+\color{lime}(27-21\cdot 1) \color{white} \cdot (-3)
+>>\end{align}$$
+>>Wir bemerken, dass die Zahl 21 nun mehrfach auftaucht, daher stellen wir die Gleichung so um, dass die 21 zusammengefasst wird.
+>>$$\begin{align}
+>> \phantom{\color{yellow}3} &= 21+ 27 \cdot (-3) +21\cdot 3 \\
+>> &=\color{lime}21\color{white} \cdot 4 + 27 \cdot (-3)
+>>\end{align}$$
+>>Dieser Mechanismus lässt sich nun auch für die $\color{lime}21$ wiederholen und sich sukzessive fortführen, bis wir alle Gleichungen abgearbeitet haben.
+>>$$\begin{align}
+>>3 &=\color{lime}21\color{white} \cdot 4 + 27 \cdot (-3) \\
+>> &=\color{lime}\Big(102 + 27 \cdot (-3)\Big)\color{white}\cdot 4 - 27 \cdot (-3) \tag*{ aus $(3)$}\\
+>> &= 102 \cdot 4 + 27 \cdot (-12) + 27 \cdot (-3) \\
+>> &= 102 \cdot 4 + \color{lime}27\color{white} \cdot (-15) \\
+>> &= 102 \cdot 4 + \color{lime}\Big(129 + 102 \cdot (-1)\Big)\color{white} \cdot (-15)  \tag*{ aus $(2)$}\\
+>> &= 102 \cdot 4 + 129\cdot (-15) + 102  \cdot 15 \\ 
+>> &= \color{lime}102\color{white} \cdot 19 + 129\cdot (-15) \\ 
+>> &= \color{lime}\Big(231 + 129 \cdot (-1)\Big)\color{white} \cdot 19 + 129\cdot (-15) \tag*{ aus $(1)$}\\ 
+>> &= 231\cdot19 + 129 \cdot (-19) + 129\cdot (-15) \\ 
+>> &= 231\cdot19 + 129 \cdot (-34) \\ 
+>>\end{align}$$
+>>Daher haben wir gefunden
+>>$$\text{ggT}(231,129) = 231\cdot19 + 129 \cdot (-34) \tag*{$\blacktriangleleft$}$$
 ^42f9e5
 
 
@@ -781,6 +864,8 @@
 >>\end{align}$$
 >>Da $\frac{1}{p_{i}}$ keine ganze Zahl sein kann, haben wir auch für diesen Fall einen Widerspruch. Somit muss es unendlich viele Primzahlen geben, da es nicht endlich viele geben kann
 >>$$\tag*{$\square$}$$
+
+^128d63
 
 >[!theorem] Satz Fundamentalsatz der Arithmetik ([[../../PDFs/judson2022.pdf#page=22|Quelle]])
 >Sei $n \in \mathbb{Z}$ mit $n>1$. Dann lässt sich $n$ _eindeutig_ in seine Primfaktoren

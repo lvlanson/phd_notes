@@ -2,7 +2,7 @@
 >[!remark]- Bemerkung: Zur Entstehung
 > Das El Gamal's Kryptosystem wurde von Taher Elgamal 1984 entwickelt. Es nimmt sich [[8 - No-Key Protokolle#^d70a98| Diffie Hellman's Schlüsselaustausch]] als Vorbild und folgt dem von Diffie und Hellman's vorgeschlagenen Konzept [[3 - RSA (Rivest Shamir Adleman)#^7402b5|neuer asymmetrischer Verschlüsselungsverfahren]].
 
->[!algo] Kryptografisches Verfahren: El Gamal's Verschlüsselung (1984) (https://ieeexplore.ieee.org/document/1057074)
+>[!algo] Kryptografisches Verfahren: El Gamal's Verschlüsselung (1984) ([[../../PDFs/elgamal1985.pdf|Quelle]])
 >
 >>[!schlüsselerzeugung]
 >>Man wählt eine große Primzahl $p$ und eine [[7 - Algebraische und Zahlentheoretische Grundlagen (2)#^01650b|primitive Wurzel]] $a$ von $p$.
@@ -45,6 +45,8 @@
 >Ein digitales Signaturverfahren erlaubt es einem *Unterzeichner*, welcher ein **Schlüsselpaar eines asymmetrischen Verschlüsselungsverfahrens** erzeugt hat, **eine Nachricht mit einem privaten Schlüssel zu signieren**.
 >
 >Der Empfänger kann mit dem digitalen Signaturverfahren mithilfe **des öffentlichen Schlüssels** prüfen, dass *der Unterzeichner* Urheber der Nachricht ist.
+
+^95db8e
 
 >[!algo] Kryptografisches Verfahren: El Gamal Signatur
 >

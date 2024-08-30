@@ -158,7 +158,7 @@
 >
 >>[!remark]- Bemerkung zur Herkunft des Chinesischen Restsatzes (Informativ) ([[../../PDFs/imhausen2007.pdf#page=155|Quelle]])
 >>
->> Die Art des Problems wurde das erste Mal nachweislich in einer chinesischen Schrift "Sunzi suan jing" 400-500 nach Christus entdeckt. Der Titel der Schrift übersetzt sich als "Klassische Mathematik des Meister Sonne". Der Autor des Stückes wird mit dem Militärstrategen Sunzi in assoziiert, der auch "Meister Sonnes Kunst des Krieges" Autor war. Dies sind allerdings umstrittene Ideen, die auf Indizien beruhen. Das Buch beginnt mit einem prosaischen Vorwort 
+>> Die Art des Problems wurde das erste Mal nachweislich in einer chinesischen Schrift "Sunzi suan jing" 400-500 nach Christus entdeckt. Der Titel der Schrift übersetzt sich als "Klassische Mathematik des Meister Sonne". Der Autor des Stückes wird mit dem Militärstrategen Sunzi in assoziiert, der ebenfalls Autor von "Meister Sonnes Kunst des Krieges" war. Die Autorschaft des Buches ist allerdings eine umstrittene Theorie, die lediglich auf Indizien beruhen. Das Buch beginnt mit einem prosaischen Vorwort 
 >> 
 >> ---
 >> <center>
