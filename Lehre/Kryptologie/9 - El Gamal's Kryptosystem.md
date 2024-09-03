@@ -41,6 +41,8 @@
 >
 >>[!remark] Kontrollfrage: Warum muss Alice zum Entschlüsseln das $k \in \mathbb{Z}_{p}^*$ nicht kennen?
 
+^90f6e7
+
 >[!def] Definition Digitale Signatur Verfahren (Buch p.440)
 >Ein digitales Signaturverfahren erlaubt es einem *Unterzeichner*, welcher ein **Schlüsselpaar eines asymmetrischen Verschlüsselungsverfahrens** erzeugt hat, **eine Nachricht mit einem privaten Schlüssel zu signieren**.
 >

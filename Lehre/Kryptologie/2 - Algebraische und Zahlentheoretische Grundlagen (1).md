@@ -917,6 +917,8 @@
 >>- Pollard'sche $p-1$-Methode
 >>- Fermat-Methode
 
+^ecfc5d
+
 ---
 
 >[!lemma] Lemma Teilbarkeit über Primzahlfaktoren 
