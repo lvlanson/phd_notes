@@ -3,7 +3,7 @@
 >Given a basis $\mathbf{B}=\{\mathbf{b}_{1}, \mathbf{b}_{2},\dots,\mathbf{b}_{n}  \}$ of a lattice $\mathcal{L}(\mathbf{B})$, find the nonzero shortest vector $\mathbf{v}$, i.e., find $\mathbf{v} \in \mathcal{L}$ for which $$\lvert\lvert \mathbf{v} \rvert\rvert = \lambda_{1}(\mathcal{L}) $$
 >where $\lambda_{1}$ denotes the [[1 - Elementary Lattice Definitions#^5efb92|minimum distance of a lattice]].
 >>[!pic] Illustration
->>![[../Figures/shortest_vector_problem.png|center| 450]]
+>>![[Figures/shortest_vector_problem.png|center| 450]]
 >
 
 >[!theorem] Minkowski's First Theorem ([[../../../../../PDFs/sabani2024.pdf#page=6|Source]])
@@ -19,7 +19,7 @@
 >> There is a **gap** in the range $$\Big(d, \gamma(n)\cdot d \Big]$$ where no decision is made. One could say, this range is not part of domain of the $\text{GAPSVP}_{\gamma}$ instance.
 >
 >>[!pic] Illustration
->>![[../Figures/gapsvp.png|center|300]]
+>>![[Figures/gapsvp.png|center|300]]
 >>The gap is given by the area between the two circle. Given some $d$ outside the outer circle, NO is given by the instance, given some $d$ inside the inner circle, YES is given by the instance. The area inbetween won't give a response.
 
 ^02fc56
@@ -29,7 +29,7 @@
 > $$d(t,\mathcal{L}): \min_{\mathbf{x} \in \mathcal{L}} \lvert\lvert \mathbf{x}-\mathbf{t} \rvert\rvert $$
 >
 >>[!pic] Illustration
->> ![[../Figures/closest_vector_problem.png | center | 300]]
+>> ![[Figures/closest_vector_problem.png| center | 300]]
 >
 
 ^08199f

@@ -57,25 +57,25 @@
 >>[!remark]- Bemerkung: Einordnung
 >>Die ersten 3 Punkte unterscheiden sich nicht von den Algorithmen, die wir bisher kennengelernt haben. 
 >>
->>Der Sicherheitsparameter $\lambda$ entspricht bei RSA beispielsweise der Bittiefe des Moduls. Üblicherweise die Schlüsselerzeugung auch noch von einem *Funktionalitätsparameter* abhängig, der Komplexitätseigenschaften des Verfahrens bestimmt. Diesen Parameter erwähnen wir an dieser Stelle kurz, da er in Verwendung dieser Algorithmen von großer Bedeutung ist. 
+>>Der Sicherheitsparameter $\lambda$ entspricht bei RSA beispielsweise der Bittiefe des Moduls. Üblicherweise ist die Schlüsselerzeugung auch noch von einem *Funktionalitätsparameter* abhängig, der Komplexitätseigenschaften des Verfahrens bestimmt. Diesen Parameter erwähnen wir an dieser Stelle kurz, da er in Verwendung dieser Algorithmen von großer Bedeutung ist. 
 >>
 >> Es existiert auch noch ein Hilfsparameter $\alpha$, welcher für anspruchsvollere homomorphe Verschlüsselungsalgorithmen den maximalen Umfang von Operationen im Schlüsselraum bestimmt. Mehr dazu könnt ihr [[../../PhD Studies/Cryptology/Homomorphic Encryption/Surveys/Untitled#^5f3338|hier]] lesen.
 >>
->> Die $\text{Eval}$ Funktion kann verschiedene Arten von Funktionen darstellen. Beispielsweise können $\min, \max$, der Logarithmus oder beliebige andere Operationen darunter fallen. Die Wahl der Operationen ist jedoch in Abhängigkeit von der Konstruktion des Schemas beschränkt. Vielmehr hat die Anzahl der Operationen einen direkten (teilweise massiven) Einfluss auf die Komplexität verschiedener Aspekte wie Schlüsselerzeugung oder Berechnungen im Schlüsselraum, weshalb damit üblicherweise versucht wird sparsam umzugehen. Dies ist dadurch bis heute noch ein Forschungsfeld, welches viel Aufmerksamkeit in der Kryptologie erhält.
->> 
->> Wenn Funktionen in der $\text{Eval}$ Funktion sich als AND und XOR Gates darstellen lassen, wird eine konkrete Abfolge von Operationen auch als Circuit (Schaltkreis) bezeichnet.
+>> Die $\text{Eval}$ Funktion kann verschiedene Arten von Funktionen darstellen. Diese müssen allerdings durch $\text{AND}$ und $\text{OR}$ Gates darstellbar sein, bzw. durch die Addition und Multiplikation im Schlüsselraum. Man nennt hierbei die Menge aller darstellbaren Operationsabfolgen *Circuits* $\mathcal{C}$ und eine konkrete Abfolge einen *Circuit*. Die Anzahl der Operationen hat einen direkten (teilweise massiven) Einfluss auf die Komplexität verschiedener Aspekte wie Schlüsselerzeugung oder Berechnungen im Schlüsselraum, weshalb damit üblicherweise versucht wird sparsam umzugehen. Dies ist dadurch bis heute noch ein Forschungsfeld, welches viel Aufmerksamkeit in der Kryptologie erhält.
 
 >[!def] Definition Teilweise Homomorphe Verschlüsselungsschema ([[../../PDFs/armknecht2015a.pdf#page=14|Quelle]])
-> Wir bezeichnen ein homomorphes Verschlüsselungsschema als **teilweise homomorph**, wenn es eine $\text{eval}$-Funktion gibt, die eine spezifische Menge an Operationen erlaubt.
+> Wir bezeichnen ein homomorphes Verschlüsselungsschema als **teilweise homomorph**, wenn die $\text{eval}$-Funktion eine eingeschränkte Menge an Operationen erlaubt.
 >
 >>[!remark] Bemerkung: Hierbei gilt, dass wir die homomorphe Eigenschaft lediglich bezüglich **einer Auswahl an Operationen** haben.
 
+^e93583
+
 >[!def] Definition Vollständiges Homomorphes Verschlüsselungsschema ([[../../PDFs/armknecht2015a.pdf#page=14|Quelle]])
->Wir bezeichnen ein homomorphes Verschlüsselungsschema als **vollständig homomorph**, wenn es eine $\text{eval}$-Funktion gibt, die beliebige Operationen auf den Chiffren erlaubt und die Größe der Chiffren unabhängig von der Anzahl oder Komplexität der durchgeführten Operationen bleibt.
+>Wir bezeichnen ein homomorphes Verschlüsselungsschema als **vollständig homomorph**, wenn die $\text{eval}$-Funktion beliebige Operationen auf den Chiffren erlaubt und die Größe der Chiffren unabhängig von der Anzahl oder Komplexität der durchgeführten Operationen bleibt.
 
 
 >[!theorem] Satz Teilweise Homomorphes RSA
-> [[3 - RSA (Rivest Shamir Adleman)#^7c14da|RSA]] ist ein teilweise homomorphes Verschlüsselungsschema mit beliebiger $\text{eval}$-Größe bezüglich der Multiplikation.
+> [[3 - RSA (Rivest Shamir Adleman)#^7c14da|RSA]] ist ein [[#^e93583|teilweise homomorphes Verschlüsselungsschema]] mit beliebiger $\text{eval}$-Größe bezüglich der Multiplikation.
 > 
 >>[!proof]- Beweis
 >>Ohne Beschränkung der Allgemeinheit zeigen wir die homomorphe Eigenschaften anhand zwei Elemente. Es ist leicht ersichtlich, dass dies sich auf beliebig viele erweitern lässt. 
@@ -107,7 +107,7 @@
 >>>$$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
 
 >[!theorem] Satz Teilweise Homomorphes El Gamal Verschlüsselung
->[[9 - El Gamal's Kryptosystem#^90f6e7|Das El Gamal Verschlüsselungsverfahren]] ist ein teilweise homomorphes Verschlüsselungsverfahren mit beliebiger $\text{eval}$-Größe bezüglich der Addition.
+>[[9 - El Gamal's Kryptosystem#^90f6e7|Das El Gamal Verschlüsselungsverfahren]] ist ein [[#^e93583|teilweise homomorphes Verschlüsselungsschema]] mit beliebiger $\text{eval}$-Größe bezüglich der Addition.
 >>[!proof]- Beweis
 >>Ohne Beschränkung der Allgemeinheit zeigen wir die homomorphe Eigenschaften anhand zwei Elemente. Es ist leicht ersichtlich, dass dies sich auf beliebig viele erweitern lässt. 
 >>
@@ -138,7 +138,7 @@
 >>da sich in Zeile $(1)$ der Koeffizient $B^k$ nicht auf beide Nachrichten $m_{1},m_{2}$ aufteilen lässt.
 
 >[!remark]- Bemerkung: Weitere Informationen zu Homomorpher Verschlüsselung (Informativ)
-> Die vollständig homomorphen Verschlüsselungsschemen (VHV) lassen sich immer auf [[../../PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/1 - Elementary Lattice Definitions|diskrete Gitter]] zurückführen. Der erste VHV wurde von [[../../PDFs/gentry2009.pdf|Gentry (2009)]] entwickelt und nutzte genau diese Gitterstrukturen. Dieses mathematische Gebiet enthält ebenfalls [[../../PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/Lattice Cryptography/2 - Computational Problems on Lattices|Einweg-Probleme]], in denen Berechnungen in eine Richtung sehr simpel sind, aber umgekehrt extrem schwierig sind (ähnlich wie das [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^ecfc5d| Faktorisierungsproblem]] und das [[7 - Algebraische und Zahlentheoretische Grundlagen (2)#^9e7a61|diskrete Logarithmusproblem]]). 
+> Die vollständig homomorphen Verschlüsselungsschemen (VHV) lassen sich immer auf [[../../PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/1 - Elementary Lattice Definitions|diskrete Gitter]] zurückführen. Der erste VHV wurde von [[../../PDFs/gentry2009.pdf|Gentry (2009)]] entwickelt und nutzte genau diese Gitterstrukturen. Dieses mathematische Gebiet enthält ebenfalls [[../../PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/2 - Computational Problems on Lattices|Einweg-Probleme]], in denen Berechnungen in eine Richtung sehr simpel sind, aber umgekehrt extrem schwierig sind (ähnlich wie das [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^ecfc5d| Faktorisierungsproblem]] und das [[7 - Algebraische und Zahlentheoretische Grundlagen (2)#^9e7a61|diskrete Logarithmusproblem]]). 
 > 
 > Diese Algorithmen leiden alle an Effizienz-Problemen mit wachsenden Schlüsselraumfunktionen ($\text{eval}$). Neben den Effizienz-Problemen müssen auch zusätzliche Maßnahmen getroffen werden, um ein Rauschen möglichst kleinzuhalten, da sonst eine korrekte Verschlüsselung gefährdet ist.
 > 

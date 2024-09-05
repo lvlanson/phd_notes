@@ -25,8 +25,8 @@
 >> 0 &\text{with probability } 1-\varepsilon \\
 >> 1 &\text{with probability } \varepsilon
 >> \end{cases}$$
->> 	where $\varepsilon$ represents the noise or error
->> 	1. Alice sends $\mathbf{a}$ and $b$ to Bob
+>> 	where $\varepsilon$ represents the noise or error probability
+>> 	3. Alice sends $\mathbf{a}$ and $b$ to Bob
 >>3. Bob's goal is to determine the secret vector $\mathbf{s}$ by querying Alice multiple times using the request algorithm. Each query provides a new pair $(\mathbf{a},b)$.
 
 >[!remark]- Remark on LWE as an Extension of LPN
@@ -126,7 +126,7 @@
 >$$\forall \mathbf{x} \in A, D_{A,s}(\mathbf{x}):= \frac{\rho_{s}(\mathbf{x})}{\rho_{s}(A)}$$
 >where $\rho_{s}$ is the [[#^cd948a|Gaussian function]]
 >>[!pic] Illustration ([[../../../../../../PDFs/regev2024.pdf#page=7|Source]])
->> ![[../../Figures/discrete_gaussian.png]]
+>> ![[../Lattice Based/Figures/discrete_gaussian.png]]
 >> where $s$ denotes the width of the distribution.
 
 >[!def] Definition Torus Quotient Group

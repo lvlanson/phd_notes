@@ -15,9 +15,15 @@
 >The plaintext is the scalar $\mu \in \mathbb{Z}_{q}$ which should be a "small" integer
 
 >[!def] Definition Encryption ([[../../../../../../PDFs/gentry2013.pdf#page=4|Source]])
+> 
 >The encryption is a function for some plaintext $\mu$ which solves the following expression
 >$$\text{Enc}(\mu): \mathbf{C}\cdot \mathbf{v} = \mu \cdot \mathbf{v}  +\mathbf{e}$$
 >where $\mathbf{e} \in \mathbb{Z}^N_{q}$ being a "small" error vector
+>
+>Parameter:
+> - input: $\mu$ - plaintext
+> - output: $C$ - ciphertext
+>
 >>[!remark]
 >>- $\mu$ represents the eigenvalue, while $\mathbf{v}$ is the approximate eigenvector and $\mathbf{e}$ some error sampled from some distribution $\chi$
 

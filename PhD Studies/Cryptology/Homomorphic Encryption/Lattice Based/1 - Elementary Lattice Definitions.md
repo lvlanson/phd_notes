@@ -64,7 +64,7 @@
 >>[!pic] Illustration ([[../../../../../PDFs/sabani2024.pdf#page=4|Source]])
 >>![[../Figures/lattice_bases.png|center|280]]
 
->[!def] Definition Unimodular Matrix ([[../../../../../PDFs/peikert2015.pdf#page=9|Source 1]], [[../../../../../PDFs/judson2022.pdf#page=163|Source 2]])
+[](Figures/lattice_bases.png)./../../../PDFs/peikert2015.pdf#page=9|Source 1]], [[../../../../../PDFs/judson2022.pdf#page=163|Source 2]])
 >A matrix $\mathbf{U} \in \mathbb{Z}^{n \times n}$ is called unimodular if
 >$$\det(U) = \pm 1$$
 >
