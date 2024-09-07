@@ -17,7 +17,7 @@
 > 
 > Homomorphe Verschlüsselung galt bis 2009 als der *heilige Gral* in der Kryptologie. Bis dahin gab es Verschlüsselungsalgorithmen, die bis zu einem gewissen Grad erlaubten im Schlüsselraum Berechnungen durchzuführen. 2009 gelang es [[../../PDFs/gentry2009.pdf|Craig Gentry]] einen vollständig homomorphen Verschlüsselungsalgorithmus zu entwickeln. Seither wird viel an diesen Algorithmen geforscht.
 > 
-> ![[../../Pasted image 20240830171529.png|center]]
+> ![[Figures/zeitachse_krypto.png|center]]
 > <center>Abbildung: Zeitachse zu Homomorphen Verschlüsselungsalgorithmen <br> PHE - Partially Homomorphic Encryption <br> SWHE - Somewhat Homomorphic Encryption <br> FHE - Fully Homomorphic Encryption</center>
 > 
 > ([[../../PDFs/acar2017.pdf|Bildquelle]])

@@ -63,7 +63,7 @@
 ^00ba5e
 
 >[!def] Definition Correct Evaluation ([[../../../../PDFs/armknecht2015a.pdf#page=12|Source]])
->A $\mathcal{C}$-evaluation scheme $(\text{Gen, Enc, Dec, Eval})$ correctly evaluates all circuits in $\mathcal{C}$ if for all $\forall c_{i} \in \mathcal{X}$, $\forall C \in \mathcal{C}$ and some negligible function $\varepsilon$
+>A $\mathcal{C}$-evaluation scheme $(\text{Gen, Enc, Dec, Eval})$ correctly evaluates all circuits in $\mathcal{C}$ if for all $\forall c_{i} \in \mathcal{X}$, $\forall C \in \mathcal{C}$ and some [[../Learning With Errors Based/1 - Learning With Errors Introduction#^548cd0|negligible function]] $\varepsilon$
 >$$P\Big(\text{Dec}\big(sk, \text{Eval}(evk, C, c_{1}, \dots, c_{n})=C(m_{1}, \dots, m_{n})\big)\Big)= 1- \varepsilon(\lambda)$$
 
 ^b78a8d
@@ -90,7 +90,7 @@
 #### 1.2 Classification of Homomorphic Encryption Schemes
 
 >[!def] Definition Somewhat Homomorphic Encryption Scheme ([[../../../../PDFs/armknecht2015a.pdf#page=14|Source]])
->A $\mathcal{C}$-evalutation scheme $(\text{Gen, Enc, Dec, Eval})$ that has correct decryption and correct evaluation is caled **somewhat homomorphic encryption scheme (SHE)**
+>A $\mathcal{C}$-evalutation scheme $(\text{Gen, Enc, Dec, Eval})$ that has correct decryption and correct evaluation is called **somewhat homomorphic encryption scheme (SHE)**
 >>[!remark]
 >>- SHEs don't need to be compact, hence ciphertexts can grow substantialy
 >>- SHEs don't need to cover all operations, hence circuits can have limited sets of operations

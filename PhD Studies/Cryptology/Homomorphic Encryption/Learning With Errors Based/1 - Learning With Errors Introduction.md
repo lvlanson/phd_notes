@@ -94,6 +94,8 @@
 >Let $n$ be some number. A function $f$ is called *negligible* if for any constant $c>0$
 >$$\lim_{ n \to \infty } n^cf(n)=0 \qquad $$
 
+^548cd0
+
 >[!def] Definition Gaussian Function ([[../../../../../../PDFs/regev2024.pdf#page=13|Source]])
 >Let $\mathbf{x} \in \mathbb{R}$ and the scaling factor $s>0$, the Gaussian function is given by
 >$$\rho_{s}(\mathbf{x}):= \exp\left( -\pi \left\lvert \left\lvert  \frac{\mathbf{x}}{s}  \right\rvert \right\rvert^2   \right)$$
