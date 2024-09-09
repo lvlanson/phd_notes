@@ -126,23 +126,94 @@
 >Unter Verwendung dieser Logik nehmen für $P + \mathcal{O}$ wieder die Sekante, jedoch entsteht hier der Schnittpunkt $P'$, sodass wenn wir $P'$ spiegeln wir wieder $P$ erhalten, also
 >$$P + \mathcal{O} = P$$
 
+>[!def] Definition Körper
+> Wir nennen das Tripel $(\mathbb{K}, +, \cdot)$ einen Körper, wenn
+> 1. $(\mathbb{K}, +)$ eine additive [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]] ist
+> 2. $(\mathbb{K} \setminus \{ 0 \}, \cdot)$ eine multiplikative [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]] ist, wobei $0$ das neutrale Element in $(\mathbb{K},+)$ ist
+> 3. das **Distributivgesetz** gilt, also $\forall x,y,z \in \mathbb{K}$ $$x(y+z)=xy+xz$$
+
 >[!def] Definition Elliptische Kurve $E$ ([[../../PDFs/silverman2008.pdf#page=295|Quelle]])
-> Eine **elliptische Kurve** ist die Menge an Lösungen der Gleichung
+> Eine **elliptische Kurve** über einem Körper $\mathbb{K}$ ist die Menge an Lösungen der Gleichung
 > $$E: y^2 = x^3 +ax + b$$
 > inklusive des Punktes im Unendlichen $\mathcal{O}$, wobei die Konstanten $a$ und $b$ die Bedingung erfüllen
 > $$4a^3 + 27b^2 \neq 0$$
->
+> Wir schreiben
+> $$E := \{ (x,y) \in \mathbb{K} \times \mathbb{K} \mid y² = x^3 +ax+b \} \cup \{ \mathcal{O} \}$$
 
->[!remark] Bemerkung: Zur Bedingung $4a^3+27b^2 \neq 0$
->Diese Bedingung garantiert uns, dass wenn wir die elliptische Kurve faktorisieren, dass wir genau $3$ **verschiedene Nullstellen** finden. Wir fordern also, dass es Nullstellen $u,v,w \in \mathbb{C}$ gibt, also
+>[!remark]- Bemerkung: Zur Bedingung $4a^3+27b^2 \neq 0$
+>Diese Bedingung garantiert uns, dass wenn wir die elliptische Kurve faktorisieren, dass wir genau $3$ **verschiedene Nullstellen** finden. 
+>
+>Wir verzichten darauf, dies genauer zu begründen. Es würde einiges an Grundlagen erfordern, die wir aus zeitgrunden aussparen. Wer sich dafür interessiert, kann in [[../../PDFs/washington2008.pdf|diesem Buch]] einen sehr schönen Einstieg in die Mathematik der elliptischen Kurven finden.
+
+>[!remark]- Bemerkung: Wahl des Körper $\mathbb{K}$ für die elliptische Kurve
+>Zum Zweck der Visualisierung haben wir für den Körper die reellen Zahlen $\mathbb{R}$ gewählt, damit die Addition geometrisch nachvollziehbar ist. Für die mathematische Disziplin der elliptischen Kurven sind vorwiegend die Körper über den rationalen Zahlen $\mathbb{Q}$, den ganzen Zahlen $\mathbb{Z}$ und der endlichen Mengen $\mathbb{K}_{q}$, wobei $q = p^k$ mit $k\in \mathbb{N}$
+
+>[!theorem] Satz Operation Addition auf Elliptischen Gruppen [[../../PDFs/silverman2008.pdf#page=297|Quelle]]
+>Sei $E: y^2 = x^3+ax+b$ eine elliptische Gruppe mit $a,b,x,y \in \mathbb{K}$ und $P,Q,\mathcal{O} \in E$ Punkte auf der elliptischen Kurve, wobei $\mathcal{O}$ **der Punkt in der Unendlichkeit** ist. Wir definieren die Operation $$\oplus: E \times E \to E$$
+>mit dem **Additionsalgorithmus auf elliptischen Kurven**
+>1. $$P \oplus \mathcal{O}=\mathcal{O} \oplus P = P$$
+>2. Wenn $P=(x,y)$ und $Q=-P=(x,-y)$, dann $$P \oplus (-P) = \mathcal{O}$$
+>3. Wenn $P=(x_{1},y_{1})$ und $Q=(x_{2},y_{2})$ mit $y_{1} \neq -y_{2}$, dann definieren wir $$\lambda \begin{cases}
+> \dfrac{y_{2}-y_{1}}{x_{2}-x_{1}} & \text{ wenn } P\neq Q \\[0.5em]
+> \dfrac{3x_{1}^2+a}{2y_{1}} & \text{ wenn } P = Q
+>\end{cases}$$
+>dann ist der Punkt $P \oplus Q = R' = (x_{3},y_{3})$ definiert als
 >$$\begin{align}
-> x^3 + ax + b &= (x-u)(x-v)(x-w) \\
-> \cancel{ x^3 } + ax+ b &= \cancel{ x^3 } - x^2u -x^2v-x^2z +xuv+xuz+xvz-uvz \\
-> ax + b &= -x^2\underbrace{ (u+v+z) }_{ =0 }+ x\underbrace{ (uv+uz+vz) }_{ \widehat{=} a }-\underbrace{ uvz }_{ \widehat{= b} }
+> x_{3} &= \lambda^2 -x_{1} -x_{2} \\
+> y_{3} &= \lambda(x_{1}-x_{3})-y_{1}
 >\end{align}$$
->Über den mit den Klammern angedeuteten *Koeffizientenvergleich*, können wir folgende Bedingung formulieren
->$$\begin{align}
-> a &= uv+uz+vz \\
-> b &= -uvz \\
-> 0 &= u+v+z
->\end{align}$$
+>
+>>[!proof] Beweis
+>>Wir verzichten darauf $1$ und $2$ zu beweisen und nehmen diese einfach als gegebene Definition. Tatsächlich lassen sich $1$ und $2$ über den Projektionsraum $\mathbf{P}_{\mathbb{K}}^2$ über homogenisierte Polynome begründen, da wir uns genauer mit dem *Punkt im Unendlichen* beschäftigen müssten. Wer sich dafür interessiert kann dies genau [[../../PDFs/washington2008.pdf#page=32|hier]] nachlesen.
+>>
+>>Wir wollen uns vor allem mit der Addition beschäftigen, da diese mit simpler Algebra zu zeigen geht, ohne dass wir ein fundamentales Verständnis um die Theorie von elliptischen Kurven aufbauen müssten.
+>>
+>>Der Parameter $\lambda$ beschreibt den Anstieg der Sekante ($P \oplus Q$) bzw. der Tangente ($P \oplus P$). Die Sekante hat den Anstieg aus dem Steigungsdreieck
+>>$$\lambda = \frac{y_{2}-y_{1}}{x_{2}-x_{1}} \tag{1}$$
+>>Für die Tangente müssen wir ein klein wenig mehr Arbeit investieren und *implizit differenzieren*, also
+>>$$\begin{align}
+>> y^2 &= x^3 +ax+b \qquad&&\Big\vert \frac{d}{dx}  \\
+>> 2y \frac{dy}{dx} &= 3x^2 + a \qquad&&\Big\vert :2y  \\
+>> \frac{dy}{dx} &= \lambda = \frac{3x^2+a}{2y} \tag{2}
+>>\end{align}$$
+>>Somit konnten wir die Beschaffenheit des Anstiegs $\lambda$ bereits nachweisen. Wir zeigen nun, wie die Koordinaten $x_{3},y_{3}$ ergeben. Wir wissen, dass die Sekante bzw. Tangente eine Gerade der Form
+>>$$Y = \lambda X+\nu$$
+>>Den Schnittpunkt mit der $y$-Achse können wir bestimmen, indem wir einen der Punkte einsetzen, also
+>>$$\begin{align}
+>>y_{1} &= \lambda x_{1} + \nu \\
+>> \nu &= y_{1} -\lambda x_{1} \tag{3}
+>>\end{align}$$
+>>Wir setzen die Gleichung der Geraden ein und lösen
+>>$$\begin{align}
+>> (\lambda X + \nu)^2 &= X^3 + aX + b \tag{4}\\
+>> X^3-\lambda^2X^2+(a-2\lambda \nu)X+(B-\nu^2) &=0
+>>\end{align}$$
+>>Dieses Polynom dritten Grades können wir lösen und uns ist garantiert, dass zwei der Nullstellen $x_{1},x_{2}$ sind und durch unsere Bedingung für die Diskriminante existiert eine von $x_{1},x_{2}$ verschiedene, dritte Nullstelle. Also können wir über die Nullstellen faktorisieren und erhalten
+>>$$\begin{align}
+>> X^3-\lambda^2X^2+(a-2\lambda \nu)X+(B-\nu^2) &= (X-x_{1})(X-x_{2})(X-x_{3}) \\
+>> &= X^3 - (x_{1}-x_{2}-x_{3})X^2 + (x_{1}x_{2} + x_{1}x_{3} +x_{2}x_{3})X -x_{1}x_{2}x_{3}
+>>\end{align}$$
+>>Demnach haben wir
+>>$$\begin{align}
+>> X^3-\lambda^2X^2+(a-2\lambda \nu)X+(B-\nu^2) &= X^3 - (-x_{1}-x_{2}-x_{3})X^2 + (x_{1}x_{2} + x_{1}x_{3} +x_{2}x_{3})X -x_{1}x_{2}x_{3}
+>>\end{align}$$
+>>Über den Koeffizientenvergleich wissen wir, dass
+>>$$\begin{align}
+>> -\lambda &= -x_{1}-x_{2}-x_{3} \tag{zu $X^2$} 
+>>\end{align}$$
+>>Also können wir für $x_{3}$ lösen und erhalten
+>>$$x_{3} = \lambda - x_{1}-x_{2}$$
+>>Aus Gleichung $(4)$ wissen wir um die Beschaffenheit von $y$, also
+>>$$y = \lambda x_{3} + \nu$$
+>>Wir müssen noch die $y$-Komponente an der $x$-Achse reflektieren und erhalten
+>>$$-y = y_{3}=-\lambda x_{3}-\nu$$
+>>Wir setzen noch aus Gleichung $(3)$ die Form von $\nu$ ein und erhalten
+>>$$\begin{align}
+>> y_{3} &= -\lambda x_{3} -(y_{1} -\lambda x_{1}) \\
+>> &= -\lambda x_{3} -y_{1} +\lambda x_{1} \\
+>> &= \lambda(x_{1}-x_{3}) - y_{1}
+>>\end{align}$$
+>>was alle zu zeigenden Teile vervollständigt und den Beweis abschließt.
+>>$$\tag*{$\square$}$$
+
+>[!theorem] Satz Additive Kommutative Gruppe auf Elliptischen Kurven
