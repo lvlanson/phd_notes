@@ -126,6 +126,8 @@
 >Unter Verwendung dieser Logik nehmen für $P + \mathcal{O}$ wieder die Sekante, jedoch entsteht hier der Schnittpunkt $P'$, sodass wenn wir $P'$ spiegeln wir wieder $P$ erhalten, also
 >$$P + \mathcal{O} = P$$
 
+^ec6d6b
+
 >[!def] Definition Körper
 > Wir nennen das Tripel $(\mathbb{K}, +, \cdot)$ einen Körper, wenn
 > 1. $(\mathbb{K}, +)$ eine additive [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]] ist
@@ -140,6 +142,8 @@
 > Wir schreiben
 > $$E := \{ (x,y) \in \mathbb{K} \times \mathbb{K} \mid y² = x^3 +ax+b \} \cup \{ \mathcal{O} \}$$
 
+^df2758
+
 >[!remark]- Bemerkung: Zur Bedingung $4a^3+27b^2 \neq 0$
 >Diese Bedingung garantiert uns, dass wenn wir die elliptische Kurve faktorisieren, dass wir genau $3$ **verschiedene Nullstellen** finden. 
 >
@@ -148,8 +152,8 @@
 >[!remark]- Bemerkung: Wahl des Körper $\mathbb{K}$ für die elliptische Kurve
 >Zum Zweck der Visualisierung haben wir für den Körper die reellen Zahlen $\mathbb{R}$ gewählt, damit die Addition geometrisch nachvollziehbar ist. Für die mathematische Disziplin der elliptischen Kurven sind vorwiegend die Körper über den rationalen Zahlen $\mathbb{Q}$, den ganzen Zahlen $\mathbb{Z}$ und der endlichen Mengen $\mathbb{K}_{q}$, wobei $q = p^k$ mit $k\in \mathbb{N}$
 
->[!theorem] Satz Operation Addition auf Elliptischen Gruppen [[../../PDFs/silverman2008.pdf#page=297|Quelle]]
->Sei $E: y^2 = x^3+ax+b$ eine elliptische Gruppe mit $a,b,x,y \in \mathbb{K}$ und $P,Q,\mathcal{O} \in E$ Punkte auf der elliptischen Kurve, wobei $\mathcal{O}$ **der Punkt in der Unendlichkeit** ist. Wir definieren die Operation $$\oplus: E \times E \to E$$
+>[!theorem] Satz Operation Addition auf Elliptischen Gruppen ([[../../PDFs/silverman2008.pdf#page=297|Quelle]])
+>Sei $E: y^2 = x^3+ax+b$ eine elliptische Kurve mit $a,b,x,y \in \mathbb{K}$ und $P,Q,\mathcal{O} \in E$ Punkte auf der elliptischen Kurve, wobei $\mathcal{O}$ **der Punkt in der Unendlichkeit** ist. Wir definieren die Operation $$\oplus: E \times E \to E$$
 >mit dem **Additionsalgorithmus auf elliptischen Kurven**
 >1. $$P \oplus \mathcal{O}=\mathcal{O} \oplus P = P$$
 >2. Wenn $P=(x,y)$ und $Q=-P=(x,-y)$, dann $$P \oplus (-P) = \mathcal{O}$$
@@ -163,7 +167,7 @@
 > y_{3} &= \lambda(x_{1}-x_{3})-y_{1}
 >\end{align}$$
 >
->>[!proof] Beweis
+>>[!proof]- Beweis
 >>Wir verzichten darauf $1$ und $2$ zu beweisen und nehmen diese einfach als gegebene Definition. Tatsächlich lassen sich $1$ und $2$ über den Projektionsraum $\mathbf{P}_{\mathbb{K}}^2$ über homogenisierte Polynome begründen, da wir uns genauer mit dem *Punkt im Unendlichen* beschäftigen müssten. Wer sich dafür interessiert kann dies genau [[../../PDFs/washington2008.pdf#page=32|hier]] nachlesen.
 >>
 >>Wir wollen uns vor allem mit der Addition beschäftigen, da diese mit simpler Algebra zu zeigen geht, ohne dass wir ein fundamentales Verständnis um die Theorie von elliptischen Kurven aufbauen müssten.
@@ -216,4 +220,18 @@
 >>was alle zu zeigenden Teile vervollständigt und den Beweis abschließt.
 >>$$\tag*{$\square$}$$
 
+^b85a69
+
 >[!theorem] Satz Additive Kommutative Gruppe auf Elliptischen Kurven
+> Sei $E$ eine [[#^df2758|elliptische Kurve]]. Die [[#^b85a69|Addition auf elliptischen Kurven]] bildet eine [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]] $(E, \oplus)$, also
+> 1. $\forall P \in E$ und $\mathcal{O} \in E$ $$P+\mathcal{O} = \mathcal{O}+P = P \tag{Existenz der Identität}$$ 
+> 2. $\forall P \in E$ und $\mathcal{O} \in E$ $$P + (-P)=\mathcal{O} \tag{Existenz Inverses Element}$$
+> 3. $\forall P,Q,R \in E$ $$(P+Q)+R = P + (Q + R) \tag{Assoziativität}$$
+> 4. $\forall P,Q \in E$ $$P+Q = Q + P \tag{Kommutatitivität}$$
+> 
+>>[!proof]- Beweis (wird weitesgehend weggelassen)
+>>Der Beweis benötigt etwas mehr Wissen über **den Punkt in der Unendlichkeit**. Wir haben aber im [[#^ec6d6b|Beispiel der geometrischen Motivation]] gezeigt wiedie Existenz der Identität und das inverse Element zustande kommen. Viel mehr haben wir dort auch gezeigt, dass durch die geometrische Konstruktion die Kommutativität gilt.
+>>
+>>Der Elefant im Raum ist die Assoziativität. Diese erforder tatsächlich eine Menge Arbeit. Wer überprüfen will, warum die Assoziativität gilt, kann dies schön anschaulich in [[../../PDFs/washington2008.pdf#page=34|dieser Quelle]] von Seite 20 bis 35 sehen. Für den Beweis müssen noch neue Konzepte eingeführt werden, die wir aus Zeitgründen hier aussparen.
+>
+>
