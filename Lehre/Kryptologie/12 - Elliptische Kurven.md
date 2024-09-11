@@ -1,3 +1,5 @@
+### 12.1 Mathematische Grundlagen (Verkürzte Version)
+
 >[!remark]- Bemerkung: Einführende Motivation
 >Wir erinnern uns daran, dass wir für den Angriff auf die El Gamal Signatur die [[10 - Angriffe auf die El Gamal Signatur#^ea24cf|linearen Diophantinischen Gleichungen]] eingeführt haben. Dort haben wir uns damit beschäftigt Lösungen für Gleichungen der Gestalt
 >$$ax+by = c$$
@@ -121,6 +123,7 @@
 >
 >![[Figures/elliptic_curve_inverse_addition.png|center|600]]
 ><center>Abbildung: Addition mit dem Inversen  und der Punkt der Unendlichkeit</center>
+>
 >kein weiterer Schnittpunkt mit der elliptischen Kurve über die Sekante entsteht. Dabei nennen wir $\mathcal{O}$ den  **Punkt im Unendlichen**
 >
 >Unter Verwendung dieser Logik nehmen für $P + \mathcal{O}$ wieder die Sekante, jedoch entsteht hier der Schnittpunkt $P'$, sodass wenn wir $P'$ spiegeln wir wieder $P$ erhalten, also
@@ -133,6 +136,8 @@
 > 1. $(\mathbb{K}, +)$ eine additive [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]] ist
 > 2. $(\mathbb{K} \setminus \{ 0 \}, \cdot)$ eine multiplikative [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]] ist, wobei $0$ das neutrale Element in $(\mathbb{K},+)$ ist
 > 3. das **Distributivgesetz** gilt, also $\forall x,y,z \in \mathbb{K}$ $$x(y+z)=xy+xz$$
+
+^801450
 
 >[!def] Definition Elliptische Kurve $E$ ([[../../PDFs/silverman2008.pdf#page=295|Quelle]])
 > Eine **elliptische Kurve** über einem Körper $\mathbb{K}$ ist die Menge an Lösungen der Gleichung
@@ -222,7 +227,7 @@
 
 ^b85a69
 
->[!theorem] Satz Additive Kommutative Gruppe auf Elliptischen Kurven
+>[!theorem] Satz Additive Kommutative Gruppe auf Elliptischen Kurven ([[../../PDFs/silverman2008.pdf#page=296|Quelle]])
 > Sei $E$ eine [[#^df2758|elliptische Kurve]]. Die [[#^b85a69|Addition auf elliptischen Kurven]] bildet eine [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]] $(E, \oplus)$, also
 > 1. $\forall P \in E$ und $\mathcal{O} \in E$ $$P+\mathcal{O} = \mathcal{O}+P = P \tag{Existenz der Identität}$$ 
 > 2. $\forall P \in E$ und $\mathcal{O} \in E$ $$P + (-P)=\mathcal{O} \tag{Existenz Inverses Element}$$
@@ -230,8 +235,93 @@
 > 4. $\forall P,Q \in E$ $$P+Q = Q + P \tag{Kommutatitivität}$$
 > 
 >>[!proof]- Beweis (wird weitesgehend weggelassen)
->>Der Beweis benötigt etwas mehr Wissen über **den Punkt in der Unendlichkeit**. Wir haben aber im [[#^ec6d6b|Beispiel der geometrischen Motivation]] gezeigt wiedie Existenz der Identität und das inverse Element zustande kommen. Viel mehr haben wir dort auch gezeigt, dass durch die geometrische Konstruktion die Kommutativität gilt.
+>>Der Beweis benötigt etwas mehr Wissen über **den Punkt in der Unendlichkeit**. Wir haben aber im [[#^ec6d6b|Beispiel der geometrischen Motivation]] gezeigt wie die Existenz der Identität und das inverse Element zustande kommen. Viel mehr haben wir dort auch gezeigt, dass durch die geometrische Konstruktion die Kommutativität gilt.
 >>
->>Der Elefant im Raum ist die Assoziativität. Diese erforder tatsächlich eine Menge Arbeit. Wer überprüfen will, warum die Assoziativität gilt, kann dies schön anschaulich in [[../../PDFs/washington2008.pdf#page=34|dieser Quelle]] von Seite 20 bis 35 sehen. Für den Beweis müssen noch neue Konzepte eingeführt werden, die wir aus Zeitgründen hier aussparen.
+>>Der Elefant im Raum ist die Assoziativität. Diese erfordert tatsächlich eine Menge Arbeit. Wer überprüfen will, warum die Assoziativität gilt, kann dies schön anschaulich in [[../../PDFs/washington2008.pdf#page=34|dieser Quelle]] von Seite 20 bis 35 sehen. Für den Beweis müssen noch neue Konzepte eingeführt werden, die wir aus Zeitgründen hier aussparen.
+
+>[!remark] Bemerkung: [[#^801450|Körper]] der elliptischen Kurve
+>Bisher haben wir für die Einführung der grundlegendsten Theorie der elliptischen Kurve für einen beliebigen Körper [[#^df2758|definiert]] und das [[#^ec6d6b|Beispiel]] anhand der reellen Zahlen $\mathbb{R}$ konstruiert. Um damit funktionierende Verschlüsserlungsalgorithmen zu bauen, benötigen wir eine andere Art von Körper. Daher werden wir von hierab mit dem Körper
+>$$\mathbb{K}=\mathbb{Z}_{p}$$
+>arbeiten, wobei $p$ eine Primzahl ist. Wir bemerken, dass der Körper einmal aus der additiven Gruppe $(\mathbb{Z}_{p}, +)$ und der multiplikativen Gruppe $(\mathbb{Z}^*_{p})$ besteht.
+
+>[!remark] Kontrollfrage: Warum ist $\mathbb{Z}_{p}$ ein [[#^801450|Körper]] wenn $p$ eine Primzahl ist und $\mathbb{Z}_{n}$ kein [[#^801450|Körper]], wenn $n$ keine Primzahl ist?
+
+>[!lemma] Lemma Elliptische Kurven über Endlichen Körpern
+> Eine [[#^df2758|elliptische Kurve]] $$E: y^2=x^3+ax+b$$ mit $4a^3 + 27b^2 \neq 0$ über dem Körper $\mathbb{Z}_{p}$, wobei $p$ eine Primzahl ist, bildet eine [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]].
+>>[!proof]- Beweis (wird ausgelassen)
+>> Der Beweis setzt viel Arbeit voraus, weshalb an der Stelle nur an eine [[../../PDFs/washington2008.pdf#page=110|Quelle]] (Seite 97 und ab Seite 477) zur persönlichen Bereicherung angegeben wird.
 >
+>>[!example]- Beispiel $E(\mathbb{Z}_{13}): y^2=x^3+3x+8$
+>>Wir können die Punkte der elliptischen Kurve bestimmen, indem wir für $x$ sukzessive einsetzen und nach Quadratzahlen suchen, sodass die Wurzel in der Kongruenz der $y$-Koordinate entspricht.
+>>$$\begin{align}
+>> y^2 &\equiv 0^3+3\cdot0 +8 &&\;\;(\text{mod } 13)\tag{x=0} \\
+>> y^2 &\equiv 8 &&\;\;(\text{mod } 13) \\
+>> 5^2 &\equiv 8 &&\;\;(\text{mod } 13)
+>>\end{align}$$
+>>Also existiert der Punkt $(8,5)$. Wir fahren mit $x=1$ fort und erhalten
+>>$$\begin{align}
+>> y^2 &\equiv 1^3 + 3 \cdot 1 + 8 &&\;\;(\text{mod } 13) \tag{x=1} \\
+>> y^2 &\equiv 12 && \;\;(\text{mod } 13)\\
+>> 8^2 &\equiv 12 &&\;\;(\text{mod } 13)
+>>\end{align}$$
+>>Also existiert der Punkt $(12,8)$. Wenn wir diese Methode fortsetzen finden wir alle Punkte auf der Kurve
+>>$$E(\mathbb{Z}_{13})=\{ \mathcal{O}, (1,5), (1,8), (2,3), (2,10), (9,6), (9,7), (12,2), (12,11) \}$$
 >
+>>[!example] Übung: Berechnen Sie $P+Q$ für $P=(9,7)$ und $Q=(1,8)$
+
+>[!def] Definition Punkt Multiplikation ([[../../PDFs/silverman2008.pdf#page=303|Quelle]])
+>Sei $P \in E$ und $n \in \mathbb{N}$, dann
+>$$nP := \underbrace{ P + P + \dots + P }_{ n\text{-mal} }$$ 
+
+>[!def] Definition Elliptisches Diskretes Logarithmus Problem ([[../../PDFs/silverman2008.pdf#page=303|Quelle]])
+>Sei $E$ eine elliptische Kurve über dem Körper $\mathbb{Z}_{13}$ und $P,Q \in E$ und $n \in \mathbb{N}$ mit
+>$$Q = nP$$
+>Das **elliptische diskrete Logarithmus Problem** (analog zum [[7 - Algebraische und Zahlentheoretische Grundlagen (2)#^9e7a61|diskreten Logarithmus Problem]]) ist definiert als
+>$$n = \log_{P}(Q)$$
+>Wir nennen $n$ den **elliptischen diskreten Logarithmus von $Q$ bezüglich $P$**.
+
+---
+
+>[!warning] Wichtig!
+>Es gibt kein effizientes Verfahren, welches den elliptischen diskreten Logarithmus in effizienter Zeit lösen kann.
+
+---
+
+### 12.2 Verschlüsselungsalgorithmen
+
+>[!algo] Kryptografisches Verfahren: Diffie Hellmann Schlüsselaustausch auf elliptischen Kurven ([[../../PDFs/silverman2008.pdf#page=309|Quelle]])
+>
+>>[!proof] Vorbereitung
+>> Alice und Bob einigen sich auf 
+>> - eine große Primzahl $p$
+>> - eine [[#^df2758|elliptische Kurve]] $E$ über $\mathbb{Z}_{p}$ 
+>> - einen Generator Punkt $G \in E(\mathbb{Z}_{p})$
+> 
+>>[!verschlüsselung] 
+>> 1. Alice wählt $n \in_{R} \mathbb{N}$ und sendet an Bob $$A = nG$$
+>> 2. Bob wählt $m \in_{R} \mathbb{N}$ und sendet an Alice $$B= nG$$
+>> 3. Alice errechnet den Schlüssel $$S = nB$$
+>> 4. Bob errechnet den Schlüssel $$S=mA$$
+>
+>>[!korrektheitsnachweis]
+>> $$S = nB = n (m G) = m (nG)=m A = S \tag*{$\square$}$$
+
+>[!algo] Kryptografisches Verfahren: El Gamal auf elliptischen Kurven ([[../../PDFs/silverman2008.pdf#page=312|Quelle]])
+>
+>>[!proof] Vorbereitung
+>> Es wird eine große Primzahl $p$ gewählt und eine elliptische Kurve $E$ über $\mathbb{Z}_{p}$ inklusive des Generator Punktes $G \in E(\mathbb{Z}_{p})$ veröffentlicht.
+>
+>>[!schlüsselerzeugung]
+>>
+>> - privater Schlüssel: $(E,G,n)$ mit $n \in_{R}\mathbb{N}$ 	
+>> - öffentlicher Schlüssel : $(E,G,A)$ mit $A = nG$
+>
+>>[!verschlüsselung] 
+>> Sei $M \in E(\mathbb{Z}_{p})$ die Klartextnachricht, die verschlüsselt werden soll
+>> 1. Bob wählt $k \in_{R} \{ 1,\dots,\lvert E \rvert \}$ und verschlüsselt $M$ mit $$(C_{1},C_{2}) = (kG, kA \oplus M)$$
+>> 2. Alice entschlüsselt durch $$M = C_{2} \oplus (- nC_{1})$$
+>
+>>[!korrektheitsnachweis]
+>> $$C_{2} \oplus (- nC_{1}) = kA\oplus M \oplus (-nkG) = \cancel{ nkG\oplus (-nkG) }\oplus M = M \tag*{$\square$}$$
+
+>[!remark] Kontrollfrage: Warum existiert kein RSA oder Rabin Verfahren basierend auf elliptischen Kurven?
