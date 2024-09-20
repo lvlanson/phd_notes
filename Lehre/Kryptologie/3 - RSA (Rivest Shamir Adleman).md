@@ -75,7 +75,7 @@
 >>daher können wir die letzte Zeile in Kongruenz $(1)$ vereinfachen als
 >>$$ \equiv 1+a \;\;(\text{mod } p)$$
 >>Somit haben wir gezeigt, dass der **Induktionsschritt** 
->>$$(a+1)^p \equiv 1+a \;\;(\text{mod } p)$$
+>>$$(a+1)^p \equiv a+1 \;\;(\text{mod } p)$$
 >>über die **Induktionsbehauptung** gültig ist und somit unsere Aussage bewiesen ist
 >>$$\tag*{$\square$}$$
 >

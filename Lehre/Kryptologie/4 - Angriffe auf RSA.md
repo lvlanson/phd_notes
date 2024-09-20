@@ -196,7 +196,7 @@
 >[!theorem] Low Encryption Attack/ Hastad's Broadcast Attack ([[../../PDFs/boneh1999.pdf#page=8|Quelle]])
 >
 >>[!warning] Voraussetzung
->> Eine Chiffre $c \in \mathbb{Z}_{n}$ wird an zwei oder mehrere Empfänger gesendet, die alle denselben kleinen Verschlüsselungsexponenten $e$ verwenden.
+>> Chiffren $c_{i} \in \mathbb{Z}_{n}$ werden an zwei oder mehrere Empfänger gesendet, die alle denselben kleinen Verschlüsselungsexponenten $e$ verwenden.
 >
 >>[!algo] Verfahren
 >> Gegeben sind die Chiffren

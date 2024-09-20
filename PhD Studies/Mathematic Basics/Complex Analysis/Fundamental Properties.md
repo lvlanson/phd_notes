@@ -47,3 +47,13 @@ aliases:
 >\end{align}$$
 
 ^45ef91
+
+>[!property] Property Conjugate of Euler's Form
+>$$\overline{re^{i\theta}} = re^{-i\theta}$$
+>>[!proof]-
+>>$$\begin{align}
+>> \overline{re^{i\theta}} &= \overline{r(\cos(\theta)+ i \sin(\theta))} \\
+>> &= r(\cos(\theta)- i \sin(\theta)) \\
+>> &= r(\cos(-\theta)+ i \sin(-\theta)) \\ 
+>> &= re^{-i\theta} \tag*{$\square$}
+>>\end{align}$$

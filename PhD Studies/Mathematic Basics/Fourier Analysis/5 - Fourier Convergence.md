@@ -311,6 +311,8 @@
 >>[!remark]
 >> This lemma doesn't require $g$ to be continuous but rather piecewise continuous. It was given since the tools to prove it are not given yet under the general conditions.
 
+^c13afa
+
 >[!Theorem] Theorem Parseval's Equality ([[../../../PDFs/howell2016.pdf#page=180|Source]])
 >Let $f$ and $g$ be two piecewise continuous, periodic functions with the same period $p$ and with Fourier series
 >$$\begin{align}

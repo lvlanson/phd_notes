@@ -62,15 +62,16 @@
 >>> m^2 &\equiv c_{p}^2 &&\;\;(\text{mod } p) \\
 >>> m^2 &\equiv c_{q}^2 &&\;\;(\text{mod } q) \\
 >>>\end{align}$$
->>>Wenn wir jeweils [[#^d2662c| "die modulare Wurzeln ziehen"]], erhalten wie verschiedene Lösungskombinationen für $m$.
+>>>Wenn wir jeweils [[#^d2662c| "die modulare Wurzeln ziehen"]], erhalten wir verschiedene Lösungskombinationen für $m$.
 >>>>[!warning] Achtung: Die Quadratwurzel bezüglich modulo $p$, wobei $p$ eine Primzahl ist, muss besonders bestimmt werden. Siehe [[#^d2662c| Modulare Quadratwurzel]]
+>>>>$$c^{\frac{p+1}{4}}\equiv \pm c_{p}  \;\;(\text{mod } p)$$
 >>>$$\begin{align}
 >>>m_{1} &= c_{p} &&\;\;(\text{mod } p) &\land&&m_{1}=c_{q} &&\;\;(\text{mod } q) \tag{M-GLS 1}\\  
 >>>m_{2} &= c_{p} &&\;\;(\text{mod } p) &\land&&m_{2}=-c_{q} &&\;\;(\text{mod } q) \tag{M-GLS 2}\\  
 >>>m_{3} &= -c_{p} &&\;\;(\text{mod } p) &\land&&m_{3}=c_{q} &&\;\;(\text{mod } q) \tag{M-GLS 3}\\  
 >>>m_{4} &= -c_{p} &&\;\;(\text{mod } p) &\land&&m_{4}=-c_{q} &&\;\;(\text{mod } q) \tag{M-GLS 4}\\  
 >>>\end{align}$$
->>>Dies sind vier modulare Gleichungssysteme (M-GLS), welche mit dem [[4 - Angriffe auf RSA#^ca7b4b|chinesischen Restsatz]] gelöst werden kann, also
+>>>Dies sind vier modulare Gleichungssysteme (M-GLS), welche mit dem [[4 - Angriffe auf RSA#^ca7b4b|chinesischen Restsatz]] gelöst werden können, also
 >>>$$m_{i} = \Big(\pm\big[q\big]_{p}^{-1} \cdot q \cdot c_{p}  \pm \big[q\big]^{-1}_{q} \cdot p \cdot c_{q}\Big) \text{ mod }n$$
 >>>wobei durch Lesen der Nachrichten $m_{i}$ mit $(i=1,2,3,4)$ die richtige Nachricht $m$ gewählt wird.
 >

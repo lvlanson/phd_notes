@@ -2,7 +2,7 @@
 
 >[!abstract] 1 - [[1 -  Einführung| Einführung]]
 
->[!abstract] 2 - [[2 - Algebraische und Zahlentheoretische Grundlagen (1)|Algebraische und Zahlentheoretische (1)]] 
+>[!abstract] 2 - [[2 - Algebraische und Zahlentheoretische Grundlagen (1)|Algebraische und Zahlentheoretische Grundlagen (1)]] 
 
 >[!abstract] 3 - [[3 - RSA (Rivest Shamir Adleman)|RSA (Rivest Shamir Adleman)]]
 
@@ -26,6 +26,9 @@
 
 >[!abstract] X - [[X - Zusatz Mathematik (Informativ)|Zusatz Mathematik (Informativ) in Bezug zu Algebraische und Zahlentheoretische Grundlagen (2)]]
 
-## Praktikum Material
+## Zusatzmaterial
 
 >[!abstract] A - [[A - Sage Funktionen|Sage Funktionen]]
+
+>[!abstract] B - [[Vorlesungsfortschritt WS2024_25]]
+
