@@ -360,7 +360,7 @@
 > X&= \{ x_{j} \}_{j=0}^{n-1} \\
 > x_{j}&= \frac{j}{n} \tag*{$j \in \{ 0,\dots,n-1 \}$}
 >\end{align}$$
->is a uniformly spaced nodal set. Let $K= \left\lceil  \frac{n}{2}  \right\rceil$. For any $n \in \mathbb{N}$ there exists a unique [[#^ddb0ce|trigonometric polynomial]] $q \in \mathbb{T}_{K}$ of the form
+>is a uniformly spaced nodal set. Let $K= \left\lceil  \frac{n}{2}  \right\rceil$. For any $n \in \mathbb{N}$ there exists a unique [[#^ddb0ce|trigonometric polynomial]] $q \in \mathbb{T}_{K}$ which interpolates $f$ at the nodes $X$. The [[#^ddb0ce|trigonometric polynomial]] has the form
 >
 >If $n$ is odd:
 >$$q(x) = \sum_{j=-K}^K c_{j} \exp(2\pi i j x)$$ 
