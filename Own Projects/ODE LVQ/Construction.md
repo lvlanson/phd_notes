@@ -52,7 +52,7 @@
 >>    #   periods - determines how often a periods is being produced
 >>    #   res     - determines how many points are being produced over the
 >>    #             given parameters
->>    points = np.linspace(0 + xshift, periods * 2* np.pi + xshift, res)
+>>    points = np.linspace(0 + xshift, periods * 2* np.pi + xshift, res, endpoint=False)
 >>    
 >>    # compute the sine values stretching them with `ystretch` and shift them with `yshift`
 >>    y = np.sin(points) * ystretch + yshift 

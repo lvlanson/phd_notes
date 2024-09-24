@@ -133,6 +133,19 @@
 >Let $n \in \mathbb{N}$. For all $u \in \mathcal{V}_{n,p}(\mathbb{C})$ and all $k \in \mathbb{Z}$ we define
 >$$\mathcal{F}_{n}[u]_{k} = \widehat{u}_{k}= \frac{1}{n} \sum_{l=0}^{n-1} u_{l} \exp\left( -2\pi i k \frac{l}{n} \right)$$
 >The grid function $\widehat{u}\in \mathcal{V}(\mathbb{C})$ is called the **Discrete Fourier Transform** (DFT) of $u$ and we write $\widehat{u}= \mathcal{F}_{n}[u]$.
+>>[!algo] Python Implementation
+>>```python
+>>import numpy as np
+>>
+>>def F_n(Y):
+>>    n = len(Y)
+>>    Y_hat = []
+>>    for k in range(len(Y)):
+>> 	   summands = [y_l*np.exp(-2*np.pi*1j*k*l/n) for l, y_l in enumerate(Y)]
+>>        transformed_k = sum(summands) / n
+>>        Y_hat.append(transformed_k)
+>>    return Y_hat
+>>```
 
 ^db3d1d
 
@@ -241,7 +254,19 @@
 >[!def] Definition Inverse Discrete Fourier Transform (IDFT)([[../../../PDFs/salgado2022.pdf#page=377|Source]])
 > The **Inverse Discrete Fourier Transform (IDFT)** is defined via
 > $$\mathcal{F}_{n}^{-1}[w]_{k} = \sum_{l=0}^{n-1}w_{l}\exp\left( 2\pi i \frac{kl}{n} \right) \tag*{$\forall w \in \mathcal{V}_{n,p}(\mathbb{C})$}$$ 
-
+>
+>>[!algo] Python Implementation
+>>```python
+>>def F_n_inv(Y_hat):
+>>    n = len(Y_hat)
+>>    Y = []
+>>    for k in range(len(Y_hat)):
+>>        summands = [y_l * np.exp(2*np.pi*1j*k*l/n) for l, y_l in enumerate(Y_hat)]
+>>        transformed_k =sum (summands)
+>>        Y.append(transformed_k)
+>>
+>>    return Y
+>>    ```
 ^a15a86
 
 >[!remark] Remark on the Bijectivity of the IDFT 
@@ -396,3 +421,60 @@
 >>Using the [[#^db3d1d|definition of the DFT]] and using its [[#^7594db|bijectivity property]] we can determine $c_{j}$ with
 >>$$c_{j} = \widehat{f}_{n,j}=\frac{1}{n}\sum_{l=0}^{n-1} f\left( \frac{l}{n} \right) \exp(-2\pi i j x_{l})\tag*{$j \in \{ 0,\dots,n-1 \}$}$$
 >>$$\tag*{$\square$}$$
+>
+>>[!algo] Python Implementation
+>>```python
+>>import numpy as np
+>>
+>>def trig_interpolation(Y_hat, delta_x, depth=1000):
+>>    """
+>>    Creates a trigonometric polynomial given, that Y_hat includes the *discrete Fourier coefficients*.
+>>    
+>>    Parameters
+>>    ----------
+>>    Y_hat: List[float]
+>>        includes the Fourier coefficients with the following structure
+>>        
+>>        generally:
+>>            Y_hat[0]      - zero frequency term
+>>            Y_hat[1:n/2]  - positive frequency terms
+>>            Y_hat[n/2+1:] - negative frequency terms
+>>            
+>>        if `n` is odd:
+>>            Y_hat[n/2] - represents the Nyquist frequency, which is half of the upper frequency range
+>>            
+>>    delta_x: float
+>>        describes the equidistant spacing distance
+>>        
+>>    depth: int
+>>        describes the resolution on how the interpolation produces values
+>>        
+>>    Returns
+>>    -------
+>>    x_int: numpy.array
+>>        x values with size depth
+>>        
+>>    y_intp: numpy.aray
+>>        y values for the trigonometric polynomial q(x), such that for any x_i in x_int we have y_i = q(x_i)
+>>            
+>>    """
+>>    n = len(Y_hat)
+>>    x_range = n * delta_x
+>>
+>>    get_summand = lambda c_j, l, x: c_j * np.exp(2 * np.pi * 1j * l * x / x_range )
+>>
+>>    x_intp = [(i / depth) * x_range for i in range(depth)]                     
+>>    y_intp = []
+>>    K = n // 2                                                       # Fix K for the odd/even cases
+>>    if n%2==0:
+>>        # np.roll rearranges array such that positives are first and negatives concluding
+>>        Y_hat = np.roll( Y_hat, K - 1 )                              
+>>        for x in x_intp:
+>>            y_intp.append(sum([get_summand(c_j,l,x) for l,c_j in zip(range(-K+1,K+1), Y_hat)]))
+>>    else:
+>>        # np.roll rearranges array such that zero frequency is first, positives following and negatives concluding
+>>        Y_hat = np.roll( Y_hat, K )                                  # Rotate
+>>        for x in x_intp:
+>>            y_intp.append(sum([get_summand(c_j,l,x) for l,c_j in zip(range(-K,K+1), Y_hat)]))
+>>    return x_intp, y_intp
+
