@@ -1,5 +1,7 @@
 >[!attention] Attention Throughout this document $R$ is an [[Algebraic Structures#^4a5286|commutative ring]] with [[Algebraic Structures#^0b2e62|identity element]].
 
+## Basic Definitions and Properties of Polynomial Rings
+
 >[!def] Definition Polynomial over $R$ ([[../../../PDFs/judson2022.pdf#page=221|Source]])
 >Let $R$ be an [[Algebraic Structures#^4a5286|commutative ring]] with [[Algebraic Structures#^0b2e62|identity element]]. The function 
 >$$\begin{align}
