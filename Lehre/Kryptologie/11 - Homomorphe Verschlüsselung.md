@@ -59,7 +59,7 @@
 >>
 >>Der Sicherheitsparameter $\lambda$ entspricht bei RSA beispielsweise der Bittiefe des Moduls. Üblicherweise ist die Schlüsselerzeugung auch noch von einem *Funktionalitätsparameter* abhängig, der Komplexitätseigenschaften des Verfahrens bestimmt. Diesen Parameter erwähnen wir an dieser Stelle kurz, da er in Verwendung dieser Algorithmen von großer Bedeutung ist. 
 >>
->> Es existiert auch noch ein Hilfsparameter $\alpha$, welcher für anspruchsvollere homomorphe Verschlüsselungsalgorithmen den maximalen Umfang von Operationen im Schlüsselraum bestimmt. Mehr dazu könnt ihr [[../../PhD Studies/Cryptology/Homomorphic Encryption/Surveys/Untitled#^5f3338|hier]] lesen.
+>> Es existiert auch noch ein Hilfsparameter $\alpha$, welcher für anspruchsvollere homomorphe Verschlüsselungsalgorithmen den maximalen Umfang von Operationen im Schlüsselraum bestimmt. Mehr dazu könnt ihr [[../../PhD Studies/Cryptology/Homomorphic Encryption/Surveys/Basic Definitions#^5f3338|hier]] lesen.
 >>
 >> Die $\text{Eval}$ Funktion kann verschiedene Arten von Funktionen darstellen. Diese müssen allerdings durch $\text{AND}$ und $\text{OR}$ Gates darstellbar sein, bzw. durch die Addition und Multiplikation im Schlüsselraum. Man nennt hierbei die Menge aller darstellbaren Operationsabfolgen *Circuits* $\mathcal{C}$ und eine konkrete Abfolge einen *Circuit*. Die Anzahl der Operationen hat einen direkten (teilweise massiven) Einfluss auf die Komplexität verschiedener Aspekte wie Schlüsselerzeugung oder Berechnungen im Schlüsselraum, weshalb damit üblicherweise versucht wird sparsam umzugehen. Dies ist dadurch bis heute noch ein Forschungsfeld, welches viel Aufmerksamkeit in der Kryptologie erhält.
 

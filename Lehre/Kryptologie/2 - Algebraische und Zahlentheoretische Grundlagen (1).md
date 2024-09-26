@@ -199,7 +199,7 @@
 > 0 & \leq r < \lvert b \rvert 
 >\end{align}$$
 >
->>[!proof]- Beweis
+>>[!proof] Beweis
 >><u>Beweis zur Existenz</u>
 >>
 >>>[!remark]- Info zum Wohlordnungsprinzip
@@ -220,21 +220,21 @@
 >>>\end{align}$$
 >>
 >>Sei $$T = \{ a-qb \;|\; q \in \mathbb{Z} \} \cap \mathbb{N}_{0}$$
->>$T$ ist definitiv nicht leer, daher gibt es nach dem Wohlordnungsprinzip ein kleinstes Element
+>>$T$ ist definitiv nicht leer und nicht negativ, daher gibt es nach dem Wohlordnungsprinzip ein kleinstes Element
 >>$$r = \min T \tag{1}$$
 >>Dieses $r$ ist nach der Beschreibung der Menge $T$ für ein spezielles $\widehat{q} \in \mathbb{Z}$ beschrieben als
 >>$$r= a-\widehat{q}b$$
 >>mit $r \geq 0$.
 >>
->>Unsere Strategie von hieran ist einen Widerspruch zu erzeugen. Daher nehmen wir an, dass $$r \geq \lvert b \rvert \tag{2}$$ gilt, was zu unserer zu beweisenden Aussage gegenteilig ist. Wir definieren für den Beweis und setzen sukzessive ein
+>>Unsere Strategie von hieran ist einen Widerspruch zu erzeugen. Daher nehmen wir an, dass $$r \geq \lvert b \rvert \tag{2}$$ gilt, was zu unserer zu beweisenden Aussage gegenteilig ist. Wir *konstruieren ein $r'$*, was einen Widerspruch erzeugt
 >>
 >>$$\begin{align}
->> r' &= \underbrace{ r }_{ = a-\widehat{q}b} -\lvert b \rvert \tag{3} \\
->> &= a-\widehat{q}b - \lvert b \rvert \\
+>> r' &= \underbrace{ r }_{ = a-\widehat{q}b} +\lvert b \rvert \tag{3} \\
+>> &= a-\widehat{q}b + \lvert b \rvert \\
 >> &= a- \underbrace{ (\widehat{q}-\text{sgn}(b)) }_{ =q' }b  \tag{siehe Info}\\
 >> &= a- q'b
 >>\end{align}$$
->> Da $q' \in \mathbb{Z}$ wissen wir, dass $r' \in T$ maßgeblich nach unserer Konstruktion von $T$. 
+>> Da $q' \in \mathbb{Z}$ wissen wir, dass $r' \in T$ maßgeblich nach unserer Konstruktion in $T$ ist. 
 >> 
 >> Wir fassen nun zusammen, was wir nach unseren Annahmen zusammengetragen haben
 >> $$\underbrace{ r' \geq \min{T} = r }_{ \text{nach }(1) } =\underbrace{ r'+\lvert b \rvert }_{ \text{nach } (3)} \underbrace{ \geq r' }_{ \text{nach (2)} } $$

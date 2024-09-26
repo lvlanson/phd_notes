@@ -1,3 +1,9 @@
+<!-- 
+✏️
+✅
+❌
+-->
+
 >[!Theorem] Welcome to my Research Page
 >>[!attention] Here you can find my work and knowledge
 >
@@ -6,8 +12,13 @@
 >
 >>[!lemma] I am currently working on
 >>
+>>>[!abstract] Abstract Algebra
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Algebraic Structures|Algebraic Structures (only basic ones)]] ✅
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Polynomial Rings|Polynomial Rings]] ✏️
+>>
 >>>[!abstract] Homomorphic Encryption
->>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption|Basics on Homomorphic Encryption]] ✅
+>>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption|Basics on Homomorphic Encryption 1]] ✅
+>>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Surveys/Basic Definitions|Basics on Homomorphic Encryption 2]] ✅
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/1 - Elementary Lattice Definitions|Elementary Lattice Definitions]] ✅
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/2 - Computational Problems on Lattices|Computational Problems on Lattices]] ✅
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/1 - Learning With Errors Introduction|Learning With Errors Introduction]] ✅
@@ -21,17 +32,18 @@
 >>
 >>>[!abstract] Fourier Series 
 >>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series (OLD)|Fourier Series (Old Notes)]] ❌
->>> -  [[PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series|Classical Fourier Series (Trigonometric)]]  ✅
->>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals|Fourier Series over Finite Intervals]]  ✅ 
->>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality|Fourier Series and Inner Products, Norms and Orthogonality]] ✅ 
->>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series|Complex Exponential Fourier Series]]  ✅
->>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence|Fourier Convergence]] ✅
+>>> -  [[PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series|1 - Classical Fourier Series]] ✅
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals|2 - Fourier Series over Finite Intervals]] ✅ 
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality|3 - Inner Products, Norms and Orthogonality]] ✅ 
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/4 - Complex Exponential Fourier Series|4 - Complex Exponential Fourier Series]] ✅
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/5 - Fourier Convergence|5 - Fourier Convergence]] ✅
 >>> 	- error estimation proofs can still be analyzed
 >>> 	- gibbs phenomenon proofs can still be analyzed
->>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/5.1 - Proof Preliminaries|Important Properties for Convergence Proofs]]  ✅
->>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series|Derivatives and Integrals of Fourier Series]] ✅
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/5.1 - Proof Preliminaries|5.1 - Proof Preliminaries]] ✅
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/6 - Derivatives and Integrals of Fourier Series|6 - Derivatives and Integrals of Fourier Series]] ✅
 >>> 	- last proof is missing
->>> - 
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/7 - Fourier Transform|7 - Fourier Transform]] ✏️
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/8 - Discrete Fourier Transform and Trigonometric Interpolation|8 - Discrete Fourier Transform and Trigonometric Interpolation]] ✅ (Maybe adding FFT sometime)
 >>
 >>>[!abstract] Functional Analysis
 >>> -  [[PhD Studies/Mathematic Basics/Functional Analysis/Lectures/B1 - Hilbert Spaces|Hilbert Spaces]] ✅ 

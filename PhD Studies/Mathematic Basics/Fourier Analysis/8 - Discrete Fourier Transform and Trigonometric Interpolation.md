@@ -1,4 +1,4 @@
-## Fundamentals
+ch di## Fundamentals
 
 >[!def] Definition Space of $m$-times differentiable $L$-periodic Functions ([[../../../PDFs/salgado2022.pdf#page=884|Source]])
 > Let $m \in \mathbb{N}_{0}$ and $L>0$, then the set of $m$-times differentiable $L$-periodic Functions over the complex Numbers $\mathbb{C}$ is defined as

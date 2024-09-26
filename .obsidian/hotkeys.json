@@ -42,5 +42,13 @@
       ],
       "key": "Key0"
     }
+  ],
+  "fast-text-color:change-text-color": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "C"
+    }
   ]
 }
