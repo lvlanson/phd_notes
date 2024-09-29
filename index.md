@@ -13,8 +13,8 @@
 >>[!lemma] I am currently working on
 >>
 >>>[!abstract] Abstract Algebra
->>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Algebraic Structures|Algebraic Structures (only basic ones)]] ✅
->>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Polynomial Rings|Polynomial Rings]] ✏️
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/1 - Algebraic Structures|Algebraic Structures (only basic ones)]] ✅
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/2 - Polynomial Rings|2 - Polynomial Rings]] ✏️
 >>
 >>>[!abstract] Homomorphic Encryption
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption|Basics on Homomorphic Encryption 1]] ✅

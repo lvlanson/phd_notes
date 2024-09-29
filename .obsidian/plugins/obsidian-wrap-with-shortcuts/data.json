@@ -1,0 +1,28 @@
+{
+  "wrapperTags": [
+    {
+      "id": "w1727451106302",
+      "name": "blue",
+      "startTag": "**<span style=\"color:#3884ff\">",
+      "endTag": "</span>**"
+    },
+    {
+      "id": "w1727451173064",
+      "name": "green",
+      "startTag": "**<span style=\"color:#38ffa9\">",
+      "endTag": "</span>**"
+    },
+    {
+      "id": "underline",
+      "name": "Underline",
+      "startTag": "<u>",
+      "endTag": "</u>"
+    },
+    {
+      "id": "w1727451025193",
+      "name": "yellow",
+      "startTag": "**<span style=\"color:#e9ffad\">",
+      "endTag": "</span>**"
+    }
+  ]
+}

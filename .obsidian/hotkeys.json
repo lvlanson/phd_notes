@@ -50,5 +50,32 @@
       ],
       "key": "C"
     }
+  ],
+  "obsidian-wrap-with-shortcuts:wrap-with-shortcut-w1727451173064": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "G"
+    }
+  ],
+  "obsidian-wrap-with-shortcuts:wrap-with-shortcut-w1727451025193": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "Y"
+    }
+  ],
+  "obsidian-wrap-with-shortcuts:wrap-with-shortcut-w1727451106302": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "B"
+    }
   ]
 }

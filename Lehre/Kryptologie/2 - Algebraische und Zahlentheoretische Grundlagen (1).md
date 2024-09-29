@@ -199,7 +199,7 @@
 > 0 & \leq r < \lvert b \rvert 
 >\end{align}$$
 >
->>[!proof] Beweis
+>>[!proof]- Beweis
 >><u>Beweis zur Existenz</u>
 >>
 >>>[!remark]- Info zum Wohlordnungsprinzip

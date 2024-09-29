@@ -96,3 +96,5 @@
 >[!def] Definition Kernel of a Ring ([[../../../PDFs/judson2022.pdf#page=207|Source]])
 > Let $R,S$ be [[#^2c4055|rings]] and $\phi:R\to S$ a [[#^37f31d|ring homomorphism]]. We define the **~={green}kernel of a ring homomorphism=~** to be the set
 > $$\text{ker }\phi=\{ r \in R \mid \phi(r)=0 \}$$
+
+

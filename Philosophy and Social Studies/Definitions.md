@@ -1,0 +1,2 @@
+>[!def] Definition Gender Performativity According to Butler (Source: Gender Trouble p. XIV)
+> Gender is a feature-driven concept, which by reflective anticipation of the bijection between sex and gender, becomes a self-fulfilling prophecy.
