@@ -81,6 +81,18 @@
 
 ^afad91
 
+>[!def] Definition Körper
+> Wir nennen das Tripel $(\mathbb{K}, +, \cdot)$ einen Körper, wenn
+> 1. $(\mathbb{K}, +)$ eine additive [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]] ist
+> 2. $(\mathbb{K} \setminus \{ 0 \}, \cdot)$ eine multiplikative [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]] ist, wobei $0$ das neutrale Element in $(\mathbb{K},+)$ ist
+> 3. das **Distributivgesetz** gilt, also $\forall x,y,z \in \mathbb{K}$ $$x(y+z)=xy+xz$$
+
+^c53dc5
+
+>[!lemma] Behauptung 
+>Die ganzen Zahlen $(\mathbb{Z},+,\cdot)$ bilden eine Körper
+>>[!proof] Ohne Beweis
+
 >[!def] Definition Äquivalenrelation
 >Eine Relation $\sim$ auf einer Menge $G$ heißt **Äquivalenzrelation**, wenn folgende Eigenschaften auf der Relationsmenge $R \subseteq G \times G$ erfüllt sind
 >1. Reflexitivität: $\forall x_{1} \in G: (x_{1},x_{1}) \in R$
@@ -108,7 +120,7 @@
 ## 2.2 Modulo und Ganzzahlige Teilung
 
 >[!def] Definition Ganzzahlige Teilung
->Für den Ausdruck mit $a,b \in \mathbb{Z}$ $$a \text{ teilt } b$$ schreiben wir $$a \; | \; b$$ Das heißt
+>Für den Ausdruck mit $a,b \in \mathbb{Z}$ mit $a\neq 0$$$a \text{ teilt } b$$ schreiben wir $$a \; | \; b$$ Das heißt
 >$$a \; | \; b: \iff \exists k \in \mathbb{Z}: b = k\cdot a$$
 >Wir nennen $a$ den **Teiler** von $b$  
 >---
@@ -117,10 +129,10 @@
 ^9380e8
 
 >[!property] Eigenschaften der Ganzzahligen Teilung
->Für **alle** $a,b,c,n \in \mathbb{Z}$ gilt:
->1. $a \;|\; a$ <span class="right-float">(Reflexivität)</span>
->2. $a \;|\; b \;\land\; b \;|\; c \; \implies \; a \;|\; c$ <span class="right-float">(Transitivität)</span>
->3. $n\;|\;a \implies n \;|\; ab$
+>Für alle $a,b,c,n \in \mathbb{Z}$ gilt:
+>1. $a \;|\; a$ <small>(mit $a \neq 0$)</small> <span class="right-float">(Reflexivität)</span>
+>2. $a \;|\; b \;\land\; b \;|\; c \; \implies \; a \;|\; c$ <small>(mit $a \neq 0$ und $b \neq 0$)</small><span class="right-float">(Transitivität)</span>
+>3. $n\;|\;a \implies n \;|\; ab$ <small>(mit $n \neq 0$)</small>
 >
 >>[!proof]- Beweis
 >> 1. Siehe Übung
@@ -193,14 +205,18 @@
 ^9cd06c
 
 >[!theorem] Satz Existenz und Eindeutigkeit des Quotienten und Rests ([[../../PDFs/judson2022.pdf#page=32|Quelle]])
->Seien $a,b \in \mathbb{Z}$ mit $b \neq 0$. Dann gibt es eindeutig bestimmte Zahlen $q,r \in \mathbb{Z}$ mit
+>Seien $a,b \in \mathbb{Z}$ mit $b > 0$. Dann gibt es eindeutig bestimmte Zahlen $q,r \in \mathbb{Z}$ mit
 >$$\begin{align}
 > a &= qb + r \\
-> 0 & \leq r < \lvert b \rvert 
+> 0 & \leq r < b
 >\end{align}$$
 >
 >>[!proof]- Beweis
->><u>Beweis zur Existenz</u>
+>>In dem folgenden Beweis müssen wir zwei Dinge zeigen. 
+>> 1. $q,r \in \mathbb{Z}$ **existieren**, sodass auch $0 \leq r < b$ gilt
+>> 2. $q,r \in \mathbb{Z}$ sind **eindeutig** bestimmt
+>> 
+>>
 >>
 >>>[!remark]- Info zum Wohlordnungsprinzip
 >>>
@@ -208,54 +224,49 @@
 >>>
 >>>Nehmen wir beispielsweise die [[#^f52c1d| natürlichen Zahlen]] selbst, wissen wir mit Gewissheit, dass $1$ das kleinste Element ist. Entfernen wir sukzessive die kleinsten Zahlen der Menge, wird immer eine andere kleinste Zahl übrig bleiben.
 >>
->>>[!remark]- Info Vorzeichen Funktion $\text{sgn}$ 
->>>Die Vorzeichen Funktion gibt für eine Zahl $a \in \mathbb{R}$ ihr Vorzeichen zurück
->>>$$\begin{align}
->>> \text{sgn}&: \mathbb{R} \to \{ -1,0,1 \} \\[1em]
->>> \text{sgn}&(a)= \begin{cases}
->>> -1 &\text{ wenn } a < 0 \\
->>> 0 & \text{ wenn } a = 0 \\
->>> 1 & \text{ sonst}
->>>\end{cases}
+>>
+>><u>Beweis zur Existenz</u>
+>>
+>>Wir fixieren $a,b \in \mathbb{Z}$ (also diese Größen verändern sich nicht mehr) und definieren die Menge $$T = \{ a-qb \;|\; q \in \mathbb{Z} \} \cap \mathbb{N}_{0}$$
+>>>[!note] Warum ist $T$ nicht leer wenn wir die nicht-negativen Zahlen entfernen?
+>>> Es genügt zu zeigen, dass mindestens ein Element enthalten ist. Wir unterscheiden zwei Fälle
+>>> 1. $a\geq 0$: Wir wählen $q=0$. Hier ist $a$ selbst enthalten und somit ist $T$ nicht leer.
+>>> 2. $a<0$: Wir wählen $q=a$ und erhalten $$\begin{align}
+>>> a-qa &= a-ba \tag{q=a} \\
+>> &=a(1-b)
 >>>\end{align}$$
+>>>Da $b>0$, muss $(1-b)$ entweder $0$ sein ($b=1$) oder negativ sein ($b>1$). Demnach muss
+>>>$$a-qb \geq 0$$
+>>>und ist nicht leer.
 >>
->>Sei $$T = \{ a-qb \;|\; q \in \mathbb{Z} \} \cap \mathbb{N}_{0}$$
->>$T$ ist definitiv nicht leer und nicht negativ, daher gibt es nach dem Wohlordnungsprinzip ein kleinstes Element
->>$$r = \min T \tag{1}$$
+>>$T$ besteht demnach aus allen *nicht-negativen* ganzen Zahlen und ist *definitiv nicht leer*, daher gibt es nach dem Wohlordnungsprinzip ein kleinstes Element
+>>$$r = \min T$$
 >>Dieses $r$ ist nach der Beschreibung der Menge $T$ für ein spezielles $\widehat{q} \in \mathbb{Z}$ beschrieben als
->>$$r= a-\widehat{q}b$$
->>mit $r \geq 0$.
+>>$$r= a-\widehat{q}b \tag{1}$$
+>>mit $r \geq 0$. Da $r \in S$ nach unserer Konstruktion ist, wissen wir schonmal $r\geq0$. Es bleibt zu zeigen, dass $r<b$.
 >>
->>Unsere Strategie von hieran ist einen Widerspruch zu erzeugen. Daher nehmen wir an, dass $$r \geq \lvert b \rvert \tag{2}$$ gilt, was zu unserer zu beweisenden Aussage gegenteilig ist. Wir *konstruieren ein $r'$*, was einen Widerspruch erzeugt
->>
+>>**Unsere Strategie von hieran ist einen Widerspruch zu erzeugen**, sodass wir erkennen, dass $0\leq r<b$ gelten muss. Daher nehmen wir an, dass $$r \geq b \tag{2}$$ gilt, was zu unserer zu beweisenden Aussage gegenteilig ist. Wir setzen die Definition von $r$ aus $(1)$ in die Relation $(2)$ ein und erhalten
 >>$$\begin{align}
->> r' &= \underbrace{ r }_{ = a-\widehat{q}b} +\lvert b \rvert \tag{3} \\
->> &= a-\widehat{q}b + \lvert b \rvert \\
->> &= a- \underbrace{ (\widehat{q}-\text{sgn}(b)) }_{ =q' }b  \tag{siehe Info}\\
->> &= a- q'b
+>> r &\geq b \\
+>> a-\widehat{q}b &\geq b \qquad&&\Big\vert -b \\
+>> a-\widehat{q}b -b &\geq 0  \\
+>> a-b(\widehat{q} +1) &\geq 0  \\
 >>\end{align}$$
->> Da $q' \in \mathbb{Z}$ wissen wir, dass $r' \in T$ maßgeblich nach unserer Konstruktion in $T$ ist. 
->> 
->> Wir fassen nun zusammen, was wir nach unseren Annahmen zusammengetragen haben
->> $$\underbrace{ r' \geq \min{T} = r }_{ \text{nach }(1) } =\underbrace{ r'+\lvert b \rvert }_{ \text{nach } (3)} \underbrace{ \geq r' }_{ \text{nach (2)} } $$
->> was ein Widerspruch ist, somit ist die Existenz von $q$ und $r$ bewiesen
->> $$\tag*{$\square$}$$
+>>Als Ergebnis erhalten wir, dass das kleinste $r \in S$ über $\widehat{q}$ definiert wurde. Unter der Annahme, dass $r \geq b$ gilt, hätten wir demnach ein weiteres kleinstes $r \in S$, welches über $(\widehat{q}+1)$ erzeugt wird. Dies können wir ewig fortsetzen und erhalten unendlich viele kleines $r \in S$, was ein Widerspruch ist. **Daher muss gelten**
+>>$$0 \leq r < b$$
+>> $$\tag*{$\checkmark$}$$
 >> 
 >><u>Beweis Eindeutigkeit</u>
 >>Auch hier wenden wir das Prinzip des Widerspruchbeweises an. Dazu nehmen wir an, dass die Existenz der Elemente $q,r \in \mathbb{Z}$ nicht eindeutig ist und dass es andere Elemente $q',r' \in \mathbb{Z}$ existieren mit
 >>$$\begin{align}
 >> q' \neq q &\text{ und } r' \neq r \\
 >>\end{align}$$
->>sodass ebenfalls
->>$$\begin{align}
->> a = q'b + r' \text{ und } 0 \leq r' < \lvert b \rvert 
+>>sodass beide folgende Ausdrücke existieren
+>>$$\begin{align} \\
+>> a &= qb + r \text{ und } 0 \leq r < \lvert b \rvert \\
+>> a &= q'b + r' \text{ und } 0 \leq r' < \lvert b \rvert 
 >>\end{align}$$
->>gilt. Somit lässt sich laut der Annahme unseres Beweises das Element $a$ auf zwei verschiedene Weisen ausdrücken, nämlich
->>$$\begin{align}
->> a&=qb+r \\
->> a&=q'b+r' \\
->>\end{align}$$
->>Diesen können wir nun gleich setzen und erhalten
+>>Diese können wir über $a=a$ nun gleich setzen und erhalten
 >> $$\begin{alignat}{2}
 >> qb+r &= q'b+r' \qquad&&\Big\vert -r'-qb \\
 >> r - r' &= q'b -qb\\
@@ -264,8 +275,17 @@
 >>Dies entspricht der [[#^9380e8| Definition der ganzzahligen Teilung]], sodass
 >>$$b \;|\;(r-r')$$
 >>Aufgrund der Eigenschaften festgehaltenen Eigenschaften von $r,r' \in \mathbb{Z}$ schlussfolgern wir, dass
->>$$\lvert r-r' \rvert \leq \underset{}{\text{max}}(r,r') < \lvert b \rvert \; $$
->>Da die Differenz von $r,r'$ in ihrem Betrag kleiner als der Betrag von $b$ ist, kann unmöglich das Produkt $(q'-q)b$ diese Differenz ergeben, außer $r=r'=0$. Da außerdem $b\neq 0$ gilt, muss demzufolge $q'-q=0 \Leftrightarrow q'=q$ ergeben, sodass es keine zwei Elemente $q',r' \in \mathbb{Z}$ geben kann. $$\tag*{$\square$}$$
+>>$$\lvert r-r' \rvert \leq \underset{}{\text{max}}(r,r') < b\; $$
+>>Da die Differenz von $r,r'$ in ihrem Betrag kleiner als $b$ ist, kann unmöglich das Produkt $(q'-q)b$ diese Differenz ergeben, außer $r=r'=0$. Da außerdem $b\neq 0$ gilt, muss demzufolge $q'-q=0 \Leftrightarrow q'=q$ ergeben, sodass es keine zwei Elemente $q',r' \in \mathbb{Z}$ geben kann. 
+>>
+>>>[!note] Warum ist $(q'-q)b = r-r'$ unmöglich?
+>>>Da da die Differenz von $0<r-r'<b$, kann ein Produkt von $b$ mit einer beliebigen ganzen Zahl niemals gleich dieser Differenz sein. Als Beispiel nehmen wir $r-r'=4$ und $b=5$, es gibt keine ganze Zahl $q \in \mathbb{Z}$, sodass $5q=4$. Dies  ist nie möglich, das gelten müsste $0<q<1$.
+>>
+>>$$\tag*{$\checkmark$}$$
+>>
+>>---
+>>Der Beweis ist abgeschlossen und der Satz somit gültig.
+>>$$\tag*{$\square$}$$
 
 ^30b120
 
@@ -301,7 +321,7 @@
 ^360a7d
 
 >[!theorem] Satz Teilbarkeit von Äquivalenzen
-> Für $a,b,n \in \mathbb{Z}$ mit $n \neq 0$ gilt
+> Für $a,b \in \mathbb{Z}$ und $n \in \mathbb{N}$ gilt
 > $$
 > a \equiv b \;\;(\text{mod }n) \iff n \;|\; (a-b) $$
 >>[!proof]- Beweis
@@ -1175,3 +1195,17 @@
 >>$$\tag*{$\square$}$$
 
 ^2548b2
+
+<!--
+>>>[!remark]- Info Vorzeichen Funktion $\text{sgn}$ 
+>>>Die Vorzeichen Funktion gibt für eine Zahl $a \in \mathbb{R}$ ihr Vorzeichen zurück
+>>>$$\begin{align}
+>>> \text{sgn}&: \mathbb{R} \to \{ -1,0,1 \} \\[1em]
+>>> \text{sgn}&(a)= \begin{cases}
+>>> -1 &\text{ wenn } a < 0 \\
+>>> 0 & \text{ wenn } a = 0 \\
+>>> 1 & \text{ sonst}
+>>>\end{cases}
+>>>\end{align}$$
+
+-->

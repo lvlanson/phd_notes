@@ -131,13 +131,7 @@
 
 ^ec6d6b
 
->[!def] Definition Körper
-> Wir nennen das Tripel $(\mathbb{K}, +, \cdot)$ einen Körper, wenn
-> 1. $(\mathbb{K}, +)$ eine additive [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]] ist
-> 2. $(\mathbb{K} \setminus \{ 0 \}, \cdot)$ eine multiplikative [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]] ist, wobei $0$ das neutrale Element in $(\mathbb{K},+)$ ist
-> 3. das **Distributivgesetz** gilt, also $\forall x,y,z \in \mathbb{K}$ $$x(y+z)=xy+xz$$
 
-^801450
 
 >[!def] Definition Elliptische Kurve $E$ ([[../../PDFs/silverman2008.pdf#page=295|Quelle]])
 > Eine **elliptische Kurve** über einem Körper $\mathbb{K}$ ist die Menge an Lösungen der Gleichung
@@ -239,12 +233,12 @@
 >>
 >>Der Elefant im Raum ist die Assoziativität. Diese erfordert tatsächlich eine Menge Arbeit. Wer überprüfen will, warum die Assoziativität gilt, kann dies schön anschaulich in [[../../PDFs/washington2008.pdf#page=34|dieser Quelle]] von Seite 20 bis 35 sehen. Für den Beweis müssen noch neue Konzepte eingeführt werden, die wir aus Zeitgründen hier aussparen.
 
->[!remark] Bemerkung: [[#^801450|Körper]] der elliptischen Kurve
+>[!remark] Bemerkung: [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^c53dc5|Körper]] der elliptischen Kurve
 >Bisher haben wir für die Einführung der grundlegendsten Theorie der elliptischen Kurve für einen beliebigen Körper [[#^df2758|definiert]] und das [[#^ec6d6b|Beispiel]] anhand der reellen Zahlen $\mathbb{R}$ konstruiert. Um damit funktionierende Verschlüsserlungsalgorithmen zu bauen, benötigen wir eine andere Art von Körper. Daher werden wir von hierab mit dem Körper
 >$$\mathbb{K}=\mathbb{Z}_{p}$$
 >arbeiten, wobei $p$ eine Primzahl ist. Wir bemerken, dass der Körper einmal aus der additiven Gruppe $(\mathbb{Z}_{p}, +)$ und der multiplikativen Gruppe $(\mathbb{Z}^*_{p})$ besteht.
 
->[!remark] Kontrollfrage: Warum ist $\mathbb{Z}_{p}$ ein [[#^801450|Körper]] wenn $p$ eine Primzahl ist und $\mathbb{Z}_{n}$ kein [[#^801450|Körper]], wenn $n$ keine Primzahl ist?
+>[!remark] Kontrollfrage: Warum ist $\mathbb{Z}_{p}$ ein [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^c53dc5|Körper]] wenn $p$ eine Primzahl ist und $\mathbb{Z}_{n}$ kein [[#^801450|Körper]], wenn $n$ keine Primzahl ist?
 
 >[!lemma] Lemma Elliptische Kurven über Endlichen Körpern
 > Eine [[#^df2758|elliptische Kurve]] $$E: y^2=x^3+ax+b$$ mit $4a^3 + 27b^2 \neq 0$ über dem Körper $\mathbb{Z}_{p}$, wobei $p$ eine Primzahl ist, bildet eine [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|kommutative Gruppe]].
