@@ -1,6 +1,12 @@
 >[!remark] Bemerkung
 > Damit eine analytische Auseinandersetzung mit asymmetrischen Verschlüsselungsverfahren möglich ist, führen wir zunächst gruppen- (Abstrakte Algebra) und zahlentheoretische Grundlagen ein
 
+---
+<center> Die Mathematik ist die Königin der Wissenschaften, und die Arithmetik (Zahlentheorie) ist die Königin der Mathematik. </center>
+<p align="right" style="font-family:cursive"><i>Carl Friedrich Gauß</i></p>
+
+---
+
 ## 2.1 Algebraische Grundlagen
 
 ^f42169

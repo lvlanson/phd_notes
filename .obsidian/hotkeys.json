@@ -77,5 +77,24 @@
       ],
       "key": "B"
     }
+  ],
+  "obsidian-wrap-with-shortcuts:wrap-with-shortcut-w1727720099352": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "E"
+    }
+  ],
+  "obsidian-citation-plugin:insert-citation": [],
+  "obsidian-wrap-with-shortcuts:wrap-with-shortcut-underline": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "Q"
+    }
   ]
 }

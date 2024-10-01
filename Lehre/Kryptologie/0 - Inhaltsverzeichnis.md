@@ -1,3 +1,6 @@
+## Aufgaben und Bearbeitungsstand
+
+>[!abstract] [[Vorlesungsfortschritt WS2024_25|Vorlesungsfortschritt und Aufgaben]]
 ## Vorlesungsmaterial
 
 >[!abstract] 1 - [[1 -  Einführung| Einführung]]

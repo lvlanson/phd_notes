@@ -141,6 +141,23 @@
   abstract = {Introduction The RSA cryptosystem, invented by Ron Rivest, Adi Shamir, and Len Adleman [18], was first publicized in the August 1977 issue of Scientific American. The cryptosystem is most commonly used for providing privacy and ensuring authenticity of digital data. These days RSA is deployed in many commercial systems. It is used by Web servers and browsers to secure Web traffic, it is used to ensure privacy and authenticity of e-mail, it is used to secure remote login sessions, and it is at the heart of electronic credit card payment systems. In short, RSA is frequently used in applications where security of digital data is a concern. Since its initial publication, the RSA system has been analyzed for vulnerability by many researchers. Although twenty years of research have led to a number of fascinating attacks, none of them is devastating. They mostly illustrate the dangers of improper use of RSA. Indeed, securely implementing RSA is a nontrivial task. Our goal is to survey some of these attacks and describe the underlying mathematical tools they use. Throughout the survey we follow standard naming conventions and use “Alice” and “Bob” to denote two generic parties wishing to communicate with each other. We use “Marvin” to denote a malicious attacker wishing to eavesdrop or tamper with the communication between Alice and Bob. We begin by describing a simplified version of RSA encryption. Let N = pq be the product of two large primes of the same size (n/2 bits each). A typical size for N is n = 1024 bits, i.e., 309 decimal digits. Each of the factors is 512 bits. Let e, d be two integers satisfying ed = 1 mod φ(N) where φ(N) = (p − 1)(q − 1) is the order of the multiplicative group ZN. We call N the RSA modulus, e the encryption exponent, and d the decryption exponent. The pair 〈N, e〉 is the public key. As its name suggests, it is public and is used to encrypt messages. The pair 〈N,d〉 is called the secret key or private key and is known only to the recipient of encrypted messages. The secret key enables decryption of ciphertexts. A message is an integer M ∈ ZN. To encrypt M, one computes C =Me mod N . To decrypt the ciphertext, the legitimate receiver computes Cd mod N. Indeed, Cd =Med =M mod N,}
 }
 
+@inproceedings{bos2013,
+  title = {Improved {{Security}} for a {{Ring-Based Fully Homomorphic Encryption Scheme}}},
+  booktitle = {Cryptography and {{Coding}}},
+  author = {Bos, Joppe W. and Lauter, Kristin and Loftus, Jake and Naehrig, Michael},
+  editor = {Stam, Martijn},
+  date = {2013},
+  pages = {45--64},
+  publisher = {Springer},
+  location = {Berlin, Heidelberg},
+  doi = {10.1007/978-3-642-45239-0_4},
+  abstract = {In 1996, Hoffstein, Pipher and Silverman introduced an efficient lattice based encryption scheme dubbed NTRUEncrypt. Unfortunately, this scheme lacks a proof of security. However, in 2011, Stehlé and Steinfeld showed how to modify NTRUEncrypt to reduce security to standard problems in ideal lattices. In 2012, López-Alt, Tromer and Vaikuntanathan proposed a fully homomorphic scheme based on this modified system. However, to allow homomorphic operations and prove security, a non-standard assumption is required. In this paper, we show how to remove this non-standard assumption via techniques introduced by Brakerski and construct a new fully homomorphic encryption scheme from the Stehlé and Steinfeld version based on standard lattice assumptions and a circular security assumption. The scheme is scale-invariant and therefore avoids modulus switching and the size of ciphertexts is one ring element. Moreover, we present a practical variant of our scheme, which is secure under stronger assumptions, along with parameter recommendations and promising implementation results. Finally, we present an approach for encrypting larger input sizes by extending ciphertexts to several ring elements via the CRT on the message space.},
+  isbn = {978-3-642-45239-0},
+  langid = {english},
+  keywords = {Arithmetic Circuit,Homomorphic Encryption,Homomorphic Encryption Scheme,Message Space,Ring Element},
+  file = {/home/thomas/Zotero/storage/JPF4DK25/Bos et al. - 2013 - Improved Security for a Ring-Based Fully Homomorphic Encryption Scheme.pdf}
+}
+
 @book{boyer2011,
   title = {A {{History}} of {{Mathematics}}},
   author = {Boyer, Carl B. and Merzbach, Uta C.},
@@ -1244,6 +1261,18 @@
   isbn = {978-1-108-83770-5},
   keywords = {Fourier matrices,intergration of periodic functions,the finite Fourier transform,the FTT,Trigonometric interpolation,trigonometric least squares approximation},
   file = {/home/thomas/Zotero/storage/EZ79H2WB/670835DFB4586EEB2B4360F8D7C8B2B5.html}
+}
+
+@book{samuel1970,
+  title = {Algebraic {{Theory}} of {{Numbers}}},
+  author = {Samuel, Pierre},
+  date = {1970},
+  eprint = {uQzvAAAAMAAJ},
+  eprinttype = {googlebooks},
+  publisher = {Hermann},
+  isbn = {978-0-901665-06-5},
+  langid = {english},
+  pagetotal = {118}
 }
 
 @inproceedings{sato1995,

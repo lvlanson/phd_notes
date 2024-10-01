@@ -7,6 +7,12 @@
       "endTag": "</span>**"
     },
     {
+      "id": "w1727720099352",
+      "name": "exred",
+      "startTag": "**<span style=\"color:#f7b8ff\">",
+      "endTag": "</span>**"
+    },
+    {
       "id": "w1727451173064",
       "name": "green",
       "startTag": "**<span style=\"color:#38ffa9\">",
