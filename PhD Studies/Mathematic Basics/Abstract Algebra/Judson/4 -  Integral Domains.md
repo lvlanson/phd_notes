@@ -53,7 +53,7 @@
 >
 >>[!remark] Remark: Ongoing we will denote $S$ as <u>Field of Fractions</u> with $S=F_{D}$
 >
->>[!proof]
+>>[!proof]-
 >>Let $(a,b), (c,d), (e,f) \in F_{D}$ with $b,d,f \neq 0$
 >>1. $(F_{D},+)$ is a commutative group:
 >> - Associativity: $$\begin{align}
@@ -67,7 +67,21 @@
 >> (0,1)+(a,b)=(a,b)+(0,1)&=(a+0,b \cdot 1) \\
 >>    &=(a,b)
 >>\end{align}$$
->>- Inverse Element:  $-(a,b)=(-a,b)$ $$(a,b)+(-a,b)=(a-a,bb)=(0,b^2)\sim(0,1)=e$$
+>>- Inverse Element:  $-(a,b)=(-a,b)$ $$(a,b)+(-a,b)=(-a,b)+(a,b)=(a-a,bb)=(0,b^2)\sim(0,1)=e$$
 >>- Commutativity:
 >>$$(a,b) +(c,d)=(a+c,bd)=(c+a,db)=(c,d)+(a,b) \tag*{$\checkmark$}$$
 >>2. $(F_{D}\setminus \{ (0,1) \})$ is a commutative group:
+>>- Associativity:$$\begin{align}
+>> \Big[(a,b)\cdot(c,d)\Big]\cdot(e,f)&= (ac,bd)\cdot(e,f) \\
+>> &= (ace,bdf) \\
+>> &= (ab) \cdot(ce,df) \\
+>> &= (ab) \cdot \Big[(c,d)\cdot (e,f)\Big]
+>>\end{align}$$
+>>- Neutral Element: $e=(1,1)$ $$\begin{align}
+>> (a,b) \cdot (1,1) = (1,1) \cdot (a,b) &= (1 \cdot a, 1 \cdot b) \\
+>> &= (a,b)
+>>\end{align}$$
+>>- Inverse Element: $(a,b)^{-1}=(b,a)$ $$(a,b)\cdot(b,a)=(b,a) \cdot (a,b)= (ab,ab) \sim(1,1)=e$$
+>>- Commutativity: $$(a,b) \cdot (c,d)=(ac,bd)=(ca,db)=(c,d) \cdot (a,b) \tag*{$\checkmark$}$$
+>> This verifies the lemma and establishes $F_{D}$ as a field $$\tag*{$\square$}$$
+>
