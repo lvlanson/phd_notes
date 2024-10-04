@@ -54,7 +54,7 @@
 > 
 > dann nennen wir $(G, \circ)$ eine **<u>kommutatitve (oder auch abel'sche) Gruppe</u>**
 >
->>[!example]- Beispiel $(\mathbb{R}, +)$ 
+>>[!example]- Beispiel $(\mathbb{R}, \cdot)$ 
 >>$(\mathbb{R}, +)$ bildet eine kommutatitive Gruppe mit
 >>$$\begin{align}
 >> e &= 1 \\
@@ -84,6 +84,8 @@
 >>>\end{align}$$
 >>>und verifizieren Sie
 >>>$$A \cdot B \neq B \cdot A$$
+>
+>>[!remark] Kontrollfrage: Ist $(\mathbb{R},+)$ eine kommutative Gruppe, wenn ja, wie sieht sie aus?
 
 ^afad91
 
@@ -422,19 +424,19 @@
 > ![[Figures/caley_tables_easy.png|center|650]]
 
 >[!property] Eigenschaften der Operationen of $\mathbb{Z}_{n}$
->1. Die [[#^c5cc22|Operation]] $+ : \mathbb{Z}_{n} \times \mathbb{Z}_{n} \to \mathbb{Z}_{n}$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}$ gilt:
+>1. Die [[#^9cd06c|Operation]] $+ : \mathbb{Z}_{n} \times \mathbb{Z}_{n} \to \mathbb{Z}_{n}$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}$ gilt:
  $+$ bildet eine [[#^afad91|kommutative Gruppe]]  $(\mathbb{Z}_{n},+)$
  > 	- ... ist assoziativ
 >	- ... es existiert das neutrale Element $e=0$
 >	- ... das inverse Element für $a=-a$
 >	- ... ist kommutativ
->1. Die [[#^c5cc22|Operation]] $\cdot : \mathbb{Z}_{n}^* \times \mathbb{Z}_{n}^* \to \mathbb{Z}_{n}^*$ ein, wobei $\mathbb{Z}_{n}^*=\mathbb{Z}_{n}\setminus \{ 0 \}$ und für $\forall a,b \in \mathbb{Z}_{n}$ gilt:
+>1. Die [[#^9cd06c|Operation]] $\cdot : \mathbb{Z}_{n}^* \times \mathbb{Z}_{n}^* \to \mathbb{Z}_{n}^*$ ein, wobei $\mathbb{Z}_{n}^*=\mathbb{Z}_{n}\setminus \{ 0 \}$ und für $\forall a,b \in \mathbb{Z}_{n}$ gilt:
  $\cdot$ bildet eine [[#^afad91|kommutative Halbgruppe]]  $(\mathbb{Z}_{n}^*, \;\cdot\;)$
 >	- ... ist assoziativ
 >	- ... es existiert das neutrale Element $e=1$
 >	- ... das inverse Element für $a$ existiert nicht, wenn $a$ und $n$ gemeinsame Teiler haben
 >	- ... ist kommutativ
->3. Die [[#^c5cc22|Operation]] $\cdot : \mathbb{Z}_{n}^* \times \mathbb{Z}_{n}^* \to \mathbb{Z}_{n}^*$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}^*$ gilt:
+>3. Die [[#^9cd06c|Operation]] $\cdot : \mathbb{Z}_{n}^* \times \mathbb{Z}_{n}^* \to \mathbb{Z}_{n}^*$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}^*$ gilt:
  $\cdot$ bildet eine [[#^afad91|kommutative Gruppe]] $(\mathbb{Z}_{n}^*, \;\cdot\;)$, wenn $n$ eine Primzahl ist
 >	- ... das heißt das inverse Element existiert hier für jedes beliebige Element in $\mathbb{Z}_{n}^*$
 

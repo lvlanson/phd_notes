@@ -119,8 +119,13 @@
 >>\end{align}$$
 >>$$\tag*{$\square$}$$
 >
->>[!remark] Remark on Terminology
->>The map $\phi_{\alpha}: R[x] \to R$ is called the **<span style="color:#e9ffad">evaluation homomorphism at $\alpha$</span>**
+
+>[!def] Definition Evaluation Homomorphism ([[../../../../PDFs/judson2022.pdf#page=224|Source]])
+>Let $R$ be a [[#^4a5286|commutative ring]] with identity and $\alpha \in R$. The map
+>$$\phi_{\alpha}: R[x] \to R$$
+>is called **<span style="color:#38ffa9">evaluation homomorphism at $\alpha$</span>**.
+
+^4ffc7e
 
 ## The Division Algorithm
 
