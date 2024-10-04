@@ -101,3 +101,5 @@
 >> &\equiv \underbrace{ 0 }_{ \mathbf{a}=(0,0) } + \underbrace{ (1-X_{1})X_{2} }_{ \mathbf{a}=(0,1) }+\underbrace{ X_{1}(1-X_{2}) }_{ \mathbf{a}=(1,0) }+\underbrace{ 0 }_{ \mathbf{a}=(1,1) } &&\;\;(\text{mod } 2) \\
 >> &\equiv (1-X_{1})X_{2} + X_{1}(1-X_{2}) &&\;\;(\text{mod } 2)
 >>\end{align}$$
+
+<!-- -->
