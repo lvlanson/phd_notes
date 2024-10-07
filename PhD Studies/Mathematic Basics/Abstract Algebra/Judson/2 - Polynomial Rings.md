@@ -105,7 +105,7 @@
 >>$$\begin{align}
 >> \phi_{\alpha}\Big(p(x)+q(x)\Big) &= \sum_{i=0}^{\max\set{m,n}} (a_{i}+b_{i})\alpha^i \\
 >> &= \sum_{i=0}^{\max\set{m,n}} a_{i}\alpha^i+b_{i}\alpha^i \\
->> &= \sum_{i=0}^{m}a_{i}\alpha^i + \sum_{i=0}^{n}b_{i}\alpha^i \\
+>> &= \sum_{i=0}^{m}a_{i}\alpha^i + \sum_{i=0}^{n}b_{i}\alpha^i \\mathbf
 >> &= \phi_{\alpha}\Big(p(x)\Big) + \phi_{\alpha}\Big(q(x)\Big) \tag*{$\checkmark$}
 >>\end{align}$$
 >>
@@ -490,4 +490,3 @@
 >>is not be divisible by $p$ since $b_0c_{m}$ is the only term not divisible by $p$, while the others are (by this [[#^3926b5|proposition]]), i.e.
 >>$$a_{m} \equiv b_{0}c_{m} \;\;(\text{mod } p)$$
 >>By our assumption that all $a_{i}$ are divisible by $p$, the index of $m = n$. Hence, there is no factorization for $f(x)$ for the given conditions.
-

@@ -96,7 +96,7 @@
 ### Encryption Scheme
 
 >[!def] Definition Algorithm Functions ([[../../../../../../PDFs/gentry2013.pdf|Source 1]], [[../../../../../../PDFs/brakerski2012.pdf#page=10|Source 2]])
->Let $l =  \lceil \log_{2} q\rceil -1$
+>Let $l =  \lceil \log_{2} q\rceil -1$ over $\mathbb{Z}_{q}$
 >1. **PowersOfTwo** 
 >Let $\mathbf{b} \in \mathbb{Z}_{q}^n$ and $l \in \mathbb{Z}$, then $$\begin{align}
 > \text{PowersOfTwo}(\mathbf{b}):&=\Big(\mathbf{b}, 2 \cdot \mathbf{b}, \dots, 2^{l-1}\cdot \mathbf{b}\Big) \in \mathbb{Z}_{q}^{l\times n} \tag{Matrix Notation} \\
