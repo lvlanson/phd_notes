@@ -30,7 +30,9 @@
     "Diophantinische",
     "Diophantinische",
     "homom",
-    "interpolants"
+    "interpolants",
+    "importantness",
+    "softmax"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,
@@ -41,7 +43,7 @@
     "margin": "0",
     "downscalePercent": 60
   },
-  "livePreview": false,
+  "livePreview": true,
   "defaultViewMode": "preview",
   "showLineNumber": true
 }
