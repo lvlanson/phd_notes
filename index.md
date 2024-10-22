@@ -14,7 +14,7 @@
 >>
 >>>[!abstract] Abstract Algebra
 >>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/1 - Algebraic Structures|Algebraic Structures (only basic ones)]] ✅
->>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/2 - Polynomial Rings|2 - Polynomial Rings]] ✏️
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/3 - Polynomial Rings|3 - Polynomial Rings]] ✏️
 >>
 >>>[!abstract] Homomorphic Encryption
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption|Basics on Homomorphic Encryption 1]] ✅

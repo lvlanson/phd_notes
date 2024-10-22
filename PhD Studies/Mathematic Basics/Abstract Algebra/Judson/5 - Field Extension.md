@@ -1,6 +1,7 @@
 >[!def] Definition Extension Field ([[../../../../PDFs/judson2022.pdf#page=272|Source]])
 > Let $F$ denote a [[1 - Algebraic Structures#^a17f1c|field]]. We say $E$ is a **<span style="color:#38ffa9">field extension $E/F$</span>** of $F$ if $F$ is a subfield of $E$, i.e.
 > $$F \subset E$$ 
+> We call $F$ the **<span style="color:#38ffa9">base field</span>**.
 >>[!example] $\mathbb{C}/\mathbb{R}$ is a field extension
 >
 >>[!example] $\mathbb{R}/\mathbb{Q}$ is a field extension
@@ -40,7 +41,7 @@
 >[!theorem] Theorem Existence and Uniqueness of Polynoms of Algebraic Elements ([[../../../../PDFs/judson2022.pdf#page=275|Source]])
 >Let $E$ be an [[#^d39ed6|extension field]] of a field $F$ and $\alpha \in E$ with $\alpha$ being [[#^5451ab|algebraic]] over $F$. 
 >
->Then **<span style="color:#38ffa9">there exists a unique [[2 - Polynomial Rings#^22fa43|irreducible]] [[2 - Polynomial Rings#^a2163f|monic]] polynomial $p(x) \in F[x]$ of smallest degree</span>** such that $$p(\alpha)=0$$ If $f(x)$ is another polynomial in $F[x]$ such that $f(\alpha)=0$, then $p(x)$ divides $f(x)$.
+>Then **<span style="color:#38ffa9">there exists a unique [[3 - Polynomial Rings#^22fa43|irreducible]] [[3 - Polynomial Rings#^a2163f|monic]] polynomial $p(x) \in F[x]$ of smallest degree</span>** such that $$p(\alpha)=0$$ If $f(x)$ is another polynomial in $F[x]$ such that $f(\alpha)=0$, then $p(x)$ divides $f(x)$.
 >>[!proof]
 >> Let $$\phi_{\alpha}:F[x] \to E$$
->> denote the [[2 - Polynomial Rings#^4ffc7e|evaluation homomorphism]]
+>> denote the [[3 - Polynomial Rings#^4ffc7e|evaluation homomorphism]]

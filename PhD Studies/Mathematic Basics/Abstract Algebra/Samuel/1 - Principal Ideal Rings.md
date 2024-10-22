@@ -1,11 +1,5 @@
 ### Introductory Definitions
 
-
-
->[!def] Definition 
-
-
-
 >[!def] Definition Divisibility over Integral Domains ([[../../../../PDFs/samuel1970.pdf#page=15|Source]])
 >Let 
 >- $A$ be an [[../Judson/1 - Algebraic Structures#^f48d09|integral domain]]
@@ -55,7 +49,7 @@
 ^56e245
 
 >[!property] Property Equivalency of Associates over a Fractional Field $F$
->Let $K$ be a field of fractions and $A$ an integral domain. Let $x,y \in K$ with $x,y \neq 0$
+>Let $K$ be a [[../Judson/5 - Field Extension]] and $A$ an integral domain. Let $x,y \in K$ with $x,y \neq 0$
 >$$x \;|\; y \land y \;|\; x$$
 >then we can say
 >$$Ax = Ay$$
@@ -75,11 +69,11 @@
 >1. Denote $K$ being a field, then $K^* = K\setminus\{ 0 \}$  
 > 2. Denote $A^*$ the set of units, then for 
 > $$A = \mathbb{Z} \implies A^*=\{ -1,1 \}$$
-> 3. Denote the [[../Judson/2 - Polynomial Rings#^a2163f|ring of polynomials]] $B=A[X_{1},\dots X_{n}]$ on the integral domain $A$. The units of $A$ are the invertible constants, hence $B^* =A^*$.
+> 3. Denote the [[../Judson/3 - Polynomial Rings#^a2163f|ring of polynomials]] $B=A[X_{1},\dots X_{n}]$ on the integral domain $A$. The units of $A$ are the invertible constants, hence $B^* =A^*$.
 > >[!remark] Remark: Only constant polynoms can have invertibles.
 
 >[!def] Definition Principal Ideal Ring ([[../../../../PDFs/samuel1970.pdf#page=15|Source]])
->A ring $A$ is called a **<span style="color:#38ffa9">principal ideal ring</span>** if it is an [[../Judson/1 - Algebraic Structures#^f48d09|integral domain]] and if every [[../Judson/3 - Ideals and Ideals on Polynomials#^2baf0e|ideal]] of $A$ is [[../Judson/3 - Ideals and Ideals on Polynomials#^04f3cf|principal]]
+>A ring $A$ is called a **<span style="color:#38ffa9">principal ideal ring</span>** if it is an [[../Judson/1 - Algebraic Structures#^f48d09|integral domain]] and if every [[../Judson/4 - Ideals and Ideals on Polynomials#^2baf0e|ideal]] of $A$ is [[../Judson/4 - Ideals and Ideals on Polynomials#^04f3cf|principal]]
 
 >[!remark] Remark Divisibility Theory is Applicable on Fraction Fields of Principal Ideal Rings
 >>[!def] Definition Greatest Common Divisor

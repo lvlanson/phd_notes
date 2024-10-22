@@ -43,7 +43,7 @@
   "defaultFileIcon": "lucide//file",
   "defaultFolderIcon": "lucide//folder",
   "defaultMediaIcon": "lucide//file-image",
-  "exportPath": "/home/thomas/Documents/",
+  "exportPath": "/home/thomas/Documents/HTML_EXPORT",
   "filesToExport": [
     [
       "Lehre/Kryptologie/Diagrams",

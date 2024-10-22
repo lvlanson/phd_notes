@@ -767,7 +767,7 @@
 >>
 >><u> Induktionsschritt</u>:
 >>
->>Für den **Induktionsschritt** verwenden wir die rekursive Eigenschaft des $\text{ggT}$, also dass über die Definition fallende Werte zu erwarten sind, sodass $b=0$ erreicht ist den Algorithmus terminiert. Wir verwenden kurz die übliche Denkweise, wie als hätten wir eine konkrete Zählvariable $n$. Wir gehen nicht von $n+1$ wie üblich, sondern von $n-1$ aus, und zeigen, dass sich $a',b' \in \mathbb{Z}$ schlüssig über den Rekursionsschritt $n-1$ und unserer (**Induktions-**)**Behauptung** finden lassen. 
+>>Für den **Induktionsschritt** verwenden wir die rekursive Eigenschaft des $\text{ggT}$, also dass über die Definition fallende Werte zu erwarten sind, sodass $b=0$ erreicht ist wenn der Algorithmus terminiert. Wir verwenden kurz die übliche Denkweise, wie als hätten wir eine konkrete Zählvariable $n$. Wir gehen nicht von $n+1$ wie üblich, sondern von $n-1$ aus, und zeigen, dass sich $a',b' \in \mathbb{Z}$ schlüssig über den Rekursionsschritt $n-1$ und unserer (**Induktions-**)**Behauptung** finden lassen. 
 >>
 >>Den Schritt rückwärts erzeugen wir über den [[#^e21725| Satz des Euklidischen Algorithmus]] dadurch, dass wir $a$ durch $a \text{ mod } b$ reduzieren, also
 >>$$\text{ggT}(a,b)= \text{ggT}(b, a\text{ mod }b)$$
@@ -777,7 +777,7 @@
 >>$$\begin{align}
 >> \text{ggT}(a,b)=\text{ggT}(b, \underbrace{ a \text{ mod } b }_{ \substack{\text{Schritt}\\\text{Rückwärts}} }) = \text{ggT}(b,r)
 >>\end{align}$$
->>Nach unserer **Induktionsbehauptung** existieren für $b,r \in \mathbb{Z}$ zwei Zahlen $b*,r* \in \mathbb{Z}$, sodass 
+>>Nach unserer **Induktionsbehauptung** existieren für $b,r \in \mathbb{Z}$ zwei Zahlen $b^*,r^* \in \mathbb{Z}$, sodass 
 >>$$\text{ggT}(b,r)= b \cdot b^* + r \cdot r^* \tag{1}$$
 >> Nach dem [[#^30b120| Satz der Existenz und Eindeutigkeit des Quotienten und Rests]] können wir $a \text{ mod } b = r$ darstellen mit
 >> $$r = a\text{ mod }b= a-qb$$
@@ -812,7 +812,7 @@
 >> 	q = a//b
 >> 	r=a%b
 >> 	d, bb, rr = xggT(b,r)
->> 	return d, rr, bb-q*rr
+>> 	return d, rr, bb-q*rr 
 >> ```
 >
 >>[!example]- Beispiel $a=40902$, $b= 24140$
@@ -885,7 +885,7 @@
 >> $$N = p_{1} \cdot p_{2} \cdot \ldots \cdot p_{n} + 1$$
 >> Es gibt nun zwei Möglichkeiten über die Beschaffenheit von $N$. Zum einen kann $N$ selbst eine Primzahl sein, was allerdings ein Widerspruch zu unserer Annahme wäre, dass $\mathbb{P}$ eine vollständige Liste aller Primzahlen wäre.
 >> 
->> Die andere Möglichkeit ist, dass $N$ eine durch Primzahlen faktorisierte Zahl ist. Also muss es eine Primzahl $p_{i} \in \mathbb{P}$ geben, die $N$ teilt. Wir nehmen an, $p_{i}$ teilt ganzzahlig $P$, also
+>> Die andere Möglichkeit ist, dass $N$ eine durch Primzahlen faktorisierte Zahl ist. Also muss es eine Primzahl $p_{i} \in \mathbb{P}$ geben, die $N$ teilt. Wir nehmen an $p_{i}$ teilt $N$ ganzzahlig, also
 >> $$\begin{align}
 >> \frac{N}{p_{i}} &= \frac{p_{1} \cdot p_{2} \cdot \dots \cdot p_{n} + 1}{p_{i}} \\
 >> &= \frac{N}{p_{i}} = \underbrace{ \frac{p_{1} \cdot p_{2} \cdot \ldots \cdot p_{n} }{p_{i}} }_{ \in \mathbb{Z}^+} + \underbrace{ \frac{1}{p_{i}} }_{ \not\in\mathbb{Z} }
@@ -904,7 +904,7 @@
 >>
 >> Die Existenz der Primfaktoren für $n$ zeigen wir mit dem [[#^f974a9| Prinzip der vollständigen Induktion]]. Im **Induktionsanfang** ist das kleinst-mögliche $n=2$, also
 >> $$n_{0}=2=\underbrace{ 2^1 }_{ p_{1}=2 } \tag*{$\checkmark$}$$
->> Für den **Induktionsschluss** nehmen wir zunächst an, dass $n$ bereits eine Primzahl ist, so hat die Behauptung bereits bestand, also
+>> Für den **Induktionsschritt** nehmen wir zunächst an, dass $n$ bereits eine Primzahl ist, so hat die Behauptung bereits bestand, also
 >> $$n = \underbrace{ n^1 }_{ =p_{1} }$$
 >> Angenommen es existiert eine Primzahl $p$, sodass $p \;|\; n$, dann erhalten wir eine ganze Zahl $n'$, sodass
 >> $$n' = \frac{n}{p} \tag{Induktionsschritt}$$
@@ -916,7 +916,7 @@
 >>
 >> Wir nehmen nun an, dass es zwei verschiedene Faktorisierungen für $n \in \mathbb{Z}^+$ gibt mit Primzahlen $p_{a}, q_{b}$ 
 >> $$n=p_{1}^{s_{1}}\cdot \ldots \cdot p_{j}^{s_{j}} = q_{1}^{r_{1}}\cdot \ldots \cdot q_{k}^{r_{k}}\tag{1}$$
->> mit Exponenten $s_{a},r_{b} \in \mathbb{N}$. Wir nehmen dabei an, dass die $p,q$ verschieden sind und dass $s,r\geq 1$. Wir wollen nun zeigen, dass $j=k$ und für zwei Primzahlen $p_{a} = q_{b}$ und dann auch für die Exponenten $s_{a}=r_{b}$ gilt.
+>> mit Exponenten $s_{a},r_{b} \in \mathbb{N}$. Wir nehmen dabei an, dass die Primfaktoren $p_{\alpha},q_{\beta}$ verschieden sind und dass $s,r\geq 1$. Im weiteren Verlauf des Beweises wollen wir zeigen, dass $\alpha=\beta$ und für zwei Primzahlen $p_{\alpha} = q_{\beta}$ und dann auch für die Exponenten $s_{\alpha}=r_{\beta}$ gilt.
 >> 
 >> Nach der [[#^8daf7c|Symmetrie der Äquivalenzrelation]] gilt, wenn wir die linke Faktorisierung von Gleichung $(1)$ durch $p_1$ teilen können, so muss das auch für die rechte Seite möglich sein. Also
 >> $$\underbrace{ p_{1}\;|\;p_{1}^{s_{1}}\cdot \ldots \cdot p_{j}^{s_{j}} }_{ \text{ wenn } p_{1} \text{ teilt...} } \implies \underbrace{ p_{1} \;|\; q_{1}^{r_{1}}\cdot \ldots \cdot q_{k}^{r_{k}} }_{ \text{dann teilt }p_{1} \text{ auch...} } \implies \underbrace{ \exists q_{b} \in \{ q_{1}, \dots,q_{k} \} \text{, sodass } p_{1}=q_{b} }_{ \text{ also existiert ein } q_{b} \text{ was gleich } p_{1} \text{ sein muss} }$$
@@ -925,7 +925,7 @@
 >> p_{1}^{s_{1}}\cdot \ldots \cdot p_{j}^{s_{j}} &= p_{1}^{r_{1}}\cdot \ldots \cdot q_{k}^{r_{k}} \qquad&&\Big\vert :p_{1}^{r_{1}} \\
 >> p_{1}^{s_{1}-r_{1}}\cdot \ldots \cdot p_{j}^{s_{j}} &= q_{2}\cdot \ldots \cdot q_{k}^{r_{k}} \tag{2}
 >>\end{alignat}$$
->> Gleichung $(3)$ ist allerdings unmöglich, da mindestens ein $p_{1}$ übrig bleibt, die auch die rechte Seite teilt. Die [[#^8daf7c|Symmetrie der Äquivalenzrelation]] erwartet aber, dass wenn die linke Seite durch $p_{1}$ teilbar ist, so muss es die rechte Seite sein. Somit erhalten wir für den Fall $s_{1}>r_{1}$ einen Widerspruch.
+>> Gleichung $(2)$ ist allerdings unmöglich, da mindestens ein $p_{1}$ übrig bleibt, die auch die rechte Seite teilt. Die [[#^8daf7c|Symmetrie der Äquivalenzrelation]] erwartet aber, dass wenn die linke Seite durch $p_{1}$ teilbar ist, so muss es die rechte Seite sein. Somit erhalten wir für den Fall $s_{1}>r_{1}$ einen Widerspruch.
 >> 
 >> Der **zweite Fall** für $s_{1}<r_{1}$ ist ebenfalls unmöglich, da $s_{1}-r_{1}<0$ und somit wäre $p_{1}^{s_{1}-r_{1}} \not\in \mathbb{Z}$ und somit wäre dies keine Primzahl mehr.
 >> 
@@ -979,7 +979,7 @@
 >>[!remark] Bemerkung
 >>Diese Funktion zählt alle Primzahlen, die kleiner als $x \in \mathbb{R}^+$ sind. Eine Funktion, die dies bewiesen exakt bestimmt, ist nicht bekannt.
 
->[!theorem] Der Primzahlsatz nach Gauß und Hadamard
+>[!theorem] Satz Der Primzahlsatz nach Gauß und Hadamard
 > $\forall x \in \mathbb{R}^+:$
 > $$\pi(x)\approx \frac{x}{\ln(x)}$$
 >>[!remark]- Bemerkung zur Bedeutung des Satzes
@@ -1032,34 +1032,37 @@
 >Seien $p$ eine Primzahl und $a,b \in \mathbb{Z}$, dann gilt
 >$$p \;|\; ab \implies p \;|\; a \text{ oder } p \;|\; b$$
 >>[!proof]- Beweis
->>Angenommen
->>$$p \;\nmid\; a \text{ und } p\;\nmid\;b$$
->>so wären $p,a$ und $p,b$ teilerfremd, also
+>>Wir führen den Beweis über Kontraposition, also
+>>$$p \nmid a \land p \nmid b \implies p \nmid ab $$
+>>>[!note]- Info zum Beweisverfahren: Kontraposition
+>>> Statt $$A\implies B$$ können wir auch zeigen
+>>> $$\neg B \implies \neg A$$
+>>> Wer sich vergewissern will, dass diese Ausdrücke äquivalent
+>>
+>>daher gilt durch das [[#^42f9e5|Lemma von Bezout]]
 >>$$\begin{align}
->> \text{ggT}(p,a) &= 1 \\
->> \text{ggT}(p,b) &= 1
+>> p \nmid a \implies \text{ggT}(p,a) &= 1 = pp'_{1} + aa'  \\
+>> p \nmid b \implies \text{ggT}(p,b) &= 1 = pp_{2}'' + bb'
 >>\end{align}$$
->>Mit dem [[#^42f9e5|Lemma von Bezout]] können wir sagen
+>>Wir multiplizieren beide Gleichungen miteinander und erhalten
+>>>[!note]- Info zu: Was es bedeutet zwei Gleichungen zu multiplizieren
+>>> Nehmen wir an wir haben zwei Gleichungen
+>>> $$\begin{align}
+>>> a &= b \\
+>>> x &= y
+>>>\end{align}$$
+>>>Wir können die erste Gleichung mit $x$ multiplizieren und erhalten
+>>>$$ax = bx$$
+>>>Da wir wissen, dass $x=y$, können wir eine der beiden $x$ mit $y$ austauschen und erhalten
+>>>$$ax = by$$
+>>>was dem "multiplizieren von zwei Gleichungen" entspricht.
+>>
 >>$$\begin{align}
->> \text{ggT}(p,a) &= 1 = pp_{1}+aa' \tag{1}\\
->> \text{ggT}(p,b) &= 1 = pp_{2}+bb' \tag{2}
+>> 1 &= p^2p_{1}'p_{2}' + pp_{2}'aa'+pp_{1}'bb' + aa'bb' \\
+>> 1 &= p\underbrace{ (pp_{1}'p_{2}' + p_{2}'aa'+p_{1}'bb') }_{ =p^* } + ab\underbrace{ a'b' }_{ =(ab)^* }  \\
+>> 1 &=pp^* + ab(ab)^* \implies \text{ggT}(p,ab)=1  \implies p \nmid ab \tag*{$\square$}
 >>\end{align}$$
->>mit $p_{1},p_{2},a',b' \in \mathbb{Z}$. Wir stellen nun die Gleichungen $(1)$ und $(2)$ geschickt um und erhalten
->>$$\begin{align}
->>  aa' = pp_{1}-1 \tag{3}\\
->> bb' = pp_{2}-1 \tag{4}
->>\end{align}$$
->>Multiplizieren wir gleichung $(3)$ und $(4)$ erhalten wir
->>$$(aa')(bb')=(1-pp_{1})(1-pp_{2})\tag{5}$$
->>Wir bemerken, dass die linke Seite durch Umstellung $(ab)(a'b')$ enthält. Aus unserer Beweis Prämisse schließen wir
->>$$p \;|\; ab \implies p \;|\; (ab)(a'b')$$
->>nach der [[#^6a2086|der dritten Eigenschaft der ganzzahligen Teilung]]. Also muss demnach $p$ auch den rechten Teil der Gleichung $(5)$ teilen, was wir nun prüfen werden.
->>$$\begin{align}
->>(1-pp_{1})(1-pp_{2}) &= 1-pp_{1}-pp_{2}-p^2p_{1}p_{2} \\
->> &= p(p_{1}-p_{2}-pp_{1}p_{2})+1
->>\end{align}$$
->>Damit die Behauptung stand hält, muss $p\;|\;1$ wegen des [[#^a40b0b| Satzes der Teilbarkeit von Summen und Differenzen]], was aber ein Widerspruch ist, daher muss gelten, dass
->>$$p \;|\; ab \implies p \;|\; a \text{ oder } p \;|\; b \tag*{$\square$}$$
+>>
 >
 >>[!example]- Beispiel $5 \;|\; (4 \cdot 5)$
 >> $$\underbrace{ \underbrace{ 5 \;|\; (4 \cdot 5) }_{ \text{ wahr} } \implies \underbrace{ \underbrace{ 5 \;|\; 4 }_{ \text{falsch} } \; \lor \; \underbrace{ 5 \;|\;5 }_{ \text{wahr} } }_{ \text{wahr} } }_{ \text{wahr} }$$
@@ -1190,14 +1193,14 @@
 >>Jetzt werden beide Gleichungen miteinander multipliziert
 >>$$\begin{align}
 >> bb'cc' &= (1-aa')(1-aa'') \\
->> bb'cc' &= 1-aa'-aa''-aa'aa'' \\
->> bb'cc' &= 1- a(a'-a''-a'a'') \\
->>  a(a'-a''-a'a'')+ bc(b'c')  &= 1\\
+>> bb'cc' &= 1-aa'-aa''-a^2a'aa'' \\
+>> bb'cc' &= 1- a(a'-a''-aa'a'') \\
+>>  a(a'-a''-aa'a'')+ bc(b'c')  &= 1\\
 >>\end{align}$$
 >>Was die Aussage [[#^42f9e5|Bezouts Lemma]] für $\text{ggT}(a,bc)=1$ ist, also
->>$$ a(a'-a''-a'a'') + bc(b'c')  = 1 \implies \text{ggT}(a,bc)=1$$
+>>$$ a(a'-a''-aa'a'') + bc(b'c')  = 1 \implies \text{ggT}(a,bc)=1$$
 >>Für $(\Longleftarrow)$ konstruieren wir für $a$ über [[#^42f9e5|Bezouts Lemma]]
->>$$\text{ggT}(a,bc)\implies a(a'-a''-a'a'') + bc(b'c')  = 1$$
+>>$$\text{ggT}(a,bc)\implies a(a'-a''-aa'a'') + bc(b'c')  = 1$$
 >>und lösen die vorangegangene Implikation rückwärts auf und erhalten die gesuchte Aussage.
 >>
 >>$$\tag*{$\square$}$$
