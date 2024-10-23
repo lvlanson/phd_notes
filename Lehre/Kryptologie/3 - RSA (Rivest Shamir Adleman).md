@@ -82,13 +82,13 @@
 >>[!proof]- Beweis mit Zahlentheorie
 >> Nehmen wir folgende Liste an Zahlen
 >> $$1 \cdot a, 2 \cdot a, 3 \cdot a, \dots (p-1)\cdot a \tag{1}$$
->> Wir planen nun jede Zahl dieser Liste $\text{ mod } p$ zu rechnen. Wir überlegen wie die Liste sich nach dieser Operation verändern muss.
+>> Wir planen nun jede Zahl dieser Liste $\text{ mod } p$ zu rechnen. Dazu überlegen wir wie die Liste sich nach dieser Operation verändern muss.
 >> 
 >> Unserer Voraussetzung können wir entnehmen, dass $\text{ggT}(a,p)=1$ gilt. Weiterhin wissen wir, dass alle Zahlen kleiner als $p$ per Definition der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^966cde|Primzahlen]] zur Primzahl teilerfremd sein müssen. Daher können wir feststellen, dass $p$ keine der obenen genannten ganzzahlig teilt. 
 >> 
 >> Wir nehmen nun an, dass alle Elemente nach der Operation $\text{ mod }p$ in der Liste verschiene Elemente erzeugt, da wir $p-1$ Elemente haben und alle teilerfremd zu $p$ sind erwarten wir 
 >> $$1,2,3,\dots,(p-1) \tag{2}$$
->> Um dies zu zeigen, gehen wir davon aus, dass es angenommen zwei Elemente aus Liste $(1)$ gibt, die gleich sind. Also es seien $k,m \in \{ 1,\dots,(p-1) \}$ mit 
+>> Um dies zu zeigen, gehen wir davon aus, dass es angenommen zwei Elemente aus Liste $(1)$ gibt, die den gleichen Rest ergeben. Also es seien $k,m \in \{ 1,\dots,(p-1) \}$ mit 
 >> $$k \neq m \tag{3}$$
 >> und wir behaupten, es gäbe demzufolge
 >> $$k\cdot a \equiv m \cdot a \;\;(\text{mod } p)$$ 
@@ -99,7 +99,7 @@
 >>\end{align}$$
 >>Nach dem [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^f65359|Satz der Primzahlquotienten]] muss einer der Faktoren von $p$ teilbar sein. Da unserer Voraussetzungen nach $\text{ggT}(a,p)=1$, also $p\nmid a$, muss demzufolge $p \;|\; (k-m)$ dann gelten, wenn es angenommen zwei gleiche Zahlen gäbe. Von $p \;|\; (k-m)$ können wir über den Satz der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Kongruenzen]] rückschließen, dass
 >>$$k \equiv m \;\;(\text{mod } p)$$
->> was ein Widerspruch zu unserer Behauptung $(3)$ ist. Daher muss die Liste $(2)$ entstehen, wenn wir Liste $(1)$ $\text{ mod } p$ rechnen. Daher können wir behaupten, wenn wir jeweils die Elemente der Listen miteinander multiplizieren
+>> was ein Widerspruch zu unserer Behauptung $(3)$ ist. Daher muss die Liste $(2)$ entstehen, wenn wir Liste $(1)$ $\text{ mod } p$ rechnen. Demzufolge können wir behaupten, wenn wir jeweils die Elemente der Listen miteinander multiplizieren
 >> $$(1 \cdot a)(2 \cdot a)(3 \cdot a)\dots((p-1)\cdot a) \equiv 1 \cdot 2 \cdot 3 \dots (p-1) \;\;(\text{mod } p)$$
 >> Wenn wir auf der linken Seite alle $a$ aufmultiplizieren und dazu bemerken, dass diese Produkte die Fakultäten $(p-1)!$ sind, erhalten wir
 >> $$a^{p-1}(p-1)! \equiv (p-1)! \;\;(\text{mod }  p) \tag{4}$$
@@ -177,7 +177,7 @@
 >>Da dies durch den Zwischenbeweis zweifelsfrei verwendet werden kann, können wir einfach beide Seiten mit den Faktoren $(p-1)!$ multiplizieren und alle Faktoren so paaren, dass diese sich mit ihrem modularen Inversen aufheben, also
 >>$$\begin{align}
 >> a^{p-1}(p-1)! &\equiv (p-1)! &&\;\;(\text{mod }  p) \qquad&&\Big\vert \cdot(p-1)! \\
->> a^{p-1}\underbrace{ (1\cdot1) }_{ \equiv 1 }\underbrace{ (2\cdot 2) }_{ \equiv 1 }\dots\underbrace{ \Big((p-1)(p-1)\Big) }_{ \equiv 1 } &\equiv \underbrace{ (1\cdot1) }_{ \equiv 1 }\underbrace{ (2\cdot 2) }_{ \equiv 1 }\dots\underbrace{ \Big((p-1)(p-1)\Big) }_{ \equiv 1 } &&\;\;(\text{mod }  p)  \\ 
+>> a^{p-1}\underbrace{ (1\cdot1^{-1}) }_{ \equiv 1 }\underbrace{ (2\cdot 2^{-1}) }_{ \equiv 1 }\dots\underbrace{ \Big((p-1)(p-1)^{-1}\Big) }_{ \equiv 1 } &\equiv \underbrace{ (1\cdot1^{-1}) }_{ \equiv 1 }\underbrace{ (2\cdot 2^{-1}) }_{ \equiv 1 }\dots\underbrace{ \Big((p-1)(p-1)^{-1}\Big) }_{ \equiv 1 } &&\;\;(\text{mod }  p)  \\ 
 >> a^{p-1} &\equiv 1 && \;\;(\text{mod } p)
 >>\end{align}$$
 >>was es zu zeigen galt.
