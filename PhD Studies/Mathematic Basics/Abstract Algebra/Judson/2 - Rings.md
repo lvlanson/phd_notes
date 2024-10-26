@@ -16,3 +16,19 @@
 >Let $R$ be a ring. Then $S$ is a **<span style="color:#38ffa9">subring</span>** if
 >1. $S \subset R$
 >2. $S$ is a [[1 - Algebraic Structures#^2c4055|ring]] under the inherited operations from $R$
+
+>[!lemma] Proposition
+> Let $R$ be a ring and $S$ a subset of $R$. Then $S$ is a **<span style="color:#3884ff">subring</span>** of $R$ if and only if the following conditions are satisfied:
+> 1. $S \neq \emptyset$
+> 2. $rs \in S$ for all $r,s \in S$
+> 3. $r-s \in S$ for all $r,s \in S$
+
+
+## Integral Domains
+
+>[!def] Definition Zero Divisor ([[../../../../PDFs/judson2022.pdf#page=205|Source]])
+>Let $R$ be a [[1 - Algebraic Structures#^4a5286|commutative ring]] and $r \in R$ with $r \neq 0$. The element $r$ is called **<span style="color:#38ffa9">zero divisor</span>** if there is some $s \in R$ with $s \neq 0$, such that
+>$$rs =0$$
+
+>[!remark] Recall
+> A ring is an [[1 - Algebraic Structures#^f48d09|integral domain]] if it has no **<span style="color:#e9ffad">zero divisors</span>**.
