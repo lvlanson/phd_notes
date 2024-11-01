@@ -32,7 +32,8 @@
     "homom",
     "interpolants",
     "importantness",
-    "softmax"
+    "softmax",
+    "Viktorianer"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,

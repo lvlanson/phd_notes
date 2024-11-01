@@ -26,8 +26,16 @@
 	- funktionen
 
 ### 24. 10. 2024
+- Kapitel 3 abgeschlossen (RSA, RSA Beweis, Schnelle Modulare Exponentiation)
+- Einführung in Python und Sage
+- Aufgabenblätter 1 und 2 an die Gruppe verteilt
 
 ### 25. 10. 2024
+- Kapitel 4 abgeschlossen (Chinesischer Restsatz, Angriffe auf RSA)
+
+#### Aufgaben bis zum 07.11.
+- **<span style="color:#f7b8ff">Kapitel 5 vorbereiten</span>**
+- Aufgabenblatt 1 für das Praktikum absolvieren
 
 ### 07. 11. 2024
 

@@ -15,6 +15,6 @@
 - `prime_range`
 - `prime_pi` 
 - `prime_powers`
-- `prime_first_n`
+- `primes_first_n`
 - `prime_to_m_part`
 - `random_prime`

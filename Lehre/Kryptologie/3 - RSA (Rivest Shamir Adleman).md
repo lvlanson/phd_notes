@@ -55,13 +55,13 @@
 >> Wir werden $(a+1)^p$ auflösen müssen, dazu verwenden wir den binomischen Lehrsatz. Diesen erwähnen wir kurz an dieser Stelle ohne Beweis
 >>>[!theorem] Binomischer Lehrsatz
 >>>Für $a,b \in \mathbb{R}$ und $n \in \mathbb{N}$ gilt
->>>$$(a+b)^n=\sum_{k=0}^n\binom{n}{k}a^nb^{n-k} $$
+>>>$$(a+b)^n=\sum_{k=0}^n\binom{n}{k}a^kb^{n-k} $$
 >>>wobei der Binomialkoeffizient definiert ist mit
 >>>$$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
 >>
 >>Daher können wir $(a+1)^p$ auflösen mit 
 >>$$\begin{align}
->> (a+1)^p &\equiv \sum_{k=0}^p\binom{p}{k}a^p &&(\text{mod } p)\\ 
+>> (a+1)^p &\equiv \sum_{k=0}^p\binom{p}{k}a^k &&(\text{mod } p)\\ 
 >> &\equiv \underbrace{ \binom{p}{0} }_{ =1 }a^0 + \binom{p}{1}a^1 + \binom{p}{2}a^2 + \dots + \underbrace{ \binom{p}{p} }_{ =1 }a^p \;\;&&(\text{mod } p) \\
 >> &\equiv 1 + \underbrace{ \frac{p!}{1!(p-1)!} }_{ =p } a+ \underbrace{ \frac{p!}{2!(p-2)!} }_{ =\frac{p(p-1)}{2} }a^2 + \dots. +a^p &&(\text{mod } p) \\
 >> &\equiv 1+pa+ \frac{p(p-1)}{2}a^2+\dots+a^p &&(\text{mod } p)
