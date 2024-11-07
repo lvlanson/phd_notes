@@ -21,8 +21,8 @@
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Surveys/Basic Definitions|Basics on Homomorphic Encryption 2]] ✅
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/1 - Elementary Lattice Definitions|Elementary Lattice Definitions]] ✅
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/2 - Computational Problems on Lattices|Computational Problems on Lattices]] ✅
->>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/1 - Learning With Errors Introduction|Learning With Errors Introduction]] ✅
->>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/2 - Homomorphic Encryption from Learning with Errors| Gentry's LWE Homomorphic Encryption Scheme]] ✅
+>>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/Standard LWE/1 - Learning With Errors Introduction|Learning With Errors Introduction]] ✅
+>>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/Standard LWE/2 - Homomorphic Encryption from Learning with Errors| Gentry's LWE Homomorphic Encryption Scheme]] ✅
 >>
 >>>[!abstract] Ordinary Differential Equations ✅
 >>> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs|First Order Differential Equations]] ✅

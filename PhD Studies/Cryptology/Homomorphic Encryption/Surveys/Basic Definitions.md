@@ -63,7 +63,7 @@
 ^00ba5e
 
 >[!def] Definition Correct Evaluation ([[../../../../PDFs/armknecht2015a.pdf#page=12|Source]])
->A $\mathcal{C}$-evaluation scheme $(\text{Gen, Enc, Dec, Eval})$ correctly evaluates all circuits in $\mathcal{C}$ if for all $\forall c_{i} \in \mathcal{X}$, $\forall C \in \mathcal{C}$ and some [[../Learning With Errors Based/1 - Learning With Errors Introduction#^548cd0|negligible function]] $\varepsilon$
+>A $\mathcal{C}$-evaluation scheme $(\text{Gen, Enc, Dec, Eval})$ correctly evaluates all circuits in $\mathcal{C}$ if for all $\forall c_{i} \in \mathcal{X}$, $\forall C \in \mathcal{C}$ and some [[../Learning With Errors Based/Standard LWE/1 - Learning With Errors Introduction#^548cd0|negligible function]] $\varepsilon$
 >$$P\Big(\text{Dec}\big(sk, \text{Eval}(evk, C, c_{1}, \dots, c_{n})=C(m_{1}, \dots, m_{n})\big)\Big)= 1- \varepsilon(\lambda)$$
 
 ^b78a8d

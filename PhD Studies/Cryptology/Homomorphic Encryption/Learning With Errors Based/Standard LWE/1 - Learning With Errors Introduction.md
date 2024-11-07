@@ -128,7 +128,7 @@
 >$$\forall \mathbf{x} \in A, D_{A,s}(\mathbf{x}):= \frac{\rho_{s}(\mathbf{x})}{\rho_{s}(A)}$$
 >where $\rho_{s}$ is the [[#^cd948a|Gaussian function]]
 >>[!pic] Illustration ([[../../../../../../PDFs/regev2024.pdf#page=7|Source]])
->> ![[../Lattice Based/Figures/discrete_gaussian.png]]
+>> ![[../../Lattice Based/Figures/discrete_gaussian.png]]
 >> where $s$ denotes the width of the distribution.
 
 >[!def] Definition Torus Quotient Group
