@@ -13,8 +13,12 @@
 >>[!lemma] I am currently working on
 >>
 >>>[!abstract] Abstract Algebra
->>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/1 - Algebraic Structures|Algebraic Structures (only basic ones)]] ✅
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/1 - Algebraic Structures|1 - Algebraic Structures (only basic ones)]] ✅
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/2 - Rings|2 - Rings]] ✏️
 >>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/3 - Polynomial Rings|3 - Polynomial Rings]] ✏️
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/4 - Ideals and Ideals on Polynomials|4 - Ideals and Ideals on Polynomials]] ✏️
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/5 - Field Extension|5 - Field Extension]]✏️
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/6 - Integral Domains|6 - Integral Domains]] ✏️
 >>
 >>>[!abstract] Homomorphic Encryption
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption|Basics on Homomorphic Encryption 1]] ✅
@@ -23,6 +27,7 @@
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Lattice Based/2 - Computational Problems on Lattices|Computational Problems on Lattices]] ✅
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/Standard LWE/1 - Learning With Errors Introduction|Learning With Errors Introduction]] ✅
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/Standard LWE/2 - Homomorphic Encryption from Learning with Errors| Gentry's LWE Homomorphic Encryption Scheme]] ✅
+>>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/BFV/BFV (Brakerski-Fan-Vercauteren) Scheme|BFV (Brakerski-Fan-Vercauteren) Scheme]] ✏️
 >>
 >>>[!abstract] Ordinary Differential Equations ✅
 >>> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs|First Order Differential Equations]] ✅
