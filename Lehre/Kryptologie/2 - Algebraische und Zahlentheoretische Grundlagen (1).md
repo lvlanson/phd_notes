@@ -55,7 +55,7 @@
 > dann nennen wir $(G, \circ)$ eine **<u>kommutatitve (oder auch abel'sche) Gruppe</u>**
 >
 >>[!example]- Beispiel $(\mathbb{R}, \cdot)$ 
->>$(\mathbb{R}, +)$ bildet eine kommutatitive Gruppe mit
+>>$(\mathbb{R}, \cdot)$ bildet eine kommutatitive Gruppe mit
 >>$$\begin{align}
 >> e &= 1 \\
 >> x^{-1} &= \frac{1}{x} \tag*{$\forall x \in \mathbb{R}$}
@@ -228,7 +228,7 @@
 >>
 >>>[!remark]- Info zum Wohlordnungsprinzip
 >>>
->>>Das Wohlordnungsprinzip ist ein wichtiges Element für den Beweis. Es besagt, dass jede nicht-leere Menge, die aus Elementen der natürlichen Zahlen besteht, es ein kleinstes Element geben muss. 
+>>>Das Wohlordnungsprinzip ist ein wichtiges Element für den Beweis. Es besagt, dass jede nicht-leere Menge, die aus Elementen der natürlichen Zahlen besteht, ein kleinstes Element geben muss. 
 >>>
 >>>Nehmen wir beispielsweise die [[#^f52c1d| natürlichen Zahlen]] selbst, wissen wir mit Gewissheit, dass $1$ das kleinste Element ist. Entfernen wir sukzessive die kleinsten Zahlen der Menge, wird immer eine andere kleinste Zahl übrig bleiben.
 >>
@@ -287,7 +287,7 @@
 >>Da die Differenz von $r,r'$ in ihrem Betrag kleiner als $b$ ist, kann unmöglich das Produkt $(q'-q)b$ diese Differenz ergeben, außer $r=r'=0$. Da außerdem $b\neq 0$ gilt, muss demzufolge $q'-q=0 \Leftrightarrow q'=q$ ergeben, sodass es keine zwei Elemente $q',r' \in \mathbb{Z}$ geben kann. 
 >>
 >>>[!note] Warum ist $(q'-q)b = r-r'$ unmöglich?
->>>Da da die Differenz von $0<r-r'<b$, kann ein Produkt von $b$ mit einer beliebigen ganzen Zahl niemals gleich dieser Differenz sein. Als Beispiel nehmen wir $r-r'=4$ und $b=5$, es gibt keine ganze Zahl $q \in \mathbb{Z}$, sodass $5q=4$. Dies  ist nie möglich, das gelten müsste $0<q<1$.
+>>>Da die Differenz von $0<r-r'<b$, kann ein Produkt von $b$ mit einer beliebigen ganzen Zahl niemals gleich dieser Differenz sein. Als Beispiel nehmen wir $r-r'=4$ und $b=5$, es gibt keine ganze Zahl $q \in \mathbb{Z}$, sodass $5q=4$. Dies ist nie möglich, da gelten müsste $0<q<1$.
 >>
 >>$$\tag*{$\checkmark$}$$
 >>
@@ -423,27 +423,26 @@
 > 
 > ![[Figures/caley_tables_easy.png|center|650]]
 
->[!property] Eigenschaften der Operationen of $\mathbb{Z}_{n}$
->1. Die [[#^9cd06c|Operation]] $+ : \mathbb{Z}_{n} \times \mathbb{Z}_{n} \to \mathbb{Z}_{n}$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}$ gilt:
+>[!property] Eigenschaften der Operationen auf $\mathbb{Z}_{n}$
+>1. Die [[#^9cd06c|Operation]] $+ : \mathbb{Z}_{n} \times \mathbb{Z}_{n} \to \mathbb{Z}_{n}$, wobei $\forall a,b \in \mathbb{Z}_{n}$ gilt:
  $+$ bildet eine [[#^afad91|kommutative Gruppe]]  $(\mathbb{Z}_{n},+)$
  > 	- ... ist assoziativ
 >	- ... es existiert das neutrale Element $e=0$
 >	- ... das inverse Element für $a=-a$
 >	- ... ist kommutativ
->1. Die [[#^9cd06c|Operation]] $\cdot : \mathbb{Z}_{n}^* \times \mathbb{Z}_{n}^* \to \mathbb{Z}_{n}^*$ ein, wobei $\mathbb{Z}_{n}^*=\mathbb{Z}_{n}\setminus \{ 0 \}$ und für $\forall a,b \in \mathbb{Z}_{n}$ gilt:
+>1. Die [[#^9cd06c|Operation]] $\cdot : \mathbb{Z}_{n}^* \times \mathbb{Z}_{n}^* \to \mathbb{Z}_{n}^*$, wobei $\mathbb{Z}_{n}^*=\mathbb{Z}_{n}\setminus \{ 0 \}$ und für $\forall a,b \in \mathbb{Z}_{n}$ gilt:
  $\cdot$ bildet eine [[#^afad91|kommutative Halbgruppe]]  $(\mathbb{Z}_{n}^*, \;\cdot\;)$
 >	- ... ist assoziativ
 >	- ... es existiert das neutrale Element $e=1$
 >	- ... das inverse Element für $a$ existiert nicht, wenn $a$ und $n$ gemeinsame Teiler haben
 >	- ... ist kommutativ
->3. Die [[#^9cd06c|Operation]] $\cdot : \mathbb{Z}_{n}^* \times \mathbb{Z}_{n}^* \to \mathbb{Z}_{n}^*$ ein, wobei $\forall a,b \in \mathbb{Z}_{n}^*$ gilt:
+>3. Die [[#^9cd06c|Operation]] $\cdot : \mathbb{Z}_{n}^* \times \mathbb{Z}_{n}^* \to \mathbb{Z}_{n}^*$, wobei $\forall a,b \in \mathbb{Z}_{n}^*$ gilt:
  $\cdot$ bildet eine [[#^afad91|kommutative Gruppe]] $(\mathbb{Z}_{n}^*, \;\cdot\;)$, wenn $n$ eine Primzahl ist
 >	- ... das heißt das inverse Element existiert hier für jedes beliebige Element in $\mathbb{Z}_{n}^*$
 
 ^916051
 
 ---
-
 >[!example] Übungen
 >>[!example] Übung (1)
 >> Gegeben ist die Gruppe $\mathbb{Z}_{8}$. Bestimmen Sie folgende Ausdrücke
@@ -1138,7 +1137,7 @@
 >>		return None
 >>```
 >>>[!remark]- Bemerkung zu Sage
->>>Sage ist eine mathematische Programmierumgebung, die in der Programmiersprache **Python** eingebette istt. In *SageMath* werden diverse bekannte mathematische Open-Source Bibliotheken integriert wie 
+>>>Sage ist eine mathematische Programmierumgebung, die in der Programmiersprache **Python** eingebettet ist. In *SageMath* werden diverse bekannte mathematische Open-Source Bibliotheken integriert wie 
 >>>- NumPy
 >>>- SciPy
 >>>- matplotlib

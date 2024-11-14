@@ -254,6 +254,14 @@
   isbn = {978-0-691-11927-4}
 }
 
+@article{chillotti,
+  title = {{{CONCRETE}}: {{Concrete Operates oN Ciphertexts Rapidly}} by {{Extending TfhE}}},
+  author = {Chillotti, Ilaria and Joye, Marc and Ligier, Damien and Orfila, Jean-Baptiste and Tap, Samuel},
+  abstract = {Fully homomorphic encryption (FHE) extends traditional encryption schemes. It allows one to directly compute on encrypted data without requiring access to the decryption key. This paper introduces CONCRETE, an open-source library developed in Rust that builds on the state-of-art TFHE cryptosystem. It provides a userfriendly interface making FHE easy to integrate. The library deals with inputs of arbitrary format and comes with an extensive set of operations to play with ciphertexts, including a programmable bootstrapping. CONCRETE is available on GitHub at URL https:// github.com/zama-ai/concrete and on https://crates.io.},
+  langid = {english},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Chillotti.pdf}
+}
+
 @online{conci2018,
   title = {Distance {{Between Sets}} - {{A}} Survey},
   author = {Conci, A. and Kubrusly, C. S.},
@@ -424,6 +432,20 @@
   file = {/home/thomas/Documents/Obsidian Vault/Sources/ge2014.pdf;/home/thomas/Zotero/storage/3HGULA2E/6678503.html}
 }
 
+@online{geelen2022,
+  title = {Bootstrapping for {{BGV}} and {{BFV Revisited}}},
+  author = {Geelen, Robin and Vercauteren, Frederik},
+  date = {2022},
+  number = {2022/1363},
+  url = {https://eprint.iacr.org/2022/1363},
+  urldate = {2024-11-12},
+  abstract = {We unify the state-of-the-art bootstrapping algorithms for BGV and BFV in a single framework, and show that both schemes can be bootstrapped with identical complexity. This result corrects a claim by Chen and Han (Eurocrypt 2018) that BFV is more efficient to bootstrap than BGV. We also fix an error in their optimized procedure for power-of-two cyclotomics, which occurs for some parameter sets. Our analysis is simpler, yet more general than earlier work, in that it simultaneously covers both BGV and BFV. Furthermore, we also design and implement a high-level open source software library for bootstrapping in the Magma Computer Algebra System. It is the first library to support both BGV and BFV bootstrapping in full generality, with all recent techniques (including the above fixes) and trade-offs.},
+  pubstate = {prepublished},
+  keywords = {Bootstrapping,Brakerski-Fan-Vercauteren,Brakerski-Gentry-Vaikuntanathan,Fully homomorphic encryption,Recryption},
+  annotation = {Publication info: A minor revision of an IACR publication in JOC 2023},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Geelen2022.pdf}
+}
+
 @misc{gentry2009,
   title = {Fully Homomorphic Encryption Using Ideal Lattices.},
   author = {Gentry, Craig},
@@ -560,6 +582,21 @@
   pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/guo2020.pdf;/home/thomas/Zotero/storage/E6AVEC3F/1908.html}
+}
+
+@online{halevi2020,
+  title = {Design and Implementation of {{HElib}}: A Homomorphic Encryption Library},
+  shorttitle = {Design and Implementation of {{HElib}}},
+  author = {Halevi, Shai and Shoup, Victor},
+  date = {2020},
+  number = {2020/1481},
+  url = {https://eprint.iacr.org/2020/1481},
+  urldate = {2024-11-12},
+  abstract = {HElib is a C++ open source library (see https://github.com/homenc/HElib) that implements both the BGV and CKKS fully homomorphic encryption (FHE) schemes. This document summarizes some of the basic design principles of HElib, and describes some of its fundamental algorithms and data structures in signi\&\#64257;cant detail. It is a work in progress, and currently focuses exclusively on the BGV scheme.},
+  pubstate = {prepublished},
+  keywords = {fully homomorphic encryption},
+  annotation = {Publication info: Preprint. MINOR revision.},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Halevi2020.pdf}
 }
 
 @book{hall2015,
@@ -810,6 +847,20 @@
   langid = {english},
   pagetotal = {649},
   keywords = {Computers / Operating Systems / General,Computers / Security / Cryptography & Encryption,Computers / Security / General,Language Arts & Disciplines / Library & Information Science / General,Law / Computer & Internet,Mathematics / Applied,Mathematics / Combinatorics,Mathematics / Discrete Mathematics,Mathematics / General,Mathematics / Logic,Mathematics / Number Theory,Technology & Engineering / Automation,Technology & Engineering / Environmental / General}
+}
+
+@online{kim2021,
+  title = {Revisiting {{Homomorphic Encryption Schemes}} for {{Finite Fields}}},
+  author = {Kim, Andrey and Polyakov, Yuriy and Zucca, Vincent},
+  date = {2021},
+  number = {2021/204},
+  url = {https://eprint.iacr.org/2021/204},
+  urldate = {2024-11-12},
+  abstract = {The Brakerski-Gentry-Vaikuntanathan (BGV) and Brakerski/ Fan-Vercauteren (BFV) schemes are the two main homomorphic encryption (HE) schemes to perform exact computations over finite fields and integers. Although the schemes work with the same plaintext space, there are significant differences in their noise management, algorithms for the core homomorphic multiplication operation, message encoding, and practical usability. The main goal of our work is to revisit both schemes, focusing on closing the gap between the schemes by improving their noise growth, computational complexity of the core algorithms, and usability. The other goal of our work is to provide both theoretical and experimental performance comparison of BGV and BFV. More precisely, we propose an improved variant of BFV where the encryption operation is modified to significantly reduce the noise growth, which makes the BFV noise growth somewhat better than for BGV (in contrast to prior results showing that BGV has smaller noise growth for larger plaintext moduli). We also modify the homomorphic multiplication procedure, which is the main bottleneck in BFV, to reduce its algorithmic complexity. Our work introduces several other novel optimizations, including lazy scaling in BFV homomorphic multiplication and an improved BFV decryption procedure in the Residue Number System (RNS) representation. We also develop a usable variant of BGV as a more efficient alternative to BFV for common practical scenarios. We implement our improved variants of BFV and BGV in PALISADE and evaluate their experimental performance for several benchmark computations. The experimental results suggest that our BGV implementation is faster for intermediate and large plaintext moduli, which are often used in practical scenarios with ciphertext packing, while our BFV implementation is faster for small plaintext moduli.},
+  pubstate = {prepublished},
+  keywords = {BFV,BGV,homomorphic encryption,software implementation},
+  annotation = {Publication info: A major revision of an IACR publication in ASIACRYPT 2021},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Kim2021.pdf}
 }
 
 @book{koblitz1994,

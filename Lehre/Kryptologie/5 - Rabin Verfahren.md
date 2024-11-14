@@ -44,7 +44,7 @@
 >> 
 >> Die Lösung von
 >> $$c=m^2 \text{ mod }n$$
->> nach $m$
+>> nach $m$.
 >> 
 >>>[!verschlüsselung] Nach $m$ lösen
 >>>Die Lösung nach $m$ ist nicht so offensichtlich, wie es auf den ersten Blick scheinen mag. Die Nachricht $m$ setzt sich anteilig aus einer Wurzel bezüglich modulo $p$ und $q$ zusammen ([[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^3dda16|Teilbarkeit über Primzahlfaktoren]]), wovon jeweils jedes positiv oder negativ bedingt durch die Quadratwurzel sein kann, also
@@ -72,7 +72,7 @@
 >>>m_{4} &= -c_{p} &&\;\;(\text{mod } p) &\land&&m_{4}=-c_{q} &&\;\;(\text{mod } q) \tag{M-GLS 4}\\  
 >>>\end{align}$$
 >>>Dies sind vier modulare Gleichungssysteme (M-GLS), welche mit dem [[4 - Angriffe auf RSA#^ca7b4b|chinesischen Restsatz]] gelöst werden können, also
->>>$$m_{i} = \Big(\pm\big[q\big]_{p}^{-1} \cdot q \cdot c_{p}  \pm \big[q\big]^{-1}_{q} \cdot p \cdot c_{q}\Big) \text{ mod }n$$
+>>>$$m_{i} = \Big(\pm\big[q^{-1}\big]_{p} \cdot q \cdot c_{p}  \pm \big[p^{-1}\big]_{q} \cdot p \cdot c_{q}\Big) \text{ mod }n$$
 >>>wobei durch Lesen der Nachrichten $m_{i}$ mit $(i=1,2,3,4)$ die richtige Nachricht $m$ gewählt wird.
 >
 >>[!korrektheitsnachweis]

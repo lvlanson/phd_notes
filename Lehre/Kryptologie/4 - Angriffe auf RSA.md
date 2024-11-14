@@ -87,7 +87,7 @@
 >>\end{align}$$
 >>Nach dem Satz der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Kongruenzen]] können wir wieder rückschließen
 >>$$x \equiv x' \;\;(\text{mod } N) $$ 
->>Laut der Definition der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^30b120|der Eindeutigkeit und Einschränkung des Rests]], muss gelten
+>>Laut der Definition [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^30b120|der Eindeutigkeit und Einschränkung des Rests]], muss gelten
 >>$$x = x'$$
 >>was ein Widerspruch dazu ist, dass es zwei verschiedene geben kann.
 >>$$\tag*{$\square$}$$
@@ -210,7 +210,7 @@
 >> c_{2} &\equiv x && \;\;(\text{mod } n_{2})
 >>\end{align}$$
 >>Unter Verwendung der erarbeiteten Lösungsformel
->>$$x \equiv c_{1}n_{2}[n_{2}]^{-1}_{n_{1}}+c_{2}n_{1}[n_{1}]^{-1}_{n_{2}}$$
+>>$$x \equiv c_{1}n_{2}[n_{2}]^{-1}_{n_{1}}+c_{2}n_{1}[n_{1}]^{-1}_{n_{2}} \;\;(\text{mod } n_{1} \cdot n_{2})$$
 >>Da unser $x=m^e$ ist, müssen wir noch die $e$-te Wurzel ziehen um $m$ zu erhalten. Demnach
 >>$$m =\sqrt[\leftroot{4}\uproot{2}\scriptstyle e]{x} = \sqrt[\leftroot{4}\uproot{2}\scriptstyle e]{m^e}$$
 >
