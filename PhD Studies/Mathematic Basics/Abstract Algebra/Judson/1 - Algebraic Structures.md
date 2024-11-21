@@ -19,7 +19,7 @@
 
 ^0b2e62
 
->[!def] Definition Ring ([[../../../../PDFs/judson2022.pdf#page=194|Source]])
+>[!def] Definition Ring ([[../../../../PDFs/judson2022.pdf#page=202|Source]])
 >Let $G$ is a non-empty set closed under the binary operations $(G,+)$ and $(G\setminus \{ 0 \}, \;\cdot\;)$ with $0$ being the neutral element in $(G,+)$. We say that $(G,+, \cdot)$ a **ring** if 
 >1. $(G,+)$ is an [[#^0b2e62|Abelian group]]
 >2. $(G,\;\cdot\;)$ holds the [[#^0b2e62|association property]]: $\forall a,b,c \in G$:$$a(bc)=(ab)c$$
@@ -27,31 +27,31 @@
 
 ^2c4055
 
->[!def] Definition Ring with Identity
+>[!def] Definition Ring with Identity ([[../../../../PDFs/judson2022.pdf#page=202|Source]])
 >Let $(G,+,\cdot)$ is a [[#^2c4055|Ring]]. We say that $(G,+,\;\cdot\;)$ a **ring with identity** if
 >- $(G\setminus \{ 0 \},\;\cdot\;)$ has a [[#^0b2e62|neutral Element]], where $0$ is the neutral element with respect to $(G,+)$
 
 ^1a1069
 
->[!def] Definition Commutative Ring ([[../../../../PDFs/judson2022.pdf#page=194|Source]])
+>[!def] Definition Commutative Ring ([[../../../../PDFs/judson2022.pdf#page=202|Source]])
 >Let $(G,+,\cdot)$ is a [[#^2c4055|Ring]]. We say that $(G,+,\;\cdot\;)$ a **commutative/Abelian ring** if it holds
 >1. $(G\setminus \{ 0 \},\;\cdot\;)$ is [[#^0b2e62|Abelian]], where $0$ is the neutral element with respect to $(G,+)$
 
 ^4a5286
 
->[!def] Definition Integral Domain ([[../../../../PDFs/judson2022.pdf#page=194|Source]])
+>[!def] Definition Integral Domain ([[../../../../PDFs/judson2022.pdf#page=202|Source]])
 >Let $(G,+,\;\cdot\;)$ is a [[#^4a5286|commutative ring]]. We say that $(G,+,\;\cdot\;)$ is an **integral domain** if 
 >- $\forall a,b \in G$ with $ab = 0$, then either $a=0$ or $b=0$
 
 ^f48d09
 
->[!def] Definition Division Ring ([[../../../../PDFs/judson2022.pdf#page=194|Source]])
+>[!def] Definition Division Ring ([[../../../../PDFs/judson2022.pdf#page=202|Source]])
 >Let $(G,+,\;\cdot\;)$ is a [[#^1a1069|ring with identity]]. We say that $(G,+,\;\cdot\;)$ is a **division ring** if 
 >- $(G\setminus \{ 0 \}, \;\cdot\;)$ has a [[#^0b2e62|neutral element]], where $0$ is the neutral element with respect to $(G,+)$
 
 ^d1eb27
 
->[!def] Definition Field ([[../../../../PDFs/judson2022.pdf#page=194|Source]])
+>[!def] Definition Field ([[../../../../PDFs/judson2022.pdf#page=202|Source]])
 >>[!def] Version 1
 >>Let $(G,+,\;\cdot\;)$ is a [[#^d1eb27|division ring]]. We say that $(G,+,\;\cdot\;)$ is a **field** if
 >>- $(G\setminus \{ 0 \}, \;\cdot\;)$ is [[#^0b2e62|commutative/Abelian]], where $0$ is the neutral element with respect to $(G,+)$
@@ -70,7 +70,7 @@
 >| Ring               | <center>x</center> | <center>x</center>          |                                  |                                  |                              | <center>x</center>             |
 >| Ring with Identity | <center>x</center> | <center>x</center>          | <center>x</center>               |                                  |                              | <center>x</center>             |
 >| Commutative Ring   | <center>x</center> | <center>x</center>          |                                  |                                  | <center>x</center>           | <center>x</center>             |
->| Integral Domain    | <center>x</center> | <center>x</center>          |                                  |                                  | <center>x</center>           | <center>x</center>             |
+>| Integral Domain    | <center>x</center> | <center>x</center>          |   <center>x</center>                               |                                  | <center>x</center>           | <center>x</center>             |
 >| Division Ring      | <center>x</center> | <center>x</center>          | <center>x</center>               | <center>x</center>               |                              | <center>x</center>             |
 >| Field              | <center>x</center> | <center>x</center>          | <center>x</center>               | <center>x</center>               |           <center>x</center>                   | <center>x</center>             |
 ><br>

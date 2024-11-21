@@ -77,7 +77,7 @@
 >>[!proof]- Beweis
 >> Wir bemerken, dass
 >> $$aa_{i} \not\equiv aa_{j} \;\;(\text{mod } n)$$
->> Angenommen es wäre wahr, so hätten wir
+>> gilt. Angenommen die Kongruenz würde gelten, so hätten wir
 >> $$\begin{align}
 >> aa_{i} &\equiv aa_{j} &&\;\;(\text{mod } n) \qquad&&\Big\vert \cdot a^{-1} \\ 
 >> a_{i} &\equiv a_{j}&&\;\;(\text{mod } n)

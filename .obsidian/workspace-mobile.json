@@ -13,10 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lehre/Kryptologie/2 - Algebraische und Zahlentheoretische Grundlagen (1).md",
-                "mode": "preview",
-                "source": false
-              }
+                "file": "Lehre/Kryptologie/X - Zusatz Mathematik (Informativ).md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "X - Zusatz Mathematik (Informativ)"
             }
           }
         ]
@@ -35,7 +37,9 @@
           "type": "file-explorer",
           "state": {
             "sortOrder": "alphabetical"
-          }
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Files"
         }
       },
       {
@@ -50,7 +54,9 @@
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical"
-          }
+          },
+          "icon": "lucide-search",
+          "title": "Search"
         }
       },
       {
@@ -61,7 +67,9 @@
           "state": {
             "sortOrder": "frequency",
             "useHierarchy": true
-          }
+          },
+          "icon": "lucide-tags",
+          "title": "Tags"
         }
       },
       {
@@ -69,7 +77,9 @@
         "type": "leaf",
         "state": {
           "type": "bookmarks",
-          "state": {}
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "Bookmarks"
         }
       }
     ],
@@ -85,7 +95,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Lehre/Kryptologie/2 - Algebraische und Zahlentheoretische Grundlagen (1).md",
+            "file": "Lehre/Kryptologie/X - Zusatz Mathematik (Informativ).md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -93,7 +103,9 @@
             "searchQuery": "",
             "backlinkCollapsed": false,
             "unlinkedCollapsed": true
-          }
+          },
+          "icon": "links-coming-in",
+          "title": "Backlinks"
         }
       },
       {
@@ -102,10 +114,12 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Lehre/Kryptologie/2 - Algebraische und Zahlentheoretische Grundlagen (1).md",
+            "file": "Lehre/Kryptologie/5 - Rabin Verfahren.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
-          }
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
         }
       },
       {
@@ -114,8 +128,10 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Lehre/Kryptologie/2 - Algebraische und Zahlentheoretische Grundlagen (1).md"
-          }
+            "file": "Lehre/Kryptologie/5 - Rabin Verfahren.md"
+          },
+          "icon": "lucide-list",
+          "title": "Outline"
         }
       }
     ],
@@ -135,42 +151,42 @@
   },
   "active": "b894bdde2b565b1d",
   "lastOpenFiles": [
-    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
-    "Own Projects/ODE LVQ/Construction.md",
-    "PDFs/regev2024.pdf",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/1 - Learning With Errors Introduction.md",
-    "PDFs/kurz2014.pdf",
-    "PDFs/jammalamadaka2001.pdf",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/2 - Homomorphic Encryption from Learning with Errors.md",
-    "Conferences/ESANN 2024/Day 3 (Friday).md",
-    "Conferences/ESANN 2024/Day 1 (Wednesday).md",
-    "Conferences/ESANN 2024/Day 2 (Thursday).md",
+    "Lehre/Kryptologie/7 - Algebraische und Zahlentheoretische Grundlagen (2).md",
+    "Lehre/Kryptologie/X - Zusatz Mathematik (Informativ).md",
+    "Lehre/Kryptologie/2 - Algebraische und Zahlentheoretische Grundlagen (1).md",
+    "Lehre/Kryptologie/6 - Angriffe auf das Rabin-Verfahren.md",
+    "Lehre/Kryptologie/4 - Angriffe auf RSA.md",
+    "Lehre/Kryptologie/5 - Rabin Verfahren.md",
+    "Computer Science/tmux/Must Know.md",
+    "Computer Science/tmux",
+    "Computer Science",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/Implementation/LWE.ipynb",
+    "PhD Studies/Cryptology/Homomorphic Encryption/Learning With Errors Based/Implementation",
+    "Philosophy and Social Studies/Postmodernism/Michel Foucault/Sexualität und Wahrheit 1 - Der Wille zum Wissen.md",
+    "Philosophy and Social Studies/Postmodernism/Michel Foucault",
+    "scribble.md",
     "Lehre/Kryptologie/3 - RSA (Rivest Shamir Adleman).md",
-    "Conferences/Untitled/Untitled",
-    "Conferences/ESANN 2024",
-    "Conferences",
-    "PDFs/Logsdon2023.pdf",
-    "PDFs/Jäschke2018.pdf",
+    "PhD Studies/Mathematic Basics/Abstract Algebra/Judson/1 - Algebraic Structures.md",
+    "PDFs/judson2022.pdf",
+    "PhD Studies/Mathematic Basics/Abstract Algebra/Judson/2 - Rings.md",
+    "Lehre/Kryptologie/1 -  Einführung.md",
+    "PhD Studies/Mathematic Basics/Abstract Algebra/Judson/6 - Integral Domains.md",
+    "PhD Studies/Mathematic Basics/Abstract Algebra/Judson/4 - Ideals and Ideals on Polynomials.md",
+    "PhD Studies/Mathematic Basics/Abstract Algebra/Judson/3 - Polynomial Rings.md",
+    "PDFs/samuel1970.pdf",
+    "PhD Studies/Mathematic Basics/Abstract Algebra/Samuel/1 - Principal Ideal Rings.md",
+    "index.md",
     "Own Projects/LVQ Encrypted/Print.md",
     "Own Projects/LVQ Encrypted/Paper Contribution.md",
-    "Own Projects/LVQ Encrypted",
-    "Lehre/Kryptologie/2 - Algebraische und Zahlentheoretische Grundlagen (1).md",
-    "PDFs/judson2022.pdf",
-    "PhD Studies/Mathematic Basics/Linear Algebra/Eigenvectors and Eigenvalues.md",
-    "PhD Studies/Mathematic Basics/Abstract Algebra/Judson/5 - Field Extension.md",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Operations/Comparison Function.md",
-    "PhD Studies/Mathematic Basics/Abstract Algebra/Samuel/1 - Principal Ideal Rings.md",
-    "PhD Studies/Mathematic Basics/Abstract Algebra/Judson/2 - Polynomial Rings.md",
-    "PhD Studies/Mathematic Basics/Abstract Algebra/Judson/1 - Algebraic Structures.md",
-    "PhD Studies/Mathematic Basics/Abstract Algebra/Judson/3 - Ideals and Ideals on Polynomials.md",
-    "PhD Studies/Mathematic Basics/Abstract Algebra/Judson/4 -  Integral Domains.md",
-    "PhD Studies/Cryptology/Homomorphic Encryption/Ring Based/YASHE.md",
+    "PhD Studies/Mathematic Basics/Fourier Analysis/8 - Discrete Fourier Transform and Trigonometric Interpolation.md",
+    "Own Projects/ODE LVQ/Construction.md",
+    "Research Seminar/Research Seminar 1 Proposal ODE LVQ.md",
+    "PhD Studies/Mathematic Basics/Ordinary Differential Equations/1 - First Order ODEs.md",
     "PhD Studies/Mathematic Basics/Ordinary Differential Equations/5 - Systems of Linear  Differential Equations.md",
-    "Lehre/Kryptologie/1 -  Einführung.md",
-    "PhD Studies/Mathematic Basics/Abstract Algebra/2 - Polynomial Rings.md",
-    "PhD Studies/Mathematic Basics/Abstract Algebra/1 - Algebraic Structures.md",
-    "PhD Studies/Mathematic Basics/Abstract Algebra/3 - Ideals and Ideals on Polynomials.md",
-    "Philosophy and Social Studies/Postmodernism/Introduction.md",
+    "Conferences/ESANN 2024/Day 1 (Wednesday).md",
+    "PDFs/regev2024.pdf",
+    "PDFs/kurz2014.pdf",
+    "PDFs/jammalamadaka2001.pdf",
     "PhD Studies/Mathematic Basics/Abstract Algebra/Figures/relationship.png",
     "Own Projects/ODE LVQ/Figures/function_almost_rect.png",
     "Own Projects/ODE LVQ/Figures/dataset_sin_50.png",
