@@ -5,7 +5,7 @@
 >3. Existenz der inversen Elemente
 >4. Kommutativität
 >
->bestehen. Die Forderung dieser Eigenschaften hat es uns ermöglicht eine Struktur aufzubauen, die mit Hilfe von zahlentheoretischen Eigenschaften in kryptologischen Verfahren mündete. Wir vertiefen nun Konzepte der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)|algebraischen Strukturen]], um damit neue kryptologische Verfahren zu beschreiben.
+>besitzen. Die Forderung dieser Eigenschaften hat es uns ermöglicht eine Struktur aufzubauen, die mithilfe von zahlentheoretischen Eigenschaften in kryptologischen Verfahren mündete. Wir vertiefen nun Konzepte der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)|algebraischen Strukturen]], um damit neue kryptologische Verfahren zu beschreiben.
 
 >[!def] Definition Untergruppe ([[../../PDFs/judson2022.pdf#page=50|Quelle]])
 >Sei $(G, \circ)$ eine [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|Gruppe]], dann ist $(H, \circ)$ eine Untergruppe mit $H \subseteq G$, genau dann wenn
@@ -23,7 +23,7 @@
 >>2. Zu jeder geraden Zahl existiert ein inverses Element, sodass das neutrale Element $0$ rauskommt
 >>	- Beispiel: Zu $4$ existiert das inverse Element $-4$, sodass $4 +(-4) = 0$
 
->[!remark] Kontrollfrage: Warum ist die Menge der ungeraden Zahlen $\mathbb{Z}\setminus2\mathbb{Z}$ keine Untergruppe von $\mathbb{Z}$?
+>[!remark] Kontrollfrage: Warum ist die Menge der ungeraden Zahlen $\mathbb{Z}\setminus2\mathbb{Z}$ unter der Multiplikation keine Untergruppe von $\mathbb{Z}$?
 
 >[!theorem] Satz Zyklische Untergruppen ([[../../PDFs/judson2022.pdf#page=58|Quelle]])
 >Sei $(G, \circ)$ eine Gruppe und $a \in G$, dann ist die Menge

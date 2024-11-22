@@ -1,6 +1,7 @@
 >[!def] Definition Matrix and Vector Multiplication
+>Let $\boldsymbol{A} \in \mathbb{K}^{m \times n}$
 >$$\begin{align*}
->  A\mathbf{x}=
+>  \boldsymbol{A}\mathbf{x}=
 >  \left[
 >    \begin{array}{cccc}
 >      a_{11} & a_{12} & \ldots & a_{1n}\\

@@ -92,7 +92,7 @@
 >>was ein Widerspruch dazu ist, dass es zwei verschiedene geben kann.
 >>$$\tag*{$\square$}$$
 >
->>[!theorem]- Lösungsformel Abgeleitet vom Beweis
+>>[!theorem] Lösungsformel Abgeleitet vom Beweis
 >>$$x \equiv \sum_{i=1}^k a_{i} \frac{N}{n_{i}}\left[ \frac{N}{n_{i}} \right]_{n_{i}}^{-1} \;\;(\text{mod } N)$$
 >
 >>[!example]- Ausführliches Beispiel
