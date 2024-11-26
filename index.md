@@ -36,7 +36,7 @@
 >>> - [[PhD Studies/Mathematic Basics/Ordinary Differential Equations/A - Matrix Exponential|Matrix Exponential]] ✅
 >>
 >>>[!abstract] Fourier Series 
->>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/1 -  Fourier Series (OLD)|Fourier Series (Old Notes)]] ❌
+>>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/1 - Fourier Series (OLD)|Fourier Series (Old Notes)]] ❌
 >>> -  [[PhD Studies/Mathematic Basics/Fourier Analysis/1 - Classical Fourier Series|1 - Classical Fourier Series]] ✅
 >>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/2 - Fourier Series over Finite Intervals|2 - Fourier Series over Finite Intervals]] ✅ 
 >>> - [[PhD Studies/Mathematic Basics/Fourier Analysis/3 - Inner Products, Norms and Orthogonality|3 - Inner Products, Norms and Orthogonality]] ✅ 

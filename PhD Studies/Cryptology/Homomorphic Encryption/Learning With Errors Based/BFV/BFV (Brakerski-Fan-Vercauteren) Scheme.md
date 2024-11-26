@@ -63,7 +63,7 @@
 >
 >>[!schlüsselerzeugung] Key Generation  
 >> 
->> ---
+>> 
 >> 
 >>**<span style="color:#f7b8ff"> <u>Secret Key</u>: </span>**
 >> Sample $$\boldsymbol{s} \leftarrow R_{2}$$
@@ -86,10 +86,10 @@
 >>**<span style="color:#f7b8ff">Output</span>**
 >>$$pk = (\boldsymbol{p}_{0}, \boldsymbol{p}_{1})$$
 >>
->>---
+>>
 >
 >>[!verschlüsselung] Encryption/Decryption 
->>---
+>>
 >> **<span style="color:#f7b8ff"><u>Encryption</u>:</span>**
 >> Consider the input 
 >> - $\boldsymbol{m}\in R_{t}$ denote the *message* to be encrypted

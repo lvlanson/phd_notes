@@ -42,6 +42,10 @@
 >[!def] Definition Integral Domain ([[../../../../PDFs/judson2022.pdf#page=202|Source]])
 >Let $(G,+,\;\cdot\;)$ is a [[#^4a5286|commutative ring]]. We say that $(G,+,\;\cdot\;)$ is an **integral domain** if 
 >- $\forall a,b \in G$ with $ab = 0$, then either $a=0$ or $b=0$
+>
+>>[!example] Examples
+>>$\mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}, \mathbb{Z}[i], \mathbb{Z}[x], \mathbb{Q}[\sqrt{ 2 }], \mathbb{Z}_{p}$
+>>where $\mathbb{Z}[i]$ Gaussian integers, $\mathbb{Z}[x]$ are the polynomials and $\mathbb{Z}_{p}$ is the residue system based on a prime number $p$.
 
 ^f48d09
 
