@@ -13,12 +13,12 @@
 >>[!lemma] I am currently working on
 >>
 >>>[!abstract] Abstract Algebra
->>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/1 - Algebraic Structures|1 - Algebraic Structures (only basic ones)]] ✅
->>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/2 - Rings|2 - Rings]] ✏️
->>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/3 - Polynomial Rings|3 - Polynomial Rings]] ✏️
->>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/4 - Ideals and Ideals on Polynomials|4 - Ideals and Ideals on Polynomials]] ✏️
->>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/5 - Field Extension|5 - Field Extension]]✏️
->>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson/6 - Integral Domains|6 - Integral Domains]] ✏️
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson and Dummit/1 - Algebraic Structures|1 - Algebraic Structures (only basic ones)]] ✅
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson and Dummit/3 - Rings|3 - Rings]] ✏️
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson and Dummit/7 - Polynomial Rings|7 - Polynomial Rings]] ✏️
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson and Dummit/4 - Ideals and Ideals on Polynomials|4 - Ideals and Ideals on Polynomials]] ✏️
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson and Dummit/5 - Field Extension|5 - Field Extension]]✏️
+>>> - [[PhD Studies/Mathematic Basics/Abstract Algebra/Judson and Dummit/6 - Integral Domains|6 - Integral Domains]] ✏️
 >>
 >>>[!abstract] Homomorphic Encryption
 >>> - [[PhD Studies/Cryptology/Homomorphic Encryption/Basics on Homomorphic Encryption|Basics on Homomorphic Encryption 1]] ✅

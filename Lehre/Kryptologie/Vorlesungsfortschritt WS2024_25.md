@@ -39,9 +39,19 @@
 
 ### 07. 11. 2024
 
+- Kapitel 5 abgeschlossen
+
 ### 14.11.2024
 
+- Kapitel 6 abgeschlossen
+
 ### 28. 11. 2024
+
+- Kapitel 7 abgeschlossen
+
+Aufgaben zum 05.12.2024
+- Kapitel 8 vorbereiten, Kontrollfragen abchecken
+- Praktikum bearbeiten
 
 ### 05. 12. 2024
 

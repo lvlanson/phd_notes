@@ -58,7 +58,7 @@
 >>- privater Schlüssel: $(p,a,A)$
 >
 >>[!verschlüsselung] Signatur
->>Alice möchte eine Nachricht $m<p$ signieren. Alice wählt dazu $k < p-1$ mit $\text{ggT}(k,p-1)=1$.
+>>Alice möchte eine Nachricht $m<p$ signieren. Alice wählt dazu $k < p-1$ mit $\text{ggT}(k, p-1)=1$.
 >>
 >><u>SIgnaturerstellung</u>:
 >>
@@ -103,9 +103,9 @@
 >>$$ks = m-Ar + d(p-1)$$
 >> Diesen Ausdruck nutzen wir, um den Beweis fortzustetzen
 >> $$\begin{align}
->> &\equiv a^{Ar} a{m-Ar + d(p-1)} &&\;\;(\text{mod } p)\\
+>> &\equiv a^{Ar} a^{m-Ar + d(p-1)} &&\;\;(\text{mod } p)\\
 >> &\equiv a^{Ar} a^{m} a^{-Ar} a^{d(p-1)} &&\;\;(\text{mod } p)\\
->> &\equiv a^{0} \underbrace{ a^{m} }_{ \equiv r }  \underbrace{ (a^{d})^{(p-1)} }_{ \equiv 1 } &&\;\;(\text{mod } p)\\ 
+>> &\equiv a^{0} \underbrace{ a^{m} }_{ \equiv v_{2} }  \underbrace{ (a^{d})^{(p-1)} }_{ \equiv 1 } &&\;\;(\text{mod } p)\\ 
 >> &\equiv v_{2} &&\;\;(\text{mod } p) \tag*{$\leftarrow S(4)$}
 >>\end{align}$$
 >>$$\tag*{$\square$}$$

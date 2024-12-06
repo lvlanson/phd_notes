@@ -1,4 +1,4 @@
-## 8.1 Diffie- Schlüsselaustausch
+## 8.1 Diffie-Hellmann Schlüsselaustausch
 
 >[!remark] Motivation
 > Wie können sich zwei Parteien auf ein gemeinsames Geheimnis über ungesicherte Kommunikationskanäle einigen?
@@ -33,6 +33,8 @@
 >
 >>[!Remark]- Bemerkung zum Namen (Informativ)
 >>Dieses Verfahren wird auch das *Diffie-Hellman-Merkle* Verfahren genannt, da Ralph Merkle wesentliche Beiträge zur Konzeption des Verfahrens geleistet hat.
+>
+>>[!remark] Kontrollfrage: Warum basiert dieses Verfahren auf dem Diskreten Logarithmus Problem?
 
 ^d70a98
 
@@ -65,7 +67,7 @@
 >>[!korrektheitsnachweis]
 >>Zunächst zeigen wir, dass $$m^{aa'} \equiv m^{bb'} \equiv m \;\;(\text{mod } p)$$ gilt. Über die Verfahrensbeschreibung wissen wir, dass
 >>$$aa' \equiv bb' \equiv 1 \;\;(\text{mod } p-1) \tag{1}$$
->>Wir zeigen fortgehend für $aa'$ die Gültigkeit, die allerdings aus denselben Konditionen auch für $bb'$ folgt. Für die Kongruenz $(1)$ folgt durch den [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^30b120|Satz Existenz und Eindeutigkeit des Quotienten und Rests]]
+>>Wir zeigen fortgehend für $aa'$ die Gültigkeit, die allerdings aus denselben Konditionen auch für $bb'$ folgt. Für die Kongruenz $(1)$ folgt durch den [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^30b120|Satz Existenz und Eindeutigkeit des Quotienten und Rests]] mit $q \in \mathbb{Z}$
 >>$$aa'=q(p-1)+1$$
 >>Wir setzen daher ein
 >>$$m^{aa'} \equiv m^{q(p-1)+1} \equiv \underbrace{ (m^{q})^{p-1} }_{ \equiv 1 (\text{mod } p) }m \equiv m \;\;(\text{mod } p) \tag{2}$$ 
@@ -85,7 +87,5 @@
 >> &\equiv m && \;\;(\text{mod } p) \\
 >>\end{align}$$
 >>$$\tag*{$\square$}$$
->
->>[!remark] Kontrollfrage: Warum basiert dieses Verfahren auf dem Diskreten Logarithmus Problem?
 >
 >>[!remark] Kontrollfrage: Warum wählen wir $(p-1)$ als Modul in der Kongruenz $$aa' \equiv bb' \equiv 1 \;\;(\text{mod } p-1)$$

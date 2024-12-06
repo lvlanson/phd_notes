@@ -30,7 +30,7 @@
 > ---
 >
 >>[!remark]- Remark on the Degree of the Polynomials
->>The [[../../../../Mathematic Basics/Abstract Algebra/Judson/3 - Polynomial Rings#^a2163f|degree]] of the polynomials in $f \in R_{t}$ and $f  \in R_{q}$ is bounded by $$\text{deg }f < n$$
+>>The [[../../../../Mathematic Basics/Abstract Algebra/Judson and Dummit/7 - Polynomial Rings#^a2163f|degree]] of the polynomials in $f \in R_{t}$ and $f  \in R_{q}$ is bounded by $$\text{deg }f < n$$
 >
 >>[!remark]- Remark on the Choice of the Plaintext and Ciphertext coefficients
 >> The coefficients $t,q \in \mathbb{Z}$ are chosen such that
