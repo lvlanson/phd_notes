@@ -241,9 +241,22 @@
         "name": "map-pin",
         "type": "font-awesome"
       },
-      "command": false,
+      "command": true,
       "injectColor": true,
       "noTitle": false,
+      "copy": false
+    },
+    "homomorphic": {
+      "type": "homomorphic",
+      "color": "200, 200, 200",
+      "icon": {
+        "name": "bahai",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "Homomorphic Operation",
+      "injectColor": true,
+      "noTitle": true,
       "copy": false
     }
   },

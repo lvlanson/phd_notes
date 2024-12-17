@@ -82,14 +82,27 @@
 >> 
 >> 
 >> 
->>**<span style="color:#f7b8ff"> <u>Secret Key</u>: </span>**
+>>**<span style="color:#f7b8ff"> <u>Secret Key</u>: </span>** `SecretKeyGen(λ) -> sk`
+>>
+>>  **<span style="color:#f7b8ff">Input</span>** 
+>> - $\lambda$ is the security parameter
+>>
+>> **<span style="color:#f7b8ff">Procedure</span>**
+>> 
 >> Sample $$\boldsymbol{s} \leftarrow R_{2}$$
 >> **<span style="color:#f7b8ff">Output</span>**
 >> $$sk = (\boldsymbol{s})$$
 >> 
 >> ---
 >> 
->> **<span style="color:#f7b8ff"><u>Public Key</u>:</span>**
+>> **<span style="color:#f7b8ff"><u>Public Key</u>:</span>** `PublicKeyGen(sk) -> pk`
+>> 
+>> **<span style="color:#f7b8ff">Input</span>** 
+>> 
+>> - Secret Key $sk$
+>> 
+>> **<span style="color:#f7b8ff">Procedure</span>**
+>> 
 >> Sample
 >> $$\begin{align}
 >> \boldsymbol{a}&\leftarrow R_{q} \\
@@ -105,17 +118,26 @@
 >>
 >> ---
 >> 
->> **<span style="color:#f7b8ff"> <u>Realinearization Key</u>: </span>**
+>> **<span style="color:#f7b8ff"> <u>Evaluation Key</u>: </span>**([[../../../../../PDFs/Fan2012.pdf#page=8|Source]])
+>>
+>>There are 2 versions suggested. 
+>>
+>> <u>Version 1</u> `EvaluateKeyGen(sk, T) -> rlk`
 >> 
+>> <u>Version 2 </u>`EvaluateKeyGen(sk, p) -> rlk`
+>>
 >> **<span style="color:#f7b8ff">Output</span>**
 >> $$rlk =$$
 >
 >>[!verschlüsselung] Encryption/Decryption 
 >>
->> **<span style="color:#f7b8ff"><u>Encryption</u>:</span>**
->> Consider the input 
->> - $\boldsymbol{m}\in R_{t}$ denote the *message* to be encrypted
->> - $pk=(\boldsymbol{p}_{0}, \boldsymbol{p}_{1})$ denote the *public key*
+>> **<span style="color:#f7b8ff"><u>Encryption</u>:</span>**`Encrypt(pk, m) -> ct`
+>> 
+>> **<span style="color:#f7b8ff">Input</span>** 
+>> - $\boldsymbol{m}\in R_{t}$ denotes the *message* to be encrypted
+>> - $pk=(\boldsymbol{p}_{0}, \boldsymbol{p}_{1})$ denotes the *public key*
+>> 
+>> **<span style="color:#f7b8ff">Procedure</span>** 
 >> 
 >> Sample
 >> $$\begin{align}
@@ -133,15 +155,22 @@
 >>
 >>---
 >>
->>**<span style="color:#f7b8ff"><u>Decryption</u>:</span>**
->>Consider the input
+>>**<span style="color:#f7b8ff"><u>Decryption</u>:</span>** `Decrypt(sk, ct)`
+>>
+>> **<span style="color:#f7b8ff">Input</span>** 
 >>- $sk = (\boldsymbol{s})$ denote the *secret key*
 >>- $ct = (\boldsymbol{c}_{0}, \boldsymbol{c}_{1})$ denote the *cipher text*
 >>
+>> **<span style="color:#f7b8ff">Procedure</span>** 
+>>
 >>Compute
 >>$$\boldsymbol{m} = \left[ \left\lfloor \frac{t \cdot [\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}{q} \right\rceil  \right]_{t}$$
+>>
+>> **<span style="color:#f7b8ff">Output</span>** 
+>> $$\boldsymbol{m}$$
+>>
 >
->>[!proof] Proof of Correct Encryption
+>>[!proof]- Proof of Correct Encryption
 >>$$\begin{align}
 >> \boldsymbol{m} &= \left[ \left\lfloor \frac{t \cdot {\color{#e9ffad}[\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}}{q} \right\rceil  \right]_{t}
 >>\end{align}$$
@@ -153,7 +182,7 @@
 >> &= [\Delta \boldsymbol{m} + \underbrace{ \boldsymbol{e}_{1} + \boldsymbol{se}_{2} - \boldsymbol{ue} }_{ = \boldsymbol{v}}]_{q} \\
 >> &= [\Delta \boldsymbol{m} + \boldsymbol{v}]_{q}
 >>\end{align}$$
->>where $\boldsymbol{v}$ is the accumulated error-term. 
+>>where $\boldsymbol{v}$ is the**<span style="color:#f7b8ff"> accumulated error-term</span>**. 
 >>>[!note] Note on the Magnitude of the Error Term
 >>>$$\begin{alignat}{2}
 >>> \lvert\lvert -\boldsymbol{eu} \rvert\rvert_{\infty} &\leq B \qquad && \boldsymbol{e} \in_{R} \chi, \;\boldsymbol{u} \in_{R} R_{2} = \mathbb{Z}_{2}[x]/(x^n+1) \\
@@ -165,7 +194,7 @@
 >>
 >>Expanding $[\cdot]_{q}$ for some $\boldsymbol{r} \in R_{q}$ gives
 >>$$\begin{align}
->> \phantom{[{\color{#38ffa9}\boldsymbol{c}_{0}}+ {\color{#38B4ff}\boldsymbol{c}_{1}} \boldsymbol{s}]_{q}}&= \Delta \boldsymbol{m}+ \boldsymbol{v} + \boldsymbol{r}q \qquad\qquad\qquad\qquad\qquad\qquad\;
+>> \phantom{[{\color{#38ffa9}\boldsymbol{c}_{0}}+ {\color{#38B4ff}\boldsymbol{c}_{1}} \boldsymbol{s}]_{q}}&= \Delta \boldsymbol{m}+ \boldsymbol{v} + \boldsymbol{r}q \qquad\qquad\qquad\qquad\qquad\qquad\;\tag{1}
 >>\end{align}$$
 >>We **<span style="color:#e9ffad">continue with</span>** 
 >>$$\boldsymbol{m} = \left[ \left\lfloor {\color{#e9ffad}\frac{t \cdot [\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}{q}} \right\rceil  \right]_{t}$$
@@ -174,7 +203,7 @@
 >> \frac{t \cdot [\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}{q} &= \frac{t \cdot (\Delta \boldsymbol{m}+ \boldsymbol{v} + \boldsymbol{r}q )}{q} \\
 >> &=  \frac{t}{q}\Delta \boldsymbol{m}+ \frac{t}{q}\boldsymbol{v} + t\boldsymbol{r}  \\
 >>\end{align}$$
->>Note, we defined [[#^593a3a| the parameters]] $t \ll q$, such that $\frac{t}{q}$ is close to zero and $\lfloor \frac{q}{t} \rfloor=\Delta$ is some large integer. By rounding we are losing some information $\varepsilon$ on $\frac{q}{t}$. Further, we note that $\left\lfloor  \frac{q}{t}  \right\rfloor \leq \frac{q}{t}$ obviously. Hence, we define
+>>Note, we defined [[#^593a3a| the parameters]] $t \ll q$, such that $\frac{t}{q}$ is close to zero and $\left\lfloor \frac{q}{t} \right\rfloor=\Delta$ is some large integer. By rounding we are losing some information $\varepsilon$ on $\frac{q}{t}$. Further, we note that $\left\lfloor  \frac{q}{t}  \right\rfloor \leq \frac{q}{t}$, obviously. Hence, we define
 >>$$\frac{q}{t}-\Delta= \varepsilon \iff \Delta=\frac{q}{t}-\varepsilon$$
 >>with $0 \leq\varepsilon \ll 1$. So we substitute $\Delta$
 >>$$\begin{align}
@@ -195,3 +224,81 @@
 >> &=\boldsymbol{m}
 >>\end{align}$$
 >>after taking $\text{mod } t$.
+>
+>>[!homomorphic] Homomorphic Operations
+>>
+>>**<span style="color:#f7b8ff"><u>Addition:</u></span>** `Add(ct_1, ct_2) -> ct_3`
+>>
+>>**<span style="color:#f7b8ff">Input</span>**
+>> 
+>> $$\begin{align}
+>> ct &= (\boldsymbol{c}_{0}, \boldsymbol{c}_{1}) \tag{= ct\_1}\\
+>> ct' &= (\boldsymbol{c}_{0}', \boldsymbol{c}_{1}') \tag{= ct\_2}
+>>\end{align}$$
+>>
+>>**<span style="color:#f7b8ff">Procedure</span>**
+>>
+>>The addition is defined as
+>>$$ct'' =ct + ct' = \Big([\boldsymbol{c}_{0}+\boldsymbol{c}_{0}']_{q}, [\boldsymbol{c}_{1} + \boldsymbol{c}_{1}']_{q}\Big)$$
+>>
+>>**<span style="color:#f7b8ff">Output</span>**
+>>
+>> $$ct'' \tag{= ct\_3}$$
+>>
+>>**<span style="color:#f7b8ff"><u>Multiplication:</u></span>** `Mul(ct_1, ct_2, rlk) -> ct_3`
+>> 
+>>**<span style="color:#f7b8ff">Input</span>**
+>>$$\begin{align}
+>> ct &= (\boldsymbol{c}_{0}, \boldsymbol{c}_{1}) \tag{= ct\_1}\\
+>> ct' &= (\boldsymbol{c}_{0}', \boldsymbol{c}_{1}') \tag{= ct\_2} \\
+>> rlk &= \Big[\Big([-(\boldsymbol{a}_{i} \cdot \boldsymbol{s}+ \boldsymbol{e}_{i})+T^i \cdot \boldsymbol{s}^2]_{q}, \boldsymbol{a}_{i}\Big)\Big]_{i=0}^l\tag{Version 1} \\
+>> rlk &= \Big(\big[-(\boldsymbol{a} \cdot \boldsymbol{s} +  p \cdot \boldsymbol{s}^2)\big]_{p \cdot q}, \boldsymbol{a}\Big)\tag{Version 2}
+>>\end{align}$$
+>>
+>>**<span style="color:#f7b8ff">Procedure</span>**
+>>
+>>$$\begin{align}
+>> \widehat{\boldsymbol{c}}_{0} &= \left[ \left\lfloor \frac{t \cdot(\boldsymbol{c}_{0} \cdot \boldsymbol{c}_{0}')}{q} \right\rceil \right]_{q} \\
+>> \widehat{\boldsymbol{c}}_{1} &= \left[ \left\lfloor \frac{t \cdot(\boldsymbol{c}_{0} \cdot \boldsymbol{c}_{1}'  + \boldsymbol{c}_{1} \cdot \boldsymbol{c}_{0}')}{q} \right\rceil \right]_{q} \\
+>> \widehat{\boldsymbol{c}}_{2} &= \left[ \left\lfloor \frac{t \cdot(\boldsymbol{c}_{1} \cdot \boldsymbol{c}_{1}')}{q} \right\rceil \right]_{q}
+>>\end{align}$$
+>>Now the $3$ cipher artifacts need to be relinearized with $\widehat{ct}=(\widehat{\boldsymbol{c}}_{0}, \widehat{\boldsymbol{c}}_{1}, \widehat{\boldsymbol{c}}_{2})$ and
+>>$$ct'' = (\boldsymbol{c}_{0}'', \boldsymbol{c}_{1}'') = \text{Relin}(\widehat{ct}, rlk)$$
+>>
+>>**<span style="color:#f7b8ff">Output</span>**
+>>$$ct'' = (\boldsymbol{c}_{0}'', \boldsymbol{c}_{1}'') \tag{= ct\_3}$$
+>>
+>>>[!abstract] Deriving the Multiplication Formula
+>>>
+>>>We will use the evaluation of the ciphertext to motivate the multiplication of ciphertexts
+>>>$$\begin{align}
+>>>\boldsymbol{m}_{i} = \left[ \left\lfloor \frac{t \cdot [{\color{#f7b8ff}\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}}]_{q}}{q} \right\rceil  \right]_{t} =  \left[ \left\lfloor \frac{t \cdot [{\color{#f7b8ff}ct_{i}(\boldsymbol{s})}]_{q}}{q} \right\rceil  \right]_{t}
+>>>\end{align}$$
+>>>Hence
+>>>$$ct_{i}(\boldsymbol{s})= \boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s} = \Delta \boldsymbol{m}+ \boldsymbol{v} + \boldsymbol{r}q$$
+>>>as we showed in the correctness proof in equation $(1)$. Now, note that if we multiply two ciphers evaluated at $\boldsymbol{s}$ we get
+>>>$$\begin{align}
+>>> (ct_{1} \cdot ct_{2})(\boldsymbol{s}) &= ({\color{#38ffa9}\Delta \boldsymbol{m}_{1}}+ {\color{#e9ffad}\boldsymbol{v}_{1}} + {\color{#f7b8ff}\boldsymbol{r}_{1}q})(\Delta \boldsymbol{m}_{2}+ \boldsymbol{v}_{2} + \boldsymbol{r}_{2}q) \\
+>>> &= {\color{#38ffa9}\Delta^2\boldsymbol{m}_{1}\boldsymbol{m}_{2} + \Delta \boldsymbol{m}_{1}\boldsymbol{v}_{2} + \Delta q\boldsymbol{m}_{1}\boldsymbol{r}_{2}} + { \color{#e9ffad}\Delta \boldsymbol{m}_{2}\boldsymbol{v}_{1} + \boldsymbol{v}_{1}\boldsymbol{v}_{2} + q\boldsymbol{v_{1}}\boldsymbol{v_{2}}} \; + {\color{#f7b8ff} \Delta q\boldsymbol{m}_{2}\boldsymbol{r}_{1}+q\boldsymbol{r}_{1}\boldsymbol{v}_{2} + q^2\boldsymbol{r}_{1}\boldsymbol{r}_{2}} \\
+>>> &= \Delta^2\boldsymbol{m}_{1}\boldsymbol{m}_{2} + \Delta(\boldsymbol{m}_{1}\boldsymbol{v}_{2}+\boldsymbol{m}_{2}\boldsymbol{v}_{1}) + q(\boldsymbol{v}_{1}\boldsymbol{r}_{2}+ \boldsymbol{v}_{2}\boldsymbol{r}_{1}) + \Delta q(\boldsymbol{m}_{1}\boldsymbol{r}_{2}+\boldsymbol{m}_{2}\boldsymbol{r}_{1})+ \boldsymbol{v}_{1}\boldsymbol{v}_{2} + q^2\boldsymbol{r}_{1}\boldsymbol{r}_{2}
+>>>\end{align}$$
+>>> Note, in the last line we wish to eliminate a factor of $\Delta$, i.e. multiply by $\frac{1}{\Delta}$, [EXPLAIN IS THEN IN A FORM WE NEED FOR A CIPHER]. Since $\Delta= \left\lfloor  \frac{q}{t}  \right\rfloor \leq \frac{q}{t}$ the terms with $q$ as factor would not cancel correctly anymore, when we calculate $\text{mod } q$ as the decryption process requires as next step. We instead choose a factor of $\dfrac{1}{\frac{q}{t}} = \dfrac{t}{q} \approx \frac{1}{\Delta}$ to circumvent these rounding errors on $q^2\boldsymbol{r}_{1}\boldsymbol{r}_{2}$.
+>>> 
+>>> The objective of the former part was to motivate why we choose to multiply by $\frac{t}{q}$. We will now consider the following representation
+>>> $$\begin{align}
+>>> (ct_{1} \cdot ct_{2})(\boldsymbol{s})&= (\boldsymbol{c_{0}}+\boldsymbol{c}_{1}\boldsymbol{s})(\boldsymbol{c_{0}}'+\boldsymbol{c}_{1}'\boldsymbol{s}) \\
+>>> &= \underbrace{ \boldsymbol{c}_{0}\boldsymbol{c}_{0}' }_{ =\widehat{\boldsymbol{c}}_{0} } + \underbrace{ \boldsymbol{c}_{0}\boldsymbol{c}_{1}' }_{ =\widehat{\boldsymbol{c}}_{1} }\boldsymbol{s} + \underbrace{ \boldsymbol{c}_{1}\boldsymbol{c}_{1}' }_{ =\widehat{\boldsymbol{c}}_{2} } \boldsymbol{s}^2 \\
+>>> &= \widehat{\boldsymbol{c}}_{0} + \widehat{\boldsymbol{c}}_{1}\boldsymbol{s}+\widehat{\boldsymbol{c}}_{2}\boldsymbol{s}^2
+>>>\end{align}$$
+>>>which is a degree $2$ polynomial in $\boldsymbol{s}$.
+>>
+>>**<span style="color:#f7b8ff"><u>Relinearization:</u></span>** `Relin(hat_ct, rlk) -> ct_3`
+>>
+>>**<span style="color:#f7b8ff">Input</span>**
+>> $$\begin{align}
+>> \widehat{ct}&= (\widehat{\boldsymbol{c}}_{0}, \widehat{\boldsymbol{c}}_{1}, \widehat{\boldsymbol{c}}_{2}) \tag{From Multiplication} \\
+>> rlk &= \Big[\Big([-(\boldsymbol{a}_{i} \cdot \boldsymbol{s}+ \boldsymbol{e}_{i})+T^i \cdot \boldsymbol{s}^2]_{q}, \boldsymbol{a}_{i}\Big)\Big]_{i=0}^l\tag{Version 1} \\
+>> rlk &= \Big(\big[-(\boldsymbol{a} \cdot \boldsymbol{s} +  p \cdot \boldsymbol{s}^2)\big]_{p \cdot q}, \boldsymbol{a}\Big)\tag{Version 2}
+>>\end{align}$$
+>>
+>>
