@@ -317,11 +317,11 @@
 >>Damit ist garantiert, dass $\text{ggT}\left( \frac{s_{1}-s_{2}}{g}, \frac{p-1}{g} \right)=1$ und somit existiert das [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^c7c061|modulare Inverse]]
 >>$$\begin{align}
 >> k \frac{s_{1}-s_{2}}{g} &\equiv \frac{m_{1}-m_{2}}{g} \;\;&&\left( \text{mod } \frac{p-1}{g} \right)  \qquad&&\Big\vert \cdot \left[ \frac{s_{1}-s_{2}}{g} \right]^{-1}_{\frac{p-1}{g}} \\
->> k  &\equiv \frac{m_{1}-m_{2}}{g} \cdot\left[ \frac{s_{1}-s_{2}}{g} \right]^{-1}_{\frac{p-1}{g}} \;\;&&\left( \text{mod } \frac{p-1}{g} \right)   \\
+>> k  &\equiv \frac{m_{1}-m_{2}}{g} \cdot\left[ \left( \frac{s_{1}-s_{2}}{g} \right)^{-1} \right]_{\frac{p-1}{g}} \;\;&&\left( \text{mod } \frac{p-1}{g} \right)   \\
 >>\end{align}$$
 >>Nach dem [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^30b120|Satz der Existenz und Eindeutigkeit des Quotienten und Rests]] und der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^9380e8|ganzzahligen Teilung]] können wir $k$ mit $0\leq j < g$
 >>$$k_{j}=\frac{m_{1}-m_{2}}{g} \cdot x_{0} + j \frac{p-1}{g}$$
->>mit $$x_{0} = \left[ \frac{s_{1}-s_{2}}{g} \right]^{-1}_{\frac{p-1}{g}} \tag{Modulares Inverses}$$
+>>mit $$x_{0} = \left[ \left( \frac{s_{1}-s_{2}}{g} \right)^{-1} \right]_{\frac{p-1}{g}} \tag{Modulares Inverses}$$
 >>
 >>Wir finden das richtige $k_{j}$ indem wir iterativ testen
 >>$$a^{k_{j}} \equiv r \;\;(\text{mod } p)$$

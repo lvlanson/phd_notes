@@ -60,14 +60,14 @@
 >>[!verschlüsselung] Signatur
 >>Alice möchte eine Nachricht $m<p$ signieren. Alice wählt dazu $k < p-1$ mit $\text{ggT}(k, p-1)=1$.
 >>
->><u>SIgnaturerstellung</u>:
+>><u>Signaturerstellung</u>:
 >>
 >>Alice berechnet:
 >>$$\begin{align}
 >> r&= a^k \text{ mod }p \tag{1}\\
 >> s &= k^{-1}(m-Ar) \text{ mod }p-1 \tag{2}
 >>\end{align}$$
->>wobei $k^{-1}= [k]^{-1}_{p-1}$ das [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^6f68c0|modulare Inverse]] bezüglich $p-1$ ist.
+>>wobei $k^{-1}= [k^{-1}]_{p-1}$ das [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^6f68c0|modulare Inverse]] bezüglich $p-1$ ist.
 >>
 >>Alice sendet:
 >>$$(m,(r,s))$$
