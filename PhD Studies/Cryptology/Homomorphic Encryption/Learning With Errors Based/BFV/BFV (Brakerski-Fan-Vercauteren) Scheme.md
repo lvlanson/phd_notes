@@ -300,5 +300,4 @@
 >> rlk &= \Big[\Big([-(\boldsymbol{a}_{i} \cdot \boldsymbol{s}+ \boldsymbol{e}_{i})+T^i \cdot \boldsymbol{s}^2]_{q}, \boldsymbol{a}_{i}\Big)\Big]_{i=0}^l\tag{Version 1} \\
 >> rlk &= \Big(\big[-(\boldsymbol{a} \cdot \boldsymbol{s} +  p \cdot \boldsymbol{s}^2)\big]_{p \cdot q}, \boldsymbol{a}\Big)\tag{Version 2}
 >>\end{align}$$
->>
->>
+
