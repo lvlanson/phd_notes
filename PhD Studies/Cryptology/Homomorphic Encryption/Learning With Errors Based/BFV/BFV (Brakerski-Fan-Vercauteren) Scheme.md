@@ -11,6 +11,22 @@
 >Messages and ciphers which are represented as **<span style="color:#e9ffad">plain integers</span>** are written in **<span style="color:#e9ffad">lower case letters</span>**, i.e. $c,m \in \mathbb{Z}$. If they are encoded as **<span style="color:#e9ffad">polynomials</span>** from some polynomial space $\mathcal{F}$ they are written in **<span style="color:#e9ffad">upper case letters</span>**.
 
 ---
+## 0 - Preliminaries
+>[!theorem] Theorem Infinity Norm on Products of Polynomials in Polynomial Rings with Respect to Cyclotomic Reduction
+> Let $\boldsymbol{f}, \boldsymbol{g}$ be polynomials in $R = \mathbb{Z}[x]/(x^n+1)$ where $(x^n+1)$ is a cyclotomic polynomial. Define the infinity norm
+> $$\lvert\lvert \boldsymbol{g} \rvert\rvert_{\infty} := {\text{max}}\;\left\{  a_{i} \;\Bigg\vert\; \sum_{i=0}^{n-1} a_{i}x^i  \right\} $$
+> Then the infinity norm of the products of polynomials in $R$ is given as
+> $$\lvert\lvert \boldsymbol{f} \cdot \boldsymbol{g} \rvert\rvert_{\infty} \leq  \delta_{R}\lvert\lvert \boldsymbol{f} \rvert\rvert_{\infty} \cdot \lvert\lvert \boldsymbol{g} \rvert\rvert_{\infty}  $$
+> where $\delta_{R}$ is the **<span style="color:#38ffa9">ring expansion factor</span>** or also **<span style="color:#38ffa9">fudge factor</span>** with respect to $R$. 
+>
+>In worst-case we have
+>$$\delta_{R} = n$$
+>>[!proof]- Proof is omitted, but comments can be found
+>> There are different ways on how to show, that $\delta_{R} = n$ in worst case. Peikert suggests in [[../../../../../PDFs/Peikert2016.pdf#page=30|his survey 4.3.3]] using a canonical embedding $\phi:R\to \mathbb{C}^n$
+>> from algebraic number theory, where each ring element $\boldsymbol{z} \in R$ maps to some vector in $\mathbb{C}^n$, where the norm can be estimated more precisely over the roots of the polynomial. 
+
+^79979b
+
 ## 1 - Basic Definitions
 
 >[!def] Definition Plain- and Ciphertext Spaces
@@ -170,11 +186,11 @@
 >> $$\boldsymbol{m}$$
 >>
 >
->>[!proof]- Proof of Correct Encryption
+>>[!proof] Proof of Correct Encryption
 >>$$\begin{align}
->> \boldsymbol{m} &= \left[ \left\lfloor \frac{t \cdot {\color{#e9ffad}[\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}}{q} \right\rceil  \right]_{t}
+>> \boldsymbol{m} &= \left[ \left\lfloor \frac{t \cdot {\color{#f7b8ff}[\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}}{q} \right\rceil  \right]_{t}
 >>\end{align}$$
->>First **<span style="color:#e9ffad">compute</span>** 
+>>First **<span style="color:#f7b8ff">compute</span>** 
 >>$$\begin{align}
 >> [{\color{#38ffa9}\boldsymbol{c}_{0}}+ {\color{#38B4ff}\boldsymbol{c}_{1}} \boldsymbol{s}]_{q}&= [{\color{#38ffa9}\boldsymbol{p}_{0} \boldsymbol{u}+ \boldsymbol{e_{1}}+ \Delta \boldsymbol{m}} + ({\color{#38B4ff}\boldsymbol{p}_{1}\boldsymbol{u}+\boldsymbol{e}_{2}})\boldsymbol{s}]_{q} \\
 >> &= [\underbrace{ -(\boldsymbol{a} \boldsymbol{s}+ \boldsymbol{e}) }_{ =\boldsymbol{p}_{0} }  \boldsymbol{u}+ \boldsymbol{e}_{1} + \Delta \boldsymbol{m} + (\boldsymbol{a}\boldsymbol{u}+ \boldsymbol{e}_{2})\cdot \boldsymbol{s}]_{q} \\
@@ -182,22 +198,28 @@
 >> &= [\Delta \boldsymbol{m} + \underbrace{ \boldsymbol{e}_{1} + \boldsymbol{se}_{2} - \boldsymbol{ue} }_{ = \boldsymbol{v}}]_{q} \\
 >> &= [\Delta \boldsymbol{m} + \boldsymbol{v}]_{q}
 >>\end{align}$$
->>where $\boldsymbol{v}$ is the**<span style="color:#f7b8ff"> accumulated error-term</span>**. 
+>>where $\boldsymbol{v}$ is the **<span style="color:#f7b8ff"> accumulated error-term</span>**. 
+>>
 >>>[!note] Note on the Magnitude of the Error Term
+>>>We use [[#^79979b| the theorem for the norm of the products in rings]] and have
 >>>$$\begin{alignat}{2}
->>> \lvert\lvert -\boldsymbol{eu} \rvert\rvert_{\infty} &\leq B \qquad && \boldsymbol{e} \in_{R} \chi, \;\boldsymbol{u} \in_{R} R_{2} = \mathbb{Z}_{2}[x]/(x^n+1) \\
+>>> \lvert\lvert -\boldsymbol{eu} \rvert\rvert_{\infty} &\leq \delta_{R}B \qquad && \boldsymbol{e} \in_{R} \chi, \;\boldsymbol{u} \in_{R} R_{2} = \mathbb{Z}_{2}[x]/(x^n+1) \\
 >>> \lvert\lvert \boldsymbol{e}_{1} \rvert\rvert_{\infty} &\leq  B && \boldsymbol{e}_{1} \in_{R} \chi \\
->>> \lvert\lvert \boldsymbol{se}_{2} \rvert\rvert_{\infty} &\leq B && \boldsymbol{e}_{2} \in_{R} \chi, \; \boldsymbol{s} \in_{R}R_{2}= \mathbb{Z}_{2}[x]/(x^n+1) 
+>>> \lvert\lvert \boldsymbol{se}_{2} \rvert\rvert_{\infty} &\leq \delta_{R}B && \boldsymbol{e}_{2} \in_{R} \chi, \; \boldsymbol{s} \in_{R}R_{2}= \mathbb{Z}_{2}[x]/(x^n+1) 
 >>>\end{alignat}$$
 >>>Therefore it must follow
->>>$$\lvert\lvert \boldsymbol{e}_{1}+\boldsymbol{se}_{2} - \boldsymbol{eu}\rvert\rvert_{\infty} \leq 3B $$ WRONG
+>>>$$\begin{align}
+>> \lvert\lvert \boldsymbol{e}_{1}+\boldsymbol{se}_{2} - \boldsymbol{eu}\rvert\rvert_{\infty} &\leq \lvert\lvert \boldsymbol{e}_{1} \rvert\rvert+\lvert\lvert \boldsymbol{se}_{2} \rvert\rvert +\lvert\lvert -\boldsymbol{e}\boldsymbol{u} \rvert\rvert    \\
+>> & \leq B + \delta_{R}B +\delta_{R}B  \\
+>> &= B(2\delta_{R}+1)
+>>\end{align} $$ 
 >>
 >>Expanding $[\cdot]_{q}$ for some $\boldsymbol{r} \in R_{q}$ gives
 >>$$\begin{align}
 >> \phantom{[{\color{#38ffa9}\boldsymbol{c}_{0}}+ {\color{#38B4ff}\boldsymbol{c}_{1}} \boldsymbol{s}]_{q}}&= \Delta \boldsymbol{m}+ \boldsymbol{v} + \boldsymbol{r}q \qquad\qquad\qquad\qquad\qquad\qquad\;\tag{1}
 >>\end{align}$$
->>We **<span style="color:#e9ffad">continue with</span>** 
->>$$\boldsymbol{m} = \left[ \left\lfloor {\color{#e9ffad}\frac{t \cdot [\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}{q}} \right\rceil  \right]_{t}$$
+>>We **<span style="color:#f7b8ff">continue with</span>** 
+>>$$\boldsymbol{m} = \left[ \left\lfloor {\color{#f7b8ff}\frac{t \cdot [\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}{q}} \right\rceil  \right]_{t}$$
 >>and calculate  
 >>$$\begin{align} \\
 >> \frac{t \cdot [\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}{q} &= \frac{t \cdot (\Delta \boldsymbol{m}+ \boldsymbol{v} + \boldsymbol{r}q )}{q} \\
@@ -211,8 +233,8 @@
 >> &= \boldsymbol{m} - \frac{t}{q}\varepsilon \boldsymbol{m} + \frac{t}{q}\boldsymbol{v} + t\boldsymbol{r} \\
 >> &= \boldsymbol{m}  + \frac{t}{q}(\boldsymbol{v}-\varepsilon \boldsymbol{m}) + t\boldsymbol{r}
 >>\end{align}$$
->>For the **<span style="color:#e9ffad">rounding process</span>** in 
->>$$\boldsymbol{m} = \left[ {\color{#e9ffad}\left\lfloor \frac{t \cdot [\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}{q} \right\rceil}  \right]_{t}$$
+>>For the **<span style="color:#f7b8ff">rounding process</span>** in 
+>>$$\boldsymbol{m} = \left[ {\color{#f7b8ff}\left\lfloor \frac{t \cdot [\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}{q} \right\rceil}  \right]_{t}$$
 >>we need to consider the norm
 >>$$\frac{t}{q} \cdot\lvert\lvert \boldsymbol{v}-\varepsilon \boldsymbol{m} \rvert\rvert_{\infty} $$
 >>We note, $\boldsymbol{m} \in R_{t}$ and therefore we have $$\begin{align}
