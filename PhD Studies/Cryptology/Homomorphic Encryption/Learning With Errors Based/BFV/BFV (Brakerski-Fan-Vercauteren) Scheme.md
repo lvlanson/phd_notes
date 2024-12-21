@@ -14,7 +14,7 @@
 ## 0 - Preliminaries
 >[!theorem] Theorem Infinity Norm on Products of Polynomials in Polynomial Rings with Respect to Cyclotomic Reduction
 > Let $\boldsymbol{f}, \boldsymbol{g}$ be polynomials in $R = \mathbb{Z}[x]/(x^n+1)$ where $(x^n+1)$ is a cyclotomic polynomial. Define the infinity norm
-> $$\lvert\lvert \boldsymbol{g} \rvert\rvert_{\infty} := {\text{max}}\;\left\{  a_{i} \;\Bigg\vert\; \sum_{i=0}^{n-1} a_{i}x^i  \right\} $$
+> $$\lvert\lvert \boldsymbol{g} \rvert\rvert_{\infty} := {\text{max}}\;\left\{  a_{i} \;\Bigg\vert\; \boldsymbol{g}=\sum_{i=0}^{n-1} a_{i}x^i  \right\} $$
 > Then the infinity norm of the products of polynomials in $R$ is given as
 > $$\lvert\lvert \boldsymbol{f} \cdot \boldsymbol{g} \rvert\rvert_{\infty} \leq  \delta_{R}\lvert\lvert \boldsymbol{f} \rvert\rvert_{\infty} \cdot \lvert\lvert \boldsymbol{g} \rvert\rvert_{\infty}  $$
 > where $\delta_{R}$ is the **<span style="color:#38ffa9">ring expansion factor</span>** or also **<span style="color:#38ffa9">fudge factor</span>** with respect to $R$. 
@@ -214,7 +214,7 @@
 >> &= B(2\delta_{R}+1)
 >>\end{align} $$ 
 >>
->>Expanding $[\cdot]_{q}$ for some $\boldsymbol{r} \in R_{q}$ gives
+>>Expanding $[\;\cdot\;]_{q}$ with some residue $\boldsymbol{r} \in R_{q}$ gives
 >>$$\begin{align}
 >> \phantom{[{\color{#38ffa9}\boldsymbol{c}_{0}}+ {\color{#38B4ff}\boldsymbol{c}_{1}} \boldsymbol{s}]_{q}}&= \Delta \boldsymbol{m}+ \boldsymbol{v} + \boldsymbol{r}q \qquad\qquad\qquad\qquad\qquad\qquad\;\tag{1}
 >>\end{align}$$
@@ -237,10 +237,26 @@
 >>$$\boldsymbol{m} = \left[ {\color{#f7b8ff}\left\lfloor \frac{t \cdot [\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}{q} \right\rceil}  \right]_{t}$$
 >>we need to consider the norm
 >>$$\frac{t}{q} \cdot\lvert\lvert \boldsymbol{v}-\varepsilon \boldsymbol{m} \rvert\rvert_{\infty} $$
->>We note, $\boldsymbol{m} \in R_{t}$ and therefore we have $$\begin{align}
->> \lvert\lvert \boldsymbol{v} + (- \varepsilon \boldsymbol{m}) \rvert\rvert_{\infty} \leq \lvert\lvert \boldsymbol{v} \rvert\rvert_{\infty}  + \lvert\lvert -\varepsilon \boldsymbol{m} \rvert\rvert_{\infty} &= \lvert\lvert \boldsymbol{v} \rvert\rvert_{\infty} + t  
+>>and require 
+>>$$\frac{t}{q} \cdot\lvert\lvert \boldsymbol{v}-\varepsilon \boldsymbol{m} \rvert\rvert_{\infty} < \frac{1}{2}$$
+>>for the rounding process to have the term vanish. We note, $\boldsymbol{m} \in R_{t}$ and $0 \leq \varepsilon \ll 1$. We have $$\begin{align}
+>> \lvert\lvert \boldsymbol{v} + (- \varepsilon \boldsymbol{m}) \rvert\rvert_{\infty} \leq \lvert\lvert \boldsymbol{v} \rvert\rvert_{\infty}  + \lvert\lvert -\varepsilon \boldsymbol{m} \rvert\rvert_{\infty} &\leq \lvert\lvert \boldsymbol{v} \rvert\rvert_{\infty}  +t \\
 >>\end{align}$$
->>since $\boldsymbol{m} \in R_{t}$. Since we multiply with $\frac{t}{q}$ which cancels with $\lvert\lvert -\varepsilon \boldsymbol{m} \rvert\rvert$ and our condition for $\lvert\lvert \boldsymbol{v} \rvert\rvert_{\infty}$ is given, rounding should give
+>>By estimating the norm, we get.
+>>$$\begin{align}
+>> \frac{t}{q} \cdot \lvert\lvert \boldsymbol{v}- \varepsilon \boldsymbol{m} \rvert\rvert_{\infty} &< \frac{1}{2} \\
+>>   \lvert\lvert \boldsymbol{v}- \varepsilon \boldsymbol{m} \rvert\rvert_{\infty} &< \frac{1}{2} \cdot \frac{q}{t} \\ 
+>> \lvert\lvert \boldsymbol{v} \rvert\rvert_{\infty}  +t &< \frac{1}{2} \cdot \frac{q}{t} 
+>>\end{align}$$
+>>We denote $r_{t}(q) + \left\lfloor  \frac{q}{t}  \right\rfloor = \frac{q}{t}$ the residue from the flooring function. With $\Delta=\frac{q}{t}$ we continue 
+>>$$\begin{align}
+>> \lvert\lvert \boldsymbol{v} \rvert\rvert_{\infty}  +t &< \frac{1}{2} \cdot \frac{q}{t}  \\
+>> \lvert\lvert \boldsymbol{v} \rvert\rvert_{\infty}   &< \frac{1}{2} \cdot \Delta+\underbrace{ r_{t}(q)-t }_{ <0 } < \frac{\Delta}{2}
+>>\end{align}$$
+>>**<span style="color:#f7b8ff">which establishes the parameter choice with respect to the error</span>**, hence
+>>$$\lvert\lvert \boldsymbol{v} \rvert\rvert_{\infty}< B(2\delta_{R}+1) <\frac{\Delta}{2}$$
+>>
+>>Therefore, rounding should give
 >>$$\begin{align}
 >> \boldsymbol{m}&= [\boldsymbol{m}+t\boldsymbol{r}]_{t} \\
 >> &=\boldsymbol{m}
@@ -323,3 +339,4 @@
 >> rlk &= \Big(\big[-(\boldsymbol{a} \cdot \boldsymbol{s} +  p \cdot \boldsymbol{s}^2)\big]_{p \cdot q}, \boldsymbol{a}\Big)\tag{Version 2}
 >>\end{align}$$
 
+$B(2\delta_{R}+1)<\frac{\Delta}{2}$
