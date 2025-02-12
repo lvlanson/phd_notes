@@ -1,4 +1,4 @@
->[!def] Definition Lattice $\mathcal{L}$ ([[../../../../../PDFs/peikert2015.pdf#page=8|Source]])
+>[!def] Definition Lattice $\mathcal{L}$ ([[../../../../../PDFs/peikert2016.pdf#page=8|Source]])
 > An $n$-dimensional _lattice_ $\mathcal{L}$ is any subset of $\mathbb{R}^n$ that is both
 > 1. an additive subgroup
 > 	- the neutral element exists: $\mathbf{0} \in \mathcal{L}$
@@ -13,24 +13,21 @@
 >>3. $\{ \mathbf{x} \in \mathbb{Z}^n \; | \; x_{i} \in \mathbf{x}  \text{ is even} \}$
 >
 
->[!def] Definition Minimum Distance of a Lattice ([[../../../../../PDFs/peikert2015.pdf#page=8|Source]]) 
+>[!def] Definition Minimum Distance of a Lattice ([[../../../../../PDFs/peikert2016.pdf#page=8|Source]]) 
 >The minimum distance of a lattice $\mathcal{L}$ is given as the shortest nonzero lattice vector, i.e.
 > $$\lambda_{1}(\mathcal{L}):= \min_{\mathbf{v}\in\mathcal{L}\setminus \{ \mathbf{0} \}} \lvert\lvert \mathbf{v} \rvert\rvert $$
 > where $\lvert\lvert \cdot \rvert\rvert$ denotes the Euclidean norm (unless specified otherwise).
 
 ^5efb92
 
->[!def] Definition Successive Minimima $\lambda_{i}(\mathcal{L})$ ([[../../../../../PDFs/peikert2015.pdf#page=9|Source]])
+>[!def] Definition Successive Minimima $\lambda_{i}(\mathcal{L})$ ([[peikert2016.pdf#page=9|Source]])
 >The $i$-th successive minimum is defined as the smallest radius $r$ such that the closed ball $\overline{B}(\mathbf{0}, r)$ contains $i$ linearly independent vectors.
 
 >[!def]- Definitions Abstract Algebra
->>[!def] Definition Subgroup ([[../../../PDFs/judson2022.pdf#page=50|Source]])
->>Let $G$ be a group. A subgro[](../../../../PDFs/judson2022.pdf#page=50) group restricted under the operation of $G$.
->>>[!remark]- Recall Group
->>>A group is closed under ope[](../../../../../PDFs/judson2022.pdf#page=50)nt and an inverse element.
+>>[!def] Definition Subgroup ([[../../../../PDFs/judson2022.pdf#page=50|Source]])
+>>Let $G$ be a group. A subgroup is a group restricted under the operation of $G$.
 >
->
->>[!def] Definition Coset ([[../../../PDFs/judson2022.pdf#page=86|Source]])
+>>[!def] Definition Coset ([[../../../../PDFs/judson2022.pdf#page=86|Source]])
 >>Let $G$ be a group and $H$ be a subgroup of $G$. The **left coset of $H$** is defined with **representative** $g \in G$ as the set
 >>$$gH:= \{ gh\;:\;h \in H \}$$ 
 >>The **right coset of $H$** with **representative** $g \in G$ analogously
@@ -39,13 +36,13 @@
 >>[!remark]
 >>If the left and right cosets coincide or it is clear what kind of coset is we will speak about, we will call it simply **coset**.
 >
->>[!theorem] Theorem Cosets Partitioning ([[../../../PDFs/judson2022.pdf#page=87|Source]])
->>Let $H$ be a subgroup of a group $G$. Th[](../../../../PDFs/judson2022.pdf#page=87)ion $G$. That is, the group $G$ is the disjoint union of the left cosets of $H$ in $G$.
+>>[!theorem] Theorem Cosets Partitioning ([[../../../../PDFs/judson2022.pdf#page=87|Source]])
+>>Let $H$ be a subgroup of a group $G$. Then the left cosets of $H$ in $G$ partition $G$. That is, the group $G$ is the disjoint union of the left cosets of $H$ in $G$.
 >
->>[!theorem] Theorem Number of Left and R[](../../../../../PDFs/judson2022.pdf#page=87)#page=86|Source]])
->>Let $H$ be a subgroup of a group $G$. *The number of[](../../../../PDFs/judson2022.pdf#page=86)umber of right cosets of $H$ in $G$*.
+>>[!theorem] Theorem Number of Left and Right Cosets ([[../../../../PDFs/judson2022.pdf#page=87)#page=86|Source]])
+>>Let $H$ be a subgroup of a group $G$. *The number of left cosets of $H$ in $G$ is the same as the number of right cosets of $H$ in $G$*.
 
->[!lemma] Lemma Quotient Group of Cosets
+>[!lemma] Lemma Quotient Group of Cosets ([[../../../../PDFs/judson2022.pdf#page=86|Source]])
 >A lattice [](../../../../../PDFs/judson2022.pdf#page=86)bb{R}^n/\mathcal{L}$ of cosets
 >$$\mathbf{c}+\mathcal{L}=\{ \mathbf{c}+\mathbf{v} \;:\; \mathbf{v} \in \mathcal{L} \} \text{ with } \mathbf{c} \in \mathbb{R}^n$$
 > with the induced operation
@@ -57,14 +54,14 @@
 >>- $[0,1)$ for the integer lattice $\mathbb{Z}$
 >>- $\left[ -\frac{1}{2}, \frac{1}{2} \right)$ for the integer lattice $\mathbb{Z}$
 
->[!def] Definition Lattice Basis ([[../../../../../PDFs/peikert2015.pdf#page=9|Source]])
+>[!def] Definition Lattice Basis ([[../../../../../PDFs/peikert2016.pdf#page=9|Source]])
 >The basis of a lattice is a set of vectors $\{ \mathbf{b}_{1}, \mathbf{b}_{2},\dots , \mathbf{b}_{k} \}\subset \mathcal{L}$ such that
 >$$\mathcal{L} = \mathcal{L}(\mathbf{B}) := \mathbf{B} \cdot \mathbb{Z}^k = \left\{  \sum_{i=1}^k z_{i}\mathbf{b}_{i} \; : \; z_{i} \in \mathbb{Z}  \right\}$$
 >The integer $k$ is called the _rank_ of the basis, and is invariant of the lattice.
 >>[!pic] Illustration ([[../../../../../PDFs/sabani2024.pdf#page=4|Source]])
->>![[../Figures/lattice_bases.png|center|280]]
+>>![[Figures/lattice_bases.png|center|280]]
 
-[](Figures/lattice_bases.png)./../../../PDFs/peikert2015.pdf#page=9|Source 1]], [[../../../../../PDFs/judson2022.pdf#page=163|Source 2]])
+>[!def] Unimodular Matirx ([[../../../../../PDFs/peikert2016.pdf#page=9|Source 1]], [[../../../../../PDFs/judson2022.pdf#page=163|Source 2]])
 >A matrix $\mathbf{U} \in \mathbb{Z}^{n \times n}$ is called unimodular if
 >$$\det(U) = \pm 1$$
 >
@@ -79,7 +76,7 @@
 >[!remark]
 >For this analysis, we consider full rank bases $k = n$.
 
->[!lemma] Lemma ([[../../../../../PDFs/peikert2015.pdf#page=9|Source]])
+>[!lemma] Lemma ([[../../../../../PDFs/peikert2016.pdf#page=9|Source]])
 > Let $\mathbf{B}$ be a basis of lattice $\mathcal{L} = \mathcal{L}(\mathbf{B})$ and $\mathbf{U}$ an unimodular matrix. The matrix
 > $$\mathbf{B} \cdot \mathbf{U}$$
 > is also a basis for $\mathcal{L}$.
@@ -105,7 +102,7 @@
 >>$$\mathbf{w} = \mathbf{B}\mathbf{w}'$$
 >>Since $\mathbf{B}$ is a basis for $\mathcal{L}$, we know $\mathbf{w} \in \mathcal{L}$. Note, $\beta_{i}$ are arbitrary integers, hence the product of $\mathbf{B} \cdot \mathbf{U}$ spans the same lattice $\mathcal{L}$ as $\mathbf{B}$ does.
 
->[!def] Definition Fundamental Parallelepiped ([[../../../../../PDFs/peikert2015.pdf#page=9|Source]])
+>[!def] Definition Fundamental Parallelepiped ([[../../../../../PDFs/peikert2016.pdf#page=9|Source]])
 >Let $\mathbf{B}$ be a basis for $\mathcal{L}$ and a fundamental domain $\mathcal{F}$  of $\mathcal{L}$. Then the **fundamental parallelepiped** can be given as
 >$$\mathcal{P}(\mathbf{B}):= \mathbf{B} \cdot F$$
 >>[!example]-
@@ -130,7 +127,7 @@
 >3. $\left\langle ax\,,\,y \right\rangle = a\left\langle x\,,\,y \right\rangle \forall x,y \in V$ and $a \in \mathcal{L}$
 >4. $\left\langle x\,,\,y \right\rangle = \left\langle y\,,\,x \right\rangle, \;\; \forall x,y \in V$
 
->[!def] The Dual Lattice $L^*$ ([[../../../../../PDFs/peikert2015.pdf#page=9|Source]])
+>[!def] The Dual Lattice $L^*$ ([[../../../../../PDFs/peikert2016.pdf#page=9|Source]])
 >The **dual lattice** (also known as reciprocal lattice) of some lattice $\mathcal{L} \subset \mathbb{R}^n$ is defined as
 >$$\mathcal{L}^* := \{ \mathbf{w}: \left\langle \mathbf{w}\,,\,\mathcal{L} \right\rangle \subseteq \mathbb{Z}  \}$$
 >

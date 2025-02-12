@@ -5,7 +5,7 @@
 > \left\langle \mathbf{s}\,,\,\mathbf{a}_{2} \right\rangle &\approx_{\varepsilon} b_{2} \;\;(\text{mod } 2) \\
 > &\vdots
 >\end{align}$$
->where the $\mathbf{a}_{i}$s are chosen independently from the uniform distribution on $\mathbb{Z}_{2}^n$ and each equation is correct independently with probability $1-\varepsilon$
+>where the $\mathbf{a}_{i}$s are chosen independently from the uniform distribution on $\mathbb{Z}_{2}^n$ and each equation is correct independently with probability $1-\varepsilon$.
 >
 >>[!remark]- Remark on the Term Parity
 >>Parity is a function on the bitstream of a string $s = (0+1)^n$ of the following form
@@ -15,7 +15,7 @@
 >>\end{cases}$$
 >
 >>[!remark]- Remark on Hardness of the Problem
->>There is no algorithm which solves this problem in $\text{poly}(n)$ time even for small $\varepsilon$.
+>>There is no algorithm known which solves this problem in $\text{poly}(n)$ time even for small $\varepsilon$.
 >
 >>[!example]- Algorithmic Example (Useful)
 >>1. Let $\mathbf{s} \in \mathbb{Z}_{2}^n$ be a randomly chosen secret by Alice. 
@@ -36,7 +36,7 @@
 >[!def] Definition Learning with Errors (LWE) ([[../../../../../../PDFs/gentry2013.pdf#page=8|Source]])
 >For security parameter $\lambda$, let 
 >- $n=n(\lambda)$ be an integer dimension
->- $q=q(\lambda)\leq 2$ be an integer
+>- $q=q(\lambda)\geq 2$ be an integer
 >- $\chi=\chi(\lambda)$ be a distribution over $\mathbb{Z}$
 >
 >The **LWE$_{n,q,\chi}$** problem *is to distinguish* the following two distributions:

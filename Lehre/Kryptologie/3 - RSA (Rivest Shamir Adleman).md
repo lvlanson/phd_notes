@@ -330,7 +330,7 @@
 >
 >>[!schlüsselerzeugung]
 >>
->>1. Bob wählt zwei große Primzahlen $p$ und $q$
+>>1. Bob wählt zwei große Primzahlen $p$ und $q$ mit $p \neq q$
 >>2. Bob berechnet $$\begin{align}
 >> n &=pq \tag{Modul}\\
 >> \phi(n)&=(p-1)(q-1) \tag{Phi-Funktion}
@@ -349,13 +349,13 @@
 >
 >>[!verschlüsselung] 
 >> Sei 
->> - $m \in \mathbb{Z}_{n}$ - zu verschlüsselnde Nachricht
+>> - $0 \leq m < n$ - zu verschlüsselnde Nachricht
 >> - $(n,e)$ - öffentlicher Schlüssel
 >> - $(n,d)$ - privater/geheimer Schlüssel
 >>
 >> **<u>Verschlüsselung</u>**:
 >> $$c = m^e \text{ mod }n$$
->> Wir nennen $c \in \mathbb{Z}_{n}$ die Chiffre.
+>> Wir nennen $c$ die Chiffre mit $0 \leq c < n$.
 >> 
 >> **<u>Entschlüsselung</u>**:
 >> $$m = c^{d} \text{ mod }n$$

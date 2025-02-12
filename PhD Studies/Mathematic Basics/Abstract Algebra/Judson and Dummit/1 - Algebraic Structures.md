@@ -85,7 +85,7 @@
 >| Field              | <center>x</center> | <center>x</center>          | <center>x</center>               | <center>x</center>               |           <center>x</center>                   | <center>x</center>             |
 ><br>
 >
->![[Figures/relationship.png|center|400]]
+>![[../Figures/relationship.png|center|400]]
 ><center>Figure: Relationship of Algebraic Structures</center>
 
 

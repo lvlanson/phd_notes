@@ -194,18 +194,18 @@
 >>Dieses Polynom dritten Grades können wir lösen und uns ist garantiert, dass zwei der Nullstellen $x_{1},x_{2}$ sind und durch unsere Bedingung für die Diskriminante existiert eine von $x_{1},x_{2}$ verschiedene, dritte Nullstelle. Also können wir über die Nullstellen faktorisieren und erhalten
 >>$$\begin{align}
 >> X^3-\lambda^2X^2+(a-2\lambda \nu)X+(B-\nu^2) &= (X-x_{1})(X-x_{2})(X-x_{3}) \\
->> &= X^3 - (x_{1}-x_{2}-x_{3})X^2 + (x_{1}x_{2} + x_{1}x_{3} +x_{2}x_{3})X -x_{1}x_{2}x_{3}
+>> &= X^3 + (x_{1}-x_{2}-x_{3})X^2 + (x_{1}x_{2} + x_{1}x_{3} +x_{2}x_{3})X -x_{1}x_{2}x_{3}
 >>\end{align}$$
 >>Demnach haben wir
 >>$$\begin{align}
->> X^3-\lambda^2X^2+(a-2\lambda \nu)X+(B-\nu^2) &= X^3 - (-x_{1}-x_{2}-x_{3})X^2 + (x_{1}x_{2} + x_{1}x_{3} +x_{2}x_{3})X -x_{1}x_{2}x_{3}
+>> X^3-\lambda^2X^2+(a-2\lambda \nu)X+(B-\nu^2) &= X^3 + (-x_{1}-x_{2}-x_{3})X^2 + (x_{1}x_{2} + x_{1}x_{3} +x_{2}x_{3})X -x_{1}x_{2}x_{3}
 >>\end{align}$$
 >>Über den Koeffizientenvergleich wissen wir, dass
 >>$$\begin{align}
->> -\lambda &= -x_{1}-x_{2}-x_{3} \tag{zu $X^2$} 
+>> -\lambda^2 &= -x_{1}-x_{2}-x_{3} \tag{zu $X^2$} 
 >>\end{align}$$
 >>Also können wir für $x_{3}$ lösen und erhalten
->>$$x_{3} = \lambda - x_{1}-x_{2}$$
+>>$$x_{3} = \lambda^2 - x_{1}-x_{2}$$
 >>Aus Gleichung $(4)$ wissen wir um die Beschaffenheit von $y$, also
 >>$$y = \lambda x_{3} + \nu$$
 >>Wir müssen noch die $y$-Komponente an der $x$-Achse reflektieren und erhalten

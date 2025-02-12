@@ -84,6 +84,20 @@
   file = {/home/thomas/Documents/Obsidian Vault/PDFs/armknecht2015a.pdf}
 }
 
+@online{badawi2023,
+  title = {Demystifying {{Bootstrapping}} in {{Fully Homomorphic Encryption}}},
+  author = {Badawi, Ahmad Al and Polyakov, Yuriy},
+  date = {2023},
+  number = {2023/149},
+  url = {https://eprint.iacr.org/2023/149},
+  urldate = {2025-01-15},
+  abstract = {Bootstrapping is a term used very often in the context of Fully Homomorphic Encryption (FHE). Anyone who is familiar with FHE knows that bootstrapping is the most sophisticated and compute-intensive component of an FHE scheme. However, very few non-FHE-experts understand what the bootstrapping operation really is and that there are various bootstrapping methods, each with its own tradeoffs. The goal of this paper is to provide a high-level introduction to common bootstrapping methods and evaluate their performance using the existing implementations in OpenFHE and HElib open-source libraries.  Our performance evaluation suggests that the bootstrapping in the Cheon-Kim-Kim-Song (CKKS) scheme provides highest throughput and efficiently achieves large precision for vectors of real numbers, which are often used in machine learning applications. The Ducas-Micciancio (DM) and Chillotti-Gama-Georgieva-Izabachene (CGGI) schemes achieve the smallest latency (typically for small integers or small-precision fixed-point numbers) and provide a general capability for evaluating arbitrary functions (programmable bootstrapping) via lookup tables. The Brakerski-Gentry-Vaikuntanathan (BGV) and Brakerski/Fan-Vercauteren (BFV) schemes provide higher bootstrapping throughput than DM/CGGI for vectors of small integers or finite-field elements but do not support programmable bootstrapping.  The target audience is anyone interested in FHE. We intend to keep this paper up-to-date to include new bootstrapping results as they become available.},
+  pubstate = {prepublished},
+  keywords = {BFV,BGV,Bootstrapping,CGGI,CKKS,DM,FHEW,Fully Homomorphic Encryption,Programmable Bootstrapping,TFHE},
+  annotation = {Publication info: Preprint.},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Badawi2023.pdf}
+}
+
 @online{beck2024,
   title = {{{xLSTM}}: {{Extended Long Short-Term Memory}}},
   shorttitle = {{{xLSTM}}},
@@ -172,6 +186,20 @@
   keywords = {Mathematics / General,Mathematics / History & Philosophy}
 }
 
+@online{brakerski2011,
+  title = {Fully {{Homomorphic Encryption}} without {{Bootstrapping}}},
+  author = {Brakerski, Zvika and Gentry, Craig and Vaikuntanathan, Vinod},
+  date = {2011},
+  number = {2011/277},
+  url = {https://eprint.iacr.org/2011/277},
+  urldate = {2025-01-17},
+  abstract = {We present a radically new approach to fully homomorphic encryption (FHE) that dramatically improves performance and bases security on weaker assumptions. A central conceptual contribution in our work is a new way of constructing leveled fully homomorphic encryption schemes (capable of evaluating arbitrary polynomial-size circuits), \{\textbackslash em without Gentry's bootstrapping procedure\}. Specifically, we offer a choice of FHE schemes based on the learning with error (LWE) or ring-LWE (RLWE) problems that have 2\textbackslash secparam security against known attacks. For RLWE, we have: 1. A leveled FHE scheme that can evaluate L-level arithmetic circuits with O\textasciitilde (\textbackslash secparam⋅L3) per-gate computation -- i.e., computation \{\textbackslash em quasi-linear\} in the security parameter. Security is based on RLWE for an approximation factor exponential in L. This construction does not use the bootstrapping procedure. 2. A leveled FHE scheme that uses bootstrapping \{\textbackslash em as an optimization\}, where the per-gate computation (which includes the bootstrapping procedure) is O\textasciitilde (\textbackslash secparam2), \{\textbackslash em independent of L\}. Security is based on the hardness of RLWE for \{\textbackslash em quasi-polynomial\} factors (as opposed to the sub-exponential factors needed in previous schemes). We obtain similar results for LWE, but with worse performance. We introduce a number of further optimizations to our schemes. As an example, for circuits of large width -- e.g., where a constant fraction of levels have width at least \textbackslash secparam -- we can reduce the per-gate computation of the bootstrapped version to O\textasciitilde (\textbackslash secparam), independent of L, by \{\textbackslash em batching the bootstrapping operation\}. Previous FHE schemes all required Ω\textasciitilde (\textbackslash secparam3.5) computation per gate. At the core of our construction is a much more effective approach for managing the noise level of lattice-based ciphertexts as homomorphic operations are performed, using some new techniques recently introduced by Brakerski and Vaikuntanathan (FOCS 2011).},
+  pubstate = {prepublished},
+  keywords = {cryptography,fully homomorphic encryption},
+  annotation = {Publication info: Published elsewhere. Unknown where it was published},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Brakerski2011.pdf}
+}
+
 @inproceedings{brakerski2012,
   title = {Fully {{Homomorphic Encryption}} without {{Modulus Switching}} from {{Classical GapSVP}}},
   booktitle = {Advances in {{Cryptology}} – {{CRYPTO}} 2012},
@@ -250,8 +278,52 @@
   doi = {10.2307/j.ctv7h0smb},
   url = {https://www.jstor.org/stable/j.ctv7h0smb},
   urldate = {2024-08-15},
-  abstract = {This is the first full-scale biography of Leonhard Euler (1707-83), one of the greatest mathematicians and theoretical physicists of all time. In this comprehensive and authoritative account, Ronald Calinger connects the story of Euler's eventful life to the astonishing achievements that place him in the company of Archimedes, Newton, and Gauss. Drawing chiefly on Euler's massive published works and correspondence, which fill more than eighty volumes so far, this biography sets Euler's work in its multilayered context-personal, intellectual, institutional, political, cultural, religious, and social. It is a story of nearly incessant accomplishment, from Euler's fundamental contributions to almost every area of pure and applied mathematics-especially calculus, number theory, notation, optics, and celestial, rational, and fluid mechanics-to his advancements in shipbuilding, telescopes, ballistics, cartography, chronology, and music theory.  The narrative takes the reader from Euler's childhood and education in Basel through his first period in St. Petersburg, 1727-41, where he gained a European reputation by solving the Basel problem and systematically developing analytical mechanics. Invited to Berlin by Frederick II, Euler published his famous \emph{Introductio in analysin infinitorum} , devised continuum mechanics, and proposed a pulse theory of light. Returning to St. Petersburg in 1766, he created the analytical calculus of variations, developed the most precise lunar theory of the time that supported Newton's dynamics, and published the best-selling \emph{Letters to a German Princess} -all despite eye problems that ended in near-total blindness. In telling the remarkable story of Euler and how his achievements brought pan-European distinction to the Petersburg and Berlin academies of sciences, the book also demonstrates with new depth and detail the central role of mathematics in the Enlightenment.  Some images inside the book are unavailable due to digital copyright restrictions.},
+  abstract = {This is the first full-scale biography of Leonhard Euler (1707-83), one of the greatest mathematicians and theoretical physicists of all time. In this comprehensive and authoritative account, Ronald Calinger connects the story of Euler's eventful life to the astonishing achievements that place him in the company of Archimedes, Newton, and Gauss. Drawing chiefly on Euler's massive published works and correspondence, which fill more than eighty volumes so far, this biography sets Euler's work in its multilayered context-personal, intellectual, institutional, political, cultural, religious, and social. It is a story of nearly incessant accomplishment, from Euler's fundamental contributions to almost every area of pure and applied mathematics-especially calculus, number theory, notation, optics, and celestial, rational, and fluid mechanics-to his advancements in shipbuilding, telescopes, ballistics, cartography, chronology, and music theory.  The narrative takes the reader from Euler's childhood and education in Basel through his first period in St. Petersburg, 1727-41, where he gained a European reputation by solving the Basel problem and systematically developing analytical mechanics. Invited to Berlin by Frederick II, Euler published his famous \mkbibemph{Introductio in analysin infinitorum} , devised continuum mechanics, and proposed a pulse theory of light. Returning to St. Petersburg in 1766, he created the analytical calculus of variations, developed the most precise lunar theory of the time that supported Newton's dynamics, and published the best-selling \mkbibemph{Letters to a German Princess} -all despite eye problems that ended in near-total blindness. In telling the remarkable story of Euler and how his achievements brought pan-European distinction to the Petersburg and Berlin academies of sciences, the book also demonstrates with new depth and detail the central role of mathematics in the Enlightenment.  Some images inside the book are unavailable due to digital copyright restrictions.},
   isbn = {978-0-691-11927-4}
+}
+
+@online{chen2018,
+  title = {Homomorphic {{Lower Digits Removal}} and {{Improved FHE Bootstrapping}}},
+  author = {Chen, Hao and Han, Kyoohyung},
+  date = {2018},
+  number = {2018/067},
+  url = {https://eprint.iacr.org/2018/067},
+  urldate = {2025-01-14},
+  abstract = {Bootstrapping is a crucial operation in Gentry's breakthrough work on fully homomorphic encryption (FHE), where a homomorphic encryption scheme evaluates its own decryption algorithm. There has been a couple of implementations of bootstrapping, among which HElib arguably marks the state-of-the-art in terms of throughput, ciphertext/message size ratio and support for large plaintext moduli. In this work, we apply a family of "lowest digit removal" polynomials to improve homomorphic digit extraction algorithm which is crucial part in bootstrapping for both FV and BGV schemes. If the secret key has 1-norm \$h=l\_1(s)\$ and the plaintext modulus is \$t = p\textasciicircum r\$, we achieved bootstrapping depth \$\textbackslash log h + \textbackslash log( \textbackslash log\_p(ht))\$ in FV scheme. In case of the BGV scheme, we bring down the depth from \$\textbackslash log h + 2 \textbackslash log t\$ to \$\textbackslash log h + \textbackslash log t\$. We implemented bootstrapping for FV in the SEAL library. Besides the regular mode, we introduce another "slim mode'", which restrict the plaintexts to batched vectors in \$\textbackslash mathbb\{Z\}\_\{p\textasciicircum r\}\$. The slim mode has similar throughput as the regular mode, while each individual run is much faster and uses much smaller memory. For example, bootstrapping takes \$6.75\$ seconds for 7 bit plaintext space with 64 slots and \$1381\$ seconds for \$GF(257\textasciicircum\{128\})\$ plaintext space with 128 slots. We also implemented our improved digit extraction procedure for the BGV scheme in HElib.},
+  pubstate = {prepublished},
+  keywords = {Bootstrapping,Fully Homomorphic Encryption},
+  annotation = {Publication info: A minor revision of an IACR publication in EUROCRYPT 2018}
+}
+
+@inproceedings{chen2018a,
+  title = {Homomorphic {{Lower Digits Removal}} and {{Improved FHE Bootstrapping}}},
+  booktitle = {Advances in {{Cryptology}} – {{EUROCRYPT}} 2018},
+  author = {Chen, Hao and Han, Kyoohyung},
+  editor = {Nielsen, Jesper Buus and Rijmen, Vincent},
+  date = {2018},
+  pages = {315--337},
+  publisher = {Springer International Publishing},
+  location = {Cham},
+  doi = {10.1007/978-3-319-78381-9_12},
+  abstract = {Bootstrapping is a crucial operation in Gentry’s breakthrough work on fully homomorphic encryption (FHE), where a homomorphic encryption scheme evaluates its own decryption algorithm. There has been a couple of implementations of bootstrapping, among which HElib arguably marks the state-of-the-art in terms of throughput, ciphertext/message size ratio and support for large plaintext moduli.},
+  isbn = {978-3-319-78381-9},
+  langid = {english},
+  keywords = {Bootstrapping,Homomorphic encryption,Implementation},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Chen2018.pdf}
+}
+
+@online{cheon2016,
+  title = {Homomorphic {{Encryption}} for {{Arithmetic}} of {{Approximate Numbers}}},
+  author = {Cheon, Jung Hee and Kim, Andrey and Kim, Miran and Song, Yongsoo},
+  date = {2016},
+  number = {2016/421},
+  url = {https://eprint.iacr.org/2016/421},
+  urldate = {2025-01-17},
+  abstract = {We suggest a method to construct a homomorphic encryption scheme for approximate arithmetic. It supports an approximate addition and multiplication of encrypted messages, together with a new rescaling procedure for managing the magnitude of plaintext. This procedure truncates a ciphertext into a smaller modulus, which leads to rounding of plaintext. The main idea is to add a noise following significant figures which contain a main message. This noise is originally added to the plaintext for security, but considered to be a part of error occurring during approximate computations that is reduced along with plaintext by rescaling. As a result, our decryption structure outputs an approximate value of plaintext with a predetermined precision. We also propose a new batching technique for a RLWE-based construction. A plaintext polynomial is an element of a cyclotomic ring of characteristic zero and it is mapped to a message vector of complex numbers via complex canonical embedding map, which is an isometric ring homomorphism. This transformation does not blow up the size of errors, therefore enables us to preserve the precision of plaintext after encoding. In our construction, the bit size of ciphertext modulus grows linearly with the depth of the circuit being evaluated due to rescaling procedure, while all the previous works either require an exponentially large size of modulus or expensive computations such as bootstrapping or bit extraction. One important feature of our method is that the precision loss during evaluation is bounded by the depth of a circuit and it exceeds at most one more bit compared to unencrypted approximate arithmetic such as floating-point operations. In addition to the basic approximate circuits, we show that our scheme can be applied to the efficient evaluation of transcendental functions such as multiplicative inverse, exponential function, logistic function and discrete Fourier transform.},
+  pubstate = {prepublished},
+  keywords = {approximate arithmetic,Homomorphic encryption},
+  annotation = {Publication info: Published by the IACR in ASIACRYPT 2017},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Cheon2016.pdf}
 }
 
 @article{chillotti,
@@ -444,6 +516,13 @@
   abstract = {Product quantization (PQ) is an effective vector quantization method. A product quantizer can generate an exponentially large codebook at very low memory/time cost. The essence of PQ is to decompose the high-dimensional vector space into the Cartesian product of subspaces and then quantize these subspaces separately. The optimal space decomposition is important for the PQ performance, but still remains an unaddressed issue. In this paper, we optimize PQ by minimizing quantization distortions w.r.t the space decomposition and the quantization codebooks. We present two novel solutions to this challenging optimization problem. The first solution iteratively solves two simpler sub-problems. The second solution is based on a Gaussian assumption and provides theoretical analysis of the optimality. We evaluate our optimized product quantizers in three applications: (i) compact encoding for exhaustive ranking [1], (ii) building inverted multi-indexing for non-exhaustive search [2], and (iii) compacting image representations for image retrieval [3]. In all applications our optimized product quantizers outperform existing solutions.},
   eventtitle = {{{IEEE Transactions}} on {{Pattern Analysis}} and {{Machine Intelligence}}},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/ge2014.pdf;/home/thomas/Zotero/storage/3HGULA2E/6678503.html}
+}
+
+@article{geelen,
+  title = {Bootstrapping {{Algorithms}} for {{BGV}} and {{FV}}},
+  author = {Geelen, Robin},
+  langid = {english},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Geelen.pdf}
 }
 
 @online{geelen2022,
@@ -877,6 +956,20 @@
   file = {/home/thomas/Documents/Obsidian Vault/PDFs/Kim2021.pdf}
 }
 
+@online{kim2024a,
+  title = {Simpler and {{Faster BFV Bootstrapping}} for {{Arbitrary Plaintext Modulus}} from {{CKKS}}},
+  author = {Kim, Jaehyung and Seo, Jinyeong and Song, Yongsoo},
+  date = {2024},
+  number = {2024/109},
+  url = {https://eprint.iacr.org/2024/109},
+  urldate = {2025-01-14},
+  abstract = {Bootstrapping is currently the only known method for constructing fully homomorphic encryptions. In the BFV scheme specifically, bootstrapping aims to reduce the error of a ciphertext while preserving the encrypted plaintext. The existing BFV bootstrapping methods follow the same pipeline, relying on the evaluation of a digit extraction polynomial to annihilate the error located in the least significant digits. However, due to its strong dependence on performance, bootstrapping could only utilize a limited form of plaintext modulus, such as a power of a small prime number. In this paper, we present a novel approach to instantiate BFV bootstrapping, distinct from the previous digit extraction-based method.  The core idea of our bootstrapping is to utilize CKKS bootstrapping as a subroutine, so the performance of our method mainly depends on the underlying CKKS bootstrapping rather than the plaintext modulus. We implement our method at a proof-of-concept level to provide concrete benchmark results.  When performing the bootstrapping operation for a 51-bits plaintext modulus, our method improves the previous digit extraction-based method by a factor of 37.9 in latency and 29.4 in throughput.  Additionally, we achieve viable bootstrapping performance for large plaintext moduli, such as 144-bits and 234-bits, which has never been measured before.},
+  pubstate = {prepublished},
+  keywords = {BFV,Bootstrapping,Homomorphic Encryption},
+  annotation = {Publication info: Published elsewhere. Minor revision. ACM CCS 2024},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Kim2024.pdf}
+}
+
 @book{koblitz1994,
   title = {A {{Course}} in {{Number Theory}} and {{Cryptography}}},
   author = {Koblitz, Neal},
@@ -992,19 +1085,6 @@
   abstract = {The topic of this thesis is to define a unified and generalized scheme for Hebbian approaches in non-Euclidean spaces for unsupervised and supervised learning. This can be realized in different ways. One possibility is the replacement of the inner product by a semi-inner product (SIP). A SIP relaxes the strict properties of an inner product but preserves the linear aspect in the first argument. Thus, these SIPs are natural equivalents of inner products generating Banach spaces instead of Hilbert spaces for inner products. In this work SIPs for Banach spaces are considered for unsupervised Hebbian like learning approaches. Further, the learning scheme of the supervised Learning Vector Quantization (LVQ) network, which is originally designed for applications in Euclidean data space, can be interpreted under specific circumstances as a Hebbian like learning, too. It is shown that, non-Euclidean metrics applied in LVQ can improve the performance of classification learning compared to Euclidean variants.The previously addressed Hebbian learning methods are vectorial approaches. However, if the data space is a vector space of matrices equipped with a respective matrix norm, then matrix approaches for Hebbian like learning methods become of interest. The extension of these methods in non-Euclidean spaces of matrices to process matrix data is the last main point of this thesis.},
   isbn = {978-94-034-1470-6},
   file = {/home/thomas/Documents/Obsidian Vault/Sources/lange2019.pdf}
-}
-
-@online{lepoint2014,
-  title = {A {{Comparison}} of the {{Homomorphic Encryption Schemes FV}} and {{YASHE}}},
-  author = {Lepoint, Tancrède and Naehrig, Michael},
-  date = {2014},
-  number = {2014/062},
-  url = {https://eprint.iacr.org/2014/062},
-  urldate = {2024-12-17},
-  abstract = {We conduct a theoretical and practical comparison of two Ring-LWE-based, scale-invariant, leveled homomorphic encryption schemes – Fan and Vercauteren’s adaptation of BGV and the YASHE scheme proposed by Bos, Lauter, Loftus and Naehrig. In particular, we explain how to choose parameters to ensure correctness and security against lattice attacks. Our parameter selection improves the approach of van de Pol and Smart to choose parameters for schemes based on the Ring-LWE problem by using the BKZ-2.0 simulation algorithm. We implemented both encryption schemes in C++, using the arithmetic library FLINT, and compared them in practice to assess their respective strengths and weaknesses. In particular, we performed a homomorphic evaluation of the lightweight block cipher SIMON. Combining block ciphers with homomorphic encryption allows to solve the gargantuan ciphertext expansion in cloud applications.},
-  pubstate = {prepublished},
-  keywords = {BKZ,Implementations,Leveled Homomorphic Encryption,Parameter Selection,SIMON},
-  annotation = {Publication info: Published elsewhere. Major revision. AFRICACRYPT 2014}
 }
 
 @online{lepoint2014a,
@@ -1133,6 +1213,24 @@
   file = {/home/thomas/Documents/Obsidian Vault/PDFs/marcolla2022.pdf}
 }
 
+@article{marcolla2022a,
+  title = {Survey on {{Fully Homomorphic Encryption}}, {{Theory}}, and {{Applications}}},
+  author = {Marcolla, Chiara and Sucasas, Victor and Manzano, Marc and Bassoli, Riccardo and Fitzek, Frank H. P. and Aaraj, Najwa},
+  date = {2022-10},
+  journaltitle = {Proceedings of the IEEE},
+  volume = {110},
+  number = {10},
+  pages = {1572--1609},
+  issn = {1558-2256},
+  doi = {10.1109/JPROC.2022.3205665},
+  url = {https://ieeexplore.ieee.org/document/9910347/?arnumber=9910347},
+  urldate = {2025-01-15},
+  abstract = {Data privacy concerns are increasing significantly in the context of the Internet of Things, cloud services, edge computing, artificial intelligence applications, and other applications enabled by next-generation networks. Homomorphic encryption addresses privacy challenges by enabling multiple operations to be performed on encrypted messages without decryption. This article comprehensively addresses homomorphic encryption from both theoretical and practical perspectives. This article delves into the mathematical foundations required to understand fully homomorphic encryption ( \textbackslash textsf FHE ). It consequently covers design fundamentals and security properties of \textbackslash textsf FHE and describes the main \textbackslash textsf FHE schemes based on various mathematical problems. On a more practical level, this article presents a view on privacy-preserving machine learning using homomorphic encryption and then surveys \textbackslash textsf FHE at length from an engineering angle, covering the potential application of \textbackslash textsf FHE in fog computing and cloud computing services. It also provides a comprehensive analysis of existing state-of-the-art \textbackslash textsf FHE libraries and tools, implemented in software and hardware, and the performance thereof.},
+  eventtitle = {Proceedings of the {{IEEE}}},
+  keywords = {Cloud computing,fog computing,fully homomorphic encryption (FHE),Gaussian distribution,homomorphic encryption,Homomorphic encryption,Internet of Things,Internet of Things (IoT),lattices,neural networks,Neural networks,Privacy,Public key},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Marcolla2022.pdf;/home/thomas/Zotero/storage/UVQBDMJJ/9910347.html}
+}
+
 @book{mcandrew2016,
   title = {Introduction to {{Cryptography}} with {{Open-Source Software}}},
   author = {McAndrew, Alasdair},
@@ -1167,6 +1265,13 @@
   pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning},
   file = {/home/thomas/Documents/Obsidian Vault/PDFs/mcmahan2023.pdf;/home/thomas/Zotero/storage/MQNHWPVV/1602.html}
+}
+
+@article{micciancio,
+  title = {Lattice-Based {{Cryptography}}},
+  author = {Micciancio, Daniele and Regev, Oded},
+  langid = {english},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Micciancio.pdf}
 }
 
 @online{millar2011,
@@ -1238,6 +1343,24 @@
   abstract = {The technique of iterative weighted linear regression can be used to obtain maximum likelihood estimates of the parameters with observations distributed according to some exponential family and systematic effects that can be made linear by a suitable transformation. A generalization of the analysis of variance is given for these models using log-likelihoods. These generalized linear models are illustrated by examples relating to four distributions; the Normal, Binomial (probit analysis, etc.), Poisson (contingency tables) and gamma (variance components). The implications of the approach in designing statistics courses are discussed.}
 }
 
+@book{neukirch1999,
+  title = {Algebraic {{Number Theory}}},
+  author = {Neukirch, Jürgen},
+  editor = {Chern, S. S. and Eckmann, B. and De La Harpe, P. and Hironaka, H. and Hirzebruch, F. and Hitchin, N. and Hörmander, L. and Knus, M.-A. and Kupiainen, A. and Lannes, J. and Lebeau, G. and Ratner, M. and Serre, D. and Sinai, Ya. G. and Sloane, N. J. A. and Tits, J. and Waldschmidt, M. and Watanabe, S. and Berger, M. and Coates, J. and Varadhan, S. R. S.},
+  editortype = {redactor},
+  date = {1999},
+  series = {Grundlehren Der Mathematischen {{Wissenschaften}}},
+  volume = {322},
+  publisher = {Springer},
+  location = {Berlin, Heidelberg},
+  doi = {10.1007/978-3-662-03983-0},
+  url = {http://link.springer.com/10.1007/978-3-662-03983-0},
+  urldate = {2025-01-13},
+  isbn = {978-3-642-08473-7 978-3-662-03983-0},
+  keywords = {algebra,Algebraic Number Theory,Arithmetic Algebraic Geometry,File available at Lightning Source,number theory},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Neukirch1999.pdf}
+}
+
 @book{nita2023,
   title = {Advances to {{Homomorphic}} and {{Searchable Encryption}}},
   author = {Nita, Stefania Loredana and Mihailescu, Marius Iulian},
@@ -1267,6 +1390,13 @@
   file = {/home/thomas/Documents/Obsidian Vault/Sources/olson2017.pdf}
 }
 
+@article{peikert,
+  title = {A {{Decade}} of {{Lattice Cryptography}}},
+  author = {Peikert, Chris},
+  langid = {english},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Peikert.pdf}
+}
+
 @online{peikert2015,
   title = {A {{Decade}} of {{Lattice Cryptography}}},
   author = {Peikert, Chris},
@@ -1278,7 +1408,14 @@
   pubstate = {prepublished},
   keywords = {lattices,learning with errors,short integer solution,survey},
   annotation = {Publication info: Preprint. MINOR revision.},
-  file = {/home/thomas/Documents/Obsidian Vault/PDFs/peikert2015.pdf}
+  file = {/home/thomas/Zotero/storage/DNHAENMJ/peikert2015.pdf}
+}
+
+@article{perrin,
+  title = {A {{Summary}} of the {{FV Homomorphic Encryption Scheme}} and the {{Average-Case Noise Growth}}},
+  author = {Perrin, Derek},
+  langid = {english},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Perrin.pdf}
 }
 
 @article{prasad2012,
@@ -1354,6 +1491,36 @@
   file = {/home/thomas/Documents/Obsidian Vault/Sources/reddi2018.pdf;/home/thomas/Zotero/storage/W6JVNWF3/1810.html}
 }
 
+@online{regev2003,
+  title = {Quantum {{Computation}} and {{Lattice Problems}}},
+  author = {Regev, Oded},
+  date = {2003-04-01},
+  eprint = {cs/0304005},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.cs/0304005},
+  url = {http://arxiv.org/abs/cs/0304005},
+  urldate = {2025-01-03},
+  abstract = {We present the first explicit connection between quantum computation and lattice problems. Namely, we show a solution to the Unique Shortest Vector Problem (SVP) under the assumption that there exists an algorithm that solves the hidden subgroup problem on the dihedral group by coset sampling. Moreover, we solve the hidden subgroup problem on the dihedral group by using an average case subset sum routine. By combining the two results, we get a quantum reduction from \$\textbackslash Theta(n\textasciicircum\{2.5\})\$-unique-SVP to the average case subset sum problem.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Data Structures and Algorithms},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Regev2003.pdf;/home/thomas/Zotero/storage/EULZFPBE/0304005.html}
+}
+
+@article{regev2009,
+  title = {On Lattices, Learning with Errors, Random Linear Codes, and Cryptography},
+  author = {Regev, Oded},
+  date = {2009-09-08},
+  journaltitle = {J. ACM},
+  volume = {56},
+  number = {6},
+  pages = {34:1--34:40},
+  issn = {0004-5411},
+  doi = {10.1145/1568318.1568324},
+  url = {https://dl.acm.org/doi/10.1145/1568318.1568324},
+  urldate = {2025-01-03},
+  abstract = {Our main result is a reduction from worst-case lattice problems such as GapSVP and SIVP to a certain learning problem. This learning problem is a natural extension of the “learning from parity with error” problem to higher moduli. It can also be viewed as the problem of decoding from a random linear code. This, we believe, gives a strong indication that these problems are hard. Our reduction, however, is quantum. Hence, an efficient solution to the learning problem implies a quantum algorithm for GapSVP and SIVP. A main open question is whether this reduction can be made classical (i.e., nonquantum).We also present a (classical) public-key cryptosystem whose security is based on the hardness of the learning problem. By the main result, its security is also based on the worst-case quantum hardness of GapSVP and SIVP. The new cryptosystem is much more efficient than previous lattice-based cryptosystems: the public key is of size Õ(n2) and encrypting a message increases its size by a factor of Õ(n) (in previous cryptosystems these values are Õ(n4) and Õ(n2), respectively). In fact, under the assumption that all parties share a random bit string of length Õ(n2), the size of the public key can be reduced to Õ(n).}
+}
+
 @online{regev2024,
   title = {On {{Lattices}}, {{Learning}} with {{Errors}}, {{Random Linear Codes}}, and {{Cryptography}}},
   author = {Regev, Oded},
@@ -1393,6 +1560,13 @@
   urldate = {2024-08-08},
   abstract = {An encryption method is presented with the novel property that publicly revealing an encryption key does not thereby reveal the corresponding decryption key. This has two important consequences: (1) Couriers or other secure means are not needed to transmit keys, since a message can be enciphered using an encryption key publicly revealed by the intented recipient. Only he can decipher the message, since only he knows the corresponding decryption key. (2) A message can be “signed” using a privately held decryption key. Anyone can verify this signature using the corresponding publicly revealed encryption key. Signatures cannot be forged, and a signer cannot later deny the validity of his signature. This has obvious applications in “electronic mail” and “electronic funds transfer” systems. A message is encrypted by representing it as a number M, raising M to a publicly specified power e, and then taking the remainder when the result is divided by the publicly specified product, n, of two large secret primer numbers p and q. Decryption is similar; only a different, secret, power d is used, where e * d ≡ 1(mod (p - 1) * (q - 1)). The security of the system rests in part on the difficulty of factoring the published divisor, n.},
   file = {/home/thomas/Documents/Obsidian Vault/PDFs/rivest1978a.pdf}
+}
+
+@article{rosca,
+  title = {On Algebraic Variants of {{Learning With Errors}}},
+  author = {Rosca, Georgiana-Miruna},
+  langid = {english},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Rosca.pdf}
 }
 
 @book{rudin1976,
@@ -1770,4 +1944,11 @@
   url = {https://www.semanticscholar.org/paper/Faster-homomorphic-comparison-operations-for-BGV-Iliashenko-Zucca/868407cd7c2491c596c416b3c287eb19596d1035},
   urldate = {2024-10-02},
   file = {/home/thomas/Zotero/storage/YYKZ5ZV9/868407cd7c2491c596c416b3c287eb19596d1035.html}
+}
+
+@online{zotero-537,
+  title = {Digit Extraction Bootstrapping - {{Google Suche}}},
+  url = {https://www.google.com/search?q=digit+extraction+bootstrapping&sourceid=chrome&ie=UTF-8},
+  urldate = {2025-01-14},
+  file = {/home/thomas/Zotero/storage/MQPB7MDU/search.html}
 }

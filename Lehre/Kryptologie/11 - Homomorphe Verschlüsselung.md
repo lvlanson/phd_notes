@@ -33,7 +33,7 @@
 >Ein **Homomorphismus** zwischen zwei Gruppen $(G, \cdot)$ und $(H, \circ)$ ist eine Abbildung $$\phi:G\to H$$ sodass für $g_{1},g_{2} \in G$
 >$$\phi(g_{1} \cdot g_{2})= \phi(g_{1}) \circ \phi(g_{2})$$
 >>[!example]- Beispiel
->>Sei $G$ eine [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|Gruppe]] und $g \in G$. Wir defineren die Abbildung
+>>Sei $(G, \odot)$ eine [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|Gruppe]] und $g \in G$. Wir defineren die Abbildung
 >>$$\phi: \mathbb{Z} \to G$$
 >>mit $$\phi(n)=g^n$$
 >>Dann ist $\phi$ ein **Gruppenhomomorphismus**, da

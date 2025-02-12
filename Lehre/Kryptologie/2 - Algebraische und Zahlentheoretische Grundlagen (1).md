@@ -98,7 +98,7 @@
 ^c53dc5
 
 >[!lemma] Behauptung 
->Die ganzen Zahlen $(\mathbb{Z},+,\cdot)$ bilden eine Körper
+>Die ganzen Zahlen $(\mathbb{R},+,\cdot)$ bilden eine Körper
 >>[!proof] Ohne Beweis
 
 >[!def] Definition Äquivalenrelation

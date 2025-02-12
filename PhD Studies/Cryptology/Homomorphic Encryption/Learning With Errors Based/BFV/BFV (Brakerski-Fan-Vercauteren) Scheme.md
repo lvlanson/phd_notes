@@ -34,19 +34,19 @@
 >with $(x^n+1)$ being a *cyclotomic polynomial*, $n \in \mathbb{N}$ and $t >1$. The ciphertext space is defined as
 >$$\mathcal{C}= R_{q} \times R_{q}$$ and
 >$$R_{q}= \mathbb{Z}_{q}[x]/(x^n+1)$$
->with  $(x^n+1)$ being a *cyclotomic polynomial* again, $n \in \mathbb{N}$ and $q \gg t$. We call
+>with  $(x^n+1)$ being a *cyclotomic polynomial* again, $n \in \mathbb{N}$ and $t \ll q$. We call
 >- $t > 1$ the **<span style="color:#38ffa9">plaintext coefficient</span>**
 >- $q \in \mathbb{N}$ the **<span style="color:#38ffa9">ciphertext coefficient</span>**
 >
 > ---
 >
-> **<span style="color:#38ffa9">The space parameters are given as</span>**
+> **<span style="color:#38ffa9">The space-parameters are given as</span>**
 > $$(t,q,n)$$
 > 
 > ---
 >
 >>[!remark] Remark on the Degree of the Polynomials
->>The [[../../../../Mathematic Basics/Abstract Algebra/Judson and Dummit/7 - Polynomial Rings#^a2163f|degree]] of the polynomials in $f \in R_{t}$ and $f  \in R_{q}$ is bounded by $$\text{deg }f < n$$
+>>The [[../../../../Mathematic Basics/Abstract Algebra/Judson and Dummit/7 - Polynomial Rings#^a2163f|degree]] of the polynomials in $\boldsymbol{f} \in R_{t}$ and $\boldsymbol{f}  \in R_{q}$ is bounded by $$\text{deg }\boldsymbol{f} < n$$
 >
 >>[!remark] Remark on the Choice of the Plaintext and Ciphertext coefficients
 >> The coefficients $t,q \in \mathbb{Z}$ are chosen such that
@@ -70,7 +70,7 @@
 >$$B = k \cdot \sigma$$
 >
 >>[!important]
->>When we sample from $\chi$ in this Encryption scheme, we sample the coefficients in $\mathbb{Z}_{s}[x]/(x^n+1)$ with the coefficients being at most $B$, i.e. for some polynomial $g \in \mathbb{Z}_{s}[x]/(x^n+1)$
+>>When we sample from $\chi$ in this encryption scheme, we sample the coefficients in $\mathbb{Z}_{s}[x]/(x^n+1)$ with these being at most $B$, i.e. for some polynomial $\boldsymbol{g} \in \mathbb{Z}_{s}[x]/(x^n+1)$
 >>$$g(x) = a_{0}+ a_{1}x+\dots+a_{n-1}x^{n-1}$$
 >>the coefficients are bounded with
 >>$$0 \leq a_{i} \leq B$$
@@ -81,7 +81,7 @@
 >>$$P_{x \leftarrow \mathcal{N}(0, \sigma^2)}\big[\lvert x \rvert > k \cdot \sigma \big] = \text{erf}\left( \frac{k}{\sqrt{ 2 }} \right)$$
 >>![[Figures/errors_gaussian.png|center|800]]
 >>
->> Denote the error tolerance with $\varepsilon$. We can determine $k$ according to the error-tolerance with
+>> Fix the error tolerance with $\varepsilon$. We can determine $k$ according to the error-tolerance with
 >> $$\beta(\varepsilon):= \min\left\{ \;\; \beta \;\; \Bigg\vert \;\text{erf}\left( \frac{\beta}{\sqrt{ 2 }}  \right) < \varepsilon \right\}$$
 >> then $k = \beta(\varepsilon)$ and samples are then $B=k \cdot \sigma$-bounded.
 >> 
@@ -95,8 +95,6 @@
 >[!algo] Encryption Scheme ([[../../../../../PDFs/Fan2012.pdf#page=4|Source]])
 >
 >>[!schlüsselerzeugung] Key Generation  
->> 
->> 
 >> 
 >>**<span style="color:#f7b8ff"> <u>Secret Key</u>: </span>** `SecretKeyGen(λ) -> sk`
 >>
@@ -138,9 +136,9 @@
 >>
 >>There are 2 versions suggested. 
 >>
->> <u>Version 1</u> `EvaluateKeyGen(sk, T) -> rlk`
+>> <u>Version 1</u> `EvaluationKeyGen(sk, T) -> rlk`
 >> 
->> <u>Version 2 </u>`EvaluateKeyGen(sk, p) -> rlk`
+>> <u>Version 2 </u>`EvaluationKeyGen(sk, p) -> rlk`
 >>
 >> **<span style="color:#f7b8ff">Output</span>**
 >> $$rlk =$$
@@ -157,7 +155,8 @@
 >> 
 >> Sample
 >> $$\begin{align}
->> \boldsymbol{u}, \boldsymbol{e}_{1}, \boldsymbol{e}_{2} \leftarrow \chi
+>> \boldsymbol{u} &\leftarrow R_{2}  \\ 
+>> \boldsymbol{e}_{1}, \boldsymbol{e}_{2} &\leftarrow \chi
 >>\end{align}$$
 >> 
 >> Compute
@@ -171,11 +170,11 @@
 >>
 >>---
 >>
->>**<span style="color:#f7b8ff"><u>Decryption</u>:</span>** `Decrypt(sk, ct)`
+>>**<span style="color:#f7b8ff"><u>Decryption</u>:</span>** `Decrypt(sk, ct) -> m`
 >>
 >> **<span style="color:#f7b8ff">Input</span>** 
->>- $sk = (\boldsymbol{s})$ denote the *secret key*
->>- $ct = (\boldsymbol{c}_{0}, \boldsymbol{c}_{1})$ denote the *cipher text*
+>>- $sk = (\boldsymbol{s})$ denotes the *secret key*
+>>- $ct = (\boldsymbol{c}_{0}, \boldsymbol{c}_{1})$ denotes the *cipher text*
 >>
 >> **<span style="color:#f7b8ff">Procedure</span>** 
 >>
@@ -216,12 +215,12 @@
 >>
 >>Expanding $[\;\cdot\;]_{q}$ with some residue $\boldsymbol{r} \in R_{q}$ gives
 >>$$\begin{align}
->> \phantom{[{\color{#38ffa9}\boldsymbol{c}_{0}}+ {\color{#38B4ff}\boldsymbol{c}_{1}} \boldsymbol{s}]_{q}}&= \Delta \boldsymbol{m}+ \boldsymbol{v} + \boldsymbol{r}q \qquad\qquad\qquad\qquad\qquad\qquad\;\tag{1}
+>> \phantom{[{\color{#38ffa9}\boldsymbol{c}_{0}}+ {\color{#38B4ff}\boldsymbol{c}_{1}} \boldsymbol{s}]_{q}}&= \Delta \boldsymbol{m}+ \boldsymbol{v} + q\boldsymbol{r} \qquad\qquad\qquad\qquad\qquad\qquad\;\tag{1}
 >>\end{align}$$
 >>We **<span style="color:#f7b8ff">continue with</span>** 
 >>$$\boldsymbol{m} = \left[ \left\lfloor {\color{#f7b8ff}\frac{t \cdot [\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}{q}} \right\rceil  \right]_{t}$$
 >>and calculate  
->>$$\begin{align} \\
+>>$$\begin{align} 
 >> \frac{t \cdot [\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q}}{q} &= \frac{t \cdot (\Delta \boldsymbol{m}+ \boldsymbol{v} + \boldsymbol{r}q )}{q} \\
 >> &=  \frac{t}{q}\Delta \boldsymbol{m}+ \frac{t}{q}\boldsymbol{v} + t\boldsymbol{r}  \\
 >>\end{align}$$
@@ -313,16 +312,49 @@
 >>>\boldsymbol{m}_{i} = \left[ \left\lfloor \frac{t \cdot [{\color{#f7b8ff}\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}}]_{q}}{q} \right\rceil  \right]_{t} =  \left[ \left\lfloor \frac{t \cdot [{\color{#f7b8ff}ct_{i}(\boldsymbol{s})}]_{q}}{q} \right\rceil  \right]_{t}
 >>>\end{align}$$
 >>>Hence
->>>$$ct_{i}(\boldsymbol{s})= \boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s} = \Delta \boldsymbol{m}+ \boldsymbol{v} + \boldsymbol{r}q$$
+>>>$$[ct_{i}(\boldsymbol{s})]_{q}= [\boldsymbol{c}_{0}+ \boldsymbol{c}_{1} \cdot \boldsymbol{s}]_{q} = \Delta \boldsymbol{m}+ \boldsymbol{v} + \boldsymbol{r}q$$
 >>>as we showed in the correctness proof in equation $(1)$. Now, note that if we multiply two ciphers evaluated at $\boldsymbol{s}$ we get
 >>>$$\begin{align}
 >>> (ct_{1} \cdot ct_{2})(\boldsymbol{s}) &= ({\color{#38ffa9}\Delta \boldsymbol{m}_{1}}+ {\color{#e9ffad}\boldsymbol{v}_{1}} + {\color{#f7b8ff}\boldsymbol{r}_{1}q})(\Delta \boldsymbol{m}_{2}+ \boldsymbol{v}_{2} + \boldsymbol{r}_{2}q) \\
 >>> &= {\color{#38ffa9}\Delta^2\boldsymbol{m}_{1}\boldsymbol{m}_{2} + \Delta \boldsymbol{m}_{1}\boldsymbol{v}_{2} + \Delta q\boldsymbol{m}_{1}\boldsymbol{r}_{2}} + { \color{#e9ffad}\Delta \boldsymbol{m}_{2}\boldsymbol{v}_{1} + \boldsymbol{v}_{1}\boldsymbol{v}_{2} + q\boldsymbol{v_{1}}\boldsymbol{v_{2}}} \; + {\color{#f7b8ff} \Delta q\boldsymbol{m}_{2}\boldsymbol{r}_{1}+q\boldsymbol{r}_{1}\boldsymbol{v}_{2} + q^2\boldsymbol{r}_{1}\boldsymbol{r}_{2}} \\
 >>> &= \Delta^2\boldsymbol{m}_{1}\boldsymbol{m}_{2} + \Delta(\boldsymbol{m}_{1}\boldsymbol{v}_{2}+\boldsymbol{m}_{2}\boldsymbol{v}_{1}) + q(\boldsymbol{v}_{1}\boldsymbol{r}_{2}+ \boldsymbol{v}_{2}\boldsymbol{r}_{1}) + \Delta q(\boldsymbol{m}_{1}\boldsymbol{r}_{2}+\boldsymbol{m}_{2}\boldsymbol{r}_{1})+ \boldsymbol{v}_{1}\boldsymbol{v}_{2} + q^2\boldsymbol{r}_{1}\boldsymbol{r}_{2}
 >>>\end{align}$$
->>> Note, in the last line we wish to eliminate a factor of $\Delta$, i.e. multiply by $\frac{1}{\Delta}$, [EXPLAIN IS THEN IN A FORM WE NEED FOR A CIPHER]. Since $\Delta= \left\lfloor  \frac{q}{t}  \right\rfloor \leq \frac{q}{t}$ the terms with $q$ as factor would not cancel correctly anymore, when we calculate $\text{mod } q$ as the decryption process requires as next step. We instead choose a factor of $\dfrac{1}{\frac{q}{t}} = \dfrac{t}{q} \approx \frac{1}{\Delta}$ to circumvent these rounding errors on $q^2\boldsymbol{r}_{1}\boldsymbol{r}_{2}$.
+>>> Note, in the last line we wish to eliminate a factor of $\Delta$, i.e. multiply by $\frac{1}{\Delta}$, such that we yield the form which one would expect when encrypting $[\boldsymbol{m}_{1} \cdot \boldsymbol{m}_{2}]_{t}$. The last term $q^2\boldsymbol{r}_{1}\boldsymbol{r}_{2}$ would cause great noise if we can't reduce the square from $q^2$. Since $\Delta= \left\lfloor  \frac{q}{t}  \right\rfloor$ and $\frac{q}{t}$ are very close, we multiply with $\left( \frac{q}{t} \right)^{-1}$ instead. 
+>>>
+>>> We will use the following facts
+>>> $$\begin{align}
+>>> \boldsymbol{m}_{1} \cdot \boldsymbol{m}_{2} &= [\boldsymbol{m}_{1} \cdot \boldsymbol{m}_{2}]_{t} + t \boldsymbol{r}_{m} \tag{2} \\
+>>> \boldsymbol{v}_{1} \cdot \boldsymbol{v}_{2} &= [\boldsymbol{v}_{1} \cdot \boldsymbol{v}_{2}]_{\Delta} + \Delta \boldsymbol{r}_{v} \tag{3} \\
+>>> t \cdot \Delta &= q - r_{t}(q) \tag{4}
+>>> \end{align}$$
+>>> Where $(2)$ and $(3)$ are just the reduction of the product with respect to some modulus and $\boldsymbol{r}$ being the remainder polynomial from the reduction $[\cdot]_{(\,\cdot\,)}$. Fact $(4)$ is due to $\Delta= \left\lfloor  \frac{q}{t}  \right\rfloor=\frac{q}{t} -r_{t}(q)$ with $0 \leq r_t(q) \ll 1$ being very small. We now reduce the raw cipher-product as suggested by multiplying with $\left( \frac{q}{t} \right)^{-1}$
+>>> $$\begin{align}
+>>> \frac{t(ct_{1} \cdot ct_{2})(\boldsymbol{s})}{q} &= \underbrace{ \frac{t}{q}\Delta^2\boldsymbol{m}_{1}\boldsymbol{m}_{2} }_{ (a) } + \underbrace{ \frac{t}{q}\Delta(\boldsymbol{m}_{1}\boldsymbol{v}_{2}+\boldsymbol{m}_{2}\boldsymbol{v}_{1}) }_{ (b) } + \underbrace{ \frac{t}{q}q(\boldsymbol{v}_{1}\boldsymbol{r}_{2}+ \boldsymbol{v}_{2}\boldsymbol{r}_{1}) }_{ (c) } \\ \\
+&\,+ \underbrace{ \frac{t}{q}\Delta q(\boldsymbol{m}_{1}\boldsymbol{r}_{2}+\boldsymbol{m}_{2}\boldsymbol{r}_{1}) }_{ (d) }+\underbrace{ \frac{t}{q}\boldsymbol{v}_{1}\boldsymbol{v}_{2} }_{ (e) } + \underbrace{ \frac{t}{q} q^2\boldsymbol{r}_{1}\boldsymbol{r}_{2} }_{ (f) }
+>>>\end{align}$$
+>>> We will now discuss how each term simplifies. Note, all these terms are embedded in $\text{mod } q$, i.e. $[\cdot]_q$
 >>> 
->>> The objective of the former part was to motivate why we choose to multiply by $\frac{t}{q}$. We will now consider the following representation
+>>> $(a)$
+>>> First we make use of fact $(4)$
+>>> $$\Delta = \frac{q-r_{t}(q)}{t}$$
+>>> Hence, we have
+>>> $$\begin{align}
+>>> \frac{t}{q}\Delta^2\boldsymbol{m}_{1}\boldsymbol{m}_{2} &= \frac{t}{q} \left( \frac{q-r_{t}(q)}{t} \right)^2 \boldsymbol{m}_{1}\boldsymbol{m}_{2} \\
+>>> &= \frac{\cancel{ t }}{q} \frac{(q-r_{t}(q))^2}{t^{\cancel{ 2 }}} \boldsymbol{m}_{1}\boldsymbol{m}_{2} \\
+>>> &= \frac{(q-r_{t}(q))^2}{qt} \boldsymbol{m}_{1}\boldsymbol{m}_{2} \\
+>>>\end{align}$$
+>>>We continue with fact $(1)$
+>>>$$\begin{align}
+>>> \phantom{\frac{t}{q}\Delta^2\boldsymbol{m}_{1}\boldsymbol{m}_{2}} &= \frac{(q-r_{t}(q))^2}{qt} \Big([\boldsymbol{m}_{1}\boldsymbol{m}_{2}]_{t}+t\boldsymbol{r}_{m}\Big) \\
+>>> &= \frac{(q-r_{t}(q))^2}{qt}[\boldsymbol{m}_{1}\boldsymbol{m}_{2}]_{t}+ \frac{(q-r_{t}(q))^2}{qt}t\boldsymbol{r}_{m} \\
+>>>\end{align}$$
+>>>Now we consider being under modulus $q$ we observe
+>>>$$\begin{align}
+>>> \frac{(q-r_{t}(q))^2}{qt} &= \frac{q^2}{qt} - \frac{2qr_{t}(q)}{qt} + \frac{r_{t}^2(q)}{q} \\
+>>> &=\frac{q}{t} - \frac{2r_{t}(q)}{t} + \frac{r^{2}_{t}(q)}{q}
+>>>\end{align}$$
+>>>
+>>> 
 >>> $$\begin{align}
 >>> (ct_{1} \cdot ct_{2})(\boldsymbol{s})&= (\boldsymbol{c_{0}}+\boldsymbol{c}_{1}\boldsymbol{s})(\boldsymbol{c_{0}}'+\boldsymbol{c}_{1}'\boldsymbol{s}) \\
 >>> &= \underbrace{ \boldsymbol{c}_{0}\boldsymbol{c}_{0}' }_{ =\widehat{\boldsymbol{c}}_{0} } + \underbrace{ \boldsymbol{c}_{0}\boldsymbol{c}_{1}' }_{ =\widehat{\boldsymbol{c}}_{1} }\boldsymbol{s} + \underbrace{ \boldsymbol{c}_{1}\boldsymbol{c}_{1}' }_{ =\widehat{\boldsymbol{c}}_{2} } \boldsymbol{s}^2 \\
@@ -339,4 +371,71 @@
 >> rlk &= \Big(\big[-(\boldsymbol{a} \cdot \boldsymbol{s} +  p \cdot \boldsymbol{s}^2)\big]_{p \cdot q}, \boldsymbol{a}\Big)\tag{Version 2}
 >>\end{align}$$
 
-$B(2\delta_{R}+1)<\frac{\Delta}{2}$
+I will provide you an estimate which deviates some from the author's estimation, but which is pretty close. Maybe this might be a good continuation point, or possibly there might be a typo in the paper as well. 
+
+First of all, assume we have the following expression and wish to simplify it
+$$\left[\left\lfloor  \frac{\left[a\right]_{pq}}{p}  \right\rceil \right]_{q}\tag{1}$$
+for arbitrary $a,p \in \mathbb{Z}$.  WSeeing your question, I can see where things go wrong. Your assumption $\big[[\,\cdot\,]_{pq}\big]_q = [\,\cdot\,]_q$ holds true for the integers, but it fails on the rationals (MAYBE ADD SOME MORE INSIGHT HERE).e focus for now on the enumerator 
+$$\frac{a \text{ mod } pq}{p}$$
+which will be some element of the residue class $a$ with respect to $pq$ and can therefore be written as
+$$a \text{ mod } pq = a +rpq$$
+for some residue $r \in \mathbb{Z}$. Hence, we rewrite the given expression in $(1)$ as
+$$\begin{align}
+\left[\left\lfloor  \frac{\left[a\right]_{pq}}{p}  \right\rceil \right]_{q} &= \left[\left\lfloor \frac{a +rpq}{p}  \right\rceil \right]_{q}\\
+&= \left[\left\lfloor \frac{a}{p} + rq  \right\rceil\right]_{q} \\
+&= \left[\left\lfloor \frac{a}{p}   \right\rceil + rq\right]_{q} \\
+&= \left[\left\lfloor \frac{a}{p}   \right\rceil \right]_{q} \tag{2}
+\end{align}$$
+Now, we continue to think about how to remove the rounding function from the expression by finding a suitable substitution. Thinking about how we can express $a$ with respect to the divisor $p$ in the division algorithm gives for some $k \in \mathbb{Z}$
+$$a = pk +r'$$
+with $\left\lceil  -\frac{p}{2}  \right\rceil  \leq r' < \left\lfloor  \frac{p}{2}  \right\rfloor$ where we reside in the symmetric residue system as you mentioned in your post. Note,
+$$r' = a \text{ mod } p$$
+Removing the residue yields an integer, such that we can remove the rounding to the closest integer, i.e.
+$$a = pk +r' \iff a - \text{ mod } p = pk$$
+with $pk \in \mathbb{Z}$. We can therefore now legally remove the rounding to the closest integer by substituting into equation $(2)$
+$$\begin{align}
+\left[\left\lfloor \frac{a}{p}   \right\rceil \right]_{q} &= \left[ \frac{a - a \text{ mod } p}{p} \right]_{q} \tag{3}
+\end{align}$$
+We will use this fact as template for the next computations on the ciphers. It is noteworthy, though we will work with polynomials, the computations we will work accordingly, because the rounding and modulus is concerned with the coefficients of the polynomials, which are integers/rationals. First, we consider
+$$\begin{align}
+\boldsymbol{c}_{2,0} &= \left[ \left\lfloor \frac{\widehat{\boldsymbol{c}}_{2} \cdot \texttt{rlk}[0]}{p} \right\rceil \right]_{q} \\
+            &= \left[ \left\lfloor \frac{\widehat{\boldsymbol{c}}_{2} \cdot \big[- (\boldsymbol{a}\boldsymbol{s}+\boldsymbol{e})+p\boldsymbol{s}^2\big]_{pq}}{p} \right\rceil \right]_{q} \\
+&=  \left[ \left\lfloor \frac{\widehat{\boldsymbol{c}}_{2} \cdot \big(- (\boldsymbol{a}\boldsymbol{s}+\boldsymbol{e})+p\boldsymbol{s}^2\big)}{p} \right\rceil \right]_{q}  \tag*{using (2)} \\
+&= \left[ \left\lfloor \frac{ - (\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s}+\widehat{\boldsymbol{c}}_{2}\boldsymbol{e})+\widehat{\boldsymbol{c}}_{2}p\boldsymbol{s}^2}{p} \right\rceil \right]_{q} \\
+&= \left[ -\left\lfloor \frac{  \widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s}+\widehat{\boldsymbol{c}}_{2}\boldsymbol{e}}{p} \right\rceil +\widehat{\boldsymbol{c}}_{2}\boldsymbol{s}^2\right]_{q} \\
+&= \left[  \frac{ - \Big((\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s}+\widehat{\boldsymbol{c}}_{2}\boldsymbol{e})-\big((\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s}+\widehat{\boldsymbol{c}}_{2}\boldsymbol{e})\text{ mod }p\big)\Big)}{p}  +\widehat{\boldsymbol{c}}_{2}\boldsymbol{s}^2\right]_{q} \tag*{using (3)}
+\end{align}$$
+and 
+$$\begin{align}
+\boldsymbol{c}_{2,1} &= \left[ \left\lfloor\frac{\widehat{\boldsymbol{c}}_{2} \cdot \texttt{rlk}[1]}{p}  \right\rceil \right]_{q} \\ 
+            &= \left[ \left\lfloor \frac{\widehat{\boldsymbol{c}}_{2}  \boldsymbol{a}}{p} \right\rceil \right]_{q} \\
+&= \left[  \frac{\widehat{\boldsymbol{c}}_{2}  \boldsymbol{a}-(\widehat{\boldsymbol{c}}_{2}  \boldsymbol{a} \text{ mod }p)}{p}  \right]_{q} \tag*{using (3)}
+\end{align}$$
+Using the definitions for the updated ciphers (note, you have a typo in your question, where you used $\widehat{\boldsymbol{c}}_2$ falsely in the updates), i.e.
+$$\begin{align}
+\boldsymbol{c}_{0}' &= \big[\widehat{\boldsymbol{c}}_0 + \boldsymbol{c}_{2,0}\big]_q \\
+        \boldsymbol{c}_{1}' &= \big[\widehat{\boldsymbol{c}}_1 + \boldsymbol{c}_{2,1}\big]_q 
+\end{align}$$
+For the relinearized cipher we have without considering the $[\,\cdot\,]_{q}$ operator, since all elements are $\text{ mod }q$ and will be embedded in $\text{ mod } q$
+$$\begin{align}
+\boldsymbol{c}_{0}' + \boldsymbol{c}_{1}'\boldsymbol{s} &= \widehat{\boldsymbol{c}}_0 + \boldsymbol{c}_{2,0} + \big(\widehat{\boldsymbol{c}}_1 + \boldsymbol{c}_{2,1}\big)\boldsymbol{s} \\
+&= \widehat{\boldsymbol{c}}_0 +  \frac{ - \Big((\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s}+\widehat{\boldsymbol{c}}_{2}\boldsymbol{e})-\big((\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s}+\widehat{\boldsymbol{c}}_{2}\boldsymbol{e})\text{ mod }p\big)\Big)}{p}  +\widehat{\boldsymbol{c}}_{2}\boldsymbol{s}^2 + \widehat{\boldsymbol{c}}_1\boldsymbol{s} + \left( \frac{\widehat{\boldsymbol{c}}_{2}  \boldsymbol{a}-(\widehat{\boldsymbol{c}}_{2}  \boldsymbol{a} \text{ mod }p)}{p}\right)\boldsymbol{s}  \\
+&=\widehat{\boldsymbol{c}}_0 + \widehat{\boldsymbol{c}}_1\boldsymbol{s} + \widehat{\boldsymbol{c}}_{2}\boldsymbol{s}^2 + \frac{\cancel{ -\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s} }-\widehat{\boldsymbol{c}}_{2}\boldsymbol{e}+\big((\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s}+\widehat{\boldsymbol{c}}_{2}\boldsymbol{e})\text{ mod }p\big) + \cancel{ \widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s} }-(\widehat{\boldsymbol{c}}_{2}  \boldsymbol{a} \text{ mod }p)\boldsymbol{s}}{p} \\
+&=\widehat{\boldsymbol{c}}_0 + \widehat{\boldsymbol{c}}_1\boldsymbol{s} + \widehat{\boldsymbol{c}}_{2}\boldsymbol{s}^2 - \underbrace{ \frac{-\widehat{\boldsymbol{c}}_{2}\boldsymbol{e}}{p} + \frac{(\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s}+\widehat{\boldsymbol{c}}_{2}\boldsymbol{e})\text{ mod }p}{p} - \frac{(\widehat{\boldsymbol{c}}_{2}  \boldsymbol{a} \text{ mod }p)\boldsymbol{s}}{p} }_{ \text{relinearisation error} }
+\end{align}$$
+We can now estimate the induced error. Note, when we $\text{ mod }p$ we get symmetric residues as already pointed out earlier, hence $\lvert\lvert [a]_{p} \rvert\rvert_{\infty}=\frac{p}{2}$
+$$\begin{align}
+\left\lvert \left\lvert  -  \frac{-\widehat{\boldsymbol{c}}_{2}\boldsymbol{e}}{p}  \right\rvert \right\rvert_{\infty} &=  \frac{\delta_{R}\cdot q \cdot B}{2p} \tag{4a}\\
+\left\lvert \left\lvert  \frac{(\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s}+\widehat{\boldsymbol{c}}_{2}\boldsymbol{e})\text{ mod }p}{p}  \right\rvert \right\rvert_{\infty} &= \frac{\frac{p}{2}}{p}  \\
+&= \frac{1}{2} \tag{4b} \\
+\left\lvert \left\lvert  \frac{(\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\text{ mod }p)\boldsymbol{s}}{p}  \right\rvert \right\rvert_{\infty} &= \frac{\lvert\lvert s \rvert\rvert_{\infty}\delta_{R} }{2}  \tag{4c}
+\end{align}$$
+In $(4a)$ the cipher is sampled from $R_{q}$ with zero-symmetric coefficients. In $(4b)$ and $(4c)$ we need to consider polynomials bounded by the $\text{ mod }p$ operation, where the coefficients are again zero-symmetric with respect to $p$. Only in $(4c)$ we need to further consider that this reduced polynomial needs to be multiplied with $\boldsymbol{s}$ which induces the ring expansion factor $\delta_{R}$. Combining these terms, we get
+$$\begin{align}
+\left\lvert \left\lvert  \frac{-\widehat{\boldsymbol{c}}_{2}\boldsymbol{e}}{p} + \frac{(\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s}+\widehat{\boldsymbol{c}}_{2}\boldsymbol{e})\text{ mod }p}{p} - \frac{(\widehat{\boldsymbol{c}}_{2}  \boldsymbol{a} \text{ mod }p)\boldsymbol{s}}{p}  \right\rvert \right\rvert & \leq  \left\lvert \left\lvert  -  \frac{-\widehat{\boldsymbol{c}}_{2}\boldsymbol{e}}{p}  \right\rvert \right\rvert_{\infty}+ \left\lvert \left\lvert  \frac{(\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\boldsymbol{s}+\widehat{\boldsymbol{c}}_{2}\boldsymbol{e})\text{ mod }p}{p}  \right\rvert \right\rvert_{\infty} + \left\lvert \left\lvert  \frac{(\widehat{\boldsymbol{c}}_{2}\boldsymbol{a}\text{ mod }p)\boldsymbol{s}}{p}  \right\rvert \right\rvert_{\infty}  \\
+&= \frac{\delta_{R}\cdot q \cdot B}{2p} + \frac{1}{2} +  \frac{\lvert\lvert s \rvert\rvert_{\infty}\delta_{R} }{2} \\
+&= \frac{\delta_{R}\cdot q \cdot B}{2p} + \frac{1+\lvert\lvert s \rvert\rvert_{\infty}\delta_{R}}{2}
+\end{align}$$
+This is quite close to the bounds given by the authors. Though, it is not exactly the same term, you can see what how to apply the logic for these terms. 
+
+Hope this helps.
