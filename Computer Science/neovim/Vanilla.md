@@ -52,6 +52,8 @@ To leave terminal `ctl+alt+\`
 
 ## Vim Motions
 
+#### Horizontal
+
 |                                      | Command |
 | ------------------------------------ | ------- |
 | Beginning of Line                    | `_`     |
@@ -67,6 +69,18 @@ To leave terminal `ctl+alt+\`
 | Jump before character `?` (backward) | `T?`    |
 | Continue jumping forward             | `,`     |
 | Continue jumping backward            | `;`     |
+
+#### Vertical
+
+|                      | command   |
+| -------------------- | --------- |
+| Go up by Paragraph   | `{`       |
+| Go down by Paragraph | `}`       |
+| Jump Half Page Up    | `ctl + d` |
+| Jump Half Page Down  | `ctl + u` |
+| Go all the Way Down  | `G`       |
+| Go all the Way Up    | `gg`      |
+| Go to line 50        | `:50`     |
 
 
 # Combinations
