@@ -38,7 +38,8 @@
     "polynoms",
     "invertibles",
     "relinearized",
-    "Relinearization"
+    "Relinearization",
+    "multiline"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,

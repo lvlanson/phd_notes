@@ -27,7 +27,7 @@ Output: [1,2,5,3,null,6,null,4,null,7]
 ```
 
 #### Example 3
-![[../../../Pasted image 20250222141928.png]]
+![[../Figures/Pasted image 20250222141928.png]]
 ```
 Input: traversal = "1-401--349---90--88"
 Output: [1,401,null,349,88,90]
