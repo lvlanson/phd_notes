@@ -5,7 +5,7 @@ Given two integer arrays, `preorder` and `postorder` where `preorder` is the pre
 If there exist multiple answers, you can return any of them.
 
 #### Example 1
-![[../Figures/Pasted image 20250223164030.png]]
+![[Pasted image 20250223164030.png]]
 
 ```
 Input: preorder = [1,2,4,5,3,6,7], postorder = [4,5,2,6,7,3,1]

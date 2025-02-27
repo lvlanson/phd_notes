@@ -58,8 +58,7 @@ To add typescript types, we do
 
 ```ts title=Component.svelte {2} showLineNumbers
 <script lang="ts">
-	let { data }: {data : string;}
-		} = $props();
+	let { data }: {data : string;} = $props();
 </script>
 
 <h1>Here we get { data }</h1>
@@ -69,3 +68,43 @@ To add typescript types, we do
 ```
 
 And go multiline if we receive multiple objects from prop.
+
+#### Optional and Default values for `props` with typescript
+
+When using the last code example, the `{ts} Component` requires the `{ts} data` field to be passed through. One can also declare a component to be optional by adding the `{ts} ?` directive.
+
+```ts title=Component.svelte {4,7} showLineNumbers
+<script lang="ts">
+	let { 
+			data,
+			otherData 
+		}:{
+			data : string;
+			otherData? : string;
+		} = $props();
+</script>
+
+<h1>Here we get { data }</h1>
+
+<style>
+</style>
+```
+
+Optional data entries can be added by initializing it in the definition statement
+
+```ts title=Component.svelte {4} showLineNumbers
+<script lang="ts">
+	let { 
+			data,
+			otherData = "initialized"
+		}:{
+			data : string;
+			otherData? : string;
+		} = $props();
+</script>
+
+<h1>Here we get { data }</h1>
+
+<style>
+</style>
+```

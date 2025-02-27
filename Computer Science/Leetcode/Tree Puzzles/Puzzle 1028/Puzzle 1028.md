@@ -11,7 +11,7 @@ Given the output `traversal` of this traversal, recover the tree and return its 
 
 #### Example 1
 
-![[Figures/Pasted image 20250222141803.png]]
+![[Pasted image 20250222141803.png]]
 
 ```
 Input: traversal = "1-2--3--4-5--6--7"
@@ -19,7 +19,7 @@ Output: [1,2,5,3,4,6,7]
 ```
 
 #### Example 2
-![[Figures/Pasted image 20250222141900.png]]
+![[Pasted image 20250222141900.png]]
 
 ```
 Input: traversal = "1-2--3---4-5--6---7"
@@ -27,7 +27,7 @@ Output: [1,2,5,3,null,6,null,4,null,7]
 ```
 
 #### Example 3
-![[../Figures/Pasted image 20250222141928.png]]
+![[Pasted image 20250222141928.png]]
 ```
 Input: traversal = "1-401--349---90--88"
 Output: [1,401,null,349,88,90]

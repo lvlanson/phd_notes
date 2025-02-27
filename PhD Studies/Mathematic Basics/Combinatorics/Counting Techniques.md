@@ -396,7 +396,7 @@
 >>$$\binom{n}{r} = \frac{P(n,r)}{r!}=\frac{n!}{r!(n-r)!}\tag*{$\square$}$$
 >
 >>[!note]
->> Looking at the proof, we notice, a combination is basically a permutation, where we remove for each.
+>> Looking at the proof, we notice, a combination is basically a permutation of differently sized sets, where we remove for each set their permutations.
 >> 
 >> Recall an $r$-permutation is any possible ordering from a set $S$ and choices $\alpha_{i} \in S$
 >> $$S \times S\setminus \{ \alpha_{i} \} \times \dots \times S\setminus \{ \alpha_{i} \}_{i=1}^r$$
