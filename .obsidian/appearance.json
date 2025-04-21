@@ -1,12 +1,13 @@
 {
   "accentColor": "",
   "baseFontSize": 23,
-  "cssTheme": "",
+  "cssTheme": "Things",
   "enabledCssSnippets": [
     "images",
     "laura",
     "text"
   ],
   "theme": "obsidian",
-  "baseFontSizeAction": true
+  "baseFontSizeAction": true,
+  "monospaceFontFamily": "Adwaita Mono"
 }

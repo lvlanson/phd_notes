@@ -172,6 +172,34 @@
   file = {/home/thomas/Zotero/storage/JPF4DK25/Bos et al. - 2013 - Improved Security for a Ring-Based Fully Homomorphic Encryption Scheme.pdf}
 }
 
+@online{bossuat2022,
+  title = {Bootstrapping for {{Approximate Homomorphic Encryption}} with {{Negligible Failure-Probability}} by {{Using Sparse-Secret Encapsulation}}},
+  author = {Bossuat, Jean-Philippe and Troncoso-Pastoriza, Juan Ramón and Hubaux, Jean-Pierre},
+  date = {2022},
+  number = {2022/024},
+  url = {https://eprint.iacr.org/2022/024},
+  urldate = {2025-03-05},
+  abstract = {Bootstrapping parameters for the approximate homomorphic-encryption scheme of Cheon et al., CKKS (Asiacrypt 17), are usually instantiated using sparse secrets to be efficient. However, using sparse secrets constrains the range of practical parameters within a tight interval, as they must support a large enough depth for the bootstrapping circuit but also be secure with respect to the sparsity of their secret. We present a bootstrapping procedure for the CKKS scheme that combines both dense and sparse secrets. Our construction enables the use of parameters for which the homomorphic capacity is based on a dense secret, yet with a bootstrapping complexity that remains the one of a sparse secret and with a large security margin. Moreover, this also enables us to easily parameterize the bootstrapping circuit so that it has a negligible failure probability that, to the best of our knowledge, has never been achieved for the CKKS scheme. When using the parameters of previous works, our bootstrapping procedures enables a faster procedure with an increased precision and lower failure probability. For example we are able to bootstrapp a plaintext of C32768 in 20.2 sec, with 32.11 bits of precision, 285 bits of modulus remaining, a failure probability of 2−138.7 and 128 bit security.},
+  pubstate = {prepublished},
+  keywords = {Bootstrapping,Fully Homomorphic Encryption,Implementation},
+  annotation = {Publication info: Published elsewhere. ACNS 2022},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Bossuat2022.pdf}
+}
+
+@online{bossuat2024,
+  title = {Practical Q-{{IND-CPA-D-Secure Approximate Homomorphic Encryption}}},
+  author = {Bossuat, Jean-Philippe and Costache, Anamaria and Mouchet, Christian and Nürnberger, Lea and Troncoso-Pastoriza, Juan Ramón},
+  date = {2024},
+  number = {2024/853},
+  url = {https://eprint.iacr.org/2024/853},
+  urldate = {2025-03-05},
+  abstract = {At Eurocrypt 2021, Li and Micciancio demonstrated that the IND-CPA notion of security is not sufficient to cover the passive security of approximate homomorphic encryption schemes, by outlining a key recovery attack against the CKKS scheme (Cheon, Kim, Kim, Seong, Asiacrypt 2017). They proposed the notion of q-IND-CPA-D security, which allows an adversary to make q calls to a restricted decryption oracle. Li and Micciancio left achieving q-IND-CPA-D security as an open problem, but proposed two approaches: noise flooding and an exact version of CKKS. The first approach was addressed by Li, Micciancio, Schultz and Sorrell (Crypto 2022), but leads to substantial efficiency loss. In this work, we look at the second approach. We define (δ,r)-exact CKKS, a version of CKKS that returns exact results on all except the least r significant bits with (high) probability δ, based on bounds on the noise. We prove that the advantage of a q-IND-CPA-D attacker against (δ,r)-exact CKKS is determined by the failure probability of those bounds. We conduct a tight average-case and implementation-specific noise analysis of all elementary operations in CKKS, as implemented in the Lattigo library, including the bootstrapping operation. We propose bounds that have small enough failure probability for the advantage of a q-IND-CPA-D attacker against (δ,r)-exact CKKS to become smaller than 2−128, while the parameter sets needed remain practical. We furthermore present an estimator tool that combines the bounds on basic operations and returns tight noise estimates, even for large circuits. We validate our bounds by showcasing experimental results on different iterative algorithms, homomorphic encoding, decoding and bootstrapping.},
+  pubstate = {prepublished},
+  keywords = {CKKS,FHE,IND-CPA-D,Noise Analysis},
+  annotation = {Publication info: Preprint.},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Bossuat2024.pdf}
+}
+
 @book{boyer2011,
   title = {A {{History}} of {{Mathematics}}},
   author = {Boyer, Carl B. and Merzbach, Uta C.},
@@ -324,6 +352,20 @@
   keywords = {approximate arithmetic,Homomorphic encryption},
   annotation = {Publication info: Published by the IACR in ASIACRYPT 2017},
   file = {/home/thomas/Documents/Obsidian Vault/PDFs/Cheon2016.pdf}
+}
+
+@online{cheon2018,
+  title = {Bootstrapping for {{Approximate Homomorphic Encryption}}},
+  author = {Cheon, Jung Hee and Han, Kyoohyung and Kim, Andrey and Kim, Miran and Song, Yongsoo},
+  date = {2018},
+  number = {2018/153},
+  url = {https://eprint.iacr.org/2018/153},
+  urldate = {2025-03-04},
+  abstract = {This paper extends the leveled homomorphic encryption scheme for an approximate arithmetic of Cheon et al. (ASIACRYPT 2017) to a fully homomorphic encryption, i.e., we propose a new technique to refresh low-level ciphertexts based on Gentry's bootstrapping procedure. The modular reduction operation is the main bottleneck in the homomorphic evaluation of the decryption circuit. We exploit a scaled sine function as an approximation of the modular reduction operation and present an efficient evaluation strategy. Our method requires only one homomorphic multiplication for each of iterations and so the total computation cost grows linearly with the depth of the decryption circuit. We also show how to recrypt packed ciphertexts on the RLWE construction with an open-source implementation. For example, it takes 139.8 seconds to refresh a ciphertext that encrypts 128 numbers with 12 bits of precision, yielding an amortized rate of 1.1 seconds per slot.},
+  pubstate = {prepublished},
+  keywords = {approximate arithmetic,bootstrapping,Homomorphic encryption},
+  annotation = {Publication info: Published by the IACR in EUROCRYPT 2018},
+  file = {/home/thomas/Documents/Obsidian Vault/PDFs/Cheon2018.pdf}
 }
 
 @article{chillotti,

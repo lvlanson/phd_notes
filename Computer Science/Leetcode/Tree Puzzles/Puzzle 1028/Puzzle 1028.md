@@ -37,7 +37,7 @@ Output: [1,401,null,349,88,90]
 
 ### My Solution
 
-```go
+```go showLineNumbers
 /**
  * Definition for a binary tree node.
  * type TreeNode struct {

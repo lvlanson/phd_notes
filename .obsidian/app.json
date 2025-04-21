@@ -39,7 +39,8 @@
     "invertibles",
     "relinearized",
     "Relinearization",
-    "multiline"
+    "multiline",
+    "substrings"
   ],
   "autoPairBrackets": false,
   "autoPairMarkdown": false,
@@ -52,5 +53,6 @@
   },
   "livePreview": false,
   "defaultViewMode": "preview",
-  "showLineNumber": true
+  "showLineNumber": true,
+  "smartIndentList": true
 }
