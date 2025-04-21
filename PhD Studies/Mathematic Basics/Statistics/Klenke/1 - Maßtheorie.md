@@ -137,7 +137,7 @@ Für die Borel'sche $\sigma$-Algebra wird üblicherweise die Euklidische Distanz
 ^70a781
 
 >[!theorem] Satz
->Die Borel'sche $\sigma$-Algebra $\mathcal{B}(\mathbb{R}^n)$ wird von jedem der [[#^70a781|Mengensysteme]] $\mathcal{E}_{1, \dots \mathcal{E}_{12}}$ erzeugt:
+>Die Borel'sche $\sigma$-Algebra $\mathcal{B}(\mathbb{R}^n)$ wird von jedem der [[#^70a781|Mengensysteme]] $\mathcal{E}_{1}, \dots ,\mathcal{E}_{12}$ erzeugt:
 >$$\mathcal{B}(\mathbb{R}^n) = \sigma(\mathcal{E}_{i}) \tag*{$i=1,\dots,12$}$$
 >>[!proof] Beweis
 >>1. $\sigma(\mathcal{E}_{1})$ per [[#^0989d3| Definition]]
