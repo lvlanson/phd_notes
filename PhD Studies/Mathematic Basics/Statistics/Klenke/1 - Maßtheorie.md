@@ -105,3 +105,39 @@ $\sigma(\mathcal{E})$ heißt die von $\mathcal{E}$ **<span style="color:#38ffa9"
 >Sei $(\Omega, \tau)$ ein topologischer Raum. Die von den offenen Mengen erzeugte $\sigma$-Algebra
 >$$\mathcal{B}(\Omega):= \mathcal{B}(\Omega, \tau):= \sigma(\tau)$$
 >heißt **<span style="color:#38ffa9">Borel'sche $\sigma$-Algebra</span>** auf $\Omega$. Die Elemente $A \in \mathcal{B}(\Omega, \tau)$ heißen **<span style="color:#38ffa9">Borel'sche Mengen</span>** oder **<span style="color:#38ffa9">Borel-messbare Mengen</span>**.
+
+^0989d3
+
+Für die Borel'sche $\sigma$-Algebra wird üblicherweise die Euklidische Distanz verwendet.
+
+>[!def] Definition Quader
+>Für $a,b \in \mathbb{R}^n$ und $a < b$ definieren wir
+>$$(a,b) := \bigtimes_{i=1}^n (a_{i}, b_{i}) := (a_{1}, b_{1})\times (a_{2},b_{2}) \times \dots \times (a_{n}, b_{n})$$
+>das **<span style="color:#38ffa9">Quader</span>**. Ebenfalls analog für 
+>- $[a,b]$
+>- $(a,b]$
+>- $[a,b)$
+
+>[!def] Definition Mengensysteme
+>$$\begin{align}
+> \mathcal{E}_{1} &= \{ A \subset \mathbb{R}^n : A \text{ ist offen} \} \\
+> \mathcal{E}_{2} &= \{ A \subset \mathbb{R}^n : A \text{ ist abgeschlossen} \} \\
+> \mathcal{E}_{3} &= \{ A \subset \mathbb{R}^n : A \text{ ist kompakt}\} \\
+> \mathcal{E}_{4} &= \{ B_{r}(x): x \in \mathbb{Q}^n, r \in \mathbb{Q}^+\} \\
+> \mathcal{E}_{5} &= \{ (a,b): a,b \in \mathbb{Q}^n, a < b \} \\
+> \mathcal{E}_{6} &= \{ [a,b): a,b \in \mathbb{Q}^n, a < b \} \\ 
+> \mathcal{E}_{7} &= \{ (a,b]: a,b \in \mathbb{Q}^n, a < b \} \\ 
+> \mathcal{E}_{8} &= \{ [a,b]: a,b \in \mathbb{Q}^n, a < b \} \\ 
+> \mathcal{E}_{9} &= \{ (-\infty, b): b \in \mathbb{Q}^n \} \\
+> \mathcal{E}_{10} &= \{ (-\infty, b]: b \in \mathbb{Q}^n \} \\
+> \mathcal{E}_{11} &= \{ (a, \infty): a \in \mathbb{Q}^n \} \\
+> \mathcal{E}_{12} &= \{ [a, \infty): a \in \mathbb{Q}^n \}
+>\end{align}$$
+
+^70a781
+
+>[!theorem] Satz
+>Die Borel'sche $\sigma$-Algebra $\mathcal{B}(\mathbb{R}^n)$ wird von jedem der [[#^70a781|Mengensysteme]] $\mathcal{E}_{1, \dots \mathcal{E}_{12}}$ erzeugt:
+>$$\mathcal{B}(\mathbb{R}^n) = \sigma(\mathcal{E}_{i}) \tag*{$i=1,\dots,12$}$$
+>>[!proof] Beweis
+>>1. $\sigma(\mathcal{E}_{1})$ per [[#^0989d3| Definition]]
