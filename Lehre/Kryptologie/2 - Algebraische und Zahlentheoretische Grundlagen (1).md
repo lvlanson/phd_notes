@@ -478,8 +478,10 @@
 >>>Wir sehen leicht, dass sich beide Seiten nun durch $3$ teilen lassen, und erhalten somit die Lösung
 >>>$$\begin{alignat}{2}
 >>> 3x&=21n+9 \qquad&&\Big\vert :3 \\
->>> x &= 7n+3 \tag*{$\blacktriangleleft$}
+>>> x &= 7n+3 
 >>>\end{alignat}$$
+>>>für alle $n \in \mathbb{Z}$.
+>>>$$\tag*{$\blacktriangleleft$}$$
 >
 >>[!example] Übung (3)
 >>Zeigen Sie die Gültigkeit (Beweis) für die [[#^6a2086|Eigenschaften ganzzahliger Teilung]] (1) und (3) basierend auf der [[#^9380e8|Definition ganzzahliger Teilung]].

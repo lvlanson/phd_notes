@@ -87,8 +87,8 @@
 >>\end{align}$$
 >> Wir prüfen die Identität der Definition der [[#^ccc183|homomorphen Verschlüsselung]], also
 >> $$\begin{align}
->> \text{Enc}(m_{1}\cdot m_{2})&= (m_{1} \cdot m_{2})^e  \\
->> &= m_{1}^e \cdot m_{2}^e \\
+>> \text{Enc}(m_{1}\cdot m_{2})&= (m_{1} \cdot m_{2})^e \text{ mod }n \\
+>> &= m_{1}^e \cdot m_{2}^e \text{ mod }n\\
 >> &= \text{Enc}(m_{1}) \cdot \text{Enc}(m_{2}) \tag*{$\square$}
 >>\end{align}$$
 >

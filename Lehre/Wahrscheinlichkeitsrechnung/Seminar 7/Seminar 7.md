@@ -17,7 +17,7 @@
 >>$$P(G_{u} \leq \Theta \leq \infty)=1-\alpha$$ 
 
 >[!algo] Zweiseitige Konfidenzintervalle für den Erwartungswert
->>[!algo]- $(1)$ $X$ is normalverteilt mit bekannter Varianz $\sigma^2$ ([[../Vorlesungsskript_Mathematik3.pdf#page=112|Quelle]])
+>>[!algo]- $(1)$ $X$ ist normalverteilt mit bekannter Varianz $\sigma^2$ ([[../Vorlesungsskript_Mathematik3.pdf#page=112|Quelle]])
 >>
 >>Gegeben sei $X \sim N(\mu, \sigma)$ mit $\sigma^2$ bekannt und $\Theta = \mu$
 >>1. $\widehat{\Theta}= \overline{X}$ (Arithmetisches Mittel)
@@ -189,7 +189,7 @@
 >[!example] Aufgabe (3)
 >Bei der Produktion von bestimmten Bauteilen für elektronische Geräte sei $p$ die Ausschusswahrscheinlichkeit. Um Aufschluss über $p$ zu bekommen, wird eine Stichprobe von $n$ Teilen entnommen, die auf ihre Funktionsfähigkeit überprüft werden.
 >
->1. Geben Sie ein Konfidenzintervall für die Ausschusswahrscheinlichkeit an zum Konfidenzniveau von $95\%$ an, wenn $69$ der $600$ überprüften BBauteile defekt sind.
+>1. Geben Sie ein Konfidenzintervall für die Ausschusswahrscheinlichkeit an zum Konfidenzniveau von $95\%$ an, wenn $69$ der $600$ überprüften Bauteile defekt sind.
 >
 >>[!example]- Lösung
 >>Wir erfassen die folgenden Parameter

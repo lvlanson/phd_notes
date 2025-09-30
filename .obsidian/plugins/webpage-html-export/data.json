@@ -1,75 +1,237 @@
 {
   "settingsVersion": "1.8.01",
-  "makeOfflineCompatible": false,
-  "inlineAssets": false,
-  "includePluginCSS": "",
-  "includeSvelteCSS": true,
-  "titleProperty": "PhD Studies Thomas Davies",
-  "customHeadContentPath": "",
-  "faviconPath": "",
-  "documentWidth": "60em",
-  "sidebarWidth": "20em",
-  "minOutlineCollapse": 2,
-  "startOutlineCollapsed": false,
-  "allowFoldingHeadings": true,
-  "allowFoldingLists": true,
-  "allowResizingSidebars": true,
+  "exportOptions": {
+    "createDocumentContainer": true,
+    "keepModHeaderFooter": false,
+    "addPageIcon": true,
+    "unifyTitleFormat": true,
+    "createPusherElement": true,
+    "makeHeadersTrees": true,
+    "postProcess": true,
+    "displayProgress": true,
+    "inlineHTML": true,
+    "exportPath": "/home/thomas/Documents/Obsidian Vault/PhD Studies/Cryptology/Cyclotomic Polynomials",
+    "filesToExport": [],
+    "useFallbackRenderer": false,
+    "addBodyClasses": true,
+    "addMathjaxStyles": true,
+    "addHeadTag": true,
+    "backlinkOptions": {
+      "featureId": "backlinks",
+      "enabled": true,
+      "unavailable": false,
+      "alwaysEnabled": false,
+      "hideSettingsButton": false,
+      "featurePlacement": {
+        "selector": ".footer",
+        "type": "start"
+      },
+      "displayTitle": "Backlinks"
+    },
+    "tagOptions": {
+      "featureId": "tags",
+      "enabled": true,
+      "unavailable": false,
+      "alwaysEnabled": false,
+      "hideSettingsButton": false,
+      "featurePlacement": {
+        "selector": ".header .data-bar",
+        "type": "end"
+      },
+      "displayTitle": "",
+      "showInlineTags": true,
+      "showFrontmatterTags": true
+    },
+    "aliasOptions": {
+      "featureId": "aliases",
+      "enabled": true,
+      "unavailable": false,
+      "alwaysEnabled": false,
+      "hideSettingsButton": false,
+      "featurePlacement": {
+        "selector": ".header .data-bar",
+        "type": "start"
+      },
+      "displayTitle": "Aliases"
+    },
+    "propertiesOptions": {
+      "featureId": "properties",
+      "enabled": true,
+      "unavailable": false,
+      "alwaysEnabled": false,
+      "hideSettingsButton": false,
+      "featurePlacement": {
+        "selector": ".header",
+        "type": "start"
+      },
+      "displayTitle": "Properties"
+    },
+    "fileNavigationOptions": {
+      "featureId": "file-navigation",
+      "enabled": false,
+      "unavailable": true,
+      "alwaysEnabled": false,
+      "hideSettingsButton": false,
+      "featurePlacement": {
+        "selector": "#left-sidebar-content",
+        "type": "end"
+      },
+      "showCustomIcons": false,
+      "showDefaultFolderIcons": false,
+      "showDefaultFileIcons": false,
+      "defaultFolderIcon": "lucide//folder",
+      "defaultFileIcon": "lucide//file",
+      "defaultMediaIcon": "lucide//file-image",
+      "exposeStartingPath": true,
+      "includePath": "site-lib/html/file-tree.html"
+    },
+    "searchOptions": {
+      "featureId": "search",
+      "enabled": false,
+      "unavailable": true,
+      "alwaysEnabled": false,
+      "hideSettingsButton": false,
+      "featurePlacement": {
+        "selector": "#left-sidebar .topbar-content",
+        "type": "start"
+      },
+      "displayTitle": "Search..."
+    },
+    "outlineOptions": {
+      "featureId": "outline",
+      "enabled": true,
+      "unavailable": false,
+      "alwaysEnabled": false,
+      "hideSettingsButton": false,
+      "featurePlacement": {
+        "selector": "#right-sidebar-content",
+        "type": "end"
+      },
+      "displayTitle": "Outline",
+      "startCollapsed": false,
+      "minCollapseDepth": 0
+    },
+    "themeToggleOptions": {
+      "featureId": "theme-toggle",
+      "enabled": true,
+      "unavailable": false,
+      "alwaysEnabled": false,
+      "hideSettingsButton": false,
+      "featurePlacement": {
+        "selector": "#right-sidebar .topbar-content",
+        "type": "start"
+      },
+      "displayTitle": ""
+    },
+    "graphViewOptions": {
+      "featureId": "graph-view",
+      "enabled": false,
+      "unavailable": true,
+      "alwaysEnabled": false,
+      "hideSettingsButton": false,
+      "featurePlacement": {
+        "selector": "#right-sidebar-content",
+        "type": "start"
+      },
+      "displayTitle": "Graph View",
+      "showOrphanNodes": true,
+      "showAttachments": false,
+      "allowGlobalGraph": true,
+      "allowExpand": true,
+      "attractionForce": 1,
+      "linkLength": 15,
+      "repulsionForce": 80,
+      "centralForce": 2,
+      "edgePruning": 100,
+      "minNodeRadius": 3,
+      "maxNodeRadius": 7
+    },
+    "sidebarOptions": {
+      "featureId": "sidebar",
+      "enabled": true,
+      "unavailable": false,
+      "alwaysEnabled": false,
+      "hideSettingsButton": false,
+      "allowResizing": true,
+      "allowCollapsing": true,
+      "rightDefaultWidth": "20em",
+      "leftDefaultWidth": "20em"
+    },
+    "customHeadOptions": {
+      "featureId": "custom-head",
+      "enabled": true,
+      "unavailable": false,
+      "alwaysEnabled": false,
+      "hideSettingsButton": false,
+      "featurePlacement": {
+        "selector": "head",
+        "type": "end"
+      },
+      "sourcePath": "",
+      "includePath": "site-lib/html/custom-head.html"
+    },
+    "documentOptions": {
+      "featureId": "obsidian-document",
+      "enabled": true,
+      "unavailable": false,
+      "alwaysEnabled": true,
+      "hideSettingsButton": false,
+      "allowFoldingLists": true,
+      "allowFoldingHeadings": true,
+      "documentWidth": "40em"
+    },
+    "rssOptions": {
+      "featureId": "rss",
+      "enabled": false,
+      "unavailable": true,
+      "alwaysEnabled": false,
+      "hideSettingsButton": false,
+      "siteUrl": "",
+      "authorName": ""
+    },
+    "linkPreviewOptions": {
+      "featureId": "link-preview",
+      "enabled": true,
+      "unavailable": false,
+      "alwaysEnabled": false,
+      "hideSettingsButton": true
+    },
+    "relativeHeaderLinks": false,
+    "includeJS": true,
+    "includeCSS": true,
+    "inlineMedia": true,
+    "inlineCSS": true,
+    "inlineJS": true,
+    "inlineFonts": true,
+    "inlineOther": true,
+    "combineAsSingleFile": false,
+    "offlineResources": false,
+    "themeName": "",
+    "slugifyPaths": false,
+    "flattenExportPaths": false,
+    "fixLinks": true,
+    "faviconPath": "",
+    "siteName": "Obsidian Vault",
+    "iconEmojiStyle": "Native",
+    "exportRoot": "PhD Studies/Cryptology/Cyclotomic Polynomials",
+    "includePluginCss": [],
+    "includeStyleCssIds": [],
+    "autoDisposeWebpages": true
+  },
   "logLevel": "warning",
-  "minifyHTML": true,
-  "makeNamesWebStyle": true,
+  "titleProperty": "PhD Studies Thomas Davies",
+  "rssDateProperty": "date",
   "onlyExportModified": true,
   "deleteOldFiles": true,
-  "addThemeToggle": true,
-  "addOutline": true,
-  "addFileNav": true,
-  "addSearchBar": true,
-  "addGraphView": true,
-  "addTitle": true,
-  "addRSSFeed": true,
-  "siteURL": "https://www.staff.hs-mittweida.de/~davies/intranet/",
-  "authorName": "Thomas Davies",
-  "vaultTitle": "PhD Studies",
-  "exportPreset": "website",
+  "exportPreset": "raw-documents",
   "openAfterExport": true,
-  "graphAttractionForce": 1,
-  "graphLinkLength": 10,
-  "graphRepulsionForce": 150,
-  "graphCentralForce": 3,
-  "graphEdgePruning": 100,
-  "graphMinNodeSize": 3,
-  "graphMaxNodeSize": 7,
-  "showDefaultTreeIcons": false,
-  "emojiStyle": "Native",
-  "defaultFileIcon": "lucide//file",
-  "defaultFolderIcon": "lucide//folder",
-  "defaultMediaIcon": "lucide//file-image",
-  "exportPath": "/home/thomas/Documents/HTML_EXPORT",
-  "filesToExport": [
-    [
-      "Computer Science",
-      "Lehre/Kryptologie/Diagrams",
-      "Lehre/Kryptologie/Figures",
-      "Lehre/Kryptologie/0 - Inhaltsverzeichnis.md",
-      "Lehre/Kryptologie/1 -  Einführung.md",
-      "Lehre/Kryptologie/2 - Algebraische und Zahlentheoretische Grundlagen (1).md",
-      "Lehre/Kryptologie/3 - RSA (Rivest Shamir Adleman).md",
-      "Lehre/Kryptologie/4 - Angriffe auf RSA.md",
-      "Lehre/Kryptologie/5 - Rabin Verfahren.md",
-      "Lehre/Kryptologie/6 - Angriffe auf das Rabin-Verfahren.md",
-      "Lehre/Kryptologie/7 - Algebraische und Zahlentheoretische Grundlagen (2).md",
-      "Lehre/Kryptologie/8 - No-Key Protokolle.md",
-      "Lehre/Kryptologie/9 - El Gamal's Kryptosystem.md",
-      "Lehre/Kryptologie/10 - Angriffe auf die El Gamal Signatur.md",
-      "Lehre/Kryptologie/11 - Homomorphe Verschlüsselung.md",
-      "Lehre/Kryptologie/12 - Elliptische Kurven.md",
-      "Lehre/Kryptologie/A - Sage Funktionen.md",
-      "Lehre/Kryptologie/Vorlesungsfortschritt WS2024_25.md",
-      "Lehre/Kryptologie/X - Zusatz Mathematik (Informativ).md",
-      "ML Programming",
-      "PDFs",
-      "PhD Studies",
-      "References",
-      "index.md"
-    ]
+  "filePickerBlacklist": [
+    "(^|\\/)node_modules\\/",
+    "(^|\\/)dist\\/",
+    "(^|\\/)dist-ssr\\/",
+    "(^|\\/)\\.vscode\\/"
+  ],
+  "filePickerWhitelist": [
+    "\\.\\w+$"
   ]
 }

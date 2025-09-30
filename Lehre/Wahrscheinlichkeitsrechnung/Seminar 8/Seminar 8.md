@@ -5,10 +5,10 @@
 >[!def]- Definitionen Parametertests für einfache Stichproben ([[../Vorlesungsskript_Mathematik3.pdf#page=120|Quelle]])
 >
 >>[!terminology] 
->> - $\Gamma$ - Paramaterbereich
->> - $\Theta$ - Unbekannter Paramater
->> - $\Gamma_{0}$ - Paramaterbereich für Nullhypothese $H_{0}$ -> $H_{0} \in \Gamma_{0}$
->> - $\Gamma_{1}$ - Paramaterbereich für Alternativhypothese $H_{1}$ -> $H_{1} \in \Gamma_{1}$
+>> - $\Gamma$ - Parameterbereich
+>> - $\Theta$ - Unbekannter Parameter
+>> - $\Gamma_{0}$ - Parameterbereich für Nullhypothese $H_{0}$ -> $H_{0} \in \Gamma_{0}$
+>> - $\Gamma_{1}$ - Parameterbereich für Alternativhypothese $H_{1}$ -> $H_{1} \in \Gamma_{1}$
 >> -> $\Gamma_{0} \cap \Gamma_{1} = \emptyset$ und $\Gamma_{0} \cup \Gamma_{1} = \Gamma$
 >
 >>[!def] Definition 7.19
@@ -62,7 +62,7 @@
 >> - $t \not\in K \implies$ keine Ablehnung von $H_{0}$
 >
 >>[!algo]- Einseitiger Einstichproben-Gauß-Test (Varianz Bekannt, normalverteilt) ([[../Vorlesungsskript_Mathematik3.pdf#page=124|Quelle]])
->><u> Behauptung:</u> $\mu \geq\mu_{0}$ linksseitig, bzw. $\mu \leq_{0}$ rechtsseitig
+>><u> Behauptung:</u> $\mu \geq\mu_{0}$ linksseitig, bzw. $\mu \leq \mu_{0}$ rechtsseitig
 >>1. **Hypothesen:** $$\begin{align}
 >> H_{0}: \mu \geq \mu_{0} &\text{ und } H_{1}: \mu < \mu_{0} \tag{linksseitig} \\
 >> H_{0}: \mu \leq \mu_{0} &\text{ und } H_{1}: \mu > \mu_{0} \tag{rechtsseitig}

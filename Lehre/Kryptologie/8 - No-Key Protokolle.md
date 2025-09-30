@@ -52,7 +52,7 @@
 >>
 >>Bob:
 >>
->>3. wählt $b,b' \in \mathbb{Z}_{p-1}$ mit $bb'\equiv_{1} \;\;(\text{mod } p-1)$
+>>3. wählt $b,b' \in \mathbb{Z}_{p-1}$ mit $bb'\equiv 1 \;\;(\text{mod } p-1)$
 >>4. sendet an Alice: $$D=C^b \text{ mod }p$$
 >>
 >>Alice:
@@ -67,8 +67,13 @@
 >>[!korrektheitsnachweis]
 >>Zunächst zeigen wir, dass $$m^{aa'} \equiv m^{bb'} \equiv m \;\;(\text{mod } p)$$ gilt. Über die Verfahrensbeschreibung wissen wir, dass
 >>$$aa' \equiv bb' \equiv 1 \;\;(\text{mod } p-1) \tag{1}$$
->>Wir zeigen fortgehend für $aa'$ die Gültigkeit, die allerdings aus denselben Konditionen auch für $bb'$ folgt. Für die Kongruenz $(1)$ folgt durch den [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^30b120|Satz Existenz und Eindeutigkeit des Quotienten und Rests]] mit $q \in \mathbb{Z}$
->>$$aa'=q(p-1)+1$$
+>>Wir zeigen fortgehend für $aa'$ die Gültigkeit, die allerdings aus denselben Konditionen auch für $bb'$ folgt. Für die Kongruenz $(1)$ folgt durch den [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Satz Teilbarkeit von Äquivalenzen]] 
+>>$$p-1\;|\;aa'-1$$
+>>und der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^9380e8|ganzzahligen Teilung]] mit $q \in \mathbb{Z}$
+>>$$\begin{align} \\
+>> aa' - 1 &= q(p-1) \\
+>> aa'&=q(p-1)+1
+>>\end{align}$$
 >>Wir setzen daher ein
 >>$$m^{aa'} \equiv m^{q(p-1)+1} \equiv \underbrace{ (m^{q})^{p-1} }_{ \equiv 1 (\text{mod } p) }m \equiv m \;\;(\text{mod } p) \tag{2}$$ 
 >>

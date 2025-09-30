@@ -1,4 +1,4 @@
->[!def]- Definitionen
+>[!def] Definitionen
 >>[!theorem] Satz Ungleichung von Tschebyscheff (Satz [[../Vorlesungsskript_Mathematik3.pdf#page=74|5.1]])
 >>Es sei $X$ eine Zufallsgröße mit $E(X)= \mu$ und $D^2(X)= \sigma < \infty$. Dann gilt
 >>$$P(\lvert X-\mu \rvert \geq \varepsilon ) \leq \frac{\sigma^2}{\varepsilon^2} \tag*{$\forall \varepsilon>0$}$$
@@ -47,8 +47,8 @@
 >>[!remark] Bemerkung 5.20
 >>Unter den Voraussetungen des Satzes gilt
 >>$$\begin{align}
->> \sum_{i=1}^n X_{i} &\overset{asymp}\sim N(n\mu, \sqrt{ n }\sigma) \\
->> \sum_{i=1}^n X_{i} &\overset{asymp}\sim N\left( \mu, \frac{\sigma}{\sqrt{ n }} \right) \\
+>> \sum_{i=1}^n X_{i} &\overset{asymp}\sim N(n\mu, \sqrt{ n }\sigma^2) \\
+>>  \sum_{i=1}^n X_{i} &\overset{asymp}\sim N\left( \mu, \frac{\sigma^2}{n} \right)\\
 >>\end{align}$$
 >
 >>[!theorem] Satz Globaler Grenzwertsatz nach Moivre/Laplace (Satz [[../Vorlesungsskript_Mathematik3.pdf#page=83|5.22]])
@@ -67,7 +67,7 @@
 >>[!remark] Bemerkung 5.23
 >>Unter der Faustregel $np(1-p)>9$ können wir
 >>$$\begin{align}
->> \sum_{i=1}^n X_{i} &\overset{asymp}\sim N\left( np,  \sqrt{ np(1-p) } \right) \\
+>> \sum_{i=1}^n X_{i} &\overset{asymp}\sim N\left( np,  np(1-p)  \right) \\
 >>\end{align}$$
 >
 >>[!remark] Bemerkung 5.24

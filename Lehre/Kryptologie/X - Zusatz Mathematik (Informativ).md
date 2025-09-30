@@ -136,7 +136,7 @@
 >>und es kein kleineres $k \in \mathbb{N}$ gibt, welche diese Kondition erfüllt.
 >
 >>[!remark]- Bemerkung zur Bedeutung von "Ordnung von $a$ bezüglich modulo $n$"
->>Wenn wir davon sprechen, dass $a$ Ordnung $k$ bezüglich modulus $n$ hat, implizieren wir, dass $\text{ggT}(a,n)$ gilt.
+>>Wenn wir davon sprechen, dass $a$ Ordnung $k$ bezüglich modulus $n$ hat, implizieren wir, dass $\text{ggT}(a,n)=1$ gilt.
 
 ^86d16a
 
