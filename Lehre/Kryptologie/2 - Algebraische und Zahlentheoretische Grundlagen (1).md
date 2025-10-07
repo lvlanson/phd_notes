@@ -240,8 +240,7 @@
 >>> Es genügt zu zeigen, dass mindestens ein Element enthalten ist. Wir unterscheiden zwei Fälle
 >>> 1. $a\geq 0$: Wir wählen $q=0$. Hier ist $a$ selbst enthalten und somit ist $T$ nicht leer.
 >>> 2. $a<0$: Wir wählen $q=a$ und erhalten $$\begin{align}
->>> a-qa &= a-ba \tag{q=a} \\
->> &=a(1-b)
+>>> a-qb \Rightarrow& a-ab=a(1-b) \tag{q=a} 
 >>>\end{align}$$
 >>>Da $b>0$, muss $(1-b)$ entweder $0$ sein ($b=1$) oder negativ sein ($b>1$). Demnach muss
 >>>$$a-qb \geq 0$$
@@ -251,7 +250,7 @@
 >>$$r = \min T$$
 >>Dieses $r$ ist nach der Beschreibung der Menge $T$ für ein spezielles $\widehat{q} \in \mathbb{Z}$ beschrieben als
 >>$$r= a-\widehat{q}b \tag{1}$$
->>mit $r \geq 0$. Da $r \in S$ nach unserer Konstruktion ist, wissen wir schonmal $r\geq0$. Es bleibt zu zeigen, dass $r<b$.
+>>mit $r \geq 0$. Da $r \in T$ nach unserer Konstruktion ist, wissen wir schonmal $r\geq0$. Es bleibt zu zeigen, dass $r<b$.
 >>
 >>**Unsere Strategie von hieran ist einen Widerspruch zu erzeugen**, sodass wir erkennen, dass $0\leq r<b$ gelten muss. Daher nehmen wir an, dass $$r \geq b \tag{2}$$ gilt, was zu unserer zu beweisenden Aussage gegenteilig ist. Wir setzen die Definition von $r$ aus $(1)$ in die Relation $(2)$ ein und erhalten
 >>$$\begin{align}
@@ -260,7 +259,7 @@
 >> a-\widehat{q}b -b &\geq 0  \\
 >> a-b(\widehat{q} +1) &\geq 0  \\
 >>\end{align}$$
->>Als Ergebnis erhalten wir, dass das kleinste $r \in S$ über $\widehat{q}$ definiert wurde. Unter der Annahme, dass $r \geq b$ gilt, hätten wir demnach ein weiteres kleinstes $r \in S$, welches über $(\widehat{q}+1)$ erzeugt wird. Dies können wir ewig fortsetzen und erhalten unendlich viele kleines $r \in S$, was ein Widerspruch ist. **Daher muss gelten**
+>>Als Ergebnis erhalten wir, dass das kleinste $r \in T$ über $\widehat{q}$ definiert wurde. Unter der Annahme, dass $r \geq b$ gilt, hätten wir demnach ein weiteres kleinstes $r \in T$, welches über $(\widehat{q}+1)$ erzeugt wird. Dies können wir ewig fortsetzen und erhalten unendlich viele kleines $r \in T$, was ein Widerspruch ist. **Daher muss gelten**
 >>$$0 \leq r < b$$
 >> $$\tag*{$\checkmark$}$$
 >> 
@@ -625,7 +624,7 @@
 ### 2.3.1 Größter Gemeinsamer Teiler
 
 >[!def] Definition Größter Gemeinsamer Teiler ($\text{ggT}$)
->Seien $a,b \in \mathbb{Z}$ mit $a$ oder $b$ ungleich $0$, dann ist der **größte gemeinsame Teiler** von $a,b$ definiert mit
+>Seien $a,b \in \mathbb{Z}$, dann ist der **größte gemeinsame Teiler** von $a,b$ definiert mit
 >$$\text{ggT}(a,b):=\underset{}{\text{max}}\;\{ n \in \mathbb{N} \; | \; n \text{ ist Teiler von } a \text{ und } b\}$$
 >Die Zahlen $a,b$ heißen **teilerfremd**, falls
 >$$\text{ggT}(a,b)=1$$
@@ -684,25 +683,31 @@
 >>
 >
 >>[!proof]- Beweis
->> Nach dem [[#^30b120| Satz der Existenz des Quotienten und Rests]] wissen wir $\exists q \in \mathbb{Z}:$
+>>Wir treffen zunächst Vorbereitungen, die wir für den Beweis verwenden werden
+>>
+>> Nach dem [[#^30b120| Satz der Existenz des Quotienten und Rests]] wissen wir, dass ein $q \in \mathbb{Z}$ existiert, sodass
 >> $$a = qb+r \text{ mit } 0 \leq r < \lvert b \rvert $$
->> Daher lässt sich der Rest $r$ ausdrücken mit
+>> Daher lässt sich der Rest $r$ ausdrücken als
 >> $$r=a-qb$$
 >> oder auch
 >> $$r=a \text{ mod } b$$
->> daher
+>> Somit gilt
 >> $$a \text{ mod } b = a -qb$$
->> Damit lässt sich die rechte Seite der Identität ausdrücken mit
+>> Damit lässt sich die rechte Seite der zu zeigenden Identität ausdrücken als
 >> $$\text{ggT}(b, a \text{ mod } b) = \text{ggT}(b, a-qb)$$
->> Daher können wir die Behauptung umformulieren als
+>> Daher können wir die Behauptung umformulieren zu
 >> $$\text{ggT}(a,b)= \text{ggT}(b, \underbrace{ a-qb }_{ =a \text{ mod }b })$$
->> Für $\text{ggT}(a,b)$ erwarten wir den größten Teiler $n \in \mathbb{N}$ zu finden, sodass $n \;|\; a$ und $n \;|\; b$ ([[#^2a19a0|Definition ggT]]). Nach unserer Umformulierung der Identität muss auch $n \;|\; a-qb$ gelten. Wir können aus der linken Seite der Identität $\text{ggT}(a,b)$ folgern 
+>> 1. Sei $n \in \mathbb{N}$ ein gemeinsamer Teiler von $a$ und $b$. Wir wollen zunächst zeigen, dass
+>> $$\underbrace{ n \;|\; a \land n \;|\; b }_{ n \text{ teilt } a \text{ und } b } \implies \underbrace{ n \;|\; b \land n \;|\;a-qb }_{ n \text{ teilt } b \text{ und } a-qb }$$
+>> Wir können aus der linken Seite der Identität $\text{ggT}(a,b)$ folgern 
 >> $$n \;|\; a \land n \;|\; b \underbrace{ \implies }_{ (1) } n \;|\; qb \underbrace{ \implies }_{ (2) } n \;|\; a-qb$$
->> Die Folgerung $(1)$ entspringt der [[#^6a2086|dritten Eigenschaft der Teilung ganzer Zahlen]]. Die Folgerung $(2)$ basiert auf dem [[#^a40b0b| Satz über der Teilbarkeit von Summen und Differenzen]]. Aus diesen Folgerungen können wir zeigen, dass die Identität herstellbar ist
+>> Die Folgerung $(1)$ entspringt der [[#^6a2086|dritten Eigenschaft der Teilung ganzer Zahlen]]. Die Folgerung $(2)$ basiert auf dem [[#^a40b0b| Satz über der Teilbarkeit von Summen und Differenzen]]. 
+>> 
+>> 2. Umgekehrt können wir auch aus denselben Überlegungen zeigen, dass die Identität aus der anderen Richtung herstellbar ist
 >> $$\begin{align}
->> &n \;|\; b \land n \;|\;a- qb \implies n \;|\; qb \\
->> \implies&(a-qb)+qb = a \tag*{$\square$}
+>> &\underbrace{ n \;|\; b \land n \;|\;a- qb }_{ n \text{ teilt } b \text{ und } a-qb} \implies n \;|\; qb  
 >>\end{align}$$
+>>da $n \;|\; a-qb$ und $n\;|\;qb$ muss dann zwangsläufig $n\;|\;a=(a-qb)+qb$. Daher gilt$$\text{ggT}(a,b) = \text{ggT}(b, a \text{ mod }b)\tag*{$\square$}$$
 >
 >>[!algo] Implementation in Python $\text{gcd}=\text{ggT}$
 >>```python
@@ -734,7 +739,7 @@
 
 
 >[!theorem] Satz Lemma von Bezout ([[../../PDFs/judson2022.pdf#page=32|Quelle]])
->Seien $a,b \in \mathbb{Z}$ mit $a,b \neq 0$, dann existieren $a',b' \in \mathbb{Z}$, sodass
+>Seien $a,b \in \mathbb{Z}$, dann existieren $a',b' \in \mathbb{Z}$, sodass
 >$$\text{ggT}(a,b)=aa'+bb'$$
 >
 >>[!example]- Beispiel $a=8, b=5$
@@ -747,17 +752,22 @@
 >>$$8 \cdot 2+5 \cdot (-3)=1 \tag*{$\blacktriangleleft$}$$
 >>>[!remark] Bemerkung: $8$ und $5$ sind teilerfremd, da $\text{ggT}(8,5)=1$
 >
->>[!proof]- Beweis
->>Für diesen Beweis verwenden wir das [[#^f974a9| Prinzip der vollständigen Induktion]]. Wir führen die vollständige Induktion für die Variable $b \in \mathbb{Z}$ aus (in den [[#^f974a9| Beispielen]] war $n$ die Laufvariable zum Beweis). Wir zeigen also für $b$, dass es zu je zwei Zahlen $a,b \in \mathbb{Z}$ ganze Zahlen $a',b'\in \mathbb{Z}$ existieren, sodass
+>>[!proof] Beweis
+>> Zunächst gilt
+>> $$\text{ggT}(0,0) = 0$$
+>> Daher ist $$\text{ggT}(0,0)= 0\cdot a' + 0 \cdot b'$$
+>> für jede Belegung von $a',b'\in\mathbb{Z}$ gültig.
+>> 
+>>Für den weiteren Beweis verwenden wir das [[#^f974a9| Prinzip der vollständigen Induktion]]. Wir führen die vollständige Induktion für die Variable $b \in \mathbb{Z}$ durch (in den [[#^f974a9| Beispielen]] war $n$ die Laufvariable zum Beweis). Wir zeigen also für $b$, dass es zu je zwei Zahlen $a,b \in \mathbb{Z}$ ganze Zahlen $a',b'\in \mathbb{Z}$ existieren, sodass
 >>$$\text{ggT}(a,b)=aa'+bb'$$
 >>Damit wir das [[#^f974a9| Prinzip der vollständigen Induktion]] verwenden können, beschränken wir **ohne Beschränkung der Allgemeinheit (o.B.d.A.)** $b \geq 0$, sodass wir ein kleinstes Element für den Induktionsanfang wählen können. Das Vorzeichen zu beschränken, ändert nichts am Gehalt der Aussage.
 >>
 >><u>Induktionsanfang</u>:
 >>$$\begin{align}
->> b=0\implies \text{ggT}(a,0)&= aa'+b'0 \\
+>> b=0\implies \text{ggT}(a,0) = \text{ggT}(0, a)&= aa'+b'0 \\
 >>   \lvert a \rvert &= aa' + 0 \tag{$b \in \mathbb{Z}$}  \\
 >>   \frac{\lvert a \rvert}{a}&=a' \\
->>   \text{sgn}(a) &= a' 
+>>   \text{sgn}(a) &= a' \in \{ -1,1 \}
 >>\end{align}$$
 >>So erhalten wir für $a',b' \in \mathbb{Z}$ die Belegung
 >>$$\begin{align}
@@ -767,7 +777,6 @@
 >>$$\tag*{$\checkmark$}$$
 >>
 >><u> Induktionsschritt</u>:
->>
 >>Für den **Induktionsschritt** verwenden wir die rekursive Eigenschaft des $\text{ggT}$, also dass über die Definition fallende Werte zu erwarten sind, sodass $b=0$ erreicht ist wenn der Algorithmus terminiert. Wir verwenden kurz die übliche Denkweise, wie als hätten wir eine konkrete Zählvariable $n$. Wir gehen nicht von $n+1$ wie üblich, sondern von $n-1$ aus, und zeigen, dass sich $a',b' \in \mathbb{Z}$ schlüssig über den Rekursionsschritt $n-1$ und unserer (**Induktions-**)**Behauptung** finden lassen. 
 >>
 >>Den Schritt rückwärts erzeugen wir über den [[#^e21725| Satz des Euklidischen Algorithmus]] dadurch, dass wir $a$ durch $a \text{ mod } b$ reduzieren, also
@@ -793,7 +802,6 @@
 >> b' &= b^* - qr^* \\
 >> a' &= r^*
 >>\end{align}$$
->>Da wir gezeigt haben, dass der [[#^e21725|Euklidische Algorithmus]] terminiert, wird demzufolge auch der induktive Prozess terminieren und die beschriebenen Lösungen produzieren.
 >>$$\tag*{$\square$}$$
 >
 >>[!remark] Bemerkung: Der erweiterte euklidische Algorithmus liefert die entsprechenden Lösungen.
@@ -951,23 +959,23 @@
 ---
 
 >[!lemma] Lemma Teilbarkeit über Primzahlfaktoren 
->Sei $n \in \mathbb{N}$ mit $n=p_{1} \cdot \ldots \cdot p_{k}$ und $a \in \mathbb{Z}$, dann gilt
->$$n \;|\; a \iff p_{1} \;|\; a \land \ldots \land p_{k} \;|\; a$$
+>Sei $n \in \mathbb{N}$ mit $n=p_{1}^{e_{1}} \cdot \ldots \cdot p^{e_{k}}_{k}$ mit $p_i \neq p_j$, $e_1, ..., e_k \in \mathbb{N}$ und $a \in \mathbb{Z}$, dann gilt
+>$$n \;|\; a \iff p_{1}^{e_{1}} \;|\; a \land \ldots \land p_{k}^{e_{k}} \;|\; a$$
 >
->>[!proof]- Beweis
+>>[!proof] Beweis
 >> Wir zeigen zunächst ($\implies$).
 >> 
->> Wenn $n \;|\; a$, dann existiert ein $q \in \mathbb{Z}$, sodass
+>> Wir fixieren für den nächsten Schritt einen Index $i$, also eine Primfaktorpotenz $p_{i}^{e_{i}}$. Wenn $n \;|\; a$, dann existiert ein $q \in \mathbb{Z}$, sodass
 >> $$\begin{align}
 >> q \cdot n &= a \\
->> q \cdot (p_{1} \cdot \ldots \cdot p_{i} \cdot \ldots \cdot p_{k}) &= a \qquad&&\Big\vert :p_{i}  \\
->> q \cdot \underbrace{ \left( p_{1} \cdot \ldots \cdot \frac{p_{i}}{p_{i}} \cdot \ldots \cdot p_{k} \right) }_{ =n' } &= \frac{a}{p_{i}} \\
->> q \cdot n' &= \frac{a}{p_{i}}
+>> q \cdot (p_{1}^{e_{1}} \cdot \ldots \cdot p^{e_{i}}_{i} \cdot \ldots \cdot p^{e_{k}}_{k}) &= a \qquad&&\Big\vert :p_{i}^{e_{i}}  \\
+>> q \cdot \underbrace{ \left( p_{1} \cdot \ldots \cdot \frac{p_{i}^{e_{i}}}{p_{i}^{e_{i}}} \cdot \ldots \cdot p_{k} \right) }_{ =n' } &= \frac{a}{p_{i}^{e_{i}}} \\
+>> q \cdot n' &= \frac{a}{p_{i}^{e_{i}}}
 >>\end{align}$$
->>Wir bezeichnen $n'=\dfrac{n}{p_{i}}$ für ein beliebigen Primfaktor $p_{i}$ von $n$. Es ist leicht ersichtlich, dass $q \cdot n'$ eine ganze Zahl sein muss, da beide Faktoren ganze Zahlen sind. Daher muss $\dfrac{p_{i}}{a}$ eine ganze Zahl sein und demzufolge $p_{i}\;|\;a$  für jedes beliebige $p_{i}$ gelten. $$\tag*{$\checkmark$}$$
+>>Wir bezeichnen $n'=\dfrac{n}{p_{i}^{e_{i}}}$ für ein beliebigen Primfaktor $p_{i}$ von $n$. Es ist leicht ersichtlich, dass $q \cdot n'$ eine ganze Zahl sein muss, da beide Faktoren ganze Zahlen sind. Daher muss $\dfrac{a}{p_{i}^{e_{i}}}$ eine ganze Zahl sein und demzufolge $p_{i}^{e_{i}}\;|\;a$  für jedes beliebige $p_{i}$ gelten. $$\tag*{$\checkmark$}$$
 >>Wir zeigen nun die andere Richtung ($\Longleftarrow$)
 >>
->>Wenn $p_{1} \;|\; a \land \ldots \land p_{k} \;|\; a$ gilt, dann muss laut dem [[#^50378b|Fundamentalsatz der Arithmetik]] $a$ die Primfaktoren $p_{1}, \dots, p_{k}$ enthalten. Das heißt, es gibt eine Zahl $n=p_{1} \cdot \ldots \cdot p_{k}$ die als Faktor in $a$ enthalten ist. Also muss $n \;|\; a$ gelten
+>>Wenn $p_{1}^{e_{1}} \;|\; a \land \ldots \land p_{k}^{e_{k}} \;|\; a$ gilt, dann muss laut dem [[#^50378b|Fundamentalsatz der Arithmetik]] $a$ die Primfaktoren $p_{1}, \dots, p_{k}$ mit Exponenten $e_1, \ldots, e_k$ enthalten. Das heißt, es gibt eine Zahl $n=p_{1}^{e_{1}} \cdot \ldots \cdot p^{e_{k}}_{k}$ die als Faktoren in $a$ enthalten ist. Also muss $n \;|\; a$ gelten
 >>$$\tag*{$\square$}$$
 >
 
@@ -1043,7 +1051,7 @@
 >>daher gilt durch das [[#^42f9e5|Lemma von Bezout]]
 >>$$\begin{align}
 >> p \nmid a \implies \text{ggT}(p,a) &= 1 = pp'_{1} + aa'  \\
->> p \nmid b \implies \text{ggT}(p,b) &= 1 = pp_{2}'' + bb'
+>> p \nmid b \implies \text{ggT}(p,b) &= 1 = pp_{2}' + bb'
 >>\end{align}$$
 >>Wir multiplizieren beide Gleichungen miteinander und erhalten
 >>>[!note]- Info zu: Was es bedeutet zwei Gleichungen zu multiplizieren

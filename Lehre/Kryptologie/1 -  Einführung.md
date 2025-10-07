@@ -3,7 +3,7 @@
 >
 >![[Figures/krypto_ubersicht.png|center|400]]
 > Die oben genannten Oberbegriffe sind Disziplinen, die folgende Themen beinhalten
-> - Krypographie:
+> - Kryptographie:
 > 	- Verschlüsselungsalgorithmen (häufig mithilfe von mathematisch ungelösten bzw. schwer lösbaren Problemen)
 > 	- Erstellung von Signaturverfahren
 > 	- Erstellung von kryptographischen Protokolen in Verbinung mit Verschlüsselungsalgorithmen 
