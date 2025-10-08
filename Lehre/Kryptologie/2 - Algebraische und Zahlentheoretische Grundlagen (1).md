@@ -752,7 +752,7 @@
 >>$$8 \cdot 2+5 \cdot (-3)=1 \tag*{$\blacktriangleleft$}$$
 >>>[!remark] Bemerkung: $8$ und $5$ sind teilerfremd, da $\text{ggT}(8,5)=1$
 >
->>[!proof] Beweis
+>>[!proof]- Beweis
 >> Zunächst gilt
 >> $$\text{ggT}(0,0) = 0$$
 >> Daher ist $$\text{ggT}(0,0)= 0\cdot a' + 0 \cdot b'$$
@@ -962,7 +962,7 @@
 >Sei $n \in \mathbb{N}$ mit $n=p_{1}^{e_{1}} \cdot \ldots \cdot p^{e_{k}}_{k}$ mit $p_i \neq p_j$, $e_1, ..., e_k \in \mathbb{N}$ und $a \in \mathbb{Z}$, dann gilt
 >$$n \;|\; a \iff p_{1}^{e_{1}} \;|\; a \land \ldots \land p_{k}^{e_{k}} \;|\; a$$
 >
->>[!proof] Beweis
+>>[!proof]- Beweis
 >> Wir zeigen zunächst ($\implies$).
 >> 
 >> Wir fixieren für den nächsten Schritt einen Index $i$, also eine Primfaktorpotenz $p_{i}^{e_{i}}$. Wenn $n \;|\; a$, dann existiert ein $q \in \mathbb{Z}$, sodass
