@@ -79,35 +79,47 @@
 >>über die **Induktionsbehauptung** gültig ist und somit unsere Aussage bewiesen ist
 >>$$\tag*{$\square$}$$
 >
+>
+>
+>
 >>[!proof]- Beweis mit Zahlentheorie
 >> Nehmen wir folgende Liste an Zahlen
 >> $$1 \cdot a, 2 \cdot a, 3 \cdot a, \dots (p-1)\cdot a \tag{1}$$
->> Wir planen nun jede Zahl dieser Liste $\text{ mod } p$ zu rechnen. Dazu überlegen wir wie die Liste sich nach dieser Operation verändern muss.
->> 
->> Unserer Voraussetzung können wir entnehmen, dass $\text{ggT}(a,p)=1$ gilt. Weiterhin wissen wir, dass alle Zahlen kleiner als $p$ per Definition der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^966cde|Primzahlen]] zur Primzahl teilerfremd sein müssen. Daher können wir feststellen, dass $p$ keine der obenen genannten ganzzahlig teilt. 
->> 
->> Wir nehmen nun an, dass alle Elemente nach der Operation $\text{ mod }p$ in der Liste verschiedene Elemente erzeugt, da wir $p-1$ Elemente haben und alle teilerfremd zu $p$ sind erwarten wir 
->> $$1,2,3,\dots,(p-1) \tag{2}$$
->> Um dies zu zeigen, gehen wir davon aus, dass es angenommen zwei Elemente aus Liste $(1)$ gibt, die den gleichen Rest ergeben. Also es seien $k,m \in \{ 1,\dots,(p-1) \}$ mit 
->> $$k \neq m \tag{3}$$
->> und wir behaupten, es gäbe demzufolge
->> $$k\cdot a \equiv m \cdot a \;\;(\text{mod } p)$$ 
->> Laut dem Satz der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Kongruenzen]] können wir diese Kongruenz ausdrücken als
->> $$\begin{align}
->> k\cdot a\equiv m\cdot a \;\;(\text{mod } p) &\iff p\;|\; k\cdot a - m\cdot a \\
->> &\iff p \;|\; a \cdot(k-m)
+>>
+>>
+>> Wir wollen zunächst folgende Eigenschaften bezüglich dieser Liste zeigen
+>> 1. Keine der Elemente der Liste sind durch $p$ teilbar, bzw. $k \cdot a \not\equiv 0 \;\;(\text{mod } p)$ für alle $0 < k < p$
+>> 2. Keine der Elemente sind kongruent zueinander, also $k_{1} \\cdot a \not \equiv k_{2} a \;\;(\text{mod } p)$ für alle $0 <k_{1} < k_{2} < p$
+>>
+>>Wir zeigen die beide Eigenschaften per Widerspruch
+>> 1. Angenommen $ka \equiv 0 \;\;(\text{mod } p)$ wäre wahr, dann würde gelten
+>> $$ka \equiv 0 \;\;(\text{mod } p) \iff p \;|\; ka$$
+>> Der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^f65359| Satz des Primzahlquotienten]] sagt, 
+>> $$p \;|\; ka \implies p \;|\; k \lor p\;|\;a$$
+>> Wir wissen von unserer Annahme des Satzes, dass $p \nmid a$. Da $0 < k < p$ muss durch die Definition der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^966cde|Primzahlen]] gelten $p \nmid k$, was ein Widerspruch zu der Annahme ist. Daher muss gelten, dass $$k \cdot a \not \equiv 0 \;\;(\text{mod } p) \tag*{$\checkmark$}$$
+>> 2. Angenommen es gäbe $0 < k_{1} < k_{2} < p$, sodass
+>>  $$\begin{align}
+>> k_{1}a \equiv k_{2}a \;\;(\text{mod } p) &\iff p \;|\; (k_{1}a - k_{2}a) \\
+>> &\iff p \;|\; a(k_{1}-k_{2})
 >>\end{align}$$
->>Nach dem [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^f65359|Satz der Primzahlquotienten]] muss einer der Faktoren von $p$ teilbar sein. Da unserer Voraussetzungen nach $\text{ggT}(a,p)=1$, also $p\nmid a$, muss demzufolge $p \;|\; (k-m)$ dann gelten, wenn es angenommen zwei gleiche Zahlen gäbe. Von $p \;|\; (k-m)$ können wir über den Satz der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Kongruenzen]] rückschließen, dass
->>$$k \equiv m \;\;(\text{mod } p)$$
->> was ein Widerspruch zu unserer Behauptung $(3)$ ist. Daher muss die Liste $(2)$ entstehen, wenn wir Liste $(1)$ $\text{ mod } p$ rechnen. Demzufolge können wir behaupten, wenn wir jeweils die Elemente der Listen miteinander multiplizieren
->> $$(1 \cdot a)(2 \cdot a)(3 \cdot a)\dots((p-1)\cdot a) \equiv 1 \cdot 2 \cdot 3 \dots (p-1) \;\;(\text{mod } p)$$
->> Wenn wir auf der linken Seite alle $a$ aufmultiplizieren und dazu bemerken, dass diese Produkte die Fakultäten $(p-1)!$ sind, erhalten wir
->> $$a^{p-1}(p-1)! \equiv (p-1)! \;\;(\text{mod }  p) \tag{4}$$
->> Da $p$ eine Primzahl ist und alle Faktoren $b$ in $(p-1)!$ kleiner als $p$ sind mit $\text{ggT}(p,b)=1$, wissen wir, dass das modulare Inverse für jeden Faktor $b$ laut [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^c7c061| dem Satz der Existenz des modularen Inversen]] existieren muss.
+>>Wieder nach dem [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^f65359| Satz des Primzahlquotienten]] können wir schließen
+>>$$p \;|\; a(k_{1}-k_{2}) \implies p \;|\; a \lor p \;|\; (k_{1}-k_{2})$$
+>>Durch Voraussetzung haben wir $p \nmid a$. Daher muss dann 
+>>$$\begin{align}
+>> p \;|\; (k_{1}-k_{2}) \iff k_{1} \equiv k_{2} \;\;(\text{mod } p)
+>>\end{align}$$
+>>Da wir aber $k_{1} < k_{2}$ gewählt haben, ist das ein Widerspruch. Somit gilt
+>>$$k_{1} a \not\equiv k_{2} a \;\;(\text{mod } p) \tag*{$\checkmark$}$$
+>>
+>> Wir wissen nun, dass jedes Element der Liste einen unterschiedlichen Rest bezüglich $\text{ mod }p$ hat. Das heißt, das Produkt aller Elemente der Liste, ist das Produkt aller Elemente $0 < k < p$, also
+>> $$\begin{align}
+>>(1 \cdot a)(2 \cdot a)(3 \cdot a)\dots((p-1)\cdot a) &\equiv 1 \cdot 2 \cdot 3 \dots (p-1) \;\;(\text{mod } p) \\
+>> a^{p-1}(p-1)! &\equiv (p-1)! \;\;(\text{mod }  p) \tag{4}
+>>\end{align}$$
 >> 
->> Tatsächlich ist jedes $b \in \{ 1,2,3,\dots,p-1 \}$ sein eigenes [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^6f68c0|modulares Inverses]] bezüglich Modulo $p$, was wir schnell zeigen werden.
->>>[!proof]- Zwischenbeweis 
->>>Wir zeigen für eine Primzahl $p$
+>> Für den verbleibenden Teil verwenden wir den Satz von Wilson, den wir noch nicht eingeführt haben. Er sagt, sei $p$ eine Primzahl, dann gilt $(p-1)! \equiv -1 \;\;(\text{mod } p)$
+ >>>[!proof]- Zwischenbeweis 
+>>>Zunächst müssen wir einen Zwischenschritt zeigen. Wir zeigen für eine Primzahl $p$
 >>>$$ b \text{ ist sein eigenes modulares Inverses,}$$
 >>>$$\underbrace{ \text{genau dann wenn } }_{ \iff } b \equiv 1 \;\;(\text{mod } p) \text{ oder } b \equiv p-1 \;\;(\text{mod } p)$$
 >>>Wir zeigen beide Richtungen der Äquivalenz ($\iff$). Wir starten mit
@@ -172,12 +184,15 @@
 >>>
 >>>---
 >>>
->>>Somit sind beide Richtungen der Äquivalenz gezeigt und die Aussage bestätigt. $$\tag*{$\square$}$$
+>>>Mit dieser Aussagen können wir zeigen, dass für
+>>>$$(p-1)! \equiv 1 \cdot \dots \cdot (p-1) \;\;(\text{mod } p)$$
+>>>Es lassen sich abgesehen von $1$ und $(p-1)$ modulare Inverse über verschiedene Paare $k_{1} \cdot k_{2} \equiv 1 \;\;(\text{mod } p)$ mit $0 < k_{1} < k_{2} < p$ bilden, da diese laut des [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^c7c061| Satzes zur Existenz des modularen Inversen]] existieren müssen. Es bleibt
+>>>$$(p-1)!\equiv 1 \cdot 2 \cdot \ldots \cdot p-2 \cdot p-1 \equiv 1 \cdot 1 \cdot \ldots \cdot 1 \cdot \underbrace{ (p-1) }_{ \equiv -1 \;\;(\text{mod } p) } \;\;(\text{mod } p) \equiv -1 \;\;(\text{mod } p)$$
+>>>
 >>
->>Da dies durch den Zwischenbeweis zweifelsfrei verwendet werden kann, können wir einfach beide Seiten mit den Faktoren $(p-1)!$ multiplizieren und alle Faktoren so paaren, dass diese sich mit ihrem modularen Inversen aufheben, also
+>>Mit Wilson's Satz können wir nun vereinfachen und zeigen
 >>$$\begin{align}
->> a^{p-1}(p-1)! &\equiv (p-1)! &&\;\;(\text{mod }  p) \qquad&&\Big\vert \cdot(p-1)! \\
->> a^{p-1}\underbrace{ (1\cdot1^{-1}) }_{ \equiv 1 }\underbrace{ (2\cdot 2^{-1}) }_{ \equiv 1 }\dots\underbrace{ \Big((p-1)(p-1)^{-1}\Big) }_{ \equiv 1 } &\equiv \underbrace{ (1\cdot1^{-1}) }_{ \equiv 1 }\underbrace{ (2\cdot 2^{-1}) }_{ \equiv 1 }\dots\underbrace{ \Big((p-1)(p-1)^{-1}\Big) }_{ \equiv 1 } &&\;\;(\text{mod }  p)  \\ 
+>> a^{p-1}\underbrace{ (p-1)! }_{ \equiv -1(\text{mod } p) } &\equiv \underbrace{ (p-1)! }_{ \equiv -1(\text{mod } p) } &&\;\;(\text{mod }  p)\\ 
 >> a^{p-1} &\equiv 1 && \;\;(\text{mod } p)
 >>\end{align}$$
 >>was es zu zeigen galt.

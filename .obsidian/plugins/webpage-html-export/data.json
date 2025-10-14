@@ -10,7 +10,7 @@
     "postProcess": true,
     "displayProgress": true,
     "inlineHTML": false,
-    "exportPath": "/home/thomas/Documents/HTML EXPORT",
+    "exportPath": "/home/thomas/Documents/HTML_EXPORT",
     "filesToExport": [
       "Computer Science",
       "Lehre/Kryptologie/Diagrams",
@@ -208,7 +208,7 @@
     },
     "rssOptions": {
       "featureId": "rss",
-      "enabled": true,
+      "enabled": false,
       "unavailable": false,
       "alwaysEnabled": false,
       "hideSettingsButton": false,
@@ -239,7 +239,7 @@
     "faviconPath": "",
     "siteName": "Obsidian Vault",
     "iconEmojiStyle": "Native",
-    "exportRoot": "PhD Studies/Cryptology/Cyclotomic Polynomials",
+    "exportRoot": "",
     "includePluginCss": [],
     "includeStyleCssIds": [],
     "autoDisposeWebpages": true
