@@ -46,7 +46,7 @@
 >> $$x=a_{1}\cdot \frac{N}{n_{1}} \underline{\qquad\quad} + a_{2}\cdot \frac{N}{n_{2}} \underline{\qquad\quad}+\ldots+a_{k}\cdot \frac{N}{n_{k}}\underline{\quad\qquad}$$
 >>>[!remark]- Zwischenbemerkung zur Logik
 >>>Würden wir unser aktuelles $x$ Modulo $n_{1}$ rechnen, würden zumindest schonmal alle Summanden bis auf den ersten zu $0$ werden
->>> $$x=\underbrace{ a_{1}\cdot \frac{N}{n_{1}}U \underline{\qquad\quad} }_{ \equiv? \;\;(\text{mod } n_{1}) } + \underbrace{ a_{2}\cdot \frac{N}{n_{2}} \underline{\qquad\quad} }_{ \equiv 0 \;\;(\text{mod } n_{1}) }+\ldots+\underbrace{ a_{k}\cdot \frac{N}{n_{k}}U\underline{\quad\qquad} }_{ \equiv0 \;\;(\text{mod } n_{1}) }$$
+>>> $$x=\underbrace{ a_{1}\cdot \frac{N}{n_{1}} \underline{\qquad\quad} }_{ \equiv? \;\;(\text{mod } n_{1}) } + \underbrace{ a_{2}\cdot \frac{N}{n_{2}} \underline{\qquad\quad} }_{ \equiv 0 \;\;(\text{mod } n_{1}) }+\ldots+\underbrace{ a_{k}\cdot \frac{N}{n_{k}}\underline{\quad\qquad} }_{ \equiv0 \;\;(\text{mod } n_{1}) }$$
 >>> Da $N$ den Faktor $n_{1}$ enthält, muss die Teilung laut [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^6a2086|dritten Eigenschaft der ganzzahligen Teilung]] aufgehen und somit den Rest $0$ enthalten. Im ersten Summanden haben wir aber $n_{1}$ zuvor durch $\frac{N}{n_{1}}$ rausgerechnet, weshalb der Ausgang der Rechnung an der Stelle ungewiss ist.
 >>
 >> Wir können nun garantieren, dass wenn wir modulo $n_{i}$ rechnen, dass alle Summanden wegfallen außer $a_{i}\cdot \dfrac{N}{n_{i}}$. Jedoch können wir keine Aussagen darüber treffen, welcher Wert entsteht, wenn wir

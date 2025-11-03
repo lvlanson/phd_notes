@@ -1202,14 +1202,14 @@
 >>Jetzt werden beide Gleichungen miteinander multipliziert
 >>$$\begin{align}
 >> bb'cc' &= (1-aa')(1-aa'') \\
->> bb'cc' &= 1-aa'-aa''-a^2a'aa'' \\
->> bb'cc' &= 1- a(a'-a''-aa'a'') \\
->>  a(a'-a''-aa'a'')+ bc(b'c')  &= 1\\
+>> bb'cc' &= 1-aa'-aa''+a^2a'a'' \\
+>> bb'cc' &= 1- a(a'-a''+aa'a'') \\
+>>  a(a'-a''+aa'a'')+ bc(b'c')  &= 1\\
 >>\end{align}$$
 >>Was die Aussage [[#^42f9e5|Bezouts Lemma]] für $\text{ggT}(a,bc)=1$ ist, also
->>$$ a(a'-a''-aa'a'') + bc(b'c')  = 1 \implies \text{ggT}(a,bc)=1$$
+>>$$ a(a'-a''+aa'a'') + bc(b'c')  = 1 \implies \text{ggT}(a,bc)=1$$
 >>Für $(\Longleftarrow)$ konstruieren wir für $a$ über [[#^42f9e5|Bezouts Lemma]]
->>$$\text{ggT}(a,bc)\implies a(a'-a''-aa'a'') + bc(b'c')  = 1$$
+>>$$\text{ggT}(a,bc)\implies a(a'-a''+aa'a'') + bc(b'c')  = 1$$
 >>und lösen die vorangegangene Implikation rückwärts auf und erhalten die gesuchte Aussage.
 >>
 >>$$\tag*{$\square$}$$

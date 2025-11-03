@@ -14,7 +14,7 @@
 >>  &\equiv a^{\frac{p+1}{2}} &&\;\;(\text{mod } p) \\
 >>  &\equiv a^{\frac{p-1+2}{2}} &&\;\;(\text{mod } p) \\
 >>  &\equiv a^{\frac{p-1}{2}}a^{\frac{2}{2}} &&\;\;(\text{mod } p) \\
->>  &\equiv \underbrace{ \left( a^{\frac{1}{2}} \right)^{p-1} }_{ \equiv 1 \;\;(\text{mod } p) } a &&\;\;(\text{mod } p) \tag{Kleiner Satz Fermat} \\
+>>  &\equiv \underbrace{ \left( a^{p-1} \right)^{\frac{1}{2}} }_{ \equiv 1 \;\;(\text{mod } p) } a &&\;\;(\text{mod } p) \tag{Kleiner Satz Fermat} \\
 >> &\equiv a &&\;\;(\text{mod } p) \tag*{$\square$}
 >>\end{align}$$
 >
@@ -72,14 +72,14 @@
 >>>m_{4} &= -c_{p} &&\;\;(\text{mod } p) &\land&&m_{4}=-c_{q} &&\;\;(\text{mod } q) \tag{M-GLS 4}\\  
 >>>\end{align}$$
 >>>Dies sind vier modulare Gleichungssysteme (M-GLS), welche mit dem [[4 - Angriffe auf RSA#^ca7b4b|chinesischen Restsatz]] gelöst werden können, also
->>>$$m_{i} = \Big(\pm\big[q^{-1}\big]_{p} \cdot q \cdot c_{p}  \pm \big[p^{-1}\big]_{q} \cdot p \cdot c_{q}\Big) \text{ mod }n$$
->>>wobei durch Lesen der Nachrichten $m_{i}$ mit $(i=1,2,3,4)$ die richtige Nachricht $m$ gewählt wird.
+>>>$$m_{i} = \Big(\pm\big[q\big]_{p}^{-1} \cdot q \cdot c_{p}  \pm \big[p\big]_{q}^{-1} \cdot p \cdot c_{q}\Big) \text{ mod }n$$
+>>>wobei durch Lesen der Nachrichten $m_{i}$ mit $i=1,2,3,4$ die richtige Nachricht $m$ gewählt wird.
 >
 >>[!korrektheitsnachweis]
 >>Aus gleichen Gründen wie beim Korrektheitsnachweis für [[3 - RSA (Rivest Shamir Adleman)#^7c14da|RSA]] genügt es zu zeigen, dass das Verfahren für $p$ gültig ist, da es umgekehrt für $q$ dann ebenfalls gilt und rückschließend für $n$. 
 >>
 >>Wenn wir das Lösungsverfahren zur Entschlüsselung auf die Chiffre $c=m^2 \text{ mod }n$ anwenden, erhalten wir
->>$$(m^{2})^{\frac{p+1}{4}} \equiv m^{\frac{p-1}{2}}m^1 \equiv \underbrace{ \left( m^{\frac{1}{2}} \right)^{p-1} }_{ \equiv 1 \;\;(\text{mod } p) }m \equiv \pm m \;\;(\text{mod } p) \tag*{$\square$}$$
+>>$$(m^{2})^{\frac{p+1}{4}} \equiv m^{\frac{p-1}{2}}m^1 \equiv \underbrace{ \left( m^{p-1} \right)^{\frac{1}{2}} }_{ \equiv 1 \;\;(\text{mod } p) }m \equiv \pm m \;\;(\text{mod } p) \tag*{$\square$}$$
 >
 >>[!warning] Achtung: Die verbleibenden Klartextkandidaten $m_{i}$ müssen gelöscht werden, da sonst ein [[6 - Angriffe auf das Rabin-Verfahren#^a8d780|Angriff]] möglich ist.
 >
