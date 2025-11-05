@@ -92,8 +92,8 @@
 
 >[!def] Definition Einheitengruppe auf den Ganzen Zahlen ([[../../PDFs/judson2022.pdf#page=47|Quelle]])
 > Eine Einheitengruppe ist eine [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|Gruppe]], die invertierbare Elemente und deren Inversen enthalten. Im Speziellen, die Einheitengruppe auf den ganzen Zahlen ist gegeben als
-> $$\mathbb{Z}_{n}^*=\{ 1,2,3,\dots,n-1 \}$$
->
+> $$\mathbb{Z}_{n}^*=\{ 1,\dots,n-1 \}$$
+>wobei für jedes Element $a \in \mathbb{Z}_n^*$ gilt $\text{ggT}(a,n)=1$.
 
 ^56b25f
 

@@ -18,7 +18,7 @@
 >>[!proof]- Beweis
 >> Wir definieren zunächst eine Menge $A$, die alle teilerfremden Zahlen zu $nm$ listet, bevor wir sie in der [[3 - RSA (Rivest Shamir Adleman)#^f287d3|Euler'schen Phi-Funktion]] zählen, also
 >> $$A=\{ k \in \mathbb{N} \;|\; k \leq nm \text{ und } \text{ggT}(k,nm)=1\ \}$$
->> Nun definieren wir eine Funktion $f: A \to B\times C$ abbildet, wobei $B$ die Menge der zu $n$ teilerfremden Zahlen enthält und $C$ respektive zu $m$. Dies lässt sich aus der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^2548b2|Implikation]] herleiten, dass
+>> Nun definieren wir eine Funktion $f: A \to B\times C$, wobei $B$ die Menge der zu $n$ teilerfremden Zahlen enthält und $C$ respektive zu $m$. Dies lässt sich aus der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^2548b2|Implikation]] herleiten, dass
 >> $$\text{ggT}(nm,x)=1 \iff \text{ggT}(n,x)=1 \land \text{ggT}(m,x)=1$$
 >> Wir wollen damit zeigen, dass aufgrund der Eigenschaften des Kreuzprodukts bzw. des [[../../PhD Studies/Mathematic Basics/Combinatorics/Counting Techniques#^e662cc|Multiplikationsprinzips]] gilt
 >> $$ \underbrace{ \mid A \mid }_{ \phi(nm) } = \underbrace{ \mid B\mid }_{ \phi(n) } \cdot \underbrace{ \mid C\mid }_{ \phi(m) }$$
@@ -86,10 +86,10 @@
 >>
 >>Der Zusammenhang [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^2548b2|der Teilerfremde von Produkten]] erlaubt uns folgende Schlussfolgerung zu machen
 >>$$\text{ggT}(a,n) = 1 \land \text{ggT}(a_{i},n)=1 \implies \text{ggT}(aa_{i},n)=1$$
->>Wir fixieren eines der $a_{i}$ und definieren $1 \leq b <n$ mit
+>>Wir fixieren eines der $a_{i}$ und definieren $b \in \{1, \dots,n-1\}$ mit
 >>$$b \equiv aa_{i} \;\;(\text{mod } n)$$
 >>Dann gilt
->>$$\text{ggT}(b,n)=\text{ggT}(aa_{i},n)=1$$
+>>$$\text{ggT}(b,n)=\text{ggT}(aa_{j},n)=1$$
 >>und demnach muss $b$ eine der $a_{j}$ sein.
 >>$$\tag*{$\square$}$$
 
@@ -160,7 +160,7 @@
 >>
 >>---
 >>
->>Wir setzen mit ($\implies$) fort
+>>Wir setzen mit ($\implies$) fort. Wir zeigen über Widerspruch und nehmen an $h \nmid k$.
 >>
 >>Wir wollen nun $h$ durch $k$ teilen. Der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^30b120| Existenz und Eindeutigkeit des Quotienten und Rests]] erlaubt uns dies wie folgt darzustellen
 >>$$h = jk + r$$
@@ -178,7 +178,7 @@
 >
 >>[!remark]- Bemerkung zu $k \;|\; \phi (n)$
 >>Es gilt auch, dass $k \;|\; \phi(n)$, da
->>$$a^{\phi(n)}=1 \;\;(\text{mod } n)$$
+>>$$a^{\phi(n)}\equiv1 \;\;(\text{mod } n)$$
 >>unter den gegebenen Bedingungen gilt.
 
 ^c447c3
@@ -190,7 +190,7 @@
 >>[!proof]- Beweis
 >>Wir starten mit ($\implies$)
 >>
->>da $\text{ggT}(a,n)=1$ [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^c7c061|existiert das Inverse]] von $a$ und wir können folgende Äquivalenzumformung machen
+>>da $\text{ggT}(a,n)=1$ [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^c7c061|existiert das Inverse]] von $a$ und wir können folgendermaßen umformen
 >>$$\begin{align}
 >> a^i &\equiv a^j &&\;\;(\text{mod } n) \qquad&&\Big\vert \cdot a^{-j} \\
 >> a^{i-j} &\equiv 1 &&\;\;(\text{mod } n) \\
@@ -200,7 +200,7 @@
 >>---
 >>Wir setzen fort mit ($\Longleftarrow$)
 >>
->>Es gilt nun aufgrund von dem Satz der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Kongruenzen]]
+>>Es gilt nun aufgrund des Satzes der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Kongruenzen]]
 >>$$i \equiv j \;\;(\text{mod } k) \implies k \;|\; i-j \implies \exists q \in \mathbb{Z}: qk = i-j$$
 >>Wir stellen um
 >>$$i = qk+j$$
@@ -211,12 +211,12 @@
 ^7e0196
 
 >[!lemma] Korolar ([[../../PDFs/burton2010.pdf#page=161|Quelle]])
->$$a \text{ ist von Ordnung } k \text{ bezüglich modulo } n \implies a,a^2,\dots,a^k \text{ sind inkongruent bezüglich modulo } n$$
+>$$a \text{ ist von Ordnung } k \text{ bezüglich modulo } n \implies a,a^2,\dots,a^k \text{ sind inkongruent bezueglich modulo } n$$
 >>[!proof]- Beweis
 >>Angenommen $$a^i \equiv a^j \;\;(\text{mod } n)$$
 >>mit $0 \leq i < j <k$. Allerdings garantiert der [[#^7e0196|vorangegangene Satz]], dass
 >>$$a^i \equiv a^j \;\;(\text{mod } n) \iff i \equiv j \;\;(\text{mod } k)$$
->>was wiederum bedeutet, dass $i=j$ und demnach $a^i=a^j$, was ein Widerspruch dazu ist, dass es zwei verschiedene $a_{i},a_{j}$ gibt, die äquivalent bezüglich $(\text{mod } n)$ sind.
+>>was wiederum bedeutet, dass $i=j$ und demnach $a^i\equiv a^j \;\;(\text{mod } n)$, was ein Widerspruch dazu ist, dass es zwei verschiedene $a_{i},a_{j}$ gibt, die äquivalent bezüglich $(\text{mod } n)$ sind.
 >>$$\tag*{$\square$}$$
 
 ^59492a
@@ -235,7 +235,7 @@
 >>Dadurch, dass $d$ bereits der größte gemeinsame Teiler ist, gilt
 >>$$\text{ggT}(h_{1},k_{1})=1 \tag{3}$$
 >>Wir bemerken, dass folgendes gilt
->>$$(a^h)^{k_{1}} \equiv (a^{h_{1}d})^{k/d} \equiv (a^{h_{1}})^d \equiv 1\;\;(\text{mod } n)$$
+>>$$(a^h)^{k_{1}} \equiv (a^{h_{1}d})^{k/d} \equiv (\underbrace{ a^k }_{ \equiv 1 })^{h_{1}} \equiv 1\;\;(\text{mod } n)$$
 >>Angenommen $a^{h}$ hat Ordnung $r$ bezüglich modulo $n$, dann können wir von diesem [[#^c447c3|Satz]] schließen, dass
 >>$$r \;|\; k_{1} \tag{4}$$
 >>Da $a^h$ Ordnung $r$ bezüglich modulo $n$ hat, können wir sagen
@@ -268,7 +268,7 @@
 >> 11 &\to 12 \\
 >> 12 &\to 2 \\
 >>\end{align}$$
->>Wir betonen $2$ hat Ordnung $12$
+>>Wir heben hervor, dass $2$ Ordnung $12$ hat
 >>-> $2^2=4$ hat Ordnung $\dfrac{12}{\text{ggT}(2,12)}=\dfrac{12}{2}=6$
 >>-> $2^3=8$ hat Ordnung $\dfrac{12}{\text{ggT}(3,12)}=\dfrac{12}{3}=4$
 
@@ -293,6 +293,6 @@
 >>$$\tag*{$\square$}$$
 
 >[!def] Definition Primitive Wurzel ([[../../PDFs/burton2010.pdf#page=162|Quelle]])
-> Sei $a,n \in \mathbb{Z}$ mit $n \neq 0$. Wenn $\text{ggT}(a,n)=1$ und $a$ hat Ordnung $\phi(n)$ bezüglich modulo $n$, dann ist $a$ die **primitive Wurzel** von $n$.
+> Sei $a,n \in \mathbb{Z}$ mit $n \neq 0$. Wenn $\text{ggT}(a,n)=1$ und $a$ die Ordnung $\phi(n)$ bezüglich modulo $n$ hat, dann ist $a$ die **primitive Wurzel** von $n$.
 
 ^2e5c1d
