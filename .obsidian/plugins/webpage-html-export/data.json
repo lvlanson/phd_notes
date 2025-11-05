@@ -240,7 +240,10 @@
     "siteName": "Obsidian Vault",
     "iconEmojiStyle": "Native",
     "exportRoot": "",
-    "includePluginCss": [],
+    "includePluginCss": [
+      "shiki-highlighter",
+      "obsidian-better-codeblock"
+    ],
     "includeStyleCssIds": [],
     "autoDisposeWebpages": true
   },
