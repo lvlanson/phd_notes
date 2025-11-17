@@ -54,5 +54,6 @@
   "livePreview": false,
   "defaultViewMode": "preview",
   "showLineNumber": true,
-  "smartIndentList": true
+  "smartIndentList": true,
+  "vimMode": false
 }

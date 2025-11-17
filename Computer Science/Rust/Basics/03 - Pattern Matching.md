@@ -8,7 +8,7 @@ tags: []
 ## Irrefutable Patterns
 
 Recall [[02 - Tuples and Arrays#patterns and destructuring |patterns and destructuring]], where we have seen how destructuring has worked similar to unpacking in Python and how patterns such as `{rust} let a = (1,2,3)` correctly assigns the respective datatypes to `{rust} a`. Rust offers great flexibility in destructuring and pattern matching. Next we will look at different methods on how to **destructure** tuples or also arrays.
-```{rust} showLineNumbers
+```rust showLineNumbers
 fn takes_tuple(tuple: (char, i32, bool)) {
     let a = tuple.0;
     let b = tuple.1;
