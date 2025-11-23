@@ -163,18 +163,14 @@ tags: []
 
 ### 13.3 Sukzessive Minima
 
->[!def] Definition Minimale Distanz $\lambda_1$ eines Gitters $\mathcal{L}$
-> Die minimale Distanz eines Gitters $\mathcal{L}$ wird bezeichnet als
-> $$\lambda_1(\mathcal{L}) := \min_{\boldsymbol{v} \in \mathcal{L} \setminus\{\boldsymbol{0}\}} ||\boldsymbol{v}||_E$$
-> wobei $||\boldsymbol{v}||_E$ ist die Norm von $\boldsymbol{v}$ und wir berechnen diese als
-> $$||\boldsymbol{v}||_E = \sqrt{\sum_{i} v_i^2}$$
-
 >[!def] Definition Sukzessive Minimale Distanz $\lambda_i$ eines Gitters $\mathcal{L}$
-> Sei $\overline{\mathcal{B}}(r) = \{ \boldsymbol{x} \in \mathbb{R}^n \; | \; ||\boldsymbol{x}|| \leq r \}$ der geschlossene Ball mit Zentrum $0$. Die $i$-te sukzessive minimale Distanz eines Gitters $\mathcal{L}$ ist definiert als
-> $$ \lambda_i(\mathcal{L}) := \min \{r \; | \; \dim(\text{span}(\mathcal{L} \cap \overline{\mathcal{B}}(r))) \geq i\} $$
+> Sei $\mathcal{B}(r) = \{ \boldsymbol{x} \in \mathbb{R}^n \; | \; ||\boldsymbol{x}|| < r \}$ der offene Ball mit Zentrum $0$. Die $i$-te sukzessive minimale Distanz eines Gitters $\mathcal{L}$ ist definiert als
+> $$ \lambda_i(\mathcal{L}) := \inf \{r \; | \; \dim(\text{span}(\mathcal{L} \cap \mathcal{B}(r))) \geq i\} $$
 
 >[!remark] Bemerkung zur Definition
 > Diese Definition mag etwas kompliziert aussehen. Zunächst beschreibt die Definition die Länge des $i$-ten kürzesten Vektors aus einer Menge von $i$ linear unabhängigen, kürzesten Vektoren im Gitter. Im Kern der Definition spannen wir einen Vektorraum über einen Schnitt zwischen einem offenen Ball und dem Gitter auf. Der $\dim$ Operator verrät uns wieviele linear unabhängige Vektoren in dem aufgespannten Schnitt zu finden ist. Wir geben das kleinste $r$ zurück, was uns mindestens $i$ linear unabhängige Vektoren liefert. Es ist zu bemerken, dass es ein höchstes $\lambda_i$ als $\lambda_n$ gibt, da ein Gitter vollen Ranges niemals mehr als $n$ linear unabhängige Vektoren haben kann.
+>
+> Auch bedenkt, dass das **Infimum** sagt, dass wir das **größte Element** suchen, was die Relation erfüllt. Dieses muss laut Definition des **Infimums** nicht zwangsläufig in der Menge selbst liegen.
 >![[Figures/successive_minima.png|center|500]]
 
 >[!remark] Bemerkung zur Bedeutung
@@ -217,16 +213,34 @@ tags: []
 >>|\langle \boldsymbol{Bx}, \boldsymbol{b}_i^* \rangle| = ||\boldsymbol{b}_i^*||^2 \cdot |x_i| \geq ||\boldsymbol{b}_i^*||^2 \tag*{$\square$}
 >> \end{align}$$
 
->[!theorem] Satz Existenz des Gittevektors zur minimalen Distanz
-> Sei $\lambda_1$ die minimale Distanz des Gitters $\mathcal{L}$, Dann existiert ein $\boldsymbol{x} \in \mathcal{L}$ sodass $||\boldsymbol{x}|| = \lambda_1$.
+
+>[!remark]
+> Wir haben nun gezeigt, dass die minimale Distanz $\lambda_1$ in einem Gitter und der entsprechende Vektor dazu existiert. Dies lässt sich entsprechen auf jede beliebige sukzessive Distanz $\lambda_i$ erweitern.
 
 
 
 
 
+
+>[!def] Definition Minimale Distanz $\lambda_1$ eines Gitters $\mathcal{L}$
+> Die minimale Distanz eines Gitters $\mathcal{L}$ wird bezeichnet als
+> $$\lambda_1(\mathcal{L}) := \min_{\boldsymbol{v} \in \mathcal{L} \setminus\{\boldsymbol{0}\}} ||\boldsymbol{v}||_E$$
+> wobei $||\boldsymbol{v}||_E$ ist die Norm von $\boldsymbol{v}$ und wir berechnen diese als
+> $$||\boldsymbol{v}||_E = \sqrt{\sum_{i} v_i^2}$$
 
 
 
 >[!def] Definition Module über Restklassen
 > Seien $n,q \in \mathbb{N}$, dann nennen wir $$\mathbb{Z}_q{^n} = \{\boldsymbol{a} \text{ mod } q \; | \; \boldsymbol{a} \in \mathbb{Z}^n\}$$ den **Vektorraum über Restklassen**. Wobei wir definieren
 > $$\boldsymbol{a} \text{ mod } q = \begin{pmatrix} a_1 \text{ mod } q \\ \vdots \\ a_n \text{ mod } q \end{pmatrix}$$
+
+
+$\boldsymbol{x} \in \mathbb{R}^n$
+
+$$\begin{pmatrix} 1\\ 2 \\ 3 \end{pmatrix} = \boldsymbol{x}$$
+
+# Heading like this
+
+## Subheading like this
+
+Hi this is some text, you can read me $x = 5$ is some math notation, but I can also do programming with `x = 5`

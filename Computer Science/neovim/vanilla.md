@@ -23,13 +23,13 @@ There are 4 modes
 |                                  | `esc` + `:vsp`      |
 | Split Horizontally               | `esc` + `:hsplit`   |
 |                                  | `esc` + `:hsp`      |
-| Toggle Windows (Splits)          | `<C> + w + h/j/k/l` | 
-| Open Terminal                    | :term               |
-| To leave terminal                | `ctl+alt+\`         |
-| N - resize by +N/-N horizontally | :res +/             |
-| resize by +N/-N vertically       | :res vert +/        |
-| resize to N horizontally         | :res N              |
-| resize to N vertically           | :res vert N         |
+| Toggle Windows (Splits)          | `<C> + w + h/j/k/l` |
+| Open Terminal                    | `:term`             |
+| To leave terminal                | `ctl+alt+\`         | 
+| N - resize by +N/-N horizontally | `:res +/`           |
+| resize by +N/-N vertically       | `:res vert +/`      |
+| resize to N horizontally         | `:res N`            |
+| resize to N vertically           | `:res vert N`       |
 
 
 
@@ -63,7 +63,6 @@ There are 4 modes
 |                         | Command                  |
 | ----------------------- | ------------------------ |
 | Move Left/Down/Up/Right | `h`/`j`/`k`/`l`          |
-| ----------------------- | ------------------------ |
 | Next Word               | `w`                      |
 | Delete Word             | `wd`                     |
 | jump `n` parts          | `$NUM` + `h`/`j`/`k`/`l` |
@@ -96,11 +95,11 @@ There are 4 modes
 | Go up by Paragraph                  | `{`       |
 | Go down by Paragraph                | `}`       |
 | Jump Half Page Up                   | `ctl + d` |
-| Jump Half Page Down                 | `ctl + u` |
+| Jump Half Page Down                 | `ctl + u` | 
 | Go all the Way Down                 | `G`       |
 | Go all the Way Up                   | `gg`      |
 | Go to line 50                       | `:50`     |
-| Go down to end of paragraph         | `{`       | 
+| Go down to end of paragraph         | `{`       |
 | Go up to the beginning of paragraph | `}`       |
 | Jump half page down                 | `<C-d>`   |
 | Jump half page up                   | `<C-u>`   |
@@ -110,7 +109,7 @@ There are 4 modes
 | ------------------------------------------ | ------- |
 | index all commands                         | `:h`    |
 | place cursor on variable and refactor it   | `grn`   |
-| search for string VAR                      | `/VAR`  | 
+| search for string VAR                      | `/VAR`  |
 | in search after enter you can go next      | `n`     |
 | " - " you can go previous                  | `N`     |
 | search backwards for VAR                   | `/VAR?` |
@@ -118,20 +117,20 @@ There are 4 modes
 | search for word under the cursor backwards | `#`     |
 
 ## Plugin-Related:
-|                                                                                                                                                        | command     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| when installing new packages into venv while being in vim, hot reload the Language server, such that it loads the new packages into the autocompletion | :LspRestart |
-| when installing new plugins while in vim or wanting to update plugins                                                                                  | :Lazy sync  |
-| open telescope in the current working directory                                                                                                        | <leader> ff |
-| open telescope for searching over opened buffers                                                                                                       | <leader> fb |
+|                                                                                                                                                        | command       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
+| when installing new packages into venv while being in vim, hot reload the Language server, such that it loads the new packages into the autocompletion | `:LspRestart` |
+| when installing new plugins while in vim or wanting to update plugins                                                                                  | `:Lazy sync`  |
+| open telescope in the current working directory                                                                                                        | `<leader> ff` |
+| open telescope for searching over opened buffers                                                                                                       | `<leader> fb` |
 
 ## Buffer-related:
 
-|                   | command |
-| ----------------- | ------- |
-| create new buffer | `:enew` |
-| delete current buffer | `:bd` | 
-| delete all buffers | `:%bd` |
+|                       | command |
+| --------------------- | ------- |
+| create new buffer     | `:enew` |
+| delete current buffer | `:bd`   |
+| delete all buffers    | `:%bd`  |
 
 ## Macros
 
