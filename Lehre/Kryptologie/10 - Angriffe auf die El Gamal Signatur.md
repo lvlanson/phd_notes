@@ -11,7 +11,7 @@
 > dann
 > $$a \equiv b \;\;\left( \text{mod } \frac{n}{d} \right)$$
 > mit $d=\text{ggT}(c,n)$
->>[!proof]- Beweis
+>>[!proof] Beweis
 >>In Kombination von [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Äquivalenzen]] und [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Definition der ganzzahligen Teilung]] können wir die Prämisse umschreiben als
 >>$$\begin{align}
 >> ca \equiv cb \;\;(\text{mod } n) &\iff n \mid (ca-cb) \\
@@ -26,14 +26,14 @@
 >>$$\begin{align}
 >> ca-cb&=kn  \\
 >> c(a-b)&=kn \\
->> rd(a-b)&=sdn \qquad&&\Big\vert :d \\
->>r(a-b) &=sn
+>> rd(a-b)&=ksd \qquad&&\Big\vert :d \\
+>>r(a-b) &=ks
 >>\end{align}$$
 >>Wir können jetzt aus derselben Logik der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Äquivalenzen]] und [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Definition der ganzzahligen Teilung]] rückschließen
 >>$$\begin{align}
->> r(a-b) =sn &\iff n \mid r(a-b) 
+>> r(a-b) =ks &\iff s \mid r(a-b) 
 >> \end{align}$$
->> Der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^f65359|Satz des Primzahlquotienten]] sagt, dass wenn $n \mid r(a-b) \land n \not\mid r \implies n\mid a-b$, also
+>> Nach kurzer Überlegung können wir feststellen, dass $s \mid r(a-b) \land s \not\mid r \implies s\mid a-b$, also
 >> $$\begin{align}
 >> \phantom{r(a-b) =sn} &\iff s \mid a-b \phantom{\;\;\;\;}  \\
 >> &\iff a \equiv b \;\;&&(\text{mod } s) \\

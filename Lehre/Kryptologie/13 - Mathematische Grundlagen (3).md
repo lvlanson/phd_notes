@@ -10,23 +10,11 @@ tags: []
 >[!remark] Notation
 > Von hieran werden wir mit Vektoren arbeiten. Vektoren werden immer in fetter Druckschrift gekennzeichnet, also $\boldsymbol{x} \in V$. Wenn nicht anders gekennzechnet entspringen Vektoren aus einem $n$-dimensionalen Vektorraum. 
 
->[!remark] Bemerkung Vergleich Modul und Vektorraum
-> Ein Modul ist die Verallgemeinerung eines Vektorraums. Ein Vektorraum setzt voraus, dass sowohl $(G, \oplus)$ also auch $( \setminus\{0\}, \odot)$ kommutative Gruppen sind, neben der Gültigkeit der Axiome für $\forall \boldsymbol{u}, \boldsymbol{v} \in G^n$ and $\lambda, \mu \in G$ 
->$$\begin{align} (\gamma \cdot \mu) \cdot \boldsymbol{u} &= \gamma \cdot (\mu \cdot \boldsymbol{u}) \\
-\gamma \cdot (\boldsymbol{u} + \boldsymbol{v}) &= \gamma \cdot \boldsymbol{u} + \gamma \cdot \boldsymbol{v} \\
-(\lambda + \mu) \cdot \boldsymbol{u} &= \lambda \cdot \boldsymbol{u} + \mu \cdot \boldsymbol{u} \end{align}$$
->
-> In einem Modul jedoch ist die algebraische Struktur $(G\setminus\{0\}, \odot)$ keine kommutative Gruppe, sondern ein Ring. Für ein Ring gilt, dass dieser 
-> 1. assoziativ ist
-> 2. ein neutrales Element besitzt
-> 3. ~ein inverses Element besitzt~
-> 4. (kommutativ ist) (optional -> kommutativer Ring)
-
 >[!def] Definition $n$-dimensionale Gitter $\mathcal{L}$
 > Wir bezeichnen ein $n$-dimensionales Gitter $\mathcal{L} \subset \mathbb{R}^n$ wenn gilt:
 > 1. $\mathcal{L}$ bildet eine additive Untergruppe
 > 2. $\mathcal{L}$ ist diskret, das heißt:
-> Es existiert ein $\lambda >0$, sodass alle Gitterpunkte $\boldsymbol{x}, \boldsymbol{y} \in \mathcal{L}$ haben mindestens Distanz $\lambda$, also
+> Es existiert ein $\lambda >0$, sodass alle Gitterpunkte $\boldsymbol{x}, \boldsymbol{y} \in \mathcal{L}$ mindestens Distanz $\lambda$ haben, also
 > $$ \lambda = \min_{\boldsymbol{x},\boldsymbol{y} \in \mathcal{L}} d(\boldsymbol{x}, \boldsymbol{y})$$
 > wobei die euklidische Distanz definiert ist als $$ d(\boldsymbol{x}, \boldsymbol{y}) = || \boldsymbol{x} - \boldsymbol{y} ||_E = \sqrt{\sum_{i=1}^n (x_i - y_i)^2}$$
 >
@@ -34,8 +22,12 @@ tags: []
 > $$\mathcal{L}(\boldsymbol{b}_1, \ldots, \boldsymbol{b}_m) = \left\{\sum_{i=1}^n x_i \boldsymbol{b}_i \; | \; x_i \in \mathbb{Z} \right\}$$
 > mit $\boldsymbol{b}_i \in \mathbb{R}^n$ und $0 < m \leq n$. Wir bezeichnen das Gitter als Gitter mit vollem Rang, wenn $m = n$ gilt.
 
+>[!remark] Bemerkung zur Notation
+> Ein Gitter wird üblicherweise über eine Basis $\boldsymbol{B} = (\boldsymbol{b}_1, \ldots, \boldsymbol{b}_m)$ mit $m \leq n$ erzeugt. Also $$\mathcal{L} = \mathcal{L}(\boldsymbol{B}):= \boldsymbol{B}\cdot \mathbb{Z}^m = \left\{\sum_{i=1}^m z_i \boldsymbol{b}_i \; | \; z_i \in \mathbb{Z}\right\}$$
+> In der Literatur wird ein Gitter auch gesondert mit großen griechischen Symbolen gekennzeichnet wie zum Beispiel $\Lambda = \mathcal{L}(\boldsymbol{B}$. $\mathcal{L}$ hingegen wird als Operator verstanden, der über eine Basis $\boldsymbol{B}$ dieses Gitter erzeugt, also $\Lambda = \mathcal{L}(\boldsymbol{B})$. Wir werden ab hier einfach nur von $\mathcal{L}$ sprechen, um die Notation etwas zu vereinfachen.
+ 
 >[!example] Beispiel
-> - das einfachste Beispiel ist $\mathbb{Z}^n$
+> - das einfachste Gitter $\mathbb{Z}^n$
 > - das skalierte Gitter $n\mathcal{L}$
 > - das Schachbrett Gitter $\{\boldsymbol{x} \in \mathcal{L}: \left(\sum_{i} x_i\right) \text{ mod } 2 = 0\}$
 >Bild eines Gitters in $\mathbb{R}^2$:
@@ -43,9 +35,7 @@ tags: []
 
 ^cbb503
 
->[!remark] Bemerkung zur Notation
-> Üblicherweise wird ein Gitter mit großen griechischen Symbolen gekennzeichnet wie zum Beispiel $\Lambda$. $\mathcal{L}$ hingegen wird als Operator verstanden, der über eine Basis $\boldsymbol{B}$ dieses Gitter erzeugt, also $\Lambda = \mathcal{L}(\boldsymbol{B})$. Wir werden ab hier einfach nur von $\mathcal{L}$ sprechen, um die Notation etwas zu vereinfachen.
- 
+
 >[!remark] Bemerkung zu Basen in Gittern
 > Seien $\boldsymbol{b}_1, \ldots, \boldsymbol{b}_n \in \mathcal{L} \subset \mathbb{R}^n$ Basisvektoren von $\mathcal{L}$, dann spannt $\text{span}(\boldsymbol{b}_1, \ldots, \boldsymbol{b}_n)$ den $\mathbb{R}^n$ auf und erzeugt mit $\mathcal{L}(\boldsymbol{b}_1, \ldots, \boldsymbol{b}_n)$ das entsprechende Gitter. Wenn wir beliebige andere linear unabhängige Vektoren $\boldsymbol{b}_1', \ldots, \boldsymbol{b}_n' \in \mathcal{L}$, dann können diese zwar ebenfalls den $\mathbb{R}^n$ aufspannen, jedoch müssen diese nicht zwangsläufig das Gitter $\mathcal{L}(\boldsymbol{b}_1, \ldots, \boldsymbol{b}_n)$ erzeugen.
 > 
@@ -76,7 +66,7 @@ tags: []
 > Ein Beispiel zum fundamentalen Parallelepiped kann in der Grafik zum Beispiel von [[#^cbb503 |oben]] gefunden werden. Dort ist die grau schraffierte Fläche das **fundamentale Parallelepiped**.
 
 >[!remark] Bemerkung
-> Seien $\boldsymbol{B}, \boldsymbol{B}'$ äquivalente Basen, das heißt sie erzeugen dasselbe Gitter $\mathcal{L}(\boldsymbol{B}) = \mathcal{L}(\boldsymbol{B}')$, dann folgt daraus dass das Volumen der entsprechenden fundamentalen Parallelepipeds gleich ist, also $\text{Vol}(\mathcal{P}(\boldsymbol{B})) =\text{Vol}(\mathcal{P}(\boldsymbol{B}'))$.
+> Seien $\boldsymbol{B}, \boldsymbol{B}'$ äquivalente Basen, das heißt sie erzeugen dasselbe Gitter $\mathcal{L}(\boldsymbol{B}) = \mathcal{L}(\boldsymbol{B}')$, dann folgt daraus dass das Volumen der entsprechenden fundamentalen Parallelepipeds gleich ist, also $\text{vol}(\mathcal{P}(\boldsymbol{B})) =\text{vol}(\mathcal{P}(\boldsymbol{B}'))$.
 >
 > Wir sind interessiert daran das **Volumen des Parallelepipeds** zu berechnen. Dazu müssen wir uns spezieller mathematischer Werkzeuge bedienen. Diese führen wir nachfolgend ein.
 
@@ -153,7 +143,7 @@ tags: []
 
 >[!lemma] Lemma Volumen des Parallelepipeds
 > Seien $\boldsymbol{b}_1^*, \ldots, \boldsymbol{b}_n^*$ orthogonale Basisvektoren von $\mathcal{L}$, dann ist das Volumen des Parallelepipeds
-> $$\text{Vol}(\mathcal{L}) = \prod_{i=1}^n \boldsymbol{b}_i^* $$
+> $$\text{vol}(\mathcal{L}) = \prod_{i=1}^n \boldsymbol{b}_i^* $$
 
 >[!remark] Bemerkung zur Volumenberechnung
 > Das Parallelepiped ist ein hochdimensionales Parallelelogramm, ähnlich wie der Würfel zum Quadrat oder das Quader zum Rechteck. In einem Parallelogramm benötigen wir Grundseite und Höhe um den Flächeninhalt zu berechnen
@@ -211,16 +201,117 @@ tags: []
 >> 2. Da $x_i \neq 0$ können wir den Beweis abschließen mit
 >> $$\begin{align}
 >>|\langle \boldsymbol{Bx}, \boldsymbol{b}_i^* \rangle| = ||\boldsymbol{b}_i^*||^2 \cdot |x_i| \geq ||\boldsymbol{b}_i^*||^2 \tag*{$\square$}
->> \end{align}$$
+>> \end{alignk}$$
 
 
->[!remark]
-> Wir haben nun gezeigt, dass die minimale Distanz $\lambda_1$ in einem Gitter und der entsprechende Vektor dazu existiert. Dies lässt sich entsprechen auf jede beliebige sukzessive Distanz $\lambda_i$ erweitern.
+>[!remark] Bemerkung
+> Wir haben nun gezeigt, dass die minimale Distanz $\lambda_1$ in einem Gitter und der entsprechende Vektor dazu existiert. Dies lässt sich entsprechend auf jede beliebige sukzessive Distanz $\lambda_i$ erweitern.
+
+---
+
+## 13.4 Minkowskis Satz
+
+>[!theorem] Blichfeldts Satz
+> Für jedes beliebige Gitter $\mathcal{L}$ and für jede beliebige messbare Menge $S \subseteq \text{span}(\mathcal{L})$ gilt, wenn $\text{vol}(S) > \text det(\mathcal{L})$, dann existieren zwei verschiedene Punkte $\boldsymbol{z}_1, \boldsymbol{z}_2 \in S$, sodass $\boldsymbol{z}_1 -\boldsymbol{z}_2 \in \mathcal{L}$.
+>>[!proof] Beweis
+>> Zunächst partitionieren wir die Menge $S$ bezüglich der Parallelepipeds. Dazu definieren die Partition von S bezüglich $\boldsymbol{x} \in \mathcal{L}$ als
+>> $$ S_{\boldsymbol{x}} = S \cap (\mathcal{P}(\boldsymbol{B}) + \boldsymbol{x}$$
+>> wobei $\mathcal{P}(\boldsymbol{B}) + \boldsymbol{x} = \{ \boldsymbol{b}_i + \boldsymbol{x} \; | \; \boldsymbol{b_i} \in \mathcal{P}(\boldsymbol{B})\}$ die Verschiebung des Parallelepipeds um $\boldsymbol{x}$ ist. 
+>>> [!pic]- Illustration
+>>>Die folgenden Abbildungen beschreiben für ein $2$-dimensionales Gitter, was wir soweit definiert haben
+>>>
+>>>![[./Figures/blichfeldt_1.png | center | 500]]
+>>> <center> Abbildung 1: Gitter und Menge S </center>
+>>>
+>>> wobei $\boldsymbol{b}_1, \boldsymbol{b}_2 \in \mathcal{L}$ Basisvektoren des Gitters $\mathcal{L}$ sind und $\mathcal{P}(\boldsymbol{B})$ das entsprechende fundamentale Parallelepiped ist. In Orange finden wir die Menge $S$, die das Gitter schneidet.
+>>>
+>>>![[./Figures/blichfeldt_2.png |  center | 500]] 
+>>> <center> Abbildung 2: Schnitt mit verschobenen Parallelepipeds </center>
+>>>
+>>> In Grün sehen wir zwei verschobene Parallelepipeds, die $S$ schneiden. Den Schnitten haben wir als $S_{\boldsymbol{x}}$ definieret. Wir erkennen auch in der 2-dimensionalen Abbildung, dass die verschobenen Parallelepipeds $S$ partitionieren.
+>> 
+>> Da $S_{\boldsymbol{x}}$ die Menge $S$ partitionieren, können wir folgende Aussagen treffen
+>> - $S = \bigcup_{\boldsymbol{x} \in \mathcal{L}} S_{\boldsymbol{x}}$ alle $S_{\boldsymbol{x}}$ setzen $S$ wieder zusammen
+>> - da $\mathcal{L}$ abzählbar ist $\text{vol}(S) = \sum_{\boldsymbol{x} \in \mathcal{L}} \text{vol}(S_{\boldsymbol{x}})$
+>>
+>> Wir definieren jetzt die rückverschobene Menge 
+>> $$S_{\boldsymbol{x}}' = S_{\boldsymbol{x}} - \boldsymbol{x} = (S- \boldsymbol{x}) \cap \mathcal{P}(\boldsymbol{B})$$
+>>>[!remark] Bemerkung 
+>>> Wie in Abbildung 2 zu sehen ist, können Schnitte wie $\mathcal{P}(\boldsymbol{B}) + \boldsymbol{x}_2$ kleiner als ein vollständiges Parallelepiped sein, weshalb diese Schnitte paarweise unterschiedlich aussehen können. Dies wollen wir nachgehend noch mathematisch zeigen.
+>>
+>> Wir stellen fest
+>> - $\text{vol}(S_{\boldsymbol{x}}) = \text{vol}(S_{\boldsymbol{x}}')$
+>> - $S'_{\boldsymbol{x}} \subseteq \mathcal{P}(\boldsymbol{B})$
+>>
+>> Weiterhin wollen wir behaupten, dass alle Mengen $S_{\boldsymbol{x}}'$ nicht disjunkt sind, also $S_{\boldsymbol{x}}' \cap S_{\boldsymbol{y}}' \neq \emptyset$ mit $\boldsymbol{x}, \boldsymbol{y} \in \mathcal{L}$. Dies müssen wir zunächst noch zeigen. Wir zeigen über Widerspruch und nehmen zunächst an, dass diese disjunkt sind. Also haben wir
+>> $$ \sum_{\boldsymbol{x} \in \mathcal{L}} \text{vol}(S_{\boldsymbol{x}}') = \text{vol}\left(\bigcup_{\boldsymbol{x} \in \mathcal{L}} S_{\boldsymbol{x}}'\right) \leq \text{vol}(\mathcal{P}(\boldsymbol{B})) \tag{1}$$
+>>>[!remark] Bemerkung
+>>> Wenn die Mengen nicht disjunkt sind, muss es Überlappungen geben zwischen den verschiedenen $S_{\boldsymbol{x}}'$, weshalb in der Summe Schnitte mehrfach gezählt werden, welche im Volumen der Vereinigung nicht mitgezählt werden. Daher kann die obige Gleichung nur wahr sein, wenn die Mengen disjunkt sind.
+>>
+>> Außerdem aus der Prämisse des Satzes können wir die Gültigkeit annehmen, dass
+>> $$\sum_{\boldsymbol{x} \in \mathcal{L}} \text{vol}(S_{\boldsymbol{x}}') = \sum_{\boldsymbol{x} \in \mathcal{L}} \text{vol}(S_{\boldsymbol{x}}) = \text{vol}(S) > \text{det}(\mathcal{L}) \tag{2}$$
+>> Kombinieren wir Aussagen $(1)$ und $(2)$ erhalten wir
+>> $$\text{det}(\mathcal{L}) < \sum_{\boldsymbol{x} \in \mathcal{L}} \text{vol}(S_{\boldsymbol{x}}) \leq \text{vol}(\mathcal{P}(\boldsymbol{B}))$$
+>> Laut der Definition der Determinante eines Gitters muss aber gelten, dass $\text{det}(\mathcal{L}) = \text{vol}(\mathcal{P}(\boldsymbol{B}))$, was ein Widerspruch ist. Daher kann es nicht-disjunkte $S_{\boldsymbol{x}}'$ geben.
+>> 
+>> Seien für den restlichen Beweis $S_{\boldsymbol{x}}', S_{\boldsymbol{y}}'$ zwei nicht-disjunkte Mengen, also $S_{\boldsymbol{x}}' \cap S_{\boldsymbol{y}}' \neq \emptyset$. Dann finden wir einen Vektor $\boldsymbol{z}$ in $S_{\boldsymbol{x}}', S_{\boldsymbol{x}}'$ und definieren
+>>$$\begin{align}
+>> \boldsymbol{z}_1 &= \boldsymbol{z} + \boldsymbol{x} \tag{3} \\
+>> \boldsymbol{z}_2 &= \boldsymbol{z} + \boldsymbol{y} \tag{4}
+>>\end{align}$$
+>>
+>> Wir stellen fest
+>> - da $\boldsymbol{z} \in S_{\boldsymbol{x}}'$ folgt, dass $\boldsymbol{z}_1 = \boldsymbol{z} + \boldsymbol{x} \in S_{\boldsymbol{x}} \subseteq S$
+>> - da $\boldsymbol{z} \in S_{\boldsymbol{y}}'$ folgt, dass $\boldsymbol{z}_2 = \boldsymbol{z} + \boldsymbol{y} \in S_{\boldsymbol{y}} \subseteq S$
+>> - da $\boldsymbol{z}_1 \neq \boldsymbol{z}_2 \implies \boldsymbol{x} \neq \boldsymbol{y}$
+>>
+>> Ziehen wir Gleichung $(3)$ von $(4)$ ab, erhalten wir die gesuchte Folgerung
+>> $$\boldsymbol{z}_1 -\boldsymbol{z}_2 = \boldsymbol{x} - \boldsymbol{y} \in \mathcal{L} \tag*{$\square$}$$
+>[!remark] Bemerkung
+> Für folgenden Satz benötigen wir eine Definition, der eine Eigenschaft von Mengen beschreibt.
+
+>[!def] Definition Konvexe Mengen
+> Eine nicht leere Menge $X\subset \mathbb{R}^n$ wird **konvex** genannt, wenn für $\boldsymbol{x}, \boldsymbol{y} \in X$ und $\lambda \in [0,1]$ gilt, dass $(1-\lambda)\boldsymbol{x} + \lambda\boldsymbol{y} \in X$ ist.
+>>[!remark] Bemerkung
+>> Diese Definition sagt nichts anderes, als dass jede Gerade, die durch die Menge geht, vollständig in der Menge enthalten sein muss
+>>![[./Figures/convexity.png | center | 500]]
+>><center> Abbildung: Links eine konvexe Menge,<br> bei der die Gerade vollständig durchgeht.<br>Rechts eine nicht-konvexe Menge,<br>bei der die Gerade die Menge verlässt.
+
+>[!theorem] Minkowskis Gitterpunktsatz (Minkowskis Erster Satz)
+> Sei $\mathcal{L}$ ein beliebiges Gitter mit Rang $n$ und $S \subset \text{span}(\mathcal{L})$ eine beliebige konvexen Menge, die symmetrisch um den Koordinatenursprung ist. Wenn $\text{vol}(S) > 2^n \text{det}(\mathcal{L})$, dann muss $S$ einen vom Nullvektor verschiedenen Vektor $\boldsymbol{v} \in S \cap \mathcal{L} \setminus \{\boldsymbol{0}\}$ enthalten.
+>>[!proof] Beweis
+>> Wir behelfen uns mit einer weiteren Menge 
+>> $$S' = \left\{\frac{\boldsymbol{x}}{2} \; | \; \boldsymbol{x} \in S\right\}$$
+>> welche alle Elemente von $S$ halbiert enthält. Vielmehr muss sich das Volumen dementsprechend pro Dimension mit halbieren, also
+>> $$\text{vol}(S') = 2^{-n} \text{vol}(S) > \text{det}(\mathcal{L})$$
+>>>[!remark] Bemerkung
+>>> Dies ist gültig, da der Satz verlangt, dass $\text{vol}(S) > 2^n \text{det}(\mathcal{L})$ gilt.
+>> 
+>> Die Bedingungen für Blichfeldts Satz sind somit erfüllt und wir können daraus schließen, dass zwei Vektoren $\boldsymbol{z}_1, \boldsymbol{z}_2 \in S'$ existieren, sodass $\boldsymbol{z}_1 - \boldsymbol{z}_2 \in \mathcal{L}$ gilt.
+>> Wir stellen fest
+>> - durch die Definition von $S'$ existieren $2\boldsymbol{z}_1, 2\boldsymbol{z}_2 \in S$
+>> - da $S$ symmetrisch um den Koordinatenursprung ist, existiert $-2\boldsymbol{z}_2 \in S$
+>> 
+>> Da $S$ konvex ist, können wir die Definition der konvexen Mengen verwenden (mit $\lambda=\frac{1}{2}$), also dass der Punkt zwischen $2\boldsymbol{z}_1$ und $-2\boldsymbol{z}_2$ auch in $S$ liegen muss, also
+>> $$\frac{2\boldsymbol{z}_1 + (-2\boldsymbol{z}_2)}{2} = \boldsymbol{z}_1 - \boldsymbol{z}_2 \in S$$
+>> Somit existiert ein vom Nullvektor verschiedener Vektor $\boldsymbol{v} = \boldsymbol{z}_1 - \boldsymbol{z}_2$  in $S$. $$\tag*{$\square$}$$
 
 
+>[!remark] Bemerkung zur Bedeutung Minkowskis Erstem Satzes
+> Minkowski's erster Satz liefert uns eine obere Schranke für den kürzesten Vektor in einem Gitter mit vollem Rang $n$.
+---
 
-
-
+>[!remark] Bemerkung Vergleich Modul und Vektorraum
+> Ein Modul ist die Verallgemeinerung eines Vektorraums. Ein Vektorraum setzt voraus, dass sowohl $(G, \oplus)$ also auch $( \setminus\{0\}, \odot)$ kommutative Gruppen sind, neben der Gültigkeit der Axiome für $\forall \boldsymbol{u}, \boldsymbol{v} \in G^n$ and $\lambda, \mu \in G$ 
+>$$\begin{align} (\gamma \cdot \mu) \cdot \boldsymbol{u} &= \gamma \cdot (\mu \cdot \boldsymbol{u}) \\
+\gamma \cdot (\boldsymbol{u} + \boldsymbol{v}) &= \gamma \cdot \boldsymbol{u} + \gamma \cdot \boldsymbol{v} \\
+(\lambda + \mu) \cdot \boldsymbol{u} &= \lambda \cdot \boldsymbol{u} + \mu \cdot \boldsymbol{u} \end{align}$$
+>
+> In einem Modul jedoch ist die algebraische Struktur $(G\setminus\{0\}, \odot)$ keine kommutative Gruppe, sondern ein Ring. Für ein Ring gilt, dass dieser 
+> 1. assoziativ ist
+> 2. ein neutrales Element besitzt
+> 3. ~~zu jedem Element ein inverses Element existiert~~
+> 4. (kommutativ ist) (optional -> kommutativer Ring)
 
 >[!def] Definition Minimale Distanz $\lambda_1$ eines Gitters $\mathcal{L}$
 > Die minimale Distanz eines Gitters $\mathcal{L}$ wird bezeichnet als
@@ -232,15 +323,3 @@ tags: []
 
 >[!def] Definition Module über Restklassen
 > Seien $n,q \in \mathbb{N}$, dann nennen wir $$\mathbb{Z}_q{^n} = \{\boldsymbol{a} \text{ mod } q \; | \; \boldsymbol{a} \in \mathbb{Z}^n\}$$ den **Vektorraum über Restklassen**. Wobei wir definieren
-> $$\boldsymbol{a} \text{ mod } q = \begin{pmatrix} a_1 \text{ mod } q \\ \vdots \\ a_n \text{ mod } q \end{pmatrix}$$
-
-
-$\boldsymbol{x} \in \mathbb{R}^n$
-
-$$\begin{pmatrix} 1\\ 2 \\ 3 \end{pmatrix} = \boldsymbol{x}$$
-
-# Heading like this
-
-## Subheading like this
-
-Hi this is some text, you can read me $x = 5$ is some math notation, but I can also do programming with `x = 5`
