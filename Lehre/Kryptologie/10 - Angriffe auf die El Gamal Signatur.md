@@ -1,3 +1,8 @@
+---
+id: 10 - Angriffe auf die El Gamal Signatur
+aliases: []
+tags: []
+---
 ## 10.1 Mathematische Grundlagen
 
 >[!remark]- Motivation: Lineare Kongruenzen
@@ -11,7 +16,7 @@
 > dann
 > $$a \equiv b \;\;\left( \text{mod } \frac{n}{d} \right)$$
 > mit $d=\text{ggT}(c,n)$
->>[!proof] Beweis
+>>[!proof]- Beweis
 >>In Kombination von [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Teilbarkeit von Äquivalenzen]] und [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^291942|Definition der ganzzahligen Teilung]] können wir die Prämisse umschreiben als
 >>$$\begin{align}
 >> ca \equiv cb \;\;(\text{mod } n) &\iff n \mid (ca-cb) \\
@@ -86,6 +91,11 @@
 >>1. $\text{ggT}(r,s)=1$ weil wir bereits den größten gemeinsamen Teiler von $a$ und $b$ eliminiert haben (also $d$) und es demnach keine anderen gemeinsamen Teiler geben kann
 >>2. $r \;|\; s(y_{0}-y)$, da $x-x_{0}$ eine ganze Zahl ergeben muss
 >>-> da $\text{ggT}(s,r)=1$ muss folgen, dass $r \;|\; y_{0}-y$
+>>
+>>>[!Remark] Bemerkung
+>>> Tatsächlich haben wir nicht eingeführt, dass folgendes gilt: Für zwei Zahlen $a,b \in \mathbb{Z}$ mit $a,b \neq 0$ mit $\text{ggT}(a,b)=d$ gilt
+>>> $$ \text{ggT}\left( \frac{a}{d}, \frac{b}{d} \right) =  1$$
+>>> Für diesen Beweis können wir die Gültigkeit annehmen. Die vollständige Diskussion zu dieser Aussagen ist [[../../PDFs/burton2010.pdf#page=23|hier]] zu finden.
 >>
 >> Es folgt nach der [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^9380e8|ganzzahligen Teilung]], dass
 >> $$\begin{align}
@@ -252,7 +262,7 @@
 >>\end{align}$$ 
 >> Gleichung $(1)$ ist eine [[#^ea24cf|Lineare Diophantinische Gleichung]] und hat die Lösungen
 >> $$\begin{align}
->> x &= x_{0}+\left( \frac{b}{d} \right)t\\
+>> x &= x_{0}+\left( \frac{n}{d} \right)t\\
 >> y &= y_{0}-\left( \frac{a}{d} \right)t
 >>\end{align}$$
 >> für beliebige $t \in \mathbb{Z}$ unter der Bedingung $$d \;|\; b \text{ mit } d=\text{ggT}(a,n)$$
@@ -263,11 +273,13 @@
 >> x_{0}+ \frac{n}{d}t_{1} &\equiv x_{0} +\frac{n}{d}t_{2} &&\;\;(\text{mod } n) \qquad&&\Big\vert -x_{0} \\
 >>  \frac{n}{d}t_{1} &\equiv \frac{n}{d}t_{2} &&\;\;(\text{mod } n) \\
 >>\end{align}$$
->>Nach Konstruktion muss $\text{ggT}\left( \frac{n}{d},n \right)=\frac{n}{d}$. Somit ist nach der [[#^9c4913|größten gemeinsamen Teiler Kongruenz]] das neue Modul
+>>Wir erinnern uns an dieser Stelle an den [[#^9c4913|Satz der größten gemeinsamen Teiler Kongruenz]]. Wir identifizieren in Bezug zum Satz
+>> $$ \underbrace{\frac{n}{d}}_{=c} \underbrace{t_1}_{=a} \equiv \underbrace{\frac{n}{d}}_{=c} \underbrace{t_2}_{=b} \quad (\text{mod } n)$$ 
+>> Nach kurzer Überlegung lässt sich leicht sehen, dass  $\text{ggT}\left( \frac{n}{d},n \right)=\frac{n}{d}$. Entsprechend des [[#^9c4913|Satzes]] bestimmen wir das reduzierte Modul als
 >>$$\frac{n}{\frac{n}{d}}=d$$
 >>und erhalten
 >>$$\frac{n}{d}t_{1} \equiv \frac{n}{d}t_{2} \;\;(\text{mod } n) \implies t_{1} \equiv t_{2} \;\;(\text{mod } d)$$
->>Daraus folgt, dass $d \mid t_{1}-t_{2}$. Das ist ein Widerspruch, da $0 < t_{1}-t_{2} < d$, daher muss gelten
+>>Daraus folgt, dass $d \mid t_{1}-t_{2}$. Das ist ein Widerspruch, da $0 < t_{1}-t_{2} < d$, entsprechend des Widerspruchs muss dann folgen, dass
 >>$$t_{1}=t_{2}$$
 >>
 >>Wir zeigen jetzt noch, dass auch alle anderen Lösungen kongruent zu den Lösungen in Zeile $(2)$ sind. Wir können wegen des [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^30b120|Existenz und Eindeutigkeit des Quotienten und Rests]] können wir $t$ darstellen als
@@ -283,6 +295,9 @@
 >
 >
 >>[!remark] Kontrollfrage: Warum ist die Lösung mit $t=0$ äquivalent zu $t=d$?
+
+>[!remark] Bemerkung
+> Im folgenden werden wir die Erkenntnis benötigen, dass für lineare Kongruenzen eine Vielzahl von Lösungen existieren können. Mit den erarbeiteten mathematischen Grundlagen ist es für uns nun leichter nachvollziehen zu können, wie diese Vielzahl von Lösungen zustande kommen.
 
 ^f30315
 

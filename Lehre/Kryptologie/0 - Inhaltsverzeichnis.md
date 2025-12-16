@@ -23,9 +23,9 @@
 
 >[!abstract] 10 - [[10 - Angriffe auf die El Gamal Signatur|Angriffe auf die El Gamal Signatur]]
 
->[!abstract] 11 - [[11 - Homomorphe Verschlüsselung|Homomorphe Verschlüsselung]]
+>[!abstract] 11 - [[11 - Elliptische Kurven| Elliptische Kurven]]
 
->[!abstract] 12 - [[12 - Elliptische Kurven| Elliptische Kurven]]
+>[!abstract] 12 - [[12 - Mathematische Grundlagen (3)| Mathematische Grundlagen (3)]]
 
 >[!abstract] X - [[X - Zusatz Mathematik (Informativ)|Zusatz Mathematik (Informativ) in Bezug zu Algebraische und Zahlentheoretische Grundlagen (2)]]
 

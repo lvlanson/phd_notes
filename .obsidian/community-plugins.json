@@ -24,5 +24,6 @@
   "shiki-highlighter",
   "execute-code",
   "obsidian-better-codeblock",
-  "pseudocode-in-obs"
+  "pseudocode-in-obs",
+  "edit-in-neovim"
 ]

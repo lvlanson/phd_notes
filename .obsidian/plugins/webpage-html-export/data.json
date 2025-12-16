@@ -10,7 +10,7 @@
     "postProcess": true,
     "displayProgress": true,
     "inlineHTML": false,
-    "exportPath": "/home/thomas/Documents/HTML_EXPORT",
+    "exportPath": "/home/thomas/Documents/HSMW/Obsidian/Personal/HTML_EXPORT",
     "filesToExport": [
       "Computer Science",
       "Lehre/Kryptologie/Diagrams",
@@ -26,8 +26,8 @@
       "Lehre/Kryptologie/8 - No-Key Protokolle.md",
       "Lehre/Kryptologie/9 - El Gamal's Kryptosystem.md",
       "Lehre/Kryptologie/10 - Angriffe auf die El Gamal Signatur.md",
-      "Lehre/Kryptologie/11 - Homomorphe Verschlüsselung.md",
-      "Lehre/Kryptologie/12 - Elliptische Kurven.md",
+      "Lehre/Kryptologie/11 - Elliptische Kurven.md",
+      "Lehre/Kryptologie/12 - Mathematische Grundlagen (3).md",
       "Lehre/Kryptologie/A - Sage Funktionen.md",
       "Lehre/Kryptologie/Vorlesungsfortschritt WS2024_25.md",
       "Lehre/Kryptologie/X - Zusatz Mathematik (Informativ).md",
@@ -208,7 +208,7 @@
     },
     "rssOptions": {
       "featureId": "rss",
-      "enabled": false,
+      "enabled": true,
       "unavailable": false,
       "alwaysEnabled": false,
       "hideSettingsButton": false,
@@ -253,7 +253,7 @@
   "onlyExportModified": true,
   "deleteOldFiles": true,
   "exportPreset": "online",
-  "openAfterExport": true,
+  "openAfterExport": false,
   "filePickerBlacklist": [
     "(^|\\/)node_modules\\/",
     "(^|\\/)dist\\/",
