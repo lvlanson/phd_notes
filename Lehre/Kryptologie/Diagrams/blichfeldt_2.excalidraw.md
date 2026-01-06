@@ -18,7 +18,7 @@ fd39fe0f0d58986c0dd912b7a359b8cd330b40ae: $$\mathcal{P}(\boldsymbol{B}) + \bolds
 
 7e83bd457b52da1465f149806a8c1f9735a3fae8: $$\mathcal{P}(\boldsymbol{B}) + \boldsymbol{x}_2$$
 
-eaaa6f7e071a2b18c0318fcbe997ec7ce7d46893: [[../../../blichfeldt_2.svg]]
+eaaa6f7e071a2b18c0318fcbe997ec7ce7d46893: [[../Figures/blichfeldt_2 1.svg]]
 
 %%
 ## Drawing

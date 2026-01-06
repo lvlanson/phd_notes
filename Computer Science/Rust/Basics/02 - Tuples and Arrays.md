@@ -49,7 +49,7 @@ Similarly to Python, Rust provides tuples.
 - tuples can't be used in `{rust} for` loops
 - the length of a tuple is fixed
 
-```{rust} showLineNumbers
+```rust showLineNumbers
 fn main() {
     let t: (i8, bool) = (7, true);
     dbg!(t.0);
@@ -105,7 +105,7 @@ Like C/C++ one can create custom datatypes by using `{rust} struct`s. One can th
     - see `line 11-14` explicitly assigning the fields with literals
     - see `line 22` implicitly assigning the fields with equally named variables
     - by using **struct update syntax**, which is assigning new values and use already assigned struct values
-    ```{rust}
+    ```rust
     let jackie = Person {name: String::from("Jackie"), ..avery }; // any missing values are taken from avery
                                                                   // this argument needs to be passed last
     ```
@@ -147,7 +147,7 @@ Notable things:
 ### Tuple Structs
 
 Tuple structs are used to give tuples custom type names such as 
-```{rust} 
+```rust showLineNumbers 
 struct Point(i32, i32); // conventional tuple abstracted as Point datatype
 struct PoundsOfForce(f64); // single-field wrapper/newtype creating a single field type
 

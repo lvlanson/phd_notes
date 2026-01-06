@@ -1,8 +1,3 @@
----
-id: 13 - Mathematische Grundlagen (3)
-aliases: []
-tags: []
----
 ### 13.1 Einführung Gitter (Lattices)
 >[!remark] Motivation
 >In den vergangenen Kapiteln haben wir hauptsächlich auf Restklassenstrukturen $\mathbb{Z}_{n}$ gearbeitet. Wir erweitern dieses Konzept jetzt auf mehrdimensionale Restklassenstrukturen.
@@ -48,10 +43,10 @@ tags: []
 
 >[!def] Definition Norm eines Vektors
 > Die Norm ist eine Funktion auf Vektoren. Für alle Vektoren $\boldsymbol{u},\boldsymbol{v} \in V$ und alle Skalare $\alpha \in \mathbb{K}$ muss gelten 
-> 1. $||\boldsymbol{u}|| \geq 0$
-> 2. $||\boldsymbol{u}|| = 0 \iff \boldsymbol{u} = \boldsymbol{0}$
-> 3. $||\alpha \boldsymbol{u}|| = |\alpha| \cdot ||\boldsymbol{u}||$
-> 4. $||\boldsymbol{u} + \boldsymbol{v}|| \leq ||\boldsymbol{u}|| + ||\boldsymbol{v}||$
+> 1. $||\boldsymbol{u}|| \geq 0$ (positive Definitheit)
+> 2. $||\boldsymbol{u}|| = 0 \iff \boldsymbol{u} = \boldsymbol{0}$ 
+> 3. $||\alpha \boldsymbol{u}|| = |\alpha| \cdot ||\boldsymbol{u}||$ (absolute Homogenität) 
+> 4. $||\boldsymbol{u} + \boldsymbol{v}|| \leq ||\boldsymbol{u}|| + ||\boldsymbol{v}||$ (Dreiecksungleich)
 
 >[!remark] Bemerkung
 > Die Norm $||  \cdot  ||_{E}$ aus der oben genannten Definition ist die **euklidische Norm**. Für $\boldsymbol{x} \in \mathbb{R}^n$ ist sie definiert als
