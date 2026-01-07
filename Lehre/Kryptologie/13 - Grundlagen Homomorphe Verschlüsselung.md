@@ -31,7 +31,7 @@
 >Ein **Homomorphismus** zwischen zwei Gruppen $(G, \cdot)$ und $(H, \circ)$ ist eine Abbildung $$\phi:G\to H$$ sodass für $g_{1},g_{2} \in G$
 >$$\phi(g_{1} \cdot g_{2})= \phi(g_{1}) \circ \phi(g_{2})$$
 >>[!example]- Beispiel
->>Sei $(G, \odot)$ eine [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|Gruppe]] und $g \in G$. Wir defineren die Abbildung
+>>Sei $(G, \odot)$ eine [[2 - Algebraische und Zahlentheoretische Grundlagen (1)#^afad91|Gruppe]] und $g \in G$. Wir definieren die Abbildung
 >>$$\phi: \mathbb{Z} \to G$$
 >>mit $$\phi(n)=g^n$$
 >>Dann ist $\phi$ ein **Gruppenhomomorphismus**, da
@@ -126,7 +126,7 @@
 >>Wir prüfen damit die Identität der Definition der [[#^ccc183|homomorphen Verschlüsselung]], also
 >>$$\begin{align}
 >> \text{Enc}(m_{1}+m_{2}) &= (a^k \text{ mod }p, B^k \cdot (m_{1}+m_{2}) \text{ mod }p) \\
->> &= (a^k \text{ mod }p, B^k \cdot m_{1} \text{ mod }p + B^k \cdot m_{2}) \\
+>> &= (a^k \text{ mod }p, B^k \cdot m_{1} \text{ mod }p + B^k \cdot m_{2} \text{ mod }p) \\
 >> &=(a^k \text{ mod } p, B^k \cdot m_{1} \text{ mod }p) + (a^k \text{ mod } p, B^k \cdot m_{2} \text{ mod } p) \\
 >> &= \text{Enc}(m_{1})+\text{Enc}(m_{2}) \tag*{$\square$}
 >>\end{align}$$

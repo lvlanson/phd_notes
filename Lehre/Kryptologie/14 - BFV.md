@@ -103,7 +103,7 @@
 >
 > Um ein $x$ in $\chi$ zu (rejection-) samplen, wählen wir
 > - $x \in_R [-B, B] \cap \mathbb{Z}$
-> - $p \in [0,1]$
+> - $p \in_{R} [0,1]$
 >
 > wir bestimmen
 > $$\begin{cases} \text{AKZEPTIEREN} & p < f(x)\\ \text{ABLEHNEN - wiederholen} & p \geq f(x)\end{cases}$$
