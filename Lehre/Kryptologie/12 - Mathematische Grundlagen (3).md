@@ -42,7 +42,9 @@
 > linear unabhängige Vektoren. Zwar ist $\text{span}(\boldsymbol{b}_1, \boldsymbol{b}_2) = \text{span}(\boldsymbol{b}_1', \boldsymbol{b}_2')$, jedoch $\mathcal{L}({\boldsymbol{b}_1, \boldsymbol{b}_2}) \neq \mathcal{L}(\boldsymbol{b}_1', \boldsymbol{b}_2')$.
 
 >[!def] Definition Norm eines Vektors
-> Die Norm ist eine Funktion auf Vektoren. Für alle Vektoren $\boldsymbol{u},\boldsymbol{v} \in V$ und alle Skalare $\alpha \in \mathbb{K}$ muss gelten 
+> Die Norm ist eine Funktion von einem Vektorraum $V$ über dem Körper $\mathbb{K}$ 
+> $$\lvert\lvert \cdot \rvert\rvert : V \to \mathbb{K}$$ 
+>Für alle Vektoren $\boldsymbol{u},\boldsymbol{v} \in V$ und alle Skalare $\alpha \in \mathbb{K}$ muss gelten 
 > 1. $||\boldsymbol{u}|| \geq 0$ (positive Definitheit)
 > 2. $||\boldsymbol{u}|| = 0 \iff \boldsymbol{u} = \boldsymbol{0}$ 
 > 3. $||\alpha \boldsymbol{u}|| = |\alpha| \cdot ||\boldsymbol{u}||$ (absolute Homogenität) 

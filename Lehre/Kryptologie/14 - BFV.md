@@ -112,7 +112,7 @@
 >[!def] Definition (Haupt)Schlüsselerzeugung
 > Seien $k \in \mathbb{N}$ der Sicherheitsparameter und
 > - $\mathbb{Z}_{t}$ der Klartextraum mit $t > 1$ und $t \in \mathbb{N}$
-> - $\mathbb{Z}_{q}^k$ der Ciphertextraum mit $q \gg t$ und $q=t^k$ für $k \in \mathbb{N}$
+> - $\mathbb{Z}_{q} \times \mathbb{Z}_{q}^k$ der Ciphertextraum mit $q \gg t$ und $q=t^k$ für $k \in \mathbb{N}$
 >
 > wobei wir $t$ den **Klartext**- und $q$ den **Ciphertextkoeffizienten** nennen.
 >
@@ -168,7 +168,7 @@
 >\end{align}$$
 
 >[!def] Definition Entschlüsselung
-> Sei $\boldsymbol{s} \in \mathbb{Z}_{2}^k$ der private Schlüssel und $C = (c_{0}, \boldsymbol{c}_{1})$ die Chiffre, dann kann die Klartextnachricht reproduziert werden mit
+> Sei $\boldsymbol{s} \in \mathbb{Z}_{2}^k$ der private Schlüssel und $C = (c_{0}, \boldsymbol{c}_{1})$ die Chiffre, dann kann die Klartextnachricht berechnet werden mit
 > $$m = \left[\left\lfloor \dfrac{t \cdot [c_{0} + \boldsymbol{c}_{1}^T\boldsymbol{s}]_{q}}{q} \right\rceil\right]_{t}$$
 
 >[!proof] Beweis Korrekter Entschlüsselung
@@ -190,7 +190,7 @@
 > \frac{t \cdot [c_{0}+ \boldsymbol{c}_{1}^T \boldsymbol{s}]_{q}}{q} &= \frac{t \cdot (\Delta m+ v + rq )}{q} \\
 > &=  \frac{t}{q}\Delta m+ \frac{t}{q}v + tr 
 >\end{align}$$
-> Da wir $\Delta = \dfrac{t}{q}$ definiert
+> Da wir $\Delta = \dfrac{q}{t}$ definiert
 > $$\frac{t}{q}\Delta m+ \frac{t}{q}v + tr = m+ \frac{t}{q}v + tr$$
 > Wir setzen den Term nun in den originalen Entschlüsselungsausdruck ein und erhalten
 > $$m = \left[\left\lfloor  m+ \frac{t}{q}v + tr\right\rceil\right]_{t}$$
@@ -199,7 +199,7 @@
 > Damit wir abschätzen können wie sich der Rundungsprozess verhalten wird benötigen wir die **Maximums-Norm**
 > $$\left\vert\left\vert\, \boldsymbol{x} \,\right\vert\right\vert_\infty = \max\{x_i \in \boldsymbol{x}\}$$
 >>[!Remark] Bemerkung 
->> Mathematisch gesehen schummeln wir etwas, da die Norm für Vekotren bestimmt ist und wir sie für Skalare anwenden. Wir arbeiten allerdings hauptsächlich mit Skalaren, da BFV sehr vereinfacht haben. Die Homogenität würde uns normalerweise erlauben das Skalar als Absolutwert rauszuziehen. Wir werden das an dieser Stelle nicht erlauben und betrachten die Maximumsnorm auf dem Skalar als der größte Wert, den dieser Skalar in der Maximumsnorm werden kann.
+>> Mathematisch gesehen schummeln wir etwas, da die Norm für Vektoren bestimmt ist und wir sie für Skalare anwenden. Wir arbeiten allerdings hauptsächlich mit Skalaren, da BFV sehr vereinfacht haben. Die Homogenität würde uns normalerweise erlauben das Skalar als Absolutwert rauszuziehen. Wir werden das an dieser Stelle nicht erlauben und betrachten die Maximumsnorm auf dem Skalar als der größte Wert, den dieser Skalar in der Maximumsnorm werden kann.
 >
 >Wir erinnern uns, dass $v= e_{0} + \boldsymbol{s}^T\boldsymbol{e}_{1} - ue$ ist. Wir wollen nun abschätzen wie groß das Rauschen maximal werden kann, damit wir wissen was das Ergebnis vom Runden im ungünstigsten Fall sein wird.
 > $$\begin{align}
@@ -286,7 +286,7 @@
 ### Multiplikation
 
 >[!remark] Bemerkung Herausforderungen mit der Multiplikation
-> Die Multiplikation in FHE ist immer eine Herausforderung. Im Gegensatz zur Addition erhalten wir hier eine Chiffre, die tatsächlich aus 3 Komponenten bestehen wird.  Um das Problem zu illustrieren, stellen wir eine Entschlüsselung einer Chiffre als eine Funktion bezüglich unseres privaten Schlüssel $\boldsymbol{s} \in \mathbb{Z}_{2}^k$ dar. Sei $ct_i$ die Entschlüsselungsfunktion bezüglich einer chiffre $C_1$.
+> Die Multiplikation in FHE ist immer eine Herausforderung. Im Gegensatz zur Addition erhalten wir hier eine Chiffre, die tatsächlich aus 3 Komponenten bestehen wird.  Um das Problem zu illustrieren, stellen wir die Entschlüsselung einer Chiffre als eine Funktion bezüglich unseres privaten Schlüssel $\boldsymbol{s} \in \mathbb{Z}_{2}^k$ dar. Sei $ct_i$ die Entschlüsselungsfunktion bezüglich einer chiffre $C_i = \left(c_{0}^{(i)}, \boldsymbol{c}_{1}^{(i)}\right)$.
 > $$ct_i(\boldsymbol{s}) = c_0^{(i)} + \boldsymbol{c}_{1}^{(i)^T} \boldsymbol{s}$$
 > Multiplizieren wir zwei Chiffren $C_3 = C_1 \odot C_2$, so erhalten wir
 > $$\begin{align}

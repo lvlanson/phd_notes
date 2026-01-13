@@ -101,20 +101,24 @@ which is the formula for the determinant of the Matrix $[\boldsymbol{u}\boldsymb
 > (a \boldsymbol{\widetilde{\alpha}})(\boldsymbol{v}) &= a \boldsymbol{\widetilde{\alpha}} (\boldsymbol{v})
 >\end{align} $$
 
->[!remark] Notation Convention: Indices, Duality, and Variance
-> In the context of Exterior Algebra and Discrete Calculus, the position of an index (superscript vs. subscript) is a functional label, not an arithmetic operation.
->
-> ### 1. Superscripts $\neq$ Powers
-> Unlike standard algebra, an upper index is almost never an exponent. 
-> - $v^2$ refers to the **second component** of vector $v$, not $v \cdot v$.
-> - $e^j$ refers to the **$j$-th dual basis element**.
-> - Actual powers are typically clarified with parentheses: $(v^j)^2$.
->
-> ### 2. Primal vs. Dual Basis
-> The index position distinguishes between the geometric object and its "measurer":
-> - **Primal Basis ($e_i$):** Represented with **subscripts**. These are the physical vectors/edges of your space (the "arrows").
-> - **Dual Basis ($e^j$):** Represented with **superscripts**. These are the 1-forms (the "rulers") that evaluate the primal vectors via the relationship: $\langle e^j, e_i \rangle = \delta^j_i$.
->
+>[!remark] Notation Convention: Indices 
+> We use the following notational convention:
+> If we speak about **vectors from a vector space**:
+> - vectors which describe the direction: **subscript**, i.e. $\boldsymbol{e}_{1}, \boldsymbol{e}_{2}, ...$
+> - scalars which describe the scaling of a vector: **superscript**, i.e. $v^1 \boldsymbol{e}_{1} + v^2 \boldsymbol{e}_{2}$
+> 
+> If we speak about **forms from the dual space**:
+> - vectors/forms which describe the evaluation of an $p$-vector: **superscript**, i.e. $\boldsymbol{\widetilde{\sigma}}^1, \boldsymbol{\widetilde{\sigma}}^2$
+> - scalars which describe the scaling of the form: **subscript**, i.e. $\omega_1 \boldsymbol{\widetilde{\sigma}}^1 + \omega_2 \boldsymbol{\widetilde{\sigma}}^2$
+> 
+> The notation has a pragmatical purpose which is:
+> - if you see alternating pairings of scalar and vectors, then those describe an object such as
+>   - a vector, i.e. $\sum_{i=1}^{n}v^i \boldsymbol{e}_{i}$
+>   - a form , i.e. $\sum_{i=1}^{n} \omega_i \boldsymbol{\widetilde{\sigma}}^i$
+> - if you see pairings of scalars of alternating index levels, then this represents an evaluation of a vector over a form, i.e. let $\boldsymbol{v}= v^i \boldsymbol{e}_{i}$ and $\boldsymbol{\widetilde{\omega}}=\omega_j \boldsymbol{\widetilde{\sigma}}^j$. Then 
+> $$\begin{align}
+> \boldsymbol{\widetilde{\omega}}(\boldsymbol{v}) &= \sum_{i=1}^{n} \omega_i v^i
+>\end{align}$$
 
 >[!definition] Definition Dual Component Extractors
 > Let $\boldsymbol{\widetilde{\sigma}}^i \in V^*$ denote the linear functional, such that for $\boldsymbol{v} \in V$
@@ -136,17 +140,53 @@ which is the formula for the determinant of the Matrix $[\boldsymbol{u}\boldsymb
 >
 > Now we need to show, that any $\boldsymbol{\widetilde{\alpha}} \in V^*$ can be expressed as a linear combination of the assumed dual basis. Therefore let $\boldsymbol{v} \in V$ denote an arbitrary vector in $V$ which can be expressed as a linear combination of the basis vectors $\boldsymbol{e}_{i}$. We can express 
 >$$\boldsymbol{v} = \sum_{i=1}^{n} v_i \boldsymbol{e}_{i} \tag{1}$$
-> and therefore $v_i = \boldsymbol{\widetilde{\sigma}}^i(v_i \boldsymbol{e}_{i})$. Since $(1)$ is the unique linearcombination of $\boldsymbol{v}$, then
-> $$\sum_{i=1}^{n} v_i \boldsymbol{\widetilde{\sigma}}^{i}$$
-> represents a unique linear combination in the dual space. By setting 
-> $$\boldsymbol{\widetilde{\alpha}} = \sum_{i=1}^{n}v_i \boldsymbol{\widetilde{\sigma}}^i$$
-> we can represent any $\boldsymbol{\widetilde{\alpha}}\in V^*$.
->
-> Therefore the set $\{\boldsymbol{\widetilde{\sigma}}^{i}\}_{i=1}^n$ form a basis of $V^*$ $$\tag*{$\square$}$$
+> Mapping $\boldsymbol{v}$ yields
+> $$\begin{align}
+\boldsymbol{\widetilde{\alpha}}(\boldsymbol{v}) &= \boldsymbol{\widetilde{\alpha}}\left( \sum_{i=1}^{n} v^i \boldsymbol{e}_i\right)\\
+> &= \sum_{i=1}^{n}v^i \boldsymbol{\alpha(\boldsymbol{e}_i)} \\
+> &= \sum_{i=1}^{n}v^i a_i
+>\end{align}$$
+> Since $\boldsymbol{\widetilde{\sigma}}_{i}(\boldsymbol{v}) = v_i$ we have
+> $$\begin{align}
+> \boldsymbol{\widetilde{\alpha}}(\boldsymbol{v}) &= \sum_{i=1}^{n}a_i \boldsymbol{\widetilde{\sigma}}_i(\boldsymbol{v}) \\
+> &= \left(\sum_{i=1}^{n}  a_i \boldsymbol{\widetilde{\sigma}}_i\right) (\boldsymbol{v})
+>\end{align}$$
+> Since $\boldsymbol{v}$ is arbitrary and $a_i$ is mapped from the basis of the vector space $V$, one can express any dual space element by the given basis.
+> $$\tag*{$\square$}$$
 
+>[!remark] Remark
+> The elements of the dual space, i.e. linear functionals, are also called **forms**.
 
-> Let $\boldsymbol{\phi} \in V^*$ be an arbitrary linear functional. Let $a_i = \boldsymbol{\phi}(\boldsymbol{e}_i)$ be the scalars produced when $\boldsymbol{\phi}$ acts on the primal basis. For any $\boldsymbol{v} = \sum v^i \boldsymbol{e}_i$, we have by linearity:
-> $$\boldsymbol{\phi}(\boldsymbol{v}) = \boldsymbol{\phi}\left(\sum v^i \boldsymbol{e}_i\right) = \sum v^i \boldsymbol{\phi}(\boldsymbol{e}_i) = \sum v^i a_i$$
-> Since $v^i = \boldsymbol{\sigma}^i(\boldsymbol{v})$, we can rewrite this as:
-> $$\boldsymbol{\phi}(\boldsymbol{v}) = \sum a_i \boldsymbol{\sigma}^i(\boldsymbol{v}) = \left(\sum a_i \boldsymbol{\sigma}^i\right)(\boldsymbol{v})$$
-> Since this holds for all $\boldsymbol{v}$, $\boldsymbol{\phi} = \sum a_i \boldsymbol{\sigma}^i$. Thus, the set spans $V^*$. $\square$
+>[!def] Definition $p$-forms
+> Let $V^*$ denote the dual of vector space $V$ with $\dim(v) = n$. The vector space $\bigwedge^p V^*$ is a vector space of $p$-forms.
+
+>[!example] Examples
+> 1. $\bigwedge^0 V^*$ is the space of **scalar-valued functionals**, i.e. 
+> $$\boldsymbol{\widetilde{\alpha}}: \bigwedge^0 V \to \mathbb{K}$$
+> an example would be
+> $$\begin{align}
+> &\boldsymbol{\widetilde{\alpha}}: \mathbb{R} \to \mathbb{R}\\
+> &\boldsymbol{\widetilde{\alpha}}(x) = 2x 
+>\end{align}$$
+> $0$-Forms act on the underlying field of the vector space, i.e. the scalars.
+> 2. $\bigwedge^1 V^*$ is the space of **vector valued functionals**, i.e.
+> $$\boldsymbol{\widetilde{\alpha}}: \bigwedge^1 V \to \mathbb{K}$$
+> Let $\boldsymbol{v} \in \bigwedge^1 \mathbb{R}^3$. An example would be
+> $$\begin{align}
+> &\boldsymbol{\widetilde{\alpha}}: \bigwedge^1 \mathbb{R}^3 \to \mathbb{R} \\
+> &\boldsymbol{\widetilde{\alpha}}(\boldsymbol{v}) = 2v^1 + 4v^2 -3v^3
+>\end{align}$$
+> $1$-forms act on the vector field itself, which geometrically are considered lines in the vector field.
+> 3. $\bigwedge^2 V^*$ is the space of **$2$-vector functionals**, i.e.
+> $$\boldsymbol{\widetilde{\alpha}}: \bigwedge^2 V \to \mathbb{K}$$
+> Let $\boldsymbol{v} \wedge \boldsymbol{u} \in \bigwedge^2 \mathbb{R}^2$. An example would be
+> $$\begin{align}
+> &\boldsymbol{\widetilde{\alpha}}: \bigwedge^2 \mathbb{R}^2\\
+> &\boldsymbol{\widetilde{\alpha}}(\boldsymbol{v} \wedge \boldsymbol{u}) = v^1u^2 - v^2u^1
+>\end{align}$$
+> which computes the area of the spanned area. $2$-forms act on the vector field of faces spanned by the vectors of the underlying vector fields. They evaluate the faces according to the functional.
+
+>[!remark] Final Remark on this Section
+> This concept of exterior algebra holds true as introduced for vector spaces. To generalize this concept we need to concept of **manifolds, tangent spaces and cotangent spaces**.
+
+### Manifolds, Tangent Spaces and Cotangent Spaces

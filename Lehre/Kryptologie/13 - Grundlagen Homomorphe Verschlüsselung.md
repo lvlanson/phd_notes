@@ -91,7 +91,7 @@
 >> $$\begin{align}
 >> \text{Enc}(m_{1}\cdot m_{2})&= (m_{1} \cdot m_{2})^e \text{ mod }n \\
 >> &= m_{1}^e \cdot m_{2}^e \text{ mod }n\\
->> &= \text{Enc}(m_{1}) \cdot \text{Enc}(m_{2}) \tag*{$\square$}
+>> &= \text{Enc}(m_{1}) \otimes \text{Enc}(m_{2}) \tag*{$\square$}
 >>\end{align}$$
 >
 >>[!remark]- Bemerkung: Keine Additive Homomorphe Charakteristik
@@ -109,26 +109,26 @@
 >>>$$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
 
 >[!theorem] Satz Teilweise Homomorphes El Gamal Verschlüsselung
->[[9 - El Gamal's Kryptosystem#^90f6e7|Das El Gamal Verschlüsselungsverfahren]] ist ein [[#^e93583|teilweise homomorphes Verschlüsselungsschema]] mit beliebiger $\text{eval}$-Größe bezüglich der **Addition**.
+>[[9 - El Gamal's Kryptosystem#^90f6e7|Das El Gamal Verschlüsselungsverfahren]] ist ein [[#^e93583|teilweise homomorphes Verschlüsselungsschema]] mit beliebiger $\text{eval}$-Größe bezüglich der **Multiplikation**.
 >>[!proof]- Beweis
 >>Ohne Beschränkung der Allgemeinheit zeigen wir die homomorphe Eigenschaften anhand zwei Elemente. Es ist leicht ersichtlich, dass dies sich auf beliebig viele erweitern lässt. 
 >>
 >>Seien $m_{1}, m_{2} \in \mathbb{Z}_{n}$ und $pk=(p,a,B), sk=(p,a,A), k \in_{R} Z^*_{p}$ mit
 >>$$\begin{align}
->> \text{Enc}(m) &= (a^k \text{ mod } p, B^k \cdot m \text{ mod }p) = (C_{1},C_{2})\\
+>> \text{Enc}(m_{i}) &= (a^{k_{i}} \text{ mod } p, B^{k_{i}} \cdot m \text{ mod }p) = (C_{1},C_{2})\\
 >> \text{Dec}(C_{1},C_{2}) &= C_{1}^{-A} \cdot C_{2} \text{ mod } p = m
 >>\end{align}$$
->>Wir definieren für die Addition zweier Chiffren $c=(C_{1}, C_{2})$ und $\widehat{c}=(C_{1},\widehat{C}_{2})$mit selben $k \in_{R} \mathbb{Z}^*_{p}$
+>>Wir definieren für die Addition zweier Chiffren $c=(C_{1}, C_{2})$ und $\widehat{c}=(\widehat{C}_{1},\widehat{C}_{2})$mit selben $k \in_{R} \mathbb{Z}^*_{p}$
 >>$$\begin{align}
->>c+\widehat{c}&= (C_{1}, C_{2})+ (C_{1}, \widehat{C}_{2}) \\
->> &= (C_{1}, C_{2}+\widehat{C}_{2})
+>>c+\widehat{c}&= (C_{1}, C_{2}) \otimes (\widehat{C}_{1}, \widehat{C}_{2}) \\
+>> &= (C_{1} \cdot \widehat{C}_{1}, C_{2} \cdot \widehat{C}_{2})
 >>\end{align}$$
 >>Wir prüfen damit die Identität der Definition der [[#^ccc183|homomorphen Verschlüsselung]], also
 >>$$\begin{align}
->> \text{Enc}(m_{1}+m_{2}) &= (a^k \text{ mod }p, B^k \cdot (m_{1}+m_{2}) \text{ mod }p) \\
->> &= (a^k \text{ mod }p, B^k \cdot m_{1} \text{ mod }p + B^k \cdot m_{2} \text{ mod }p) \\
->> &=(a^k \text{ mod } p, B^k \cdot m_{1} \text{ mod }p) + (a^k \text{ mod } p, B^k \cdot m_{2} \text{ mod } p) \\
->> &= \text{Enc}(m_{1})+\text{Enc}(m_{2}) \tag*{$\square$}
+>> \text{Enc}(m_{1} \cdot m_{2}) &= (a^k \text{ mod }p, B^k \cdot (m_{1}\cdot m_{2}) \text{ mod }p) \\
+>> &= \Big(a^{k_{1}} a^{k_{2}} \text{ mod }p, \left(B^{k_{1}} \cdot m_{1} \text{ mod }p \right) \cdot \left( B^{k_{2}} \cdot m_{2} \text{ mod }p\right)\Big) \\
+>> &=(a^{k_{1}} \text{ mod } p, B^{k_{1}} \cdot m_{1} \text{ mod }p) \otimes  (a^{k_{2}} \text{ mod } p, B^{k_{2}} \cdot m_{2} \text{ mod } p) \\
+>> &= \text{Enc}(m_{1})\otimes \text{Enc}(m_{2}) \tag*{$\square$}
 >>\end{align}$$
 >
 >>[!remark]- Bemerkung: Keine Multiplikative Homomorphe Charakteristik

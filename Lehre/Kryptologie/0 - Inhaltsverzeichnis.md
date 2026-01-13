@@ -27,6 +27,10 @@
 
 >[!abstract] 12 - [[12 - Mathematische Grundlagen (3)| Mathematische Grundlagen (3)]]
 
+>[!abstract] 13 - [[13 - Grundlagen Homomorphe Verschlüsselung | Grundlagen Homomorphe Verschlüsselung]]
+
+>[!abstract] 14 - [[14 - BFV | BFV]]
+
 >[!abstract] X - [[X - Zusatz Mathematik (Informativ)|Zusatz Mathematik (Informativ) in Bezug zu Algebraische und Zahlentheoretische Grundlagen (2)]]
 
 ## Zusatzmaterial
