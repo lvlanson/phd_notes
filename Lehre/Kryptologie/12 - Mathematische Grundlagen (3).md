@@ -350,7 +350,7 @@
 
 >[!def] Definition Closest Vector Problem (CVP)
 > Sei $\boldsymbol{B}\in \mathbb{Z}^{m \times n}$ eine Basis für ein Gitter $\mathcal{L}$ und sei $\boldsymbol{z} \in \mathbb{Z}^m$ ein Zielvektor. CVP sucht einen Vektor $\boldsymbol{Bx} \in \mathcal{L}$ der am nächsten zu $\boldsymbol{t}$ ist, also sodass für $\boldsymbol{x} \in \mathbb{Z}^n$ gilt
->$$|| \boldsymbol{Bx} - \boldsymbol{t}|| \leq ||\boldsymbol{By} - \boldsymbol{t}||$$
+>$$|| \boldsymbol{Bx} - \boldsymbol{z}|| \leq ||\boldsymbol{By} - \boldsymbol{z}||$$
 > für beliebige $\boldsymbol{y} \in \mathbb{Z}^n$.
 
 >[!remark] Bemerkung

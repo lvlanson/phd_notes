@@ -190,3 +190,74 @@ which is the formula for the determinant of the Matrix $[\boldsymbol{u}\boldsymb
 > This concept of exterior algebra holds true as introduced for vector spaces. To generalize this concept we need to concept of **manifolds, tangent spaces and cotangent spaces**.
 
 ### Manifolds, Tangent Spaces and Cotangent Spaces
+
+Basic concepts are introduced. For now it is sufficient to understand that a **(sub)manifold**  is a subset $\mathcal{M} = \mathcal{M}^n \subseteq \mathbb{R}^{n+r}$ which behaves locally Euclidean. When speaking about manifolds we do not require them to be globally non-Euclidean, though those are of particular interest. The manifold can be described by $n$ coordinates in itself, while globally it can also be described by $n+r$ coordinates. The manifold itself does not necessarily need to be equipped by a global coordinate system.
+
+Denote $q \in \mathcal{M}$ a point on a manifold, we define the **tangent space** to the manifold $\mathcal{M}$ at point $q$ as $T \mathcal{M}_q^n$ as the real vector space.
+
+>[!remark] Summary
+> - Manifold is $\mathcal{M} = \mathcal{M}^n \subseteq \mathbb{R}^{n+r}$
+>   - if $r \geq 1$ we call $\mathcal{M}$ a **submanifold**
+>   - often the manifold is highlighted to be of dimension $n$ by writing $\mathcal{M}^n$
+> - Tangent Space to $\mathcal{M}$ at point $q \in \mathcal{M}$ is $T_{q} \mathcal{M}$
+>   - vector space consisting of all tangent vectors to $q$
+> - Tangent Bundle $T\mathcal{M}$ consisting of all tangent spaces over all points.
+>   - $T \mathcal{M} = \{ T_{q} \mathcal{M} \,|\, q \in \mathcal{M}\}$
+
+---
+>[!remark] Motivation: Tangent Vector Operators
+
+First we highlight how we think about the directional derivative. For the upcoming text we denote
+- $q \in \mathcal{M}$ a point on the manifold
+- $\boldsymbol{v} \in T_q \mathcal{M}^n$ a tangent vector
+- $f: \mathcal{M}^n \to \mathbb{R}$ a differentiable function
+
+For illustrative purposes we imagine some physical setting. Consider a **force** acting on **point** $q$ in **direction** $\boldsymbol{v}$ evolving over some time $t$
+$$\left(D_{\boldsymbol{v}} f \right) (q) \equiv \frac{\text{d}}{\text{d}t}\Big[ f(q+t \boldsymbol{v}) \Big]_{t=0}$$
+Note, $f$ could for instance express what force/acceleration the directional vector causes on point $q$ over time $t$. Hence, the directional derivative tells us what the rate of change in direction $\boldsymbol{v}$ is evaluated at point $q$.
+
+In vector calculus we define the directional derivative as follows 
+
+>[!def] Definition Directional Derivative
+> The **directional derivative** of $f: \mathbb{R}^n \to \mathbb{R}$ in the direction of the unit vector $\boldsymbol{v} \in \mathbb{R}^n$ is 
+>$$D_{\boldsymbol{v}} f(\boldsymbol{x}) = \lim_{t \to 0} \frac{f(\boldsymbol{q} + t\boldsymbol{v}) - f(\boldsymbol{q})}{t}$$
+> if this limit exists.
+
+where the notion of $\boldsymbol{v}$ being a unit vector tells us that $\left\vert\left\vert\, \boldsymbol{v} \,\right\vert\right\vert = \sqrt{\sum_{i=1}^{n} {(v^i)}^2}= 1$. That $\boldsymbol{v}$ is a unit vector is not necessarily required, but makes interpretation of the derivate easier. Now, observe that $\boldsymbol{v}$ can be decomposed over its canonical base vectors $\boldsymbol{e}_{i}$. Therefore 
+$$\boldsymbol{v} = \sum_{i=1}^{n}v^i\boldsymbol{e}_{i}$$
+Note, that if we take the directional derivative with respect to $\boldsymbol{e}_{i}$ we get the partial derivative
+$$D_{\boldsymbol{e}^{i}} f = \frac{\partial f}{\partial x^i}$$
+Now, since we can decompose $\boldsymbol{v}$ we can also decompose the directional derivative in its partial derivatives and have
+$$D_{\boldsymbol{v}} f = \sum_{i=1}^{n} \underbrace{\frac{\partial f}{\partial x^i}}_{\sim \boldsymbol{e}_{i}} v^i$$
+This can be summarized in the following theorem
+>[!theorem] Theorem Directional Derivative Adaptation 
+> If $f: \mathbb{R}^n \to \mathbb{R}$ is a differentiable function for all $\boldsymbol{x}_i$ with $1 \leq i \leq n$, then $f$ has directional derivatives in the direction of unit vector $\boldsymbol{v} \in \mathbb{R}^n$ and
+> $$D_{\boldsymbol{v}} f(\boldsymbol{x}) = \sum_{i=1}^n \frac{\partial f(\boldsymbol{x})}{\partial x^i} \cdot v^i$$
+>>[!proof]-
+>> Define $$g(h) = f(\boldsymbol{x} + h\boldsymbol{v})$$Taking the derivative of $g$ with respect to $h$ using the definition 
+>> $$\begin{align}
+>> \frac{d g}{dh} &= \lim_{t \to 0} \frac{g(h + t) - g(h)}{t} \\
+>> &= \lim_{t \to 0} \frac{f(\boldsymbol{x} + (h+t)\boldsymbol{v})- f(\boldsymbol{x} + h\boldsymbol{v})}{t}\tag{1}
+>>\end{align}$$
+>> Applying the chain rule to compute $\frac{d g}{d h}$ gives
+>> $$ \frac{d g}{d h} = \sum_{i=1}^n \frac{\partial f}{\partial x^i}\frac{d x^i}{d h}$$
+>> Note that $x^i \mapsto x^i + h v^i$ for the $i$-th component of $\boldsymbol{x}$, thus $\frac{d x^i}{d_h} = v^i$, therefore
+>> $$\frac{d g}{d h} = \sum_{i=1}^n \frac{\partial f}{\partial x^i} v^i \tag{2}$$
+>> Now combining $(1)$ and $(2)$ gives 
+>> $$\lim_{t \to 0} \frac{f(\boldsymbol{x} + (h+t)\boldsymbol{v})- f(\boldsymbol{x} + h\boldsymbol{v})}{t}= \sum_{i=1}^n \frac{\partial f(\boldsymbol{x})}{\partial x^i} v^i$$
+>> Evaluating $g$ at $h=0$ yields 
+>> $$\lim_{t \to 0} \frac{f(\boldsymbol{x} + t\boldsymbol{v})- f(\boldsymbol{x})}{t} = \sum_{i=1}^n \frac{\partial f(\boldsymbol{x})}{\partial x^i} v^i$$
+>> which proves the theorem.
+>> $$\tag*{$\square$}$$
+
+Note, that by rewriting the directional derivative as presented, we can interpret the directional derivative as the sum of all partial derivatives scaled by the directional vector $\boldsymbol{v}$. Now, we can rewrite $\boldsymbol{v}: C \to \mathbb{R}$ to be an operator defined over the coefficients $v^i$, i.e.
+$$\boldsymbol{v}\left.\vphantom{_{q}}\right\vert_{q} = \sum_{i=1}^{n}v^i \left.\vphantom{q}\frac{\partial}{\partial x^i} \right\vert_{q}$$
+In this text and the book $\boldsymbol{v}$ is used as a vector and operator. Since the operator $\boldsymbol{v}$ itself is represented as a vector over $\boldsymbol{v} \in T_q \mathcal{M}$, we can consider the operator itself also as a vector over a vector space of differential operators. The basis can easily be identified by
+$$\frac{\boldsymbol{\partial}}{\boldsymbol{\partial}x^j} = D_{\boldsymbol{e}^{j}}$$
+Hence, any differential operator can be decomposed over its basis as
+$$\boldsymbol{v} = \sum_{i=1}^{n}v^j \frac{\boldsymbol{\partial}}{\boldsymbol{\partial}x^j}$$
+
+>[!remark] Summary
+> - the tangent vector $\boldsymbol{v}$ acts as differential operator on scalar function
+>   - $\boldsymbol{v} = \sum_{i=1}^{n} v^i \left.\vphantom{q}\frac{\boldsymbol{\partial}}{\boldsymbol{\partial}x^i}\right\vert_{q}$
+> - $\left\{\frac{\boldsymbol{\partial}}{\boldsymbol{\partial}x_i}\right\}_{i=1}^n$ form a basis for the tangent space $T_q \mathcal{M}^n$

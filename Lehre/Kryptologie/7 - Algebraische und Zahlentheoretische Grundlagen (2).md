@@ -167,7 +167,7 @@
 ><center> <h3> Das bezeichnen wir als <u>Diskretes-Logarithmus-Problem</u> </h3></center>
 >
 >>[!remark]- Bemerkung
->>Es gibt nicht-effiziente Faktorisierungsverfahren wie beispielsweise
+>>Es gibt nicht-effiziente Diskrete Logarithmus Verfahren wie beispielsweise
 >>- Babystep-Giantstep Algorithmus
 >>- Pohlig-Hellman Algorithmus
 

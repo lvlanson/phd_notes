@@ -266,7 +266,7 @@
 
 >[!lemma] Lemma Entschlüsselung einer addierten Chiffre
 > Sei $C_3 = C_1 \oplus C_2$. Dann lässt sich $C_3$ korrekt entschlüsseln, wenn
-> $$2 \frac{t}{q} (B2+k) = 2 \Delta^{-1}B(2+k) < \frac{1}{2}$$
+> $$2 \frac{t}{q} B(2+k) = 2 \Delta^{-1}B(2+k) < \frac{1}{2}$$
 > bzw. 
 > $$\Delta^{-1}B(2+k) < \frac{1}{4}$$
 
